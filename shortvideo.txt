@@ -1,0 +1,140 @@
+#shortvideo activity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.PublishPermissionActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.cocreate.creatoredit.CoCreatorEditActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.cut.VECutVideoActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.edit.ImageEditingActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.edit.VEVideoPublishEditActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.exclude.ui.ExcludeActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.festival.game.ui.DiamondGameListActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.firstpublish.FirstPublishChooseMediaActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.firstpublish.FirstPublishEntranceActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.publish.PublishPrivacySettingActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.DraftPreviewActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.ImagesPublishActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.ImagesPublishPreviewActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.LivePublishActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.LocalPublishFailedDialogActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.LocalSecurityMonitorCheckDialogActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VEVideoPublishPreviewActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VideoPreviewActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VideoPublishActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VideoRecordNewActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VideoRecordPermissionActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.update.EditAwemePublishActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.vechoosecover.ChooseCoverActivity
+android hooking watch class com.ss.android.ugc.aweme.shortvideo.vechoosecover.ImagesChooseCoverActivity
+
+
+#all class
+
+
+
+#pinglun
+(agent) [164706] Arguments com.bytedance.retrofit2.RequestFactory.toRequest((none), false,-1,/aweme-avatar/tos-cn-i-0813_1dbca52875154639a778455e48840e26~tplv-dy-shrink-adapter:64:64.webp,{from=2956013662},,X.QaS@4d7c36c)
+(agent) [164706] Return Value: com.bytedance.retrofit2.client.Request@ef14d35
+(agent) [164706] Called com.bytedance.retrofit2.RequestFactory.toRequest(com.bytedance.retrofit2.ExpandCallback, [Ljava.lang.Object;)
+(agent) [164706] Backtrace:
+        com.bytedance.retrofit2.RequestFactory.toRequest(Native Method)
+        com.bytedance.retrofit2.SsHttpCall.enqueue(SourceFile:17170512)
+        com.bytedance.retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall.enqueue(SourceFile:17039389)
+        X.Qi5.LIZIZ(SourceFile:33816611)
+        X.QiB.fetch(SourceFile:33882232)
+        X.THk.produceResults(SourceFile:33816622)
+        com.facebook.imagepipeline.producers.p.produceResults(SourceFile:33882194)
+        X.THn.then(SourceFile:17170581)
+        X.THn.then(SourceFile:16842752)
+        X.QpM.run(SourceFile:262179)
+        X.Fgw.execute(SourceFile:17104968)
+        bolts.Task.completeImmediately(SourceFile:84148261)
+        X.e8a.then(SourceFile:16973851)
+        bolts.Task.runContinuations(SourceFile:327725)
+        bolts.Task.trySetResult(SourceFile:17104952)
+        bolts.g.LIZ(SourceFile:17104924)
+        bolts.g.LIZIZ(SourceFile:17104914)
+        X.QpL.run(SourceFile:262183)
+        java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
+        java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+        com.facebook.imagepipeline.core.PriorityThreadFactory$1.run(SourceFile:196632)
+        java.lang.Thread.run(Thread.java:764)
+
+(agent) [164706] Arguments com.bytedance.retrofit2.RequestFactory.toRequest((none), false,-1,/aweme-avatar/tos-cn-avt-0015_ae5841041180915380301466a6864403~tplv-dy-shrink-adapter:64:64.webp,{from=2956013662},,X.QaS@19167cc)
+(agent) [164706] Return Value: com.bytedance.retrofit2.client.Request@808612a
+(agent) [164706] Called com.bytedance.retrofit2.RequestFactory.toRequest(com.bytedance.retrofit2.ExpandCallback, [Ljava.lang.Object;)
+(agent) [164706] Backtrace:
+        com.bytedance.retrofit2.RequestFactory.toRequest(Native Method)
+        com.bytedance.retrofit2.SsHttpCall.enqueue(SourceFile:17170512)
+        com.bytedance.retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall.enqueue(SourceFile:17039389)
+        X.Qi5.LIZIZ(SourceFile:33816611)
+        X.QiB.fetch(SourceFile:33882232)
+        X.THk.produceResults(SourceFile:33816622)
+        com.facebook.imagepipeline.producers.p.produceResults(SourceFile:33882194)
+        X.THn.then(SourceFile:17170581)
+        X.THn.then(SourceFile:16842752)
+        X.QpM.run(SourceFile:262179)
+        X.Fgw.execute(SourceFile:17104968)
+        bolts.Task.completeImmediately(SourceFile:84148261)
+        X.e8a.then(SourceFile:16973851)
+        bolts.Task.runContinuations(SourceFile:327725)
+        bolts.Task.trySetResult(SourceFile:17104952)
+        bolts.g.LIZ(SourceFile:17104924)
+        bolts.g.LIZIZ(SourceFile:17104914)
+        X.QpL.run(SourceFile:262183)
+        java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
+        java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+        com.facebook.imagepipeline.core.PriorityThreadFactory$1.run(SourceFile:196632)
+        java.lang.Thread.run(Thread.java:764
+
+
+
+com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # (agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.invoke([Ljava.lang.Object;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.parseAnnotations(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, com.bytedance.retrofit2.RequestFactory)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.createCallAdapter(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, java.lang.reflect.Type, [Ljava.lang.annotation.Annotation;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.createResponseConverter(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, java.lang.reflect.Type)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.invoke([Ljava.lang.Object;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.parseAnnotations(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, com.bytedance.retrofit2.RequestFactory)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.createCallAdapter(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, java.lang.reflect.Type, [Ljava.lang.annotation.Annotation;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.createResponseConverter(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, java.lang.reflect.Type)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.invoke([Ljava.lang.Object;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.invoke([Ljava.lang.Object;)
+
+
+
+
+com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # android hooking watch class com.bytedance.retrofit2.client.Request
+(agent) Hooking com.bytedance.retrofit2.client.Request.createUriWithOutQuery(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.client.Request.safeCreateUri(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.client.Request.getBody()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getExtraInfo()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getFirstHeader(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.client.Request.getHeaders()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getHost()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getMaxLength()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getMethod()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getMetrics()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getPath()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getPriorityLevel()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getQueryFilterPriority()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getRequestBody()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getRequestPriorityLevel()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getServiceType()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getUrl()
+(agent) Hooking com.bytedance.retrofit2.client.Request.headers(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.client.Request.isAddCommonParam()
+(agent) Hooking com.bytedance.retrofit2.client.Request.isResponseStreaming()
+(agent) Hooking com.bytedance.retrofit2.client.Request.newBuilder()
+(agent) Hooking com.bytedance.retrofit2.client.Request.setExtraInfo(java.lang.Object)
+(agent) Hooking com.bytedance.retrofit2.client.Request.setMetrics(com.bytedance.retrofit2.RetrofitMetrics)
+(agent) Hooking com.bytedance.retrofit2.client.Request.setQueryFilterPriority(int)
+(agent) Hooking com.bytedance.retrofit2.client.Request.tag()
+(agent) Hooking com.bytedance.retrofit2.client.Request.tag(java.lang.Class)
+(agent) Registering job 637681. Type: watch-class for: com.bytedance.retrofit2.client.Request
+
+
+
+
+#need recheck
+com.bytedance.retrofit2.client.Request.safeCreateUri
+
+
+https://aweme.snssdk.com/aweme/v1/aweme/stats/?iid=1412242872480222&device_id=4033478531512360&ac=wifi&channel=sem_shenma_dy_ls077&aid=1128&app_name=aweme&version_code=210500&version_name=21.5.0&device_platform=android&os=android&ssmix=a&device_type=Pixel%202&device_brand=google&language=zh&os_api=27&os_version=8.1.0&openudid=103464fba0335b6a&manifest_version_code=210501&resolution=1080*1794&dpi=420&update_version_code=21509900&_rticket=1658325495076&package=com.ss.android.ugc.aweme&cpu_support64=true&host_abi=armeabi-v7a&is_guest_mode=0&app_type=normal&minor_status=0&appTheme=light&need_personal_recommend=1&is_android_pad=0&ts=1658325494&cdid=3d9c863a-41f8-42c0-bb4b-4935abe2dc51
+https://aweme.snssdk.com/aweme/v1/aweme/stats/?iid=1412242872480222&device_id=4033478531512360&ac=wifi&channel=sem_shenma_dy_ls077&aid=1128&app_name=aweme&version_code=210500&version_name=21.5.0&device_platform=android&os=android&ssmix=a&device_type=Pixel%202&device_brand=google&language=zh&os_api=27&os_version=8.1.0&openudid=103464fba0335b6a&manifest_version_code=210501&resolution=1080*1794&dpi=420&update_version_code=21509900&_rticket=1658325523368&package=com.ss.android.ugc.aweme&cpu_support64=true&host_abi=armeabi-v7a&is_guest_mode=0&app_type=normal&minor_status=0&appTheme=light&need_personal_recommend=1&is_android_pad=0&ts=1658325523&cdid=3d9c863a-41f8-42c0-bb4b-4935abe2dc51
