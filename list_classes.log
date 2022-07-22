@@ -27873,7 +27873,7 @@ com.bytedance.sdk.xbridge.cn.e.b$b
 com.bytedance.sdk.xbridge.cn.e.b$c
 com.bytedance.sdk.xbridge.cn.f.a$a
 com.bytedance.sdk.xbridge.cn.f.a$b
-com.bytedance.sdk.xbridge.cn.f.b$b
+com.bytedance.sdk.xbridge.cn.f.b$bl
 com.bytedance.sdk.xbridge.cn.f.b$c
 com.bytedance.sdk.xbridge.cn.f.c$a
 com.bytedance.sdk.xbridge.cn.f.c$b
@@ -40173,4 +40173,6 @@ ttwebview.zo
 void
 Found 40173 classes
 
+python3 r0capture.py -U -f com.qiyi.video -v
 
+android hooking watch class com.bytedance.org.chromium.net.AndroidNetworkLibrary

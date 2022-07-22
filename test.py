@@ -5,4 +5,6 @@ url = 'https://i.snssdk.com/api/neptune/v3/sdk/PackLiveSDK?webcast_sdk_version=2
 
 # headers={'cookie':'install_id=1412242872480222; ttreq=1$6cbd026c8dafa981ee9b4d65dc34041cf3075dc7; odin_tt=8b24513c4d1d76cb60af09399b2e31bbc387739f0c653c40bff9a5f852487ecca981e159372a4e0fe8a6c62e8624d9ba91c809e2205c16e9f053a918aa47c52a64dc46954368d93bda8a8a447a197d7a; passport_csrf_token=6c541e87b4224a7dd3469f0b87e029d9; passport_csrf_token_default=6c541e87b4224a7dd3469f0b87e029d9; msToken=zpuF51NipJ2HVif546w6QiXHf5zus6Y5wvejVHhxBYxFEKs6RpRMUFR9gFf4h4bCzDqK9Od5PG-7kAwvi1V_UIGN5YDbwoI_-fzgV7nizac='}
 a = requests.post(url,verify=False,)
+
 # f= open('a.mp4','wb').write(a.content)
+[x-tt-request-tag: t=0;n=0, x-tt-dt: AAAU22UA5QCFAFK5MKICSCSBJ6P6TTF52YMJPLT3QDNNR7IPRDUR3GBZF4KIGIX4ZNDHGFLALU6DYVBAQY0149, X-SS-REQ-TICKET: 1658457659352, x-vc-bdturing-sdk-version: 2.2.1.cn]
