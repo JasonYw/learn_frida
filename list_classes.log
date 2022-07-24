@@ -40170,9 +40170,3 @@ ttwebview.xd
 ttwebview.xr
 ttwebview.y5
 ttwebview.zo
-void
-Found 40173 classes
-
-python3 r0capture.py -U -f com.qiyi.video -v
-
-android hooking watch class com.bytedance.org.chromium.net.AndroidNetworkLibrary

@@ -1,35 +1,3 @@
-#shortvideo activity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.PublishPermissionActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.cocreate.creatoredit.CoCreatorEditActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.cut.VECutVideoActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.edit.ImageEditingActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.edit.VEVideoPublishEditActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.exclude.ui.ExcludeActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.festival.game.ui.DiamondGameListActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.firstpublish.FirstPublishChooseMediaActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.firstpublish.FirstPublishEntranceActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.publish.PublishPrivacySettingActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.DraftPreviewActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.ImagesPublishActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.ImagesPublishPreviewActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.LivePublishActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.LocalPublishFailedDialogActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.LocalSecurityMonitorCheckDialogActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VEVideoPublishPreviewActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VideoPreviewActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VideoPublishActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VideoRecordNewActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.VideoRecordPermissionActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.ui.update.EditAwemePublishActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.vechoosecover.ChooseCoverActivity
-android hooking watch class com.ss.android.ugc.aweme.shortvideo.vechoosecover.ImagesChooseCoverActivity
-
-
-#all class
-
-
-
-#pinglun
 (agent) [164706] Arguments com.bytedance.retrofit2.RequestFactory.toRequest((none), false,-1,/aweme-avatar/tos-cn-i-0813_1dbca52875154639a778455e48840e26~tplv-dy-shrink-adapter:64:64.webp,{from=2956013662},,X.QaS@4d7c36c)
 (agent) [164706] Return Value: com.bytedance.retrofit2.client.Request@ef14d35
 (agent) [164706] Called com.bytedance.retrofit2.RequestFactory.toRequest(com.bytedance.retrofit2.ExpandCallback, [Ljava.lang.Object;)
@@ -244,3 +212,6 @@ com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # (agent) [597996] Called X.QW
         java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
         java.lang.Thread.run(Thread.java:764)
         X.7HX.run(SourceFile:196628)
+
+android hooking watch class com.bytedance.org.chromium.net.AndroidNetworkLibrary
+
