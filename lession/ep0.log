@@ -1,0 +1,36 @@
+1.需要的基础知识
+安卓底层 linux 内核 需要有些Linux命令行
+smail代码 反编译后是smail代码
+java 核心代码
+JNI 通过jni，java才可以调用c
+c/c++ so文件 反编译难度较大
+arm汇编（后期很重要）
+android 提供的api
+
+2.apk的基本结构
+apk 其实是zip的压缩包
+assets 资源目录 是没有编译过的 可以直接拿来用的
+lib 本地代码 一般是so文件
+libs 第三方jar包
+META-INF apk的签名 每个apk都有，正常的android系统会验证
+res 资源 编译之后的 不能直接用 里面是xml，图标 布局 apktool进行反编译
+AndroidManifest 清单文件 需要反编译 包含 系统权限 包名 是否支持调试
+resources.arsc 编译之后的 用的源包
+dex文件 反编译之后 smail  代码 再把smail代码转换成java代码，有多个dex是因为文件大小限制，我们反编译完应该是只有一个samil文件
+
+3.jvm Dvm Art虚拟机
+jvm 运行.class文件
+5.0之前dalvik虚拟机只会执行.dex文件，dx工具会把.class文件打包成.dex文件
+5.0之后art虚拟机，在安装时直接将.dex文件转化成可执行文件.oat文件，并且art支持多dex所以不存在合包的问题，所以art虚拟机会很大提升app冷启动速度
+xposed hook的是java代码所以xposed不支持5.0以上的系统
+
+4.逆向工具
+android killer
+
+
+arm分析和动态调试不一致时，可能是so里面的有多个cpu版本
+签名机制 会和源码去校验是否你的apk文件有动过，所以改了源码后才放回apk在安装是无法安装好的
+可以使用信誉破解器，这样不需要重新签名也可以安装
+重签：把apk重新签名
+
+
