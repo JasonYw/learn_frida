@@ -98,5 +98,69 @@ obj.get.implementation
 
 
 枚举所有类
-java.
+
+动态加载dex(加壳)
+hook出来发现了加载了类，但是jadx里没有，说明动态加载了
+java层可以动态加载dex，dexclassloader，也可以在so层动态加载
+dex也可以加密，java层加载后，如果dex有加密 需要解密之后再用
+hook脚本：无法按照正常hook那样去写
+如果 dongtaiclass  动态加载的话
+异步：
+    java.enumerateClassLoaders({
+        onMatch:function(loader){
+            try:
+                if(loader.findclass("dongtaiclass")){
+                    Java.classFactory.loader = loader 
+                    var dynamic = Java.use("dongtaiclass")
+                    console.log(dynamic)
+                    dynamic.func.implementation ...
+                }
+            catch:
+                pass
+        }
+        onComplete:function(){}
+    })
+
+
+特殊类型的遍历与修改
+主动调用
+静态
+    function hooktest11(){
+        Java.perform(function(){
+            var b = Java.use("java.lang.String")
+            var a = Java.use("dongtai.lei")
+            b.$new("xiaojianbang") #获取的是 java中的字符串对象 实例化
+            var res = a.encrypt(b.getBytes())  因为java string有getBytes方法
+            return res
+        })
+    }
+
+非静态方法主动调用 // 需要实例化对象 1
+var obj = java.use("a.b").$new("ry",3000000); 
+obj.getinfo()
+
+//2 //不需要实例化了，因为是 在onmatch里 所以已经有示例了 obj就是示例 会调用内存中全部这个类的对象，所以实例存在多个 可能调用多次
+java.choose("a.b",{
+    onMatch:function(obj){
+        var str = obj.getinfo()
+    },
+    onComplete:function(){
+    },
+});
+
+//打印堆栈 谁调用了谁的关系
+console.log(java.use("android.util.Log").getStackTraceString(Java.use("Java.lang.exception").$new()))
+
+
+
+//加载dex
+java.openClassFile("接收安卓端dex的路径").load();
+java.use(dex的package.类)
+sdx build-tools 中 有个 dx.bat 可以打包jar包 
+.... 
+
+
+
+
+
 

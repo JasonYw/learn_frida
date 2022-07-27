@@ -215,3 +215,14 @@ com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # (agent) [597996] Called X.QW
 
 android hooking watch class com.bytedance.org.chromium.net.AndroidNetworkLibrary
 
+
+
+public final java.lang.String javax.net.ssl.TrustManagerFactory.getAlgorithm()
+public final java.security.Provider javax.net.ssl.TrustManagerFactory.getProvider()
+public final javax.net.ssl.TrustManager[] javax.net.ssl.TrustManagerFactory.getTrustManagers()
+public final void javax.net.ssl.TrustManagerFactory.init(java.security.KeyStore) throws java.security.KeyStoreException
+public final void javax.net.ssl.TrustManagerFactory.init(javax.net.ssl.ManagerFactoryParameters) throws java.security.InvalidAlgorithmParameterException
+public static final java.lang.String javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm()
+public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String) throws java.security.NoSuchAlgorithmException
+public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String,java.lang.String) throws java.security.NoSuchAlgorithmException,java.security.NoSuchProviderException
+public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String,java.security.Provider) throws java.security.NoSuchAlgorithmException
