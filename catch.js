@@ -21,7 +21,13 @@ function hook_response(){
         var result = this.getBody()
         var arry = Java.use(result.$className)
         var new_result = Java.cast(result,arry)
-        console.log('result =>',new_result,hexToString(bytesToHex(new_result.getBytes())))
+        // console.log(Object.keys(new_result))
+        try {
+            send(new_result.getBytes())   
+        }
+        catch(error){}
+        // console.log(new_result.toString())
+        // console.log('result =>',new_result,hexToString(bytesToHex(new_result.getBytes())))
         return result
     }
 }
@@ -35,7 +41,8 @@ function hook_headers(){
         // var b = JSON.parse(a)
         var Map = Java.use('java.util.Collections$UnmodifiableRandomAccessList')
         var NewP = Java.cast(result, Map)
-        console.log('header =>',NewP) 
+        // console.log('header =>',NewP) 
+        send(NewP.toString())
         return result
     }
 }
@@ -51,6 +58,7 @@ function hook_method(){
 
 }
 
+
 //com.bytedance.retrofit2.client.Request
 function hook_url(){
     var req = Java.use('com.bytedance.retrofit2.client.Request')
@@ -61,13 +69,39 @@ function hook_url(){
         // var c = result.includes('https://aweme.snssdk.com/aweme/v1/aweme/stats/')
         // var d = result.includes('https://aweme.snssdk.com/service/2/app_log/')
         // var e = result.includes('aweme-poi/poi_loc/')
-        var f = result.includes('https://aweme.snssdk.com/aweme/v2/feed/')
-        if(f){
-            console.log('url =>',result)
-        }
+        // var f = result.includes('https://aweme.snssdk.com/aweme/v2/feed/')
+        // if(f){
+        // console.log('url =>',result)
+        send(result)
+        // }
         return result
     }
 }
+
+
+
+function hook_ssresponse(){
+    var req = Java.use("com.bytedance.retrofit2.SsResponse")
+    req.raw.implementation = function(){
+        var result = this.raw()
+        var url = result.getUrl()
+        // console.log("url =>",url)
+        var header = Java.cast(result.getHeaders(),Java.use(result.getHeaders().$className)).toString()
+        // console.log("header =>",header)
+        var extra  = Java.cast(result.getExtraInfo(),Java.use(result.getExtraInfo().$className))
+        try {
+            send(url) 
+            var body = Java.cast(result.getBody(),Java.use(result.getBody().$className)).getBytes()           
+            send({"url":url,"body":body}) 
+        } catch (error) {
+            // console.log("error")
+            send({"url":url,"body":null}) 
+        }
+        
+        return result
+    }
+}
+
 
 function hook_all(){
     Java.enumerateLoadedClasses({
@@ -155,7 +189,10 @@ function hook_ssl(){
 
 function main() {
     Java.perform(function(){
-        hook_ssl();
+        // hook_response();
+        // hook_headers();
+        // hook_url();
+        hook_ssresponse();
     })
 }
 setImmediate(main)

@@ -27677,7 +27677,6 @@ com.bytedance.retrofit2.Utils$1
 com.bytedance.retrofit2.client.Client
 com.bytedance.retrofit2.client.Client$Provider
 com.bytedance.retrofit2.client.Header
-com.bytedance.retrofit2.client.Request
 com.bytedance.retrofit2.client.Request$Builder
 com.bytedance.retrofit2.client.Response
 com.bytedance.retrofit2.client.SsCall
