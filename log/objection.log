@@ -1,0 +1,228 @@
+(agent) [164706] Arguments com.bytedance.retrofit2.RequestFactory.toRequest((none), false,-1,/aweme-avatar/tos-cn-i-0813_1dbca52875154639a778455e48840e26~tplv-dy-shrink-adapter:64:64.webp,{from=2956013662},,X.QaS@4d7c36c)
+(agent) [164706] Return Value: com.bytedance.retrofit2.client.Request@ef14d35
+(agent) [164706] Called com.bytedance.retrofit2.RequestFactory.toRequest(com.bytedance.retrofit2.ExpandCallback, [Ljava.lang.Object;)
+(agent) [164706] Backtrace:
+        com.bytedance.retrofit2.RequestFactory.toRequest(Native Method)
+        com.bytedance.retrofit2.SsHttpCall.enqueue(SourceFile:17170512)
+        com.bytedance.retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall.enqueue(SourceFile:17039389)
+        X.Qi5.LIZIZ(SourceFile:33816611)
+        X.QiB.fetch(SourceFile:33882232)
+        X.THk.produceResults(SourceFile:33816622)
+        com.facebook.imagepipeline.producers.p.produceResults(SourceFile:33882194)
+        X.THn.then(SourceFile:17170581)
+        X.THn.then(SourceFile:16842752)
+        X.QpM.run(SourceFile:262179)
+        X.Fgw.execute(SourceFile:17104968)
+        bolts.Task.completeImmediately(SourceFile:84148261)
+        X.e8a.then(SourceFile:16973851)
+        bolts.Task.runContinuations(SourceFile:327725)
+        bolts.Task.trySetResult(SourceFile:17104952)
+        bolts.g.LIZ(SourceFile:17104924)
+        bolts.g.LIZIZ(SourceFile:17104914)
+        X.QpL.run(SourceFile:262183)
+        java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
+        java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+        com.facebook.imagepipeline.core.PriorityThreadFactory$1.run(SourceFile:196632)
+        java.lang.Thread.run(Thread.java:764)
+
+(agent) [164706] Arguments com.bytedance.retrofit2.RequestFactory.toRequest((none), false,-1,/aweme-avatar/tos-cn-avt-0015_ae5841041180915380301466a6864403~tplv-dy-shrink-adapter:64:64.webp,{from=2956013662},,X.QaS@19167cc)
+(agent) [164706] Return Value: com.bytedance.retrofit2.client.Request@808612a
+(agent) [164706] Called com.bytedance.retrofit2.RequestFactory.toRequest(com.bytedance.retrofit2.ExpandCallback, [Ljava.lang.Object;)
+(agent) [164706] Backtrace:
+        com.bytedance.retrofit2.RequestFactory.toRequest(Native Method)
+        com.bytedance.retrofit2.SsHttpCall.enqueue(SourceFile:17170512)
+        com.bytedance.retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall.enqueue(SourceFile:17039389)
+        X.Qi5.LIZIZ(SourceFile:33816611)
+        X.QiB.fetch(SourceFile:33882232)
+        X.THk.produceResults(SourceFile:33816622)
+        com.facebook.imagepipeline.producers.p.produceResults(SourceFile:33882194)
+        X.THn.then(SourceFile:17170581)
+        X.THn.then(SourceFile:16842752)
+        X.QpM.run(SourceFile:262179)
+        X.Fgw.execute(SourceFile:17104968)
+        bolts.Task.completeImmediately(SourceFile:84148261)
+        X.e8a.then(SourceFile:16973851)
+        bolts.Task.runContinuations(SourceFile:327725)
+        bolts.Task.trySetResult(SourceFile:17104952)
+        bolts.g.LIZ(SourceFile:17104924)
+        bolts.g.LIZIZ(SourceFile:17104914)
+        X.QpL.run(SourceFile:262183)
+        java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
+        java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+        com.facebook.imagepipeline.core.PriorityThreadFactory$1.run(SourceFile:196632)
+        java.lang.Thread.run(Thread.java:764
+
+
+
+com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # (agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.invoke([Ljava.lang.Object;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.parseAnnotations(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, com.bytedance.retrofit2.RequestFactory)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.createCallAdapter(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, java.lang.reflect.Type, [Ljava.lang.annotation.Annotation;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.createResponseConverter(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, java.lang.reflect.Type)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.invoke([Ljava.lang.Object;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.parseAnnotations(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, com.bytedance.retrofit2.RequestFactory)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.createCallAdapter(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, java.lang.reflect.Type, [Ljava.lang.annotation.Annotation;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.createResponseConverter(com.bytedance.retrofit2.Retrofit, java.lang.reflect.Method, java.lang.reflect.Type)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.invoke([Ljava.lang.Object;)
+(agent) [661595] Called com.bytedance.retrofit2.HttpServiceMethod.invoke([Ljava.lang.Object;)
+
+
+
+
+com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # android hooking watch class com.bytedance.retrofit2.client.Request
+(agent) Hooking com.bytedance.retrofit2.client.Request.createUriWithOutQuery(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.client.Request.safeCreateUri(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.client.Request.getBody()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getExtraInfo()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getFirstHeader(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.client.Request.getHeaders()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getHost()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getMaxLength()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getMethod()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getMetrics()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getPath()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getPriorityLevel()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getQueryFilterPriority()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getRequestBody()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getRequestPriorityLevel()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getServiceType()
+(agent) Hooking com.bytedance.retrofit2.client.Request.getUrl()
+(agent) Hooking com.bytedance.retrofit2.client.Request.headers(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.client.Request.isAddCommonParam()
+(agent) Hooking com.bytedance.retrofit2.client.Request.isResponseStreaming()
+(agent) Hooking com.bytedance.retrofit2.client.Request.newBuilder()
+(agent) Hooking com.bytedance.retrofit2.client.Request.setExtraInfo(java.lang.Object)
+(agent) Hooking com.bytedance.retrofit2.client.Request.setMetrics(com.bytedance.retrofit2.RetrofitMetrics)
+(agent) Hooking com.bytedance.retrofit2.client.Request.setQueryFilterPriority(int)
+(agent) Hooking com.bytedance.retrofit2.client.Request.tag()
+(agent) Hooking com.bytedance.retrofit2.client.Request.tag(java.lang.Class)
+(agent) Registering job 637681. Type: watch-class for: com.bytedance.retrofit2.client.Request
+
+
+
+
+#need recheck
+com.bytedance.retrofit2.client.Request.safeCreateUri
+
+
+#commands 
+https://aweme.snssdk.com/aweme/v2/comment/list/?aweme_id=7122132551732399367&cursor=80&count=20&insert_ids&address_book_access=2&gps_access=2&forward_page_type=1&channel_id=0&city=110000&hotsoon_filtered_count=0&hotsoon_has_more=0&follower_count=0&is_familiar=0&page_source=0&user_avatar_shrink=64_64&aweme_author=MS4wLjABAAAAU68oCkYAEFnWIX6eQ7wun7DybFF9wRxHfsuo1Gge3sdW44HdJz25sRgVa7WWBh4b&item_type=0&comment_aggregation=0&top_query_word=%E6%96%97%E7%BD%97%E5%A4%A7%E9%99%86&iid=1412242872480222&device_id=4033478531512360&ac=wifi&channel=sem_shenma_dy_ls077&aid=1128&app_name=aweme&version_code=210500&version_name=21.5.0&device_platform=android&os=android&ssmix=a&device_type=Pixel%202&device_brand=google&language=zh&os_api=27&os_version=8.1.0&openudid=103464fba0335b6a&manifest_version_code=210501&resolution=1080*1794&dpi=420&update_version_code=21509900&_rticket=1658364847055&package=com.ss.android.ugc.aweme&cpu_support64=true&host_abi=armeabi-v7a&is_guest_mode=0&app_type=normal&minor_status=0&appTheme=light&need_personal_recommend=1&is_android_pad=0&ts=1658364846&cdid=3d9c863a-41f8-42c0-bb4b-4935abe2dc51
+
+
+https://aweme.snssdk.com/aweme/v1/aweme/stats/?iid=1412242872480222&device_id=4033478531512360&ac=wifi&channel=sem_shenma_dy_ls077&aid=1128&app_name=aweme&version_code=210500&version_name=21.5.0&device_platform=android&os=android&ssmix=a&device_type=Pixel%202&device_brand=google&language=zh&os_api=27&os_version=8.1.0&openudid=103464fba0335b6a&manifest_version_code=210501&resolution=1080*1794&dpi=420&update_version_code=21509900&_rticket=1658325495076&package=com.ss.android.ugc.aweme&cpu_support64=true&host_abi=armeabi-v7a&is_guest_mode=0&app_type=normal&minor_status=0&appTheme=light&need_personal_recommend=1&is_android_pad=0&ts=1658325494&cdid=3d9c863a-41f8-42c0-bb4b-4935abe2dc51
+https://aweme.snssdk.com/aweme/v1/aweme/stats/?iid=1412242872480222&device_id=4033478531512360&ac=wifi&channel=sem_shenma_dy_ls077&aid=1128&app_name=aweme&version_code=210500&version_name=21.5.0&device_platform=android&os=android&ssmix=a&device_type=Pixel%202&device_brand=google&language=zh&os_api=27&os_version=8.1.0&openudid=103464fba0335b6a&manifest_version_code=210501&resolution=1080*1794&dpi=420&update_version_code=21509900&_rticket=1658325523368&package=com.ss.android.ugc.aweme&cpu_support64=true&host_abi=armeabi-v7a&is_guest_mode=0&app_type=normal&minor_status=0&appTheme=light&need_personal_recommend=1&is_android_pad=0&ts=1658325523&cdid=3d9c863a-41f8-42c0-bb4b-4935abe2dc51
+
+
+
+
+#com.bytedance.retrofit2.client.Header
+(agent) [589088] Called com.bytedance.retrofit2.client.Header.getValue()
+(agent) [589088] Called com.bytedance.retrofit2.client.Header.getName()
+
+
+(agent) [625499] Called okhttp3.HttpUrl.parse(java.lang.String)
+(agent) [625499] Called okhttp3.HttpUrl.get(java.lang.String)
+com.bytedance.retrofit2.SsHttpCall.enqueue(SourceFile:17170512)
+com.bytedance.retrofit2.ExecutorCallAdapterFactory$ExecutorCallbackCall.enqueue
+
+
+
+com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # android hooking watch class com.bytedance.retrofit2.Utils
+(agent) Hooking com.bytedance.retrofit2.Utils.checkNotNull(java.lang.Object, java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.Utils.checkNotPrimitive(java.lang.reflect.Type)
+(agent) Hooking com.bytedance.retrofit2.Utils.convert(okhttp3.RequestBody)
+(agent) Hooking com.bytedance.retrofit2.Utils.declaringClassOf(java.lang.reflect.TypeVariable)
+(agent) Hooking com.bytedance.retrofit2.Utils.equals(java.lang.reflect.Type, java.lang.reflect.Type)
+(agent) Hooking com.bytedance.retrofit2.Utils.getCallResponseType(java.lang.reflect.Type)
+(agent) Hooking com.bytedance.retrofit2.Utils.getGenericSupertype(java.lang.reflect.Type, java.lang.Class, java.lang.Class)
+(agent) Hooking com.bytedance.retrofit2.Utils.getParameterLowerBound(int, java.lang.reflect.ParameterizedType)
+(agent) Hooking com.bytedance.retrofit2.Utils.getParameterUpperBound(int, java.lang.reflect.ParameterizedType)
+(agent) Hooking com.bytedance.retrofit2.Utils.getRawType(java.lang.reflect.Type)
+(agent) Hooking com.bytedance.retrofit2.Utils.getSupertype(java.lang.reflect.Type, java.lang.Class, java.lang.Class)
+(agent) Hooking com.bytedance.retrofit2.Utils.hasUnresolvableType(java.lang.reflect.Type)
+(agent) Hooking com.bytedance.retrofit2.Utils.indexOf([Ljava.lang.Object;, java.lang.Object)
+(agent) Hooking com.bytedance.retrofit2.Utils.isAnnotationPresent([Ljava.lang.annotation.Annotation;, java.lang.Class)
+(agent) Hooking com.bytedance.retrofit2.Utils.methodError(java.lang.reflect.Method, java.lang.String, [Ljava.lang.Object;)
+(agent) Hooking com.bytedance.retrofit2.Utils.methodError(java.lang.reflect.Method, java.lang.Throwable, java.lang.String, [Ljava.lang.Object;)
+(agent) Hooking com.bytedance.retrofit2.Utils.parameterError(java.lang.reflect.Method, int, java.lang.String, [Ljava.lang.Object;)
+(agent) Hooking com.bytedance.retrofit2.Utils.parameterError(java.lang.reflect.Method, java.lang.Throwable, int, java.lang.String, [Ljava.lang.Object;)
+(agent) Hooking com.bytedance.retrofit2.Utils.permitsRequestBody(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.Utils.requiresRequestBody(java.lang.String)
+(agent) Hooking com.bytedance.retrofit2.Utils.resolve(java.lang.reflect.Type, java.lang.Class, java.lang.reflect.Type)
+(agent) Hooking com.bytedance.retrofit2.Utils.resolveTypeVariable(java.lang.reflect.Type, java.lang.Class, java.lang.reflect.TypeVariable)
+(agent) Hooking com.bytedance.retrofit2.Utils.streamToBytes(java.io.InputStream)
+(agent) Hooking com.bytedance.retrofit2.Utils.throwIfFatal(java.lang.Throwable)
+(agent) Hooking com.bytedance.retrofit2.Utils.typeToString(java.lang.reflect.Type)
+(agent) Hooking com.bytedance.retrofit2.Utils.validateServiceInterface(java.lang.Class)
+
+
+com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # android hooking watch class com.bytedance.retrofit2.SsHttpCall
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute(com.bytedance.retrofit2.SsHttpCall)
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.setReqLevelControl(com.bytedance.retrofit2.SsHttpCall$IHttpCallReqLevelControl)
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.setThrottleControl(com.bytedance.retrofit2.SsHttpCall$IHttpCallThrottleControl)
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.cancel()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.clone()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.clone()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.clone()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.com_bytedance_retrofit2_SsHttpCall__execute$___twin___()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.doCollect()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.enqueue(com.bytedance.retrofit2.Callback)
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.execute()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.getRequestInfo()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.getResponseWithInterceptorChain()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.getRetrofitMetrics()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.isCanceled()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.isExecuted()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.request()
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.setThrottleNetSpeed(long)
+(agent) Hooking com.bytedance.retrofit2.SsHttpCall.toResponseBody(com.bytedance.retrofit2.mime.TypedInput)
+(agent) Registering job 210409. Type: watch-class for: com.bytedance.retrofit2.SsHttpCall
+
+
+(agent) [931827] Called com.bytedance.retrofit2.SsHttpCall.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute(com.bytedance.retrofit2.SsHttpCall)
+(agent) [931827] Called com.bytedance.retrofit2.SsHttpCall.com_bytedance_retrofit2_SsHttpCall__execute$___twin___()
+(agent) [931827] Called com.bytedance.retrofit2.SsHttpCall.getResponseWithInterceptorChain()
+
+
+(agent) [784934] Arguments com.bytedance.retrofit2.SsHttpCall.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute(com.bytedance.retrofit2.SsHttpCall@64407ea)
+(agent) [784934] Return Value: com.bytedance.retrofit2.SsResponse@c52b
+
+
+com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # android hooking watch class X.QWe
+(agent) Hooking X.QWe.clinit$r$fake()
+(agent) Hooking X.QWe.onFailure(com.bytedance.retrofit2.Call, java.lang.Throwable)
+(agent) Hooking X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+(agent) Registering job 597996. Type: watch-class for: X.QWe
+com.ss.android.ugc.aweme on (google: 8.1.0) [usb] # (agent) [597996] Called X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+(agent) [597996] Called X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+(agent) [597996] Called X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+(agent) [597996] Called X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+(agent) [597996] Called X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+(agent) [597996] Called X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+(agent) [597996] Called X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+
+(agent) [606522] Arguments X.QWe.onResponse([object Object], com.bytedance.retrofit2.SsResponse@18edab7)
+(agent) [606522] Return Value: (none)
+(agent) [606522] Called X.QWe.onResponse(com.bytedance.retrofit2.Call, com.bytedance.retrofit2.SsResponse)
+(agent) [606522] Backtrace:
+        X.QWe.onResponse(Native Method)
+        com.bytedance.retrofit2.SsHttpCall$1.callSuccess(SourceFile:17039382)
+        com.bytedance.retrofit2.SsHttpCall$1.run(SourceFile:327768)
+        X.QwB.run(SourceFile:196635)
+        java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1162)
+        java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:636)
+        java.lang.Thread.run(Thread.java:764)
+        X.7HX.run(SourceFile:196628)
+
+android hooking watch class com.bytedance.org.chromium.net.AndroidNetworkLibrary
+
+
+
+public final java.lang.String javax.net.ssl.TrustManagerFactory.getAlgorithm()
+public final java.security.Provider javax.net.ssl.TrustManagerFactory.getProvider()
+public final javax.net.ssl.TrustManager[] javax.net.ssl.TrustManagerFactory.getTrustManagers()
+public final void javax.net.ssl.TrustManagerFactory.init(java.security.KeyStore) throws java.security.KeyStoreException
+public final void javax.net.ssl.TrustManagerFactory.init(javax.net.ssl.ManagerFactoryParameters) throws java.security.InvalidAlgorithmParameterException
+public static final java.lang.String javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm()
+public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String) throws java.security.NoSuchAlgorithmException
+public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String,java.lang.String) throws java.security.NoSuchAlgorithmException,java.security.NoSuchProviderException
+public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String,java.security.Provider) throws java.security.NoSuchAlgorithmException
