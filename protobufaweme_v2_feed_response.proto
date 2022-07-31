@@ -1,0 +1,27 @@
+syntax = "proto3";
+// 这里还需要其他的proto文件，数据很多，jadx代码上都有，安装ctrl点进去就是，以此类推
+// import 'myAwemeStructV2.proto';
+// import 'myExtraStructV2.proto';
+// import 'myLogPbStructV2.proto';
+// import 'myGuideWordV2.proto';
+
+message AwemeV2FeedResponse {
+    int32 status_code = 1;
+    int64 min_cursor = 2;
+    int64 max_cursor = 3;
+    int32 has_more = 4;
+    repeated my_aweme_struct_v2.AwemeStructV2 aweme_list = 5;
+    string rid = 6;
+    int32 home_model = 7;
+    int32 refresh_clear = 8;
+    repeated my_extra_struct_v2.ExtraStructV2 extra = 9;
+    repeated my_log_pb_structV2.LogPbStructV2 log_pb = 10;
+    string DebugInfo = 11;
+    repeated my_guide_word_v2.GuideWordV2 guide_word = 12;
+    repeated my_aweme_struct_v2.AwemeStructV2 preload_ads = 13;
+    string status_msg = 14;
+    int32 block_code = 15;
+    repeated my_aweme_struct_v2.AwemeStructV2 preload_awemes = 16;
+    bool enable_re_rank = 17;
+    bool disable_adjust_for_cache = 18;
+}

@@ -1,0 +1,3 @@
+message ProtobufLogPbStruct{
+    string impr_id = 2;
+}
