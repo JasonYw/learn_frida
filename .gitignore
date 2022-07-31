@@ -1,2 +1,7 @@
 result/*
 log/scrapy.log
+*env
+__pycache__
+*.apk
+*.apk.cache
+__pycache__/*
