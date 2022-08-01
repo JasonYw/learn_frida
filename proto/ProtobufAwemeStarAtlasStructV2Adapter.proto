@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufAwemeStarAtlasStructV2Adapter{
+    int32 review_status = 1;
+    // StarAtlasLink.ADAPTER.encodeWithTag(protoWriter, 2, link_info(awemeStarAtlas));
+    string log_extra =3;
+    // StarAtlasLiveInfoForBarStruct.ADAPTER.encodeWithTag(protoWriter, 4, live_attract_info(awemeStarAtlas));
+
+}

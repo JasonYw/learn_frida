@@ -1,0 +1,10 @@
+syntax = "proto3";
+message ProtobufAwemeFloatingCardStructV2Adapter{
+    string schema = 1;
+    string schema_desc = 2;
+    // adapter.asrepeated() icons = 3; urlmodel
+    string title = 4;
+    string description = 5;
+    string button_desc = 6;
+    // adapter button_bg = 7; urlmodel
+}

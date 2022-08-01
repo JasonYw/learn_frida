@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufVoteOptionStructV2Adapter{
+    string option_text = 1;
+    int64 option_id = 2;
+    int64 vote_count = 3;
+    string option = 4;
+
+}

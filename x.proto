@@ -1,38 +1,16 @@
 syntax = "proto3";
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 1, commerceStickerStruct.id);
+int32 Integer.valueOf = 1;
+ProtoAdapter.STRING.encodeWithTag(protoWriter, 2, replyToCommentStruct.commentText);
 
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 2, commerceStickerStruct.adOwnerId);
+UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, replyToCommentStruct.commentSticker);
 
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 3, commerceStickerStruct.adOwnerName);
+ProtoAdapter.STRING.encodeWithTag(protoWriter, 4, replyToCommentStruct.commentAuthorNickname);
 
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 4, commerceStickerStruct.detailDesc);
+UrlModel.ADAPTER.encodeWithTag(protoWriter, 5, replyToCommentStruct.commentAuthorAvatar);
 
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 5, commerceStickerStruct.detailLetters);
+UrlModel.ADAPTER.encodeWithTag(protoWriter, 6, replyToCommentStruct.awemeCover);
 
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 6, commerceStickerStruct.detailOpenUrl);
+ProtoAdapter.STRING.encodeWithTag(protoWriter, 7, replyToCommentStruct.awemeDesc);
 
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 7, commerceStickerStruct.detailWebUrl);
-
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 8, commerceStickerStruct.detailWebUrlTitle);
-
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 9, commerceStickerStruct.screenDesc);
-
-bool Boolean.valueOf = 10;
-UrlModel.ADAPTER.encodeWithTag(protoWriter, 11, commerceStickerStruct.publishIconUrl);
-
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 12, commerceStickerStruct.publishLetters);
-
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 13, commerceStickerStruct.publishOpenUrl);
-
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 14, commerceStickerStruct.publishWebUrl);
-
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 15, commerceStickerStruct.publishWebUrlTitle);
-
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 16, commerceStickerStruct.musicId);
-
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 17, commerceStickerStruct.challengeId);
-
-UrlModel.ADAPTER.encodeWithTag(protoWriter, 18, commerceStickerStruct.screenIcon);
-
-int64 Long.valueOf = 19;
-CommerceStickerUnlockStruct.ADAPTER.encodeWithTag(protoWriter, 20, commerceStickerStruct.unlockInfo);
+bool Boolean.valueOf = 8;
+int32 Integer.valueOf = 9;

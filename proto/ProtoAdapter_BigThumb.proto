@@ -1,0 +1,13 @@
+syntax = "proto3";
+message ProtoAdapter_BigThumb {
+    int64 img_num = 1;
+    string uri  = 2;
+    string img_url = 3;
+    int64 img_x_size = 4;
+    int64 img_y_size = 5;
+    int64 img_x_len = 6;
+    int64 img_y_len = 7;
+    double duration = 8;
+    double interval = 9;
+    string fext = 10;
+}

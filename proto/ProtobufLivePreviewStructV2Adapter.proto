@@ -1,0 +1,13 @@
+syntax = "proto3";
+message ProtobufLivePreviewStructV2Adapter{
+    int64 live_start_time = 1;
+    int32 status = 3;
+    bool is_show_btn = 4;
+    bool has_clicked_btn = 5;
+    int64 room_id = 6;
+    int32 type = 7;
+    int64 appointment_id = 8;
+    repeated int64 promotion_ids = 9;
+    string promotion_detail = 10;
+    string sticker_extra_info = 11;
+}

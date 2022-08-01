@@ -1,0 +1,22 @@
+syntax = "proto3";
+message ProtobufInteractionStickerStructV2Adapter{
+    int32 type = 1;
+    int32 index = 2;
+    // PoiStruct.ADAPTER.encodeWithTag(protoWriter, 3, poi_info(interactStickerStruct));
+    string track_info = 4;
+    string attr = 5;
+    // VoteStruct.ADAPTER.encodeWithTag(protoWriter, 6, vote_info(interactStickerStruct));
+    string text_info = 7;
+    // MentionStruct.ADAPTER.encodeWithTag(protoWriter, 8, mention_info(interactStickerStruct));
+    // HashtagStruct.ADAPTER.encodeWithTag(protoWriter, 9, hashtag_info(interactStickerStruct));
+    // LiveNoticeStruct.ADAPTER.encodeWithTag(protoWriter, 10, live_preview_info(interactStickerStruct));
+    // TextInteractionStickerStruct.ADAPTER.asRepeated().encodeWithTag(protoWriter, 11, text_interaction(interactStickerStruct));
+    // VideoShareInfoStruct.ADAPTER.encodeWithTag(protoWriter, 12, video_share_info(interactStickerStruct));
+    // GrootInteractionStickerStruct.ADAPTER.encodeWithTag(protoWriter, 13, groot_interaction(interactStickerStruct));
+    //  ReplyToAwemeStruct.ADAPTER.encodeWithTag(protoWriter, 14, reply_to_aweme(interactStickerStruct));
+    // TagInteractionStickerStruct.ADAPTER.encodeWithTag(protoWriter, 15, tag_interaction(interactStickerStruct));
+    int32 image_index = 16;
+    // ReplyToCommentStruct.ADAPTER.encodeWithTag(protoWriter, 17, reply_to_comment(interactStickerStruct));
+    string sticker_config = 18;
+
+}

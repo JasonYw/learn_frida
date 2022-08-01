@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtoAdapter_GrootInfoStruct{
+    int64 baike_id = 1;
+    string species_name =2;
+    float prob = 3;
+}

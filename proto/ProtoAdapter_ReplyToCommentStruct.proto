@@ -1,0 +1,12 @@
+syntax = "proto3";
+message ProtoAdapter_ReplyToCommentStruct{
+    int32 type = 1;
+    string comment_text = 2;
+    // adapter comment_sticker  = 3;urlmdoel
+    string comment_author_nickname = 4;
+    // urlmodel comment_author_avatar = 5;
+    // urlmodel aweme_cover = 6;
+    string aweme_desc = 7;
+    bool comment_deleted =8;
+    int32 native_type = 9;
+}

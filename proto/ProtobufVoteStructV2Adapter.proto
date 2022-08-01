@@ -1,0 +1,10 @@
+syntax = "proto3";
+message ProtobufVoteStructV2Adapter{
+    int64 vote_id = 1;
+    int64 ref_id = 2;
+    int32 ref_type = 3;
+    string question = 4;
+    // OptionsBean.ADAPTER.asRepeated().encodeWithTag(protoWriter, 5, options(voteStruct));
+    int64 select_option_id = 6;
+
+}

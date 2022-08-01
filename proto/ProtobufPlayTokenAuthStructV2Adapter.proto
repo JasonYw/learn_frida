@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufPlayTokenAuthStructV2Adapter {
+    string vid = 1;
+    string token = 2;
+    string auth = 3;
+    string tv_token = 4;
+    repeated string hosts = 5;
+}

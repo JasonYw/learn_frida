@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtobufMentionStickerStructV2Adapter{
+    string sec_uid = 1;
+    string user_name = 2;
+    string user_id = 3;
+    // adapter avatar_thumb = 4; urlmodel
+    string signature = 5;
+
+}

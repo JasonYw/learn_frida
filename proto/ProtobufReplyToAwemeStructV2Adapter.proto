@@ -1,0 +1,13 @@
+syntax = "proto3";
+message ProtobufReplyToAwemeStructV2Adapter{
+    string aweme_id = 1;
+    string desc = 2;
+    string author_nickname = 3;
+    // adapter cover = 4; urlmodel
+    string sec_user_id = 5;
+    string alias_comment_id = 6;
+    int32 aweme_type = 7;
+    bool is_available = 8;
+    // adapter author_avatar = 13; urlmodel
+    int32 type = 14;
+}

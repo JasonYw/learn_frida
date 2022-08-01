@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtoAdapter_TextInteractionStickerStruct{
+    int32 type = 1;
+    int32 index = 2;
+    // MentionStruct.ADAPTER.encodeWithTag(protoWriter, 3, textInteractionStickerStruct.mentionInfo);
+    // HashtagStruct.ADAPTER.encodeWithTag(protoWriter, 4, textInteractionStickerStruct.hashtagInfo);
+}

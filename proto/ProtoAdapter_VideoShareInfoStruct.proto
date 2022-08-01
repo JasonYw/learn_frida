@@ -1,0 +1,13 @@
+syntax = "proto3";
+message ProtoAdapter_VideoShareInfoStruct{
+    string aweme_id = 1;
+    string author_id = 2;
+    string sec_author_id = 3;
+    string author_name = 4;
+    string comment_user_id = 5;
+    string comment_user_sec_id =6;
+    string comment_content =7;
+    string comment_user_nickname =8;
+    string comment_id =9;
+    string image_index =10;
+}
