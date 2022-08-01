@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtobufActivityTimeRangeV2Adapter{
+    double start = 1;
+    double end = 2;
+    double duration = 3;
+}

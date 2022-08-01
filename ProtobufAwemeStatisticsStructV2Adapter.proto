@@ -1,0 +1,15 @@
+syntax = "proto3";
+message ProtobufAwemeStatisticsStructV2Adapter{
+    string aweme_id = 1;
+    int64 comment_count = 2;
+    int64 digg_count = 3;
+    int64 download_count = 4;
+    int64 play_count = 5;
+    int64 share_count = 6;
+    int64 forward_count = 7;
+    int32 lose_count = 8;
+    int32 lose_comment_count = 9;
+    int64 whatsapp_share_count = 10;
+    int64 collect_count = 11;
+    int64 admire_count = 12;
+}

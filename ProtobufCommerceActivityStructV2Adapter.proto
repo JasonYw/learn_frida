@@ -1,0 +1,18 @@
+syntax = "proto3";
+message ProtobufCommerceActivityStructV2Adapter{
+    int32 act_type = 1;
+    // adapter image = 2; //urlmodel
+    string jump_web_url = 3;
+    string jump_open_url = 4;
+    string title = 5;
+    int64 start_time = 6;
+    int64 end_time = 7;
+    // adapter.asrepeated() time_range = 8;//ActivityTimeRange
+    // adapter track_url_list = 9;//urlmodel
+    // adapter click_track_url_list = 10;//urlmodel
+    string lottie = 11;
+    int32 material_type = 12;
+    int64 appear_time = 13;
+    string compliance_data = 14;
+    string config_id = 15;
+}

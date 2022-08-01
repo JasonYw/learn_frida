@@ -1,0 +1,36 @@
+syntax = "proto3";
+message ProtoAdapter_AwemeGDAdStruct{
+    int64 ad_id = 1;
+    int64 cpt_seq = 2;
+    string req_id =3;
+    int64 rit = 4;
+    int32 ad_price = 5;
+    int64 creative_id = 6;
+    string title = 7;
+    // ProtoAdapter.STRING.encodeWithTag(protoWriter, 7, awemeGDAdStruct.title);
+    string source = 8;
+    // ProtoAdapter.STRING.encodeWithTag(protoWriter, 8, awemeGDAdStruct.source);
+    string open_url = 9;
+    // ProtoAdapter.STRING.encodeWithTag(protoWriter, 9, awemeGDAdStruct.openUrl);
+    string web_url = 10;
+    // ProtoAdapter.STRING.encodeWithTag(protoWriter, 10, awemeGDAdStruct.webUrl);
+    string web_title = 11;
+    // ProtoAdapter.STRING.encodeWithTag(protoWriter, 11, awemeGDAdStruct.webTitle);
+    string track_url_list = 12;
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 12, awemeGDAdStruct.trackUrlList);
+    string click_track_url_list = 13;
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 13, awemeGDAdStruct.clickTrackUrlList);
+    bool is_preview = 14;
+    // bool Boolean.valueOf = 14;
+    // play_track_url_list
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 15, awemeGDAdStruct.playTrackUrlList);
+    // playover_track_url_list
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 16, awemeGDAdStruct.playoverTrackUrlList);
+    int32 effective_play_time = 17;
+    // effective_play_track_url_list
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 18, awemeGDAdStruct.effectivePlayTrackUrlList);
+    int64 group_id = 19;
+    int32 video_transpose = 20;
+
+
+}

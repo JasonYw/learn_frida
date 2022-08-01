@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtobufAwemeLabelStructV2Adapter{
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 1, label_url(awemeLabelModel));
+    int32 label_type = 2;
+}

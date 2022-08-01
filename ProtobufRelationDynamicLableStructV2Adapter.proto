@@ -1,0 +1,17 @@
+syntax = "proto3";
+message ProtobufRelationDynamicLableStructV2Adapter {
+    string nickname = 1;
+    string label_info = 2;
+    int32 count = 3;
+    string user_id = 4;
+    int32 type = 5;
+    int32 show_type = 6;
+    string label_info_color = 7;
+    string label_info_background_color = 8;
+    // adapter label_info_background_img = 9; urlmodel
+    string schema = 10;
+    string label_info_background_img_stretch_position = 11;
+    string label_tag = 12;
+    string label_type = 13;
+    int64 tag_id = 14;
+}

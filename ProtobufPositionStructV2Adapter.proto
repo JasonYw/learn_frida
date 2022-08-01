@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtobufPositionStructV2Adapter{
+    int32 begin = 1;
+    int32 end = 2;
+}

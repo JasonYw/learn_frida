@@ -1,0 +1,22 @@
+syntax = "proto3";
+message ProtobufAwemeStatusStructV2Adapter {
+    string aweme_id = 1;
+    bool is_delete = 2;
+    bool allow_share = 3;
+    bool allow_comment = 4;
+    bool is_private = 5;
+    bool with_goods = 6;
+    int32 private_status = 7;
+    bool with_fusion_goods = 8;
+    bool in_reviewing = 9;
+    int32 reviewed = 10;
+    bool self_see = 11;
+    bool is_prohibited = 12;
+    int32 download_status = 13;
+    int32 dont_share_status = 14;
+    int32 video_hide_search = 15;
+    adapter aweme_edit_info = 16;
+    bool reviewed_friend_see = 17;
+    int32 part_see = 18;
+    int64 item_version = 19;
+}

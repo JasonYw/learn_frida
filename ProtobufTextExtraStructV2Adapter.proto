@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+message ProtobufTextExtraStructV2Adapter{
+    int32 start = 1;
+    int32 end = 2;
+    string user_id = 3;
+    int32 type = 4;
+    string hashtag_name = 5;
+    string hashtag_id = 6;
+    bool is_commerce = 7;
+    string hashTagName1 = 8;
+    string sec_uid = 9;
+    string aweme_id = 10;
+    int32 sub_type = 11;
+    string live_data = 12;
+    string search_text = 13;
+    string search_query_id = 14;
+    int32 search_hide_words = 15;
+    int32 tag_mention_need_fold = 16;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufImageInfoStructV2Adapter{
+    int32 height = 1;
+    int32 width = 2;
+    // adapter label_large = 3; urlmodel
+    // adapter label_thumb = 4; urlmodel
+
+}

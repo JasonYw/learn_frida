@@ -1,0 +1,28 @@
+syntax = "proto3";
+message ProtoAdapter_NewFaceStickerStruct{
+    string id = 1;
+    string name = 2;
+    repeated string children = 3;
+    //icon_url
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, newFaceStickerStruct.iconUrl);
+    string owner_id = 5;
+    string owner_nickname = 6;
+    int32 user_count = 7;
+    string desc = 8;
+    string effect_id = 9;
+    // share_info
+    // ShareInfo.ADAPTER.encodeWithTag(protoWriter, 10, newFaceStickerStruct.shareInfo);
+    bool is_favorite = 11;
+    // commerce_sticker
+    // CommerceStickerStruct.ADAPTER.encodeWithTag(protoWriter, 12, newFaceStickerStruct.commerceSticker);
+    repeated string tags = 13;
+    // avatar_thumb
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 14, newFaceStickerStruct.avatarThumb);
+    // avatar_medium
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 15, newFaceStickerStruct.avatarMedium);
+    // avatar_thumb
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 16, newFaceStickerStruct.avatarLarge);
+    int64 vv_count = 17;
+    string extra = 18;
+    string sec_uid = 19;
+}

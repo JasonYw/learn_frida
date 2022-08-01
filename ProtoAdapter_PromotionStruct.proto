@@ -1,0 +1,44 @@
+syntax = "proto3";
+message ProtoAdapter_PromotionStruct{
+    string promotion_id = 1;
+    string gid = 2;
+    string title = 3;
+    //image
+    //UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, promotionStruct.image);
+    int64 price = 5;
+    int64 market_price = 6;
+    int64 cos_fee = 7;
+    string url = 8;
+    int64 item_type = 9;
+    int64 sales= 10;
+    string extra = 11;
+    bool favorited = 12;
+    string last_aweme_id = 13;
+    string elastic_title = 14;
+    string elastic_introduction = 15;
+    // elastic_img
+    // UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, 16, promotionStruct.elasticImg);
+    repeated string label = 17;
+    // visitor
+    // PromotionVisitor.ADAPTER.encodeWithTag(protoWriter, 18, promotionStruct.visitor);
+    string h5_url = 19;
+    double cos_radio = 20;
+    string logo = 21;
+    string source = 22;
+    //imgs
+    //UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, 23, promotionStruct.imgs);
+    int32 promotion_source = 24;
+    int32 elastic_type = 25;
+    string title_prefix = 26;
+    int32 views = 27;
+    int32 clicks = 28;
+    int32 rank = 29;
+    string rank_url = 30;
+    string trace_author_id = 31;
+    string trace_aweme_id = 32;
+    // brand_icon
+    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 33, promotionStruct.brandIcon);
+    string small_app_url = 34;
+    // user_shop_categories
+    // UserShopCategory.ADAPTER.asRepeated().encodeWithTag(protoWriter, 35, promotionStruct.userShopCategories);
+}
