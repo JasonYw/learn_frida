@@ -7,3 +7,7 @@ UrlModel.ADAPTER.encodeWithTag(protoWriter, 6, replyToCommentStruct.awemeCover);
 ProtoAdapter.STRING.encodeWithTag(protoWriter, 7, replyToCommentStruct.awemeDesc);
 ProtoAdapter.BOOL.encodeWithTag(protoWriter, 8, Boolean.valueOf(replyToCommentStruct.commentDeleted));
 ProtoAdapter.INT32.encodeWithTag(protoWriter, 9, Integer.valueOf(replyToCommentStruct.nativeType));
+
+
+
+93  public final class ProtobufAwemeStructV2Adapter extends ProtoAdapter<Aweme>
