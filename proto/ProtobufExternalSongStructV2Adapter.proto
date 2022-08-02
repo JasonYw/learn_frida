@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtobufExternalSongStructV2Adapter {
+	string h5_url = 1;
+	string partner_name = 2;
+	string partner_song_id = 3;
+	string external_song_key = 4;
+}

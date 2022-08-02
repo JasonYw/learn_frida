@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtobufAwemeNationalTaskStructV2Adapter {
+	//LiveAppointmentStruct.ADAPTER.encodeWithTag(protoWriter, 2, live_appointment(awemeNationalTask));
+}

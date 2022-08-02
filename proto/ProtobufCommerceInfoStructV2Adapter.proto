@@ -1,0 +1,10 @@
+syntax = "proto3";
+message ProtobufCommerceInfoStructV2Adapter {
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 1, head_image_url(commerceInfo));
+	//OfflineInfo.ADAPTER.asRepeated().encodeWithTag(protoWriter, 2, offline_info_list(commerceInfo));
+	//Challenge.ADAPTER.asRepeated().encodeWithTag(protoWriter, 3, challenge_list(commerceInfo));
+	//SmartPhone.ADAPTER.encodeWithTag(protoWriter, 4, smart_phone(commerceInfo));
+	string quick_shop_url = 5;
+	string quick_shop_name = 6;
+	string site_id = 7;
+}

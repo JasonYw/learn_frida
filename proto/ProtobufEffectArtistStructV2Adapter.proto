@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtobufEffectArtistStructV2Adapter {
+	int32 total = 1;
+}

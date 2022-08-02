@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtobufAnchorStructV2Adapter{
+    int32 show_type = 1;
+    int32 business_type = 2;
+    // WikipediaInfo.ADAPTER.encodeWithTag(protoWriter, 3, wikipedia_info(anchor));
+    // AnchorShopLinkStruct.ADAPTER.encodeWithTag(protoWriter, 4, shop_link(anchor));
+    // AnchorCommonStruct.ADAPTER.encodeWithTag(protoWriter, 5, anchor_info(anchor));
+    string anchor_id = 6;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufMatchedPGCSoundStructV2Adapter {
+	int64 m7671id = 1;
+	string author = 2;
+	string title = 3;
+	string mixed_title = 4;
+	string mixed_author = 5;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+message ProtobufStoryGroupStructV2Adapter {
+	//StoryStruct.ADAPTER.asRepeated().encodeWithTag(protoWriter, 1, story_list(storyGroupStruct));
+	int32 offset = 2;
+	int32 total = 3;
+	int64 min_cursor = 4;
+	int64 max_cursor = 5;
+	string folder_id = 6;
+	int64 head_cursor = 7;
+	int64 tail_cursor = 8;
+	bool need_normal = 9;
+	string has_insert_id = 10;
+	int32 is_ttl_story = 11;
+	string has_insert_create_time = 12;
+	//StoryIdStruct.ADAPTER.asRepeated().encodeWithTag(protoWriter, 13, story_id_list(storyGroupStruct));
+}

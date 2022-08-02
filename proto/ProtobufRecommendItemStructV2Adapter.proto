@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtobufRecommendItemStructV2Adapter {
+	string aweme_id = 1;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, cover(recommendAwemeItem));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, dynamic_cover(recommendAwemeItem));
+	int64 media_type = 4;
+}

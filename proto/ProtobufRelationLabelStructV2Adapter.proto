@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtobufRelationLabelStructV2Adapter{
+    // RelationLabelUser.ADAPTER.asRepeated().encodeWithTag(protoWriter, 1, user_list(relationLabelNew));
+    int32 type = 2;
+    string extra = 3;
+}

@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtobufItemLikeEggDataV2Adapter{
+    string material_url = 1;
+    string file_type = 2;
+}

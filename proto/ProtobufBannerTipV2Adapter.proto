@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufBannerTipV2Adapter {
+	int32 banner_type = 1;
+	string banner_txt = 2;
+	int32 link_type = 3;
+	string link_url = 4;
+	string link_txt = 5;
+}

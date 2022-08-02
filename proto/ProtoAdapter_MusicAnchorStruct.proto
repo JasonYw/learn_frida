@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtoAdapter_MusicAnchorStruct {
+	string  schema_url = 1;
+	string  title = 2;
+	string  id = 3;
+	//ProtoAdapter.STRING.encodeWithTag(protoWriter, 1, musicAnchorStruct.schemaUrl);
+	//ProtoAdapter.STRING.encodeWithTag(protoWriter, 2, musicAnchorStruct.title);
+	//ProtoAdapter.STRING.encodeWithTag(protoWriter, 3, musicAnchorStruct.f41282id);
+}

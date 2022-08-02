@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufCommerceUserStructV2Adapter {
+	int32 star_atlas = 1;
+	bool show_star_atlas_cooperation = 2;
+	bool has_ads_entry = 3;
+	//LinkUserInfoStruct.ADAPTER.encodeWithTag(protoWriter, 4, link_user_info(commerceUserInfo));
+	int32 ad_influencer_type = 5;
+}

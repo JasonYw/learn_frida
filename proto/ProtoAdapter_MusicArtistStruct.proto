@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_MusicArtistStruct {
+	string uid = 1;
+	string artist_name = 2;
+}

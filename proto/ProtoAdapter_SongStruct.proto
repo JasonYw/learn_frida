@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtoAdapter_SongStruct {
+	int64 id = 1;
+	string id_str =2;
+	string title =3;
+	//MusicArtistStruct.ADAPTER.asRepeated().encodeWithTag(protoWriter, 4, songStruct.artists);
+	//ChorusStruct.ADAPTER.encodeWithTag(protoWriter, 5, songStruct.chorus);
+}

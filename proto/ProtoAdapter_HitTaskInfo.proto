@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_HitTaskInfo {
+	int32 compeleted_task_cnt = 1;
+	int32 total_task_cnt = 2;
+}

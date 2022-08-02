@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtobufOriginalMusicianStructV2Adapter{
+    syntax = "proto3";
+    int32 music_count = 1;
+    int32 music_used_count = 2;
+    //UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, music_qrcode_url(originalMusician));
+    //UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, music_cover_url(originalMusician));
+    int32 digg_count = 5;
+}

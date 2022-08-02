@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtobufAdCoverTitleV2Adapter {
+	string title = 1;
+	string web_url = 2;
+}

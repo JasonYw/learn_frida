@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtoAdapter_TextContentStruct {
+	string text = 1;
+	string color = 2;
+	string size = 3;
+	//ProtoAdapter.STRING.encodeWithTag(protoWriter, 1, textContentStruct.text);
+	//ProtoAdapter.STRING.encodeWithTag(protoWriter, 2, textContentStruct.color);
+	//ProtoAdapter.STRING.encodeWithTag(protoWriter, 3, textContentStruct.size);
+}

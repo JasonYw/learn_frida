@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtobufHotsearchSprintStructV2Adapter {
+	int32 sprint = 1;
+	//SimpleUserStruct.ADAPTER.asRepeated().encodeWithTag(protoWriter, 2, followers(hotSearchSprintStruct));
+}

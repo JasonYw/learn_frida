@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtobufStoryStructV2Adapter {
+	//Aweme.ADAPTER.encodeWithTag(protoWriter, 1, story(storyStruct));
+	bool unread = 2;
+}

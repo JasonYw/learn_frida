@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtobufLifeStoryBlockStructV2Adapter {
+	bool life_story_block = 1;
+	bool life_story_blocked = 2;
+}

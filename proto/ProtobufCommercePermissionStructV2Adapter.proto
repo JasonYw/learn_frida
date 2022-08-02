@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtobufCommercePermissionStructV2Adapter {
+	int32 top_item = 1;
+	int32 ad_link = 2;
+	int32 star_atlas_order = 3;
+}

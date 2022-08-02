@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_ChorusStruct {
+	int64 start_ms = 1;
+	int64 duration_ms = 2;
+}

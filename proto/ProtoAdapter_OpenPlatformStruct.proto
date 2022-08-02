@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtoAdapter_OpenPlatformStruct{
+    string name = 1;
+    string icon = 2;
+    string link = 3;
+    string raw_data = 4;
+}

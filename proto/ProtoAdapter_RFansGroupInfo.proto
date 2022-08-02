@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtoAdapter_RFansGroupInfo {
+	string schema = 1;
+	string token = 2;
+	string download_url =3;
+}

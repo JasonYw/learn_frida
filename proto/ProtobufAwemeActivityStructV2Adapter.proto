@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufAwemeActivityStructV2Adapter {
+	string activity_id = 1;
+	int64 show_delay_time = 2;
+	string schema_url = 3;
+	//TextContentStruct.ADAPTER.encodeWithTag(protoWriter, 4, content(awemeActivity));
+	//ActivityButtonStruct.ADAPTER.encodeWithTag(protoWriter, 5, primary_btn(awemeActivity));
+}

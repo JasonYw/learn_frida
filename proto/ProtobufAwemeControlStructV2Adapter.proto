@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtobufAwemeControlStructV2Adapter{
+    bool can_forward = 1;
+    bool can_share = 2;
+    bool can_comment = 3;
+    bool can_show_comment = 4;
+}

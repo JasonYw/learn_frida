@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtobufAwemeCommerceStickerStructV2Adapter{
+    int64 commerce_sticker_id = 1;
+    // adapter icon_url = 2; urlmodel
+    string letters = 3;
+    string open_url = 4;
+    string web_url = 5;
+    string web_url_title = 6;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+message ProtoAdapter_SimpleUserStruct {
+	string uid = 1;
+	string nickname = 2;
+	string signature =3;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, simpleUserStruct.avatarThumb);
+	int32 follow_status = 5;
+	int32 status = 6;
+	int32 user_rate = 7;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 8, simpleUserStruct.avatarLarger);
+	//HitTaskInfo.ADAPTER.encodeWithTag(protoWriter, 9, simpleUserStruct.hitTaskInfo);
+	string unique_id = 10;
+	string sec_uid = 11;
+}

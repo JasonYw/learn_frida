@@ -1,0 +1,11 @@
+syntax = "proto3";
+message ProtobufRelativeUserStructV2Adapter {
+	int64 uid = 1;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, avatar(relationLabelUser));
+	string nickname = 3;
+	string remark_name = 4;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 5, avatar_larger(relationLabelUser));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 6, avatar_thumb(relationLabelUser));
+	int32 follow_status = 7;
+	string sec_uid = 8;
+}

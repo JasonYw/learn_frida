@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtobufLiveHonorStructV2Adapter {
+	int32 honor_level = 1;
+	int64 honor_score = 2;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, badge_thumb(honorStruct));
+}

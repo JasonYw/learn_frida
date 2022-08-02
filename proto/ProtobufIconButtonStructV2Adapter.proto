@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtobufIconButtonStructV2Adapter {
+	string text = 1;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, icon(challengeTransform));
+	string action = 3;
+}

@@ -1,13 +1,4 @@
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 1, Integer.valueOf(replyToCommentStruct.type));
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 2, replyToCommentStruct.commentText);
-UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, replyToCommentStruct.commentSticker);
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 4, replyToCommentStruct.commentAuthorNickname);
-UrlModel.ADAPTER.encodeWithTag(protoWriter, 5, replyToCommentStruct.commentAuthorAvatar);
-UrlModel.ADAPTER.encodeWithTag(protoWriter, 6, replyToCommentStruct.awemeCover);
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 7, replyToCommentStruct.awemeDesc);
-ProtoAdapter.BOOL.encodeWithTag(protoWriter, 8, Boolean.valueOf(replyToCommentStruct.commentDeleted));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 9, Integer.valueOf(replyToCommentStruct.nativeType));
-
-
-
-93  public final class ProtobufAwemeStructV2Adapter extends ProtoAdapter<Aweme>
+ProtobufNewStoryIdStructV2Adapter
+ProtoAdapter.STRING.encodeWithTag(protoWriter, 1, m8201id(storyIdStruct));
+ProtoAdapter.INT32.encodeWithTag(protoWriter, 2, offset(storyIdStruct));
+ProtoAdapter.INT32.encodeWithTag(protoWriter, 3, pic_count(storyIdStruct));
