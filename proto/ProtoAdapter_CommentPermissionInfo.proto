@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtoAdapter_CommentPermissionInfo {
+	bool can_comment = 2;
+	int32 comment_permission_status = 1;
+	bool item_detail_entry = 3;
+	bool press_entry = 4;
+	bool toast_guide = 5;
+}

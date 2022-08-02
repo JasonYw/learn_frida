@@ -1,0 +1,10 @@
+syntax = "proto3";
+message ProtoAdapter_RapidRedPacketStruct {
+	bool top_red_packet = 1;
+	int32 alert_red_packet_second = 2;
+	bool red_packet_guide = 3;
+	bool welfare_guide = 4;
+	//RapidPopWindowStruct.ADAPTER.encodeWithTag(protoWriter, 5, rapidRedPacketStruct.welfareGuideInfo);
+	int32 video_type = 6;
+	string pop_up_source = 7;
+}

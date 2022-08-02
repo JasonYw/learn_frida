@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtobufAwemeLiteStructV2Adapter {
+	int32 is_lite_red_pack_item = 1;
+	bool can_done_share_private_chat_task = 2;
+	bool can_done_lite_video_interaction = 3;
+	bool is_lite_video_interaction_item = 4;
+	string task_token = 5;
+	int32 red_pack_user_status = 6;
+}

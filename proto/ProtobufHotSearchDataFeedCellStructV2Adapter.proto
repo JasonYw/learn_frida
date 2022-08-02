@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtobufHotSearchDataFeedCellStructV2Adapter {
+	//HotSearchItem.ADAPTER.asRepeated().encodeWithTag(protoWriter, 1, word_list(hotSearchEntity));
+	//ShareInfo.ADAPTER.encodeWithTag(protoWriter, 2, share_info(hotSearchEntity));
+	string active_time = 3;
+}

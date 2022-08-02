@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtoAdapter_SocialTagStruct {
+	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER image = 2;
+	string mob_label = 4;
+	string schema = 3;
+	string title = 1;
+	int32 type = 5;
+}

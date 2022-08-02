@@ -1,0 +1,25 @@
+syntax = "proto3";
+message ProtobufHotSearchWordStructV2Adapter {
+	string word = 1;
+	int32 label = 2;
+	int64 hot_value = 3;
+	string search_word = 4;
+	string challenge_id = 5;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 6, word_cover(hotSearchItem));
+	string ad_data = 7;
+	int32 position = 8;
+	int32 video_count = 9;
+	string group_id = 10;
+	string top_aweme_id = 11;
+	bool can_extend_detail = 12;
+	string schema = 13;
+	int32 word_type = 14;
+	int32 room_count = 15;
+	string sentence_id = 16;
+	string customer_label = 17;
+	int64 event_time = 18;
+	//HotSearchItem.ADAPTER.asRepeated().encodeWithTag(protoWriter, 19, related_words(hotSearchItem));
+	//HotWordGuideInfoStruct.ADAPTER.encodeWithTag(protoWriter, 20, hot_word_guide_info(hotSearchItem));
+	int64 view_count = 21;
+	string hotlist_param = 22;
+}

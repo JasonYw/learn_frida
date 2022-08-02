@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_VideoSafetyControl {
+	bool need_play_check = 1;
+	int32 potential_risk_level = 2;
+}

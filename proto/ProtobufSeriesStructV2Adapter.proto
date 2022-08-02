@@ -1,0 +1,13 @@
+syntax = "proto3";
+message ProtobufSeriesStructV2Adapter {
+	string series_id = 1;
+	string series_name = 2;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, cover_url(seriesStructV2));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, icon_url(seriesStructV2));
+	//SeriesStatusStruct.ADAPTER.encodeWithTag(protoWriter, 5, status(seriesStructV2));
+	//SeriesStatsStruct.ADAPTER.encodeWithTag(protoWriter, 6, stats(seriesStructV2));
+	string desc = 7;
+	//User.ADAPTER.encodeWithTag(protoWriter, 8, author(seriesStructV2));
+	string extra = 9;
+	//ShareInfo.ADAPTER.encodeWithTag(protoWriter, 10, share_info(seriesStructV2));
+}

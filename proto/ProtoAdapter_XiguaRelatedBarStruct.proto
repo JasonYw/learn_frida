@@ -1,0 +1,11 @@
+syntax = "proto3";
+message ProtoAdapter_XiguaRelatedBarStruct {
+	string id = 1;
+	//icon UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, xiguaRelatedBarStruct.icon);
+	string title = 3;
+	string open_url = 4;
+	int32 type = 5;
+	string open_app_schema = 6;
+	string right_desc = 7;
+	string jump_confirm_title = 8;
+}

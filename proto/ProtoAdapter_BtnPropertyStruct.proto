@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtoAdapter_BtnPropertyStruct {
+	string btn_icon = 4;
+	string btn_schema = 2;
+	string btn_text = 1;
+	int32 status = 3;
+}

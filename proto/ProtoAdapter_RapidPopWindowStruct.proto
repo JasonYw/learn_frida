@@ -1,0 +1,10 @@
+syntax = "proto3";
+message ProtoAdapter_RapidPopWindowStruct {
+	string amount_type = 1;
+	int32 amount = 2;
+	string top_text =3;
+	string middle_text = 4;
+	string bottom_text = 5;
+	string button_text = 6;
+	string schema =7;
+}

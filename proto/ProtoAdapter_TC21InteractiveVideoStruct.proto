@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtoAdapter_TC21InteractiveVideoStruct {
+	string activity_id = 1;
+	string schema_url = 2;
+	int64 show_delay_time = 3;
+	string tag_text = 4;
+	string extra = 5;
+}

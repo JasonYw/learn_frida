@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtobufPoiTagRateGradeStructV2Adapter {
+	int32 type = 1;
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtobufVisualSearchStructV2Adapter {
+	bool visual_search_show_entry = 1;
+	string visual_search_goods_label = 2;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, visual_search_img(visualSearch));
+	string entry_text = 4;
+}

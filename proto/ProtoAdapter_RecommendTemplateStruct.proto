@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtoAdapter_RecommendTemplateStruct {
+	string template = 2;
+	int32 template_id = 1;
+	repeated string value_list = 3;
+}

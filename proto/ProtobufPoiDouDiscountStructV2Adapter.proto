@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtobufPoiDouDiscountStructV2Adapter {
+	string dou_discount_label = 1;
+	//HotSearchInfo.ADAPTER.encodeWithTag(protoWriter, 2, dou_discount_mix_info(poiDouDiscountStruct));
+	//PoiDouDiscountRankInfoStruct.ADAPTER.encodeWithTag(protoWriter, 3, dou_discount_rank_info(poiDouDiscountStruct));
+}

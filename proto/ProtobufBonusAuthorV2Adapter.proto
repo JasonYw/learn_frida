@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtobufBonusAuthorV2Adapter {
+	int64 m8195id = 1;
+	string name = 2;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, avatar_larger(bonusAuthor));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, avatar_thumb(bonusAuthor));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 5, avatar_medium(bonusAuthor));
+}

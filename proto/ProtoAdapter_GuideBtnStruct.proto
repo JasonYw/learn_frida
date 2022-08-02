@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_GuideBtnStruct {
+	//com.ss.ugc.aweme.BtnPropertyStruct#ADAPTER buttons = 2;
+	string config = 1;
+}

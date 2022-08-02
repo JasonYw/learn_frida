@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_PoiFootprintStruct {
+	string schema = 2;
+	string title = 1;
+}

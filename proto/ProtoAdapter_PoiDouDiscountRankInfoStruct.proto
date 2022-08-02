@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtoAdapter_PoiDouDiscountRankInfoStruct {
+	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER category_icon = 3;
+	string category_name = 4;
+	int32 item_count = 5;
+	string rank_code = 1;
+	string rank_name = 2;
+	int64 vv_total = 6;
+}

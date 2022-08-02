@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtoAdapter_SuggestWords {
+	//com.ss.ugc.aweme.SuggestWord#ADAPTER suggest_words = 1; repead
+}

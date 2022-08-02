@@ -1,0 +1,9 @@
+syntax = "proto3";
+message ProtoAdapter_LiveFeedbackCard {
+	//com.ss.ugc.aweme.LiveFeedbackCondition#ADAPTER condition = 5;
+	int64 feedback_id = 2;
+	int32 feedback_type = 3;
+	string negative_text = 6;
+	//com.ss.ugc.aweme.LiveFeedbackQuestion#ADAPTER question = 4; repead
+	string title = 1;
+}

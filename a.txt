@@ -1,4 +1,41 @@
-ProtobufNewStoryIdStructV2Adapter
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 1, m8201id(storyIdStruct));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 2, offset(storyIdStruct));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 3, pic_count(storyIdStruct));
+ProtoAdapter_StandardBarInfoStruct
+@SerializedName(Constants.APP_ID)
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", label = WireField.Label.REQUIRED, tag = 5)
+public int appId;
+@SerializedName("app_schema")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 12)
+public String appSchema;
+@SerializedName("applet_schema")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 10)
+public String appletSchema;
+@SerializedName("biz_scene")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", label = WireField.Label.REQUIRED, tag = 4)
+public int bizScene;
+@SerializedName("extra")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 13)
+public String extra;
+@SerializedName("icon_url")
+@WireField(adapter = "com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER", tag = 9)
+public UrlModel iconUrl;
+@SerializedName(C33968a.f42937f)
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", label = WireField.Label.REQUIRED, tag = 1)
+
+/* renamed from: id */
+public String f41290id;
+@SerializedName("item_id")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT64", label = WireField.Label.REQUIRED, tag = 7)
+public long itemId;
+@SerializedName("jump_confirm_title")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 11)
+public String jumpConfirmTitle;
+@SerializedName("relation_type")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", label = WireField.Label.REQUIRED, tag = 6)
+public int relationType;
+@SerializedName("standard_bar_id")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", label = WireField.Label.REQUIRED, tag = 8)
+public int standardBarId;
+@SerializedName("text")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", label = WireField.Label.REQUIRED, tag = 3)
+public String text;
+@SerializedName("title")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", label = WireField.Label.REQUIRED, tag = 2)

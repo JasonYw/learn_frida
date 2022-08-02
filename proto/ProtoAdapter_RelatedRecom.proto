@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtoAdapter_RelatedRecom {
+	int32 bar_eject = 2;
+	bool related_bar = 1;
+	string related_info = 4;
+	string related_text = 3;
+}

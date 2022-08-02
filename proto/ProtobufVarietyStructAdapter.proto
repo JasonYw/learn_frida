@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtobufVarietyStructAdapter {
+	string raw_data = 1;
+}

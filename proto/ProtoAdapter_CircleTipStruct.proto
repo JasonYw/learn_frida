@@ -1,0 +1,10 @@
+syntax = "proto3";
+message ProtoAdapter_CircleTipStruct {
+	string common_schema = 5;
+	int32 content_type = 4;
+	string id = 1;
+	string schema_type = 7;
+	string text = 6;
+	string title = 2;
+	int32 user_role = 3;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+message ProtoAdapter_FamiliarActivityStruct {
+	string activity_id = 1;
+	bool show_activity_btn = 2;
+	string  schema_url = 3;
+	string follow_text = 4;
+	string  followed_text = 5;
+	int64 end_time = 6;
+	string followed_toast = 7;
+}

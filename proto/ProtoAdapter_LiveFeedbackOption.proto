@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtoAdapter_LiveFeedbackOption {
+	string key = 1;
+	bool negative = 4;
+	int64 sub_question_id = 3;
+	string text = 2;
+	string toast_text = 5;
+}

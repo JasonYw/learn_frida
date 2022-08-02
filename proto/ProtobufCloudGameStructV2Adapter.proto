@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtobufCloudGameStructV2Adapter {
+	string cloud_game_id = 1;
+	//CloudGameEntranceStruct.ADAPTER.encodeWithTag(protoWriter, 2, entrance_info(cloudGameStruct));
+	string download_url = 3;
+	string extra = 4;
+}

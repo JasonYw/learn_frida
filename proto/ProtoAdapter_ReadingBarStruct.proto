@@ -1,0 +1,15 @@
+syntax = "proto3";
+message ProtoAdapter_ReadingBarStruct {
+	string id = 1;
+	//icon UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, readingBarStruct.icon);
+	string title = 3;
+	string open_url = 4;
+	string web_url = 5;
+	string extra = 6;
+	string open_app_schema = 7;
+	string ab_param = 8;
+	string tag = 9;
+	string prefix = 10;
+	string  font_color = 11;
+	string background_color = 12;
+}

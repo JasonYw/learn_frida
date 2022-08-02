@@ -1,0 +1,9 @@
+syntax = "proto3";
+message RelatedSearchBarStruct {
+	string guide_text = 2;
+	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER icon = 1;
+	int32 jump_type = 4;
+	string query_id = 6;
+	string query_word = 3;
+	string schema = 5;
+}

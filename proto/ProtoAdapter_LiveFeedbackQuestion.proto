@@ -1,0 +1,8 @@
+syntax = "proto3";
+message ProtoAdapter_LiveFeedbackQuestion {
+	//com.ss.ugc.aweme.LiveFeedbackOption#ADAPTER options = 4; repead
+	int64 question_id = 5;
+	string question_key = 1;
+	string question_text = 2;
+	int64 type = 3;
+}

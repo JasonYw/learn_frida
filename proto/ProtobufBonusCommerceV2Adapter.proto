@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtobufBonusCommerceV2Adapter {
+	int64 m8194id = 1;
+}

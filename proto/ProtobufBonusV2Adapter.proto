@@ -1,0 +1,17 @@
+syntax = "proto3";
+message ProtobufBonusV2Adapter {
+	int32 bonus_type = 1;
+	//BonusAuthor.ADAPTER.encodeWithTag(protoWriter, 2, author(tcBonus));
+	string title = 3;
+	string subTitle = 4;
+	string text = 5;
+	string style = 6;
+	//BonusCommerce.ADAPTER.encodeWithTag(protoWriter, 7, commerce_info(tcBonus));
+	string open_url = 8;
+	string token = 9;
+	int32 source = 10;
+	int64 scene_id = 11;
+	string digg_text = 12;
+	string digg_toast = 13;
+	bool maybe_carp = 14;
+}
