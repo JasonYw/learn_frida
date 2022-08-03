@@ -63,7 +63,7 @@ import "ProtobufAwemeNationalTaskStructV2Adapter.proto";
 import "ProtobufAwemePromotionOtherStructV2Adapter.proto";
 import "ProtobufAwemeRiskStructV2Adapter.proto";
 import "ProtobufAwemeSearchStructV2Adapter.proto";
-
+import "ProtobufAnchorStructV2Adapter.proto";
 
 
 
@@ -178,7 +178,7 @@ message ProtobufAwemeStructV2Adapter {
 	int32 ad_aweme_source = 108;
 	AwemeControl.ProtobufAwemeControlStructV2Adapter aweme_control = 109;
 	bool has_vs_entry = 110;
-	//Anchor.ADAPTER.encodeWithTag(protoWriter, 111, anchor(aweme));
+	Anchor.ProtobufAnchorStructV2Adapter  anchor = 111;
 	//RelationLabelNew.ADAPTER.encodeWithTag(protoWriter, 112, feed_relation_label(aweme));
 	//MixStruct.ADAPTER.encodeWithTag(protoWriter, 113, mix_info(aweme));
 	string simple_shop_seeding = 114;
@@ -187,7 +187,7 @@ message ProtobufAwemeStructV2Adapter {
 	AwemeNationalTask.ProtobufAwemeNationalTaskStructV2Adapter  national_task_info =117;
 	//BannerTip.ADAPTER.encodeWithTag(protoWriter, 118, banner_tip(aweme));
 	AwemeACLShare.ProtobufAwemeACLStructV2Adapter acl_info = 119;
-	//AnchorInfo.ADAPTER.encodeWithTag(protoWriter, 121, anchor_info(aweme));
+	AnchorInfo.ProtobufAnchorStructV2Adapter anchor_info = 121;
 	//VPAInfoStruct.ADAPTER.encodeWithTag(protoWriter, OpenAuthTask.f22015g, vpa_info(aweme));
 	//LiveAwesomeSplashInfo.ADAPTER.encodeWithTag(protoWriter, 123, cny_info(aweme));
 	bool is_familiar = 124;

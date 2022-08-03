@@ -1,4 +1,5 @@
 syntax = "proto3";
+package Anchor;
 import "ProtobufAnchorCommonStructV2Adapter.proto";
 import "ProtobufAnchorShopLinkStructV2Adapter.proto";
 import "ProtobufAnchorWikipediaStructV2Adapter.proto";
