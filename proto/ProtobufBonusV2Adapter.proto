@@ -1,12 +1,14 @@
 syntax = "proto3";
+import "ProtobufBonusAuthorV2Adapter.proto";
+import "ProtobufBonusCommerceV2Adapter.proto";
 message ProtobufBonusV2Adapter {
 	int32 bonus_type = 1;
-	//BonusAuthor.ADAPTER.encodeWithTag(protoWriter, 2, author(tcBonus));
+	BonusAuthor.ProtobufBonusAuthorV2Adapter author =2;
 	string title = 3;
 	string subTitle = 4;
 	string text = 5;
 	string style = 6;
-	//BonusCommerce.ADAPTER.encodeWithTag(protoWriter, 7, commerce_info(tcBonus));
+	BonusCommerce.ProtobufBonusCommerceV2Adapter commerce_info = 7;
 	string open_url = 8;
 	string token = 9;
 	int32 source = 10;

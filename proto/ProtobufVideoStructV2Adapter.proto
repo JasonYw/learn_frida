@@ -1,4 +1,6 @@
 syntax = "proto3";
+import "ProtobufBitRateStructV2Adapter.proto";
+import "ProtoAdapter_BigThumb.proto";
 message ProtobufVideoStructV2Adapter {
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 1, play_addr(video));
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, cover(video));
@@ -10,7 +12,7 @@ message ProtobufVideoStructV2Adapter {
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 8, download_addr(video));
 	bool has_watermark = 9;
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 10, play_addr_lowbr(video));
-	//BitRate.ADAPTER.asRepeated().encodeWithTag(protoWriter, 11, bit_rate(video));
+	repeated BitRate.ProtobufBitRateStructV2Adapter bit_rate = 11;
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 12, new_download_addr(video));
 	int32 duration = 13;
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 14, download_suffix_logo_addr(video));

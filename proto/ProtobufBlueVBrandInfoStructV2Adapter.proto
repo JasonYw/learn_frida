@@ -1,4 +1,5 @@
 syntax = "proto3";
+package BlueVBrandInfo;
 message ProtobufBlueVBrandInfoStructV2Adapter {
 	int32 category_id = 1;
 	string category_name = 2;

@@ -1,5 +1,6 @@
 syntax = "proto3";
+import "ProtobufAwemeStructV2Adapter.proto";
 message ProtobufStoryStructV2Adapter {
-	//Aweme.ADAPTER.encodeWithTag(protoWriter, 1, story(storyStruct));
+	Aweme.ProtobufAwemeStructV2Adapter story = 1;
 	bool unread = 2;
 }

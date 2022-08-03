@@ -1,4 +1,5 @@
 syntax = "proto3";
+package CommerceUserInfo;
 message ProtobufCommerceUserStructV2Adapter {
 	int32 star_atlas = 1;
 	bool show_star_atlas_cooperation = 2;

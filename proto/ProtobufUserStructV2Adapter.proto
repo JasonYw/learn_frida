@@ -2,9 +2,15 @@ syntax = "proto3";
 import "ProtoAdapter_DislikeDynamicReasonList.proto";
 import "ProtoAdapter_RecommendReasonData.proto";
 import "ProtoAdapter_RecommendTemplateStruct.proto";
-import "ProtoAdapter_RFansGroupInfo.proto"
-import "ProtobufAdCoverTitleV2Adapter.proto"
-import "ProtobufAvatarDecorationStructV2Adapter.proto"
+import "ProtoAdapter_RFansGroupInfo.proto";
+import "ProtobufAdCoverTitleV2Adapter.proto";
+import "ProtobufAvatarDecorationStructV2Adapter.proto";
+import "ProtobufBlueVBrandInfoStructV2Adapter.proto";
+import "ProtobufCommerceInfoStructV2Adapter.proto";
+import "ProtobufCommercePermissionStructV2Adapter.proto";
+import "ProtobufCommerceUserStructV2Adapter.proto";
+import "ProtobufEffectArtistStructV2Adapter.proto";
+import "ProtobufFollowersDetailV2Adapter.proto";
 
 message ProtobufUserStructV2Adapter {
 	string uid = 1;
@@ -68,13 +74,13 @@ message ProtobufUserStructV2Adapter {
 	bool is_ad_fake = 59;
 	bool star_use_new_download = 60;
 	int32 mplatform_followers_count = 61;
-	//FollowerDetail.ADAPTER.asRepeated().encodeWithTag(protoWriter, 62, followers_detail(user));
+	repeated FollowerDetail.ProtobufFollowersDetailV2Adapter followers_detail = 62;
 	bool has_activity_medal = 63;
 	string region = 64;
 	string account_region = 65;
 	int32 sync_to_toutiao = 66;
 	int32 commerce_user_level = 67;
-	//CommerceInfo.ADAPTER.encodeWithTag(protoWriter, 68, commerce_info(user));
+	CommerceInfo.ProtobufCommerceInfoStructV2Adapter commerce_info = 68;
 	int32 live_agreement = 69;
 	//PlatformInfo.ADAPTER.asRepeated().encodeWithTag(protoWriter, 70, platform_sync_info(user));
 	bool with_shop_entry = 71;
@@ -83,7 +89,7 @@ message ProtobufUserStructV2Adapter {
 	bool has_orders = 74;
 	bool prevent_download = 75;
 	bool show_image_bubble = 76;
-	string.asrepeated() geofencing = 77;
+	repeated string geofencing = 77;
 	int64 unique_id_modify_time = 78;
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 79, video_icon(user));
 	string ins_id = 80;
@@ -156,8 +162,8 @@ message ProtobufUserStructV2Adapter {
 	//ProtoAdapter.INT32.encodeWithTag(protoWriter, MediaPlayer.MEDIA_PLAYER_OPTION_ABR_STREAM_INFO, user_mode(user));
 	int32 user_period = 148;
 	bool is_effect_artist = 149;
-	//EffectArtistDetail.ADAPTER.encodeWithTag(protoWriter, 150, effect_detail(user));
-	//CommercePermissionStruct.ADAPTER.encodeWithTag(protoWriter, 151, commerce_permissions(user));
+	EffectArtistDetail.ProtobufEffectArtistStructV2Adapter effect_detail = 150;
+	CommercePermissionStruct.ProtobufCommercePermissionStructV2Adapter commerce_permissions = 151;
 	//StoryBlockInfo.ADAPTER.encodeWithTag(protoWriter, 152, life_story_block(user));
 	int32 hide_following_follower_list = 153;
 	bool has_unread_story = 154;
@@ -165,12 +171,12 @@ message ProtobufUserStructV2Adapter {
 	int32 user_story_count = 156;
 	bool has_story = 157;
 	bool is_star = 158;
-	DouplusToastStruct.ProtoAdapter_DislikeDynamicReasonList douplus_toast = 159
+	DouplusToastStruct.ProtoAdapter_DislikeDynamicReasonList douplus_toast = 159;
 	string cv_level = 160;
 	int32 creator_level = 161;
 	bool is_mirror = 162;
 	int32 pr_exempt = 163;
-	int64.asrepeated() type_label = 164;
+	repeated int64 type_label = 164;
 	int64 avatar_decoration_id = 165;
 	bool with_luban_entry = 166;
 	//UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, 167, ad_cover_url(user));
@@ -188,10 +194,10 @@ message ProtobufUserStructV2Adapter {
 	bool with_star_atlas_entry = 179;
 	//HotSearchSprintStruct.ADAPTER.encodeWithTag(protoWriter, 180, sprint_support_user_info(user));
 	string signature_language = 181;
-	//BlueVBrandInfo.ADAPTER.encodeWithTag(protoWriter, 182, brand_info(user));
+	BlueVBrandInfo.ProtobufBlueVBrandInfoStructV2Adapter brand_info = 182;
 	bool display_wvalantine_activity_entry = 183;
 	string shop_micro_app = 184;
-	//CommerceUserInfo.ADAPTER.encodeWithTag(protoWriter, 185, commerce_user_info(user));
+	CommerceUserInfo.ProtobufCommerceUserStructV2Adapter commerce_user_info = 185;
 	//RelationLabelUser.ADAPTER.asRepeated().encodeWithTag(protoWriter, 186, relative_users(user));
 	//QuickShopInfo.ADAPTER.encodeWithTag(protoWriter, 187, quick_shop_info(user));
 	string relation_label = 188;
@@ -226,7 +232,7 @@ message ProtobufUserStructV2Adapter {
 	bool is_series_user = 217;
 	RecommendTemplateStruct.ProtoAdapter_RecommendTemplateStruct recommend_template = 218;
 	int32 new_friend_type = 219;
-	int32.asrepeated() common_interest = 221;
+	repeated int32 common_interest = 221;
 	string mkey = 222;
 	int32 online_status = 223;
 	int64 last_active_time = 224;

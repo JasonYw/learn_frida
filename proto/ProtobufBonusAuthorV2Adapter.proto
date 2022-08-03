@@ -1,4 +1,5 @@
 syntax = "proto3";
+package BonusAuthor;
 message ProtobufBonusAuthorV2Adapter {
 	int64 m8195id = 1;
 	string name = 2;

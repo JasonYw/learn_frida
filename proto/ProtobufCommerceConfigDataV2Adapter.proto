@@ -1,4 +1,5 @@
 syntax = "proto3";
+package CommerceConfigData;
 import "ProtoAdapter_StickerPendantStruct.proto";
 message ProtobufCommerceConfigDataV2Adapter{
     int32 type = 1;

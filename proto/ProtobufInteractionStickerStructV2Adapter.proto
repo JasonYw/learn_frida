@@ -2,6 +2,8 @@ syntax = "proto3";
 import "ProtoAdapter_ReplyToCommentStruct.proto";
 import "ProtoAdapter_TextInteractionStickerStruct.proto";
 import "ProtoAdapter_VideoShareInfoStruct.proto";
+import "ProtobufHashTagStickerStructV2Adapter.proto";
+
 message ProtobufInteractionStickerStructV2Adapter{
     int32 type = 1;
     int32 index = 2;
@@ -11,7 +13,7 @@ message ProtobufInteractionStickerStructV2Adapter{
     // VoteStruct.ADAPTER.encodeWithTag(protoWriter, 6, vote_info(interactStickerStruct));
     string text_info = 7;
     // MentionStruct.ADAPTER.encodeWithTag(protoWriter, 8, mention_info(interactStickerStruct));
-    // HashtagStruct.ADAPTER.encodeWithTag(protoWriter, 9, hashtag_info(interactStickerStruct));
+    HashtagStruct.ProtobufHashTagStickerStructV2Adapter interactStickerStruct = 9;
     // LiveNoticeStruct.ADAPTER.encodeWithTag(protoWriter, 10, live_preview_info(interactStickerStruct));
     repeated TextInteractionStickerStruct.ProtoAdapter_TextInteractionStickerStruct text_interaction = 11;
     VideoShareInfoStruct.ProtoAdapter_VideoShareInfoStruct video_share_info = 12;

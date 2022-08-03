@@ -1,4 +1,5 @@
 syntax = "proto3";
+package Extra;
 message ProtobufExtraStructV2Adapter {
 	int64 now = 1;
 	string logid = 2;

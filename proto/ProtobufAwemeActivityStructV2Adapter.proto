@@ -1,7 +1,7 @@
 syntax = "proto3";
 package AwemeActivity;
 import "ProtoAdapter_ActivityButtonStruct.proto";
-import "ProtoAdapter_TextContentStruct.proto"
+import "ProtoAdapter_TextContentStruct.proto";
 message ProtobufAwemeActivityStructV2Adapter {
 	string activity_id = 1;
 	int64 show_delay_time = 2;

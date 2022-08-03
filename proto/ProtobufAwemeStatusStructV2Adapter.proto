@@ -1,4 +1,6 @@
 syntax = "proto3";
+package AwemeStatus;
+import "ProtoAdapter_EditAwemeBarInfo.proto";
 message ProtobufAwemeStatusStructV2Adapter {
     string aweme_id = 1;
     bool is_delete = 2;
@@ -15,7 +17,7 @@ message ProtobufAwemeStatusStructV2Adapter {
     int32 download_status = 13;
     int32 dont_share_status = 14;
     int32 video_hide_search = 15;
-    adapter aweme_edit_info = 16;
+    EditAwemeBarInfo.ProtoAdapter_EditAwemeBarInfo aweme_edit_info = 16;
     bool reviewed_friend_see = 17;
     int32 part_see = 18;
     int64 item_version = 19;

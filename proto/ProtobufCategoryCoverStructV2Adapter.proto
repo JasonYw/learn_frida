@@ -1,4 +1,5 @@
 syntax = "proto3";
+package CategoryCoverStruct;
 message ProtobufCategoryCoverStructV2Adapter {
 	string aweme_id = 1;
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, cover(categoryCoverStruct));

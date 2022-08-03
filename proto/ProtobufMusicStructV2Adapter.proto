@@ -1,6 +1,9 @@
 syntax = "proto3";
-import "ProtoAdapter_MusicAnchorStruct.proto"
-import "ProtoAdapter_MusicImageBeatsStruct.proto"
+import "ProtoAdapter_MusicAnchorStruct.proto";
+import "ProtoAdapter_MusicImageBeatsStruct.proto";
+import "ProtobufBranchBillboardWeeklyStructV2Adapter.proto";
+import "ProtobufCategoryCoverStructV2Adapter.proto";
+import "ProtobufExternalSongStructV2Adapter.proto";
 
 message ProtobufMusicStructV2Adapter {
 	int64 m7669id = 1;
@@ -47,14 +50,14 @@ message ProtobufMusicStructV2Adapter {
 	//Position.ADAPTER.asRepeated().encodeWithTag(protoWriter, 42, author_position(music));
 	bool prevent_download = 43;
 	int32 music_billboard_type = 44;
-	//BillboardWeeklyInfo.ADAPTER.encodeWithTag(protoWriter, 45, music_billboard_weekly_info(music));
-	//CategoryCoverStruct.ADAPTER.encodeWithTag(protoWriter, 46, category_cover_info(music));
+	BillboardWeeklyInfo.ProtobufBranchBillboardWeeklyStructV2Adapter  music_billboard_weekly_info = 45;
+	CategoryCoverStruct.ProtobufCategoryCoverStructV2Adapter category_cover_info = 46;
 	bool is_only_owner_use = 47;
 	bool is_video_not_recommend = 48;
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 49, strong_beat_url(music));
 	repeated string  unshelve_countries = 50;
 	int32 prevent_item_download_status = 51;
-	//ExternalMusicInfo.ADAPTER.asRepeated().encodeWithTag(protoWriter, 52, external_song_info(music));
+	repeated ExternalMusicInfo.ProtobufExternalSongStructV2Adapter external_song_info = 52;
 	string sec_uid = 53;
 	int32 lyric_type = 54;
 	string lyric_url = 55;

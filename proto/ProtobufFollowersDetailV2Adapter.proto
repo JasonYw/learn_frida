@@ -1,4 +1,5 @@
 syntax = "proto3";
+package FollowerDetail;
 message ProtobufFollowersDetailV2Adapter {
 	string name = 1;
 	string icon = 2;

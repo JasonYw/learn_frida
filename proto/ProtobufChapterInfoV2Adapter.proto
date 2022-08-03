@@ -1,4 +1,5 @@
 syntax = "proto3";
+package ChapterInfo;
 message ProtobufChapterInfoV2Adapter {
 	string key_word = 1;
 	string desc = 2;

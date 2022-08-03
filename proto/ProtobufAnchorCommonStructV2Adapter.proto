@@ -1,6 +1,6 @@
 syntax = "proto3";
-package AnchorCommonStruct
-import "ProtoAdapter_AnchorPanelActionStruct.proto"
+package AnchorCommonStruct;
+import "ProtoAdapter_AnchorPanelActionStruct.proto";
 
 
 

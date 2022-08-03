@@ -1,8 +1,10 @@
 syntax = "proto3";
-package TextInteractionStickerStruct
+package TextInteractionStickerStruct;
+
+import "ProtobufHashTagStickerStructV2Adapter.proto";
 message ProtoAdapter_TextInteractionStickerStruct{
     int32 type = 1;
     int32 index = 2;
     // MentionStruct.ADAPTER.encodeWithTag(protoWriter, 3, textInteractionStickerStruct.mentionInfo);
-    // HashtagStruct.ADAPTER.encodeWithTag(protoWriter, 4, textInteractionStickerStruct.hashtagInfo);
+    HashtagStruct.ProtobufHashTagStickerStructV2Adapter hashtagInfo = 4;
 }

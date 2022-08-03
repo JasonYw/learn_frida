@@ -1,4 +1,5 @@
 syntax = "proto3";
+package FeedEventCardInfo;
 message ProtobufFeedEventCardInfoV2Adapter {
 	string setting_key = 1;
 	string schema = 2;

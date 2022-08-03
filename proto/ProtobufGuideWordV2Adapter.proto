@@ -1,4 +1,5 @@
 syntax = "proto3";
+package HotSearchGuideWord;
 message ProtobufGuideWordV2Adapter {
 	string word = 1;
 	string search_word = 2;

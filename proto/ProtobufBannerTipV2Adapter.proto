@@ -1,4 +1,5 @@
 syntax = "proto3";
+package BannerTip;
 message ProtobufBannerTipV2Adapter {
 	int32 banner_type = 1;
 	string banner_txt = 2;

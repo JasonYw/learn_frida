@@ -1,5 +1,6 @@
 syntax = "proto3";
 package CFStruct;
+import "ProtobufAwemeStructV2Adapter.proto";
 message ProtoAdapter_CFStruct {
-	//com.ss.android.ugc.aweme.feed.model.Aweme#ADAPTER cf = 1;
+	Aweme.ProtobufAwemeStructV2Adapter cf = 1;
 }

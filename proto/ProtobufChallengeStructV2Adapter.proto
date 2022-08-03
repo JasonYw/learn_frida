@@ -1,4 +1,7 @@
 syntax = "proto3";
+package Challenge;
+import "ProtobufCategoryCoverStructV2Adapter.proto";
+import "ProtobufDisclaimerStructV2Adapter.proto";
 message ProtobufChallengeStructV2Adapter {
 	string cid = 1;
 	string cha_name = 2;
@@ -20,10 +23,10 @@ message ProtobufChallengeStructV2Adapter {
 	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 18, cover_item(challenge));
 	int32 is_challenge = 19;
 	int64 view_count = 20;
-	//ChallengeDisclaimer.ADAPTER.encodeWithTag(protoWriter, 21, disclaimer(challenge));
+	ChallengeDisclaimer.ProtobufDisclaimerStructV2Adapter disclaimer = 21;
 	bool allow_upload_cover = 22;
 	bool is_commerce = 23;
-	//CategoryCoverStruct.ADAPTER.encodeWithTag(protoWriter, 24, category_cover_info(challenge));
+	CategoryCoverStruct.ProtobufCategoryCoverStructV2Adapter  category_cover_info = 24;
 	string hashtag_profile = 25;
 	string cover_photo = 26;
 	int32 is_hot_search = 27;

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package CloudGameEntranceStruct;
 message ProtobufCloudGameEntranceStructV2Adapter {
 	string button_color = 1;
 	string button_title = 2;

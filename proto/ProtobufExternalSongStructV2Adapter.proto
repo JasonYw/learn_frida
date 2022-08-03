@@ -1,4 +1,5 @@
 syntax = "proto3";
+package ExternalMusicInfo;
 message ProtobufExternalSongStructV2Adapter {
 	string h5_url = 1;
 	string partner_name = 2;

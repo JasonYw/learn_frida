@@ -1,5 +1,6 @@
 syntax = "proto3";
-import "ProtobufActivityTimeRangeV2Adapter.proto"
+package CommerceActivityStruct;
+import "ProtobufActivityTimeRangeV2Adapter.proto";
 message ProtobufCommerceActivityStructV2Adapter{
     int32 act_type = 1;
     // adapter image = 2; //urlmodel

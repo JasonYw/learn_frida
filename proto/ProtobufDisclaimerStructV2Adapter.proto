@@ -1,4 +1,5 @@
 syntax = "proto3";
+package ChallengeDisclaimer;
 message ProtobufDisclaimerStructV2Adapter {
 	string title = 1;
 	string content = 2;
