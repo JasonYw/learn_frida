@@ -1,4 +1,7 @@
 syntax = "proto3";
+package NewFaceStickerStruct;
+import "ProtoAdapter_CommerceStickerStruct.proto";
+
 message ProtoAdapter_NewFaceStickerStruct{
     string id = 1;
     string name = 2;
@@ -13,8 +16,7 @@ message ProtoAdapter_NewFaceStickerStruct{
     // share_info
     // ShareInfo.ADAPTER.encodeWithTag(protoWriter, 10, newFaceStickerStruct.shareInfo);
     bool is_favorite = 11;
-    // commerce_sticker
-    // CommerceStickerStruct.ADAPTER.encodeWithTag(protoWriter, 12, newFaceStickerStruct.commerceSticker);
+    CommerceStickerStruct.ProtoAdapter_CommerceStickerStruct commerce_sticker = 12;
     repeated string tags = 13;
     // avatar_thumb
     // UrlModel.ADAPTER.encodeWithTag(protoWriter, 14, newFaceStickerStruct.avatarThumb);

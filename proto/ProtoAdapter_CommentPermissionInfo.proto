@@ -1,4 +1,5 @@
 syntax = "proto3";
+package CommentPermissionInfo;
 message ProtoAdapter_CommentPermissionInfo {
 	bool can_comment = 2;
 	int32 comment_permission_status = 1;

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package MusicImageBeatsStruct;
 message ProtoAdapter_MusicImageBeatsStruct {
 	string  music_image_beats_raw = 2
 	//music_image_beats_urlUrlModel.ADAPTER.encodeWithTag(protoWriter, 1, musicImageBeatsStruct.musicImageBeatsUrl);

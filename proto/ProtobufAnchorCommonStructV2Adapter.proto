@@ -1,4 +1,9 @@
 syntax = "proto3";
+package AnchorCommonStruct
+import "ProtoAdapter_AnchorPanelActionStruct.proto"
+
+
+
 message ProtobufAnchorCommonStructV2Adapter{
     string keyword = 1;
     string url = 2;
@@ -14,6 +19,6 @@ message ProtobufAnchorCommonStructV2Adapter{
     string log_extra = 12;
     string description = 13;
     // adapter thumbnail = 14; urlmodel
-    // AnchorPanelActionStruct.ADAPTER.asRepeated().encodeWithTag(protoWriter, 15, actions(anchorCommonStruct));
+    AnchorPanelActionStruct.ProtoAdapter_AnchorPanelActionStruct actions = 15;
 
 }

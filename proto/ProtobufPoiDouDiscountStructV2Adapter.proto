@@ -1,6 +1,8 @@
 syntax = "proto3";
+import "ProtoAdapter_PoiDouDiscountRankInfoStruct.proto";
+import "ProtobufAwemeSearchStructV2Adapter.proto";
 message ProtobufPoiDouDiscountStructV2Adapter {
 	string dou_discount_label = 1;
-	//HotSearchInfo.ADAPTER.encodeWithTag(protoWriter, 2, dou_discount_mix_info(poiDouDiscountStruct));
-	//PoiDouDiscountRankInfoStruct.ADAPTER.encodeWithTag(protoWriter, 3, dou_discount_rank_info(poiDouDiscountStruct));
+	HotSearchInfo.ProtobufAwemeSearchStructV2Adapter dou_discount_mix_info = 2;
+	PoiDouDiscountRankInfoStruct.ProtoAdapter_PoiDouDiscountRankInfoStruct dou_discount_rank_info = 3; 
 }

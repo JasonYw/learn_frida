@@ -1,4 +1,5 @@
 syntax = "proto3";
+package RelatedRecom;
 message ProtoAdapter_RelatedRecom {
 	int32 bar_eject = 2;
 	bool related_bar = 1;

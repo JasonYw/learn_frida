@@ -1,4 +1,5 @@
 syntax = "proto3";
+package SuggestOneWord;
 message ProtoAdapter_SuggestOneWord {
 	string info = 3;
 	string word = 1;

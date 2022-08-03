@@ -1,4 +1,5 @@
 syntax = "proto3";
+package AvatarDecoration;
 message ProtobufAvatarDecorationStructV2Adapter {
 	int64 m7511id = 1;
 	string name = 2;

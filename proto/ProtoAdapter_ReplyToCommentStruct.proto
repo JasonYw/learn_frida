@@ -1,4 +1,5 @@
 syntax = "proto3";
+package ReplyToCommentStruct;
 message ProtoAdapter_ReplyToCommentStruct{
     int32 type = 1;
     string comment_text = 2;

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package RelevantLive;
 message ProtoAdapter_RelevantLive {
 	string extra = 6;
 	int64 linkmic_ktv_song_author_id = 3;

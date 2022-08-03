@@ -1,4 +1,5 @@
 syntax = "proto3";
+package commerceStickerInfo;
 message ProtobufAwemeCommerceStickerStructV2Adapter{
     int64 commerce_sticker_id = 1;
     // adapter icon_url = 2; urlmodel

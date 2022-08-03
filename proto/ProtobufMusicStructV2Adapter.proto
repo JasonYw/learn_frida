@@ -1,4 +1,7 @@
 syntax = "proto3";
+import "ProtoAdapter_MusicAnchorStruct.proto"
+import "ProtoAdapter_MusicImageBeatsStruct.proto"
+
 message ProtobufMusicStructV2Adapter {
 	int64 m7669id = 1;
 	string id_str = 2;
@@ -66,12 +69,12 @@ message ProtobufMusicStructV2Adapter {
 	bool is_pgc = 64;
 	//MatchedPGCSoundInfo.ADAPTER.encodeWithTag(protoWriter, 65, matched_pgc_sound(music));
 	//MatchedSongStruct.ADAPTER.encodeWithTag(protoWriter, 66, matched_song(music));
-	//MusicAnchorStruct.ADAPTER.encodeWithTag(protoWriter, 67, music_anchor(music));
+	MusicAnchorStruct.ProtoAdapter_MusicAnchorStruct  music_anchor = 67;
 	int32 audition_duration = 68;
 	int32 shoot_duration = 69;
 	int32 video_duration = 70;
 	//SongStruct.ADAPTER.encodeWithTag(protoWriter, 99, song(music));
 	//User.ADAPTER.asRepeated().encodeWithTag(protoWriter, 100, artist_user_infos(music));
 	//ProtoAdapter.STRING.encodeWithTag(protoWriter, BdpDebugHttpRequest.HTTP_SWITCHING_PROTOCOLS, music_title(music));
-	//MusicImageBeatsStruct.ADAPTER.encodeWithTag(protoWriter, 102, music_image_beats(music));
+	MusicImageBeatsStruct.ProtoAdapter_MusicImageBeatsStruct music_image_beats = 102;
 }

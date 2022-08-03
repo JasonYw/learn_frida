@@ -1,4 +1,5 @@
 syntax = "proto3";
+package EffectGuideStruct;
 message ProtoAdapter_EffectGuideStruct {
 	string effect_id = 3;
 	string effect_name = 4;

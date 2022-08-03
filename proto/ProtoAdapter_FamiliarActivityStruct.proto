@@ -1,4 +1,5 @@
 syntax = "proto3";
+package FamiliarActivityStruct;
 message ProtoAdapter_FamiliarActivityStruct {
 	string activity_id = 1;
 	bool show_activity_btn = 2;

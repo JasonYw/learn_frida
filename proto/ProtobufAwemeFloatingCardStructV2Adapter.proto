@@ -1,4 +1,5 @@
 syntax = "proto3";
+package FloatingCardInfo;
 message ProtobufAwemeFloatingCardStructV2Adapter{
     string schema = 1;
     string schema_desc = 2;

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package OpenPlatformStruct;
 message ProtoAdapter_OpenPlatformStruct{
     string name = 1;
     string icon = 2;

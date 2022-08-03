@@ -1,4 +1,5 @@
 syntax = "proto3";
+import "ProtobufActivityTimeRangeV2Adapter.proto"
 message ProtobufCommerceActivityStructV2Adapter{
     int32 act_type = 1;
     // adapter image = 2; //urlmodel
@@ -7,7 +8,7 @@ message ProtobufCommerceActivityStructV2Adapter{
     string title = 5;
     int64 start_time = 6;
     int64 end_time = 7;
-    // adapter.asrepeated() time_range = 8;//ActivityTimeRange
+    repeated ActivityTimeRange.ProtobufActivityTimeRangeV2Adapter time_range = 8;
     // adapter track_url_list = 9;//urlmodel
     // adapter click_track_url_list = 10;//urlmodel
     string lottie = 11;

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package DiaryStruct
 message ProtoAdapter_DiaryStruct {
 	string desc = 3;
 	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER icon = 4;

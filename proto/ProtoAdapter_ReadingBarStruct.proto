@@ -1,4 +1,5 @@
 syntax = "proto3";
+package ReadingBarStruct;
 message ProtoAdapter_ReadingBarStruct {
 	string ab_param = 8;
 	string background_color = 12;

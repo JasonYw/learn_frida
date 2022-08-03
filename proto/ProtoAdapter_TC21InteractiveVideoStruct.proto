@@ -1,4 +1,5 @@
 syntax = "proto3";
+package TC21InteractiveVideoStruct;
 message ProtoAdapter_TC21InteractiveVideoStruct {
 	string activity_id = 1;
 	string schema_url = 2;

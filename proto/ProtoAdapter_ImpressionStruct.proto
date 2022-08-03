@@ -1,4 +1,5 @@
 syntax = "proto3";
+package ImpressionStruct
 message ProtoAdapter_ImpressionStruct {
 	repeated int64 group_id_list_a = 1;
 	repeated int64 group_id_list_b = 2;

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package LiveFeedbackCondition;
 message ProtoAdapter_LiveFeedbackCondition {
 	int64 action_ids = 3;
 	int64 action_type = 4;

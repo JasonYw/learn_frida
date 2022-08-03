@@ -1,9 +1,12 @@
 syntax = "proto3";
+package LiveFeedbackCard;
+import "ProtoAdapter_LiveFeedbackCondition.proto";
+import "ProtoAdapter_LiveFeedbackQuestion.proto"
 message ProtoAdapter_LiveFeedbackCard {
-	//com.ss.ugc.aweme.LiveFeedbackCondition#ADAPTER condition = 5;
+	LiveFeedbackCondition.ProtoAdapter_LiveFeedbackCondition condition = 5;
 	int64 feedback_id = 2;
 	int32 feedback_type = 3;
 	string negative_text = 6;
-	//com.ss.ugc.aweme.LiveFeedbackQuestion#ADAPTER question = 4; repead
+	repeated LiveFeedbackQuestion.ProtoAdapter_LiveFeedbackQuestion question = 4; 
 	string title = 1;
 }

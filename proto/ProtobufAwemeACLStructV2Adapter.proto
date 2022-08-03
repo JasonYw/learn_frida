@@ -1,6 +1,8 @@
 syntax = "proto3";
+package AwemeACLShare;
+import "ProtobufACLCommonStructV2Adapter.proto"
 message ProtobufAwemeACLStructV2Adapter {
-	//ACLCommonShare.ADAPTER.encodeWithTag(protoWriter, 1, download_general(awemeACLShare));
-	//ACLCommonShare.ADAPTER.encodeWithTag(protoWriter, 2, download_mask_panel(awemeACLShare));
-	//ACLCommonShare.ADAPTER.encodeWithTag(protoWriter, 3, download_share_panel(awemeACLShare));
+	ACLCommonShare.ProtobufACLCommonStructV2Adapter download_general = 1;
+	ACLCommonShare.ProtobufACLCommonStructV2Adapter download_mask_panel = 2;
+	ACLCommonShare.ProtobufACLCommonStructV2Adapter download_share_panel = 3;
 }

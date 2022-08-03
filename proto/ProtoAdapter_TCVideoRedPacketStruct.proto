@@ -1,4 +1,5 @@
 syntax = "proto3";
+package TCVideoRedPacketStruct;
 message ProtoAdapter_TCVideoRedPacketStruct {
 	string video_red_packet_uri = 1;
 	string video_red_packet_url = 2;

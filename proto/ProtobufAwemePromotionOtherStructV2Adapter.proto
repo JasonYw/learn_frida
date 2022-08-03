@@ -1,4 +1,5 @@
 syntax = "proto3";
+package PromotionOtherInfo;
 message ProtobufAwemePromotionOtherStructV2Adapter{
     string recall_reason = 1;
     int32 card_predict_duration = 2;

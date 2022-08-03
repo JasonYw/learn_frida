@@ -1,4 +1,5 @@
 syntax = "proto3";
+package ShareTask;
 message ProtoAdapter_ShareTask {
 	int32 show_timestamp = 1;
 	int32 coin_count = 2;

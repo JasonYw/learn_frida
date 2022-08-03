@@ -1,4 +1,6 @@
 syntax = "proto3";
+package HotSearchInfo;
+
 message ProtobufAwemeSearchStructV2Adapter{
     string sentence = 1;
     string challenge_id = 2;

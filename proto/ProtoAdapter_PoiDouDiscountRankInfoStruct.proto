@@ -1,4 +1,5 @@
 syntax = "proto3";
+package PoiDouDiscountRankInfoStruct;
 message ProtoAdapter_PoiDouDiscountRankInfoStruct {
 	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER category_icon = 3;
 	string category_name = 4;

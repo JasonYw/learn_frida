@@ -1,8 +1,10 @@
 syntax = "proto3";
+package SuggestWord;
+import "ProtoAdapter_SuggestOneWord.proto";
 message ProtoAdapter_SuggestWord {
 	string extra_info = 5;
 	string hint_text = 4;
 	string icon_url = 3;
 	string scene = 2;
-	//com.ss.ugc.aweme.SuggestOneWord#ADAPTER words = 1; repead
+	repeated SuggestOneWord.ProtoAdapter_SuggestOneWord  words = 1;
 }

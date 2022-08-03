@@ -1,8 +1,10 @@
 syntax = "proto3";
+package AnchorPanelActionStruct;
+import "ProtobufUrlStructV2Adapter.proto";
+
+
 message ProtoAdapter_AnchorPanelActionStruct{
-    // urlmodel icon = 1;
+    UrlModel.ProtobufUrlStructV2AdapterUrlModel icon = 1;
     string schema = 2;
     int32 action_type = 3;
-    
-
 }

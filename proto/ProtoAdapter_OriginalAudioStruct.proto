@@ -1,4 +1,5 @@
 syntax = "proto3";
+package OriginalAudioStruct;
 message ProtoAdapter_OriginalAudioStruct {
 	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER play_url = 1;
 	string vid = 2;

@@ -1,4 +1,6 @@
 syntax = "proto3";
+package AwemeRiskModel;
+
 message ProtobufAwemeRiskStructV2Adapter{
 
     bool vote = 1;

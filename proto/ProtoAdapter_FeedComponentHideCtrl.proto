@@ -1,4 +1,5 @@
 syntax = "proto3";
+package FeedComponentHideCtrl;
 message ProtoAdapter_FeedComponentHideCtrl {
 	bool hide_anchor = 1;
 	bool hide_hotspot = 3;

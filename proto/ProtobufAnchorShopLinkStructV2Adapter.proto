@@ -1,4 +1,5 @@
 syntax = "proto3";
+package AnchorShopLinkStruct;
 message ProtobufAnchorShopLinkStructV2Adapter{
     string keyword = 1;
     string url = 2;

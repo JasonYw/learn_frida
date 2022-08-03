@@ -1,7 +1,10 @@
 syntax = "proto3";
+import "ProtoAdapter_CFIdStruct.proto";
+import "ProtoAdapter_CFStruct.proto"
+package CFGroupStruct;
 message ProtoAdapter_CFGroupStruct {
-	//com.ss.ugc.aweme.CFIdStruct#ADAPTER cf_id_list = 9;  repetead
-	//com.ss.ugc.aweme.CFStruct#ADAPTER cf_list = 1; repetead
+	repeated CFIdStruct.ProtoAdapter_CFIdStruct cf_id_list = 9;
+	repeated CFStruct.ProtoAdapter_CFStruct cf_list = 1;
 	string folder_id = 6;
 	int64 head_cursor = 7;
 	int64 max_cursor = 5;

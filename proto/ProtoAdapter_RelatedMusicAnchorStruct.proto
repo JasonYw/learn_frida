@@ -1,4 +1,5 @@
 syntax = "proto3";
+package RelatedMusicAnchorStruct
 message ProtoAdapter_RelatedMusicAnchorStruct {
 	// image_url com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER image_url = 3;
 	int64 priority = 4;

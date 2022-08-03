@@ -1,4 +1,5 @@
 syntax = "proto3";
+package MusicArtistStruct;
 message ProtoAdapter_MusicArtistStruct {
 	string uid = 1;
 	string artist_name = 2;

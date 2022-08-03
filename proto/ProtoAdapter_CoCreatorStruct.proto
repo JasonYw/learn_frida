@@ -1,4 +1,5 @@
 syntax = "proto3";
+package CoCreatorStruct;
 message ProtoAdapter_CoCreatorStruct {
 	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER avatar_thumb = 4;
 	string extra = 11;

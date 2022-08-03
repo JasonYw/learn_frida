@@ -1,4 +1,5 @@
 syntax = "proto3";
+package VSBarStruct;
 message ProtoAdapter_VSBarStruct {
 	string content = 1;
 }

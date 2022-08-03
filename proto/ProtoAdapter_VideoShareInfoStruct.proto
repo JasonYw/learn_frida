@@ -1,4 +1,5 @@
 syntax = "proto3";
+package VideoShareInfoStruct;
 message ProtoAdapter_VideoShareInfoStruct{
     string aweme_id = 1;
     string author_id = 2;

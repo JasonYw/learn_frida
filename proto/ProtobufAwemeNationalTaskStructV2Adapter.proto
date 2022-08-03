@@ -1,4 +1,7 @@
 syntax = "proto3";
+package AwemeNationalTask;
+
+import "ProtoAdapter_LiveAppointmentStruct.proto";
 message ProtobufAwemeNationalTaskStructV2Adapter {
-	//LiveAppointmentStruct.ADAPTER.encodeWithTag(protoWriter, 2, live_appointment(awemeNationalTask));
+	LiveAppointmentStruct.ProtoAdapter_LiveAppointmentStruct live_appointment =  2;
 }

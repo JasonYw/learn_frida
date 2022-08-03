@@ -1,4 +1,11 @@
 syntax = "proto3";
+import "ProtoAdapter_DislikeDynamicReasonList.proto";
+import "ProtoAdapter_RecommendReasonData.proto";
+import "ProtoAdapter_RecommendTemplateStruct.proto";
+import "ProtoAdapter_RFansGroupInfo.proto"
+import "ProtobufAdCoverTitleV2Adapter.proto"
+import "ProtobufAvatarDecorationStructV2Adapter.proto"
+
 message ProtobufUserStructV2Adapter {
 	string uid = 1;
 	string short_id = 2;
@@ -134,7 +141,7 @@ message ProtobufUserStructV2Adapter {
 	string video_icon_virtual_URI = 132;
 	string share_qrcode_uri = 133;
 	int32 profile_tab_type = 134;
-	//AvatarDecoration.ADAPTER.encodeWithTag(protoWriter, 135, avatar_decoration(user));
+	AvatarDecoration.ProtobufAvatarDecorationStructV2Adapter avatar_decoration = 135;
 	bool watch_status = 136;
 	bool with_commerce_newbie_task = 137;
 	bool with_item_commerce_entry = 138;
@@ -158,7 +165,7 @@ message ProtobufUserStructV2Adapter {
 	int32 user_story_count = 156;
 	bool has_story = 157;
 	bool is_star = 158;
-	//DouplusToastStruct.ADAPTER.encodeWithTag(protoWriter, 159, douplus_toast(user));
+	DouplusToastStruct.ProtoAdapter_DislikeDynamicReasonList douplus_toast = 159
 	string cv_level = 160;
 	int32 creator_level = 161;
 	bool is_mirror = 162;
@@ -167,9 +174,9 @@ message ProtobufUserStructV2Adapter {
 	int64 avatar_decoration_id = 165;
 	bool with_luban_entry = 166;
 	//UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, 167, ad_cover_url(user));
-	//AdCoverTitle.ADAPTER.encodeWithTag(protoWriter, 168, ad_cover_title(user));
+	AdCoverTitle.ProtobufAdCoverTitleV2Adapter ad_cover_title = 168;
 	string ad_order_id = 169;
-	//RFansGroupInfo.ADAPTER.encodeWithTag(protoWriter, 170, r_fans_group_info(user));
+	RFansGroupInfo.ProtoAdapter_RFansGroupInfo  r_fans_group_info = 170;
 	bool with_commerce_enterprise_tab_entry = 171;
 	//HonorStruct.ADAPTER.encodeWithTag(protoWriter, 172, honor_info(user));
 	int32 comment_filter_status = 173;
@@ -217,14 +224,14 @@ message ProtobufUserStructV2Adapter {
 	int32 signature_display_lines = 215;
 	int64 live_status = 216;
 	bool is_series_user = 217;
-	//RecommendTemplateStruct.ADAPTER.encodeWithTag(protoWriter, 218, recommend_template(user));
+	RecommendTemplateStruct.ProtoAdapter_RecommendTemplateStruct recommend_template = 218;
 	int32 new_friend_type = 219;
 	int32.asrepeated() common_interest = 221;
 	string mkey = 222;
 	int32 online_status = 223;
 	int64 last_active_time = 224;
 	int64 total_favorited_new = 225;
-	//RecommendReasonData.ADAPTER.encodeWithTag(protoWriter, 226, recommend_reason_data(user));
+	RecommendReasonData.ProtoAdapter_RecommendReasonData recommend_reason_data = 226;
 	//UserVirtualCharacterStruct.ADAPTER.encodeWithTag(protoWriter, 227, user_virtual_character(user));
 	//UserVirtualEmotionStruct.ADAPTER.encodeWithTag(protoWriter, 228, user_virtual_emotion(user));
 }

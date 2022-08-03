@@ -1,4 +1,5 @@
 syntax = "proto3";
+package FeedComponentCtrl;
 message ProtoAdapter_FeedComponentCtrl {
 	bool show_anchor = 1;
 	bool show_hotspot = 3;

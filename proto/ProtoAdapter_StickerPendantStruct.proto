@@ -1,4 +1,5 @@
 syntax = "proto3";
+package StickerPendantStruct;
 message ProtoAdapter_StickerPendantStruct{
     int32 sticker_type = 1;
     string link = 2;

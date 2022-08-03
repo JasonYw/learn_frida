@@ -1,36 +1,36 @@
 syntax = "proto3";
-message ProtobufVideoStructV2Adapter{
-    // adapter play_addr = 1; urlmodel
-    // adapter cover = 2; urlmodel
-    int32 height = 3;
-    int32 width = 4;
-    // adapter dynamic_cover = 5; urlmodel
-    // adapter origin_cover = 6; urlmoddel
-    string ratio = 7;
-    // adapter download_addr = 8; urlmodel
-    bool has_watermark = 9;
-    // adapter play_addr_lowbr = 10; urlmodel
-    // adapter.asrepeated() bit_rate = 11; BigThumb
-    // adapter new_download_addr = 12; urlmodel
-    int32 duration = 13;
-    // adapter download_suffix_logo_addr = 14; urlmodel
-    bool has_download_suffix_logo_addr = 15;
-    // adapter play_addr_265 = 16; urlmodel
-    int32 is_h265 = 17;
-    // adapter play_addr_h264 = 18; urlmodel
-    // adapter ui_alike_download_addr = 19; urlmodel
-    // adapter caption_download_addr = 20; urlmodel
-    int64 cdn_url_expired = 21;
-    int32 is_long_video = 22;
-    string video_model = 23;
-    bool need_set_token = 24;
-    string misc_download_addrs = 25;
-    // adapter token_auth = 26; PlayTokenAuth
-    // adapter play_addr_bytevc1 = 27; urlmodel
-    int32 is_bytevc1 = 28;
-    // adapter.asrepeated() big_thumbs = 29; BigThumb
-    string meta = 30;
-    // adapter blur_cover = 31; urlmodel
-    // adapter AiCover = 32; urlmodel
-    int32 is_source_HDR = 33;
+message ProtobufVideoStructV2Adapter {
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 1, play_addr(video));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, cover(video));
+	int32 height = 3;
+	int32 width = 4;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 5, dynamic_cover(video));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 6, origin_cover(video));
+	string ratio = 7;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 8, download_addr(video));
+	bool has_watermark = 9;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 10, play_addr_lowbr(video));
+	//BitRate.ADAPTER.asRepeated().encodeWithTag(protoWriter, 11, bit_rate(video));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 12, new_download_addr(video));
+	int32 duration = 13;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 14, download_suffix_logo_addr(video));
+	bool has_download_suffix_logo_addr = 15;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 16, play_addr_265(video));
+	int32 is_h265 = 17;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 18, play_addr_h264(video));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 19, ui_alike_download_addr(video));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 20, caption_download_addr(video));
+	int64 cdn_url_expired = 21;
+	int32 is_long_video = 22;
+	string video_model = 23;
+	bool need_set_token = 24;
+	string misc_download_addrs = 25;
+	//PlayTokenAuth.ADAPTER.encodeWithTag(protoWriter, 26, token_auth(video));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 27, play_addr_bytevc1(video));
+	int32 is_bytevc1 = 28;
+	BigThumb.ProtoAdapter_BigThumb big_thumbs = 29;
+	string meta = 30;
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 31, blur_cover(video));
+	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 32, AiCover(video));
+	int32 is_source_HDR = 33;
 }

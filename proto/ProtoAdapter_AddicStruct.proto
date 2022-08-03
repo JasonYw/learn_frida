@@ -1,4 +1,5 @@
 syntax = "proto3";
+package AddicStruct;
 message ProtoAdapter_AddicStruct {
 	string info = 1;
 }

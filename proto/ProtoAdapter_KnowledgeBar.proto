@@ -1,4 +1,5 @@
 syntax = "proto3";
+package KnowledgeBar;
 message ProtoAdapter_KnowledgeBar {
 	string content = 1;
 	string extra = 3;

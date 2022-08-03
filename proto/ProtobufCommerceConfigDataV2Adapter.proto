@@ -1,9 +1,10 @@
 syntax = "proto3";
+import "ProtoAdapter_StickerPendantStruct.proto";
 message ProtobufCommerceConfigDataV2Adapter{
     int32 type = 1;
     int32 priority = 2;
     // ItemLikeEggData.ADAPTER.encodeWithTag(protoWriter, 3, item_like_egg(commerceConfigData));
-    // StickerPendantStruct.ADAPTER.encodeWithTag(protoWriter, 4, sticker_pendant(commerceConfigData));
+    StickerPendantStruct.ProtoAdapter_StickerPendantStruct sticker_pendant = 4;
     string data = 5;
 
 }

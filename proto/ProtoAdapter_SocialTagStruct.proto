@@ -1,4 +1,5 @@
 syntax = "proto3";
+package SocialTagStruct;
 message ProtoAdapter_SocialTagStruct {
 	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER image = 2;
 	string mob_label = 4;

@@ -1,4 +1,8 @@
 syntax = "proto3";
+package PromotionStruct;
+
+import "ProtoAdapter_UserShopCategory.proto"
+
 message ProtoAdapter_PromotionStruct{
     string promotion_id = 1;
     string gid = 2;
@@ -39,6 +43,5 @@ message ProtoAdapter_PromotionStruct{
     // brand_icon
     // UrlModel.ADAPTER.encodeWithTag(protoWriter, 33, promotionStruct.brandIcon);
     string small_app_url = 34;
-    // user_shop_categories
-    // UserShopCategory.ADAPTER.asRepeated().encodeWithTag(protoWriter, 35, promotionStruct.userShopCategories);
+    repeated UserShopCategory.ProtoAdapter_UserShopCategory user_shop_categories = 35;
 }

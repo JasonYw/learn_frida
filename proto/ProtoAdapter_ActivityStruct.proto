@@ -1,7 +1,10 @@
 syntax = "proto3";
+package ActivityStruct;
+import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_ActivityStruct {
 	int32 use_music_count = 1;
 	int32 digg_count = 2;
-	//music_cover_url UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, activityStruct.musicCoverUrl);
-	//music_qrcode_url UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, activityStruct.musicQrcodeUrl);
+	UrlModel.ProtobufUrlStructV2Adapter music_cover_url = 3;
+	UrlModel.ProtobufUrlStructV2Adapter music_qrcode_url = 4;
 }

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package "RFansGroupInfo";
 message ProtoAdapter_RFansGroupInfo {
 	string schema = 1;
 	string token = 2;

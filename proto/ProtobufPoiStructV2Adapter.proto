@@ -1,4 +1,7 @@
 syntax = "proto3";
+import "ProtobufAddressStructV2Adapter.proto"
+
+
 message ProtobufPoiStructV2Adapter{
     string poi_id = 1;
     string poi_name = 2;
@@ -11,7 +14,7 @@ message ProtobufPoiStructV2Adapter{
     // adapter cover_medium = 9; urlmodel
     // adapter cover_thumb = 10; urlmodel
     string distance = 11;
-    // Address.ADAPTER.encodeWithTag(protoWriter, 12, address_info(poiStruct));
+    Address.ProtobufAddressStructV2Adapter address_info = 12;
     int32 icon_type = 13;
     int32 collect_stat = 14;
     double poi_longitude = 15;

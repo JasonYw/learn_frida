@@ -1,9 +1,12 @@
 syntax = "proto3";
+import "ProtobufAnchorCommonStructV2Adapter.proto";
+import "ProtobufAnchorShopLinkStructV2Adapter.proto";
+import "ProtobufAnchorWikipediaStructV2Adapter.proto";
 message ProtobufAnchorStructV2Adapter{
     int32 show_type = 1;
     int32 business_type = 2;
-    // WikipediaInfo.ADAPTER.encodeWithTag(protoWriter, 3, wikipedia_info(anchor));
-    // AnchorShopLinkStruct.ADAPTER.encodeWithTag(protoWriter, 4, shop_link(anchor));
-    // AnchorCommonStruct.ADAPTER.encodeWithTag(protoWriter, 5, anchor_info(anchor));
+    WikipediaInfo.ProtobufAnchorWikipediaStructV2Adapter wikipedia_info = 3;
+    AnchorShopLinkStruct.ProtobufAnchorShopLinkStructV2Adapter  shop_link = 4;
+    AnchorCommonStruct.ProtobufAnchorCommonStructV2Adapter anchor_info = 5;
     string anchor_id = 6;
 }

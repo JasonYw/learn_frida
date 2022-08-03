@@ -1,4 +1,5 @@
 syntax = "proto3";
+package GrootInfoStruct;
 message ProtoAdapter_GrootInfoStruct{
     int64 baike_id = 1;
     string species_name =2;

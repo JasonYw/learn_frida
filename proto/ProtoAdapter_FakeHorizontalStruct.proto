@@ -1,4 +1,5 @@
 syntax = "proto3";
+package FakeHorizontalStruct;
 message ProtoAdapter_FakeHorizontalStruct {
 	double bottom = 2;
 	double left = 3;

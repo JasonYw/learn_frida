@@ -1,4 +1,5 @@
 syntax = "proto3";
+package QuestionnaireStruct;
 message ProtoAdapter_QuestionnaireStruct {
 	string background_url = 10;
 	string extra = 9;

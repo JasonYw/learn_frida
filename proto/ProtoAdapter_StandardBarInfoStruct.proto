@@ -1,4 +1,5 @@
 syntax = "proto3";
+package StandardBarInfoStruct;
 message ProtoAdapter_StandardBarInfoStruct {
 	int32 Constants.APP_ID = 5;
 	string app_schema = 12;

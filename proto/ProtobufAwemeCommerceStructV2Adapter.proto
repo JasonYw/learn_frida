@@ -1,4 +1,5 @@
 syntax = "proto3";
+package AwemeCommerceStruct;
 message ProtobufAwemeCommerceStructV2Adapter {
 	int32 ad_auth_status = 1;
 	int32 ad_source = 2;

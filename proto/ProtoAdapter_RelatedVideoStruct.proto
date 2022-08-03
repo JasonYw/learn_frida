@@ -1,4 +1,5 @@
 syntax = "proto3";
+package RelatedVideoStruct;
 message ProtoAdapter_RelatedVideoStruct {
 	string aweme_id = 4;
 	string bar_name = 2;

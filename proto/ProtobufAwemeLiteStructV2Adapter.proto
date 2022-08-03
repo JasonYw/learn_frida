@@ -1,4 +1,5 @@
 syntax = "proto3";
+package AwemeLiteStruct;
 message ProtobufAwemeLiteStructV2Adapter {
 	int32 is_lite_red_pack_item = 1;
 	bool can_done_share_private_chat_task = 2;

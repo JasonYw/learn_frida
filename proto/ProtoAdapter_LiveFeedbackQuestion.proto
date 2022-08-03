@@ -1,7 +1,8 @@
 syntax = "proto3";
+package LiveFeedbackQuestion;
+import "ProtoAdapter_LiveFeedbackOption.proto"
 message ProtoAdapter_LiveFeedbackQuestion {
-	//com.ss.ugc.aweme.LiveFeedbackOption#ADAPTER options = 4; repead
-	int64 question_id = 5;
+	repeated LiveFeedbackOption.ProtoAdapter_LiveFeedbackOption options = 4; 
 	string question_key = 1;
 	string question_text = 2;
 	int64 type = 3;

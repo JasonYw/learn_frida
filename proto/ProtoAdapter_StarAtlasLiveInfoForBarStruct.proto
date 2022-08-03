@@ -1,4 +1,5 @@
 syntax = "proto3";
+package StarAtlasLiveInfoForBarStruct;
 message ProtoAdapter_StarAtlasLiveInfoForBarStruct{
     string live_desc = 1;
     string live_data = 2;

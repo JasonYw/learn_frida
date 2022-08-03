@@ -1,4 +1,5 @@
 syntax = "proto3";
+package CommerceStickerStruct;
 message ProtoAdapter_CommerceStickerStruct{
     string id = 1;
     string ad_owner_id = 2;

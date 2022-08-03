@@ -1,7 +1,8 @@
 syntax = "proto3";
+import "ProtoAdapter_GrootInfoStruct.proto";
 message ProtoAdapter_GrootInteractionStickerStruct{
     int32 type =1;
     int32 index =2;
-    // GrootInfoStruct.ADAPTER.encodeWithTag(protoWriter, 3, grootInteractionStickerStruct.userGrootInfo);
+    GrootInfoStruct.ProtoAdapter_GrootInfoStruct userGrootInfo = 3;
     string groot_h5 =4;
 }

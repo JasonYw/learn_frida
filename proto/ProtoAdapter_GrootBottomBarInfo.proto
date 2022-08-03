@@ -1,4 +1,5 @@
 syntax = "proto3";
+package GrootBottomBarInfo;
 message ProtoAdapter_GrootBottomBarInfo {
 	string description = 3;
 	string schema = 4;

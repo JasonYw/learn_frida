@@ -1,4 +1,5 @@
 syntax = "proto3";
+package BigThumb;
 message ProtoAdapter_BigThumb {
     int64 img_num = 1;
     string uri  = 2;

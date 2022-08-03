@@ -1,8 +1,10 @@
 syntax = "proto3";
+import "ProtoAdapter_LynxRawDataStruct.proto";
+package LiveAppointmentStruct
 message ProtoAdapter_LiveAppointmentStruct {
 	string web_url = 1;
 	string type = 2;
-	//lynx_raw_data LynxRawDataStruct.ADAPTER.encodeWithTag(protoWriter, 3, liveAppointmentStruct.lynxRawData);
+	LynxRawDataStruct.ProtoAdapter_LynxRawDataStruct lynx_raw_data = 3; 
 	string template_url = 4;
 	int32 show_button_seconds = 5;
 	int32 position = 6;

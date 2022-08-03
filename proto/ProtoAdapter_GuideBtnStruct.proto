@@ -1,5 +1,7 @@
 syntax = "proto3";
+package GuideBtnStruct;
+import "ProtoAdapter_BtnPropertyStruct.proto";
 message ProtoAdapter_GuideBtnStruct {
-	//com.ss.ugc.aweme.BtnPropertyStruct#ADAPTER buttons = 2;
+	BtnPropertyStruct.ProtoAdapter_BtnPropertyStruct buttons = 2;
 	string config = 1;
 }

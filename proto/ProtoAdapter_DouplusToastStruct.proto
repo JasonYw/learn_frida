@@ -1,4 +1,5 @@
 syntax = "proto3";
+package DouplusToastStruct;
 message ProtoAdapter_DouplusToastStruct {
 	int32 id = 1;
 	string toast = 2

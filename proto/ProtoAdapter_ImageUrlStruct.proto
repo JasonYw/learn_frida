@@ -1,4 +1,5 @@
 syntax = "proto3";
+package ImageUrlStruct
 message ProtoAdapter_ImageUrlStruct {
 	repeated string download_url_list = 3;
 	int32 C109391T5d.LJFF = 5;

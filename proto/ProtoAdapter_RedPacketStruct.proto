@@ -1,14 +1,12 @@
 syntax = "proto3";
+package RedPacketStruct;
 message ProtoAdapter_RedPacketStruct{
     int32 type = 1;
     int64 till_seckill_time = 2;
     int64 seckill_time = 3;
     string star_name = 4;
-    // ProtoAdapter.STRING.encodeWithTag(protoWriter, 4, redPacketStruct.starName);
     string words = 5;
-    // ProtoAdapter.STRING.encodeWithTag(protoWriter, 5, redPacketStruct.words);
     string timestamp_info = 6;
-    // ProtoAdapter.STRING.encodeWithTag(protoWriter, 6, redPacketStruct.timestampInfo);
     // voice
     // UrlModel.ADAPTER.encodeWithTag(protoWriter, 7, redPacketStruct.voice);
     // default_voice

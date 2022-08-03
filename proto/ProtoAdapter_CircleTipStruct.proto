@@ -1,4 +1,5 @@
 syntax = "proto3";
+package CircleTipStruct;
 message ProtoAdapter_CircleTipStruct {
 	string common_schema = 5;
 	int32 content_type = 4;

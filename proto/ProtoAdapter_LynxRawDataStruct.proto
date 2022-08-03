@@ -1,9 +1,11 @@
 syntax = "proto3";
+package LynxRawDataStruct;
+import "ProtoAdapter_LynxButtonStruct.proto";
 message ProtoAdapter_LynxRawDataStruct {
 	string refer = 1;
 	string web_title = 2;
 	int32 template_type = 3;
 	string open_url = 4;
 	string web_url = 6;
-	//button_info LynxButtonStruct.ADAPTER.encodeWithTag(protoWriter, 5, lynxRawDataStruct.buttonInfo);
+	LynxButtonStruct.ProtoAdapter_LynxButtonStruct buttonInfo = 5;
 }

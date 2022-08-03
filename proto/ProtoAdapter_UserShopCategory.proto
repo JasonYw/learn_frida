@@ -1,4 +1,5 @@
 syntax = "proto3";
+package UserShopCategory;
 message ProtoAdapter_UserShopCategory{
     int64 id = 1;
     string name = 2;

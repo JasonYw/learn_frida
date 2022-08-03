@@ -1,4 +1,5 @@
 syntax = "proto3";
+package RecommendReasonData;
 message ProtoAdapter_RecommendReasonData {
 	bool address_book_permission = 1;
 	bool gps_permission = 2;
