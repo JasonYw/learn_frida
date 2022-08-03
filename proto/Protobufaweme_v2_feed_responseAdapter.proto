@@ -1,0 +1,28 @@
+syntax = "proto3";
+message Protobufaweme_v2_feed_responseAdapter {
+	int32 status_code = 1;
+	int64 min_cursor = 2;
+	int64 max_cursor = 3;
+	int32 has_more = 4;
+	//Aweme.ADAPTER.asRepeated().encodeWithTag(protoWriter, 5, aweme_list(feedItemList));
+	string rid = 6;
+	int32 home_model = 7;
+	int32 refresh_clear = 8;
+	//Extra.ADAPTER.encodeWithTag(protoWriter, 9, extra(feedItemList));
+	//LogPbBean.ADAPTER.encodeWithTag(protoWriter, 10, log_pb(feedItemList));
+	string DebugInfo = 11;
+	//HotSearchGuideWord.ADAPTER.encodeWithTag(protoWriter, 12, guide_word(feedItemList));
+	//Aweme.ADAPTER.asRepeated().encodeWithTag(protoWriter, 13, preload_ads(feedItemList));
+	string status_msg = 14;
+	int32 block_code = 15;
+	//Aweme.ADAPTER.asRepeated().encodeWithTag(protoWriter, 16, preload_awemes(feedItemList));
+	bool enable_re_rank = 17;
+	bool disable_adjust_for_cache = 18;
+	int32 pitaya_type = 19;
+	string pitaya_features = 20;
+	bool enable_splash_show = 21;
+	bool enable_client_ads_strategy = 22;
+	int32 rec_follow_unread_cnt = 23;
+	string sati_param_for_pitaya = 24;
+	string extra_info = 25;
+}

@@ -26,7 +26,7 @@ if not proto_java_lines[1].startswith('@SerializedName'):
             output.write(f'\t//{line}')
 else:
     SerializedName = re.findall(r'\@SerializedName\((.+)\)',proto_java)
-    WireField = re.findall(r'adapter \= \"(.+)\",.+tag = (\d+)',proto_java)
+    WireField = re.findall(r'adapter \= \"(.+)\",.+tag = (.+)\)',proto_java)
     # print(SerializedName,WireField)
     for i,j in zip(SerializedName,WireField):
         if j[0].startswith('com.squareup.wire.ProtoAdapter'):

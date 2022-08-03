@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_ImageGearedStruct {
+	string name = 1
+	//images ImageUrlStruct.ADAPTER.asRepeated().encodeWithTag(protoWriter, 2, imageGearedStruct.images);
+}

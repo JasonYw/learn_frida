@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtoAdapter_CFStruct {
+	//com.ss.android.ugc.aweme.feed.model.Aweme#ADAPTER cf = 1;
+}

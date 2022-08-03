@@ -1,0 +1,10 @@
+syntax = "proto3";
+message ProtoAdapter_FromNearbyBarStruct {
+	string extra = 4;
+	int32 frequency_limit = 5;
+	//icon com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER icon = 3;
+	string C33968a.f42937f = 1;
+	//report_values com.ss.ugc.aweme.NameValuePair#ADAPTER report_values = 6;
+	string schema = 4;
+	string text = 2;
+}

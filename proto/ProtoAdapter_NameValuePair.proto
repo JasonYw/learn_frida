@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_NameValuePair {
+	string name = 1;
+	string value = 2;
+}

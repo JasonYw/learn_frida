@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtobufLogPbStructV2Adapter {
+	string impr_id = 2;
+}

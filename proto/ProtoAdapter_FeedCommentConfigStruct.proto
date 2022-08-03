@@ -1,0 +1,4 @@
+syntax = "proto3";
+message ProtoAdapter_FeedCommentConfigStruct {
+	string input_config_text = 1;
+}

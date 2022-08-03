@@ -1,0 +1,6 @@
+syntax = "proto3";
+message ProtoAdapter_CooperationInfoStruct {
+	//repeated com.ss.ugc.aweme.CoCreatorStruct#ADAPTER co_creators = 3;
+	string extra = 2;
+	string tag = 1;
+}

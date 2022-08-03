@@ -1,0 +1,14 @@
+syntax = "proto3";
+message ProtoAdapter_CoCreatorStruct {
+	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER avatar_thumb = 4;
+	string extra = 11;
+	int32 follow_status = 9;
+	int32 follower_status = 10;
+	int32 index = 8;
+	int32 invite_status = 7;
+	string nickname = 3;
+	int32 role_id = 5;
+	string role_title = 6;
+	string sec_uid = 2;
+	string uid = 1;
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+message ProtoAdapter_MusicPromoteCommentAnchorStruct {
+	string UGCMonitor.EVENT_COMMENT = 2;
+	int64 meta_song_id = 3;
+	//com.ss.ugc.aweme.MusicPromoteLinkInfoStruct#ADAPTER music_promote_link_info = 4;
+	string tag = 1;
+}

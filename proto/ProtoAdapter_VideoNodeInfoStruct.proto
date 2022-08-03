@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_VideoNodeInfoStruct {
+	int64 high_light = 2;
+	int32 play_type = 1;
+}

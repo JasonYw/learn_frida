@@ -1,0 +1,5 @@
+syntax = "proto3";
+message ProtoAdapter_DiggLottie {
+	int32 can_bomb = 2;
+	string lottie_id = 1;
+}
