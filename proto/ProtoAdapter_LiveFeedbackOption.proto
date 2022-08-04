@@ -1,5 +1,5 @@
 syntax = "proto3";
-package "LiveFeedbackOption";
+package LiveFeedbackOption;
 message ProtoAdapter_LiveFeedbackOption {
 	string key = 1;
 	bool negative = 4;

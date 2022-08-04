@@ -1,6 +1,6 @@
 syntax = "proto3";
 import "ProtoAdapter_CFIdStruct.proto";
-import "ProtoAdapter_CFStruct.proto"
+import "ProtoAdapter_CFStruct.proto";
 package CFGroupStruct;
 message ProtoAdapter_CFGroupStruct {
 	repeated CFIdStruct.ProtoAdapter_CFIdStruct cf_id_list = 9;

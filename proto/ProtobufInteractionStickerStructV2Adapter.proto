@@ -8,8 +8,8 @@ import "ProtobufLivePreviewStructV2Adapter.proto";
 import "ProtobufMentionStickerStructV2Adapter.proto";
 import "ProtobufPoiStructV2Adapter.proto";
 import "ProtobufReplyToAwemeStructV2Adapter.proto";
-import "ProtobufVoteStructV2Adapter.proto"
-import "ProtoAdapter_GrootInteractionStickerStruct.proto"
+import "ProtobufVoteStructV2Adapter.proto";
+import "ProtoAdapter_GrootInteractionStickerStruct.proto";
 import "ProtoAdapter_TagInteractionStickerStruct.proto";
 
 message ProtobufInteractionStickerStructV2Adapter{

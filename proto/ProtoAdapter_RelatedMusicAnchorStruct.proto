@@ -1,5 +1,5 @@
 syntax = "proto3";
-package RelatedMusicAnchorStruct
+package RelatedMusicAnchorStruct;
 import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_RelatedMusicAnchorStruct {
 	UrlModel.ProtobufUrlStructV2Adapter image_url = 3;

@@ -5,7 +5,6 @@ message ProtoAdapter_SimpleUserStruct {
 	string uid = 1;
 	string nickname = 2;
 	string signature =3;
-
 	UrlModel.ProtobufUrlStructV2Adapter avatarThumb = 4;
 	int32 follow_status = 5;
 	int32 status = 6;

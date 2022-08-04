@@ -1,5 +1,5 @@
 syntax = "proto3";
-package MatchedPGCSoundInfo
+package MatchedPGCSoundInfo;
 message ProtobufMatchedPGCSoundStructV2Adapter {
 	int64 m7671id = 1;
 	string author = 2;

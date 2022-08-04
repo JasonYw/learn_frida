@@ -18,7 +18,7 @@ import "ProtobufLiveHonorStructV2Adapter.proto";
 import "ProtobufOriginalMusicianStructV2Adapter.proto";
 import "ProtobufPlatformSyncStatusStructV2Adapter.proto";
 import "ProtobufRelativeUserStructV2Adapter.proto";
-import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufShareStructV2Adapter.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 import "ProtoAdapter_ActivityStruct.proto";
 import "ProtobufChallengeStructV2Adapter.proto";

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package CommerceStickerStruct;
 import "ProtobufUrlStructV2Adapter.proto";
-import "ProtoAdapter_CommerceStickerUnlockStruct.proto"
+import "ProtoAdapter_CommerceStickerUnlockStruct.proto";
 
 message ProtoAdapter_CommerceStickerStruct{
     string id = 1;

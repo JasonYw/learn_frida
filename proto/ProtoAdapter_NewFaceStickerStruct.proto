@@ -1,7 +1,7 @@
 syntax = "proto3";
 package NewFaceStickerStruct;
 import "ProtoAdapter_CommerceStickerStruct.proto";
-import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufShareStructV2Adapter.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 
 message ProtoAdapter_NewFaceStickerStruct{

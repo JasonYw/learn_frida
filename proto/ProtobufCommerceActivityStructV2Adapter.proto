@@ -12,7 +12,7 @@ message ProtobufCommerceActivityStructV2Adapter{
     int64 end_time = 7;
     repeated ActivityTimeRange.ProtobufActivityTimeRangeV2Adapter time_range = 8;
     UrlModel.ProtobufUrlStructV2Adapter track_url_list = 9;
-    UrlModel.ProtobufUrlStructV2Adapterclick_track_url_list = 10;
+    UrlModel.ProtobufUrlStructV2Adapter click_track_url_list = 10;
     string lottie = 11;
     int32 material_type = 12;
     int64 appear_time = 13;

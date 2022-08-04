@@ -3,7 +3,7 @@ package TagInteractionStickerStruct;
 import "ProtoAdapter_CustomTagInteractionStickerStruct.proto";
 import "ProtoAdapter_UserTagInteractionStickerStruct.proto";
 import "ProtoAdapter_PoiTagInteractionStickerStruct.proto";
-import "ProtoAdapter_BrandTagInteractionStickerStruct.proto"
+import "ProtoAdapter_BrandTagInteractionStickerStruct.proto";
 import "ProtoAdapter_ProductTagInteractionStickerStruct.proto";
 message ProtoAdapter_TagInteractionStickerStruct {
 	BrandTagInteractionStickerStruct.ProtoAdapter_BrandTagInteractionStickerStruct brand_tag = 8;

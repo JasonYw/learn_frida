@@ -2,7 +2,7 @@ syntax = "proto3";
 package CommerceInfo;
 import "ProtobufChallengeStructV2Adapter.proto";
 import "ProtobufOfflineInfoStructV2Adapter.proto";
-import "ProtobufSmartPhoneSettingsStructV2Adapter.proto"
+import "ProtobufSmartPhoneSettingsStructV2Adapter.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 
 message ProtobufCommerceInfoStructV2Adapter {

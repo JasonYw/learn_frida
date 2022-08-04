@@ -1,5 +1,5 @@
 syntax = "proto3";
-import "ProtoAdapter_NameValuePair.proto"
+import "ProtoAdapter_NameValuePair.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 
 package FromNearbyBarStruct

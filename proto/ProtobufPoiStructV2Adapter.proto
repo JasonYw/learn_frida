@@ -4,7 +4,7 @@ package PoiStruct;
 import "ProtobufAddressStructV2Adapter.proto";
 import "ProtobufPoiBackendTypeStructV2Adapter.proto";
 import "ProtobufPoiCardStructV2Adapter.proto";
-import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufShareStructV2Adapter.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 
 

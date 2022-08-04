@@ -1,7 +1,7 @@
 syntax = "proto3";
 package LiveFeedbackCard;
 import "ProtoAdapter_LiveFeedbackCondition.proto";
-import "ProtoAdapter_LiveFeedbackQuestion.proto"
+import "ProtoAdapter_LiveFeedbackQuestion.proto";
 message ProtoAdapter_LiveFeedbackCard {
 	LiveFeedbackCondition.ProtoAdapter_LiveFeedbackCondition condition = 5;
 	int64 feedback_id = 2;

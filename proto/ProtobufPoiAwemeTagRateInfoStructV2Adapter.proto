@@ -1,6 +1,6 @@
 syntax = "proto3";
 package poiAwemeTagRateStruct;
-import "ProtobufPoiTagRateGradeStructV2Adapter.proto"
+import "ProtobufPoiTagRateGradeStructV2Adapter.proto";
 
 message ProtobufPoiAwemeTagRateInfoStructV2Adapter {
 	string rate_id = 1;

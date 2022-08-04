@@ -1,8 +1,8 @@
 syntax = "proto3";
 package MixStruct;
-import "ProtobufMixStatisStructV2Adapter.proto"
+import "ProtobufMixStatisStructV2Adapter.proto";
 import "ProtobufMixStatusStructV2Adapter.proto";
-import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufShareStructV2Adapter.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 import "ProtobufUserStructV2Adapter.proto";
 message ProtobufMixStructV2Adapter{

@@ -1,5 +1,5 @@
 syntax = "proto3";
-package RoomFeedCellStruct
+package RoomFeedCellStruct;
 import "ProtobufUrlStructV2Adapter.proto";
 import "ProtobufWebcastRoomStructV2Adapter.proto";
 import "ProtobufFansStructV2Adapter.proto";

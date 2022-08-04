@@ -2,7 +2,7 @@ syntax = "proto3";
 package SeriesStructV2;
 
 import "ProtoAdapter_SeriesStatusStruct.proto";
-import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufShareStructV2Adapter.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 import "ProtobufUserStructV2Adapter.proto";
 

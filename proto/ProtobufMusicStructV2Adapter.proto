@@ -8,7 +8,7 @@ import "ProtobufExternalSongStructV2Adapter.proto";
 import "ProtobufMatchedPGCSoundStructV2Adapter.proto";
 import "ProtobufMatchedSongStructV2Adapter.proto";
 import "ProtobufPositionStructV2Adapter.proto";
-import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufShareStructV2Adapter.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 import "ProtobufUserStructV2Adapter.proto";
 import "ProtobufChallengeStructV2Adapter.proto";

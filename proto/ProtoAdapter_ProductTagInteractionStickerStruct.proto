@@ -1,5 +1,5 @@
 syntax = "proto3";
-package ProductTagInteractionStickerStruct
+package ProductTagInteractionStickerStruct;
 message ProtoAdapter_ProductTagInteractionStickerStruct {
 	string product_id = 1;
 	string schema = 2;

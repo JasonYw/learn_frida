@@ -1,6 +1,6 @@
 syntax = "proto3";
-package CooperationInfoStruct
-import "ProtoAdapter_CoCreatorStruct.proto"
+package CooperationInfoStruct;
+import "ProtoAdapter_CoCreatorStruct.proto";
 message ProtoAdapter_CooperationInfoStruct {
 	repeated CoCreatorStruct.ProtoAdapter_CoCreatorStruct co_creators = 3;
 	string extra = 2;

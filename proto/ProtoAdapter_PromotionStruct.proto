@@ -1,7 +1,7 @@
 syntax = "proto3";
 package PromotionStruct;
 import "ProtobufUrlStructV2Adapter.proto";
-import "ProtoAdapter_UserShopCategory.proto"
+import "ProtoAdapter_UserShopCategory.proto";
 
 message ProtoAdapter_PromotionStruct{
     string promotion_id = 1;

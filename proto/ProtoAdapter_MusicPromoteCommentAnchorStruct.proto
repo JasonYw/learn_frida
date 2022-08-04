@@ -1,6 +1,6 @@
 syntax = "proto3";
 package MusicPromoteCommentAnchorStruct;
-import "ProtoAdapter_MusicPromoteLinkInfoStruct.proto"
+import "ProtoAdapter_MusicPromoteLinkInfoStruct.proto";
 
 message ProtoAdapter_MusicPromoteCommentAnchorStruct {
 	string UGCMonitor.EVENT_COMMENT = 2;

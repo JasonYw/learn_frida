@@ -1,6 +1,6 @@
 syntax = "proto3";
 package LiveFeedbackQuestion;
-import "ProtoAdapter_LiveFeedbackOption.proto"
+import "ProtoAdapter_LiveFeedbackOption.proto";
 message ProtoAdapter_LiveFeedbackQuestion {
 	repeated LiveFeedbackOption.ProtoAdapter_LiveFeedbackOption options = 4; 
 	string question_key = 1;
