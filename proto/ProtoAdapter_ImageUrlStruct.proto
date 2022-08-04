@@ -2,7 +2,7 @@ syntax = "proto3";
 package ImageUrlStruct;
 message ProtoAdapter_ImageUrlStruct {
 	repeated string download_url_list = 3;
-	int32 C109391T5d.LJFF = 5;
+	int32 C109391T5d_LJFF = 5;
 	string uri = 1;
 	repeated string url_list = 2;
 	int32 width = 6;

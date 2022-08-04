@@ -2,7 +2,6 @@ syntax = "proto3";
 package OriginalMusician;
 import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufOriginalMusicianStructV2Adapter{
-    syntax = "proto3";
     int32 music_count = 1;
     int32 music_used_count = 2;
     UrlModel.ProtobufUrlStructV2Adapter  music_qrcode_url = 3;

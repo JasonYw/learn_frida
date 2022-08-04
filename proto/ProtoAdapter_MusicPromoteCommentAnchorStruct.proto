@@ -3,7 +3,7 @@ package MusicPromoteCommentAnchorStruct;
 import "ProtoAdapter_MusicPromoteLinkInfoStruct.proto";
 
 message ProtoAdapter_MusicPromoteCommentAnchorStruct {
-	string UGCMonitor.EVENT_COMMENT = 2;
+	string UGCMonitor_EVENT_COMMENT = 2;
 	int64 meta_song_id = 3;
 	MusicPromoteLinkInfoStruct.ProtoAdapter_MusicPromoteLinkInfoStruct music_promote_link_info = 4;
 	string tag = 1;

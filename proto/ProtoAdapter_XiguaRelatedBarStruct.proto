@@ -3,7 +3,7 @@ package XiguaRelatedBarStruct;
 import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_XiguaRelatedBarStruct {
 	UrlModel.ProtobufUrlStructV2Adapter icon = 2;
-	string C33968a.f42937f = 1;
+	string C33968a_f42937f = 1;
 	string jump_confirm_title = 8;
 	string open_app_schema = 6;
 	string open_url = 4;

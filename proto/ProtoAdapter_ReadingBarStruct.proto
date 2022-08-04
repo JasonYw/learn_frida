@@ -7,7 +7,7 @@ message ProtoAdapter_ReadingBarStruct {
 	string extra = 6;
 	string font_color = 11;
 	UrlModel.ProtobufUrlStructV2Adapter icon = 2;
-	string C33968a.f42937f = 1;
+	string C33968a_f42937f = 1;
 	string open_app_schema = 7;
 	string open_url = 4;
 	string prefix = 10;

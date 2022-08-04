@@ -10,7 +10,7 @@ message ProtoAdapter_QuestionnaireStruct {
 	int32 pop_up_min_progress = 11;
 	string schema = 5;
 	int32 style = 8;
-	string PushConstants.TASK_ID = 1;
+	string PushConstants_TASK_ID = 1;
 	string task_setting = 3;
 	string version = 7;
 }

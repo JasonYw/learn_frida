@@ -3,6 +3,6 @@ package MusicImageBeatsStruct;
 import "ProtobufUrlStructV2Adapter.proto";
 
 message ProtoAdapter_MusicImageBeatsStruct {
-	string  music_image_beats_raw = 2
+	string  music_image_beats_raw = 2;
 	UrlModel.ProtobufUrlStructV2Adapter music_image_beats_url = 1;
 }

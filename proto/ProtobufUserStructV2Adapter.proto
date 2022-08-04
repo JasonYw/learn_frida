@@ -175,7 +175,7 @@ message ProtobufUserStructV2Adapter {
 	UrlModel.ProtobufUrlStructV2Adapter  avatar_pendant_thumb = 144;
 	UrlModel.ProtobufUrlStructV2Adapter  avatar_pendant_medium = 145;
 	repeated RecommendAwemeItem.ProtobufRecommendItemStructV2Adapter item_list = 146;
-	int32 user_mode = 147
+	int32 user_mode = 147;
 	int32 user_period = 148;
 	bool is_effect_artist = 149;
 	EffectArtistDetail.ProtobufEffectArtistStructV2Adapter effect_detail = 150;

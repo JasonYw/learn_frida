@@ -15,11 +15,11 @@ message ProtoAdapter_CommentStruct{
     User.ProtobufUserStructV2Adapter user = 7;
     string reply_id = 8;
     int32 user_digged = 9;
-    repeated ProtoAdapter_CommentStruct reply_comment = 10
+    repeated ProtoAdapter_CommentStruct reply_comment = 10;
     repeated TextExtraStruct.ProtobufTextExtraStructV2Adapter text_extra = 11;
     string label_text = 12;
     int32 label_type = 13;
-    RelationDynamicLabel.ProtobufRelationDynamicLableStructV2Adapter relation_label = 14
+    RelationDynamicLabel.ProtobufRelationDynamicLableStructV2Adapter relation_label = 14;
     string forward_id = 15; 
     int64 reply_comment_total = 16;
     string reply_to_reply_id = 17;
