@@ -1,0 +1,8 @@
+syntax = "proto3";
+package UserVirtualAnimAvatarStruct;
+import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtoAdapter_UserVirtualAnimAvatarStruct {
+	UrlModel.ProtobufUrlStructV2Adapter large_virtual_avatar = 1;
+	UrlModel.ProtobufUrlStructV2Adapter small_virtual_avatar = 2;
+}

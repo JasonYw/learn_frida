@@ -1,0 +1,10 @@
+syntax = "proto3";
+package UserVirtualCharacterStruct;
+import "ProtobufUrlStructV2Adapter.proto";
+import "ProtoAdapter_UserVirtualAnimAvatarStruct";
+message ProtoAdapter_UserVirtualCharacterStruct {
+	bool use_virtual_avatar = 4;
+	int64 version = 3;
+	UserVirtualAnimAvatarStruct.ProtoAdapter_UserVirtualAnimAvatarStruct virtual_anim_avatar = 1;
+	UrlModel.ProtobufUrlStructV2Adapter virtual_avatar = 2;
+}

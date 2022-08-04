@@ -1,0 +1,7 @@
+syntax = "proto3";
+package UserVirtualEmotionStruct;
+import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_UserVirtualEmotionStruct {
+	UrlModel.ProtobufUrlStructV2Adapter icon = 2;
+	string text = 1;
+}

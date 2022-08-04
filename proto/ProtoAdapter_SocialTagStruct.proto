@@ -2,7 +2,7 @@ syntax = "proto3";
 package SocialTagStruct;
 import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_SocialTagStruct {
-	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER image = 2;
+	UrlModel.ProtobufUrlStructV2Adapter  image = 2;
 	string mob_label = 4;
 	string schema = 3;
 	string title = 1;

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package LinkMatch;
+import "ProtobufCaptionInfoStructV2Adapter.proto";
+import "ProtobufMatchInfoStructV2Adapter.proto";
+import "ProtobufCaptionAnchorStructV2Adapter.proto";
+message ProtobufLinkMatchStructV2Adapter {
+	int32 total_limit = 1;
+	int32 query_limit = 2;
+	repeated MatchInfo.ProtobufMatchInfoStructV2Adapter match_info = 3;
+	CaptionInfo.ProtobufCaptionInfoStructV2Adapter caption_info = 4;
+	CaptionAnchor.ProtobufCaptionAnchorStructV2Adapter caption_anchor = 5;
+}

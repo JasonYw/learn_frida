@@ -1,0 +1,36 @@
+syntax = "proto3";
+package LiveRoomStruct;
+import "ProtobufUrlStructV2Adapter.proto";
+import "ProtobufUserStructV2Adapter.proto";
+import "ProtobufShareStructV2Adapter.proto";
+import "ProtobufStreamUrlStructV2Adapter.proto";
+message ProtobufWebcastRoomStructV2Adapter {
+	int64 room_id = 1;
+	int32 status = 2;
+	User.ProtobufUserStructV2Adapter owner = 3;
+	string title = 4;
+	int32 user_count = 5;
+	int64 create_time = 6;
+	int64 finish_time = 7;
+	int64 stream_id = 8;
+	StreamUrlStruct.ProtobufStreamUrlStructV2Adapter stream_url = 9;
+	ShareInfo.ProtobufShareStructV2Adapter share_info = 10;
+	int32 digg_count = 11;
+	int32 total_user_count = 12;
+	int32 coins = 13;
+	bool in_sandbox = 14;
+	UrlModel.ProtobufUrlStructV2Adapter dynamic_cover = 15;
+	UrlModel.ProtobufUrlStructV2Adapter room_cover = 16;
+	string room_type_tag = 17;
+	StreamUrlStruct.ProtobufStreamUrlStructV2Adapter additional_stream_url = 18;
+	UrlModel.ProtobufUrlStructV2Adapter webp_cover = 19;
+	string extra = 20;
+	bool live_type_audio = 21;
+	bool live_type_third_party = 22;
+	bool live_type_screenshot = 23;
+	bool live_type_official = 24;
+	bool live_type_normal = 25;
+	bool live_type_linkmic = 26;
+	bool live_type_sandbox = 27;
+	bool with_linkmic = 28;
+}

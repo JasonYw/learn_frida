@@ -11,8 +11,8 @@ import "ProtobufPositionStructV2Adapter.proto";
 import "ProtobufShareStructV2Adapter.proto"
 import "ProtobufUrlStructV2Adapter.proto";
 import "ProtobufUserStructV2Adapter.proto";
-
-
+import "ProtobufChallengeStructV2Adapter.proto";
+import "ProtoAdapter_SongStruct.proto";
 
 message ProtobufMusicStructV2Adapter {
 	int64 m7669id = 1;
@@ -44,7 +44,7 @@ message ProtobufMusicStructV2Adapter {
 	UrlModel.ProtobufUrlStructV2Adapter bodydance_url  = 28;
 	UrlModel.ProtobufUrlStructV2Adapter bodydance_challenge = 29;
 	bool is_original = 30;
-	//Challenge.ADAPTER.encodeWithTag(protoWriter, 31, challenge(music));
+	Challenge.ProtobufChallengeStructV2Adapter challenge = 31;
 	int32 billboard_rank = 32;
 	string mid = 33;
 	UrlModel.ProtobufUrlStructV2Adapter bodydance_challenge_id = 34;
@@ -84,7 +84,7 @@ message ProtobufMusicStructV2Adapter {
 	int32 audition_duration = 68;
 	int32 shoot_duration = 69;
 	int32 video_duration = 70;
-	//SongStruct.ADAPTER.encodeWithTag(protoWriter, 99, song(music));
+	SongStruct.ProtoAdapter_SongStruct song = 99;
 	repeated User.ProtobufUserStructV2Adapter artist_user_infos = 100;
 	string music_title = 101;
 	MusicImageBeatsStruct.ProtoAdapter_MusicImageBeatsStruct music_image_beats = 102;

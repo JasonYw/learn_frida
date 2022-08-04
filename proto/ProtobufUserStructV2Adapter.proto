@@ -20,8 +20,13 @@ import "ProtobufPlatformSyncStatusStructV2Adapter.proto";
 import "ProtobufRelativeUserStructV2Adapter.proto";
 import "ProtobufShareStructV2Adapter.proto"
 import "ProtobufUrlStructV2Adapter.proto";
-
-
+import "ProtoAdapter_ActivityStruct.proto";
+import "ProtobufChallengeStructV2Adapter.proto";
+import "ProtobufQuickShopStructV2Adapter.proto";
+import "ProtobufPermissionStructV2Adapter.proto";
+import "ProtobufVideoUnreadStructV2Adapter.proto";
+import "ProtoAdapter_UserVirtualCharacterStruct.proto";
+import "ProtoAdapter_UserVirtualEmotionStruct.proto";
 
 message ProtobufUserStructV2Adapter {
 	string uid = 1;
@@ -80,7 +85,7 @@ message ProtobufUserStructV2Adapter {
 	bool with_commerce_entry = 54;
 	int32 verification_type = 55;
 	OriginalMusician.ProtobufOriginalMusicianStructV2Adapter original_musician = 56;
-	//ActivityStruct.ADAPTER.encodeWithTag(protoWriter, 57, activity(user));
+	ActivityStruct.ProtoAdapter_ActivityStruct activity = 57;
 	string enterprise_verify_reason = 58;
 	bool is_ad_fake = 59;
 	bool star_use_new_download = 60;
@@ -209,16 +214,16 @@ message ProtobufUserStructV2Adapter {
 	bool display_wvalantine_activity_entry = 183;
 	string shop_micro_app = 184;
 	CommerceUserInfo.ProtobufCommerceUserStructV2Adapter commerce_user_info = 185;
-	repeated RelationLabelUser.ProtobufRelativeUserStructV2Adapter   relative_users = 186;
-	//QuickShopInfo.ADAPTER.encodeWithTag(protoWriter, 187, quick_shop_info(user));
+	repeated RelationLabelUser.ProtobufRelativeUserStructV2Adapter relative_users = 186;
+	QuickShopInfo.ProtobufQuickShopStructV2Adapter quick_shop_info = 187;
 	string relation_label = 188;
-	//Challenge.ADAPTER.asRepeated().encodeWithTag(protoWriter, 189, cha_list(user));
+	repeated Challenge.ProtobufChallengeStructV2Adapter  cha_list = 189;
 	bool is_minor = 190;
 	string sec_uid = 191;
 	double recommend_score = 192;
 	int32 wx_tag = 193;
 	int64 open_insight_time = 194;
-	//GeneralPermission.ADAPTER.encodeWithTag(protoWriter, 195, general_permission(user));
+	GeneralPermission.ProtobufPermissionStructV2Adapter general_permission = 195;
 	int32 birthday_hide_level = 196;
 	string bio_url = 197;
 	string bio_email = 198;
@@ -233,7 +238,7 @@ message ProtobufUserStructV2Adapter {
 	bool avatar_update_reminder = 207;
 	bool is_activity_user = 208;
 	string room_data = 209;
-	//UnReadVideoInfo.ADAPTER.encodeWithTag(protoWriter, 210, video_unread_info(user));
+	UnReadVideoInfo.ProtobufVideoUnreadStructV2Adapter video_unread_info = 210;
 	bool is_life_style = 211;
 	int32 stitch_setting = 212;
 	bool is_mix_user = 213;
@@ -249,6 +254,6 @@ message ProtobufUserStructV2Adapter {
 	int64 last_active_time = 224;
 	int64 total_favorited_new = 225;
 	RecommendReasonData.ProtoAdapter_RecommendReasonData recommend_reason_data = 226;
-	//UserVirtualCharacterStruct.ADAPTER.encodeWithTag(protoWriter, 227, user_virtual_character(user));
-	//UserVirtualEmotionStruct.ADAPTER.encodeWithTag(protoWriter, 228, user_virtual_emotion(user));
+	UserVirtualCharacterStruct.ProtoAdapter_UserVirtualCharacterStruct user_virtual_character = 227;
+	UserVirtualEmotionStruct.ProtoAdapter_UserVirtualEmotionStruct user_virtual_emotion = 228;
 }

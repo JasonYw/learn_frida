@@ -9,7 +9,8 @@ import "ProtobufMentionStickerStructV2Adapter.proto";
 import "ProtobufPoiStructV2Adapter.proto";
 import "ProtobufReplyToAwemeStructV2Adapter.proto";
 import "ProtobufVoteStructV2Adapter.proto"
-
+import "ProtoAdapter_GrootInteractionStickerStruct.proto"
+import "ProtoAdapter_TagInteractionStickerStruct.proto";
 
 message ProtobufInteractionStickerStructV2Adapter{
     int32 type = 1;
@@ -24,9 +25,9 @@ message ProtobufInteractionStickerStructV2Adapter{
     LiveNoticeStruct.ProtobufLivePreviewStructV2Adapter live_preview_info = 10;
     repeated TextInteractionStickerStruct.ProtoAdapter_TextInteractionStickerStruct text_interaction = 11;
     VideoShareInfoStruct.ProtoAdapter_VideoShareInfoStruct video_share_info = 12;
-    // GrootInteractionStickerStruct.ADAPTER.encodeWithTag(protoWriter, 13, groot_interaction(interactStickerStruct));
+    GrootInteractionStickerStruct.ProtoAdapter_GrootInteractionStickerStruct groot_interaction = 13;
     ReplyToAwemeStruct.ProtobufReplyToAwemeStructV2Adapter  reply_to_aweme = 14;
-    // TagInteractionStickerStruct.ADAPTER.encodeWithTag(protoWriter, 15, tag_interaction(interactStickerStruct));
+    TagInteractionStickerStruct.ProtoAdapter_TagInteractionStickerStruct  tag_interaction = 15;
     int32 image_index = 16;
     ReplyToCommentStruct.ProtoAdapter_ReplyToCommentStruct  reply_to_comment = 17;
     string sticker_config = 18;

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package MatchInfo;
+message ProtobufMatchInfoStructV2Adapter {
+	string query = 1;
+	string link = 2;
+	int32 begin = 3;
+	int32 end = 4;
+}

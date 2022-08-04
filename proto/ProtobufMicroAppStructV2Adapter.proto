@@ -1,4 +1,5 @@
 syntax = "proto3";
+package MicroAppInfo;
 import "ProtobufMicroAppCardStructV2Adapter.proto";
 message ProtobufMicroAppStructV2Adapter{
     string app_id = 1;

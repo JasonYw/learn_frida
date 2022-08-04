@@ -1,4 +1,5 @@
 syntax = "proto3";
+package SongStruct;
 import "ProtoAdapter_ChorusStruct.proto";
 import "ProtoAdapter_MusicArtistStruct.proto";
 message ProtoAdapter_SongStruct {

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package GrootInteractionStickerStruct;
 import "ProtoAdapter_GrootInfoStruct.proto";
 message ProtoAdapter_GrootInteractionStickerStruct{
     int32 type =1;

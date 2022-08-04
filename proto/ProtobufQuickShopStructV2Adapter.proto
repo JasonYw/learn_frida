@@ -1,4 +1,5 @@
 syntax = "proto3";
+package QuickShopInfo;
 import "ProtobufQuickShopSecondFloorV2Adapter.proto";
 message ProtobufQuickShopStructV2Adapter {
 	string quick_shop_url = 1;

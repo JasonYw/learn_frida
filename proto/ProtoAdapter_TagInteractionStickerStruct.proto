@@ -1,0 +1,17 @@
+syntax = "proto3";
+package TagInteractionStickerStruct;
+import "ProtoAdapter_CustomTagInteractionStickerStruct.proto";
+import "ProtoAdapter_UserTagInteractionStickerStruct.proto";
+import "ProtoAdapter_PoiTagInteractionStickerStruct.proto";
+import "ProtoAdapter_BrandTagInteractionStickerStruct.proto"
+import "ProtoAdapter_ProductTagInteractionStickerStruct.proto";
+message ProtoAdapter_TagInteractionStickerStruct {
+	BrandTagInteractionStickerStruct.ProtoAdapter_BrandTagInteractionStickerStruct brand_tag = 8;
+	CustomTagInteractionStickerStruct.ProtoAdapter_CustomTagInteractionStickerStruct custom_tag = 4;
+	int32 orientation = 2;
+	PoiTagInteractionStickerStruct.ProtoAdapter_PoiTagInteractionStickerStruct poi_tag = 6;
+	ProductTagInteractionStickerStruct.ProtoAdapter_ProductTagInteractionStickerStruct product_tag = 7;
+	string title = 3;
+	int32 type = 1;
+	UserTagInteractionStickerStruct.ProtoAdapter_UserTagInteractionStickerStruct user_tag = 5;
+}

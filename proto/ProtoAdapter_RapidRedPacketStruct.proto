@@ -1,4 +1,5 @@
 syntax = "proto3";
+package RapidRedPacketStruct;
 import "ProtoAdapter_RapidPopWindowStruct.proto";
 message ProtoAdapter_RapidRedPacketStruct {
 	bool top_red_packet = 1;

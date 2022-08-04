@@ -7,6 +7,7 @@ import "ProtobufMusicStructV2Adapter.proto";
 import "ProtobufShareStructV2Adapter.proto";
 import "ProtobufUrlStructV2Adapter.proto";
 import "ProtobufUserStructV2Adapter.proto";
+
 message ProtobufChallengeStructV2Adapter {
 	string cid = 1;
 	string cha_name = 2;
@@ -36,7 +37,7 @@ message ProtobufChallengeStructV2Adapter {
 	string cover_photo = 26;
 	int32 is_hot_search = 27;
 	int32 link_type = 28;
-	//ChallengeAnnouncement.ADAPTER.encodeWithTag(protoWriter, 29, announcement_info(challenge));
+	ChallengeDisclaimer.ProtobufDisclaimerStructV2Adapter announcement_info = 29;
 	int32 content_type = 30;
 	int32 module_type = 31;
 	string profile_tag = 32;

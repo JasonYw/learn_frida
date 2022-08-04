@@ -1,10 +1,4 @@
-ProtoAdapter_EditAwemeBarInfo
-@SerializedName("bar_toast")
-@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 3)
-public String barToast;
-@SerializedName("button_status")
-@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", tag = 1)
-public int buttonStatus;
-@SerializedName("button_toast")
-@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 2)
-
+ProtobufCaptionAnchorStructV2Adapter
+ProtoAdapter.STRING.encodeWithTag(protoWriter, 1, keyword(captionAnchor));
+ProtoAdapter.STRING.encodeWithTag(protoWriter, 2, link(captionAnchor));
+UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, icon(captionAnchor));

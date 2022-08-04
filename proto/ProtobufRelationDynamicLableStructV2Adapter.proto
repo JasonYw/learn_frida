@@ -12,7 +12,7 @@ message ProtobufRelationDynamicLableStructV2Adapter {
     int32 show_type = 6;
     string label_info_color = 7;
     string label_info_background_color = 8;
-    // adapter label_info_background_img = 9; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter label_info_background_img = 9; 
     string schema = 10;
     string label_info_background_img_stretch_position = 11;
     string label_tag = 12;

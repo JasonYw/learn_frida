@@ -7,7 +7,7 @@ message ProtoAdapter_StandardBarInfoStruct {
 	string applet_schema = 10;
 	int32 biz_scene = 4;
 	string extra = 13;
-	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER icon_url = 9;
+	UrlModel.ProtobufUrlStructV2Adapter icon_url = 9;
 	string C33968a.f42937f = 1;
 	int64 item_id = 7;
 	string jump_confirm_title = 11;

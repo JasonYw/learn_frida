@@ -1,0 +1,5 @@
+syntax = "proto3";
+package UserProfileInitInfo;
+message ProtobufUserProfileStructV2Adapter {
+	double head_model_score = 1;
+}
