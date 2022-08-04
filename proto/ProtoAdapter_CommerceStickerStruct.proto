@@ -1,5 +1,8 @@
 syntax = "proto3";
 package CommerceStickerStruct;
+import "ProtobufUrlStructV2Adapter.proto";
+
+
 message ProtoAdapter_CommerceStickerStruct{
     string id = 1;
     string ad_owner_id = 2;
@@ -11,16 +14,14 @@ message ProtoAdapter_CommerceStickerStruct{
     string detail_web_url_title = 8;
     string screen_desc = 9;
     bool screen_switch = 10;
-    // publish_icon_url
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 11, commerceStickerStruct.publishIconUrl); urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter publish_icon_url = 11;
     string publish_letters = 12;
     string publish_open_url = 13;
     string publish_web_url = 14;
     string publish_web_url_title = 15;
     string music_id = 16;
     string challenge_id = 17;
-    // screen_icon
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 18, commerceStickerStruct.screenIcon);
+    UrlModel.ProtobufUrlStructV2Adapter screen_icon = 18;
     int64 expire_time = 19;
     // unlock_info
     // ommerceStickerUnlockStruct.ADAPTER.encodeWithTag(protoWriter, 20, commerceStickerStruct.unlockInfo);

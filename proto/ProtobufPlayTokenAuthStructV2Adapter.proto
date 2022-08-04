@@ -1,4 +1,5 @@
 syntax = "proto3";
+package PlayTokenAuth;
 message ProtobufPlayTokenAuthStructV2Adapter {
     string vid = 1;
     string token = 2;

@@ -1,6 +1,8 @@
 syntax = "proto3";
+package ChallengeTransform;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufIconButtonStructV2Adapter {
 	string text = 1;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, icon(challengeTransform));
+	UrlModel.ProtobufUrlStructV2Adapter icon = 2;
 	string action = 3;
 }

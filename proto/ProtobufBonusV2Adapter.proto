@@ -1,6 +1,8 @@
 syntax = "proto3";
+package TcBonus;
 import "ProtobufBonusAuthorV2Adapter.proto";
 import "ProtobufBonusCommerceV2Adapter.proto";
+
 message ProtobufBonusV2Adapter {
 	int32 bonus_type = 1;
 	BonusAuthor.ProtobufBonusAuthorV2Adapter author =2;

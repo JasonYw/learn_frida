@@ -1,5 +1,6 @@
 syntax = "proto3";
 package RedPacketStruct;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_RedPacketStruct{
     int32 type = 1;
     int64 till_seckill_time = 2;
@@ -7,12 +8,9 @@ message ProtoAdapter_RedPacketStruct{
     string star_name = 4;
     string words = 5;
     string timestamp_info = 6;
-    // voice
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 7, redPacketStruct.voice);
-    // default_voice
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 8, redPacketStruct.defaultVoice);
+    UrlModel.ProtobufUrlStructV2Adapter voice = 7;
+    UrlModel.ProtobufUrlStructV2Adapter default_voice = 8;
     int32 voice_start = 9;
     int32 voice_end = 10;
-    // tag_icon
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 11, redPacketStruct.tagIcon);
+    UrlModel.ProtobufUrlStructV2Adapter tag_icon = 11;
 }

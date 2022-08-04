@@ -1,9 +1,10 @@
 syntax = "proto3";
 package AvatarDecoration;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufAvatarDecorationStructV2Adapter {
 	int64 m7511id = 1;
 	string name = 2;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, source_url(avatarDecoration));
+	UrlModel.ProtobufUrlStructV2Adapter source_url = 3;
 	int32 position_type = 4;
 	string dynamic_source_url = 5;
 	string dynamic_source_url_profile = 6;

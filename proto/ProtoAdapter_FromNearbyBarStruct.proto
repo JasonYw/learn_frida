@@ -1,11 +1,12 @@
 syntax = "proto3";
 import "ProtoAdapter_NameValuePair.proto"
+import "ProtobufUrlStructV2Adapter.proto";
 
 package FromNearbyBarStruct
 message ProtoAdapter_FromNearbyBarStruct {
 	string extra = 4;
 	int32 frequency_limit = 5;
-	//icon com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER icon = 3;
+	UrlModel.ProtobufUrlStructV2Adapter icon = 3;
 	string C33968a.f42937f = 1;
 	NameValuePair.ProtoAdapter_NameValuePair report_values = 6;
 	string schema = 4;

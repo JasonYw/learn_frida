@@ -1,9 +1,11 @@
 syntax = "proto3";
+package MentionStruct;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufMentionStickerStructV2Adapter{
     string sec_uid = 1;
     string user_name = 2;
     string user_id = 3;
-    // adapter avatar_thumb = 4; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter avatar_thumb = 4; 
     string signature = 5;
 
 }

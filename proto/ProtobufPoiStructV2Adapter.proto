@@ -1,5 +1,12 @@
 syntax = "proto3";
-import "ProtobufAddressStructV2Adapter.proto"
+package PoiStruct;
+
+import "ProtobufAddressStructV2Adapter.proto";
+import "ProtobufPoiBackendTypeStructV2Adapter.proto";
+import "ProtobufPoiCardStructV2Adapter.proto";
+import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufUrlStructV2Adapter.proto";
+
 
 
 message ProtobufPoiStructV2Adapter{
@@ -8,11 +15,11 @@ message ProtobufPoiStructV2Adapter{
     string type_code = 3;
     int32 user_count = 4;
     int32 item_count = 5;
-    // ShareInfo.ADAPTER.encodeWithTag(protoWriter, 6, share_info(poiStruct));
-    // adapter cover_hd = 7; urlmodel
-    // adapter cover_large = 8; urlmodel
-    // adapter cover_medium = 9; urlmodel
-    // adapter cover_thumb = 10; urlmodel
+    ShareInfo.ProtobufShareStructV2Adapter share_info = 6;
+    UrlModel.ProtobufUrlStructV2Adapter  cover_hd = 7; 
+    UrlModel.ProtobufUrlStructV2Adapter  cover_large = 8; 
+    UrlModel.ProtobufUrlStructV2Adapter  cover_medium = 9; 
+    UrlModel.ProtobufUrlStructV2Adapter  cover_thumb = 10; 
     string distance = 11;
     Address.ProtobufAddressStructV2Adapter address_info = 12;
     int32 icon_type = 13;
@@ -20,9 +27,9 @@ message ProtobufPoiStructV2Adapter{
     double poi_longitude = 15;
     double poi_latitude = 16;
     int32 expand_type = 17;
-    // adapter icon_on_map = 18; urlmodel
-    // adapter icon_on_entry = 19; urlmodel
-    // adapter icon_on_info = 20; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter  icon_on_map = 18; 
+    UrlModel.ProtobufUrlStructV2Adapter  icon_on_entry = 19; 
+    UrlModel.ProtobufUrlStructV2Adapter  icon_on_info = 20; 
     int32 poi_type = 21;
     string poi_voucher = 22;
     double rating = 23;
@@ -35,13 +42,13 @@ message ProtobufPoiStructV2Adapter{
     string sp_source = 30;
     int32 show_type = 31;
     bool is_candidate = 32;
-    // PoiCardStruct.ADAPTER.encodeWithTag(protoWriter, 33, poi_card(poiStruct));
+    PoiCardStruct.ProtobufPoiCardStructV2Adapter poi_card = 33;
     int32 poi_subtitle_type = 34;
     repeated string voucher_release_areas = 35;
     int32 is_show_halfcard = 36;
     repeated string poi_frontend_type = 37;
-    // PoiBackendType.ADAPTER.encodeWithTag(protoWriter, 38, poi_backend_type(poiStruct));
-    // adapter cover_item = 39; urlmodel
+    PoiBackendType.ProtobufPoiBackendTypeStructV2Adapter poi_backend_type = 38;
+    UrlModel.ProtobufUrlStructV2Adapter  cover_item = 39; 
     bool is_top_recommend = 40;
     bool is_admin_area = 41;
     string collected_count = 42;

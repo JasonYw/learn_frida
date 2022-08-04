@@ -1,11 +1,12 @@
 syntax = "proto3";
 package ReadingBarStruct;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_ReadingBarStruct {
 	string ab_param = 8;
 	string background_color = 12;
 	string extra = 6;
 	string font_color = 11;
-	//icon com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER icon = 2;
+	UrlModel.ProtobufUrlStructV2Adapter icon = 2;
 	string C33968a.f42937f = 1;
 	string open_app_schema = 7;
 	string open_url = 4;

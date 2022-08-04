@@ -1,17 +1,18 @@
 syntax = "proto3";
 package CommerceActivityStruct;
 import "ProtobufActivityTimeRangeV2Adapter.proto";
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufCommerceActivityStructV2Adapter{
     int32 act_type = 1;
-    // adapter image = 2; //urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter image = 2; 
     string jump_web_url = 3;
     string jump_open_url = 4;
     string title = 5;
     int64 start_time = 6;
     int64 end_time = 7;
     repeated ActivityTimeRange.ProtobufActivityTimeRangeV2Adapter time_range = 8;
-    // adapter track_url_list = 9;//urlmodel
-    // adapter click_track_url_list = 10;//urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter track_url_list = 9;
+    UrlModel.ProtobufUrlStructV2Adapterclick_track_url_list = 10;
     string lottie = 11;
     int32 material_type = 12;
     int64 appear_time = 13;

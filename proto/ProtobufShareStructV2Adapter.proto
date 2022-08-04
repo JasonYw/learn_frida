@@ -1,12 +1,17 @@
 syntax = "proto3";
+package ShareInfo;
+import "ProtobufUrlStructV2Adapter.proto";
+
+
+
 message ProtobufShareStructV2Adapter{
     string share_url = 1;
     string share_weibo_desc = 2;
     string share_desc = 3;
     string share_title = 4;
-    // adapter share_qrcode_url = 5; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter share_qrcode_url = 5; 
     string manage_goods_url = 6;
-    // adapter share_image_url = 7; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter share_image_url = 7; 
     int32 bool_persist = 8;
     string goods_rec_url = 9;
     string share_title_myself = 10;

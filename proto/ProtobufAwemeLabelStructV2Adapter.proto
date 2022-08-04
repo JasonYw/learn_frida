@@ -1,7 +1,8 @@
 syntax = "proto3";
 package AwemeLabelModel;
+import "ProtobufUrlStructV2Adapter.proto";
 
 message ProtobufAwemeLabelStructV2Adapter{
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 1, label_url(awemeLabelModel));
+    UrlModel.ProtobufUrlStructV2Adapter label_url = 1;
     int32 label_type = 2;
 }

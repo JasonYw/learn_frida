@@ -1,6 +1,11 @@
 syntax = "proto3";
+package PoiDouDiscountStruct;
+
 import "ProtoAdapter_PoiDouDiscountRankInfoStruct.proto";
 import "ProtobufAwemeSearchStructV2Adapter.proto";
+
+
+
 message ProtobufPoiDouDiscountStructV2Adapter {
 	string dou_discount_label = 1;
 	HotSearchInfo.ProtobufAwemeSearchStructV2Adapter dou_discount_mix_info = 2;

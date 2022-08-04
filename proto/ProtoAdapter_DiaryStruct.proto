@@ -1,8 +1,10 @@
 syntax = "proto3";
 package DiaryStruct
+
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_DiaryStruct {
 	string desc = 3;
-	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER icon = 4;
+	UrlModel.ProtobufUrlStructV2Adapter icon = 4;
 	int32 id = 1;
 	string name = 2;
 }

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package QuickShopSecondFloorInfo;
 message ProtobufQuickShopSecondFloorV2Adapter {
 	string process_text = 1;
 	string enter_text = 2;

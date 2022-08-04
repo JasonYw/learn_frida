@@ -1,4 +1,5 @@
 syntax = "proto3";
+package MixStatisStruct;
 message ProtobufMixStatisStructV2Adapter{
     int64 play_vv = 1;
     int64 collect_vv = 2;

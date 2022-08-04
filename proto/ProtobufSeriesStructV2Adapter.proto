@@ -1,14 +1,20 @@
 syntax = "proto3";
+package SeriesStructV2;
+
 import "ProtoAdapter_SeriesStatusStruct.proto";
+import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufUrlStructV2Adapter.proto";
+import "ProtobufUserStructV2Adapter.proto";
+
 message ProtobufSeriesStructV2Adapter {
 	string series_id = 1;
 	string series_name = 2;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, cover_url(seriesStructV2));
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, icon_url(seriesStructV2));
+	UrlModel.ProtobufUrlStructV2Adapter cover_url = 3;
+	UrlModel.ProtobufUrlStructV2Adapter icon_url = 4;
 	SeriesStatusStruct.ProtoAdapter_SeriesStatusStruct status = 5;
 	//SeriesStatsStruct.ADAPTER.encodeWithTag(protoWriter, 6, stats(seriesStructV2));
 	string desc = 7;
-	//User.ADAPTER.encodeWithTag(protoWriter, 8, author(seriesStructV2));
+	User.ProtobufUserStructV2Adapter author = 8;
 	string extra = 9;
-	//ShareInfo.ADAPTER.encodeWithTag(protoWriter, 10, share_info(seriesStructV2));
+	ShareInfo.ProtobufShareStructV2Adapter share_info =10;
 }

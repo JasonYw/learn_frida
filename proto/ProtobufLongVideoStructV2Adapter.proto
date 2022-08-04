@@ -1,7 +1,10 @@
 syntax = "proto3";
+package LongVideo;
+import "ProtobufVideoControlV2Adapter.proto";
+import "ProtobufVideoStructV2Adapter.proto";
 message ProtobufLongVideoStructV2Adapter{
-    // Video.ADAPTER.encodeWithTag(protoWriter, 1, video(longVideo));
+    Video.ProtobufVideoStructV2Adapter video = 1;
     int32 long_video_type = 2;
     double trailer_start_time = 3;
-    // VideoControl.ADAPTER.encodeWithTag(protoWriter, 4, video_control(longVideo));
+    VideoControl.ProtobufVideoControlV2Adapter video_control = 4;
 }

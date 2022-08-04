@@ -1,4 +1,5 @@
 syntax = "proto3";
+package AwemeTextLabelModel;
 message ProtobufVideoTextStructV2Adapter{
     string text = 1;
     string color = 2;

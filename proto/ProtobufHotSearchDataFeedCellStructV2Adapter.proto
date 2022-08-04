@@ -1,6 +1,9 @@
 syntax = "proto3";
+package HotSearchEntity;
+import "ProtobufHotSearchWordStructV2Adapter.proto";
+import "ProtobufShareStructV2Adapter.proto"
 message ProtobufHotSearchDataFeedCellStructV2Adapter {
-	//HotSearchItem.ADAPTER.asRepeated().encodeWithTag(protoWriter, 1, word_list(hotSearchEntity));
-	//ShareInfo.ADAPTER.encodeWithTag(protoWriter, 2, share_info(hotSearchEntity));
+	repeated HotSearchItem.ProtobufHotSearchWordStructV2Adapter  word_list = 1;
+	ShareInfo.ProtobufShareStructV2Adapter share_info = 2;
 	string active_time = 3;
 }

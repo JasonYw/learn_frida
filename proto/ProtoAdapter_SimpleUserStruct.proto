@@ -1,14 +1,16 @@
 syntax = "proto3";
 package SimpleUserStruct;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_SimpleUserStruct {
 	string uid = 1;
 	string nickname = 2;
 	string signature =3;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, simpleUserStruct.avatarThumb);
+
+	UrlModel.ProtobufUrlStructV2Adapter avatarThumb = 4;
 	int32 follow_status = 5;
 	int32 status = 6;
 	int32 user_rate = 7;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 8, simpleUserStruct.avatarLarger);
+	UrlModel.ProtobufUrlStructV2Adapter avatarLarger = 8;
 	HitTaskInfo.ProtoAdapter_HitTaskInfo hitTaskInfo = 9;
 	string unique_id = 10;
 	string sec_uid = 11;

@@ -1,5 +1,6 @@
 syntax = "proto3";
 package XiguaRelatedBarStruct;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_XiguaRelatedBarStruct {
 	//com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER icon = 2;
 	string C33968a.f42937f = 1;

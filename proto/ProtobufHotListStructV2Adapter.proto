@@ -1,4 +1,6 @@
 syntax = "proto3";
+package HotListStruct;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufHotListStructV2Adapter {
 	string title = 1;
 	string image_url = 2;
@@ -16,5 +18,5 @@ message ProtobufHotListStructV2Adapter {
 	int64 sentence_id = 14;
 	int32 label = 15;
 	string extra = 16;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 17, icon(hotListStruct));
+	UrlModel.ProtobufUrlStructV2Adapter icon = 17;
 }

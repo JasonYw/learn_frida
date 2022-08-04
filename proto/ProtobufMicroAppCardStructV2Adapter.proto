@@ -1,4 +1,5 @@
 syntax = "proto3";
+package MiniAppCard;
 message ProtobufMicroAppCardStructV2Adapter{
     string image_url = 1;
     string text = 2;

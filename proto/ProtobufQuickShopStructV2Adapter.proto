@@ -1,7 +1,8 @@
 syntax = "proto3";
+import "ProtobufQuickShopSecondFloorV2Adapter.proto";
 message ProtobufQuickShopStructV2Adapter {
 	string quick_shop_url = 1;
 	string quick_shop_name = 2;
 	bool with_text_entry = 3;
-	//QuickShopSecondFloorInfo.ADAPTER.encodeWithTag(protoWriter, 4, second_floor_info(quickShopInfo));
+	QuickShopSecondFloorInfo.ProtobufQuickShopSecondFloorV2Adapter second_floor_info = 4;
 }

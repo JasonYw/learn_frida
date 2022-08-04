@@ -2,7 +2,7 @@ syntax = "proto3";
 package AnchorCommonStruct;
 import "ProtoAdapter_AnchorPanelActionStruct.proto";
 
-
+import "ProtobufUrlStructV2Adapter.proto";
 
 message ProtobufAnchorCommonStructV2Adapter{
     string keyword = 1;
@@ -11,14 +11,14 @@ message ProtobufAnchorCommonStructV2Adapter{
     string schema = 4;
     string m8209id = 5;
     int32 type = 6;
-    // adapter icon = 7; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter icon = 7; 
     string extra = 8;
     string deep_link = 9;
     string universal_link = 10;
     int32 general_type = 11;
     string log_extra = 12;
     string description = 13;
-    // adapter thumbnail = 14; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter thumbnail = 14; 
     AnchorPanelActionStruct.ProtoAdapter_AnchorPanelActionStruct actions = 15;
 
 }

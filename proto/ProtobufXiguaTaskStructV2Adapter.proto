@@ -1,4 +1,5 @@
 syntax = "proto3";
+package XiGuaTaskStruct;
 message ProtobufXiguaTaskStructV2Adapter{
     bool is_xigua_task = 1;
     string jump_url = 2;

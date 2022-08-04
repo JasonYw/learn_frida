@@ -1,7 +1,10 @@
 syntax = "proto3";
+package RecommendAwemeItem;
+import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtobufRecommendItemStructV2Adapter {
 	string aweme_id = 1;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 2, cover(recommendAwemeItem));
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, dynamic_cover(recommendAwemeItem));
+	UrlModel.ProtobufUrlStructV2Adapter cover = 2;
+	UrlModel.ProtobufUrlStructV2Adapter dynamic_cover = 3;
 	int64 media_type = 4;
 }

@@ -1,6 +1,8 @@
 syntax = "proto3";
+package HotWordGuideInfoStruct;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufHotWordGuideInfoStructV2Adapter {
 	string title = 1;
 	string content = 2;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 3, url(hotWordGuideInfoStruct));
+	UrlModel.ProtobufUrlStructV2Adapter url  = 3;
 }

@@ -1,8 +1,13 @@
 syntax = "proto3";
+package ImageInfo;
+import "ProtobufUrlStructV2Adapter.proto";
+
+
+
 message ProtobufImageInfoStructV2Adapter{
     int32 height = 1;
     int32 width = 2;
-    // adapter label_large = 3; urlmodel
-    // adapter label_thumb = 4; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter label_large = 3; 
+    UrlModel.ProtobufUrlStructV2Adapter label_thumb = 4; 
 
 }

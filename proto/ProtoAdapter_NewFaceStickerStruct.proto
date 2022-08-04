@@ -1,29 +1,26 @@
 syntax = "proto3";
 package NewFaceStickerStruct;
 import "ProtoAdapter_CommerceStickerStruct.proto";
+import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufUrlStructV2Adapter.proto";
 
 message ProtoAdapter_NewFaceStickerStruct{
     string id = 1;
     string name = 2;
     repeated string children = 3;
-    //icon_url
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, newFaceStickerStruct.iconUrl);
+    UrlModel.ProtobufUrlStructV2Adapter icon_url = 4;
     string owner_id = 5;
     string owner_nickname = 6;
     int32 user_count = 7;
     string desc = 8;
     string effect_id = 9;
-    // share_info
-    // ShareInfo.ADAPTER.encodeWithTag(protoWriter, 10, newFaceStickerStruct.shareInfo);
+    ShareInfo.ProtobufShareStructV2Adapter share_info = 10;
     bool is_favorite = 11;
     CommerceStickerStruct.ProtoAdapter_CommerceStickerStruct commerce_sticker = 12;
     repeated string tags = 13;
-    // avatar_thumb
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 14, newFaceStickerStruct.avatarThumb);
-    // avatar_medium
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 15, newFaceStickerStruct.avatarMedium);
-    // avatar_thumb
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 16, newFaceStickerStruct.avatarLarge);
+    UrlModel.ProtobufUrlStructV2Adapter avatar_thumb = 14;
+    UrlModel.ProtobufUrlStructV2Adapter avatar_medium = 15;
+    UrlModel.ProtobufUrlStructV2Adapter avatar_large = 16;
     int64 vv_count = 17;
     string extra = 18;
     string sec_uid = 19;

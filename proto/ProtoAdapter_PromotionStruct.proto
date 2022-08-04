@@ -1,14 +1,13 @@
 syntax = "proto3";
 package PromotionStruct;
-
+import "ProtobufUrlStructV2Adapter.proto";
 import "ProtoAdapter_UserShopCategory.proto"
 
 message ProtoAdapter_PromotionStruct{
     string promotion_id = 1;
     string gid = 2;
     string title = 3;
-    //image
-    //UrlModel.ADAPTER.encodeWithTag(protoWriter, 4, promotionStruct.image);
+    UrlModel.ProtobufUrlStructV2Adapter image = 4;
     int64 price = 5;
     int64 market_price = 6;
     int64 cos_fee = 7;
@@ -20,17 +19,14 @@ message ProtoAdapter_PromotionStruct{
     string last_aweme_id = 13;
     string elastic_title = 14;
     string elastic_introduction = 15;
-    // elastic_img
-    // UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, 16, promotionStruct.elasticImg);
+    UrlModel.ProtobufUrlStructV2Adapter elastic_img = 16;
     repeated string label = 17;
-    // visitor
-    // PromotionVisitor.ADAPTER.encodeWithTag(protoWriter, 18, promotionStruct.visitor);
+    UrlModel.ProtobufUrlStructV2Adapter visitor = 17;
     string h5_url = 19;
     double cos_radio = 20;
     string logo = 21;
     string source = 22;
-    //imgs
-    //UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, 23, promotionStruct.imgs);
+    UrlModel.ProtobufUrlStructV2Adapter imgs = 23;
     int32 promotion_source = 24;
     int32 elastic_type = 25;
     string title_prefix = 26;
@@ -40,8 +36,7 @@ message ProtoAdapter_PromotionStruct{
     string rank_url = 30;
     string trace_author_id = 31;
     string trace_aweme_id = 32;
-    // brand_icon
-    // UrlModel.ADAPTER.encodeWithTag(protoWriter, 33, promotionStruct.brandIcon);
+    UrlModel.ProtobufUrlStructV2Adapter brand_icon = 33;
     string small_app_url = 34;
     repeated UserShopCategory.ProtoAdapter_UserShopCategory user_shop_categories = 35;
 }

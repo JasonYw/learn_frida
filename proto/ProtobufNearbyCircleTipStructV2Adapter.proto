@@ -1,7 +1,11 @@
 syntax = "proto3";
+package NearbyCircleTipStruct;
+import "ProtobufRelativeUserStructV2Adapter.proto";
+
+
 message ProtobufNearbyCircleTipStructV2Adapter {
 	int64 douyin_circle_id = 1;
 	string circle_title = 2;
 	string circle_copywriter = 3;
-	//RelationLabelUser.ADAPTER.asRepeated().encodeWithTag(protoWriter, 4, relative_users(nearbyCircleTipStruct));
+	repeated RelationLabelUser.ProtobufRelativeUserStructV2Adapter  relative_users = 4;
 }

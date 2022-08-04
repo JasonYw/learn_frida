@@ -1,12 +1,15 @@
 syntax = "proto3";
 package CommerceInfo;
 import "ProtobufChallengeStructV2Adapter.proto";
+import "ProtobufOfflineInfoStructV2Adapter.proto";
+import "ProtobufSmartPhoneSettingsStructV2Adapter.proto"
+import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtobufCommerceInfoStructV2Adapter {
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 1, head_image_url(commerceInfo));
-	//OfflineInfo.ADAPTER.asRepeated().encodeWithTag(protoWriter, 2, offline_info_list(commerceInfo));
+	UrlModel.ProtobufUrlStructV2Adapter head_image_url = 1;
+	repeated OfflineInfo.ProtobufOfflineInfoStructV2Adapter  offline_info_list = 2;
 	repeated Challenge.ProtobufChallengeStructV2Adapter challenge_list = 3;
-	//SmartPhone.ADAPTER.encodeWithTag(protoWriter, 4, smart_phone(commerceInfo));
-	string quick_shop_url = 5;
+	SmartPhone.ProtobufSmartPhoneSettingsStructV2Adapter  smart_phone = 4;
 	string quick_shop_name = 6;
 	string site_id = 7;
 }

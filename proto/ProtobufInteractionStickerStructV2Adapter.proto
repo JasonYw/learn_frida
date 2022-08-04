@@ -1,24 +1,31 @@
 syntax = "proto3";
+package InteractStickerStruct;
 import "ProtoAdapter_ReplyToCommentStruct.proto";
 import "ProtoAdapter_TextInteractionStickerStruct.proto";
 import "ProtoAdapter_VideoShareInfoStruct.proto";
 import "ProtobufHashTagStickerStructV2Adapter.proto";
+import "ProtobufLivePreviewStructV2Adapter.proto";
+import "ProtobufMentionStickerStructV2Adapter.proto";
+import "ProtobufPoiStructV2Adapter.proto";
+import "ProtobufReplyToAwemeStructV2Adapter.proto";
+import "ProtobufVoteStructV2Adapter.proto"
+
 
 message ProtobufInteractionStickerStructV2Adapter{
     int32 type = 1;
     int32 index = 2;
-    // PoiStruct.ADAPTER.encodeWithTag(protoWriter, 3, poi_info(interactStickerStruct));
+    PoiStruct.ProtobufPoiStructV2Adapter poi_info = 3;
     string track_info = 4;
     string attr = 5;
-    // VoteStruct.ADAPTER.encodeWithTag(protoWriter, 6, vote_info(interactStickerStruct));
+    VoteStruct.ProtobufVoteStructV2Adapter  vote_info = 6;
     string text_info = 7;
-    // MentionStruct.ADAPTER.encodeWithTag(protoWriter, 8, mention_info(interactStickerStruct));
+    MentionStruct.ProtobufMentionStickerStructV2Adapter  mention_info = 8;
     HashtagStruct.ProtobufHashTagStickerStructV2Adapter interactStickerStruct = 9;
-    // LiveNoticeStruct.ADAPTER.encodeWithTag(protoWriter, 10, live_preview_info(interactStickerStruct));
+    LiveNoticeStruct.ProtobufLivePreviewStructV2Adapter live_preview_info = 10;
     repeated TextInteractionStickerStruct.ProtoAdapter_TextInteractionStickerStruct text_interaction = 11;
     VideoShareInfoStruct.ProtoAdapter_VideoShareInfoStruct video_share_info = 12;
     // GrootInteractionStickerStruct.ADAPTER.encodeWithTag(protoWriter, 13, groot_interaction(interactStickerStruct));
-    //  ReplyToAwemeStruct.ADAPTER.encodeWithTag(protoWriter, 14, reply_to_aweme(interactStickerStruct));
+    ReplyToAwemeStruct.ProtobufReplyToAwemeStructV2Adapter  reply_to_aweme = 14;
     // TagInteractionStickerStruct.ADAPTER.encodeWithTag(protoWriter, 15, tag_interaction(interactStickerStruct));
     int32 image_index = 16;
     ReplyToCommentStruct.ProtoAdapter_ReplyToCommentStruct  reply_to_comment = 17;

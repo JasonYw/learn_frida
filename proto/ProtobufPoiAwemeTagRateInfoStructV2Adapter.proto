@@ -1,5 +1,8 @@
 syntax = "proto3";
+package poiAwemeTagRateStruct;
+import "ProtobufPoiTagRateGradeStructV2Adapter.proto"
+
 message ProtobufPoiAwemeTagRateInfoStructV2Adapter {
 	string rate_id = 1;
-	//PoiTagRateGradeStruct.ADAPTER.encodeWithTag(protoWriter, 3, rate_grade(poiAwemeTagRateStruct));
+	PoiTagRateGradeStruct.ProtobufPoiTagRateGradeStructV2Adapter rate_grade =3;
 }

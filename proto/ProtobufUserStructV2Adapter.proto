@@ -1,4 +1,5 @@
 syntax = "proto3";
+package User;
 import "ProtoAdapter_DislikeDynamicReasonList.proto";
 import "ProtoAdapter_RecommendReasonData.proto";
 import "ProtoAdapter_RecommendTemplateStruct.proto";
@@ -11,6 +12,16 @@ import "ProtobufCommercePermissionStructV2Adapter.proto";
 import "ProtobufCommerceUserStructV2Adapter.proto";
 import "ProtobufEffectArtistStructV2Adapter.proto";
 import "ProtobufFollowersDetailV2Adapter.proto";
+import "ProtobufHotsearchSprintStructV2Adapter.proto";
+import "ProtobufLifeStoryBlockStructV2Adapter.proto";
+import "ProtobufLiveHonorStructV2Adapter.proto";
+import "ProtobufOriginalMusicianStructV2Adapter.proto";
+import "ProtobufPlatformSyncStatusStructV2Adapter.proto";
+import "ProtobufRelativeUserStructV2Adapter.proto";
+import "ProtobufShareStructV2Adapter.proto"
+import "ProtobufUrlStructV2Adapter.proto";
+
+
 
 message ProtobufUserStructV2Adapter {
 	string uid = 1;
@@ -18,9 +29,9 @@ message ProtobufUserStructV2Adapter {
 	string nickname = 3;
 	int32 gender = 4;
 	string signature = 5;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 6, avatar_larger(user));
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 7, avatar_thumb(user));
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 8, avatar_medium(user));
+	UrlModel.ProtobufUrlStructV2Adapter  avatar_larger = 6;
+	UrlModel.ProtobufUrlStructV2Adapter   avatar_thumb = 7;
+	UrlModel.ProtobufUrlStructV2Adapter  avatar_medium = 8;
 	string birthday = 9;
 	bool is_verified = 10;
 	int32 allow_status = 11;
@@ -65,10 +76,10 @@ message ProtobufUserStructV2Adapter {
 	string school_name = 50;
 	string school_poi_id = 51;
 	int32 school_type = 52;
-	//ShareInfo.ADAPTER.encodeWithTag(protoWriter, 53, share_info(user));
+	ShareInfo.ProtobufShareStructV2Adapter share_info = 53;
 	bool with_commerce_entry = 54;
 	int32 verification_type = 55;
-	//OriginalMusician.ADAPTER.encodeWithTag(protoWriter, 56, original_musician(user));
+	OriginalMusician.ProtobufOriginalMusicianStructV2Adapter original_musician = 56;
 	//ActivityStruct.ADAPTER.encodeWithTag(protoWriter, 57, activity(user));
 	string enterprise_verify_reason = 58;
 	bool is_ad_fake = 59;
@@ -82,7 +93,7 @@ message ProtobufUserStructV2Adapter {
 	int32 commerce_user_level = 67;
 	CommerceInfo.ProtobufCommerceInfoStructV2Adapter commerce_info = 68;
 	int32 live_agreement = 69;
-	//PlatformInfo.ADAPTER.asRepeated().encodeWithTag(protoWriter, 70, platform_sync_info(user));
+	repeated PlatformInfo.ProtobufPlatformSyncStatusStructV2Adapter  platform_sync_info = 70;
 	bool with_shop_entry = 71;
 	bool is_discipline_member = 72;
 	int32 secret = 73;
@@ -91,7 +102,7 @@ message ProtobufUserStructV2Adapter {
 	bool show_image_bubble = 76;
 	repeated string geofencing = 77;
 	int64 unique_id_modify_time = 78;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 79, video_icon(user));
+	UrlModel.ProtobufUrlStructV2Adapter  video_icon = 79;
 	string ins_id = 80;
 	string google_account = 81;
 	string youtube_channel_id = 82;
@@ -113,7 +124,7 @@ message ProtobufUserStructV2Adapter {
 	int64 register_time = 98;
 	int32 status = 99;
 	bool with_douplus_entry = 100;
-	//ProtoAdapter.INT64.encodeWithTag(protoWriter, BdpDebugHttpRequest.HTTP_SWITCHING_PROTOCOLS, create_time(user));
+	int64 create_time = 101;
 	string avatar_uri = 102;
 	int32 follower_status = 103;
 	int32 neiguang_shield = 104;
@@ -124,7 +135,7 @@ message ProtobufUserStructV2Adapter {
 	int32 user_rate = 109;
 	bool with_new_goods = 110;
 	bool is_flowcard_member = 111;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 112, room_cover(user));
+	UrlModel.ProtobufUrlStructV2Adapter  room_cover = 112;
 	int32 download_setting = 113;
 	int64 download_prompt_ts = 114;
 	int32 react_setting = 115;
@@ -134,10 +145,10 @@ message ProtobufUserStructV2Adapter {
 	string country = 119;
 	string province = 120;
 	string city = 121;
-	//UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, OpenAuthTask.f22015g, cover_url(user));
+	repeated UrlModel.ProtobufUrlStructV2Adapter cover_url = 122;
 	string recommend_reason_relation = 123;
 	string iso_country_code = 124;
-	//ProtoAdapter.INT32.encodeWithTag(protoWriter, C1399n.f22430f, show_gender_strategy(user));
+	int32 show_gender_strategy = 125;
 	string district = 126;
 	string language = 127;
 	string room_type_tag = 128;
@@ -155,19 +166,19 @@ message ProtobufUserStructV2Adapter {
 	int32 education = 140;
 	bool can_modify_school_info = 141;
 	int32 school_visible = 142;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 143, avatar_pendant_larger(user));
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 144, avatar_pendant_thumb(user));
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 145, avatar_pendant_medium(user));
-	//RecommendAwemeItem.ADAPTER.asRepeated().encodeWithTag(protoWriter, 146, item_list(user));
-	//ProtoAdapter.INT32.encodeWithTag(protoWriter, MediaPlayer.MEDIA_PLAYER_OPTION_ABR_STREAM_INFO, user_mode(user));
+	UrlModel.ProtobufUrlStructV2Adapter  avatar_pendant_larger = 143;
+	UrlModel.ProtobufUrlStructV2Adapter  avatar_pendant_thumb = 144;
+	UrlModel.ProtobufUrlStructV2Adapter  avatar_pendant_medium = 145;
+	repeated RecommendAwemeItem.ProtobufRecommendItemStructV2Adapter item_list = 146;
+	int32 user_mode = 147
 	int32 user_period = 148;
 	bool is_effect_artist = 149;
 	EffectArtistDetail.ProtobufEffectArtistStructV2Adapter effect_detail = 150;
 	CommercePermissionStruct.ProtobufCommercePermissionStructV2Adapter commerce_permissions = 151;
-	//StoryBlockInfo.ADAPTER.encodeWithTag(protoWriter, 152, life_story_block(user));
+	StoryBlockInfo.ProtobufLifeStoryBlockStructV2Adapter  life_story_block = 152;
 	int32 hide_following_follower_list = 153;
 	bool has_unread_story = 154;
-	//UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, 155, new_story_cover(user));
+	repeated UrlModel.ProtobufUrlStructV2Adapter  new_story_cover = 155;
 	int32 user_story_count = 156;
 	bool has_story = 157;
 	bool is_star = 158;
@@ -179,26 +190,26 @@ message ProtobufUserStructV2Adapter {
 	repeated int64 type_label = 164;
 	int64 avatar_decoration_id = 165;
 	bool with_luban_entry = 166;
-	//UrlModel.ADAPTER.asRepeated().encodeWithTag(protoWriter, 167, ad_cover_url(user));
+	repeated UrlModel.ProtobufUrlStructV2Adapter ad_cover_url = 167;
 	AdCoverTitle.ProtobufAdCoverTitleV2Adapter ad_cover_title = 168;
 	string ad_order_id = 169;
 	RFansGroupInfo.ProtoAdapter_RFansGroupInfo  r_fans_group_info = 170;
 	bool with_commerce_enterprise_tab_entry = 171;
-	//HonorStruct.ADAPTER.encodeWithTag(protoWriter, 172, honor_info(user));
+	HonorStruct.ProtobufLiveHonorStructV2Adapter honor_info = 172;
 	int32 comment_filter_status = 173;
 	int32 notify_private_account = 174;
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 175, avatar_168x168(user));
-	//UrlModel.ADAPTER.encodeWithTag(protoWriter, 176, avatar_300x300(user));
+	UrlModel.ProtobufUrlStructV2Adapter avatar_168x168 = 175;
+	UrlModel.ProtobufUrlStructV2Adapter avatar_300x300 = 176;
 	bool is_blocked = 177;
 	bool force_private_account = 178;
 	bool with_star_atlas_entry = 179;
-	//HotSearchSprintStruct.ADAPTER.encodeWithTag(protoWriter, 180, sprint_support_user_info(user));
+	HotSearchSprintStruct.ProtobufHotsearchSprintStructV2Adapter sprint_support_user_info = 180;
 	string signature_language = 181;
 	BlueVBrandInfo.ProtobufBlueVBrandInfoStructV2Adapter brand_info = 182;
 	bool display_wvalantine_activity_entry = 183;
 	string shop_micro_app = 184;
 	CommerceUserInfo.ProtobufCommerceUserStructV2Adapter commerce_user_info = 185;
-	//RelationLabelUser.ADAPTER.asRepeated().encodeWithTag(protoWriter, 186, relative_users(user));
+	repeated RelationLabelUser.ProtobufRelativeUserStructV2Adapter   relative_users = 186;
 	//QuickShopInfo.ADAPTER.encodeWithTag(protoWriter, 187, quick_shop_info(user));
 	string relation_label = 188;
 	//Challenge.ADAPTER.asRepeated().encodeWithTag(protoWriter, 189, cha_list(user));

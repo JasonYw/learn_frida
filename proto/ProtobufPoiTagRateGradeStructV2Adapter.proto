@@ -1,4 +1,5 @@
 syntax = "proto3";
+package PoiTagRateGradeStruct;
 message ProtobufPoiTagRateGradeStructV2Adapter {
 	int32 type = 1;
 }

@@ -1,4 +1,5 @@
 syntax = "proto3";
+package TextExtraStruct;
 
 message ProtobufTextExtraStructV2Adapter{
     int32 start = 1;

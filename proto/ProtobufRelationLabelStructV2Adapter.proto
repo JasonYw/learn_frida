@@ -1,6 +1,9 @@
 syntax = "proto3";
+package relationLabelNew;
+
+import "ProtobufRelativeUserStructV2Adapter.proto";
 message ProtobufRelationLabelStructV2Adapter{
-    // RelationLabelUser.ADAPTER.asRepeated().encodeWithTag(protoWriter, 1, user_list(relationLabelNew));
+    repeated RelationLabelUser.ProtobufRelativeUserStructV2Adapter user_list = 1;
     int32 type = 2;
     string extra = 3;
 }

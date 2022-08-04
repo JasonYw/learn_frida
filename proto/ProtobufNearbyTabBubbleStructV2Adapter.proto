@@ -1,4 +1,6 @@
 syntax = "proto3";
+package NearbyBubbleStruct;
+
 message ProtobufNearbyTabBubbleStructV2Adapter {
 	string nearby_tab_bubble_text = 1;
 	string nearby_tab_bubble_message = 2;

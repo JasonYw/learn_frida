@@ -1,8 +1,11 @@
 syntax = "proto3";
+package PoiBizStruct;
+import "ProtobufPoiAwemeTagRateInfoStructV2Adapter.proto";
+import "ProtobufPoiDouDiscountStructV2Adapter.proto";
 message ProtobufPoiBizStructV2Adapter {
-	//PoiDouDiscountStruct.ADAPTER.encodeWithTag(protoWriter, 1, dou_discount_info(poiBizStruct));
+	PoiDouDiscountStruct.ProtobufPoiDouDiscountStructV2Adapter dou_discount_info = 1;
 	bool show_want_to_go_button = 2;
-	//PoiAwemeTagRateStruct.ADAPTER.encodeWithTag(protoWriter, 9, tag_rate_info(poiBizStruct));
+	PoiAwemeTagRateStruct.ProtobufPoiAwemeTagRateInfoStructV2Adapter  tag_rate_info = 9;
 	bool show_poi_collect_button = 10;
 	string show_poi_collect_button_rule_json = 11;
 }

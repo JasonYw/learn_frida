@@ -1,11 +1,12 @@
 syntax = "proto3";
 package FloatingCardInfo;
+import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufAwemeFloatingCardStructV2Adapter{
     string schema = 1;
     string schema_desc = 2;
-    // adapter.asrepeated() icons = 3; urlmodel
+    repeated UrlModel.ProtobufUrlStructV2Adapter icons = 3; 
     string title = 4;
     string description = 5;
     string button_desc = 6;
-    // adapter button_bg = 7; urlmodel
+    UrlModel.ProtobufUrlStructV2Adapter button_bg = 7; 
 }
