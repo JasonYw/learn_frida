@@ -1,5 +1,4 @@
 syntax = "proto3";
-// 无引用
 package CommerceStickerUnlockStruct;
 message ProtoAdapter_CommerceStickerUnlockStruct{
     string desc = 1;

@@ -1,5 +1,6 @@
 syntax = "proto3";
 package DislikeDynamicReasonList;
+import "ProtoAdapter_DislikeDynamicReasonInfo.proto"
 message ProtoAdapter_DislikeDynamicReasonList {
 	string extra = 3;
 	//repeated com.ss.ugc.aweme.DislikeDynamicReasonInfo#ADAPTER reason_list = 2;

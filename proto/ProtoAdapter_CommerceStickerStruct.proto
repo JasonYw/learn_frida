@@ -1,7 +1,7 @@
 syntax = "proto3";
 package CommerceStickerStruct;
 import "ProtobufUrlStructV2Adapter.proto";
-
+import "ProtoAdapter_CommerceStickerUnlockStruct.proto"
 
 message ProtoAdapter_CommerceStickerStruct{
     string id = 1;
@@ -23,6 +23,5 @@ message ProtoAdapter_CommerceStickerStruct{
     string challenge_id = 17;
     UrlModel.ProtobufUrlStructV2Adapter screen_icon = 18;
     int64 expire_time = 19;
-    // unlock_info
-    // ommerceStickerUnlockStruct.ADAPTER.encodeWithTag(protoWriter, 20, commerceStickerStruct.unlockInfo);
+    CommerceStickerUnlockStruct.ProtoAdapter_CommerceStickerUnlockStruct unlock_info = 20;
 }
