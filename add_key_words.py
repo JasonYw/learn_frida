@@ -8,11 +8,13 @@ douyin_video  = open('douyin_video.proto','w')
 for i in proto_file:
     if i.startswith('//') or i.startswith('message') or '}' in i or 'repeated' in i or 'syntax = "proto3";' in i or 'package' in i:
         douyin_video.write(i)
-    else:
+    elif 'string' in i or 'int' in i or 'bool' in i or 'double' in i:
         c = deepcopy(i)
         a = c.replace('\n','').lstrip(' ')
         a = f'  optional {a}\n'
         douyin_video.write(a)
+    else:
+        douyin_video.write(i)
 douyin_video.close()
 
 
