@@ -79,6 +79,19 @@ function hook_url(){
 }
 
 
+function hook_protodecode(){
+    var proto = Java.use("com.ss.android.ugc.aweme.feed.model.Protobufaweme_v2_feed_responseAdapter")
+    proto.decode.overload('com.squareup.wire.ProtoReader').implementation = function(param_){
+        var result = this.decode(param_)
+        console.log(result.toString(),Object.values(result))
+        // var new_result = Java.cast(result.items,Java.use('com.ss.android.ugc.aweme.feed.model.FeedItemList')).toString()
+        // console.log(new_result)
+        return result
+
+    }
+}
+
+
 
 function hook_ssresponse(){
     var req = Java.use("com.bytedance.retrofit2.SsResponse")
@@ -192,7 +205,8 @@ function main() {
         // hook_response();
         // hook_headers();
         // hook_url();
-        hook_ssresponse();
+        hook_protodecode();
+        // hook_ssresponse();
     })
 }
 setImmediate(main)
