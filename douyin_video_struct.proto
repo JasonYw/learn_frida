@@ -1,0 +1,3257 @@
+syntax = "proto3";
+package douyin;
+//package ActivityButtonStruct;
+message ProtoAdapter_ActivityButtonStruct {
+	string label = 1;
+	string color = 2;
+}
+//package ActivityStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtoAdapter_ActivityStruct {
+	int32 use_music_count = 1;
+	int32 digg_count = 2;
+	ProtobufUrlStructV2Adapter music_cover_url = 3;
+	ProtobufUrlStructV2Adapter music_qrcode_url = 4;
+}
+//package AddicStruct;
+message ProtoAdapter_AddicStruct {
+	string info = 1;
+}
+//package AdmireAuth;
+message ProtoAdapter_AdmireAuth {
+	int32 admire_button = 3;
+	int32 is_admire = 4;
+	int32 is_show_admire_button = 2;
+	int32 is_show_admire_tab = 1;
+}
+//package AncestorInfoStruct;
+message ProtoAdapter_AncestorInfoStruct {
+	int32 product_id = 1;
+	int64 gid = 2;
+	int64 uid = 3;
+}
+//package AnchorPanelActionStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+
+message ProtoAdapter_AnchorPanelActionStruct{
+    ProtobufUrlStructV2Adapter icon = 1;
+    string schema = 2;
+    int32 action_type = 3;
+}
+//package AwemeGDAdStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtoAdapter_AwemeGDAdStruct {
+	int64 ad_id = 1;
+	int32 ad_price = 5;
+	ProtobufUrlStructV2Adapter click_track_url_list = 13;
+	int64 cpt_seq = 2;
+	int64 creative_id = 6;
+	int32 effective_play_time = 17;
+	ProtobufUrlStructV2Adapter effective_play_track_url_list = 18;
+	int64 group_id = 19;
+	bool is_preview = 14;
+	string open_url = 9;
+	ProtobufUrlStructV2Adapter play_track_url_list = 15;
+	ProtobufUrlStructV2Adapter playover_track_url_list = 16;
+	string req_id = 3;
+	int64 rit = 4;
+	string source = 8;
+	string title = 7;
+	ProtobufUrlStructV2Adapter track_url_list = 12;
+	int32 video_transpose = 20;
+	string web_title = 11;
+	string web_url = 10;
+}
+//package BigThumb;
+message ProtoAdapter_BigThumb {
+    int64 img_num = 1;
+    string uri  = 2;
+    string img_url = 3;
+    int64 img_x_size = 4;
+    int64 img_y_size = 5;
+    int64 img_x_len = 6;
+    int64 img_y_len = 7;
+    double duration = 8;
+    double interval = 9;
+    string fext = 10;
+}
+//package BrandTagInteractionStickerStruct;
+message ProtoAdapter_BrandTagInteractionStickerStruct {
+	string brand_id = 1;
+	string schema = 2;
+}
+//package BtnPropertyStruc;
+message ProtoAdapter_BtnPropertyStruct {
+	string btn_icon = 4;
+	string btn_schema = 2;
+	string btn_text = 1;
+	int32 status = 3;
+}
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//package CFGroupStruct;
+message ProtoAdapter_CFGroupStruct {
+	repeated ProtoAdapter_CFIdStruct cf_id_list = 9;
+	repeated ProtoAdapter_CFStruct cf_list = 1;
+	string folder_id = 6;
+	int64 head_cursor = 7;
+	int64 max_cursor = 5;
+	int64 min_cursor = 4;
+	int32 offset = 2;
+	int64 tail_cursor = 8;
+	int32 total = 3;
+}
+//package CFIdStruct;
+message ProtoAdapter_CFIdStruct {
+	string id = 1;
+	int32 offset = 2;
+	int32 pic_count = 3;
+}
+//package CFStruct;
+//import "ProtobufAwemeStructV2Adapter.proto";
+message ProtoAdapter_CFStruct {
+	ProtobufAwemeStructV2Adapter cf = 1;
+}
+//package ChorusStruct;
+message ProtoAdapter_ChorusStruct {
+	int64 start_ms = 1;
+	int64 duration_ms = 2;
+}
+//package CircleTipStruct;
+message ProtoAdapter_CircleTipStruct {
+	string common_schema = 5;
+	int32 content_type = 4;
+	string id = 1;
+	string schema_type = 7;
+	string text = 6;
+	string title = 2;
+	int32 user_role = 3;
+}
+//package CoCreatorStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+
+
+message ProtoAdapter_CoCreatorStruct {
+	ProtobufUrlStructV2Adapter avatar_thumb = 4;
+	string extra = 11;
+	int32 follow_status = 9;
+	int32 follower_status = 10;
+	int32 index = 8;
+	int32 invite_status = 7;
+	string nickname = 3;
+	int32 role_id = 5;
+	string role_title = 6;
+	string sec_uid = 2;
+	string uid = 1;
+}
+//package CommentPermissionInfo;
+message ProtoAdapter_CommentPermissionInfo {
+	bool can_comment = 2;
+	int32 comment_permission_status = 1;
+	bool item_detail_entry = 3;
+	bool press_entry = 4;
+	bool toast_guide = 5;
+}
+//package CommentStruct;
+//import "ProtobufRelationDynamicLableStructV2Adapter.proto";
+//import "ProtobufTextExtraStructV2Adapter.proto";
+//import "ProtobufUserStructV2Adapter.proto";
+
+
+message ProtoAdapter_CommentStruct{
+    string cid = 1;
+    string text = 2;
+    string aweme_id = 3;
+    int64 create_time = 4;
+    int32 digg_count = 5;
+    int32 status = 6;
+    ProtobufUserStructV2Adapter user = 7;
+    string reply_id = 8;
+    int32 user_digged = 9;
+    repeated ProtoAdapter_CommentStruct reply_comment = 10;
+    repeated ProtobufTextExtraStructV2Adapter text_extra = 11;
+    string label_text = 12;
+    int32 label_type = 13;
+    ProtobufRelationDynamicLableStructV2Adapter relation_label = 14;
+    string forward_id = 15; 
+    int64 reply_comment_total = 16;
+    string reply_to_reply_id = 17;
+    string reply_to_username = 18;
+    string reply_to_userid = 19; 
+    bool is_author_digged = 20;
+}
+//package CommerceStickerStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+
+message ProtoAdapter_CommerceStickerStruct{
+    string id = 1;
+    string ad_owner_id = 2;
+    string ad_owner_name = 3;
+    string detail_desc = 4;
+    string detail_letters = 5;
+    string detail_open_url = 6;
+    string detail_web_url = 7;
+    string detail_web_url_title = 8;
+    string screen_desc = 9;
+    bool screen_switch = 10;
+    ProtobufUrlStructV2Adapter publish_icon_url = 11;
+    string publish_letters = 12;
+    string publish_open_url = 13;
+    string publish_web_url = 14;
+    string publish_web_url_title = 15;
+    string music_id = 16;
+    string challenge_id = 17;
+    ProtobufUrlStructV2Adapter screen_icon = 18;
+    int64 expire_time = 19;
+    ProtoAdapter_CommerceStickerUnlockStruct unlock_info = 20;
+}
+//package CommerceStickerUnlockStruct;
+message ProtoAdapter_CommerceStickerUnlockStruct{
+    string desc = 1;
+    string web_url = 2;
+    string open_url = 3;
+}
+//package CooperationInfoStruct;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_CooperationInfoStruct {
+	repeated ProtoAdapter_CoCreatorStruct co_creators = 3;
+	string extra = 2;
+	string tag = 1;
+}
+//package CustomTagInteractionStickerStruct;
+message ProtoAdapter_CustomTagInteractionStickerStruct {
+	string name = 1;
+}
+//package DiaryStruct;
+
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_DiaryStruct {
+	string desc = 3;
+	ProtobufUrlStructV2Adapter icon = 4;
+	int32 id = 1;
+	string name = 2;
+}
+//package DiggLottie;
+message ProtoAdapter_DiggLottie {
+	int32 can_bomb = 2;
+	string lottie_id = 1;
+}
+//package DislikeDynamicReasonInfo;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_DislikeDynamicReasonInfo {
+	string button_type = 1;
+	string client_anchor_extra = 4;
+	ProtobufUrlStructV2Adapter icon_url = 3;
+	string server_anchor_extra = 5;
+	string text = 2;
+}
+//package DislikeDynamicReasonList;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_DislikeDynamicReasonList {
+	string extra = 3;
+	repeated ProtoAdapter_DislikeDynamicReasonInfo reason_list = 2;
+	string title = 1;
+}
+//package DouplusToastStruct;
+message ProtoAdapter_DouplusToastStruct {
+	int32 id = 1;
+	string toast = 2;
+}
+//package EditAwemeBarInfo;
+message ProtoAdapter_EditAwemeBarInfo {
+	string bar_toast = 3;
+	int32 button_status = 1;
+	string button_toast = 2;
+}
+//package EffectGuideStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtoAdapter_EffectGuideStruct {
+	string effect_id = 3;
+	string effect_name = 4;
+	ProtobufUrlStructV2Adapter icon = 2;
+	bool show_guide = 1;
+}
+//package FakeHorizontalStruct;
+message ProtoAdapter_FakeHorizontalStruct {
+	double bottom = 2;
+	double left = 3;
+	bool need_default_scale = 5;
+	double right = 4;
+	double top = 1;
+}
+//package FamiliarActivityStruct;
+message ProtoAdapter_FamiliarActivityStruct {
+	string activity_id = 1;
+	bool show_activity_btn = 2;
+	string  schema_url = 3;
+	string follow_text = 4;
+	string  followed_text = 5;
+	int64 end_time = 6;
+	string followed_toast = 7;
+}
+//package FeedCommentConfigStruct;
+message ProtoAdapter_FeedCommentConfigStruct {
+	string input_config_text = 1;
+}
+//package FeedComponentCtrl;
+message ProtoAdapter_FeedComponentCtrl {
+	bool show_anchor = 1;
+	bool show_hotspot = 3;
+	bool show_mix = 2;
+	bool show_relate_rec = 8;
+	bool show_search = 7;
+	bool show_toutiao = 4;
+	bool show_vs = 6;
+	bool show_xigua = 5;
+}
+//package FeedComponentHideCtrl;
+message ProtoAdapter_FeedComponentHideCtrl {
+	bool hide_anchor = 1;
+	bool hide_hotspot = 3;
+	bool hide_mix = 2;
+	bool hide_relate_rec = 8;
+	bool hide_search = 7;
+	bool hide_toutiao = 4;
+	bool hide_vs = 6;
+	bool hide_xigua = 5;
+}
+//package FeedDiversitySurvey;
+message ProtoAdapter_FeedDiversitySurvey {
+	string lynx_schema = 1;
+	string raw_data = 2;
+	int32 style_type = 3;
+}
+//import "ProtoAdapter_proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+
+//package FromNearbyBarStruct;
+message ProtoAdapter_FromNearbyBarStruct {
+	string extra = 100;
+	int32 frequency_limit = 5;
+	ProtobufUrlStructV2Adapter icon = 3;
+	string id = 1;
+	ProtoAdapter_NameValuePair report_values = 6;
+	string schema = 4;
+	string text = 2;
+}
+//package GrootBottomBarInfo;
+message ProtoAdapter_GrootBottomBarInfo {
+	string description = 3;
+	string schema = 4;
+	int64 species_id = 1;
+	string species_name = 5;
+}
+//package GrootInfoStruct;
+message ProtoAdapter_GrootInfoStruct{
+    int64 baike_id = 1;
+    string species_name =2;
+    float prob = 3;
+}
+//package GrootInteractionStickerStruct;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_GrootInteractionStickerStruct{
+    int32 type =1;
+    int32 index =2;
+    ProtoAdapter_GrootInfoStruct userGrootInfo = 3;
+    string groot_h5 =4;
+}
+//package GuideBtnStruct;
+//import "ProtoAdapter_BtnPropertyStruct.proto";
+message ProtoAdapter_GuideBtnStruct {
+	ProtoAdapter_BtnPropertyStruct buttons = 2;
+	string config = 1;
+}
+//package HitTaskInfo;
+message ProtoAdapter_HitTaskInfo {
+	int32 compeleted_task_cnt = 1;
+	int32 total_task_cnt = 2;
+}
+//package HotCommentStruct;
+message ProtoAdapter_HotCommentStruct {
+	string cid = 1;
+	int32 digg_count = 3;
+	string text = 2;
+}
+//package ImageAlbumMusicInfo;
+message ProtoAdapter_ImageAlbumMusicInfo {
+	int32 begin_time = 1;
+	int32 end_time = 2;
+	int32 volume = 3;
+}
+//package ImageGearedStruct;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_ImageGearedStruct {
+	string name = 1;
+	repeated ProtoAdapter_ImageUrlStruct images =2;
+}
+//package ImageUrlStruct;
+message ProtoAdapter_ImageUrlStruct {
+	repeated string download_url_list = 3;
+	int32 C109391T5d_LJFF = 5;
+	string uri = 1;
+	repeated string url_list = 2;
+	int32 width = 6;
+}
+//package ImpressionStruct;
+message ProtoAdapter_ImpressionStruct {
+	repeated int64 group_id_list_a = 1;
+	repeated int64 group_id_list_b = 2;
+	repeated int64 similar_id_list_a = 3;
+	repeated int64 similar_id_list_b = 4;
+}
+//package ItemProductRelatedInfoStruct;
+message ProtoAdapter_ItemProductRelatedInfoStruct {
+	string raw_data = 2;
+	int32 type = 1;
+}
+//package KnowledgeBar;
+message ProtoAdapter_KnowledgeBar {
+	string content = 1;
+	string extra = 3;
+	string knowledge_schema = 2;
+}
+//import "ProtoAdapter_proto";
+//package LiveAppointmentStruct;
+message ProtoAdapter_LiveAppointmentStruct {
+	string web_url = 1;
+	string type = 2;
+	ProtoAdapter_LynxRawDataStruct lynx_raw_data = 3; 
+	string template_url = 4;
+	int32 show_button_seconds = 5;
+	int32 position = 6;
+	int64 button_style = 7;
+}
+//package LiveFeedbackCard;
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+message ProtoAdapter_LiveFeedbackCard {
+	ProtoAdapter_LiveFeedbackCondition condition = 5;
+	int64 feedback_id = 2;
+	int32 feedback_type = 3;
+	string negative_text = 6;
+	repeated ProtoAdapter_LiveFeedbackQuestion question = 4; 
+	string title = 1;
+}
+//package LiveFeedbackCondition;
+message ProtoAdapter_LiveFeedbackCondition {
+	int64 action_ids = 3;
+	int64 action_type = 4;
+	int64 from_time = 1;
+	int64 preview_time = 5;
+	int64 to_time = 2;
+}
+//package LiveFeedbackOption;
+message ProtoAdapter_LiveFeedbackOption {
+	string key = 1;
+	bool negative = 4;
+	int64 sub_question_id = 3;
+	string text = 2;
+	string toast_text = 5;
+}
+//package LiveFeedbackQuestion;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_LiveFeedbackQuestion {
+	repeated ProtoAdapter_LiveFeedbackOption options = 4; 
+	string question_key = 1;
+	string question_text = 2;
+	int64 type = 3;
+}
+//package LynxButtonStruct;
+message ProtoAdapter_LynxButtonStruct {
+	string button_background_color = 1;
+	string source = 2;
+	string title = 3;
+	string image_url = 4;
+	string live_group_id = 5;
+}
+//package LynxRawDataStruct;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_LynxRawDataStruct {
+	string refer = 1;
+	string web_title = 2;
+	int32 template_type = 3;
+	string open_url = 4;
+	string web_url = 6;
+	ProtoAdapter_LynxButtonStruct buttonInfo = 5;
+}
+//package MusicAnchorStruct;
+message ProtoAdapter_MusicAnchorStruct {
+	string  schema_url = 1;
+	string  title = 2;
+	string  id = 3;
+}
+//package MusicArtistStruct;
+message ProtoAdapter_MusicArtistStruct {
+	string uid = 1;
+	string artist_name = 2;
+}
+//package MusicImageBeatsStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtoAdapter_MusicImageBeatsStruct {
+	string  music_image_beats_raw = 2;
+	ProtobufUrlStructV2Adapter music_image_beats_url = 1;
+}
+//package MusicPromoteCommentAnchorStruct;
+//import "ProtoAdapter_proto";
+
+message ProtoAdapter_MusicPromoteCommentAnchorStruct {
+	string UGCMonitor_EVENT_COMMENT = 2;
+	int64 meta_song_id = 3;
+	ProtoAdapter_MusicPromoteLinkInfoStruct music_promote_link_info = 4;
+	string tag = 1;
+}
+//package MusicPromoteLinkInfoStruct;
+message ProtoAdapter_MusicPromoteLinkInfoStruct {
+	string open_url = 1;
+}
+//package NameValuePair;
+message ProtoAdapter_NameValuePair {
+	string name = 1;
+	string value = 2;
+}
+//package NewFaceStickerStruct;
+//import "ProtoAdapter_proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtoAdapter_NewFaceStickerStruct{
+    string id = 1;
+    string name = 2;
+    repeated string children = 3;
+    ProtobufUrlStructV2Adapter icon_url = 4;
+    string owner_id = 5;
+    string owner_nickname = 6;
+    int32 user_count = 7;
+    string desc = 8;
+    string effect_id = 9;
+    ProtobufShareStructV2Adapter share_info = 10;
+    bool is_favorite = 11;
+    ProtoAdapter_CommerceStickerStruct commerce_sticker = 12;
+    repeated string tags = 13;
+    ProtobufUrlStructV2Adapter avatar_thumb = 14;
+    ProtobufUrlStructV2Adapter avatar_medium = 15;
+    ProtobufUrlStructV2Adapter avatar_large = 16;
+    int64 vv_count = 17;
+    string extra = 18;
+    string sec_uid = 19;
+}
+//package OpenPlatformStruct;
+message ProtoAdapter_OpenPlatformStruct{
+    string name = 1;
+    string icon = 2;
+    string link = 3;
+    string raw_data = 4;
+}
+//package OriginalAudioStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_OriginalAudioStruct {
+	ProtobufUrlStructV2Adapter play_url = 1;
+	string vid = 2;
+	double volume = 3;
+}
+//package PoiDouDiscountRankInfoStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_PoiDouDiscountRankInfoStruct {
+	ProtobufUrlStructV2Adapter category_icon = 3;
+	string category_name = 4;
+	int32 item_count = 5;
+	string rank_code = 1;
+	string rank_name = 2;
+	int64 vv_total = 6;
+}
+//package PoiFootprintStruct;
+message ProtoAdapter_PoiFootprintStruct {
+	string schema = 2;
+	string title = 1;
+}
+//package PoiFrontendTypeStruct;
+message ProtoAdapter_PoiFrontendTypeStruct{
+    string code = 1;
+    string name = 2;
+    string desc = 3;
+}
+//package PoiTagInteractionStickerStruct;
+message ProtoAdapter_PoiTagInteractionStickerStruct {
+	string poi_id = 1;
+}
+//package ProductTagInteractionStickerStruct;
+message ProtoAdapter_ProductTagInteractionStickerStruct {
+	string product_id = 1;
+	string schema = 2;
+}
+//package PromotionStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+
+message ProtoAdapter_PromotionStruct{
+    string promotion_id = 1;
+    string gid = 2;
+    string title = 3;
+    ProtobufUrlStructV2Adapter image = 4;
+    int64 price = 5;
+    int64 market_price = 6;
+    int64 cos_fee = 7;
+    string url = 8;
+    int64 item_type = 9;
+    int64 sales= 10;
+    string extra = 11;
+    bool favorited = 12;
+    string last_aweme_id = 13;
+    string elastic_title = 14;
+    string elastic_introduction = 15;
+    ProtobufUrlStructV2Adapter elastic_img = 16;
+    repeated string label = 17;
+    ProtobufUrlStructV2Adapter visitor = 18;
+    string h5_url = 19;
+    double cos_radio = 20;
+    string logo = 21;
+    string source = 22;
+    ProtobufUrlStructV2Adapter imgs = 23;
+    int32 promotion_source = 24;
+    int32 elastic_type = 25;
+    string title_prefix = 26;
+    int32 views = 27;
+    int32 clicks = 28;
+    int32 rank = 29;
+    string rank_url = 30;
+    string trace_author_id = 31;
+    string trace_aweme_id = 32;
+    ProtobufUrlStructV2Adapter brand_icon = 33;
+    string small_app_url = 34;
+    repeated ProtoAdapter_UserShopCategory user_shop_categories = 35;
+}
+//package QuestionnaireStruct;
+message ProtoAdapter_QuestionnaireStruct {
+	string background_url = 10;
+	string extra = 9;
+	string fe_data = 6;
+	bool is_expired = 2;
+	bool is_popped = 4;
+	int32 pop_up_max_progress = 12;
+	int32 pop_up_min_progress = 11;
+	string schema = 5;
+	int32 style = 8;
+	string PushConstants_TASK_ID = 1;
+	string task_setting = 3;
+	string version = 7;
+}
+//package RapidPopWindowStruct;
+message ProtoAdapter_RapidPopWindowStruct {
+	string amount_type = 1;
+	int32 amount = 2;
+	string top_text =3;
+	string middle_text = 4;
+	string bottom_text = 5;
+	string button_text = 6;
+	string schema =7;
+}
+//package RapidRedPacketStruct;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_RapidRedPacketStruct {
+	bool top_red_packet = 1;
+	int32 alert_red_packet_second = 2;
+	bool red_packet_guide = 3;
+	bool welfare_guide = 4;
+	ProtoAdapter_RapidPopWindowStruct welfare_guide_info = 5;
+	int32 video_type = 6;
+	string pop_up_source = 7;
+}
+//package ReadingBarStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_ReadingBarStruct {
+	string ab_param = 8;
+	string background_color = 12;
+	string extra = 6;
+	string font_color = 11;
+	ProtobufUrlStructV2Adapter icon = 2;
+	string C33968a_f42937f = 1;
+	string open_app_schema = 7;
+	string open_url = 4;
+	string prefix = 10;
+	string tag = 9;
+	string title = 3;
+	string web_url = 5;
+}
+//package RecommendReasonData;
+message ProtoAdapter_RecommendReasonData {
+	bool address_book_permission = 1;
+	bool gps_permission = 2;
+}
+//package RecommendTemplateStruct;
+message ProtoAdapter_RecommendTemplateStruct {
+	string template = 2;
+	int32 template_id = 1;
+	repeated string value_list = 3;
+}
+//package RedPacketStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_RedPacketStruct{
+    int32 type = 1;
+    int64 till_seckill_time = 2;
+    int64 seckill_time = 3;
+    string star_name = 4;
+    string words = 5;
+    string timestamp_info = 6;
+    ProtobufUrlStructV2Adapter voice = 7;
+    ProtobufUrlStructV2Adapter default_voice = 8;
+    int32 voice_start = 9;
+    int32 voice_end = 10;
+    ProtobufUrlStructV2Adapter tag_icon = 11;
+}
+//package RelatedMusicAnchorStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_RelatedMusicAnchorStruct {
+	ProtobufUrlStructV2Adapter image_url = 3;
+	int64 priority = 4;
+	string schema_url = 2;
+	string type = 1;
+}
+//package RelatedRecom;
+message ProtoAdapter_RelatedRecom {
+	int32 bar_eject = 2;
+	bool related_bar = 1;
+	string related_info = 4;
+	string related_text = 3;
+}
+//package RelatedVideoStruct;
+message ProtoAdapter_RelatedVideoStruct {
+	string aweme_id = 4;
+	string bar_name = 2;
+	string item_id = 3;
+	int32 jump_style = 6;
+	bool show_bar = 1;
+	string source = 5;
+	int32 type = 7;
+}
+//package RelevantLive;
+message ProtoAdapter_RelevantLive {
+	string extra = 6;
+	int64 linkmic_ktv_song_author_id = 3;
+	int64 linkmic_ktv_song_id = 4;
+	string linkmic_ktv_song_name = 5;
+	string title = 2;
+	int64 video_relevant_category = 1;
+}
+//package ReplyToCommentStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_ReplyToCommentStruct{
+    int32 type = 1;
+    string comment_text = 2;
+    ProtobufUrlStructV2Adapter comment_sticker  = 3;
+    string comment_author_nickname = 4;
+    ProtobufUrlStructV2Adapter comment_author_avatar = 5;
+    ProtobufUrlStructV2Adapter aweme_cover = 6;
+    string aweme_desc = 7;
+    bool comment_deleted =8;
+    int32 native_type = 9;
+}
+//package RFansGroupInfo;
+message ProtoAdapter_RFansGroupInfo {
+	string schema = 1;
+	string token = 2;
+	string download_url =3;
+}
+//package SeriesStatusStruct;
+message ProtoAdapter_SeriesStatusStruct {
+	int32 is_collected = 3;
+	int32 status = 1;
+	string status_desc = 2;
+}
+//package ShareTask;
+message ProtoAdapter_ShareTask {
+	int32 show_timestamp = 1;
+	int32 coin_count = 2;
+}
+//package ShowFollowButton;
+message ProtoAdapter_ShowFollowButton {
+	bool show_button = 1;
+	int32 show_tag = 2;
+}
+//package SimpleUserStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_SimpleUserStruct {
+	string uid = 1;
+	string nickname = 2;
+	string signature =3;
+	ProtobufUrlStructV2Adapter avatarThumb = 4;
+	int32 follow_status = 5;
+	int32 status = 6;
+	int32 user_rate = 7;
+	ProtobufUrlStructV2Adapter avatarLarger = 8;
+	ProtoAdapter_HitTaskInfo hitTaskInfo = 9;
+	string unique_id = 10;
+	string sec_uid = 11;
+}
+//package SocialTagStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_SocialTagStruct {
+	ProtobufUrlStructV2Adapter  image = 2;
+	string mob_label = 4;
+	string schema = 3;
+	string title = 1;
+	int32 type = 5;
+}
+//package SongStruct;
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+message ProtoAdapter_SongStruct {
+	int64 id = 1;
+	string id_str =2;
+	string title =3;
+	repeated ProtoAdapter_MusicArtistStruct artists = 4;
+	ProtoAdapter_ChorusStruct chorus = 5;
+}
+//package StandardBarInfoStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_StandardBarInfoStruct {
+	int32 Constants_APP_ID = 5;
+	string app_schema = 12;
+	string applet_schema = 10;
+	int32 biz_scene = 4;
+	string extra = 13;
+	ProtobufUrlStructV2Adapter icon_url = 9;
+	string C33968a_f42937f = 1;
+	int64 item_id = 7;
+	string jump_confirm_title = 11;
+	int32 relation_type = 6;
+	int32 standard_bar_id = 8;
+	string text = 3;
+	string title = 2;
+}
+//package StarAtlasLiveInfoForBarStruct;
+message ProtoAdapter_StarAtlasLiveInfoForBarStruct{
+    string live_desc = 1;
+    string live_data = 2;
+    string user_id = 3;
+    string sec_id = 4;
+}
+//package StickerPendantStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_StickerPendantStruct{
+    int32 sticker_type = 1;
+    string link = 2;
+    string title = 3;
+    string sticker_id = 4;
+    ProtobufUrlStructV2Adapter icon_url = 5;
+    string open_url = 6;
+    string compliance_data =7;
+}
+//package SuggestOneWord;
+message ProtoAdapter_SuggestOneWord {
+	string info = 3;
+	string word = 1;
+	string word_id = 2;
+}
+//package SuggestWord;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_SuggestWord {
+	string extra_info = 5;
+	string hint_text = 4;
+	string icon_url = 3;
+	string scene = 2;
+	repeated ProtoAdapter_SuggestOneWord  words = 1;
+}
+//package SuggestWords;
+//import "ProtoAdapter_proto";
+message ProtoAdapter_SuggestWords {
+	repeated ProtoAdapter_SuggestWord suggest_words = 1;
+}
+//package TagInteractionStickerStruct;
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_Userproto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+message ProtoAdapter_TagInteractionStickerStruct {
+	ProtoAdapter_BrandTagInteractionStickerStruct brand_tag = 8;
+	ProtoAdapter_CustomTagInteractionStickerStruct custom_tag = 4;
+	int32 orientation = 2;
+	ProtoAdapter_PoiTagInteractionStickerStruct poi_tag = 6;
+	ProtoAdapter_ProductTagInteractionStickerStruct product_tag = 7;
+	string title = 3;
+	int32 type = 1;
+	ProtoAdapter_UserTagInteractionStickerStruct user_tag = 5;
+}
+//package TC21InteractiveVideoStruct;
+message ProtoAdapter_TC21InteractiveVideoStruct {
+	string activity_id = 1;
+	string schema_url = 2;
+	int64 show_delay_time = 3;
+	string tag_text = 4;
+	string extra = 5;
+}
+//package TCVideoRedPacketStruct;
+message ProtoAdapter_TCVideoRedPacketStruct {
+	string video_red_packet_uri = 1;
+	string video_red_packet_url = 2;
+	string video_red_packet_id = 3;
+	string  video_red_packet_order_id = 4;
+	string first_show_time = 5;
+	int32 video_red_packet_type = 6;
+	string coupon_id = 7;
+	int32 scope = 8;
+	bool is_visible = 9;
+}
+//package TextContentStruct;
+message ProtoAdapter_TextContentStruct {
+	string text = 1;
+	string color = 2;
+	string size = 3;
+	
+}
+//package TextInteractionStickerStruct;
+
+//import "ProtobufHashTagStickerStructV2Adapter.proto";
+//import "ProtobufMentionStickerStructV2Adapter.proto";
+
+
+message ProtoAdapter_TextInteractionStickerStruct{
+    int32 type = 1;
+    int32 index = 2;
+    ProtobufMentionStickerStructV2Adapter mentionInfo = 3;
+    ProtobufHashTagStickerStructV2Adapter hashtagInfo = 4;
+}
+//package UserShopCategory;
+message ProtoAdapter_UserShopCategory{
+    int64 id = 1;
+    string name = 2;
+    int64 count = 3;
+}
+//package UserTagInteractionStickerStruct;
+message ProtoAdapter_UserTagInteractionStickerStruct {
+	string user_id = 1;
+	string user_sec_id = 2;
+}
+//package UserVirtualAnimAvatarStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtoAdapter_UserVirtualAnimAvatarStruct {
+	ProtobufUrlStructV2Adapter large_virtual_avatar = 1;
+	ProtobufUrlStructV2Adapter small_virtual_avatar = 2;
+}
+//package UserVirtualCharacterStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtoAdapter_UserVirtualAnimAvatarStruct";
+message ProtoAdapter_UserVirtualCharacterStruct {
+	bool use_virtual_avatar = 4;
+	int64 version = 3;
+	ProtoAdapter_UserVirtualAnimAvatarStruct virtual_anim_avatar = 1;
+	ProtobufUrlStructV2Adapter virtual_avatar = 2;
+}
+//package UserVirtualEmotionStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_UserVirtualEmotionStruct {
+	ProtobufUrlStructV2Adapter icon = 2;
+	string text = 1;
+}
+//package VideoNodeInfoStruct;
+message ProtoAdapter_VideoNodeInfoStruct {
+	int64 high_light = 2;
+	int32 play_type = 1;
+}
+//package VideoSafetyControl;
+message ProtoAdapter_VideoSafetyControl {
+	bool need_play_check = 1;
+	int32 potential_risk_level = 2;
+}
+//package VideoShareInfoStruct;
+message ProtoAdapter_VideoShareInfoStruct{
+    string aweme_id = 1;
+    string author_id = 2;
+    string sec_author_id = 3;
+    string author_name = 4;
+    string comment_user_id = 5;
+    string comment_user_sec_id =6;
+    string comment_content =7;
+    string comment_user_nickname =8;
+    string comment_id =9;
+    string image_index =10;
+}
+//package VideoTagStruct;
+message ProtoAdapter_VideoTagStruct {
+	int32 level = 3;
+	int64 tag_id = 1;
+	string tag_name = 2;
+}
+//package VPAInfoStruct;
+message ProtoAdapter_VPAInfoStruct {
+	int32 show_info_bar_type = 2;
+	bool show_opt_out_button = 1;
+}
+//package VSBarStruct;
+message ProtoAdapter_VSBarStruct {
+	string content = 1;
+}
+//package XiguaRelatedBarStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtoAdapter_XiguaRelatedBarStruct {
+	ProtobufUrlStructV2Adapter icon = 2;
+	string C33968a_f42937f = 1;
+	string jump_confirm_title = 8;
+	string open_app_schema = 6;
+	string open_url = 4;
+	string right_desc = 7;
+	string title = 3;
+	int32 type = 5;
+}
+//package ACLCommonShare;
+message ProtobufACLCommonStructV2Adapter {
+	int32 code = 1;
+	int32 show_type = 2;
+	string toast_msg = 3;
+	string extra = 4;
+}
+//package ActivityTimeRange;
+message ProtobufActivityTimeRangeV2Adapter{
+    double start = 1;
+    double end = 2;
+    double duration = 3;
+}
+
+//package AdCoverTitle;
+message ProtobufAdCoverTitleV2Adapter {
+	string title = 1;
+	string web_url = 2;
+}
+//package Address;
+message ProtobufAddressStructV2Adapter{
+    string province = 1;
+    string city = 2;
+    string district = 3;
+    string address = 4;
+    string simple_addr = 5;
+    string city_code = 6;
+    string country = 7;
+    string country_code = 8;
+    string ad_code_v2 = 9;
+    string city_code_v2 = 10;
+}
+//package AnchorCommonStruct;
+//import "ProtoAdapter_proto";
+
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtobufAnchorCommonStructV2Adapter{
+    string keyword = 1;
+    string url = 2;
+    string language = 3;
+    string schema = 4;
+    string m8209id = 5;
+    int32 type = 6;
+    ProtobufUrlStructV2Adapter icon = 7; 
+    string extra = 8;
+    string deep_link = 9;
+    string universal_link = 10;
+    int32 general_type = 11;
+    string log_extra = 12;
+    string description = 13;
+    ProtobufUrlStructV2Adapter thumbnail = 14; 
+    ProtoAdapter_AnchorPanelActionStruct actions = 15;
+
+}
+//package AnchorShopLinkStruct;
+message ProtobufAnchorShopLinkStructV2Adapter{
+    string keyword = 1;
+    string url = 2;
+}
+//package Anchor;
+//import "ProtobufAnchorCommonStructV2Adapter.proto";
+//import "ProtobufAnchorShopLinkStructV2Adapter.proto";
+//import "ProtobufAnchorWikipediaStructV2Adapter.proto";
+message ProtobufAnchorStructV2Adapter{
+    int32 show_type = 1;
+    int32 business_type = 2;
+    ProtobufAnchorWikipediaStructV2Adapter wikipedia_info = 3;
+    ProtobufAnchorShopLinkStructV2Adapter  shop_link = 4;
+    ProtobufAnchorCommonStructV2Adapter anchor_info = 5;
+    string anchor_id = 6;
+}
+//package WikipediaInfo;
+message ProtobufAnchorWikipediaStructV2Adapter{
+    string keyword = 1;
+    string lang = 2;
+    string url = 3;
+}
+//package AvatarDecoration;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufAvatarDecorationStructV2Adapter {
+	int64 m7511id = 1;
+	string name = 2;
+	ProtobufUrlStructV2Adapter source_url = 3;
+	int32 position_type = 4;
+	string dynamic_source_url = 5;
+	string dynamic_source_url_profile = 6;
+	string web_url = 7;
+	bool is_first_post = 8;
+	string config_id = 9;
+	string dynamic_source_url_feed = 10;
+	int32 btn_type = 11;
+	string btn_text = 12;
+	string atmosphere = 13;
+	string open_url = 14;
+	string prepage_url = 15;
+}
+//package AwemeACLShare;
+//import "ProtobufACLCommonStructV2Adapter.proto";
+message ProtobufAwemeACLStructV2Adapter {
+	ProtobufACLCommonStructV2Adapter download_general = 1;
+	ProtobufACLCommonStructV2Adapter download_mask_panel = 2;
+	ProtobufACLCommonStructV2Adapter download_share_panel = 3;
+}
+//package AwemeActivity;
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+message ProtobufAwemeActivityStructV2Adapter {
+	string activity_id = 1;
+	int64 show_delay_time = 2;
+	string schema_url = 3;
+	ProtoAdapter_ActivityButtonStruct primary_btn = 5;
+	ProtoAdapter_TextContentStruct content = 4;
+}
+//package commerceStickerInfo;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufAwemeCommerceStickerStructV2Adapter{
+    int64 commerce_sticker_id = 1;
+    ProtobufUrlStructV2Adapter icon_url = 2; 
+    string letters = 3;
+    string open_url = 4;
+    string web_url = 5;
+    string web_url_title = 6;
+}
+//package AwemeCommerceStruct;
+message ProtobufAwemeCommerceStructV2Adapter {
+	int32 ad_auth_status = 1;
+	int32 ad_source = 2;
+	bool avoid_global_pendant = 3;
+	bool with_comment_filter_words = 4;
+	int32 ad_style = 5;
+	bool prevent_share = 6;
+	int32 ad_auth_target_type = 7;
+}
+//package AwemeControl;
+message ProtobufAwemeControlStructV2Adapter{
+    bool can_forward = 1;
+    bool can_share = 2;
+    bool can_comment = 3;
+    bool can_show_comment = 4;
+}
+//package FloatingCardInfo;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufAwemeFloatingCardStructV2Adapter{
+    string schema = 1;
+    string schema_desc = 2;
+    repeated ProtobufUrlStructV2Adapter icons = 3; 
+    string title = 4;
+    string description = 5;
+    string button_desc = 6;
+    ProtobufUrlStructV2Adapter button_bg = 7; 
+}
+//package AwemeLabelModel;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtobufAwemeLabelStructV2Adapter{
+    ProtobufUrlStructV2Adapter label_url = 1;
+    int32 label_type = 2;
+}
+//package AwemeLiteStruct;
+message ProtobufAwemeLiteStructV2Adapter {
+	int32 is_lite_red_pack_item = 1;
+	bool can_done_share_private_chat_task = 2;
+	bool can_done_lite_video_interaction = 3;
+	bool is_lite_video_interaction_item = 4;
+	string task_token = 5;
+	int32 red_pack_user_status = 6;
+}
+//package AwemeNationalTask;
+
+//import "ProtoAdapter_proto";
+message ProtobufAwemeNationalTaskStructV2Adapter {
+	ProtoAdapter_LiveAppointmentStruct live_appointment =  2;
+}
+//package PromotionOtherInfo;
+message ProtobufAwemePromotionOtherStructV2Adapter{
+    string recall_reason = 1;
+    int32 card_predict_duration = 2;
+    bool order_share_recommend = 3;
+}
+//package AwemeRiskModel;
+
+message ProtobufAwemeRiskStructV2Adapter{
+
+    bool vote = 1;
+    bool warn = 2;
+    bool risk_sink = 3;
+    int32 type = 4;
+    string content = 5;
+    bool notice = 6;
+    string url = 7;
+
+}
+//package HotSearchInfo;
+
+message ProtobufAwemeSearchStructV2Adapter{
+    string sentence = 1;
+    string challenge_id = 2;
+    string search_word = 3;
+    int64 value = 4;
+    int32 vb_rank = 5;
+    int64 vb_rank_value = 6;
+    int32 rank = 7;
+    string group_id = 8;
+    int32 label = 9;
+    int32 pattern_type = 10;
+}
+//package AwemeStarAtlas;
+//import "ProtoAdapter_proto";
+//import "ProtobufStarAtlasLinkStructV2Adapter.proto";
+
+
+
+message ProtobufAwemeStarAtlasStructV2Adapter{
+    int32 review_status = 1;
+    ProtobufStarAtlasLinkStructV2Adapter link_info = 2;
+    string log_extra =3;
+    ProtoAdapter_StarAtlasLiveInfoForBarStruct live_attract_info = 4;
+
+}
+//package AwemeStatistics;
+message ProtobufAwemeStatisticsStructV2Adapter{
+    string aweme_id = 1;
+    int64 comment_count = 2;
+    int64 digg_count = 3;
+    int64 download_count = 4;
+    int64 play_count = 5;
+    int64 share_count = 6;
+    int64 forward_count = 7;
+    int32 lose_count = 8;
+    int32 lose_comment_count = 9;
+    int64 whatsapp_share_count = 10;
+    int64 collect_count = 11;
+    int64 admire_count = 12;
+}
+
+//package AwemeStatus;
+//import "ProtoAdapter_proto";
+message ProtobufAwemeStatusStructV2Adapter {
+    string aweme_id = 1;
+    bool is_delete = 2;
+    bool allow_share = 3;
+    bool allow_comment = 4;
+    bool is_private = 5;
+    bool with_goods = 6;
+    int32 private_status = 7;
+    bool with_fusion_goods = 8;
+    bool in_reviewing = 9;
+    int32 reviewed = 10;
+    bool self_see = 11;
+    bool is_prohibited = 12;
+    int32 download_status = 13;
+    int32 dont_share_status = 14;
+    int32 video_hide_search = 15;
+    ProtoAdapter_EditAwemeBarInfo aweme_edit_info = 16;
+    bool reviewed_friend_see = 17;
+    int32 part_see = 18;
+    int64 item_version = 19;
+}
+//package Aweme;
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_Familiarproto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_Hotproto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_Relatedproto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_TCVideoproto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtobufAnchorCommonStructV2Adapter.proto";
+//import "ProtobufAwemeACLStructV2Adapter.proto";
+//import "ProtobufAwemeActivityStructV2Adapter.proto";
+//import "ProtobufAwemeCommerceStickerStructV2Adapter.proto";
+//import "ProtobufAwemeFloatingCardStructV2Adapter.proto";
+//import "ProtobufAwemeControlStructV2Adapter.proto";
+//import "ProtobufAwemeLabelStructV2Adapter.proto";
+//import "ProtobufAwemeLiteStructV2Adapter.proto";
+//import "ProtobufAwemeNationalTaskStructV2Adapter.proto";
+//import "ProtobufAwemePromotionOtherStructV2Adapter.proto";
+//import "ProtobufAwemeRiskStructV2Adapter.proto";
+//import "ProtobufAwemeSearchStructV2Adapter.proto";
+//import "ProtobufAnchorStructV2Adapter.proto";
+//import "ProtobufAwemeStatisticsStructV2Adapter.proto";
+//import "ProtobufAwemeStarAtlasStructV2Adapter.proto";
+//import "ProtobufAwemeStatusStructV2Adapter.proto";
+//import "ProtobufBannerTipV2Adapter.proto";
+//import "ProtobufChallengeStructV2Adapter.proto";
+//import "ProtobufChapterInfoV2Adapter.proto";
+//import "ProtobufCloudGameStructV2Adapter.proto";
+//import "ProtobufCommerceActivityStructV2Adapter.proto";
+//import "ProtobufCommerceConfigDataV2Adapter.proto";
+//import "ProtobufDescendantStructV2Adapter.proto";
+//import "ProtobufFeedEventCardInfoV2Adapter.proto";
+//import "ProtobufGameStructV2Adapter.proto";
+//import "ProtobufBonusV2Adapter.proto";
+//import "ProtobufHotListStructV2Adapter.proto";
+//import "ProtobufHotSearchDataFeedCellStructV2Adapter.proto";
+//import "ProtobufImageInfoStructV2Adapter.proto";
+//import "ProtobufInteractionStickerStructV2Adapter.proto";
+//import "ProtobufLongVideoStructV2Adapter.proto";
+//import "ProtobufMixStructV2Adapter.proto";
+//import "ProtobufMusicStructV2Adapter.proto";
+//import "ProtobufNearbyCircleTipStructV2Adapter.proto";
+//import "ProtobufNearbyTabBubbleStructV2Adapter.proto";
+//import "ProtobufPoiStructV2Adapter.proto";
+//import "ProtobufPoiBizStructV2Adapter.proto";
+//import "ProtobufPositionStructV2Adapter.proto";
+//import "ProtobufPreloadStructV2Adapter.proto";
+//import "ProtobufRelationDynamicLableStructV2Adapter.proto";
+//import "ProtobufRelationLabelStructV2Adapter.proto";
+//import "ProtobufSeriesStructV2Adapter.proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufStoryGroupStructV2Adapter.proto";
+//import "ProtobufTextExtraStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtobufUserStructV2Adapter.proto";
+//import "ProtobufVarietyStructAdapter.proto";
+//import "ProtobufVideoControlV2Adapter.proto";
+//import "ProtobufVideoStructV2Adapter.proto";
+//import "ProtobufVideoTextStructV2Adapter.proto";
+//import "ProtobufVisualSearchEntryStructV2Adapter.proto";
+//import "ProtobufVisualSearchStructV2Adapter.proto";
+//import "proto";
+//import "ProtobufXiguaTaskStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtobufMicroAppStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+//import "ProtobufCNYStructV2Adapter.proto";
+//import "ProtobufWebcastRoomFeedCellStructV2Adapter.proto";
+//import "ProtobufMaskStructV2Adapter.proto";
+//import "ProtobufLinkMatchStructV2Adapter.proto";
+//import "ProtobufVideoReplyStructV2Adapter.proto";
+//import "ProtobufHybridLabelStructV2Adapter.proto";
+//import "ProtobufRelationRecommendStructV2Adapter.proto";
+//import "ProtobufUserProfileStructV2Adapter.proto";
+
+message ProtobufAwemeStructV2Adapter {
+	string aweme_id = 1;
+	string desc = 2;
+	int64 create_time = 3;
+	ProtobufUserStructV2Adapter author = 4;
+	ProtobufMusicStructV2Adapter  music = 5;
+	repeated ProtobufChallengeStructV2Adapter cha_list = 6;
+	ProtobufVideoStructV2Adapter video = 7;
+	string share_url = 8;
+	int32 user_digged = 9;
+	ProtobufAwemeStatisticsStructV2Adapter statistics = 10;
+	ProtobufAwemeStatusStructV2Adapter status = 11;
+	string extra = 12;
+	int32 rate = 13;
+	repeated ProtobufTextExtraStructV2Adapter text_extra = 14;
+	ProtobufUrlStructV2Adapter label_large = 15;
+	ProtobufUrlStructV2Adapter label_thumb = 16;
+	int32 is_top = 17;
+	ProtobufUrlStructV2Adapter label_top = 18;
+	ProtobufShareStructV2Adapter share_info = 19;
+	ProtobufUrlStructV2Adapter label_origin_author = 20;
+	string distance = 21;
+	ProtobufUrlStructV2Adapter label_music_starter = 22;
+	ProtobufUrlStructV2Adapter label_private = 23;
+	repeated ProtobufAwemeLabelStructV2Adapter  video_labels = 24;
+	bool is_vr = 25;
+	string landing_page = 26;
+	bool is_ads = 27;
+	ProtobufPoiStructV2Adapter poi_info = 28;
+	int32 duration = 29;
+	int32 aweme_type = 30;
+	ProtoAdapter_AwemeGDAdStruct gd_ad = 31;
+	ProtobufRelationDynamicLableStructV2Adapter  relation_label = 32;
+	ProtoAdapter_RedPacketStruct red_packet = 33;
+	bool is_fantasy = 34;
+	bool cmt_swt = 35;
+	repeated ProtobufImageInfoStructV2Adapter  image_infos = 36;
+	ProtobufAwemeRiskStructV2Adapter risk_infos = 37;
+	bool is_relieve = 38;
+	ProtobufUrlStructV2Adapter label_friend = 39;
+	string sort_label = 40;
+	repeated ProtobufPositionStructV2Adapter  position = 41;
+	repeated ProtobufPositionStructV2Adapter uniqid_position = 42;
+	int64 author_user_id = 44;
+	int32 bodydance_score = 45;
+	repeated string geofencing = 46;
+	int32 is_hash_tag = 47;
+	bool is_pgcshow = 48;
+	string region = 49;
+	repeated ProtobufVideoTextStructV2Adapter  video_text = 50;
+	int32 vr_type = 51;
+	ProtobufSpecialStickerStructV2Adapter  sp_sticker = 52;
+	string ad_schedule = 53;
+	int32 collect_stat = 54;
+	repeated ProtobufVideoTextStructV2Adapter  label_top_text = 55;
+	repeated ProtoAdapter_PromotionStruct promotions = 56;
+	string stickers = 57;
+	ProtobufAwemeStructV2Adapter forward_item = 58;
+	string forward_comment_id = 59;
+	string segment_longitudes = 60;
+	string segment_latitudes = 61;
+	string forward_item_id = 62;
+	string group_id = 63;
+	string pre_forward_id = 64;
+	bool prevent_download = 65;
+	repeated ProtobufPositionStructV2Adapter nickname_position = 66;
+	repeated ProtobufPositionStructV2Adapter challenge_position = 67;
+	int32 item_comment_settings = 68;
+	ProtobufDescendantStructV2Adapter descendants = 69;
+	string raw_ad_data = 70;
+	ProtobufGameStructV2Adapter game_info = 71;
+	ProtobufMicroAppStructV2Adapter micro_app_info = 72;
+	bool with_promotional_music = 73;
+	string link_ad_data = 74;
+	ProtobufXiguaTaskStructV2Adapter xigua_task = 75;
+	ProtobufCommerceActivityStructV2Adapter gesture_red_packet = 76;
+	ProtobufCommerceActivityStructV2Adapter activity_pendant = 77;
+	ProtoAdapter_NewFaceStickerStruct  sticker_detail = 78;
+	repeated ProtobufLongVideoStructV2Adapter long_video = 79;
+	int32 item_duet = 80;
+	int32 item_react = 81;
+	ProtobufAwemeSearchStructV2Adapter hot_info = 82;
+	int64 star_atlas_order_id = 83;
+	string label_music_starter_text = 84;
+	bool without_watermark = 85;
+	ProtobufPreloadStructV2Adapter preload = 86;
+	string star_recommend_tag = 87;
+	string ad_order_id = 88;
+	string open_platform_name = 89;
+	ProtobufAwemeStarAtlasStructV2Adapter star_atlas_info = 90;
+	string desc_language = 91;
+	ProtobufAwemeFloatingCardStructV2Adapter floating_card_content = 92;
+	repeated ProtobufInteractionStickerStructV2Adapter  interaction_stickers = 93;
+	int32 ad_link_type = 95;
+	int32 take_down_reason = 96;
+	string take_down_desc = 97;
+	string simple_promotions = 98;
+	string misc_info = 99;
+	ProtobufAwemePromotionOtherStructV2Adapter promotion_other_info = 100;
+	repeated string origin_comment_ids = 101;
+	repeated ProtobufCommerceConfigDataV2Adapter commerce_config_data = 102;
+	ProtobufAwemeCommerceStickerStructV2Adapter commerce_sticker_info = 103;
+	bool enable_top_view = 104;
+	int32 distribute_type = 105;
+	ProtobufVideoControlV2Adapter  video_control = 106;
+	int32 is_effect_designer = 107;
+	int32 ad_aweme_source = 108;
+	ProtobufAwemeControlStructV2Adapter aweme_control = 109;
+	bool has_vs_entry = 110;
+	ProtobufAnchorStructV2Adapter  anchor = 111;
+	ProtobufRelationLabelStructV2Adapter feed_relation_label = 112;
+	ProtobufMixStructV2Adapter mix_info = 113;
+	string simple_shop_seeding = 114;
+	ProtobufHotListStructV2Adapter  hot_list = 115;
+	ProtobufAwemeCommerceStructV2Adapter commerce_info = 116;
+	ProtobufAwemeNationalTaskStructV2Adapter  national_task_info =117;
+	ProtobufBannerTipV2Adapter banner_tip = 118;
+	ProtobufAwemeACLStructV2Adapter acl_info = 119;
+	ProtobufAnchorStructV2Adapter anchor_info = 121;
+	ProtoAdapter_VPAInfoStruct vpa_info = 122;
+	ProtobufCNYStructV2Adapter cny_info = 123;
+	bool is_familiar = 124;
+	bool need_vs_entry = 125;
+	ProtobufWebcastRoomFeedCellStructV2Adapter cell_room =126;
+	string live_reason = 127;
+	string video_feed_tag = 128;
+	ProtobufMaskStructV2Adapter mask_info = 129;
+	ProtobufLinkMatchStructV2Adapter link_match = 130;
+	ProtobufVideoReplyStructV2Adapter video_reply_info =131;
+	repeated ProtobufAnchorCommonStructV2Adapter anchors = 132;
+	repeated ProtobufHybridLabelStructV2Adapter hybrid_label = 133;
+	ProtobufRelationRecommendStructV2Adapter relation_recommend_info = 134;
+	ProtobufUserProfileStructV2Adapter  user_profile_init_info = 135;
+	bool with_survey = 136;
+	ProtobufAwemeSearchStructV2Adapter dou_discount_mix_info = 137;
+	ProtobufAwemeACLStructV2Adapter aweme_acl = 138;
+	ProtobufAwemeActivityStructV2Adapter  activity = 139;
+	ProtobufStoryGroupStructV2Adapter story_group = 140;
+	int32 is_story = 141;
+	ProtobufVisualSearchEntryStructV2Adapter vs_entry = 142;
+	int32 item_stitch = 143;
+	ProtobufCloudGameStructV2Adapter cloud_game = 144;
+	ProtoAdapter_ShareTask share_task = 145;
+	ProtoAdapter_RapidRedPacketStruct  rapid_red_packet = 146;
+	bool show_sticker_guide = 147;
+	int32 story_ttl = 148;
+	bool is_horizontal = 149;
+	repeated string geofencing_regions = 150;
+	string city = 151;
+	int32 follow_up_type = 152;
+	string live_type = 153;
+	bool hide_mix_entry = 154;
+	int32 media_simid = 155;
+	int64 media_similar_id = 156;
+	int32 is_text_mode = 157;
+	string story_ttl_label = 158;
+	bool is_first_video = 159;
+	ProtobufHotSearchDataFeedCellStructV2Adapter  cell_hotsearch_data = 160;
+	ProtobufNearbyCircleTipStructV2Adapter nearby_circle_tip_info = 161;
+	int32 nearby_level = 162;
+	ProtobufBonusV2Adapter bonus = 163;
+	ProtobufVisualSearchStructV2Adapter visual_search = 164;
+	ProtoAdapter_TCVideoRedPacketStruct  video_red_packet_info = 165;
+	int32 guide_btn_type = 166;
+	bool is_in_scope = 167;
+	ProtoAdapter_TC21InteractiveVideoStruct  tc21_light_up = 168;
+	ProtoAdapter_ReadingBarStruct toutiao_reading_bar = 169;
+	ProtoAdapter_VideoSafetyControl video_safety_check_control = 170;
+	ProtobufVarietyStructAdapter variety_video = 171;
+	ProtoAdapter_VSBarStruct vs_bar = 172;
+	bool is_creator = 173;
+	ProtoAdapter_XiguaRelatedBarStruct xigua_related_bar = 174;
+	ProtoAdapter_AncestorInfoStruct ancestor_info = 175; 
+	ProtoAdapter_FamiliarActivityStruct familiar_activity = 176;
+	ProtoAdapter_EffectGuideStruct effect_guide = 179;
+	repeated ProtoAdapter_ImageUrlStruct images = 180;
+	ProtobufPoiBizStructV2Adapter  poi_biz = 181;
+	bool need_mark_friend = 182;
+	ProtoAdapter_QuestionnaireStruct questionnaire = 183;
+	int32 horizontal_type = 184;
+	ProtoAdapter_FakeHorizontalStruct fake_horizontal_info = 185;
+	string duet_origin_item_id = 186;
+	string guide_btn_text = 187;
+	bool is_karaoke = 188;
+	RelatedSearchBarStruct related_search_bar  = 189;
+	ProtobufAwemeLiteStructV2Adapter  lite_info = 190;
+	ProtoAdapter_ImpressionStruct impression_data = 191;
+	string guide_btn_schema = 193;
+	string guide_btn_config = 194;
+	bool is_force_placed = 195;
+	ProtobufSeriesStructV2Adapter  series_info = 196;
+	int32 story_source_type = 197;
+	string share_from = 198;
+	int32 item_share = 199;
+	ProtoAdapter_CircleTipStruct circle_info = 200;
+	int32 is_meteor = 201;
+	int32 has_viewed = 202;
+	ProtoAdapter_GrootBottomBarInfo  groot_bottom_bar_info = 203;
+	ProtoAdapter_RecommendTemplateStruct recommend_template = 204;
+	ProtoAdapter_ShowFollowButton show_follow_button = 205;
+	string geohash = 206;
+	string digg_btn_type = 207;
+	string quick_comment_type = 208;
+	string libfinsert_task_id = 209;
+	ProtoAdapter_PoiFootprintStruct  poi_footprint_info = 210;
+	int32 vs_distribute_type = 211;
+	string story_section_id = 212;
+	ProtoAdapter_FeedDiversitySurvey feed_diversity_survey = 213;
+	bool show_social_tag_arraw = 215;
+	ProtoAdapter_RelatedRecom related_recom = 216;
+	ProtoAdapter_GuideBtnStruct  guide_btn = 217;
+	ProtoAdapter_SuggestWords suggest_words = 218;
+	repeated ProtoAdapter_SocialTagStruct social_tag_list = 219;
+	string item_pitaya_param = 220;
+	ProtobufAwemeStructV2Adapter shared_item = 221;
+	string boost_history_id = 222;
+	ProtobufAwemeStructV2Adapter duet_origin_item = 223;
+	bool duet_aggregate_in_music_tab = 224;
+	bool is_duet_sing = 225;
+	string fullscreen_strategy = 226;
+	ProtoAdapter_CommentPermissionInfo  comment_permission_info = 227;
+	string web_raw_data = 228;
+	int32 no_selected_music = 229;
+	string addic_info = 230;
+	repeated ProtoAdapter_ImageUrlStruct original_images = 231;
+	ProtoAdapter_LiveFeedbackCard live_feedback_card = 232;
+	repeated ProtoAdapter_StandardBarInfoStruct standard_bar_info_list = 233;
+	int32 is_multi_content = 234;
+	int32 category_da = 235;
+	ProtobufNearbyTabBubbleStructV2Adapter nearby_tab_bubble = 236;
+	bool show_music_collect_button = 237;
+	ProtobufFeedEventCardInfoV2Adapter  feed_event_card_info = 238;
+	string extra_info = 239;
+	ProtoAdapter_ImageGearedStruct img_bitrate = 240;
+	string music_display_mapping_title = 241;
+	ProtoAdapter_AdmireAuth admire_auth = 242; 
+	string press_panel_info = 243;
+	ProtoAdapter_RelevantLive relevant_live = 244;
+	int32 external_video_type = 245;
+	ProtoAdapter_DiggLottie digg_lottie = 246;
+	ProtoAdapter_RelatedMusicAnchorStruct related_music_anchor = 247;
+	ProtoAdapter_ImageAlbumMusicInfo  image_album_music_info = 248;
+	repeated ProtoAdapter_VideoTagStruct video_tag = 249;
+	int32 recall_type = 250;
+	ProtoAdapter_KnowledgeBar  knowledge_bar = 251;
+	ProtoAdapter_ReadingBarStruct comment_toutiao_reading_bar = 252;
+	ProtoAdapter_ItemProductRelatedInfoStruct item_product_related_info = 253;
+	ProtoAdapter_HotCommentStruct  hot_comment = 254;
+	repeated int32 music_guidance_tag_list = 255;
+	ProtoAdapter_XiguaRelatedBarStruct  comment_xigua_related_bar = 256;
+	int32 story_ttl_minute = 257;
+	repeated ProtobufChapterInfoV2Adapter chapter_list = 258;
+	bool is_study_content = 259;
+	ProtoAdapter_FromNearbyBarStruct from_nearby_bar = 260;
+	ProtoAdapter_OriginalAudioStruct original_audio = 261;
+	int64 user_digged_emoji = 262;
+	ProtoAdapter_FeedComponentCtrl feed_component_crtl = 263;
+	ProtoAdapter_DiaryStruct  video_diary_info = 264;
+	ProtoAdapter_FeedComponentHideCtrl  feed_component_hide_ctrl = 265;
+	string component_info = 266;
+	ProtoAdapter_DislikeDynamicReasonList  dislike_reason_list = 277;
+	ProtoAdapter_VideoNodeInfoStruct video_node_info = 278;   
+	string ip_attribution = 279;
+	string xigua_extra_info = 280;
+	bool is_origin_text = 281;
+	ProtoAdapter_CooperationInfoStruct cooperation_info = 282;
+	int32 show_collect_hint = 283;
+	ProtoAdapter_FeedCommentConfigStruct feed_comment_config = 284;
+	ProtoAdapter_RecommendReasonData recommend_reason_data = 285;
+	bool is_image_beat = 286;
+	ProtoAdapter_MusicPromoteCommentAnchorStruct music_promote_comment_anchor = 287;
+	ProtoAdapter_RelatedVideoStruct related_video = 288;
+	ProtoAdapter_ActivityStruct addic_data = 289;
+	ProtoAdapter_CFGroupStruct  cf_group = 290;
+	int32 cf_item_type = 291;
+}
+//import "ProtobufAwemeStructV2Adapter.proto";
+//import "ProtobufExtraStructV2Adapter.proto";
+//import "ProtobufLogPbStructV2Adapter.proto";
+//import "ProtobufGuideWordV2Adapter.proto";
+// message Protobufaweme_v2_feed_responseAdapter {
+// 	int32 status_code = 1;
+// 	int64 min_cursor = 2;
+// 	int64 max_cursor = 3;
+// 	int32 has_more = 4;
+// 	repeated ProtobufAwemeStructV2Adapter aweme_list = 5;
+// 	string rid = 6;
+// 	int32 home_model = 7;
+// 	int32 refresh_clear = 8;
+// 	ProtobufExtraStructV2Adapter extra = 9;
+// 	ProtobufLogPbStructV2Adapter log_pb = 10;
+// 	string DebugInfo = 11;
+// 	ProtobufGuideWordV2Adapter guide_word = 12;
+// 	repeated ProtobufAwemeStructV2Adapter preload_ads = 13;
+// 	string status_msg = 14;
+// 	int32 block_code = 15;
+// 	repeated ProtobufAwemeStructV2Adapter preload_awemes = 16;
+// 	bool enable_re_rank = 17;
+// 	bool disable_adjust_for_cache = 18;
+// 	int32 pitaya_type = 19;
+// 	string pitaya_features = 20;
+// 	bool enable_splash_show = 21;
+// 	bool enable_client_ads_strategy = 22;
+// 	int32 rec_follow_unread_cnt = 23;
+// 	string sati_param_for_pitaya = 24;
+// 	string extra_info = 25;
+// }
+//package BannerTip;
+message ProtobufBannerTipV2Adapter {
+	int32 banner_type = 1;
+	string banner_txt = 2;
+	int32 link_type = 3;
+	string link_url = 4;
+	string link_txt = 5;
+}
+//package BitRate;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtobufBitRateStructV2Adapter {
+    string gear_name = 1;
+    int32 quality_type = 2;
+    int32 bit_rate = 3;
+    ProtobufUrlStructV2Adapter play_addr = 4; 
+    int32 is_h265 = 5;
+    ProtobufUrlStructV2Adapter play_addr_265 = 6; 
+    int32 is_bytevc1 = 7;
+    ProtobufUrlStructV2Adapter play_addr_bytevc1 = 8; 
+    string HDR_type = 9;
+    string HDR_bit = 10;
+    int64 FPS = 11;
+
+
+}
+//package BlueVBrandInfo;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufBlueVBrandInfoStructV2Adapter {
+	int32 category_id = 1;
+	string category_name = 2;
+	int32 brand_id = 3;
+	string brand_name = 4;
+	ProtobufUrlStructV2Adapter logo_url = 5;
+	int32 heat = 6;
+	int32 rank = 7;
+	int32 rank_diff = 8;
+	string tag_name = 9;
+}
+//package BonusAuthor;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufBonusAuthorV2Adapter {
+	int64 m8195id = 1;
+	string name = 2;
+	ProtobufUrlStructV2Adapter avatar_larger = 3;
+	ProtobufUrlStructV2Adapter avatar_thumb = 4;
+	ProtobufUrlStructV2Adapter avatar_medium = 5;
+}
+//package BonusCommerce;
+message ProtobufBonusCommerceV2Adapter {
+	int64 m8194id = 1;
+}
+//package TcBonus;
+//import "ProtobufBonusAuthorV2Adapter.proto";
+//import "ProtobufBonusCommerceV2Adapter.proto";
+
+message ProtobufBonusV2Adapter {
+	int32 bonus_type = 1;
+	ProtobufBonusAuthorV2Adapter author =2;
+	string title = 3;
+	string subTitle = 4;
+	string text = 5;
+	string style = 6;
+	ProtobufBonusCommerceV2Adapter commerce_info = 7;
+	string open_url = 8;
+	string token = 9;
+	int32 source = 10;
+	int64 scene_id = 11;
+	string digg_text = 12;
+	string digg_toast = 13;
+	bool maybe_carp = 14;
+}
+//package BillboardWeeklyInfo;
+message ProtobufBranchBillboardWeeklyStructV2Adapter {
+	string uid = 1;
+	int32 edition_no = 2;
+	int64 start_time = 3;
+	int64 end_time = 4;
+}
+//package CaptionAnchor;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufCaptionAnchorStructV2Adapter {
+	string keyword = 1;
+	string link = 2;
+	ProtobufUrlStructV2Adapter icon = 3;
+}
+//package CaptionInfo;
+message ProtobufCaptionInfoStructV2Adapter {
+	string keyword = 1;
+	string link = 2;
+	string extra = 3;
+}
+//package CategoryCoverStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufCategoryCoverStructV2Adapter {
+	string aweme_id = 1;
+	ProtobufUrlStructV2Adapter cover = 2;
+	ProtobufUrlStructV2Adapter dynamic_cover = 3;
+}
+//package Challenge;
+//import "ProtobufCategoryCoverStructV2Adapter.proto";
+//import "ProtobufDisclaimerStructV2Adapter.proto";
+//import "ProtobufIconButtonStructV2Adapter.proto";
+//import "ProtobufMusicStructV2Adapter.proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtobufUserStructV2Adapter.proto";
+
+message ProtobufChallengeStructV2Adapter {
+	string cid = 1;
+	string cha_name = 2;
+	string desc = 3;
+	string schema = 4;
+	ProtobufUserStructV2Adapter author = 5;
+	int32 user_count = 6;
+	ProtobufShareStructV2Adapter  share_info = 7;
+	repeated ProtobufMusicStructV2Adapter connect_music = 8;
+	int32 type = 9;
+	string use_count_desc = 10;
+	int32 sub_type = 11;
+	ProtobufUrlStructV2Adapter background_image_url = 12;
+	string sticker_id = 13;
+	string link_text = 14;
+	string link_action = 15;
+	bool is_pgcshow = 16;
+	int32 collect_stat = 17;
+	ProtobufUrlStructV2Adapter cover_item = 18;
+	int32 is_challenge = 19;
+	int64 view_count = 20;
+	ProtobufDisclaimerStructV2Adapter disclaimer = 21;
+	bool allow_upload_cover = 22;
+	bool is_commerce = 23;
+	ProtobufCategoryCoverStructV2Adapter  category_cover_info = 24;
+	string hashtag_profile = 25;
+	string cover_photo = 26;
+	int32 is_hot_search = 27;
+	int32 link_type = 28;
+	ProtobufDisclaimerStructV2Adapter announcement_info = 29;
+	int32 content_type = 30;
+	int32 module_type = 31;
+	string profile_tag = 32;
+	repeated string cha_attrs = 33;
+	ProtobufIconButtonStructV2Adapter  button = 34;
+}
+//package ChapterInfo;
+message ProtobufChapterInfoV2Adapter {
+	string key_word = 1;
+	string desc = 2;
+	int32 timestamp = 3;
+}
+//package CloudGameEntranceStruct;
+message ProtobufCloudGameEntranceStructV2Adapter {
+	string button_color = 1;
+	string button_title = 2;
+	string sticker_info_url = 3;
+	string sticker_title = 4;
+	int32 show_sticker_time = 5;
+}
+//package CloudGameStruct;
+//import "ProtobufCloudGameEntranceStructV2Adapter.proto";
+message ProtobufCloudGameStructV2Adapter {
+	string cloud_game_id = 1;
+	ProtobufCloudGameEntranceStructV2Adapter entrance_info = 2;
+	string download_url = 3;
+	string extra = 4;
+}
+//package LiveAwesomeSplashInfo;
+message ProtobufCNYStructV2Adapter {
+	int64 start_time = 1;
+	int64 end_time = 2;
+	bool topview_valid = 3;
+	int32 feed_show_time = 4;
+	string live_info = 5;
+}
+//package CommerceActivityStruct;
+//import "ProtobufActivityTimeRangeV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufCommerceActivityStructV2Adapter{
+    int32 act_type = 1;
+    ProtobufUrlStructV2Adapter image = 2; 
+    string jump_web_url = 3;
+    string jump_open_url = 4;
+    string title = 5;
+    int64 start_time = 6;
+    int64 end_time = 7;
+    repeated ProtobufActivityTimeRangeV2Adapter time_range = 8;
+    ProtobufUrlStructV2Adapter track_url_list = 9;
+    ProtobufUrlStructV2Adapter click_track_url_list = 10;
+    string lottie = 11;
+    int32 material_type = 12;
+    int64 appear_time = 13;
+    string compliance_data = 14;
+    string config_id = 15;
+}
+
+//package CommerceConfigData;
+//import "ProtoAdapter_proto";
+//import "ProtobufItemLikeEggDataV2Adapter.proto";
+message ProtobufCommerceConfigDataV2Adapter{
+    int32 type = 1;
+    int32 priority = 2;
+    ProtobufItemLikeEggDataV2Adapter item_like_egg = 3;
+    ProtoAdapter_StickerPendantStruct sticker_pendant = 4;
+    string data = 5;
+
+}
+//package CommerceInfo;
+//import "ProtobufChallengeStructV2Adapter.proto";
+//import "ProtobufOfflineInfoStructV2Adapter.proto";
+//import "ProtobufSmartPhoneSettingsStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtobufCommerceInfoStructV2Adapter {
+	ProtobufUrlStructV2Adapter head_image_url = 1;
+	repeated ProtobufOfflineInfoStructV2Adapter  offline_info_list = 2;
+	repeated ProtobufChallengeStructV2Adapter challenge_list = 3;
+	ProtobufSmartPhoneSettingsStructV2Adapter  smart_phone = 4;
+	string quick_shop_name = 6;
+	string site_id = 7;
+}
+//package CommercePermissionStruct;
+message ProtobufCommercePermissionStructV2Adapter {
+	int32 top_item = 1;
+	int32 ad_link = 2;
+	int32 star_atlas_order = 3;
+}
+//package CommerceUserInfo;
+//import "ProtobufLinkUserInfoStructV2Adapter.proto";
+
+message ProtobufCommerceUserStructV2Adapter {
+	int32 star_atlas = 1;
+	bool show_star_atlas_cooperation = 2;
+	bool has_ads_entry = 3;
+	ProtobufLinkUserInfoStructV2Adapter link_user_info = 4;
+	int32 ad_influencer_type = 5;
+}
+//package DescendantsModel;
+message ProtobufDescendantStructV2Adapter{
+    repeated string platforms = 1;
+    string notify_msg = 2;
+}
+//package ChallengeDisclaimer;
+message ProtobufDisclaimerStructV2Adapter {
+	string title = 1;
+	string content = 2;
+}
+//package EffectArtistDetail;
+message ProtobufEffectArtistStructV2Adapter {
+	int32 total = 1;
+}
+//package ExternalMusicInfo;
+message ProtobufExternalSongStructV2Adapter {
+	string h5_url = 1;
+	string partner_name = 2;
+	string partner_song_id = 3;
+	string external_song_key = 4;
+}
+//package Extra;
+message ProtobufExtraStructV2Adapter {
+	int64 now = 1;
+	string logid = 2;
+	repeated string fatal_item_ids = 3;
+	string search_request_id = 4;
+}
+//package FansStruct;
+message ProtobufFansStructV2Adapter {
+	string fans_name = 1;
+	int32 fans_level = 2;
+	bool is_fan = 3;
+	bool light_up = 4;
+}
+//package FeedEventCardInfo;
+message ProtobufFeedEventCardInfoV2Adapter {
+	string setting_key = 1;
+	string schema = 2;
+	string fe_data = 3;
+	string client_data = 4;
+	string extra = 5;
+}
+//package FollowerDetail;
+message ProtobufFollowersDetailV2Adapter {
+	string name = 1;
+	string icon = 2;
+	int32 fans_count = 3;
+	string open_url = 4;
+	string apple_id = 5;
+	string download_url = 6;
+	string package_name = 7;
+	string app_name = 8;
+}
+//package GameInfo;
+message ProtobufGameStructV2Adapter{
+    int32 game_type = 1;
+    int32 game_score = 2;
+}
+//package HotSearchGuideWord;
+message ProtobufGuideWordV2Adapter {
+	string word = 1;
+	string search_word = 2;
+	int32 type = 3;
+	int32 breathe_times = 4;
+}
+//package HashtagStruct;
+message ProtobufHashTagStickerStructV2Adapter{
+    string hashtag_name = 1;
+    string hashtag_id = 2;
+}
+//package HotListStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufHotListStructV2Adapter {
+	string title = 1;
+	string image_url = 2;
+	string schema = 3;
+	int32 type = 4;
+	string i18n_title = 5;
+	string header = 6;
+	string footer = 7;
+	int32 pattern_type = 8;
+	int32 rank = 9;
+	int32 hot_score = 10;
+	int32 view_count = 11;
+	string group_id = 12;
+	string sentence = 13;
+	int64 sentence_id = 14;
+	int32 label = 15;
+	string extra = 16;
+	ProtobufUrlStructV2Adapter icon = 17;
+}
+//package HotSearchEntity;
+//import "ProtobufHotSearchWordStructV2Adapter.proto";
+//import "ProtobufShareStructV2Adapter.proto";
+message ProtobufHotSearchDataFeedCellStructV2Adapter {
+	repeated ProtobufHotSearchWordStructV2Adapter  word_list = 1;
+	ProtobufShareStructV2Adapter share_info = 2;
+	string active_time = 3;
+}
+//package HotsearchSprintStruct;
+//import "ProtoAdapter_proto";
+
+message ProtobufHotsearchSprintStructV2Adapter {
+	int32 sprint = 1;
+	repeated ProtoAdapter_SimpleUserStruct followers =2;
+}
+
+
+//package HotSearchItem;
+//import "ProtobufHotSearchWordStructV2Adapter.proto";
+//import "ProtobufHotWordGuideInfoStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtobufHotSearchWordStructV2Adapter {
+	string word = 1;
+	int32 label = 2;
+	int64 hot_value = 3;
+	string search_word = 4;
+	string challenge_id = 5;
+	ProtobufUrlStructV2Adapter word_cover = 6;
+	string ad_data = 7;
+	int32 position = 8;
+	int32 video_count = 9;
+	string group_id = 10;
+	string top_aweme_id = 11;
+	bool can_extend_detail = 12;
+	string schema = 13;
+	int32 word_type = 14;
+	int32 room_count = 15;
+	string sentence_id = 16;
+	string customer_label = 17;
+	int64 event_time = 18;
+	repeated ProtobufHotSearchWordStructV2Adapter related_words = 19;
+	ProtobufHotWordGuideInfoStructV2Adapter  hot_word_guide_info = 20;
+	int64 view_count = 21;
+	string hotlist_param = 22;
+}
+//package HotWordGuideInfoStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufHotWordGuideInfoStructV2Adapter {
+	string title = 1;
+	string content = 2;
+	ProtobufUrlStructV2Adapter url  = 3;
+}
+//package AwemeHybridLabelModel;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufHybridLabelStructV2Adapter {
+	string background_color = 1;
+	string text = 2;
+	string text_color = 3;
+	ProtobufUrlStructV2Adapter image = 4;
+	string ref_url = 5;
+}
+//package ChallengeTransform;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufIconButtonStructV2Adapter {
+	string text = 1;
+	ProtobufUrlStructV2Adapter icon = 2;
+	string action = 3;
+}
+//package ImageInfo;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+
+
+message ProtobufImageInfoStructV2Adapter{
+    int32 height = 1;
+    int32 width = 2;
+    ProtobufUrlStructV2Adapter label_large = 3; 
+    ProtobufUrlStructV2Adapter label_thumb = 4; 
+
+}
+//package InteractStickerStruct;
+//import "ProtoAdapter_ReplyToproto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtobufHashTagStickerStructV2Adapter.proto";
+//import "ProtobufLivePreviewStructV2Adapter.proto";
+//import "ProtobufMentionStickerStructV2Adapter.proto";
+//import "ProtobufPoiStructV2Adapter.proto";
+//import "ProtobufReplyToAwemeStructV2Adapter.proto";
+//import "ProtobufVoteStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+
+message ProtobufInteractionStickerStructV2Adapter{
+    int32 type = 1;
+    int32 index = 2;
+    ProtobufPoiStructV2Adapter poi_info = 3;
+    string track_info = 4;
+    string attr = 5;
+    ProtobufVoteStructV2Adapter  vote_info = 6;
+    string text_info = 7;
+    ProtobufMentionStickerStructV2Adapter  mention_info = 8;
+    ProtobufHashTagStickerStructV2Adapter interactStickerStruct = 9;
+    ProtobufLivePreviewStructV2Adapter live_preview_info = 10;
+    repeated ProtoAdapter_TextInteractionStickerStruct text_interaction = 11;
+    ProtoAdapter_VideoShareInfoStruct video_share_info = 12;
+    ProtoAdapter_GrootInteractionStickerStruct groot_interaction = 13;
+    ProtobufReplyToAwemeStructV2Adapter  reply_to_aweme = 14;
+    ProtoAdapter_TagInteractionStickerStruct  tag_interaction = 15;
+    int32 image_index = 16;
+    ProtoAdapter_ReplyToCommentStruct  reply_to_comment = 17;
+    string sticker_config = 18;
+
+}
+//package ItemLikeEggData;
+message ProtobufItemLikeEggDataV2Adapter{
+    string material_url = 1;
+    string file_type = 2;
+}
+//package StoryBlockInfo;
+message ProtobufLifeStoryBlockStructV2Adapter {
+	bool life_story_block = 1;
+	bool life_story_blocked = 2;
+}
+//package LinkMatch;
+//import "ProtobufCaptionInfoStructV2Adapter.proto";
+//import "ProtobufMatchInfoStructV2Adapter.proto";
+//import "ProtobufCaptionAnchorStructV2Adapter.proto";
+message ProtobufLinkMatchStructV2Adapter {
+	int32 total_limit = 1;
+	int32 query_limit = 2;
+	repeated ProtobufMatchInfoStructV2Adapter match_info = 3;
+	ProtobufCaptionInfoStructV2Adapter caption_info = 4;
+	ProtobufCaptionAnchorStructV2Adapter caption_anchor = 5;
+}
+//package LinkUserInfoStruct;
+message ProtobufLinkUserInfoStructV2Adapter {
+	int32 auth_status = 1;
+	int32 auth_type = 2;
+}
+//package HonorStruct;
+
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufLiveHonorStructV2Adapter {
+	int32 honor_level = 1;
+	int64 honor_score = 2;
+	ProtobufUrlStructV2Adapter badge_thumb = 3;
+}
+//package LiveNoticeStruct;
+message ProtobufLivePreviewStructV2Adapter{
+    int64 live_start_time = 1;
+    int32 status = 3;
+    bool is_show_btn = 4;
+    bool has_clicked_btn = 5;
+    int64 room_id = 6;
+    int32 type = 7;
+    int64 appointment_id = 8;
+    repeated int64 promotion_ids = 9;
+    string promotion_detail = 10;
+    string sticker_extra_info = 11;
+}
+
+//package LogPbBean;
+message ProtobufLogPbStructV2Adapter {
+	string impr_id = 2;
+}
+//package LongVideo;
+//import "ProtobufVideoControlV2Adapter.proto";
+//import "ProtobufVideoStructV2Adapter.proto";
+message ProtobufLongVideoStructV2Adapter{
+    ProtobufVideoStructV2Adapter video = 1;
+    int32 long_video_type = 2;
+    double trailer_start_time = 3;
+    ProtobufVideoControlV2Adapter video_control = 4;
+}
+//package VideoMaskInfo;
+message ProtobufMaskStructV2Adapter {
+	bool show_mask = 1;
+	int32 mask_type = 2;
+	int32 status = 3;
+	string title = 4;
+	string content = 5;
+	string cancel_mask_label = 6;
+}
+//package MatchedPGCSoundInfo;
+message ProtobufMatchedPGCSoundStructV2Adapter {
+	int64 m7671id = 1;
+	string author = 2;
+	string title = 3;
+	string mixed_title = 4;
+	string mixed_author = 5;
+}
+//package MatchedSongStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufMatchedSongStructV2Adapter {
+	string m7670id = 1;
+	string author = 2;
+	string title = 3;
+	string h5_url = 4;
+	ProtobufUrlStructV2Adapter cover_medium = 5;
+	string dsp_name = 6;
+	string source_id = 7;
+}
+//package MatchInfo;
+message ProtobufMatchInfoStructV2Adapter {
+	string query = 1;
+	string link = 2;
+	int32 begin = 3;
+	int32 end = 4;
+}
+//package MentionStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufMentionStickerStructV2Adapter{
+    string sec_uid = 1;
+    string user_name = 2;
+    string user_id = 3;
+    ProtobufUrlStructV2Adapter avatar_thumb = 4; 
+    string signature = 5;
+
+}
+//package MiniAppCard;
+message ProtobufMicroAppCardStructV2Adapter{
+    string image_url = 1;
+    string text = 2;
+    int32 wait_time = 3;
+}
+//package MicroAppInfo;
+//import "ProtobufMicroAppCardStructV2Adapter.proto";
+message ProtobufMicroAppStructV2Adapter{
+    string app_id = 1;
+    string app_name = 2;
+    string icon = 3;
+    int32 orientation = 4;
+    string schema = 5;
+    int32 state = 6;
+    string summary = 7;
+    int32 type = 8;
+    string description = 9;
+    string title = 10;
+    ProtobufMicroAppCardStructV2Adapter card = 11;   
+    string web_url = 12;
+}
+
+//package MixStatisStruct;
+message ProtobufMixStatisStructV2Adapter{
+    int64 play_vv = 1;
+    int64 collect_vv = 2;
+    int64 current_episode = 3;
+    int64 updated_to_episode = 4;
+    int64 has_updated_episode = 5;
+}
+//package MixStatusStruct;
+message ProtobufMixStatusStructV2Adapter{
+    int32 status = 1;
+    int32 is_collected = 2;
+}
+//package MixStruct;
+//import "ProtobufMixStatisStructV2Adapter.proto";
+//import "ProtobufMixStatusStructV2Adapter.proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtobufUserStructV2Adapter.proto";
+message ProtobufMixStructV2Adapter{
+    string mix_id = 1;
+    string mix_name = 2;
+    ProtobufUrlStructV2Adapter cover_url = 3; 
+    ProtobufUrlStructV2Adapter icon_url = 4; 
+    ProtobufMixStatusStructV2Adapter status = 5;
+    ProtobufMixStatisStructV2Adapter statis = 6;
+    string desc = 7;
+    ProtobufUserStructV2Adapter author = 8;
+    string extra = 9;
+    ProtobufShareStructV2Adapter share_info = 10;
+    int32 is_serial_mix = 11;
+    int32 mix_pic_type = 12;
+    int32 mix_type = 13;
+}
+//package Music;
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtobufBranchBillboardWeeklyStructV2Adapter.proto";
+//import "ProtobufCategoryCoverStructV2Adapter.proto";
+//import "ProtobufExternalSongStructV2Adapter.proto";
+//import "ProtobufMatchedPGCSoundStructV2Adapter.proto";
+//import "ProtobufMatchedSongStructV2Adapter.proto";
+//import "ProtobufPositionStructV2Adapter.proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtobufUserStructV2Adapter.proto";
+//import "ProtobufChallengeStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+
+message ProtobufMusicStructV2Adapter {
+	int64 m7669id = 1;
+	string id_str = 2;
+	string title = 3;
+	string author = 4;
+	string album = 5;
+	ProtobufUrlStructV2Adapter cover_hd = 6;
+	ProtobufUrlStructV2Adapter cover_large = 7;
+	ProtobufUrlStructV2Adapter cover_medium = 8;
+	ProtobufUrlStructV2Adapter cover_thumb = 9;
+	ProtobufUrlStructV2Adapter play_url = 10;
+	string schema_url = 11;
+	int32 source_platform = 12;
+	int32 start_time = 13;
+	int32 end_time = 14;
+	int32 duration = 15;
+	string extra = 16;
+	int32 user_count = 17;
+	repeated ProtobufPositionStructV2Adapter position = 18;
+	ProtobufShareStructV2Adapter share_info = 19;
+	int32 status = 21;
+	string offline_desc = 22;
+	ProtobufUrlStructV2Adapter effects_data = 23;
+	string owner_id = 24;
+	string owner_nickname = 25;
+	string use_count_desc = 26;
+	ProtobufUrlStructV2Adapter audio_track = 27;
+	ProtobufUrlStructV2Adapter bodydance_url  = 28;
+	ProtobufUrlStructV2Adapter bodydance_challenge = 29;
+	bool is_original = 30;
+	ProtobufChallengeStructV2Adapter challenge = 31;
+	int32 billboard_rank = 32;
+	string mid = 33;
+	ProtobufUrlStructV2Adapter bodydance_challenge_id = 34;
+	int64 binded_challenge_id = 35;
+	bool redirect = 36;
+	bool is_restricted = 37;
+	bool author_deleted = 38;
+	bool is_del_video = 39;
+	bool is_video_self_see = 40;
+	string owner_handle = 41;
+	repeated ProtobufPositionStructV2Adapter author_position = 42;
+	bool prevent_download = 43;
+	int32 music_billboard_type = 44;
+	ProtobufBranchBillboardWeeklyStructV2Adapter  music_billboard_weekly_info = 45;
+	ProtobufCategoryCoverStructV2Adapter category_cover_info = 46;
+	bool is_only_owner_use = 47;
+	bool is_video_not_recommend = 48;
+	ProtobufUrlStructV2Adapter strong_beat_url = 49;
+	repeated string  unshelve_countries = 50;
+	int32 prevent_item_download_status = 51;
+	repeated ProtobufExternalSongStructV2Adapter external_song_info = 52;
+	string sec_uid = 53;
+	int32 lyric_type = 54;
+	string lyric_url = 55;
+	ProtobufUrlStructV2Adapter avatar_thumb = 56;
+	ProtobufUrlStructV2Adapter avatar_medium = 57;
+	ProtobufUrlStructV2Adapter avatar_large = 58;
+	double preview_start_time = 59;
+	double preview_end_time = 60;
+	int64 cluster_id = 61;
+	bool mute_share = 62;
+	bool is_author_artist = 63;
+	bool is_pgc = 64;
+	ProtobufMatchedPGCSoundStructV2Adapter  matched_pgc_sound = 65;
+	ProtobufMatchedSongStructV2Adapter  matched_song = 66;
+	ProtoAdapter_MusicAnchorStruct  music_anchor = 67;
+	int32 audition_duration = 68;
+	int32 shoot_duration = 69;
+	int32 video_duration = 70;
+	ProtoAdapter_SongStruct song = 99;
+	repeated ProtobufUserStructV2Adapter artist_user_infos = 100;
+	string music_title = 101;
+	ProtoAdapter_MusicImageBeatsStruct music_image_beats = 102;
+}
+//package NearbyCircleTipStruct;
+//import "ProtobufRelativeUserStructV2Adapter.proto";
+
+
+message ProtobufNearbyCircleTipStructV2Adapter {
+	int64 douyin_circle_id = 1;
+	string circle_title = 2;
+	string circle_copywriter = 3;
+	repeated ProtobufRelativeUserStructV2Adapter  relative_users = 4;
+}
+//package NearbyBubbleStruct;
+
+message ProtobufNearbyTabBubbleStructV2Adapter {
+	string nearby_tab_bubble_text = 1;
+	string nearby_tab_bubble_message = 2;
+	string nearby_diamond_message = 3;
+	int32 nearby_tab_bubble_type = 4;
+	repeated int32 life_bubble_show_condition = 5;
+}
+//package StoryIdStruct;
+
+message ProtobufNewStoryIdStructV2Adapter {
+	string m8201id = 1;
+	int32 offset = 2;
+	int32 pic_count = 3;
+}
+//package OfflineInfo;
+message ProtobufOfflineInfoStructV2Adapter {
+	int32 offline_info_type = 1;
+	string text = 2;
+	string action = 3;
+}
+//package OriginalMusician;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufOriginalMusicianStructV2Adapter{
+    int32 music_count = 1;
+    int32 music_used_count = 2;
+    ProtobufUrlStructV2Adapter  music_qrcode_url = 3;
+    ProtobufUrlStructV2Adapter  music_cover_url = 4;
+    int32 digg_count = 5;
+}
+//package GeneralPermission;
+message ProtobufPermissionStructV2Adapter {
+	int32 follow_toast = 1;
+	int32 original_list = 2;
+	int32 shop_toast = 3;
+	int32 share_toast = 4;
+}
+//package PlatformInfo;
+message ProtobufPlatformSyncStatusStructV2Adapter {
+	string platform_name = 1;
+	string nickname = 2;
+	bool full_synced = 3;
+}
+//package PlayTokenAuth;
+message ProtobufPlayTokenAuthStructV2Adapter {
+    string vid = 1;
+    string token = 2;
+    string auth = 3;
+    string tv_token = 4;
+    repeated string hosts = 5;
+}
+//package poiAwemeTagRateStruct;
+//import "ProtobufPoiTagRateGradeStructV2Adapter.proto";
+
+message ProtobufPoiAwemeTagRateInfoStructV2Adapter {
+	string rate_id = 1;
+	ProtobufPoiTagRateGradeStructV2Adapter rate_grade =3;
+}
+//package PoiBackendType;
+message ProtobufPoiBackendTypeStructV2Adapter{
+    string code = 1;
+    string name = 2;
+    string desc = 3;
+}
+//package PoiBizStruct;
+//import "ProtobufPoiAwemeTagRateInfoStructV2Adapter.proto";
+//import "ProtobufPoiDouDiscountStructV2Adapter.proto";
+message ProtobufPoiBizStructV2Adapter {
+	ProtobufPoiDouDiscountStructV2Adapter dou_discount_info = 1;
+	bool show_want_to_go_button = 2;
+	ProtobufPoiAwemeTagRateInfoStructV2Adapter  tag_rate_info = 9;
+	bool show_poi_collect_button = 10;
+	string show_poi_collect_button_rule_json = 11;
+}
+//package PoiCardStruct;
+
+message ProtobufPoiCardStructV2Adapter{
+    int32 is_show = 1;
+    string url = 2;
+}
+//package PoiDouDiscountStruct;
+
+//import "ProtoAdapter_proto";
+//import "ProtobufAwemeSearchStructV2Adapter.proto";
+
+
+
+message ProtobufPoiDouDiscountStructV2Adapter {
+	string dou_discount_label = 1;
+	ProtobufAwemeSearchStructV2Adapter dou_discount_mix_info = 2;
+	ProtoAdapter_PoiDouDiscountRankInfoStruct dou_discount_rank_info = 3; 
+}
+//package PoiStruct;
+
+//import "ProtobufAddressStructV2Adapter.proto";
+//import "ProtobufPoiBackendTypeStructV2Adapter.proto";
+//import "ProtobufPoiCardStructV2Adapter.proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+
+
+
+message ProtobufPoiStructV2Adapter{
+    string poi_id = 1;
+    string poi_name = 2;
+    string type_code = 3;
+    int32 user_count = 4;
+    int32 item_count = 5;
+    ProtobufShareStructV2Adapter share_info = 6;
+    ProtobufUrlStructV2Adapter  cover_hd = 7; 
+    ProtobufUrlStructV2Adapter  cover_large = 8; 
+    ProtobufUrlStructV2Adapter  cover_medium = 9; 
+    ProtobufUrlStructV2Adapter  cover_thumb = 10; 
+    string distance = 11;
+    ProtobufAddressStructV2Adapter address_info = 12;
+    int32 icon_type = 13;
+    int32 collect_stat = 14;
+    double poi_longitude = 15;
+    double poi_latitude = 16;
+    int32 expand_type = 17;
+    ProtobufUrlStructV2Adapter  icon_on_map = 18; 
+    ProtobufUrlStructV2Adapter  icon_on_entry = 19; 
+    ProtobufUrlStructV2Adapter  icon_on_info = 20; 
+    int32 poi_type = 21;
+    string poi_voucher = 22;
+    double rating = 23;
+    double cost = 24;
+    string poi_rank_desc = 25;
+    string business_area_name = 26;
+    bool is_local_city = 27;
+    string option_name = 28;
+    string poi_subtitle = 29;
+    string sp_source = 30;
+    int32 show_type = 31;
+    bool is_candidate = 32;
+    ProtobufPoiCardStructV2Adapter poi_card = 33;
+    int32 poi_subtitle_type = 34;
+    repeated string voucher_release_areas = 35;
+    int32 is_show_halfcard = 36;
+    repeated string poi_frontend_type = 37;
+    ProtobufPoiBackendTypeStructV2Adapter poi_backend_type = 38;
+    ProtobufUrlStructV2Adapter  cover_item = 39; 
+    bool is_top_recommend = 40;
+    bool is_admin_area = 41;
+    string collected_count = 42;
+    string view_count = 43;
+    bool within_geo_fence = 47;
+    string ext_json = 48;
+    bool is_food_group_buy = 49;
+    bool is_at_call_back_collect = 50;
+
+}
+//package PoiTagRateGradeStruct;
+message ProtobufPoiTagRateGradeStructV2Adapter {
+	int32 type = 1;
+}
+//package Position;
+message ProtobufPositionStructV2Adapter{
+    int32 begin = 1;
+    int32 end = 2;
+}
+//package Preload;
+message ProtobufPreloadStructV2Adapter{
+    int32 comment = 1;
+    int32 profile = 2;
+    double comment_pro = 3;
+    double profile_pro = 4;
+    double comment_thres = 5;
+    double profile_thres = 6;
+    double comment_median_time = 7;
+    double profile_median_time = 8;
+    int32 model_v2 = 9;
+}
+//package QuickShopSecondFloorInfo;
+message ProtobufQuickShopSecondFloorV2Adapter {
+	string process_text = 1;
+	string enter_text = 2;
+	string trans_bg_text = 3;
+}
+//package QuickShopInfo;
+//import "ProtobufQuickShopSecondFloorV2Adapter.proto";
+message ProtobufQuickShopStructV2Adapter {
+	string quick_shop_url = 1;
+	string quick_shop_name = 2;
+	bool with_text_entry = 3;
+	ProtobufQuickShopSecondFloorV2Adapter second_floor_info = 4;
+}
+//package RecommendAwemeItem;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+message ProtobufRecommendItemStructV2Adapter {
+	string aweme_id = 1;
+	ProtobufUrlStructV2Adapter cover = 2;
+	ProtobufUrlStructV2Adapter dynamic_cover = 3;
+	int64 media_type = 4;
+}
+//package RelationDynamicLabel;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+
+message ProtobufRelationDynamicLableStructV2Adapter {
+    string nickname = 1;
+    string label_info = 2;
+    int32 count = 3;
+    string user_id = 4;
+    int32 type = 5;
+    int32 show_type = 6;
+    string label_info_color = 7;
+    string label_info_background_color = 8;
+    ProtobufUrlStructV2Adapter label_info_background_img = 9; 
+    string schema = 10;
+    string label_info_background_img_stretch_position = 11;
+    string label_tag = 12;
+    string label_type = 13;
+    int64 tag_id = 14;
+}
+//package relationLabelNew;
+
+//import "ProtobufRelativeUserStructV2Adapter.proto";
+message ProtobufRelationLabelStructV2Adapter{
+    repeated ProtobufRelativeUserStructV2Adapter user_list = 1;
+    int32 type = 2;
+    string extra = 3;
+}
+//package AwemeRelationRecommendModel;
+message ProtobufRelationRecommendStructV2Adapter {
+	int64 recommend_type = 1;
+	string relation_text_key = 2;
+}
+//package RelationLabelUser;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufRelativeUserStructV2Adapter {
+	int64 uid = 1;
+	ProtobufUrlStructV2Adapter avatar = 2;
+	string nickname = 3;
+	string remark_name = 4;
+	ProtobufUrlStructV2Adapter avatar_larger = 5;
+	ProtobufUrlStructV2Adapter avatar_thumb = 6;
+	int32 follow_status = 7;
+	string sec_uid = 8;
+}
+//package ReplyToAwemeStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufReplyToAwemeStructV2Adapter{
+    string aweme_id = 1;
+    string desc = 2;
+    string author_nickname = 3;
+    ProtobufUrlStructV2Adapter  cover = 4; 
+    string sec_user_id = 5;
+    string alias_comment_id = 6;
+    int32 aweme_type = 7;
+    bool is_available = 8;
+    ProtobufUrlStructV2Adapter author_avatar = 13; 
+    int32 type = 14;
+}
+//package SeriesStructV2;
+
+//import "ProtoAdapter_proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtobufUserStructV2Adapter.proto";
+
+message ProtobufSeriesStructV2Adapter {
+	string series_id = 1;
+	string series_name = 2;
+	ProtobufUrlStructV2Adapter cover_url = 3;
+	ProtobufUrlStructV2Adapter icon_url = 4;
+	ProtoAdapter_SeriesStatusStruct status = 5;
+	ProtobufSeriesStructV2Adapter stats = 6;
+	string desc = 7;
+	ProtobufUserStructV2Adapter author = 8;
+	string extra = 9;
+	ProtobufShareStructV2Adapter share_info =10;
+}
+//package ShareInfo;
+//import "ProtobufUrlStructV2Adapter.proto";
+
+
+
+message ProtobufShareStructV2Adapter{
+    string share_url = 1;
+    string share_weibo_desc = 2;
+    string share_desc = 3;
+    string share_title = 4;
+    ProtobufUrlStructV2Adapter share_qrcode_url = 5; 
+    string manage_goods_url = 6;
+    ProtobufUrlStructV2Adapter share_image_url = 7; 
+    int32 bool_persist = 8;
+    string goods_rec_url = 9;
+    string share_title_myself = 10;
+    string share_title_other = 11;
+    string share_link_desc = 12;
+    string share_signature_url = 13;
+    string share_signature_desc = 14;
+    string share_quote = 15;
+    string whatsapp_desc = 16;
+    string share_desc_info = 17;
+}
+//package SmartPhone;
+message ProtobufSmartPhoneSettingsStructV2Adapter {
+	string phone_number = 1;
+	string phone_id = 2;
+	string encrypt_key = 3;
+}
+//package SpecialSticker;
+
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufSpecialStickerStructV2Adapter{
+    int32 sticker_type = 1;
+    string link = 2;
+    string title = 3;
+    string sticker_id = 4;
+    ProtobufUrlStructV2Adapter icon_url = 5; 
+    string open_url = 6;
+    string compliance_data = 7;
+}
+
+//package StarAtlasLink;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufStarAtlasLinkStructV2Adapter{
+    string id = 1;
+    string title = 2;
+    string sub_title = 3;
+     ProtobufUrlStructV2Adapter avatar_icon = 4;
+    string web_url = 5;
+    string open_url = 6;
+    string compliance_data = 7;
+    string download_url = 8;
+
+}
+
+//package StoryGroupStruct;
+//import "ProtobufNewStoryIdStructV2Adapter.proto";
+//import "ProtobufStoryStructV2Adapter.proto";
+
+
+message ProtobufStoryGroupStructV2Adapter {
+	repeated ProtobufStoryStructV2Adapter story_list = 1;
+	int32 offset = 2;
+	int32 total = 3;
+	int64 min_cursor = 4;
+	int64 max_cursor = 5;
+	string folder_id = 6;
+	int64 head_cursor = 7;
+	int64 tail_cursor = 8;
+	bool need_normal = 9;
+	string has_insert_id = 10;
+	int32 is_ttl_story = 11;
+	string has_insert_create_time = 12;
+	repeated ProtobufNewStoryIdStructV2Adapter story_id_list = 13;
+}
+//import "ProtobufAwemeStructV2Adapter.proto";
+
+//package StoryStruct;
+
+message ProtobufStoryStructV2Adapter {
+	ProtobufAwemeStructV2Adapter story = 1;
+	bool unread = 2;
+}
+//package StreamUrlStruct;
+message ProtobufStreamUrlStructV2Adapter {
+	int64 sid = 1;
+	string rtmp_pull_url = 2;
+	string rtmp_push_url = 3;
+	int32 provider = 4;
+	string extra = 5;
+	string m8196id = 6;
+}
+//package TextExtraStruct;
+
+message ProtobufTextExtraStructV2Adapter{
+    int32 start = 1;
+    int32 end = 2;
+    string user_id = 3;
+    int32 type = 4;
+    string hashtag_name = 5;
+    string hashtag_id = 6;
+    bool is_commerce = 7;
+    string hashTagName1 = 8;
+    string sec_uid = 9;
+    string aweme_id = 10;
+    int32 sub_type = 11;
+    string live_data = 12;
+    string search_text = 13;
+    string search_query_id = 14;
+    int32 search_hide_words = 15;
+    int32 tag_mention_need_fold = 16;
+}
+
+//package UrlModel;
+
+
+
+message ProtobufUrlStructV2Adapter{
+    string uri = 1;
+    repeated string url_list = 2;
+    int32 width = 3;
+    int32 height = 4;
+    string url_key = 5;
+    int64 data_size = 6;
+    string file_hash = 7;
+    string file_cs = 8;
+    string player_access_key = 9;
+    string bgimg_url = 10;
+}
+//package UserProfileInitInfo;
+message ProtobufUserProfileStructV2Adapter {
+	double head_model_score = 1;
+}
+//package User;
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+//import "ProtobufAdCoverTitleV2Adapter.proto";
+//import "ProtobufAvatarDecorationStructV2Adapter.proto";
+//import "ProtobufBlueVBrandInfoStructV2Adapter.proto";
+//import "ProtobufCommerceInfoStructV2Adapter.proto";
+//import "ProtobufCommercePermissionStructV2Adapter.proto";
+//import "ProtobufCommerceUserStructV2Adapter.proto";
+//import "ProtobufEffectArtistStructV2Adapter.proto";
+//import "ProtobufFollowersDetailV2Adapter.proto";
+//import "ProtobufHotsearchSprintStructV2Adapter.proto";
+//import "ProtobufLifeStoryBlockStructV2Adapter.proto";
+//import "ProtobufLiveHonorStructV2Adapter.proto";
+//import "ProtobufOriginalMusicianStructV2Adapter.proto";
+//import "ProtobufPlatformSyncStatusStructV2Adapter.proto";
+//import "ProtobufRelativeUserStructV2Adapter.proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+//import "ProtobufChallengeStructV2Adapter.proto";
+//import "ProtobufQuickShopStructV2Adapter.proto";
+//import "ProtobufPermissionStructV2Adapter.proto";
+//import "ProtobufVideoUnreadStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+//import "ProtoAdapter_proto";
+
+message ProtobufUserStructV2Adapter {
+	string uid = 1;
+	string short_id = 2;
+	string nickname = 3;
+	int32 gender = 4;
+	string signature = 5;
+	ProtobufUrlStructV2Adapter  avatar_larger = 6;
+	ProtobufUrlStructV2Adapter   avatar_thumb = 7;
+	ProtobufUrlStructV2Adapter  avatar_medium = 8;
+	string birthday = 9;
+	bool is_verified = 10;
+	int32 allow_status = 11;
+	int32 follow_status = 12;
+	int32 aweme_count = 13;
+	int32 following_count = 14;
+	int32 follower_count = 15;
+	int32 favoriting_count = 16;
+	int64 total_favorited = 17;
+	bool is_block = 18;
+	string third_name = 19;
+	bool hide_search = 20;
+	int32 constellation = 21;
+	string location = 22;
+	bool hide_location = 23;
+	string weibo_verify = 24;
+	string custom_verify = 25;
+	string unique_id = 26;
+	string bind_phone = 27;
+	int32 special_lock = 28;
+	int32 need_recommend = 29;
+	bool is_binded_weibo = 30;
+	string weibo_name = 31;
+	string weibo_schema = 32;
+	string weibo_url = 33;
+	bool story_open = 34;
+	int32 story_count = 35;
+	string recommend_reason = 36;
+	bool has_facebook_token = 37;
+	bool has_twitter_token = 38;
+	int64 fb_expire_time = 39;
+	int64 tw_expire_time = 40;
+	bool has_youtube_token = 41;
+	int64 youtube_expire_time = 42;
+	int64 room_id = 43;
+	int32 live_verify = 44;
+	int64 authority_status = 45;
+	string verify_info = 46;
+	int32 shield_follow_notice = 47;
+	int32 shield_digg_notice = 48;
+	int32 shield_comment_notice = 49;
+	string school_name = 50;
+	string school_poi_id = 51;
+	int32 school_type = 52;
+	ProtobufShareStructV2Adapter share_info = 53;
+	bool with_commerce_entry = 54;
+	int32 verification_type = 55;
+	ProtobufOriginalMusicianStructV2Adapter original_musician = 56;
+	ProtoAdapter_ActivityStruct activity = 57;
+	string enterprise_verify_reason = 58;
+	bool is_ad_fake = 59;
+	bool star_use_new_download = 60;
+	int32 mplatform_followers_count = 61;
+	repeated ProtobufFollowersDetailV2Adapter followers_detail = 62;
+	bool has_activity_medal = 63;
+	string region = 64;
+	string account_region = 65;
+	int32 sync_to_toutiao = 66;
+	int32 commerce_user_level = 67;
+	ProtobufCommerceInfoStructV2Adapter commerce_info = 68;
+	int32 live_agreement = 69;
+	repeated ProtobufPlatformSyncStatusStructV2Adapter  platform_sync_info = 70;
+	bool with_shop_entry = 71;
+	bool is_discipline_member = 72;
+	int32 secret = 73;
+	bool has_orders = 74;
+	bool prevent_download = 75;
+	bool show_image_bubble = 76;
+	repeated string geofencing = 77;
+	int64 unique_id_modify_time = 78;
+	ProtobufUrlStructV2Adapter  video_icon = 79;
+	string ins_id = 80;
+	string google_account = 81;
+	string youtube_channel_id = 82;
+	string youtube_channel_title = 83;
+	int32 apple_account = 84;
+	bool with_dou_entry = 85;
+	bool with_fusion_shop_entry = 86;
+	bool is_phone_binded = 87;
+	int32 login_platform = 88;
+	bool accept_private_policy = 89;
+	int32 realname_verify_status = 90;
+	string twitter_id = 91;
+	string twitter_name = 92;
+	bool user_canceled = 93;
+	bool has_email = 94;
+	bool is_gov_media_vip = 95;
+	int32 dongtai_count = 96;
+	int32 live_agreement_time = 97;
+	int64 register_time = 98;
+	int32 status = 99;
+	bool with_douplus_entry = 100;
+	int64 create_time = 101;
+	string avatar_uri = 102;
+	int32 follower_status = 103;
+	int32 neiguang_shield = 104;
+	int32 comment_setting = 105;
+	int32 duet_setting = 106;
+	int64 reflow_page_gid = 107;
+	int64 reflow_page_uid = 108;
+	int32 user_rate = 109;
+	bool with_new_goods = 110;
+	bool is_flowcard_member = 111;
+	ProtobufUrlStructV2Adapter  room_cover = 112;
+	int32 download_setting = 113;
+	int64 download_prompt_ts = 114;
+	int32 react_setting = 115;
+	bool live_commerce = 116;
+	string college_name = 117;
+	string enroll_year = 118;
+	string country = 119;
+	string province = 120;
+	string city = 121;
+	repeated ProtobufUrlStructV2Adapter cover_url = 122;
+	string recommend_reason_relation = 123;
+	string iso_country_code = 124;
+	int32 show_gender_strategy = 125;
+	string district = 126;
+	string language = 127;
+	string room_type_tag = 128;
+	int32 dou_plus_share_location = 129;
+	bool has_insights = 130;
+	string remark_name = 131;
+	string video_icon_virtual_URI = 132;
+	string share_qrcode_uri = 133;
+	int32 profile_tab_type = 134;
+	ProtobufAvatarDecorationStructV2Adapter avatar_decoration = 135;
+	bool watch_status = 136;
+	bool with_commerce_newbie_task = 137;
+	bool with_item_commerce_entry = 138;
+	int32 star_billboard_rank = 139;
+	int32 education = 140;
+	bool can_modify_school_info = 141;
+	int32 school_visible = 142;
+	ProtobufUrlStructV2Adapter  avatar_pendant_larger = 143;
+	ProtobufUrlStructV2Adapter  avatar_pendant_thumb = 144;
+	ProtobufUrlStructV2Adapter  avatar_pendant_medium = 145;
+	repeated ProtobufRecommendItemStructV2Adapter item_list = 146;
+	int32 user_mode = 147;
+	int32 user_period = 148;
+	bool is_effect_artist = 149;
+	ProtobufEffectArtistStructV2Adapter effect_detail = 150;
+	ProtobufCommercePermissionStructV2Adapter commerce_permissions = 151;
+	ProtobufLifeStoryBlockStructV2Adapter  life_story_block = 152;
+	int32 hide_following_follower_list = 153;
+	bool has_unread_story = 154;
+	repeated ProtobufUrlStructV2Adapter  new_story_cover = 155;
+	int32 user_story_count = 156;
+	bool has_story = 157;
+	bool is_star = 158;
+	ProtoAdapter_DislikeDynamicReasonList douplus_toast = 159;
+	string cv_level = 160;
+	int32 creator_level = 161;
+	bool is_mirror = 162;
+	int32 pr_exempt = 163;
+	repeated int64 type_label = 164;
+	int64 avatar_decoration_id = 165;
+	bool with_luban_entry = 166;
+	repeated ProtobufUrlStructV2Adapter ad_cover_url = 167;
+	ProtobufAdCoverTitleV2Adapter ad_cover_title = 168;
+	string ad_order_id = 169;
+	ProtoAdapter_RFansGroupInfo  r_fans_group_info = 170;
+	bool with_commerce_enterprise_tab_entry = 171;
+	ProtobufLiveHonorStructV2Adapter honor_info = 172;
+	int32 comment_filter_status = 173;
+	int32 notify_private_account = 174;
+	ProtobufUrlStructV2Adapter avatar_168x168 = 175;
+	ProtobufUrlStructV2Adapter avatar_300x300 = 176;
+	bool is_blocked = 177;
+	bool force_private_account = 178;
+	bool with_star_atlas_entry = 179;
+	ProtobufHotsearchSprintStructV2Adapter sprint_support_user_info = 180;
+	string signature_language = 181;
+	ProtobufBlueVBrandInfoStructV2Adapter brand_info = 182;
+	bool display_wvalantine_activity_entry = 183;
+	string shop_micro_app = 184;
+	ProtobufCommerceUserStructV2Adapter commerce_user_info = 185;
+	repeated ProtobufRelativeUserStructV2Adapter relative_users = 186;
+	ProtobufQuickShopStructV2Adapter quick_shop_info = 187;
+	string relation_label = 188;
+	repeated ProtobufChallengeStructV2Adapter  cha_list = 189;
+	bool is_minor = 190;
+	string sec_uid = 191;
+	double recommend_score = 192;
+	int32 wx_tag = 193;
+	int64 open_insight_time = 194;
+	ProtobufPermissionStructV2Adapter general_permission = 195;
+	int32 birthday_hide_level = 196;
+	string bio_url = 197;
+	string bio_email = 198;
+	int64 latest_order_time = 199;
+	bool is_pro_account = 200;
+	bool with_stick_entry = 201;
+	string email = 202;
+	bool is_email_verified = 203;
+	string bio_secure_url = 204;
+	int32 collect_count = 205;
+	bool nickname_update_reminder = 206;
+	bool avatar_update_reminder = 207;
+	bool is_activity_user = 208;
+	string room_data = 209;
+	ProtobufVideoUnreadStructV2Adapter video_unread_info = 210;
+	bool is_life_style = 211;
+	int32 stitch_setting = 212;
+	bool is_mix_user = 213;
+	bool show_favorite_list_on_item = 214;
+	int32 signature_display_lines = 215;
+	int64 live_status = 216;
+	bool is_series_user = 217;
+	ProtoAdapter_RecommendTemplateStruct recommend_template = 218;
+	int32 new_friend_type = 219;
+	repeated int32 common_interest = 221;
+	string mkey = 222;
+	int32 online_status = 223;
+	int64 last_active_time = 224;
+	int64 total_favorited_new = 225;
+	ProtoAdapter_RecommendReasonData recommend_reason_data = 226;
+	ProtoAdapter_UserVirtualCharacterStruct user_virtual_character = 227;
+	ProtoAdapter_UserVirtualEmotionStruct user_virtual_emotion = 228;
+}
+//package VSEpisodeStruct;
+message ProtobufVarietyStructAdapter {
+	string raw_data = 1;
+}
+//package VideoControl;
+message ProtobufVideoControlV2Adapter{
+    bool allow_download = 1;
+    int32 share_type = 2;
+    int32 show_progress_bar = 3;
+    int32 draft_progress_bar = 4;
+    bool allow_duet = 5;
+    bool allow_react = 6;
+    int32 prevent_download_type = 7;
+    bool allow_dynamic_wallpaper = 8;
+    int32 timer_status = 9;
+    bool allow_music = 10;
+    bool allow_stitch = 11;
+    bool allow_douplus = 12;
+    int32 download_setting = 13;
+    bool allow_share = 14;
+    bool share_grayed = 15;
+    bool download_ignore_visibility = 16;
+    bool duet_ignore_visibility = 17;
+    bool share_ignore_visibility = 18;
+}
+
+//package VideoReplyStruct;
+message ProtobufVideoReplyStructV2Adapter {
+	int64 aweme_id = 1;
+	int64 comment_id = 2;
+	int64 alias_comment_id = 3;
+	int32 reply_type = 4;
+	int64 reply_user_id = 5;
+	int32 reply_aweme_version = 6;
+}
+//import "ProtobufBitRateStructV2Adapter.proto";
+//import "ProtoAdapter_proto";
+//import "ProtobufPlayTokenAuthStructV2Adapter.proto";
+//import "ProtobufUrlStructV2Adapter.proto";
+//package Video;
+
+
+message ProtobufVideoStructV2Adapter {
+	ProtobufUrlStructV2Adapter play_addr = 1;
+	ProtobufUrlStructV2Adapter cover = 2;
+	int32 height = 3;
+	int32 width = 4;
+	ProtobufUrlStructV2Adapter dynamic_cover = 5;
+	ProtobufUrlStructV2Adapter origin_cover = 6;
+	string ratio = 7;
+	ProtobufUrlStructV2Adapter download_addr = 8;
+	bool has_watermark = 9;
+	ProtobufUrlStructV2Adapter play_addr_lowbr = 10;
+	repeated ProtobufBitRateStructV2Adapter bit_rate = 11;
+	ProtobufUrlStructV2Adapter new_download_addr = 12;
+	int32 duration = 13;
+	ProtobufUrlStructV2Adapter download_suffix_logo_addr = 14;
+	bool has_download_suffix_logo_addr = 15;
+	ProtobufUrlStructV2Adapter play_addr_265 = 16;
+	int32 is_h265 = 17;
+	ProtobufUrlStructV2Adapter  play_addr_h264 = 18;
+	ProtobufUrlStructV2Adapter  ui_alike_download_addr = 19;
+	ProtobufUrlStructV2Adapter  caption_download_addr = 20;
+	int64 cdn_url_expired = 21;
+	int32 is_long_video = 22;
+	string video_model = 23;
+	bool need_set_token = 24;
+	string misc_download_addrs = 25;
+	ProtobufPlayTokenAuthStructV2Adapter token_auth = 26;
+	ProtobufUrlStructV2Adapter play_addr_bytevc1 = 27;
+	int32 is_bytevc1 = 28;
+	ProtoAdapter_BigThumb big_thumbs = 29;
+	string meta = 30;
+	ProtobufUrlStructV2Adapter blur_cover = 31;
+	ProtobufUrlStructV2Adapter AiCover = 32;
+	int32 is_source_HDR = 33;
+}
+//package AwemeTextLabelModel;
+message ProtobufVideoTextStructV2Adapter{
+    string text = 1;
+    string color = 2;
+    string color_text = 3;
+    int32 type = 4;
+}
+//package UnReadVideoInfo;
+message ProtobufVideoUnreadStructV2Adapter {
+	int32 unread_count = 1;
+	int64 latest_unread_video_created_time = 2;
+}
+//package VisionSearch;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufVisualSearchEntryStructV2Adapter {
+	string title = 1;
+	string sub_title = 2;
+	string text_color = 3;
+	ProtobufUrlStructV2Adapter icon_url =4;
+}
+//package VisualSearch;
+//import "ProtobufUrlStructV2Adapter.proto";
+message ProtobufVisualSearchStructV2Adapter {
+	bool visual_search_show_entry = 1;
+	string visual_search_goods_label = 2;
+	ProtobufUrlStructV2Adapter visual_search_img = 3;
+	string entry_text = 4;
+}
+//package OptionsBean;
+message ProtobufVoteOptionStructV2Adapter{
+    string option_text = 1;
+    int64 option_id = 2;
+    int64 vote_count = 3;
+    string option = 4;
+
+}
+//package VoteStruct;
+//import "ProtobufVoteOptionStructV2Adapter.proto";
+message ProtobufVoteStructV2Adapter{
+    int64 vote_id = 1;
+    int64 ref_id = 2;
+    int32 ref_type = 3;
+    string question = 4;
+    repeated ProtobufVoteOptionStructV2Adapter  options = 5;
+    int64 select_option_id = 6;
+
+}
+//package RoomFeedCellStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtobufWebcastRoomStructV2Adapter.proto";
+//import "ProtobufFansStructV2Adapter.proto";
+message ProtobufWebcastRoomFeedCellStructV2Adapter {
+	ProtobufWebcastRoomStructV2Adapter room = 1;
+	int32 type = 2;
+	ProtobufFansStructV2Adapter fans_struct = 3;
+	string tag = 4;
+	int64 tag_id = 5;
+	ProtobufUrlStructV2Adapter icon = 6;
+	string distance = 7;
+	string rawdata = 8;
+}
+//package LiveRoomStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+//import "ProtobufUserStructV2Adapter.proto";
+//import "ProtobufShareStructV2Adapter.proto";
+//import "ProtobufStreamUrlStructV2Adapter.proto";
+message ProtobufWebcastRoomStructV2Adapter {
+	int64 room_id = 1;
+	int32 status = 2;
+	ProtobufUserStructV2Adapter owner = 3;
+	string title = 4;
+	int32 user_count = 5;
+	int64 create_time = 6;
+	int64 finish_time = 7;
+	int64 stream_id = 8;
+	ProtobufStreamUrlStructV2Adapter stream_url = 9;
+	ProtobufShareStructV2Adapter share_info = 10;
+	int32 digg_count = 11;
+	int32 total_user_count = 12;
+	int32 coins = 13;
+	bool in_sandbox = 14;
+	ProtobufUrlStructV2Adapter dynamic_cover = 15;
+	ProtobufUrlStructV2Adapter room_cover = 16;
+	string room_type_tag = 17;
+	ProtobufStreamUrlStructV2Adapter additional_stream_url = 18;
+	ProtobufUrlStructV2Adapter webp_cover = 19;
+	string extra = 20;
+	bool live_type_audio = 21;
+	bool live_type_third_party = 22;
+	bool live_type_screenshot = 23;
+	bool live_type_official = 24;
+	bool live_type_normal = 25;
+	bool live_type_linkmic = 26;
+	bool live_type_sandbox = 27;
+	bool with_linkmic = 28;
+}
+//package XiGuaTaskStruct;
+message ProtobufXiguaTaskStructV2Adapter{
+    bool is_xigua_task = 1;
+    string jump_url = 2;
+    string title = 3;
+    string desc = 4;
+    string icon_url = 5;
+    int32 switch_type = 6;
+    string entrance_url = 7;
+}
+//package RelatedSearchBarStruct;
+//import "ProtobufUrlStructV2Adapter.proto";
+message RelatedSearchBarStruct {
+	string guide_text = 2;
+	ProtobufUrlStructV2Adapter icon = 1;
+	int32 jump_type = 4;
+	string query_id = 6;
+	string query_word = 3;
+	string schema = 5;
+}

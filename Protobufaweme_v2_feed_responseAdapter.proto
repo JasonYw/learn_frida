@@ -1,0 +1,30 @@
+syntax = "proto3";
+import "douyin_video_struct.proto";
+
+message Protobufaweme_v2_feed_responseAdapter {
+	int32 status_code = 1;
+	int64 min_cursor = 2;
+	int64 max_cursor = 3;
+	int32 has_more = 4;
+	repeated douyin.ProtobufAwemeStructV2Adapter aweme_list = 5;
+	string rid = 6;
+	int32 home_model = 7;
+	int32 refresh_clear = 8;
+	douyin.ProtobufExtraStructV2Adapter extra = 9;
+	douyin.ProtobufLogPbStructV2Adapter log_pb = 10;
+	string DebugInfo = 11;
+	douyin.ProtobufGuideWordV2Adapter guide_word = 12;
+	repeated douyin.ProtobufAwemeStructV2Adapter preload_ads = 13;
+	string status_msg = 14;
+	int32 block_code = 15;
+	repeated douyin.ProtobufAwemeStructV2Adapter preload_awemes = 16;
+	bool enable_re_rank = 17;
+	bool disable_adjust_for_cache = 18;
+	int32 pitaya_type = 19;
+	string pitaya_features = 20;
+	bool enable_splash_show = 21;
+	bool enable_client_ads_strategy = 22;
+	int32 rec_follow_unread_cnt = 23;
+	string sati_param_for_pitaya = 24;
+	string extra_info = 25;
+}

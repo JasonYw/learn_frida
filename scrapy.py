@@ -4,7 +4,16 @@ import requests
 import json
 import json
 import logging
+
+
+import Protobufaweme_v2_feed_responseAdapter_pb2
+import json
+from google.protobuf.json_format import MessageToDict
 logging.basicConfig(level=logging.INFO,format="[%(asctime)s %(funcName)s]-%(levelname)s : %(message)s",filename='log/scrapy.log')
+# with open('testdata.text', 'rb') as f:
+#     a = f.read()
+
+
 
 
 def recive(message,data):
@@ -19,9 +28,12 @@ def recive(message,data):
                 else:
                     bs.append(i)
             if 'https://aweme.snssdk.com/aweme/v2/feed/?' in message.get("payload").get("url"):
-                c = open(f'result/{now}','wb')
-                c.write(bs)
-                c.close()
+                info = Protobufaweme_v2_feed_responseAdapter_pb2.Protobufaweme_v2_feed_responseAdapter()
+                info.ParseFromString(bytes(bs))
+                print(json.dumps(MessageToDict(info, preserving_proto_field_name=True), ensure_ascii=False))
+                # c = open(f'result/{now}','wb')
+                # c.write(bs)
+                # c.close()
             elif 'https://aweme.snssdk.com/aweme/v1/search/item/' in message.get("payload").get("url"):
                 c = open(f'result/{now}.json','wb')
                 c.write(bs)
@@ -45,24 +57,6 @@ def attach():
     input()
     
 
-def req(url):
-    d = open('req.json','w',encoding='utf-8')
-    headers ={
-        'x-tt-dt':'AAAVYLBJAGWCCOZTEGZHXMZS7JZDUEL4TS4VWANJ7JFOLBYIVDJBZRMBXHNCIEE2QC5Q7ZHL27BCV22VAWDQYKXQFJAEQW5M5ZWJGPRYWQPZ34AIXPMDDJCSKMSABKW6U4VLZAE7EVWAINFTHUT5WYA', 
-        'activity_now_client': '1658972527167', 
-        'X-SS-REQ-TICKET': '1658972530971',
-        'x-tt-request-tag': 't=0;n=0',
-        'x-vc-bdturing-sdk-version': '2.2.1.cn', 
-        'sdk-version': '2', 
-        'passport-sdk-version': '20369',
-    }
-    res = requests.post(url,headers=headers)
-    message, typedef = blackboxprotobuf.protobuf_to_json(res.content)
-    # message = json.loads(message)
-    
-    d.write(message+'\n')
-    d.close()
-    # print(message)
     
 
 if __name__ == "__main__":
