@@ -336,7 +336,7 @@ message ProtoAdapter_FromNearbyBarStruct {
 	int32 frequency_limit = 5;
 	ProtobufUrlStructV2Adapter icon = 3;
 	string id = 1;
-	ProtoAdapter_NameValuePair report_values = 6;
+	repeated ProtoAdapter_NameValuePair report_values = 6;
 	string schema = 4;
 	string text = 2;
 }
@@ -364,7 +364,7 @@ message ProtoAdapter_GrootInteractionStickerStruct{
 //package GuideBtnStruct;
 //import "ProtoAdapter_BtnPropertyStruct.proto";
 message ProtoAdapter_GuideBtnStruct {
-	ProtoAdapter_BtnPropertyStruct buttons = 2;
+	repeated ProtoAdapter_BtnPropertyStruct buttons = 2;
 	string config = 1;
 }
 //package HitTaskInfo;
@@ -440,7 +440,7 @@ message ProtoAdapter_LiveFeedbackCard {
 }
 //package LiveFeedbackCondition;
 message ProtoAdapter_LiveFeedbackCondition {
-	int64 action_ids = 3;
+	repeated int64 action_ids = 3;
 	int64 action_type = 4;
 	int64 from_time = 1;
 	int64 preview_time = 5;
@@ -461,6 +461,7 @@ message ProtoAdapter_LiveFeedbackQuestion {
 	string question_key = 1;
 	string question_text = 2;
 	int64 type = 3;
+	int64 id = 5;
 }
 //package LynxButtonStruct;
 message ProtoAdapter_LynxButtonStruct {
@@ -606,14 +607,14 @@ message ProtoAdapter_PromotionStruct{
     string last_aweme_id = 13;
     string elastic_title = 14;
     string elastic_introduction = 15;
-    ProtobufUrlStructV2Adapter elastic_img = 16;
+    repeated ProtobufUrlStructV2Adapter elastic_img = 16;
     repeated string label = 17;
     ProtobufUrlStructV2Adapter visitor = 18;
     string h5_url = 19;
     double cos_radio = 20;
     string logo = 21;
     string source = 22;
-    ProtobufUrlStructV2Adapter imgs = 23;
+    repeated ProtobufUrlStructV2Adapter imgs = 23;
     int32 promotion_source = 24;
     int32 elastic_type = 25;
     string title_prefix = 26;
@@ -671,7 +672,7 @@ message ProtoAdapter_ReadingBarStruct {
 	string extra = 6;
 	string font_color = 11;
 	ProtobufUrlStructV2Adapter icon = 2;
-	string C33968a_f42937f = 1;
+	string id = 1;
 	string open_app_schema = 7;
 	string open_url = 4;
 	string prefix = 10;
@@ -810,6 +811,7 @@ message ProtoAdapter_SongStruct {
 }
 //package StandardBarInfoStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_StandardBarInfoStruct {
 	int32 Constants_APP_ID = 5;
 	string app_schema = 12;
@@ -817,7 +819,7 @@ message ProtoAdapter_StandardBarInfoStruct {
 	int32 biz_scene = 4;
 	string extra = 13;
 	ProtobufUrlStructV2Adapter icon_url = 9;
-	string C33968a_f42937f = 1;
+	string id = 1;
 	int64 item_id = 7;
 	string jump_confirm_title = 11;
 	int32 relation_type = 6;
@@ -993,7 +995,7 @@ message ProtoAdapter_VSBarStruct {
 //import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_XiguaRelatedBarStruct {
 	ProtobufUrlStructV2Adapter icon = 2;
-	string C33968a_f42937f = 1;
+	string id = 1;
 	string jump_confirm_title = 8;
 	string open_app_schema = 6;
 	string open_url = 4;
@@ -1053,7 +1055,7 @@ message ProtobufAnchorCommonStructV2Adapter{
     string log_extra = 12;
     string description = 13;
     ProtobufUrlStructV2Adapter thumbnail = 14; 
-    ProtoAdapter_AnchorPanelActionStruct actions = 15;
+    repeated ProtoAdapter_AnchorPanelActionStruct actions = 15;
 
 }
 //package AnchorShopLinkStruct;
@@ -1424,6 +1426,7 @@ message ProtobufAwemeStructV2Adapter {
 	string sort_label = 40;
 	repeated ProtobufPositionStructV2Adapter  position = 41;
 	repeated ProtobufPositionStructV2Adapter uniqid_position = 42;
+	repeated ProtoAdapter_CommentStruct comment_list = 43;
 	int64 author_user_id = 44;
 	int32 bodydance_score = 45;
 	repeated string geofencing = 46;
@@ -1557,7 +1560,7 @@ message ProtobufAwemeStructV2Adapter {
 	ProtoAdapter_FamiliarActivityStruct familiar_activity = 176;
 	ProtoAdapter_EffectGuideStruct effect_guide = 179;
 	repeated ProtoAdapter_ImageUrlStruct images = 180;
-	ProtobufPoiBizStructV2Adapter  poi_biz = 181;
+	ProtobufPoiBizStructV2Adapter poi_biz = 181;
 	bool need_mark_friend = 182;
 	ProtoAdapter_QuestionnaireStruct questionnaire = 183;
 	int32 horizontal_type = 184;
@@ -1614,7 +1617,7 @@ message ProtobufAwemeStructV2Adapter {
 	bool show_music_collect_button = 237;
 	ProtobufFeedEventCardInfoV2Adapter  feed_event_card_info = 238;
 	string extra_info = 239;
-	ProtoAdapter_ImageGearedStruct img_bitrate = 240;
+	repeated ProtoAdapter_ImageGearedStruct img_bitrate = 240;
 	string music_display_mapping_title = 241;
 	ProtoAdapter_AdmireAuth admire_auth = 242; 
 	string press_panel_info = 243;
@@ -2718,7 +2721,7 @@ message ProtobufStarAtlasLinkStructV2Adapter{
     string id = 1;
     string title = 2;
     string sub_title = 3;
-     ProtobufUrlStructV2Adapter avatar_icon = 4;
+    ProtobufUrlStructV2Adapter avatar_icon = 4;
     string web_url = 5;
     string open_url = 6;
     string compliance_data = 7;
@@ -3133,7 +3136,7 @@ message ProtobufVideoStructV2Adapter {
 	ProtobufPlayTokenAuthStructV2Adapter token_auth = 26;
 	ProtobufUrlStructV2Adapter play_addr_bytevc1 = 27;
 	int32 is_bytevc1 = 28;
-	ProtoAdapter_BigThumb big_thumbs = 29;
+	repeated ProtoAdapter_BigThumb big_thumbs = 29;
 	string meta = 30;
 	ProtobufUrlStructV2Adapter blur_cover = 31;
 	ProtobufUrlStructV2Adapter AiCover = 32;

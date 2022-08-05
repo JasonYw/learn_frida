@@ -1,26 +1,41 @@
-Protobufaweme_v2_feed_responseAdapter
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 1, status_code(feedItemList));
-ProtoAdapter.INT64.encodeWithTag(protoWriter, 2, min_cursor(feedItemList));
-ProtoAdapter.INT64.encodeWithTag(protoWriter, 3, max_cursor(feedItemList));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 4, has_more(feedItemList));
-Aweme.ADAPTER.asRepeated().encodeWithTag(protoWriter, 5, aweme_list(feedItemList));
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 6, rid(feedItemList));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 7, home_model(feedItemList));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 8, refresh_clear(feedItemList));
-Extra.ADAPTER.encodeWithTag(protoWriter, 9, extra(feedItemList));
-LogPbBean.ADAPTER.encodeWithTag(protoWriter, 10, log_pb(feedItemList));
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 11, DebugInfo(feedItemList));
-HotSearchGuideWord.ADAPTER.encodeWithTag(protoWriter, 12, guide_word(feedItemList));
-Aweme.ADAPTER.asRepeated().encodeWithTag(protoWriter, 13, preload_ads(feedItemList));
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 14, status_msg(feedItemList));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 15, block_code(feedItemList));
-Aweme.ADAPTER.asRepeated().encodeWithTag(protoWriter, 16, preload_awemes(feedItemList));
-ProtoAdapter.BOOL.encodeWithTag(protoWriter, 17, enable_re_rank(feedItemList));
-ProtoAdapter.BOOL.encodeWithTag(protoWriter, 18, disable_adjust_for_cache(feedItemList));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 19, pitaya_type(feedItemList));
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 20, pitaya_features(feedItemList));
-ProtoAdapter.BOOL.encodeWithTag(protoWriter, 21, enable_splash_show(feedItemList));
-ProtoAdapter.BOOL.encodeWithTag(protoWriter, 22, enable_client_ads_strategy(feedItemList));
-ProtoAdapter.INT32.encodeWithTag(protoWriter, 23, rec_follow_unread_cnt(feedItemList));
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 24, sati_param_for_pitaya(feedItemList));
-ProtoAdapter.STRING.encodeWithTag(protoWriter, 25, extra_info(feedItemList));
+ProtoAdapter_StandardBarInfoStruct
+@SerializedName(Constants.APP_ID)
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", label = WireField.Label.REQUIRED, tag = 5)
+public int appId;
+@SerializedName("app_schema")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 12)
+public String appSchema;
+@SerializedName("applet_schema")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 10)
+public String appletSchema;
+@SerializedName("biz_scene")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", label = WireField.Label.REQUIRED, tag = 4)
+public int bizScene;
+@SerializedName("extra")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 13)
+public String extra;
+@SerializedName("icon_url")
+@WireField(adapter = "com.ss.android.ugc.aweme.base.model.UrlModel#ADAPTER", tag = 9)
+public UrlModel iconUrl;
+@SerializedName(C33968a.f42937f)
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", label = WireField.Label.REQUIRED, tag = 1)
+
+/* renamed from: id */
+public String f41290id;
+@SerializedName("item_id")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT64", label = WireField.Label.REQUIRED, tag = 7)
+public long itemId;
+@SerializedName("jump_confirm_title")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", tag = 11)
+public String jumpConfirmTitle;
+@SerializedName("relation_type")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", label = WireField.Label.REQUIRED, tag = 6)
+public int relationType;
+@SerializedName("standard_bar_id")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#INT32", label = WireField.Label.REQUIRED, tag = 8)
+public int standardBarId;
+@SerializedName("text")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", label = WireField.Label.REQUIRED, tag = 3)
+public String text;
+@SerializedName("title")
+@WireField(adapter = "com.squareup.wire.ProtoAdapter#STRING", label = WireField.Label.REQUIRED, tag = 2)
