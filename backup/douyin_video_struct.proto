@@ -7,6 +7,7 @@ message ProtoAdapter_ActivityButtonStruct {
 }
 //package ActivityStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_ActivityStruct {
 	int32 use_music_count = 1;
 	int32 digg_count = 2;
@@ -32,6 +33,8 @@ message ProtoAdapter_AncestorInfoStruct {
 }
 //package AnchorPanelActionStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
+
 message ProtoAdapter_AnchorPanelActionStruct{
     ProtobufUrlStructV2Adapter icon = 1;
     string schema = 2;
@@ -39,6 +42,7 @@ message ProtoAdapter_AnchorPanelActionStruct{
 }
 //package AwemeGDAdStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_AwemeGDAdStruct {
 	int64 ad_id = 1;
 	int32 ad_price = 5;
@@ -128,6 +132,9 @@ message ProtoAdapter_CircleTipStruct {
 }
 //package CoCreatorStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
+
+
 message ProtoAdapter_CoCreatorStruct {
 	ProtobufUrlStructV2Adapter avatar_thumb = 4;
 	string extra = 11;
@@ -153,6 +160,8 @@ message ProtoAdapter_CommentPermissionInfo {
 //import "ProtobufRelationDynamicLableStructV2Adapter.proto";
 //import "ProtobufTextExtraStructV2Adapter.proto";
 //import "ProtobufUserStructV2Adapter.proto";
+
+
 message ProtoAdapter_CommentStruct{
     string cid = 1;
     string text = 2;
@@ -178,6 +187,7 @@ message ProtoAdapter_CommentStruct{
 //package CommerceStickerStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
 //import "ProtoAdapter_proto";
+
 message ProtoAdapter_CommerceStickerStruct{
     string id = 1;
     string ad_owner_id = 2;
@@ -218,6 +228,7 @@ message ProtoAdapter_CustomTagInteractionStickerStruct {
 	string name = 1;
 }
 //package DiaryStruct;
+
 //import "ProtobufUrlStructV2Adapter.proto";
 message ProtoAdapter_DiaryStruct {
 	string desc = 3;
@@ -259,6 +270,7 @@ message ProtoAdapter_EditAwemeBarInfo {
 }
 //package EffectGuideStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_EffectGuideStruct {
 	string effect_id = 3;
 	string effect_name = 4;
@@ -317,6 +329,7 @@ message ProtoAdapter_FeedDiversitySurvey {
 }
 //import "ProtoAdapter_proto";
 //import "ProtobufUrlStructV2Adapter.proto";
+
 //package FromNearbyBarStruct;
 message ProtoAdapter_FromNearbyBarStruct {
 	string extra = 100;
@@ -481,12 +494,14 @@ message ProtoAdapter_MusicArtistStruct {
 }
 //package MusicImageBeatsStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_MusicImageBeatsStruct {
 	string  music_image_beats_raw = 2;
 	ProtobufUrlStructV2Adapter music_image_beats_url = 1;
 }
 //package MusicPromoteCommentAnchorStruct;
 //import "ProtoAdapter_proto";
+
 message ProtoAdapter_MusicPromoteCommentAnchorStruct {
 	string UGCMonitor_EVENT_COMMENT = 2;
 	int64 meta_song_id = 3;
@@ -506,6 +521,7 @@ message ProtoAdapter_NameValuePair {
 //import "ProtoAdapter_proto";
 //import "ProtobufShareStructV2Adapter.proto";
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_NewFaceStickerStruct{
     string id = 1;
     string name = 2;
@@ -574,6 +590,7 @@ message ProtoAdapter_ProductTagInteractionStickerStruct {
 //package PromotionStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
 //import "ProtoAdapter_proto";
+
 message ProtoAdapter_PromotionStruct{
     string promotion_id = 1;
     string gid = 2;
@@ -794,6 +811,7 @@ message ProtoAdapter_SongStruct {
 }
 //package StandardBarInfoStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_StandardBarInfoStruct {
 	int32 Constants_APP_ID = 5;
 	string app_schema = 12;
@@ -891,8 +909,11 @@ message ProtoAdapter_TextContentStruct {
 	
 }
 //package TextInteractionStickerStruct;
+
 //import "ProtobufHashTagStickerStructV2Adapter.proto";
 //import "ProtobufMentionStickerStructV2Adapter.proto";
+
+
 message ProtoAdapter_TextInteractionStickerStruct{
     int32 type = 1;
     int32 index = 2;
@@ -912,6 +933,7 @@ message ProtoAdapter_UserTagInteractionStickerStruct {
 }
 //package UserVirtualAnimAvatarStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtoAdapter_UserVirtualAnimAvatarStruct {
 	ProtobufUrlStructV2Adapter large_virtual_avatar = 1;
 	ProtobufUrlStructV2Adapter small_virtual_avatar = 2;
@@ -994,6 +1016,7 @@ message ProtobufActivityTimeRangeV2Adapter{
     double end = 2;
     double duration = 3;
 }
+
 //package AdCoverTitle;
 message ProtobufAdCoverTitleV2Adapter {
 	string title = 1;
@@ -1014,7 +1037,9 @@ message ProtobufAddressStructV2Adapter{
 }
 //package AnchorCommonStruct;
 //import "ProtoAdapter_proto";
+
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtobufAnchorCommonStructV2Adapter{
     string keyword = 1;
     string url = 2;
@@ -1031,6 +1056,7 @@ message ProtobufAnchorCommonStructV2Adapter{
     string description = 13;
     ProtobufUrlStructV2Adapter thumbnail = 14; 
     repeated ProtoAdapter_AnchorPanelActionStruct actions = 15;
+
 }
 //package AnchorShopLinkStruct;
 message ProtobufAnchorShopLinkStructV2Adapter{
@@ -1131,6 +1157,7 @@ message ProtobufAwemeFloatingCardStructV2Adapter{
 }
 //package AwemeLabelModel;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtobufAwemeLabelStructV2Adapter{
     ProtobufUrlStructV2Adapter label_url = 1;
     int32 label_type = 2;
@@ -1145,6 +1172,7 @@ message ProtobufAwemeLiteStructV2Adapter {
 	int32 red_pack_user_status = 6;
 }
 //package AwemeNationalTask;
+
 //import "ProtoAdapter_proto";
 message ProtobufAwemeNationalTaskStructV2Adapter {
 	ProtoAdapter_LiveAppointmentStruct live_appointment =  2;
@@ -1156,7 +1184,9 @@ message ProtobufAwemePromotionOtherStructV2Adapter{
     bool order_share_recommend = 3;
 }
 //package AwemeRiskModel;
+
 message ProtobufAwemeRiskStructV2Adapter{
+
     bool vote = 1;
     bool warn = 2;
     bool risk_sink = 3;
@@ -1164,8 +1194,10 @@ message ProtobufAwemeRiskStructV2Adapter{
     string content = 5;
     bool notice = 6;
     string url = 7;
+
 }
 //package HotSearchInfo;
+
 message ProtobufAwemeSearchStructV2Adapter{
     string sentence = 1;
     string challenge_id = 2;
@@ -1181,11 +1213,15 @@ message ProtobufAwemeSearchStructV2Adapter{
 //package AwemeStarAtlas;
 //import "ProtoAdapter_proto";
 //import "ProtobufStarAtlasLinkStructV2Adapter.proto";
+
+
+
 message ProtobufAwemeStarAtlasStructV2Adapter{
     int32 review_status = 1;
     ProtobufStarAtlasLinkStructV2Adapter link_info = 2;
     string log_extra =3;
     ProtoAdapter_StarAtlasLiveInfoForBarStruct live_attract_info = 4;
+
 }
 //package AwemeStatistics;
 message ProtobufAwemeStatisticsStructV2Adapter{
@@ -1202,6 +1238,7 @@ message ProtobufAwemeStatisticsStructV2Adapter{
     int64 collect_count = 11;
     int64 admire_count = 12;
 }
+
 //package AwemeStatus;
 //import "ProtoAdapter_proto";
 message ProtobufAwemeStatusStructV2Adapter {
@@ -1345,6 +1382,7 @@ message ProtobufAwemeStatusStructV2Adapter {
 //import "ProtobufHybridLabelStructV2Adapter.proto";
 //import "ProtobufRelationRecommendStructV2Adapter.proto";
 //import "ProtobufUserProfileStructV2Adapter.proto";
+
 message ProtobufAwemeStructV2Adapter {
 	string aweme_id = 1;
 	string desc = 2;
@@ -1663,6 +1701,7 @@ message ProtobufBannerTipV2Adapter {
 }
 //package BitRate;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtobufBitRateStructV2Adapter {
     string gear_name = 1;
     int32 quality_type = 2;
@@ -1675,6 +1714,8 @@ message ProtobufBitRateStructV2Adapter {
     string HDR_type = 9;
     string HDR_bit = 10;
     int64 FPS = 11;
+
+
 }
 //package BlueVBrandInfo;
 //import "ProtobufUrlStructV2Adapter.proto";
@@ -1705,6 +1746,7 @@ message ProtobufBonusCommerceV2Adapter {
 //package TcBonus;
 //import "ProtobufBonusAuthorV2Adapter.proto";
 //import "ProtobufBonusCommerceV2Adapter.proto";
+
 message ProtobufBonusV2Adapter {
 	int32 bonus_type = 1;
 	ProtobufBonusAuthorV2Adapter author =2;
@@ -1756,6 +1798,7 @@ message ProtobufCategoryCoverStructV2Adapter {
 //import "ProtobufShareStructV2Adapter.proto";
 //import "ProtobufUrlStructV2Adapter.proto";
 //import "ProtobufUserStructV2Adapter.proto";
+
 message ProtobufChallengeStructV2Adapter {
 	string cid = 1;
 	string cha_name = 2;
@@ -1842,6 +1885,7 @@ message ProtobufCommerceActivityStructV2Adapter{
     string compliance_data = 14;
     string config_id = 15;
 }
+
 //package CommerceConfigData;
 //import "ProtoAdapter_proto";
 //import "ProtobufItemLikeEggDataV2Adapter.proto";
@@ -1851,12 +1895,14 @@ message ProtobufCommerceConfigDataV2Adapter{
     ProtobufItemLikeEggDataV2Adapter item_like_egg = 3;
     ProtoAdapter_StickerPendantStruct sticker_pendant = 4;
     string data = 5;
+
 }
 //package CommerceInfo;
 //import "ProtobufChallengeStructV2Adapter.proto";
 //import "ProtobufOfflineInfoStructV2Adapter.proto";
 //import "ProtobufSmartPhoneSettingsStructV2Adapter.proto";
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtobufCommerceInfoStructV2Adapter {
 	ProtobufUrlStructV2Adapter head_image_url = 1;
 	repeated ProtobufOfflineInfoStructV2Adapter  offline_info_list = 2;
@@ -1873,6 +1919,7 @@ message ProtobufCommercePermissionStructV2Adapter {
 }
 //package CommerceUserInfo;
 //import "ProtobufLinkUserInfoStructV2Adapter.proto";
+
 message ProtobufCommerceUserStructV2Adapter {
 	int32 star_atlas = 1;
 	bool show_star_atlas_cooperation = 2;
@@ -1982,14 +2029,18 @@ message ProtobufHotSearchDataFeedCellStructV2Adapter {
 }
 //package HotsearchSprintStruct;
 //import "ProtoAdapter_proto";
+
 message ProtobufHotsearchSprintStructV2Adapter {
 	int32 sprint = 1;
 	repeated ProtoAdapter_SimpleUserStruct followers =2;
 }
+
+
 //package HotSearchItem;
 //import "ProtobufHotSearchWordStructV2Adapter.proto";
 //import "ProtobufHotWordGuideInfoStructV2Adapter.proto";
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtobufHotSearchWordStructV2Adapter {
 	string word = 1;
 	int32 label = 2;
@@ -2039,11 +2090,15 @@ message ProtobufIconButtonStructV2Adapter {
 }
 //package ImageInfo;
 //import "ProtobufUrlStructV2Adapter.proto";
+
+
+
 message ProtobufImageInfoStructV2Adapter{
     int32 height = 1;
     int32 width = 2;
     ProtobufUrlStructV2Adapter label_large = 3; 
     ProtobufUrlStructV2Adapter label_thumb = 4; 
+
 }
 //package InteractStickerStruct;
 //import "ProtoAdapter_ReplyToproto";
@@ -2057,6 +2112,7 @@ message ProtobufImageInfoStructV2Adapter{
 //import "ProtobufVoteStructV2Adapter.proto";
 //import "ProtoAdapter_proto";
 //import "ProtoAdapter_proto";
+
 message ProtobufInteractionStickerStructV2Adapter{
     int32 type = 1;
     int32 index = 2;
@@ -2076,6 +2132,7 @@ message ProtobufInteractionStickerStructV2Adapter{
     int32 image_index = 16;
     ProtoAdapter_ReplyToCommentStruct  reply_to_comment = 17;
     string sticker_config = 18;
+
 }
 //package ItemLikeEggData;
 message ProtobufItemLikeEggDataV2Adapter{
@@ -2104,6 +2161,7 @@ message ProtobufLinkUserInfoStructV2Adapter {
 	int32 auth_type = 2;
 }
 //package HonorStruct;
+
 //import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufLiveHonorStructV2Adapter {
 	int32 honor_level = 1;
@@ -2123,6 +2181,7 @@ message ProtobufLivePreviewStructV2Adapter{
     string promotion_detail = 10;
     string sticker_extra_info = 11;
 }
+
 //package LogPbBean;
 message ProtobufLogPbStructV2Adapter {
 	string impr_id = 2;
@@ -2179,6 +2238,7 @@ message ProtobufMentionStickerStructV2Adapter{
     string user_id = 3;
     ProtobufUrlStructV2Adapter avatar_thumb = 4; 
     string signature = 5;
+
 }
 //package MiniAppCard;
 message ProtobufMicroAppCardStructV2Adapter{
@@ -2202,6 +2262,7 @@ message ProtobufMicroAppStructV2Adapter{
     ProtobufMicroAppCardStructV2Adapter card = 11;   
     string web_url = 12;
 }
+
 //package MixStatisStruct;
 message ProtobufMixStatisStructV2Adapter{
     int64 play_vv = 1;
@@ -2250,6 +2311,7 @@ message ProtobufMixStructV2Adapter{
 //import "ProtobufUserStructV2Adapter.proto";
 //import "ProtobufChallengeStructV2Adapter.proto";
 //import "ProtoAdapter_proto";
+
 message ProtobufMusicStructV2Adapter {
 	int64 m7669id = 1;
 	string id_str = 2;
@@ -2327,6 +2389,8 @@ message ProtobufMusicStructV2Adapter {
 }
 //package NearbyCircleTipStruct;
 //import "ProtobufRelativeUserStructV2Adapter.proto";
+
+
 message ProtobufNearbyCircleTipStructV2Adapter {
 	int64 douyin_circle_id = 1;
 	string circle_title = 2;
@@ -2334,6 +2398,7 @@ message ProtobufNearbyCircleTipStructV2Adapter {
 	repeated ProtobufRelativeUserStructV2Adapter  relative_users = 4;
 }
 //package NearbyBubbleStruct;
+
 message ProtobufNearbyTabBubbleStructV2Adapter {
 	string nearby_tab_bubble_text = 1;
 	string nearby_tab_bubble_message = 2;
@@ -2342,6 +2407,7 @@ message ProtobufNearbyTabBubbleStructV2Adapter {
 	repeated int32 life_bubble_show_condition = 5;
 }
 //package StoryIdStruct;
+
 message ProtobufNewStoryIdStructV2Adapter {
 	string m8201id = 1;
 	int32 offset = 2;
@@ -2385,6 +2451,7 @@ message ProtobufPlayTokenAuthStructV2Adapter {
 }
 //package poiAwemeTagRateStruct;
 //import "ProtobufPoiTagRateGradeStructV2Adapter.proto";
+
 message ProtobufPoiAwemeTagRateInfoStructV2Adapter {
 	string rate_id = 1;
 	ProtobufPoiTagRateGradeStructV2Adapter rate_grade =3;
@@ -2406,24 +2473,33 @@ message ProtobufPoiBizStructV2Adapter {
 	string show_poi_collect_button_rule_json = 11;
 }
 //package PoiCardStruct;
+
 message ProtobufPoiCardStructV2Adapter{
     int32 is_show = 1;
     string url = 2;
 }
 //package PoiDouDiscountStruct;
+
 //import "ProtoAdapter_proto";
 //import "ProtobufAwemeSearchStructV2Adapter.proto";
+
+
+
 message ProtobufPoiDouDiscountStructV2Adapter {
 	string dou_discount_label = 1;
 	ProtobufAwemeSearchStructV2Adapter dou_discount_mix_info = 2;
 	ProtoAdapter_PoiDouDiscountRankInfoStruct dou_discount_rank_info = 3; 
 }
 //package PoiStruct;
+
 //import "ProtobufAddressStructV2Adapter.proto";
 //import "ProtobufPoiBackendTypeStructV2Adapter.proto";
 //import "ProtobufPoiCardStructV2Adapter.proto";
 //import "ProtobufShareStructV2Adapter.proto";
 //import "ProtobufUrlStructV2Adapter.proto";
+
+
+
 message ProtobufPoiStructV2Adapter{
     string poi_id = 1;
     string poi_name = 2;
@@ -2472,6 +2548,7 @@ message ProtobufPoiStructV2Adapter{
     string ext_json = 48;
     bool is_food_group_buy = 49;
     bool is_at_call_back_collect = 50;
+
 }
 //package PoiTagRateGradeStruct;
 message ProtobufPoiTagRateGradeStructV2Adapter {
@@ -2510,6 +2587,7 @@ message ProtobufQuickShopStructV2Adapter {
 }
 //package RecommendAwemeItem;
 //import "ProtobufUrlStructV2Adapter.proto";
+
 message ProtobufRecommendItemStructV2Adapter {
 	string aweme_id = 1;
 	ProtobufUrlStructV2Adapter cover = 2;
@@ -2518,6 +2596,8 @@ message ProtobufRecommendItemStructV2Adapter {
 }
 //package RelationDynamicLabel;
 //import "ProtobufUrlStructV2Adapter.proto";
+
+
 message ProtobufRelationDynamicLableStructV2Adapter {
     string nickname = 1;
     string label_info = 2;
@@ -2535,6 +2615,7 @@ message ProtobufRelationDynamicLableStructV2Adapter {
     int64 tag_id = 14;
 }
 //package relationLabelNew;
+
 //import "ProtobufRelativeUserStructV2Adapter.proto";
 message ProtobufRelationLabelStructV2Adapter{
     repeated ProtobufRelativeUserStructV2Adapter user_list = 1;
@@ -2573,10 +2654,12 @@ message ProtobufReplyToAwemeStructV2Adapter{
     int32 type = 14;
 }
 //package SeriesStructV2;
+
 //import "ProtoAdapter_proto";
 //import "ProtobufShareStructV2Adapter.proto";
 //import "ProtobufUrlStructV2Adapter.proto";
 //import "ProtobufUserStructV2Adapter.proto";
+
 message ProtobufSeriesStructV2Adapter {
 	string series_id = 1;
 	string series_name = 2;
@@ -2591,6 +2674,9 @@ message ProtobufSeriesStructV2Adapter {
 }
 //package ShareInfo;
 //import "ProtobufUrlStructV2Adapter.proto";
+
+
+
 message ProtobufShareStructV2Adapter{
     string share_url = 1;
     string share_weibo_desc = 2;
@@ -2617,6 +2703,7 @@ message ProtobufSmartPhoneSettingsStructV2Adapter {
 	string encrypt_key = 3;
 }
 //package SpecialSticker;
+
 //import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufSpecialStickerStructV2Adapter{
     int32 sticker_type = 1;
@@ -2627,6 +2714,7 @@ message ProtobufSpecialStickerStructV2Adapter{
     string open_url = 6;
     string compliance_data = 7;
 }
+
 //package StarAtlasLink;
 //import "ProtobufUrlStructV2Adapter.proto";
 message ProtobufStarAtlasLinkStructV2Adapter{
@@ -2638,10 +2726,14 @@ message ProtobufStarAtlasLinkStructV2Adapter{
     string open_url = 6;
     string compliance_data = 7;
     string download_url = 8;
+
 }
+
 //package StoryGroupStruct;
 //import "ProtobufNewStoryIdStructV2Adapter.proto";
 //import "ProtobufStoryStructV2Adapter.proto";
+
+
 message ProtobufStoryGroupStructV2Adapter {
 	repeated ProtobufStoryStructV2Adapter story_list = 1;
 	int32 offset = 2;
@@ -2658,7 +2750,9 @@ message ProtobufStoryGroupStructV2Adapter {
 	repeated ProtobufNewStoryIdStructV2Adapter story_id_list = 13;
 }
 //import "ProtobufAwemeStructV2Adapter.proto";
+
 //package StoryStruct;
+
 message ProtobufStoryStructV2Adapter {
 	ProtobufAwemeStructV2Adapter story = 1;
 	bool unread = 2;
@@ -2673,6 +2767,7 @@ message ProtobufStreamUrlStructV2Adapter {
 	string m8196id = 6;
 }
 //package TextExtraStruct;
+
 message ProtobufTextExtraStructV2Adapter{
     int32 start = 1;
     int32 end = 2;
@@ -2691,7 +2786,11 @@ message ProtobufTextExtraStructV2Adapter{
     int32 search_hide_words = 15;
     int32 tag_mention_need_fold = 16;
 }
+
 //package UrlModel;
+
+
+
 message ProtobufUrlStructV2Adapter{
     string uri = 1;
     repeated string url_list = 2;
@@ -2736,6 +2835,7 @@ message ProtobufUserProfileStructV2Adapter {
 //import "ProtobufVideoUnreadStructV2Adapter.proto";
 //import "ProtoAdapter_proto";
 //import "ProtoAdapter_proto";
+
 message ProtobufUserStructV2Adapter {
 	string uid = 1;
 	string short_id = 2;
@@ -2990,6 +3090,7 @@ message ProtobufVideoControlV2Adapter{
     bool duet_ignore_visibility = 17;
     bool share_ignore_visibility = 18;
 }
+
 //package VideoReplyStruct;
 message ProtobufVideoReplyStructV2Adapter {
 	int64 aweme_id = 1;
@@ -3004,6 +3105,8 @@ message ProtobufVideoReplyStructV2Adapter {
 //import "ProtobufPlayTokenAuthStructV2Adapter.proto";
 //import "ProtobufUrlStructV2Adapter.proto";
 //package Video;
+
+
 message ProtobufVideoStructV2Adapter {
 	ProtobufUrlStructV2Adapter play_addr = 1;
 	ProtobufUrlStructV2Adapter cover = 2;
@@ -3073,6 +3176,7 @@ message ProtobufVoteOptionStructV2Adapter{
     int64 option_id = 2;
     int64 vote_count = 3;
     string option = 4;
+
 }
 //package VoteStruct;
 //import "ProtobufVoteOptionStructV2Adapter.proto";
@@ -3083,6 +3187,7 @@ message ProtobufVoteStructV2Adapter{
     string question = 4;
     repeated ProtobufVoteOptionStructV2Adapter  options = 5;
     int64 select_option_id = 6;
+
 }
 //package RoomFeedCellStruct;
 //import "ProtobufUrlStructV2Adapter.proto";
