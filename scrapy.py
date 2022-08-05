@@ -4,16 +4,27 @@ import requests
 import json
 import json
 import logging
+import subprocess
 
-
-import Protobufaweme_v2_feed_responseAdapter_pb2
 import json
 from google.protobuf.json_format import MessageToDict
 logging.basicConfig(level=logging.INFO,format="[%(asctime)s %(funcName)s]-%(levelname)s : %(message)s",filename='log/scrapy.log')
-# with open('testdata.text', 'rb') as f:
-#     a = f.read()
 
 
+def decodes(data):
+    """
+    如果上传到linux线上服务器，需要chmod+x protoc赋予权限。
+    """
+    process = subprocess.Popen([r'protoc', '--decode_raw'],stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    output = error = None
+    try:
+        output, error = process.communicate(data)
+    except OSError as e:
+        pass
+    finally:
+        if process.poll() != 0:
+            process.wait()
+    return output
 
 
 def recive(message,data):
@@ -28,9 +39,13 @@ def recive(message,data):
                 else:
                     bs.append(i)
             if 'https://aweme.snssdk.com/aweme/v2/feed/?' in message.get("payload").get("url"):
-                info = Protobufaweme_v2_feed_responseAdapter_pb2.Protobufaweme_v2_feed_responseAdapter()
-                info.ParseFromString(bytes(bs))
-                print(json.dumps(MessageToDict(info, preserving_proto_field_name=True), ensure_ascii=False))
+                decodes(bytes(bs))
+                # c = open(f'result/{now}.json','wb')
+                # c.write(bs)
+                # c.close()
+                # info = Protobufaweme_v2_feed_responseAdapter_pb2.Protobufaweme_v2_feed_responseAdapter()
+                # info.ParseFromString(bytes(bs))
+                # print(json.dumps(MessageToDict(info, preserving_proto_field_name=True), ensure_ascii=False))
                 # c = open(f'result/{now}','wb')
                 # c.write(bs)
                 # c.close()
