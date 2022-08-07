@@ -23,7 +23,8 @@ def get_proto_from_filelist():
     for file in tqdm(FILELIST):
         data = open(file, "r").read()
         res = re.findall(
-            r"(\w+)\.(.*?)\.encodeWithTag\(protoWriter, (\d+), .*?\.(.*?)\);", data
+            r"(\w+)\.(.*?)\.encodeWithTag\(protoWriter, (\d+), .*?\.\(?(.*?)\)?\);",
+            data,
         )
         if res:
             f.write("获取:" + file + "\n")
@@ -53,5 +54,20 @@ def get_proto_from_filelist():
 
 
 if __name__ == "__main__":
-    get_all_file()
-    get_proto_from_filelist()
+    data = open("a.java", "r").read()
+    # FollowerDetail.ADAPTER.asRepeated().encodeWithTag(protoWriter, 62, followers_detail(user));
+    res = re.findall(
+        r"(.+)?\.(.+)?\.([asRepeated\(\)\.]{0,1})encodeWithTag\(protoWriter, (\d+), (.+)\);",
+        data,
+    )
+    # for item in res:
+    #     if 'ProtoAdapter' == item[0]:
+    #         type = item[1]
+    #     else:
+    #         type = item[0]
+    #     if 'asRepeated()' in item[1]:
+    #         type = f'repeated {type}'
+
+    print(res)
+    # get_all_file()
+    # get_proto_from_filelist()
