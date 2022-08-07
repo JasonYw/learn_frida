@@ -1,0 +1,1333 @@
+syntax = "proto2";
+message Url
+{
+  optional int64 data_size=6;
+  optional string file_cs=8;
+  optional string file_hash=7;
+  optional int32 height=4;
+  optional string uri=1;
+  optional string url_key=5;
+  repeated string url_list=2;
+  optional int32 width=3;
+}
+message ActivityTimeRange
+{
+  optional double duration=3;
+  optional double end=2;
+  optional double start=1;
+}
+message CommerceActivity
+{
+  optional int32 act_type=1;
+  optional Url click_track_url_list=10;
+  optional int64 end_time=7;
+  optional Url image=2;
+  optional string jump_open_url=4;
+  optional string jump_web_url=3;
+  optional int64 start_time=6;
+  repeated ActivityTimeRange time_range=8;
+  optional string title=5;
+  optional Url track_url_list=9;
+}
+message AnchorCommon
+{
+  optional string keyword=1;
+  optional string url=2;
+}
+message AnchorShopLink
+{
+  optional string keyword=1;
+  optional string url=2;
+}
+message AnchorWikipedia
+{
+  optional string keyword=1;
+  optional string lang=2;
+  optional string url=3;
+}
+message Anchor
+{
+  optional AnchorCommon anchor_info=5;
+  optional int32 business_type=2;
+  optional AnchorShopLink shop_link=4;
+  optional int32 show_type=1;
+  optional AnchorWikipedia wikipedia_info=3;
+}
+message Activity
+{
+  optional int32 digg_count=2;
+  optional Url music_cover_url=3;
+  optional Url music_qrcode_url=4;
+  optional int32 use_music_count=1;
+}
+message AdCoverTitle
+{
+  optional string title=1;
+  optional string web_url=2;
+}
+message AvatarDecoration
+{
+  optional string id=1;
+  optional string name=2;
+  optional Url source_url=3;
+}
+message BlueVBrandInfo
+{
+  optional int32 brand_id=3;
+  optional string brand_name=4;
+  optional int32 category_id=1;
+  optional string category_name=2;
+  optional int32 heat=6;
+  optional Url logo_url=5;
+  optional int32 rank=7;
+  optional int32 rank_diff=8;
+  optional string tag_name=9;
+}
+message Announcement
+{
+  optional string body=2;
+  optional string title=1;
+}
+message IconButton
+{
+  optional string action=3;
+  optional Url icon=2;
+  optional string text=1;
+}
+message CategoryCover
+{
+  optional string aweme_id=1;
+  optional Url cover=2;
+  optional Url dynamic_cover=3;
+}
+message Position
+{
+  optional int32 begin=1;
+  optional int32 end=2;
+}
+message ExternalSong
+{
+  optional string external_song_key=4;
+  optional string h5_url=1;
+  optional string partner_name=2;
+  optional string partner_song_id=3;
+
+}
+message BranchBillboardWeekly
+{
+  optional int32 edition_no=2;
+  optional int64 end_time=4;
+  optional int64 start_time=3;
+  optional string uid=1;
+}
+message Share
+{
+  optional bool bool_persist=8;
+  optional string goods_rec_url=9;
+  optional string manage_goods_url=6;
+  optional string share_desc=3;
+  optional Url share_image_url=7;
+  optional string share_link_desc=12;
+  optional Url share_qrcode_url=5;
+  optional string share_quote=15;
+  optional string share_signature_desc=14;
+  optional string share_signature_url=13;
+  optional string share_title=4;
+  optional string share_title_myself=10;
+  optional string share_title_other=11;
+  optional string share_url=1;
+  optional string share_weibo_desc=2;
+  optional string whatsapp_desc=16;
+}
+message Music
+{
+  optional string album=5;
+  optional Url audio_track=27;
+  optional string author=4;
+  optional bool author_deleted=38;
+  repeated Position author_position=42;
+  optional Url avatar_large=58;
+  optional Url avatar_medium=57;
+  optional Url avatar_thumb=56;
+  optional int32 billboard_rank=32;
+  optional int64 binded_challenge_id=35;
+  optional Challenge bodydance_challenge=29;
+  optional Url bodydance_challenge_id=34;
+  optional Url bodydance_url=28;
+  optional CategoryCover category_cover_info=46;
+  optional Challenge challenge=31;
+  optional int64 cluster_id=61;
+  optional int32 collect_stat=20;
+  optional Url cover_hd=6;
+  optional Url cover_large=7;
+  optional Url cover_medium=8;
+  optional Url cover_thumb=9;
+  optional int32 duration=15;
+  optional Url effects_data=23;
+  optional int32 end_time=14;
+  repeated ExternalSong external_song_info=52;
+  optional string extra=16;
+  optional int64 id=1;
+  optional string id_str=2;
+  optional bool is_del_video=39;
+  optional bool is_only_owner_use=47;
+  optional bool is_original=30;
+  optional bool is_restricted=37;
+  optional bool is_video_not_recommend=48;
+  optional bool is_video_self_see=40;
+  optional int32 lyric_type=54;
+  optional string lyric_url=55;
+  optional string mid=33;
+  optional int32 music_billboard_type=44;
+  optional BranchBillboardWeekly music_billboard_weekly_info=45;
+  optional string offline_desc=22;
+  optional string owner_handle=41;
+  optional string owner_id=24;
+  optional string owner_nickname=25;
+  optional Url play_url=10;
+  repeated Position position=18;
+  optional bool prevent_download=43;
+  optional int32 prevent_item_download_status=51;
+  optional double preview_end_time=60;
+  optional double preview_start_time=59;
+  optional bool redirect=36;
+  optional string schema_url=11;
+  optional string sec_uid=53;
+  optional Share share_info=19;
+  optional int32 source_platform=12;
+  optional int32 start_time=13;
+  optional int32 status=21;
+  optional Url strong_beat_url=49;
+  optional string title=3;
+  repeated string unshelve_countries=50;
+  optional string use_count_desc=26;
+  optional int32 user_count=17;
+
+}
+message Disclaimer
+{
+   optional string title=1;
+   optional string content=2;
+}
+message Challenge
+{
+  optional bool allow_upload_cover=22;
+  optional Announcement announcement_info=29;
+  optional User author=5;
+  optional Url background_image_url=12;
+  optional IconButton button=34;
+  optional CategoryCover category_cover_info=24;
+  repeated string cha_attrs=33;
+  optional string cha_name=2;
+  optional string cid=1;
+  optional int32 collect_stat=17;
+  repeated Music connect_music=8;
+  optional int32 content_type=30;
+  optional Url cover_item=18;
+  optional string cover_photo=26;
+  optional string desc=3;
+  optional Disclaimer disclaimer=21;
+  optional string hashtag_profile=25;
+  optional int32 is_challenge=19;
+  optional bool is_commerce=23;
+  optional int32 is_hot_search=27;
+  optional bool is_pgcshow=16;
+  optional string link_action=15;
+  optional string link_text=14;
+  optional int32 link_type=28;
+  optional int32 module_type=31;
+  optional string profile_tag=32;
+  optional string schema=4;
+  optional Share share_info=7;
+  optional string sticker_id=13;
+  optional int32 sub_type=11;
+  optional int32 type=9;
+  optional string use_count_desc=10;
+  optional int32 user_count=6;
+  optional int64 view_count=20;
+}
+message OfflineInfo
+{
+   optional string action=3;
+   optional int32 offline_info_type=1;
+   optional string text=2;
+}
+message SmartPhoneSettings
+{
+  optional string encrypt_key=3;
+  optional string phone_id=2;
+  optional string phone_number=1;
+}
+message CommerceInfo
+{
+  repeated Challenge challenge_list=3;
+  optional Url head_image_url=1;
+  repeated OfflineInfo offline_info_list=2;
+  optional string quick_shop_name=6;
+  optional string quick_shop_url=5;
+  optional string site_id=7;
+  optional SmartPhoneSettings smart_phone=4;
+}
+message CommercePermission
+{
+  optional int32 ad_link=2;
+  optional int32 star_atlas_order=3;
+  optional int32 top_item=1;
+}
+message LinkUserInfo
+{
+  optional int32 auth_status=1;
+  optional int32 auth_type=2;
+}
+message CommerceUser
+{
+  optional int32 ad_influencer_type=5;
+  optional bool has_ads_entry=3;
+  optional LinkUserInfo link_user_info=4;
+  optional bool show_star_atlas_cooperation=2;
+  optional int32 star_atlas=1;
+}
+message DouplusToast
+{
+  optional int32 id=1;
+  optional string toast=2;
+
+}
+message EffectArtist
+{
+  optional int32 total=1;
+}
+message FollowersDetail
+{
+  optional string app_name=8;
+  optional string apple_id=5;
+  optional string download_url=6;
+  optional int32 fans_count=3;
+  optional string icon=2;
+  optional string name=1;
+  optional string open_url=4;
+  optional string package_name=7;
+}
+message Permission
+{
+  optional int32 follow_toast=1;
+  optional int32 original_list=2;
+  optional int32 share_toast=4;
+  optional int32 shop_toast=3;
+}
+message LiveHonor
+{
+  optional Url badge_thumb=3;
+  optional int32 honor_level=1;
+  optional int64 honor_score=2;
+}
+message RecommendItem
+{
+  optional string aweme_id=1;
+  optional Url cover=2;
+  optional Url dynamic_cover=3;
+  optional int64 media_type=4;
+}
+message LifeStoryBlock
+{
+  optional bool life_story_block=1;
+  optional bool life_story_blocked=2;
+}
+message OriginalMusician
+{
+  optional int32 digg_count=5;
+  optional int32 music_count=1;
+  optional Url music_cover_url=4;
+  optional Url music_qrcode_url=3;
+  optional int32 music_used_count=2;
+}
+message PlatformSyncStatus
+{
+  optional bool full_synced=3;
+  optional string nickname=2;
+  optional string platform_name=1;
+}
+message QuickShopSecondFloor
+{
+  optional string enter_text=2;
+  optional string process_text=1;
+  optional string trans_bg_text=3;
+}
+message QuickShop
+{
+  optional string quick_shop_name=2;
+  optional string quick_shop_url=1;
+  optional QuickShopSecondFloor second_floor_info=4;
+  optional bool with_text_entry=3;
+}
+message RFansGroupInfo
+{
+  optional string download_url=3;
+  optional string schema=1;
+  optional string token=2;
+}
+message RelativeUser
+{
+  optional Url avatar=2;
+  optional Url avatar_larger=5;
+  optional Url avatar_thumb=6;
+  optional int32 ollow_status=7;
+  optional string nickname=3;
+  optional string remark_name=4;
+  optional string sec_uid=8;
+  optional int64 uid=1;
+}
+message HitTaskInfo
+{
+  optional int32 compeleted_task_cnt=1;
+  optional int32 total_task_cnt=2;
+}
+message SimpleUser
+{
+  optional Url avatar_larger=8;
+  optional Url avatar_thumb=4;
+  optional int32 follow_status=5;
+  optional HitTaskInfo hit_task_info=9;
+  optional string nickname=2;
+  optional string sec_uid=11;
+  optional string signature=3;
+  optional int32 status=6;
+  optional string uid=1;
+  optional string unique_id=10;
+  optional int32 user_rate=7;
+
+}
+message HotsearchSprint
+{
+  repeated SimpleUser followers=2;
+  optional int32 sprint=1;
+}
+message User {
+  optional bool accept_private_policy = 89;
+  optional string account_region = 65;
+  optional Activity activity = 57;
+  optional AdCoverTitle ad_cover_title = 168;
+  repeated Url ad_cover_url = 167;
+  optional string ad_order_id = 169;
+  optional int32 allow_status = 11;
+  optional int32 apple_account = 84;
+  optional int64 authority_status = 45;
+  optional Url avatar_168x168 = 175;
+  optional Url avatar_300x300 = 176;
+  optional AvatarDecoration avatar_decoration = 135;
+  optional int64 avatar_decoration_id = 165;
+  optional Url avatar_larger = 6;
+  optional Url avatar_medium = 8;
+  optional Url avatar_pendant_larger = 143;
+  optional Url avatar_pendant_medium = 145;
+  optional Url avatar_pendant_thumb = 144;
+  optional Url avatar_thumb = 7;
+  optional bool avatar_update_reminder = 207;
+  optional string avatar_uri = 102;
+  optional int32 aweme_count = 13;
+  optional string bind_phone = 27;
+  optional string bio_email = 198;
+  optional string bio_secure_url = 204;
+  optional string bio_url = 197;
+  optional string birthday = 9;
+  optional int32 birthday_hide_level = 196;
+  optional BlueVBrandInfo brand_info = 182;
+  optional bool can_modify_school_info = 141;
+  repeated Challenge cha_list = 189;
+  optional string city = 121;
+  optional int32 collect_count = 205;
+  optional string college_name = 117;
+  optional int32 comment_filter_status = 173;
+  optional int32 comment_setting = 105;
+  optional CommerceInfo commerce_info = 68;
+  optional CommercePermission commerce_permissions = 151;
+  optional CommerceUser commerce_user_info = 185;
+  optional int32 commerce_user_level = 67;
+  optional int32 constellation = 21;
+  optional string country = 119;
+  repeated Url cover_url = 122;
+  optional int64 create_time = 101;
+  optional int32 creator_level = 161;
+  optional string custom_verify = 25;
+  optional string cv_level = 160;
+  optional bool display_wvalantine_activity_entry = 183;
+  optional string district = 126;
+  optional int32 dongtai_count = 96;
+  optional int32 dou_plus_share_location = 129;
+  optional DouplusToast douplus_toast = 159;
+  optional int64 download_prompt_ts = 114;
+  optional int32 download_setting = 113;
+  optional int32 duet_setting = 106;
+  optional int32 education = 140;
+  optional EffectArtist effect_detail = 150;
+  optional string email = 202;
+  optional string enroll_year = 118;
+  optional string enterprise_verify_reason = 58;
+  optional int32 favoriting_count = 16;
+  optional int32 fb_expire_time = 39;
+  optional int32 follow_status = 12;
+  optional int32 follower_count = 15;
+  optional int32 follower_status = 103;
+  repeated FollowersDetail followers_detail = 62;
+  optional int32 following_count = 14;
+  optional bool force_private_account = 178;
+  optional int32 gender = 4;
+  optional Permission general_permission = 195;
+  repeated string geofencing = 77;
+  optional string google_account = 81;
+  optional bool has_activity_medal = 63;
+  optional bool has_email = 94;
+  optional bool has_facebook_token = 37;
+  optional bool has_insights = 130;
+  optional bool has_orders = 74;
+  optional bool has_story = 157;
+  optional bool has_twitter_token = 38;
+  optional bool has_unread_story = 154;
+  optional bool has_youtube_token = 41;
+  optional int32 hide_following_follower_list = 153;
+  optional bool hide_location = 23;
+  optional bool hide_search = 20;
+  optional LiveHonor honor_info = 172;
+  optional string ins_id = 80;
+  optional bool is_ad_fake = 59;
+  optional bool is_binded_weibo = 30;
+  optional bool is_block = 18;
+  optional bool is_blocked = 177;
+  optional bool is_discipline_member = 72;
+  optional bool is_effect_artist = 149;
+  optional bool is_email_verified = 203;
+  optional bool is_flowcard_member = 111;
+  optional bool is_gov_media_vip = 95;
+  optional bool is_minor = 190;
+  optional bool is_mirror = 162;
+  optional bool is_phone_binded = 87;
+  optional bool is_pro_account = 200;
+  optional bool is_star = 158;
+  optional bool is_verified = 10;
+  optional string iso_country_code = 124;
+  repeated RecommendItem item_list = 146;
+  optional string language = 127;
+  optional int64 latest_order_time = 199;
+  optional LifeStoryBlock life_story_block = 152;
+  optional int32 live_agreement = 69;
+  optional int32 live_agreement_time = 97;
+  optional bool live_commerce = 116;
+  optional int32 live_verify = 44;
+  optional string location = 22;
+  optional int32 login_platform = 88;
+  optional int32 mplatform_followers_count = 61;
+  optional int32 need_recommend = 29;
+  optional int32 neiguang_shield = 104;
+  repeated Url new_story_cover = 155;
+  optional string nickname = 3;
+  optional bool nickname_update_reminder = 206;
+  optional int32 notify_private_account = 174;
+  optional int64 open_insight_time = 194;
+  optional OriginalMusician original_musician = 56;
+  repeated PlatformSyncStatus platform_sync_info = 70;
+  optional int32 pr_exempt = 163;
+  optional bool prevent_download = 75;
+  optional int32 profile_tab_type = 134;
+  optional string province = 120;
+  optional QuickShop quick_shop_info = 187;
+  optional RFansGroupInfo r_fans_group_info = 170;
+  optional int32 react_setting = 115;
+  optional int32 realname_verify_status = 90;
+  optional string recommend_reason = 36;
+  optional string recommend_reason_relation = 123;
+  optional double recommend_score = 192;
+  optional int64 reflow_page_gid = 107;
+  optional int64 reflow_page_uid = 108;
+  optional string region = 64;
+  optional int64 register_time = 98;
+  optional string relation_label = 188;
+  repeated RelativeUser relative_users = 186;
+  optional string remark_name = 131;
+  optional Url room_cover = 112;
+  optional int64 room_id = 43;
+  optional string room_type_tag = 128;
+  optional string school_name = 50;
+  optional string school_poi_id = 51;
+  optional int32 school_type = 52;
+  optional int32 school_visible = 142;
+  optional string sec_uid = 191;
+  optional int32 secret = 73;
+  optional Share share_info = 53;
+  optional string share_qrcode_uri = 133;
+  optional int32 shield_comment_notice = 49;
+  optional int32 shield_digg_notice = 48;
+  optional int32 shield_follow_notice = 47;
+  optional string shop_micro_app = 184;
+  optional string short_id = 2;
+  optional int32 show_gender_strategy = 125;
+  optional bool show_image_bubble = 76;
+  optional string signature = 5;
+  optional string signature_language = 181;
+  optional int32 special_lock = 28;
+  optional HotsearchSprint sprint_support_user_info = 180;
+  optional int32 star_billboard_rank = 139;
+  optional bool star_use_new_download = 60;
+  optional int32 status = 99;
+  optional int32 story_count = 35;
+  optional bool story_open = 34;
+  optional int32 sync_to_toutiao = 66;
+  optional string third_name = 19;
+  optional int32 total_favorited = 17;
+  optional int32 tw_expire_time = 40;
+  optional string twitter_id = 91;
+  optional string twitter_name = 92;
+  repeated int64 type_label = 164;
+  optional string uid = 1;
+  optional string unique_id = 26;
+  optional int32 unique_id_modify_time = 78;
+  optional bool user_canceled = 93;
+  optional int32 user_mode = 147;
+  optional int32 user_period = 148;
+  optional int32 user_rate = 109;
+  optional int32 user_story_count = 156;
+  optional int32 verification_type = 55;
+  optional string verify_info = 46;
+  optional Url video_icon = 79;
+  optional string video_icon_virtual_URI = 132;
+  optional bool watch_status = 136;
+  optional string weibo_name = 31;
+  optional string weibo_schema = 32;
+  optional string weibo_url = 33;
+  optional string weibo_verify = 24;
+  optional bool with_commerce_enterprise_tab_entry = 171;
+  optional bool with_commerce_entry=54;
+  optional bool with_commerce_newbie_task=137;
+  optional bool with_dou_entry=85;
+  optional bool with_douplus_entry=100;
+  optional bool with_fusion_shop_entry=86;
+  optional bool with_item_commerce_entry=138;
+  optional bool with_luban_entry=166;
+  optional bool with_new_goods=110;
+  optional bool with_shop_entry=71;
+  optional bool with_star_atlas_entry=179;
+  optional bool with_stick_entry=201;
+  optional int32 wx_tag=193;
+  optional string youtube_channel_id=82;
+  optional string youtube_channel_title=83;
+  optional int32 youtube_expire_time=42;
+}
+message AwemeControl
+{
+  optional bool can_comment=3;
+  optional bool can_forward=1;
+  optional bool can_share=2;
+  optional bool can_show_comment=4;
+}
+message RelationDynamicLable
+{
+  optional int32 count=3;
+  optional string label_info=2;
+  optional string nickname=1;
+  optional int32 type=5;
+  optional string user_id=4;
+}
+message TextExtra
+{
+  optional string aweme_id=10;
+  optional int32 end=2;
+  optional string hashTagName=8;
+  optional string hashtag_id=6;
+  optional string hashtag_name=5;
+  optional bool is_commerce=7;
+  optional string sec_uid=9;
+  optional int32 start=1;
+  optional int32 type=4;
+  optional string user_id=3;
+}
+message Comment
+{
+  optional string aweme_id=3;
+  optional string cid=1;
+  optional int64 create_time=4;
+  optional int32 digg_count=5;
+  optional string forward_id=15;
+  optional bool is_author_digged=20;
+  optional string label_text=12;
+  optional int32 label_type=13;
+  optional RelationDynamicLable relation_label=14;
+  repeated Comment reply_comment=10;
+  optional int32 reply_comment_total=16;
+  optional string reply_id=8;
+  optional string reply_to_reply_id=17;
+  optional string reply_to_userid=19;
+  optional string reply_to_username=18;
+  optional int32 status=6;
+  optional string text=2;
+  repeated TextExtra text_extra=11;
+  optional User user=7;
+  optional int32 user_digged=9;
+
+}
+message ItemLikeEggData
+{
+  optional string file_type=2;
+  optional string material_url=1;
+}
+message StickerPendant
+{
+  optional Url icon_url=5;
+  optional string link=2;
+  optional string open_url=6;
+  optional string sticker_id=4;
+  optional int32 sticker_type=1;
+  optional string title=3;
+}
+message CommerceConfigData
+{
+  optional string data=5;
+  optional ItemLikeEggData item_like_egg=3;
+  optional int32 priority=2;
+  optional StickerPendant sticker_pendant=4;
+  optional int32 type=1;
+
+}
+message AwemeCommerceSticker
+{
+  optional int64 commerce_sticker_id=1;
+  optional Url icon_url=2;
+  optional string letters=3;
+  optional string open_url=4;
+  optional string web_url=5;
+  optional string web_url_title=6;
+}
+message Descendant
+{
+  optional string notify_msg=2;
+  repeated string platforms=1;
+}
+message RelationLabel
+{
+  optional string extra=3;
+  optional int32 type=2;
+  repeated RelativeUser user_list=1;
+}
+message AwemeFloatingCard
+{
+  optional Url button_bg=7;
+  optional string button_desc=6;
+  optional string description=5;
+  repeated Url icons=3;
+  optional string schema=1;
+  optional string schema_desc=2;
+  optional string title=4;
+}
+message Game
+{
+  optional int32 game_score=2;
+  optional int32 game_type=1;
+}
+message AwemeGDAd
+{
+  optional int64 ad_id=1;
+  optional int32 ad_price=5;
+  optional Url click_track_url_list=13;
+  optional int64 cpt_seq=2;
+  optional int64 creative_id=6;
+  optional int32 effective_play_time=17;
+  optional Url effective_play_track_url_list=18;
+  optional int64 group_id=19;
+  optional bool is_preview=14;
+  optional string open_url=9;
+  optional Url play_track_url_list=15;
+  optional Url playover_track_url_list=16;
+  optional string req_id=3;
+  optional int64 rit=4;
+  optional string source=8;
+  optional string title=7;
+  optional Url track_url_list=12;
+  optional int32 video_transpose=20;
+  optional string web_title=11;
+  optional string web_url=10;
+}
+message AwemeSearch
+{
+  optional string challenge_id=2;
+  optional string group_id=8;
+  optional int32 rank=7;
+  optional string search_word=3;
+  optional string sentence=1;
+  optional int64 value=4;
+  optional int32 vb_rank=5;
+  optional int64 vb_rank_value=6;
+}
+message ImageInfo
+{
+  optional int32 height=1;
+  optional Url label_large=3;
+  optional Url label_thumb=4;
+  optional int32 width=2;
+}
+message Address
+{
+  optional string address=4;
+  optional string city=2;
+  optional string city_code=6;
+  optional string country=7;
+  optional string country_code=8;
+  optional string district=3;
+  optional string province=1;
+  optional string simple_addr=5;
+}
+message PoiBackendType
+{
+  optional string code=1;
+  optional string desc=3;
+  optional string name=2;
+}
+message PoiCard
+{
+  optional int32 is_show=1;
+  optional string url=2;
+}
+message PoiFrontendType
+{
+  optional string code=1;
+  optional string desc=3;
+  optional string name=2;
+}
+message Poi
+{
+  optional Address address_info=12;
+  optional string business_area_name=26;
+  optional int32 collect_stat=14;
+  optional string collected_count=42;
+  optional double cost=24;
+  optional Url cover_hd=7;
+  optional Url cover_item=39;
+  optional Url cover_large=8;
+  optional Url cover_medium=9;
+  optional Url cover_thumb=10;
+  optional string distance=11;
+  optional int32 expand_type=17;
+  optional Url icon_on_entry=19;
+  optional Url icon_on_info=20;
+  optional Url icon_on_map=18;
+  optional int32 icon_type=13;
+  optional bool is_admin_area=41;
+  optional bool is_candidate=32;
+  optional bool is_local_city=27;
+  optional bool is_show_halfcard=36;
+  optional bool is_top_recommend=40;
+  optional int32 item_count=5;
+  optional string option_name=28;
+  optional PoiBackendType poi_backend_type=38;
+  optional PoiCard poi_card=33;
+  repeated PoiFrontendType poi_frontend_type=37;
+  optional string poi_id=1;
+  optional double poi_latitude=16;
+  optional double poi_longitude=15;
+  optional string poi_name=2;
+  optional string poi_rank_desc=25;
+  optional string poi_subtitle=29;
+  optional int32 poi_subtitle_type=34;
+  optional int32 poi_type=21;
+  optional string poi_voucher=22;
+  optional double rating=23;
+  optional Share share_info=6;
+  optional int32 show_type=31;
+  optional string sp_source=30;
+  optional string type_code=3;
+  optional int32 user_count=4;
+  optional string view_count=43;
+  repeated string voucher_release_areas=35;
+}
+message VoteOption
+{
+  optional string option=4;
+  optional int64 option_id=2;
+  optional string option_text=1;
+  optional int64 vote_count=3;
+}
+message Vote
+{
+  repeated VoteOption options=5;
+  optional string question=4;
+  optional int64 ref_id=2;
+  optional int32 ref_type=3;
+  optional int64 select_option_id=6;
+  optional int64 vote_id=1;
+}
+message InteractionSticker
+{
+  optional string attr=5;
+  optional int32 index=2;
+  optional Poi poi_info=3;
+  optional string track_info=4;
+  optional int32 type=1;
+  optional Vote vote_info=6;
+}
+message VideoText
+{
+  optional string color=2;
+  optional string color_text=3;
+  optional string text=1;
+  optional int32 type=4;
+}
+message BitRate
+{
+  optional int32 bit_rate=3;
+  optional string gear_name=1;
+  optional int32 is_h265=5;
+  optional Url play_addr=4;
+  optional Url play_addr_265=6;
+  optional int32 quality_type=2;
+}
+message Video
+{
+  repeated BitRate bit_rate=11;
+  optional Url caption_download_addr=20;
+  optional int64 cdn_url_expired=21;
+  optional Url cover=2;
+  optional Url download_addr=8;
+  optional Url download_suffix_logo_addr=14;
+  optional int32 duration=13;
+  optional Url dynamic_cover=5;
+  optional bool has_download_suffix_logo_addr=15;
+  optional bool has_watermark=9;
+  optional int32 height=3;
+  optional int32 is_h265=17;
+  optional Url new_download_addr=12;
+  optional Url origin_cover=6;
+  optional Url play_addr=1;
+  optional Url play_addr_265=16;
+  optional Url play_addr_h264=18;
+  optional Url play_addr_lowbr=10;
+  optional string ratio=7;
+  optional Url ui_alike_download_addr=19;
+  optional int32 width=4;
+}
+message VideoControl
+{
+  optional bool allow_download=1;
+  optional bool allow_duet=5;
+  optional bool allow_dynamic_wallpaper=8;
+  optional bool allow_react=6;
+  optional int32 draft_progress_bar=4;
+  optional int32 prevent_download_type=7;
+  optional int32 share_type=2;
+  optional int32 show_progress_bar=3;
+  optional int32 timer_status=9;
+}
+message LongVideo
+{
+  optional int32 long_video_type=2;
+  optional double trailer_start_time=3;
+  optional Video video=1;
+  optional VideoControl video_control=4;
+}
+message MicroAppCard
+{
+  optional string image_url=1;
+  optional string text=2;
+  optional int32 wait_time=3;
+}
+message MicroApp
+{
+  optional string app_id=1;
+  optional string app_name=2;
+  optional MicroAppCard card=11;
+  optional string description=9;
+  optional string icon=3;
+  optional int32 orientation=4;
+  optional string schema=5;
+  optional int32 state=6;
+  optional string summary=7;
+  optional string title=10;
+  optional int32 type=8;
+  optional string web_url=12;
+}
+message MixStatis
+{
+  optional int64 collect_vv=2;
+  optional int64 current_episode=3;
+  optional int64 has_updated_episode=5;
+  optional int64 play_vv=1;
+  optional int64 updated_to_episode=4;
+}
+message MixStatus
+{
+  optional int32 is_collected=2;
+  optional int32 status=1;
+}
+message Mix
+{
+  optional User author=8;
+  optional Url cover_url=3;
+  optional string desc=7;
+  optional string extra=9;
+  optional Url icon_url=4;
+  optional string mix_id=1;
+  optional string mix_name=2;
+  optional Share share_info=10;
+  optional MixStatis statis=6;
+  optional MixStatus status=5;
+}
+message OpenPlatform
+{
+  optional string icon=2;
+  optional string link=3;
+  optional string name=1;
+}
+message Preload
+{
+  optional int32 comment=1;
+  optional double comment_median_time=7;
+  optional double comment_pro=3;
+  optional double comment_thres=5;
+  optional int32 model_=9;
+  optional int32 profile=2;
+  optional double profile_median_time=8;
+  optional double profile_pro=4;
+  optional double profile_thres=6;
+}
+message AwemePromotionOther
+{
+  optional int32 card_predict_duration=2;
+  optional bool order_share_recommend=3;
+  optional string recall_reason=1;
+}
+message UserShopCategory
+{
+  optional int64 count=3;
+  optional int64 id =1;
+  optional string name=2;
+}
+message PromotionVisitor
+{
+  repeated Url avatar=1;
+  optional int32 count=2;
+}
+message Promotion
+{
+  optional Url brand_icon=33;
+  optional int32 clicks=28;
+  optional int64 cos_fee=7;
+  optional double cos_radio=20;
+  repeated Url elastic_img=16;
+  optional string elastic_introduction=15;
+  optional string elastic_title=14;
+  optional int32 elastic_type=25;
+  optional string extra=11;
+  optional bool favorited=12;
+  optional string gid=2;
+  optional string h5_url=19;
+  optional Url image=4;
+  repeated Url imgs=23;
+  optional int64 item_type=9;
+  repeated string label=17;
+  optional string last_aweme_id=13;
+  optional string logo=21;
+  optional int64 market_price=6;
+  optional int64 price=5;
+  optional string promotion_id=1;
+  optional int32 promotion_source=24;
+  optional int32 rank=29;
+  optional string rank_url=30;
+  optional int64 sales=10;
+  optional string small_app_url=34;
+  optional string source=22;
+  optional string title=3;
+  optional string title_prefix=26;
+  optional string trace_author_id=31;
+  optional string trace_aweme_id=32;
+  optional string url=8;
+  repeated UserShopCategory user_shop_categories=35;
+  optional int32 views=27;
+  optional PromotionVisitor visitor=18;
+}
+message RedPacket
+{
+  optional Url default_voice=8;
+  optional int32 seckill_time=3;
+  optional string star_name=4;
+  optional Url tag_icon=11;
+  optional int64 till_seckill_time=2;
+  optional string timestamp_info=6;
+  optional int32 type=1;
+  optional Url voice=7;
+  optional int32 voice_end=10;
+  optional int32 voice_start=9;
+  optional string words=5;
+}
+message AwemeRisk
+{
+  optional string content=5;
+  optional bool risk_sink=3;
+  optional int32 type=4;
+  optional bool vote=1;
+  optional bool warn=2;
+}
+message SpecialSticker
+{
+  optional Url icon_url=5;
+  optional string link=2;
+  optional string open_url=6;
+  optional string sticker_id=4;
+  optional int32 sticker_type=1;
+  optional string title=3;
+}
+message StarAtlasLink
+{
+  optional Url avatar_icon=4;
+  optional string id=1;
+  optional string open_url=6;
+  optional string sub_title=3;
+  optional string title=2;
+  optional string web_url=5;
+}
+message AwemeStarAtlas
+{
+  optional StarAtlasLink link_info=2;
+  optional int32 review_status=1;
+}
+message AwemeStatistics
+{
+  optional string aweme_id=1;
+  optional int32 comment_count=2;
+  optional int32 digg_count=3;
+  optional int32 download_count=4;
+  optional int32 forward_count=7;
+  optional int32 lose_comment_count=9;
+  optional int32 lose_count=8;
+  optional int32 play_count=5;
+  optional int32 share_count=6;
+}
+message AwemeStatus
+{
+  optional bool allow_comment=4;
+  optional bool allow_share=3;
+  optional string aweme_id=1;
+  optional int32 download_status=13;
+  optional bool in_reviewing=9;
+  optional bool is_delete=2;
+  optional bool is_private=5;
+  optional bool is_prohibited=12;
+  optional int32 private_status=7;
+  optional int32 reviewed=10;
+  optional bool self_see=11;
+  optional bool with_fusion_goods=8;
+  optional bool with_goods=6;
+}
+message CommerceStickerUnlock
+{
+  optional string desc=1;
+  optional string open_url=3;
+  optional string web_url=2;
+}
+message CommerceSticker
+{
+  optional string ad_owner_id=2;
+  optional string ad_owner_name=3;
+  optional string challenge_id=17;
+  optional string detail_desc=4;
+  optional string detail_letters=5;
+  optional string detail_open_url=6;
+  optional string detail_web_url=7;
+  optional string detail_web_url_title=8;
+  optional int64 expire_time=19;
+  optional string id=1;
+  optional string music_id=16;
+  optional Url publish_icon_url=11;
+  optional string publish_letters=12;
+  optional string publish_open_url=13;
+  optional string publish_web_url=14;
+  optional string publish_web_url_title=15;
+  optional string screen_desc=9;
+  optional Url screen_icon=18;
+  optional bool screen_switch=10;
+  optional CommerceStickerUnlock unlock_info=20;
+}
+message NewFaceSticker
+{
+  optional Url avatar_large=16;
+  optional Url avatar_medium=15;
+  optional Url avatar_thumb=14;
+  repeated string children=3;
+  optional CommerceSticker commerce_sticker=12;
+  optional string desc=8;
+  optional string effect_id=9;
+  optional string extra=18;
+  optional Url icon_url=4;
+  optional string id=1;
+  optional bool is_favorite=11;
+  optional string name=2;
+  optional string owner_id=5;
+  optional string owner_nickname=6;
+  optional Share share_info=10;
+  repeated string tags=13;
+  optional int32 user_count=7;
+  optional int64 vv_count=17;
+}
+message AwemeLabel
+{
+  optional int32 label_type=2;
+  optional Url label_url=1;
+}
+message XiguaTask
+{
+  optional string desc=4;
+  optional string entrance_url=7;
+  optional string icon_url=5;
+  optional bool is_xigua_task=1;
+  optional string jump_url=2;
+  optional int32 switch_type=6;
+  optional string title=3;
+}
+message Aweme
+{
+  optional CommerceActivity activity_pendant=77;
+  optional int32 ad_aweme_source=108;
+  optional int32 ad_link_type=95;
+  optional string ad_order_id=88;
+  optional string ad_schedule=53;
+  optional Anchor anchor=111;
+  optional User author=4;
+  optional int64 author_user_id=44;
+  optional AwemeControl aweme_control=109;
+  optional string aweme_id=1;
+  optional int32 aweme_type=30;
+  optional int32 bodydance_score=45;
+  repeated Challenge cha_list=6;
+  repeated Position challenge_position=67;
+  optional bool cmt_swt=35;
+  optional int32 collect_stat=54;
+  repeated Comment comment_list=43;
+  repeated CommerceConfigData commerce_config_data=102;
+  optional AwemeCommerceSticker commerce_sticker_info=103;
+  optional int64 create_time=3;
+  optional string desc=2;
+  optional string desc_language=91;
+  optional Descendant descendants=69;
+  optional string distance=21;
+  optional int32 distribute_type=105;
+  optional int32 duration=29;
+  optional bool enable_top_view=104;
+  optional string extra=12;
+  optional RelationLabel feed_relation_label=112;
+  optional AwemeFloatingCard floating_card_content=92;
+  optional string forward_comment_id=59;
+  optional Aweme forward_item=58;
+  optional string forward_item_id=62;
+  optional Game game_info=71;
+  optional AwemeGDAd gd_ad=31;
+  repeated string geofencing=46;
+  optional CommerceActivity gesture_red_packet=76;
+  optional string group_id=63;
+  optional bool has_vs_entry=110;
+  optional AwemeSearch hot_info=82;
+  repeated ImageInfo image_infos=36;
+  repeated InteractionSticker interaction_stickers=93;
+  optional bool is_ads=27;
+  optional int32 is_effect_designer=107;
+  optional bool is_fantasy=34;
+  optional int32 is_hash_tag=47;
+  optional bool is_pgcshow=48;
+  optional bool is_relieve=38;
+  optional int32 is_top=17;
+  optional bool is_vr=25;
+  optional int32 item_comment_settings=68;
+  optional int32 item_duet=80;
+  optional int32 item_react=81;
+  optional Url label_friend=39;
+  optional Url label_large=15;
+  optional Url label_music_starter=22;
+  optional string label_music_starter_text=84;
+  optional Url label_origin_author=20;
+  optional Url label_private=23;
+  optional Url label_thumb=16;
+  optional Url label_top=18;
+  repeated VideoText label_top_text=55;
+  optional string landing_page=26;
+  optional string link_ad_data=74;
+  repeated LongVideo long_video=79;
+  optional MicroApp micro_app_info=72;
+  optional string misc_info=99;
+  optional Mix mix_info=113;
+  optional Music music=5;
+  repeated Position nickname_position=66;
+  optional OpenPlatform open_platform_info=94;
+  optional string open_platform_name=89;
+  repeated string origin_comment_ids=101;
+  optional Poi poi_info=28;
+  repeated Position position=41;
+  optional string pre_forward_id=64;
+  optional Preload preload=86;
+  optional bool prevent_download=65;
+  optional AwemePromotionOther promotion_other_info=100;
+  repeated Promotion promotions=56;
+  optional int32 rate=13;
+  optional string raw_ad_data=70;
+  optional RedPacket red_packet=33;
+  optional string region=49;
+  optional RelationDynamicLable relation_label=32;
+  optional AwemeRisk risk_infos=37;
+  optional string segment_latitudes=61;
+  optional string segment_longitudes=60;
+  optional Share share_info=19;
+  optional string share_url=8;
+  optional string simple_promotions=98;
+  optional string simple_shop_seeding=114;
+  optional string sort_label=40;
+  optional SpecialSticker sp_sticker=52;
+  optional AwemeStarAtlas star_atlas_info=90;
+  optional int64 star_atlas_order_id=83;
+  optional string star_recommend_tag=87;
+  optional AwemeStatistics statistics=10;
+  optional AwemeStatus status=11;
+  optional NewFaceSticker sticker_detail=78;
+  optional string stickers=57;
+  optional string take_down_desc=97;
+  optional int64 take_down_reason=96;
+  repeated TextExtra text_extra=14;
+  repeated Position uniqid_position=42;
+  optional int32 user_digged=9;
+  optional Video video=7;
+  optional VideoControl video_control=106;
+  optional AwemeLabel video_labels=24;
+  repeated VideoText video_text=50;
+  optional int32 vr_type=51;
+  optional bool with_promotional_music=73;
+  optional bool without_watermark=85;
+  optional XiguaTask xigua_task=75;
+}
+message Extra
+{
+  optional int64 now=1;
+  optional string logid=2;
+  repeated string fatal_item_ids=3;
+
+}
+message LogPb
+{
+  optional string impr_id=1;
+}
+message GuideWord
+{
+  optional string word=1;
+  optional string search_word=2;
+  optional int32 type=3;
+  optional int32 breathe_times=4;
+}
+message AwemeFeedResponse
+{
+  required int32 status_code = 1;
+  optional int64 min_cursor = 2;
+  optional int64 max_cursor = 3;
+  optional int32 has_more = 4;
+  repeated Aweme aweme_list = 5;
+  optional string rid=6;
+  optional int32 home_model=7;
+  optional int32 refresh_clear=8;
+  optional Extra extra=9;
+  optional LogPb log_pb=10;
+  optional string DebugInfo=11;
+  optional GuideWord guide_word=12;
+  repeated Aweme preload_ads=13;
+  optional string status_msg=14;
+  optional int32 block_code=15;
+}
