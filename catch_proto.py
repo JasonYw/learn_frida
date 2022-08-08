@@ -11,8 +11,8 @@ f = open(LOG, "w")
 
 
 def get_all_file(path=os.getcwd()):
-    for root, dirs, files in os.walk(path):
-        for f in tqdm(files):
+    for root, dirs, files in tqdm(os.walk(path)):
+        for f in files:
             if f.endswith(".java"):
                 FILELIST.add(os.path.join(root, f))
 
@@ -21,53 +21,43 @@ def get_proto_from_filelist():
     fr = open(OUTPUT_FILENAME, "w")
     fr.write('syntax = "proto3";\n\n\n')
     for file in tqdm(FILELIST):
-        data = open(file, "r").read()
-        res = re.findall(
-            r"(\w+)\.(.*?)\.encodeWithTag\(protoWriter, (\d+), .*?\.\(?(.*?)\)?\);",
-            data,
-        )
-        if res:
-            f.write("获取:" + file + "\n")
-            fr.write("message %s {\n" % (file.split("/")[-1].replace(".java", "")))
-            for item in res:
-                line = "{} {} = {};\n".format(
-                    (
-                        "repeated {}".format(item[1].lower().split(".")[0])
-                        if item[1].lower().__contains__("asrepeated")
-                        else item[1].lower()
-                    )
-                    if item[0] == "ProtoAdapter"
-                    else "repeated {}".format(item[0])
-                    if item[1] == "ADAPTER.asRepeated()"
-                    else item[0],
-                    item[3],
-                    item[2],
-                )
-                if "(" in line and ")" in line:
-                    temp_ = re.findall(r"(valueOf\(.+\.(.+)\))\s?=\s?\d+;", line)
-                    if temp_:
-                        line = line.replace(*temp_[0])
-                fr.write(f" {line}")
-            fr.write("}\n\n")
-        else:
-            f.write("无法获取:" + file + "\n")
+        try:
+            data = open(file, "r").read()
+            res = re.findall(
+                r"(\w+)\.(.*?)\.(asRepeated\(\)\.)?encodeWithTag\(protoWriter, (\d+), (.+)\);",
+                data,
+            )
+            message = re.findall(r'encode\(ProtoWriter.protoWriter, (.*?) ',data)
+            if res:
+                f.write("获取:" + file + message[0].lower() + "\n")
+                fr.write(f"message {message[0].lower()} "+'{\n')
+                for item in res:
+                    try:
+                        if 'ProtoAdapter' == item[0]:
+                            type_ = item[1].lower()
+                        else:
+                            type_ = item[0].lower()
+                        if 'asRepeated()' in item[2]:
+                            type_ = f'repeated {type_}'
+                        else:
+                            type_ = f'optional {type_}'
+                        num  = item[3]
+                        if '.' in item[4]:
+                            tag = re.findall(r'\(?.+\.(.+)\)?',item[4])[0].replace(')','')
+                        else:
+                            tag = re.findall(r'(.+)\(',item[4])[0]
+                        line = f'   {type_} {tag} = {num};\n'
+                    except:
+                        line = f'   {item}\n'
+                    fr.write(line)
+                fr.write("}\n")
+            else:
+                f.write("无法获取:" + file + "\n")
+        except Exception as e:
+            f.write(f"处理出错: {e} {file} \n")
+        
 
 
 if __name__ == "__main__":
-    data = open("a.java", "r").read()
-    # FollowerDetail.ADAPTER.asRepeated().encodeWithTag(protoWriter, 62, followers_detail(user));
-    res = re.findall(
-        r"(.+)?\.(.+)?\.([asRepeated\(\)\.]{0,1})encodeWithTag\(protoWriter, (\d+), (.+)\);",
-        data,
-    )
-    # for item in res:
-    #     if 'ProtoAdapter' == item[0]:
-    #         type = item[1]
-    #     else:
-    #         type = item[0]
-    #     if 'asRepeated()' in item[1]:
-    #         type = f'repeated {type}'
-
-    print(res)
-    # get_all_file()
-    # get_proto_from_filelist()
+    get_all_file('D:\\documents\\frida-douyin\\source_code\\app\\src\\main\\java\\com\\p1594ss\\')
+    get_proto_from_filelist()
