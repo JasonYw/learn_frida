@@ -1,6 +1,0 @@
-syntax = "proto3";
-package NameValuePair;
-message ProtoAdapter_NameValuePair {
-	string name = 1;
-	string value = 2;
-}

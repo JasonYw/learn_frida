@@ -1,8 +1,0 @@
-syntax = "proto3";
-package BillboardWeeklyInfo;
-message ProtobufBranchBillboardWeeklyStructV2Adapter {
-	string uid = 1;
-	int32 edition_no = 2;
-	int64 start_time = 3;
-	int64 end_time = 4;
-}

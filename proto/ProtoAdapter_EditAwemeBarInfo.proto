@@ -1,7 +1,0 @@
-syntax = "proto3";
-package EditAwemeBarInfo;
-message ProtoAdapter_EditAwemeBarInfo {
-	string bar_toast = 3;
-	int32 button_status = 1;
-	string button_toast = 2;
-}

@@ -1,7 +1,0 @@
-syntax = "proto3";
-package PoiBackendType;
-message ProtobufPoiBackendTypeStructV2Adapter{
-    string code = 1;
-    string name = 2;
-    string desc = 3;
-}

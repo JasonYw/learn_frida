@@ -1,9 +1,0 @@
-syntax = "proto3";
-import "ProtobufAwemeStructV2Adapter.proto";
-
-package StoryStruct;
-
-message ProtobufStoryStructV2Adapter {
-	Aweme.ProtobufAwemeStructV2Adapter story = 1;
-	bool unread = 2;
-}

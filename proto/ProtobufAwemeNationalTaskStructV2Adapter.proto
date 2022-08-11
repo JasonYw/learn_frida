@@ -1,7 +1,0 @@
-syntax = "proto3";
-package AwemeNationalTask;
-
-import "ProtoAdapter_LiveAppointmentStruct.proto";
-message ProtobufAwemeNationalTaskStructV2Adapter {
-	LiveAppointmentStruct.ProtoAdapter_LiveAppointmentStruct live_appointment =  2;
-}

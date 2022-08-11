@@ -1,8 +1,0 @@
-syntax = "proto3";
-package FansStruct;
-message ProtobufFansStructV2Adapter {
-	string fans_name = 1;
-	int32 fans_level = 2;
-	bool is_fan = 3;
-	bool light_up = 4;
-}

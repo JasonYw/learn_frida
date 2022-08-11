@@ -1,5 +1,0 @@
-syntax = "proto3";
-package LogPbBean;
-message ProtobufLogPbStructV2Adapter {
-	string impr_id = 2;
-}

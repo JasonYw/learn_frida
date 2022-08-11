@@ -1,6 +1,0 @@
-syntax = "proto3";
-package LinkUserInfoStruct;
-message ProtobufLinkUserInfoStructV2Adapter {
-	int32 auth_status = 1;
-	int32 auth_type = 2;
-}

@@ -1,8 +1,0 @@
-syntax = "proto3";
-package OriginalAudioStruct;
-import "ProtobufUrlStructV2Adapter.proto";
-message ProtoAdapter_OriginalAudioStruct {
-	UrlModel.ProtobufUrlStructV2Adapter play_url = 1;
-	string vid = 2;
-	double volume = 3;
-}

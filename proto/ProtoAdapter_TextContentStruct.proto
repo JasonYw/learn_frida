@@ -1,8 +1,0 @@
-syntax = "proto3";
-package TextContentStruct;
-message ProtoAdapter_TextContentStruct {
-	string text = 1;
-	string color = 2;
-	string size = 3;
-	
-}

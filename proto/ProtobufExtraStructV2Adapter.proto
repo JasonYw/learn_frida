@@ -1,8 +1,0 @@
-syntax = "proto3";
-package Extra;
-message ProtobufExtraStructV2Adapter {
-	int64 now = 1;
-	string logid = 2;
-	repeated string fatal_item_ids = 3;
-	string search_request_id = 4;
-}

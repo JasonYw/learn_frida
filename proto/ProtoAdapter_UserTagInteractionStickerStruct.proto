@@ -1,6 +1,0 @@
-syntax = "proto3";
-package UserTagInteractionStickerStruct;
-message ProtoAdapter_UserTagInteractionStickerStruct {
-	string user_id = 1;
-	string user_sec_id = 2;
-}

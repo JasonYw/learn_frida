@@ -1,7 +1,0 @@
-syntax = "proto3";
-package FeedDiversitySurvey;
-message ProtoAdapter_FeedDiversitySurvey {
-	string lynx_schema = 1;
-	string raw_data = 2;
-	int32 style_type = 3;
-}

@@ -1,5 +1,0 @@
-syntax = "proto3";
-package BonusCommerce;
-message ProtobufBonusCommerceV2Adapter {
-	int64 m8194id = 1;
-}

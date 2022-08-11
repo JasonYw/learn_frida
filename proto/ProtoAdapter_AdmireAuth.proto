@@ -1,8 +1,0 @@
-syntax = "proto3";
-package AdmireAuth;
-message ProtoAdapter_AdmireAuth {
-	int32 admire_button = 3;
-	int32 is_admire = 4;
-	int32 is_show_admire_button = 2;
-	int32 is_show_admire_tab = 1;
-}

@@ -1,6 +1,0 @@
-syntax = "proto3";
-package SuggestWords;
-import "ProtoAdapter_SuggestWord.proto";
-message ProtoAdapter_SuggestWords {
-	repeated SuggestWord.ProtoAdapter_SuggestWord suggest_words = 1;
-}

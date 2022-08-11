@@ -1,8 +1,0 @@
-syntax = "proto3";
-package StarAtlasLiveInfoForBarStruct;
-message ProtoAdapter_StarAtlasLiveInfoForBarStruct{
-    string live_desc = 1;
-    string live_data = 2;
-    string user_id = 3;
-    string sec_id = 4;
-}

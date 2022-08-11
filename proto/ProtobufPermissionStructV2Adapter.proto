@@ -1,8 +1,0 @@
-syntax = "proto3";
-package GeneralPermission;
-message ProtobufPermissionStructV2Adapter {
-	int32 follow_toast = 1;
-	int32 original_list = 2;
-	int32 shop_toast = 3;
-	int32 share_toast = 4;
-}

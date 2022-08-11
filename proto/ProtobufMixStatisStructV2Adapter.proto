@@ -1,9 +1,0 @@
-syntax = "proto3";
-package MixStatisStruct;
-message ProtobufMixStatisStructV2Adapter{
-    int64 play_vv = 1;
-    int64 collect_vv = 2;
-    int64 current_episode = 3;
-    int64 updated_to_episode = 4;
-    int64 has_updated_episode = 5;
-}

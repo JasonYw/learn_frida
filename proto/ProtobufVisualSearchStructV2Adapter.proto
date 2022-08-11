@@ -1,9 +1,0 @@
-syntax = "proto3";
-package VisualSearch;
-import "ProtobufUrlStructV2Adapter.proto";
-message ProtobufVisualSearchStructV2Adapter {
-	bool visual_search_show_entry = 1;
-	string visual_search_goods_label = 2;
-	UrlModel.ProtobufUrlStructV2Adapter visual_search_img = 3;
-	string entry_text = 4;
-}

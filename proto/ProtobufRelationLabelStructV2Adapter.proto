@@ -1,9 +1,0 @@
-syntax = "proto3";
-package relationLabelNew;
-
-import "ProtobufRelativeUserStructV2Adapter.proto";
-message ProtobufRelationLabelStructV2Adapter{
-    repeated RelationLabelUser.ProtobufRelativeUserStructV2Adapter user_list = 1;
-    int32 type = 2;
-    string extra = 3;
-}

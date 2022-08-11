@@ -1,7 +1,0 @@
-syntax = "proto3";
-package WikipediaInfo;
-message ProtobufAnchorWikipediaStructV2Adapter{
-    string keyword = 1;
-    string lang = 2;
-    string url = 3;
-}

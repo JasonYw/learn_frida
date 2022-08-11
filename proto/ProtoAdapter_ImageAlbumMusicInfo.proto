@@ -1,7 +1,0 @@
-syntax = "proto3";
-package ImageAlbumMusicInfo;
-message ProtoAdapter_ImageAlbumMusicInfo {
-	int32 begin_time = 1;
-	int32 end_time = 2;
-	int32 volume = 3;
-}

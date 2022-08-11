@@ -1,6 +1,0 @@
-syntax = "proto3";
-package ShowFollowButton;
-message ProtoAdapter_ShowFollowButton {
-	bool show_button = 1;
-	int32 show_tag = 2;
-}

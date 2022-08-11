@@ -1,9 +1,0 @@
-syntax = "proto3";
-package HonorStruct;
-
-import "ProtobufUrlStructV2Adapter.proto";
-message ProtobufLiveHonorStructV2Adapter {
-	int32 honor_level = 1;
-	int64 honor_score = 2;
-	UrlModel.ProtobufUrlStructV2Adapter badge_thumb = 3;
-}

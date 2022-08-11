@@ -1,7 +1,0 @@
-syntax = "proto3";
-package SmartPhone;
-message ProtobufSmartPhoneSettingsStructV2Adapter {
-	string phone_number = 1;
-	string phone_id = 2;
-	string encrypt_key = 3;
-}

@@ -1,6 +1,0 @@
-syntax = "proto3";
-package AwemeRelationRecommendModel;
-message ProtobufRelationRecommendStructV2Adapter {
-	int64 recommend_type = 1;
-	string relation_text_key = 2;
-}

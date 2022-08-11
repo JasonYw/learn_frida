@@ -1,6 +1,0 @@
-syntax = "proto3";
-package ActivityButtonStruct;
-message ProtoAdapter_ActivityButtonStruct {
-	string label = 1;
-	string color = 2;
-}

@@ -1,5 +1,0 @@
-syntax = "proto3";
-package MusicPromoteLinkInfoStruct;
-message ProtoAdapter_MusicPromoteLinkInfoStruct {
-	string open_url = 1;
-}

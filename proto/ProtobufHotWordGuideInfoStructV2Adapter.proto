@@ -1,8 +1,0 @@
-syntax = "proto3";
-package HotWordGuideInfoStruct;
-import "ProtobufUrlStructV2Adapter.proto";
-message ProtobufHotWordGuideInfoStructV2Adapter {
-	string title = 1;
-	string content = 2;
-	UrlModel.ProtobufUrlStructV2Adapter url  = 3;
-}

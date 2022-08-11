@@ -1,8 +1,0 @@
-syntax = "proto3";
-package ChallengeTransform;
-import "ProtobufUrlStructV2Adapter.proto";
-message ProtobufIconButtonStructV2Adapter {
-	string text = 1;
-	UrlModel.ProtobufUrlStructV2Adapter icon = 2;
-	string action = 3;
-}

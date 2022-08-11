@@ -1,7 +1,0 @@
-syntax = "proto3";
-package CaptionInfo;
-message ProtobufCaptionInfoStructV2Adapter {
-	string keyword = 1;
-	string link = 2;
-	string extra = 3;
-}

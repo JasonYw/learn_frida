@@ -1,8 +1,0 @@
-syntax = "proto3";
-package HotsearchSprintStruct;
-import "ProtoAdapter_SimpleUserStruct.proto";
-
-message ProtobufHotsearchSprintStructV2Adapter {
-	int32 sprint = 1;
-	repeated SimpleUserStruct.ProtoAdapter_SimpleUserStruct followers =2;
-}

@@ -1,8 +1,0 @@
-syntax = "proto3";
-package GrootBottomBarInfo;
-message ProtoAdapter_GrootBottomBarInfo {
-	string description = 3;
-	string schema = 4;
-	int64 species_id = 1;
-	string species_name = 5;
-}

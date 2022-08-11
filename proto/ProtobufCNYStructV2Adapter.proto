@@ -1,9 +1,0 @@
-syntax = "proto3";
-package LiveAwesomeSplashInfo;
-message ProtobufCNYStructV2Adapter {
-	int64 start_time = 1;
-	int64 end_time = 2;
-	bool topview_valid = 3;
-	int32 feed_show_time = 4;
-	string live_info = 5;
-}

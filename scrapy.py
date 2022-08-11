@@ -4,33 +4,35 @@ import requests
 import json
 import json
 import logging
-import subprocess
+import douyin_pb2
+import json
+from google.protobuf.json_format import MessageToDict
 
 import json
 from google.protobuf.json_format import MessageToDict
 logging.basicConfig(level=logging.INFO,format="[%(asctime)s %(funcName)s]-%(levelname)s : %(message)s",filename='log/scrapy.log')
 
 
-def decodes(data):
-    """
-    如果上传到linux线上服务器，需要chmod+x protoc赋予权限。
-    """
-    process = subprocess.Popen([r'protoc', '--decode_raw'],stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    output = error = None
-    try:
-        output, error = process.communicate(data)
-    except OSError as e:
-        pass
-    finally:
-        if process.poll() != 0:
-            process.wait()
-    return output
+
+
+
+def decode_proto(bs):
+    info = douyin_pb2.feeditemlist()
+    info.ParseFromString(bs)
+    return(
+        json.dumps(
+            MessageToDict(info, preserving_proto_field_name=True), ensure_ascii=True
+        )
+    )
+    
+
 
 
 def recive(message,data):
     if message.get('payload') and isinstance(message.get('payload'),dict):
         if message.get('payload').get('body'):
-            logging.info(f'catch=> {message.get("payload").get("url")}')
+            logging.info(f'url=> {message.get("payload").get("url")}')
+            logging.info(f'header=>\n{message.get("payload").get("header")}')
             now = time.time()
             bs = bytearray()
             for i in message.get('payload').get('body'):
@@ -39,21 +41,20 @@ def recive(message,data):
                 else:
                     bs.append(i)
             if 'https://aweme.snssdk.com/aweme/v2/feed/?' in message.get("payload").get("url"):
-                decodes(bytes(bs))
-                # c = open(f'result/{now}.json','wb')
-                # c.write(bs)
-                # c.close()
-                # info = Protobufaweme_v2_feed_responseAdapter_pb2.Protobufaweme_v2_feed_responseAdapter()
-                # info.ParseFromString(bytes(bs))
-                # print(json.dumps(MessageToDict(info, preserving_proto_field_name=True), ensure_ascii=False))
-                # c = open(f'result/{now}','wb')
-                # c.write(bs)
-                # c.close()
+                try:
+                    logging.info(f'body=>\n{decode_proto(bytes(bs))}')
+                except:
+                    logging.error(f'body=>')
             elif 'https://aweme.snssdk.com/aweme/v1/search/item/' in message.get("payload").get("url"):
-                c = open(f'result/{now}.json','wb')
-                c.write(bs)
-                c.close()
-        
+                logging.info(f'body=>\n{bytes(bs).decode()}')
+            
+            else:
+                try:
+                    logging.info(f'body=>\n{bytes(bs).decode()}')
+                except:
+                    logging.error(f'body=>')
+            
+    
           
 
 def attach():

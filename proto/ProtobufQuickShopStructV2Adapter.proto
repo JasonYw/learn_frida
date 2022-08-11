@@ -1,9 +1,0 @@
-syntax = "proto3";
-package QuickShopInfo;
-import "ProtobufQuickShopSecondFloorV2Adapter.proto";
-message ProtobufQuickShopStructV2Adapter {
-	string quick_shop_url = 1;
-	string quick_shop_name = 2;
-	bool with_text_entry = 3;
-	QuickShopSecondFloorInfo.ProtobufQuickShopSecondFloorV2Adapter second_floor_info = 4;
-}

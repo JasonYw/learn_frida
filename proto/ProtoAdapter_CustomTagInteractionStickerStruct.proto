@@ -1,5 +1,0 @@
-syntax = "proto3";
-package CustomTagInteractionStickerStruct;
-message ProtoAdapter_CustomTagInteractionStickerStruct {
-	string name = 1;
-}

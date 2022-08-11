@@ -1,6 +1,0 @@
-syntax = "proto3";
-package DescendantsModel;
-message ProtobufDescendantStructV2Adapter{
-    repeated string platforms = 1;
-    string notify_msg = 2;
-}

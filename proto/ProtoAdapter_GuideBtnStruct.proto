@@ -1,7 +1,0 @@
-syntax = "proto3";
-package GuideBtnStruct;
-import "ProtoAdapter_BtnPropertyStruct.proto";
-message ProtoAdapter_GuideBtnStruct {
-	BtnPropertyStruct.ProtoAdapter_BtnPropertyStruct buttons = 2;
-	string config = 1;
-}

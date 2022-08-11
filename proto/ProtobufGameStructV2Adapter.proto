@@ -1,6 +1,0 @@
-syntax = "proto3";
-package GameInfo;
-message ProtobufGameStructV2Adapter{
-    int32 game_type = 1;
-    int32 game_score = 2;
-}

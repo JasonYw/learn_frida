@@ -1,8 +1,0 @@
-syntax = "proto3";
-package AwemeACLShare;
-import "ProtobufACLCommonStructV2Adapter.proto";
-message ProtobufAwemeACLStructV2Adapter {
-	ACLCommonShare.ProtobufACLCommonStructV2Adapter download_general = 1;
-	ACLCommonShare.ProtobufACLCommonStructV2Adapter download_mask_panel = 2;
-	ACLCommonShare.ProtobufACLCommonStructV2Adapter download_share_panel = 3;
-}

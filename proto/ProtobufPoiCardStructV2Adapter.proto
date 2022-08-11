@@ -1,7 +1,0 @@
-syntax = "proto3";
-package PoiCardStruct;
-
-message ProtobufPoiCardStructV2Adapter{
-    int32 is_show = 1;
-    string url = 2;
-}

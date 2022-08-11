@@ -1,6 +1,0 @@
-syntax = "proto3";
-package CFStruct;
-import "ProtobufAwemeStructV2Adapter.proto";
-message ProtoAdapter_CFStruct {
-	Aweme.ProtobufAwemeStructV2Adapter cf = 1;
-}

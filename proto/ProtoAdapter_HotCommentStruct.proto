@@ -1,7 +1,0 @@
-syntax = "proto3";
-package HotCommentStruct;
-message ProtoAdapter_HotCommentStruct {
-	string cid = 1;
-	int32 digg_count = 3;
-	string text = 2;
-}

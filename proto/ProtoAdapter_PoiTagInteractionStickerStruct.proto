@@ -1,5 +1,0 @@
-syntax = "proto3";
-package PoiTagInteractionStickerStruct;
-message ProtoAdapter_PoiTagInteractionStickerStruct {
-	string poi_id = 1;
-}

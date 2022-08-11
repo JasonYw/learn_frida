@@ -1,7 +1,0 @@
-syntax = "proto3";
-package MusicAnchorStruct;
-message ProtoAdapter_MusicAnchorStruct {
-	string  schema_url = 1;
-	string  title = 2;
-	string  id = 3;
-}

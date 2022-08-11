@@ -1,6 +1,0 @@
-syntax = "proto3";
-package BrandTagInteractionStickerStruct;
-message ProtoAdapter_BrandTagInteractionStickerStruct {
-	string brand_id = 1;
-	string schema = 2;
-}

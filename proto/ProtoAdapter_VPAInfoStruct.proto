@@ -1,6 +1,0 @@
-syntax = "proto3";
-package VPAInfoStruct;
-message ProtoAdapter_VPAInfoStruct {
-	int32 show_info_bar_type = 2;
-	bool show_opt_out_button = 1;
-}

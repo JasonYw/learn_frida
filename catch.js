@@ -105,10 +105,10 @@ function hook_ssresponse(){
         try {
             send(url)
             var body = Java.cast(result.getBody(),Java.use(result.getBody().$className)).getBytes()
-            send({"url":url,"body":body})
+            send({"url":url,"body":body,'header':header})
         } catch (error) {
             // console.log("error")
-            send({"url":url,"body":null})
+            send({"url":url,"body":null,'header':header})
         }
 
         return result
@@ -189,35 +189,48 @@ function hook_RecyclerView(){
 
 
 
-// javax.net.ssl.TrustManagerFactory.getInstance
-// function hook_ssl(){
-//     var obj = Java.use('javax.net.ssl.TrustManagerFactory');
-//     var methods = obj.class.getDeclaredMethods();
-//     for(var i in methods){
-//         var methodname =methods[i].getName();
-//         if(methodname =="init" && methodname =="instance"){
-//             console.log(methodname)
-//             // for(var j =0;j<obj.$init.overloads.length;j++){
-//             //     console.log(j)
-//             //     obj.$init.overloads[j].implementation = function(){
-//             //         var result = this.$init.apply(this,arguments)
-//             //         console.log(methods[i],'result =>',result)
-//             //         return result
-//             //     }
-//             // }
+function hook_package(){
+    var obj = Java.use('com.bytedance.retrofit2.SsHttpCall')
+    obj.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute.implementation = function(arg_) {
+        var result = this.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute(arg_)
+        // console.log(result,arg_,Object.keys(result),Object.keys(arg_))
+        var request_ = arg_.request()
+        var header = Java.cast(request_.getHeaders(),Java.use(request_.getHeaders().$className)).toString()
+        console.log(request_.getUrl(),header)
+        return result
+    }
+}
+//com.bytedance.retrofit2.SsHttpCall.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute
 
-//         }else{
-//             console.log(methodname)
-//             for(var k =0;k<obj[methodname].overloads.length;k++){
-//                 obj[methodname].overloads[k].implementation = function(){
-//                     var result = this[methodname].apply(this,arguments)
-//                     console.log(methods[i],'result =>',result)
-//                     return result
-//                 }
-//             }
-//         }
-//     }
-// }
+// javax.net.ssl.TrustManagerFactory.getInstance
+function hook_ssl(){
+    var obj = Java.use('javax.net.ssl.TrustManagerFactory');
+    var methods = obj.class.getDeclaredMethods();
+    for(var i in methods){
+        var methodname =methods[i].getName();
+        if(methodname =="init" && methodname =="instance"){
+            console.log(methodname)
+            for(var j =0;j<obj.$init.overloads.length;j++){
+                console.log(j)
+                obj.$init.overloads[j].implementation = function(){
+                    var result = this.$init.apply(this,arguments)
+                    console.log(methods[i],'result =>',result)
+                    return result
+                }
+            }
+
+        }else{
+            console.log(methodname)
+            for(var k =0;k<obj[methodname].overloads.length;k++){
+                obj[methodname].overloads[k].implementation = function(){
+                    var result = this[methodname].apply(this,arguments)
+                    console.log(methods[i],'result =>',result)
+                    return result
+                }
+            }
+        }
+    }
+}
 
 
 
@@ -228,7 +241,8 @@ function main() {
         // hook_url();
         // hook_protodecode();
         // hook_ssresponse();
-        hook_RecyclerView();
+        // hook_RecyclerView();
+        hook_package()
     })
 }
 setImmediate(main)

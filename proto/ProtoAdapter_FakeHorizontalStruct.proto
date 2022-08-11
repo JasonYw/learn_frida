@@ -1,9 +1,0 @@
-syntax = "proto3";
-package FakeHorizontalStruct;
-message ProtoAdapter_FakeHorizontalStruct {
-	double bottom = 2;
-	double left = 3;
-	bool need_default_scale = 5;
-	double right = 4;
-	double top = 1;
-}

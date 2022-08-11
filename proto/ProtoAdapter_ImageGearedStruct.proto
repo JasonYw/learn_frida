@@ -1,7 +1,0 @@
-syntax = "proto3";
-package ImageGearedStruct;
-import "ProtoAdapter_ImageUrlStruct.proto";
-message ProtoAdapter_ImageGearedStruct {
-	string name = 1;
-	repeated ImageUrlStruct.ProtoAdapter_ImageUrlStruct images =2;
-}

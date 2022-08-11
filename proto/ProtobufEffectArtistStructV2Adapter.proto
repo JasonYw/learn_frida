@@ -1,5 +1,0 @@
-syntax = "proto3";
-package EffectArtistDetail;
-message ProtobufEffectArtistStructV2Adapter {
-	int32 total = 1;
-}

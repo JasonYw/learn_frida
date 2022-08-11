@@ -1,8 +1,0 @@
-syntax = "proto3";
-package ACLCommonShare;
-message ProtobufACLCommonStructV2Adapter {
-	int32 code = 1;
-	int32 show_type = 2;
-	string toast_msg = 3;
-	string extra = 4;
-}

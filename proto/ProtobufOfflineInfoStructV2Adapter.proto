@@ -1,7 +1,0 @@
-syntax = "proto3";
-package OfflineInfo;
-message ProtobufOfflineInfoStructV2Adapter {
-	int32 offline_info_type = 1;
-	string text = 2;
-	string action = 3;
-}

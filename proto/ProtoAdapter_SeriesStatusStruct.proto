@@ -1,7 +1,0 @@
-syntax = "proto3";
-package SeriesStatusStruct;
-message ProtoAdapter_SeriesStatusStruct {
-	int32 is_collected = 3;
-	int32 status = 1;
-	string status_desc = 2;
-}

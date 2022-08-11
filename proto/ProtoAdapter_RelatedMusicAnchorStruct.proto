@@ -1,9 +1,0 @@
-syntax = "proto3";
-package RelatedMusicAnchorStruct;
-import "ProtobufUrlStructV2Adapter.proto";
-message ProtoAdapter_RelatedMusicAnchorStruct {
-	UrlModel.ProtobufUrlStructV2Adapter image_url = 3;
-	int64 priority = 4;
-	string schema_url = 2;
-	string type = 1;
-}

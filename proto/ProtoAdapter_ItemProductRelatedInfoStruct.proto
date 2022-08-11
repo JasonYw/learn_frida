@@ -1,6 +1,0 @@
-syntax = "proto3";
-package ItemProductRelatedInfoStruct;
-message ProtoAdapter_ItemProductRelatedInfoStruct {
-	string raw_data = 2;
-	int32 type = 1;
-}

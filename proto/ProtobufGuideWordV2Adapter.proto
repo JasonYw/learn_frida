@@ -1,8 +1,0 @@
-syntax = "proto3";
-package HotSearchGuideWord;
-message ProtobufGuideWordV2Adapter {
-	string word = 1;
-	string search_word = 2;
-	int32 type = 3;
-	int32 breathe_times = 4;
-}

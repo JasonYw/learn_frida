@@ -1,5 +1,0 @@
-syntax = "proto3";
-package VSEpisodeStruct;
-message ProtobufVarietyStructAdapter {
-	string raw_data = 1;
-}

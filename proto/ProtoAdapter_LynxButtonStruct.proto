@@ -1,9 +1,0 @@
-syntax = "proto3";
-package LynxButtonStruct;
-message ProtoAdapter_LynxButtonStruct {
-	string button_background_color = 1;
-	string source = 2;
-	string title = 3;
-	string image_url = 4;
-	string live_group_id = 5;
-}
