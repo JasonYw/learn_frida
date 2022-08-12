@@ -553,6 +553,7 @@ function use_so(){
     var jstring =  new NativeFunction(funcaddr,"pointer",['pointer','pointer']) 
     //构建参数,以下两个都可以的到javaenv
     // Java.vm.getEnv()，这个env是frida包装过的
+    // 若没有拿到jenv 则可以封装到java.perform中
     var env = Java.vm.tryGetEnv()
     console.log(JSON.stringify(env))
     //获取jstring
@@ -563,4 +564,28 @@ function use_so(){
     //在内存中看到的字符串都是cstring 都不是 jstring
     var result = jstring(env,jstr) 
     console.log(result.readCString())
+}
+
+//hook libc 读写文件
+//frida 没有提供读的api
+//由于frida没有提供读的api，所以需要自己去hook，一般c语言库函数都在lib.so中
+function write(){
+    //获取地址
+    var fopenaddr =  Module.findExportByName("libc.so","fopen")
+    var fputsaddr =  Module.findExportByName("libc.so","fputs")
+    var fcloseaddr =  Module.findExportByName("libc.so","fclose")
+    console.log(fopenaddr,fputsaddr,fcloseaddr)
+    //声明函数指针
+    var fopen = new NativeFunction(fopenaddr,'pointer',['pointer','pointer'])
+    var fputs = new NativeFunction(fputsaddr,'int',['pointer','pointer'])
+    var fclose = new NativeFunction(fcloseaddr,'int',['pointer'])
+    //声明参数,由于不能用jsstring，并且函数接收的是pointer，c语言的字符串所以要生成
+    var filepath = Memory.allocUtf8String("/data/data/com.xiaojianbang.app/wechat.log")
+    var mode = Memory.allocUtf8String("w")
+    var data = Memory.allocUtf8String("xiaojianbang\n")
+    //主动调用
+    var filepoint = fopen(filepath,mode)
+    console.log(filepoint)
+    fputs(data,filepoint)
+    fclose(filepoint)
 }
