@@ -1,76 +1,3 @@
-// 枚举导入表
-// var improts = Module.enumerateImports("libencryptlib.so");
-// for(let i = 0; i < improts.length; i++){
-//     //console.log(JSON.stringify(improts[i]));
-//     console.log(improts[i].name + " " + improts[i].address);
-// }
-
-// 枚举导出表
-// var exports = Module.enumerateExports("libencryptlib.so");
-// for(let i = 0; i < exports.length; i++){
-//     console.log(exports[i].name + " " + exports[i].address);
-// }
-
-// 枚举符号表
-// var symbols = Module.enumerateSymbols("libencryptlib.so");
-// for(let i = 0; i < symbols.length; i++){
-//     console.log(symbols[i].name + " " + symbols[i].address);
-// }
-
-// 枚举进程中已加载的模块
-// var modules = Process.enumerateModules();
-// console.log(JSON.stringify(modules[0].enumerateExports()[0]));
-
-// 导出函数的hook
-// var funcAddr = Module.findExportByName("libencryptlib.so", "_ZN7MD5_CTX11MakePassMD5EPhjS0_");
-// console.log(funcAddr);
-// Interceptor.attach(funcAddr, {
-//     onEnter: function (args) {
-//         console.log("funcAddr onEnter args[1]: ", hexdump(args[1]));
-//         console.log("funcAddr onEnter args[2]: ", args[2].toInt32());
-//         this.args3 = args[3];
-//     }, onLeave: function (retval) {
-//         console.log("funcAddr onLeave args[3]: ", hexdump(this.args3));
-//     }
-// });
-
-// 各种方式得到so基址
-// var module1 = Process.findModuleByName("libencryptlib.so");
-// //console.log(JSON.stringify(module1));
-// console.log("module1", module1.base);
-//
-// var module2 = Process.getModuleByName("libencryptlib.so");
-// console.log("module2", module2.base);
-//
-// var soAddr = Module.findBaseAddress("libencryptlib.so");
-// console.log("soAddr", soAddr);
-//
-// var modules = Process.enumerateModules();
-// for(let i = 0; i < modules.length; i++){
-//     if(modules[i].name == "libencryptlib.so"){
-//         console.log(modules[i].name + " " + modules[i].base);
-//     }
-// }
-//
-// var module = Process.findModuleByAddress(Module.findBaseAddress("libencryptlib.so"));
-// console.log("module " + module.name + " " + module.base);
-
-// hook任意函数
-// var soAddr = Module.findBaseAddress("libencryptlib.so");
-// // var so = 0x77ab999000;
-// // console.log(ptr(so).add(0x1FA38)); // new NativePointer()
-// var funcAddr = soAddr.add(0x1FA38);
-// Interceptor.attach(funcAddr, {
-//     onEnter: function (args) {
-//         console.log("funcAddr onEnter args[1]: ", hexdump(args[1]));
-//         console.log("funcAddr onEnter args[2]: ", args[2].toInt32());
-//         this.args3 = args[3];
-//     }, onLeave: function (retval) {
-//         console.log("funcAddr onLeave args[3]: ", hexdump(this.args3));
-//     }
-// });
-
-
 function stringToBytes(str){
     return hexToBytes(stringToHex(str));
 }
@@ -534,4 +461,106 @@ function hook_dlopen(addr,soname){
             }
         }
     })
+}
+
+
+//内存读写
+//读取字符串
+function read_str(){
+    var soaddr = Module.findBaseAddress("libxiaojianbang.so")
+    console.log(hexdump(soaddr.add(0x38A1)))
+    //读取字符串
+    console.log(soaddr.add(0x38A1).readCString()) 
+    //读取多少个字节数组
+    console.log(soaddr.add(0x38A1).readByteArray(32))
+    //写内存,
+    //writeByteArray可以放js数组也可以放字节数组
+    console.log(soaddr.add(0x38A1).writeByteArray())
+    // console.log(soaddr.add(0x38A1).writeInt())
+    //申请内存
+    //申请13字节的内存
+    var myaddr = Memory.alloc(13)
+    //\0 表示字符串结尾
+    myaddr.writeByteArray(stringToBytes("xiaojianbang\0"))
+    //如果只写字符串用
+    var straddr = Memory.allocUtf8String("xiaojianbang")
+    console.log(straddr.readCString())
+    //如果某些地方无法读写内存成功，要修改内存地址权限
+    //第一个给so的基址，第二个给多大的内存，第三个 更改权限
+    Memory.protect(straddr,13,'rwx')
+     
+}  
+
+//汇编分arm64 x86 x64
+//64为寄存器开头为x，32位的寄存器开头位w
+//sp是栈寄存器，栈是放函数 参数 局部变量的
+//SUB SP 代表开辟栈空间 栈是往低地址发展的 减的时候是以0x10 的倍数发展的，提升的空间必须是16字节的倍数
+//STR 把寄存器 保存到内存去 把参数保存到栈空间里去
+//LDR 读内存 汇编的操作 不能两边都是 内存 至少有一边是寄存器
+//ADD sp 代表函数结束 ADD 与 SUB 的值要一样 函数结束要降低堆栈
+//nop 指令不执行代码
+//RET 返回了 ret一定要在 堆栈平衡后ret
+//利用frida修改指令，汇编级别
+// 165c
+//利用armconverter 将汇编指令变成机器码 https://armconverter.com/
+function read_opcode(){
+    var soaddr = Module.findBaseAddress("libxiaojianbang.so")
+    console.log(hexdump(soaddr.add(0x1684))) //左边读取到的都是机器码
+    var needchangeaddr = soaddr.add(0x1684)
+    Memory.protect(needchangeaddr,4,'rwx')
+    needchangeaddr.writeByteArray(hexToBytes("0001094B"))
+    console.log(hexdump(needchangeaddr))
+    //将机器码转会成汇编指令
+    console.log(Instruction.parse(needchangeaddr).toString())
+    //获取下一条代码的地址
+    console.log(Instruction.parse(needchangeaddr).next)
+
+    //frida提供了一些api帮助写汇编代码
+    //将soaddr.add(0x167C) 这个地址使用nop指令替换
+    new Arm64Writer(soaddr.add(0x167C)).putNop()
+    console.log(Instruction.parse(soaddr.add(0x167C)).toString())
+
+
+
+}
+
+function meomery_patch_code(){
+    var soaddr = Module.findBaseAddress("libxiaojianbang.so")
+    var needchangeaddr = soaddr.add(0x1684)
+    //三个参数 第一个是地址 第二个是大小 第三个是回调函数 
+    //code 也是一个指针
+    //相当于当汇编执行到needchangeaddr的时候，执行回调函数中的代码,但是如果回调函数没有操作则接着执行原来的汇编
+    Memory.patchCode(needchangeaddr,4,function(code){
+        var writer = new Arm64Writer(code,needchangeaddr)
+        writer.putBytes(hexToBytes("0001094B")) //直接写入机器码 sub wo,w8,w9
+        writer.flush() //写入保存
+    })
+    console.log(Instruction.parse(needchangeaddr).toString())
+}
+
+
+//so层主动调用
+//首先拿到函数地址
+//声明函数指针
+//通过函数指针传递参数主动调用获取返回值
+//主动调用libxiaojianbang.so中的 jstring2cstr 
+//此函数传递了一个jnienv 一个jclass 一个jstring
+function use_so(){
+    //获取函数地址
+    var soaddr = Module.findBaseAddress("libxiaojianbang.so")
+    var funcaddr = soaddr.add(0x124C) 
+    //声明函数指针,函数地址，返回值类型，参数数组也是类型，jnienv是指针类型
+    var jstring =  new NativeFunction(funcaddr,"pointer",['pointer','pointer']) 
+    //构建参数,以下两个都可以的到javaenv
+    // Java.vm.getEnv()，这个env是frida包装过的
+    var env = Java.vm.tryGetEnv()
+    console.log(JSON.stringify(env))
+    //获取jstring
+    var jstr = env.newStringUtf("xiaojianbang")
+    console.log(jstr)
+    //主动调用生成结果
+    //返回的是指针
+    //在内存中看到的字符串都是cstring 都不是 jstring
+    var result = jstring(env,jstr) 
+    console.log(result.readCString())
 }
