@@ -70,6 +70,33 @@
 //     }
 // });
 
+
+function stringToBytes(str){
+    return hexToBytes(stringToHex(str));
+}
+
+// Convert a ASCII string to a hex string
+function stringToHex(str) {
+    return str.split("").map(function(c) {
+        return ("0" + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join("");
+}
+
+function hexToBytes(hex) {
+    for (var bytes = [], c = 0; c < hex.length; c += 2)
+        bytes.push(parseInt(hex.substr(c, 2), 16));
+    return bytes;
+}
+
+// Convert a hex string to a ASCII string
+function hexToString(hexStr) {
+    var hex = hexStr.toString();//force conversion
+    var str = '';
+    for (var i = 0; i < hex.length; i += 2)
+        str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+    return str;
+}
+
 // 有手就行的so hook
 function print_arg(addr){
     var module = Process.findRangeByAddress(addr);
@@ -318,3 +345,193 @@ function dump_so(so_name){
 
 //so修复使用sofixer
 //so修复好后不能再运行了，但是可以进行静态分析
+
+
+//so是何时加载的
+//java层代码加载，执行 某个函数时 类加载了 加载所调用的so
+
+
+//修改数值参数 使用ptr 和 replace
+//165C libxiaojianbang.so
+function hook_change_int(){
+    var addr = Module.findBaseAddress("libxiaojianbang.so")
+    var funcaddr = addr.add(0x165C)
+    console.log(funcaddr)
+    Interceptor.attach(funcaddr,{
+        onEnter:function(args){
+            args[2] = ptr(1000) //修改参数 指针给他一个指针 new NativePointer
+            console.log(args[2],args[3],args[4])
+        },
+        onLeave:function(restval){
+            restval.replace(1000) //修改返回值
+            console.log(restval.toInt32()) //输出返回值,
+        }
+    })
+}
+
+
+//修改字符串-1
+//1D68 libxiaojianbang.so
+function hook_change_str_1(){
+    var addr = Module.findBaseAddress("libxiaojianbang.so")
+    var funcaddr = addr.add(0x1D68)
+    console.log(funcaddr)
+    Interceptor.attach(funcaddr,{
+        onEnter:function(args){
+            var newstr = "test"
+            //修改字符串 明文 arg[1]
+            //1.直接写内存，因为 arg[1]已经是指针了，所以直接写入字节数组,字符串末尾结束符00
+            //这种方式有缺陷，新字符串不能超过原字符串的长度，会占用内存，直接写内存要考虑 大小问题，会影响其他函数
+            //字符串结尾要加00
+            args[1].writeByteArray(hexToBytes(stringToHex(newstr) + "00"))
+            //修改数字直接ptr
+            args[2] = ptr(newstr.length)
+            console.log(hexdump(args[1]))
+            console.log(args[2].toInt32())
+            
+        },
+        onLeave:function(restval){
+            console.log(hexdump(restval))
+
+        }
+    })
+}
+//修改字符串-2
+//字符串地址38A1
+function hook_change_str_2(){
+    var addr = Module.findBaseAddress("libxiaojianbang.so")
+    var funcaddr = addr.add(0x1D68)
+    console.log(funcaddr)
+    Interceptor.attach(funcaddr,{
+        onEnter:function(args){
+            var newstr = "test"
+            //修改字符串 明文 arg[1]
+            //1.把so中已有的字符串传给函数
+            //不需要使用ptr 因为已经是个指针了
+            //缺点必须是已有的
+            args[1] = addr.add(0x38A1)
+
+            //修改数字直接ptr
+            args[2] = ptr(addr.add(0x38A1).readCString().length)
+            console.log(hexdump(args[1]))
+            console.log(args[2].toInt32())
+            
+        },
+        onLeave:function(restval){
+            console.log(hexdump(restval))
+
+        }
+    })
+}
+//修改结构体
+//针对md5算法 直接改buffer，ctx的结构
+function hook_change_struct(){
+    var addr = Module.findBaseAddress("libxiaojianbang.so")
+    var funcaddr = addr.add(0x1D68)
+    console.log(funcaddr)
+    Interceptor.attach(funcaddr,{
+        onEnter:function(args){
+            //ctx 位参数0
+    
+            this.args0 = args[0]
+            // console.log(hexdump(args[0]))
+        },
+        onLeave:function(restval){
+            //由于进入函数的时候才开始拷贝，所以要在onlevae时查看结构体
+            //前8个字节位长度,后面的16个字节是初始化魔术
+            //memcpy((void *)(a1 + 24 + v5), a2, v4); ida代码已经告诉我们偏倚了24位
+            //由于字节数一样所以不需要加00
+            console.log(hexdump(this.args0.add(24).writeByteArray(stringToBytes("dadajianbang"))))
+        }
+    })
+}
+
+//构建新的字符串
+function hook_create_str(){
+    var addr = Module.findBaseAddress("libxiaojianbang.so")
+    var funcaddr = addr.add(0x1D68)
+    console.log(funcaddr)
+    Interceptor.attach(funcaddr,{
+        onEnter:function(args){
+            //需要使用frida提供的内存操作函数
+            //Memory.alloc 操作内存
+            //Memory.allocUtf8String 操作字符串 操作中文推utf8 英文无所谓
+            //Memory.allocAnsiString 操作字符串
+            //Memory.allocUtf16String 操作字符串
+            this.args0 = args[0]
+            var newstr = "dadadajianbangdadadadadadadadad"
+            //直接返回指针，一定要先赋值给一个变量
+            //newstrpointer为局部变量，所以onEnter结束后会被回收
+            //要把newstrpointer定义为全局变量或者使用this
+            this.newstrpointer = Memory.allocUtf8String(newstr)
+            args[1] = this.newstrpointer
+            args[2] = ptr(newstr.length)
+            console.log(hexdump(args[1]))
+            console.log(args[2].toInt32())
+        },
+        onLeave:function(restval){
+            console.log(hexdump(this.args0))
+        }
+    })
+
+}
+
+//获取指针参数返回值
+//c语言把参数当返回值使用
+function hook_get_pointer_return(){
+    var addr = Module.findBaseAddress("libxiaojianbang.so")
+    var funcaddr = addr.add(0x3540)
+    console.log(funcaddr)
+    Interceptor.attach(funcaddr,{
+        onEnter:function(args){
+            //参数0为ctx
+            this.args1 = args[1]
+        },
+        onLeave:function(restval){
+            //由于函数本身返回的就是字节形式 所以要看左边，字符串形式看右边
+            //如果是二级指针，使readpointer 之后再hexdump
+            console.log(hexdump(this.args1))
+
+        }
+    })
+}
+
+function hook_func(addr){
+    Interceptor.attach(addr,{
+        onEnter:function(args){
+        },
+        onLeave:function(retval){
+        }
+    })
+}
+
+//hook_dlopen
+//想要hook so需要先加载so才能hook
+//但是有一些函数只有so首次加载时就会执行 以后就不执行了
+//监控so何时会加载，加载就hook，dlopen
+//高版本 android_dlopen_ext
+//低版本 dlopen
+//合并 兼容高低版本
+function hook_dlopen(addr,soname){
+    // var soname = "libxiaojianbang.so"
+    // var dlopen = Module.findExportByName(null,"dlopen")
+    // console.log(JSON.stringify(Process.getModuleByAddress(dlopen)))
+    // var android_dlopen_ext = Module.findExportByName(null,"android_dlopen_ext")
+    // console.log(JSON.stringify(Process.getModuleByAddress(android_dlopen_ext)))
+    Interceptor.attach(addr,{
+        onEnter:function(args){
+            // console.log(hexdump(args[0])) //输出的是so的path
+            var sopath = args[0].readCString()
+            if(sopath.indexOf(soname)!=-1){
+                //说明已经记载了
+                this.hook = true
+            }
+        },
+        onLeave:function(retval){
+            if (this.hook){
+                //离开的时候真正进行hook
+                //hook_func(addr)
+            }
+        }
+    })
+}
