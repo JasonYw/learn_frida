@@ -93,7 +93,7 @@ function hook_moudle_all(){
         // console.log(JSON.stringify(modules[i]).enumerateExports())
         // console.log(JSON.stringify(modules[i]).enumerateImports())
         // console.log(JSON.stringify(modules[i]).enumerateSymbols())
-        
+
 
     }
 }
@@ -136,7 +136,7 @@ function hook_by_interceptor(){
 function hook_get_address(){
     var module1 = Process.findModuleByName('libencryptlib.so') //获取到对象
     console.log(JSON.stringify(module1),module1.base) //module.base 获取基址
-    var module2 = Process.getModuleByName('libencryptlib.so') 
+    var module2 = Process.getModuleByName('libencryptlib.so')
     console.log(JSON.stringify(module2),module2.base)
     var addr = Module.findBaseAddress('libencryptlib.so') //获取指针
     console.log('addr',addr)
@@ -147,7 +147,7 @@ function hook_get_address(){
     var addr1 =  0x768285f000 //这是一个数字不是指针，使用ptr转换成指针
     console.log(funcaddr)
     console.log(ptr(addr1).add(0x1F9EC))
-}   
+}
 
 
 
@@ -231,7 +231,7 @@ function hook_string(){
 //jnitrace -l so1的名字 -l so2的名字 包名
 //-m指定启动模式 attach 或者spawn 默认为spawn
 //-R ip：port 通过网络链接frida-server
-//-o 输出到指定位置 json 
+//-o 输出到指定位置 json
 
 
 //解决ollvm加密
@@ -315,7 +315,7 @@ function hook_change_str_1(){
             args[2] = ptr(newstr.length)
             console.log(hexdump(args[1]))
             console.log(args[2].toInt32())
-            
+
         },
         onLeave:function(restval){
             console.log(hexdump(restval))
@@ -342,7 +342,7 @@ function hook_change_str_2(){
             args[2] = ptr(addr.add(0x38A1).readCString().length)
             console.log(hexdump(args[1]))
             console.log(args[2].toInt32())
-            
+
         },
         onLeave:function(restval){
             console.log(hexdump(restval))
@@ -359,7 +359,7 @@ function hook_change_struct(){
     Interceptor.attach(funcaddr,{
         onEnter:function(args){
             //ctx 位参数0
-    
+
             this.args0 = args[0]
             // console.log(hexdump(args[0]))
         },
@@ -470,7 +470,7 @@ function read_str(){
     var soaddr = Module.findBaseAddress("libxiaojianbang.so")
     console.log(hexdump(soaddr.add(0x38A1)))
     //读取字符串
-    console.log(soaddr.add(0x38A1).readCString()) 
+    console.log(soaddr.add(0x38A1).readCString())
     //读取多少个字节数组
     console.log(soaddr.add(0x38A1).readByteArray(32))
     //写内存,
@@ -488,8 +488,8 @@ function read_str(){
     //如果某些地方无法读写内存成功，要修改内存地址权限
     //第一个给so的基址，第二个给多大的内存，第三个 更改权限
     Memory.protect(straddr,13,'rwx')
-     
-}  
+
+}
 
 //汇编分arm64 x86 x64
 //64为寄存器开头为x，32位的寄存器开头位w
@@ -527,7 +527,7 @@ function read_opcode(){
 function meomery_patch_code(){
     var soaddr = Module.findBaseAddress("libxiaojianbang.so")
     var needchangeaddr = soaddr.add(0x1684)
-    //三个参数 第一个是地址 第二个是大小 第三个是回调函数 
+    //三个参数 第一个是地址 第二个是大小 第三个是回调函数
     //code 也是一个指针
     //相当于当汇编执行到needchangeaddr的时候，执行回调函数中的代码,但是如果回调函数没有操作则接着执行原来的汇编
     Memory.patchCode(needchangeaddr,4,function(code){
@@ -543,14 +543,14 @@ function meomery_patch_code(){
 //首先拿到函数地址
 //声明函数指针
 //通过函数指针传递参数主动调用获取返回值
-//主动调用libxiaojianbang.so中的 jstring2cstr 
+//主动调用libxiaojianbang.so中的 jstring2cstr
 //此函数传递了一个jnienv 一个jclass 一个jstring
 function use_so(){
     //获取函数地址
     var soaddr = Module.findBaseAddress("libxiaojianbang.so")
-    var funcaddr = soaddr.add(0x124C) 
+    var funcaddr = soaddr.add(0x124C)
     //声明函数指针,函数地址，返回值类型，参数数组也是类型，jnienv是指针类型
-    var jstring =  new NativeFunction(funcaddr,"pointer",['pointer','pointer']) 
+    var jstring =  new NativeFunction(funcaddr,"pointer",['pointer','pointer'])
     //构建参数,以下两个都可以的到javaenv
     // Java.vm.getEnv()，这个env是frida包装过的
     // 若没有拿到jenv 则可以封装到java.perform中
@@ -562,7 +562,7 @@ function use_so(){
     //主动调用生成结果
     //返回的是指针
     //在内存中看到的字符串都是cstring 都不是 jstring
-    var result = jstring(env,jstr) 
+    var result = jstring(env,jstr)
     console.log(result.readCString())
 }
 
@@ -589,3 +589,39 @@ function write(){
     fputs(data,filepoint)
     fclose(filepoint)
 }
+
+//jni函数hook
+//jni函数均来自 libart.so文件 ，可以在这个文件中找导出表
+//libart.so 需要从手机中拖出来 手机版本不同 位置不同
+//10.0以下 /system/lib64 下面
+//10.0以上 /system 目录下 直接 find -name libart.so 找到对应版本的so 64位或者32位
+//也可以自己计算函数地址，定位jninativeinterface这个结构体，找到函数指针计算偏移量
+
+function hook_jni(){
+    //jni函数在func中可以通过枚举符号表
+    var symbols = Process.getModuleByName('libart.so').enumerateSymbols()
+    var newStringUtfaddr = null
+    for (var i =0;i<symbols.length;i++){
+        var symbol = symbols[i].name
+        if(symbol.indexOf("CheckJNI") == -1 && symbol.indexOf("NewStringUTF") != -1){
+            newStringUtfaddr  = symbol.address
+        }
+
+    }
+    console.log(newStringUtfaddr)
+    Interceptor.attach(newStringUtfaddr,{
+        onEnter: function(args){
+            //args[0]为jnienv
+            console.log(args[1].readCString())
+        },
+        onLeave:function(retval){}
+
+    })
+
+}
+
+
+
+
+
+hook_jni()
