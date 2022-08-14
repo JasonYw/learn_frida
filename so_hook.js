@@ -597,18 +597,15 @@ function write(){
 //10.0以上 /system 目录下 直接 find -name libart.so 找到对应版本的so 64位或者32位
 //也可以自己计算函数地址，定位jninativeinterface这个结构体，找到函数指针计算偏移量
 
-function hook_jni(){
+function hook_jni_byenumerate(){
     //jni函数在func中可以通过枚举符号表
     var symbols = Process.getModuleByName('libart.so').enumerateSymbols()
     var newStringUtfaddr = null
     for (var i =0;i<symbols.length;i++){
-        var symbol = symbols[i].name
-        if(symbol.indexOf("CheckJNI") == -1 && symbol.indexOf("NewStringUTF") != -1){
-            newStringUtfaddr  = symbol.address
+        if(symbols[i].name.indexOf("CheckJNI") == -1 && symbols[i].name.indexOf("NewStringUTF") != -1){
+            newStringUtfaddr  = symbols[i].address
         }
-
     }
-    console.log(newStringUtfaddr)
     Interceptor.attach(newStringUtfaddr,{
         onEnter: function(args){
             //args[0]为jnienv
@@ -619,9 +616,63 @@ function hook_jni(){
     })
 
 }
+//计算地址方式来hook jni
+//首先获取env结构体
+//64位 指针8字节
+function hook_jni_bycount(){
+    // console.log(JSON.stringify(Java.vm.tryGetEnv()))
+    //Java.vm.tryGetEnv().handle 是jnienv结构体的指针，也就是双指针，所以要readPointer()
+    // console.log(hexdump(Java.vm.tryGetEnv().handle.readPointer()))
+    var env = Java.vm.tryGetEnv().handle.readPointer()
+    //结构体里的都是记录的函数的指针的地址，一个指针在64位中是8字节所以，要获取函数的地址还要进行readPointer
+    var funcaddr = env.add(0x48).readPointer()
+    //获取函数的第一个汇编指令 提升堆栈 验证一下 也可以不要
+    console.log(Instruction.parse(funcaddr).toString())
+    //开始hook
+    Interceptor.attach(funcaddr,{
+        onEnter:function(args){
+            console.log(args[1].readCString())
+        },
+        onLeave:function(retval){
+
+        }
+    })
 
 
+}
 
-
-
-hook_jni()
+//主动调用jni函数
+//使用frida封装的函数来调用jni
+//jni里为大驼峰 js中为小驼峰 jni中第一个参数都是env，frida都是给隐藏好了
+function call_jni(){
+    //使用newStringUtf 创建jstring 获取的是jsting，所以需要转换
+    var jstring = Java.vm.tryGetEnv().newStringUtf("xiaojianbang")
+    console.log(jstring)
+    //主动调用getStringUtfChars jenv方法讲jstring转换成cstring，之后读取cstring
+    var cstring = Java.vm.tryGetEnv().getStringUtfChars(jstring).readCString()
+    console.log(cstring)
+}
+//如果frida没有封装的函数
+//首先要获取函数地址 获取jni函数地址也有两种方式，枚举或者计算
+function call_jni2(){
+    //枚举方法
+    var funcaddr = null
+    var symbols = Process.getModuleByName('libart.so').enumerateSymbols()
+    for(var i =0;i<symbols.length;i++){
+        if(symbols[i].name.indexOf("CheckJNI") == -1 && symbols[i].name.indexOf("NewStringUTF") != -1){
+            funcaddr = symbols[i].address
+        }
+    }
+    //使用NativeFunction 创建一个方法，接受函数的地址，返回值类型，参数类型数组，第一个参数为jenv
+    var func = new NativeFunction(funcaddr,'pointer',['pointer','pointer'])
+    //要传真正的jenv，并且要传字符串的指针不是字符串
+    var jstring = func(Java.vm.tryGetEnv().handle,Memory.allocUtf8String("xiaojianbang"))
+    console.log(jstring)
+    //计算地址
+    var envaddr =  Java.vm.tryGetEnv().handle.readPointer()
+    var funcaddr = envaddr.add(0x548).readPointer()
+    var getstringutfchar_func = new NativeFunction(funcaddr,'pointer',['pointer','pointer','pointer'])
+    //jsting 已经是指针了
+    var cstring =  getstringutfchar_func(Java.vm.tryGetEnv().handle,jstring,ptr(0))
+    console.log(cstring.readCString())
+}
