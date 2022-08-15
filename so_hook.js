@@ -590,6 +590,15 @@ function write(){
     fclose(filepoint)
 }
 
+
+//so层打印堆栈
+//obj传递this即可
+function print_trace(obj){
+    //FUZZY 是模糊的 但是对所有的so都有效，但是不准确
+    //ACCURATE 是准确的 但是并不是对所有so都有效
+    console.log(Thread.backtrace(obj.context,Backtracer.FUZZY).map(DebugSymbol.fromAddress).join('\n')+'\n')
+}
+
 //jni函数hook
 //jni函数均来自 libart.so文件 ，可以在这个文件中找导出表
 //libart.so 需要从手机中拖出来 手机版本不同 位置不同
@@ -609,6 +618,7 @@ function hook_jni_byenumerate(){
     Interceptor.attach(newStringUtfaddr,{
         onEnter: function(args){
             //args[0]为jnienv
+            print_trace(this) //打印so堆栈信息
             console.log(args[1].readCString())
         },
         onLeave:function(retval){}
@@ -632,6 +642,7 @@ function hook_jni_bycount(){
     Interceptor.attach(funcaddr,{
         onEnter:function(args){
             console.log(args[1].readCString())
+
         },
         onLeave:function(retval){
 
@@ -676,3 +687,344 @@ function call_jni2(){
     var cstring =  getstringutfchar_func(Java.vm.tryGetEnv().handle,jstring,ptr(0))
     console.log(cstring.readCString())
 }
+
+
+
+//二级指针的构造
+//17D0 xiaojiaobang.so
+function double_pointer(){
+    var soaddress = Module.findBaseAddress("libxiaojianbang.so")
+    var xiguastraddr = soaddress.add(0x17D0)
+    var xiguastr =  new NativeFunction(xiguastraddr,'int64',['pointer'])
+    //一级指针
+    var first_poniter  = Memory.allocUtf8String("xiaojianbang") 
+    console.log(hexdump(first_poniter))
+    //64位指针是8字节 
+    var second_pointer = Memory.alloc(8).writePointer(first_poniter)
+    console.log(hexdump(second_pointer))
+    xiguastr(second_pointer)
+    //函数把指针当成参数也当成返回值，因为是指针
+    console.log(hexdump(first_poniter))
+    console.log(hexdump(second_pointer))
+
+
+}
+
+//如果确认native函数在哪个so中
+//静态分析不靠谱
+//hook系统函数获取绑定的函数地址，之后再得到so地址
+//动态注册 RegisterNatives jni函数
+//静态注册，名字不能混淆必须按照命名规则，hook dlsym
+
+function hook_dlsym(){
+    //静态注册用这个方法
+    //dlsym在固定的so中
+    //dlsym 有两个参数 第一个放的是soinfo的结构体，第二个是字符串 要找的symble，返回值是symble地址
+    var dlsymaddr = Module.findExportByName("libdl.so","dlsym")
+    Interceptor.attach(dlsymaddr,{
+        onEnter:function(args){
+            this.args1 = args[1]    
+        },
+        onLeave:function(retval){
+            //retval 返回的是地址
+            var module_ = Process.findModuleByAddress(retval)
+            if(module_==null) return;
+            console.log('=======================')
+            // console.log('func_name =>',this.args1.readCString(),module_.name,retval,retval.sub(module_.base))
+            console.log('func_name =>',this.args1.readCString())
+            console.log('so_name =>',module_.name)
+            console.log('func_address =>',retval)
+            console.log('funcaddr_sub_soaddr =>',retval.sub(module_.base))
+            console.log('=======================\n')
+        }
+    })
+
+
+}
+
+//快速定位动态注册函数
+function hook_RegisterNatives(){
+    //这个方法是jni函数 RegisterNatives
+    //两种方法获取jni函数 一个是枚举libart.so的符号 另一个是使用frida api获取env结构体的地址，之后再通过偏移找到函数的指针地址，之后再读指针的地址
+    //这里用第一种
+    var symbols = Process.getModuleByName('libart.so').enumerateSymbols()
+    var registernativesaddr = null
+    for(var i =0;i<symbols.length;i++){
+        var symbol = symbols[i]
+        if(symbol.name.indexOf('CheckJNI') == -1 && symbol.name.indexOf('RegisterNatives') != -1){
+            registernativesaddr = symbol.address
+        }
+    }
+    // console.log(registernativesaddr)
+    Interceptor.attach(registernativesaddr,{
+        onEnter:function(args){
+            //可以获取到jclass，注册到哪个类上面
+            //得到method结构体 获取函数再java层的名字 以及签名 so函数的地址
+            //可以获取注册了多少个函数
+            var env = Java.vm.tryGetEnv()
+            var classname = env.getClassName(args[1]) //获取类名
+            var method_num = args[3].toInt32() //获取方法数量
+            for(var i=0;i<method_num;i++){
+                //结构体 里面是3个指针，所以64位就是 8个字节 一共 64位
+                //args[2]获取到结构体指针，在读取第一个指针获取名字字符串，没有偏移
+                var name = args[2].add(Process.pointerSize*3*i).readPointer().readCString()
+                //结构体第二个指针需要8个偏移 也是字符串获取签名
+                //指针占位可以使用frida的api,因为32位是4个字节，64位是8个字节所以使用api 可以解决这个问题，自动识别32位还是64位
+                var signature = args[2].add(Process.pointerSize*3*i).add(Process.pointerSize).readPointer().readCString()
+                //结构体第三个指针需要16个字节的偏移，返回的是函数指针 获取的是函数地址
+                var funcaddr = args[2].add(Process.pointerSize*3*i).add(Process.pointerSize*2).readPointer()
+                //通过函数地址获取so,有可能找到的模块是空
+                var somodule = Process.getModuleByAddress(funcaddr)
+                console.log('=======================')
+                console.log('classname =>',classname)
+                console.log('name =>',name)
+                console.log('signature =>',signature)
+                console.log('funcaddr =>',funcaddr)
+                console.log('so_name =>',somodule.name)
+                console.log('so_addr =>',somodule.base)
+                console.log('funcaddr_sub_soaddr =>',funcaddr.sub(somodule.base))
+                console.log('=======================\n')
+            }
+        },
+        onLeave:function(retval){},
+    })
+
+}
+
+//inlinehook 
+//在32位so中 是不稳定的 
+//汇编级别的hook hook某一行汇编的
+function inlinehook(){
+    //首先获取基址
+    var soaddr = Module.findBaseAddress('libxiaojianbang.so')
+    var hookaddr = soaddr.add(0x17BC)
+    Interceptor.attach(hookaddr,{
+        onEnter:function(args){
+            //没有参数和返回值的概念
+            //输出寄存器x8的值
+            console.log('onEnter:',this.context.x8)
+        
+        
+        },
+        onLeave:function(retval){
+            console.log('onLeave:',this.context.x8.toInt32())
+            //与7进行位移
+            console.log(this.context.x8 & 7)
+        }
+    })
+  
+}
+
+// 1B70
+//inline hook 读取指针类型
+function inlinehook_point(){
+    //首先获取基址
+    var soaddr = Module.findBaseAddress('libxiaojianbang.so')
+    var hookaddr = soaddr.add(0x1B70)
+    Interceptor.attach(hookaddr,{
+        onEnter:function(args){
+            console.log('onEnter:',hexdump(this.context.x1))
+        },
+        onLeave:function(retval){
+        }
+    })
+  
+}
+
+//源码分析 art下的system.LOADLIBRARY
+//安卓在线源码查看http://aospxref.com
+//了解三个东西init initarry jnionload 什么时候被调用的
+//init initarry 是在dlopen内部调用的 jnionload 是在 dlopen调用后调用的
+//hook init initarry 等so加载完毕
+//调用dlopn后会调call_constructors 在call_constructors中会调用init init_array
+//最佳hook点是call_constructors
+//这个函数是与加载so相关的 在linker64中 对于64位的机器来说 system/bin/linker64
+//在这个函数执行之间就要hook 因为这个函数之前so已经加载完毕了，可以得到so基址
+//首先要hook dlopen要确定so是哪个
+
+//思路 如果要hook initarray，因为 initarry 是在constructors调用的， 就要hook constructors,又因为constructors是在dlopen函数内部调用的，如果只hook dlopen 是无法hook到的
+//在dlopen on enter hook时 so没有加载，在on leave hook 已经没有意义了 因为constructors已经执行完了，先用dlopen判断是否已经加载目标so，已经加载了的话就可以hook constructors
+
+function hook_initarray(){
+    function hook_initarray_by_hook_constructors(){
+        var symbols =  Process.getModuleByName('linker64').enumerateSymbols()
+        var constructorsaddr = null
+        var is_hooked = false
+        for (var i=0;i<symbols.length;i++){
+            var symbol = symbols[i]
+            if(symbol.name.indexOf('__dl__ZN6soinfo17call_constructorsEv') != -1){
+                constructorsaddr = symbol.address
+            }
+        }
+        console.log(constructorsaddr)
+        Interceptor.attach(constructorsaddr,{
+            onEnter:function(args){
+                if(!is_hooked){
+                    var soaddr =  Module.findBaseAddress('libxiaojianbang.so')
+                    //要hook的init array函数地址1C54 1C7C   1C2C
+                    var func1  = soaddr.add(0x1C54)
+                    var func2  = soaddr.add(0x1C7C)
+                    var func3  = soaddr.add(0x1C2C)
+                    Interceptor.replace(func1,new NativeCallback(function(a){
+                        console.log('func1 is replaced')
+                    },'void',['void']))
+                    Interceptor.replace(func2,new NativeCallback(function(a){
+                        console.log('func2 is replaced')
+                    },'void',['void']))
+                    Interceptor.replace(func3,new NativeCallback(function(a){
+                        console.log('func3 is replaced')
+                    },'void',['void']))
+                    is_hooked = true
+                }
+    
+            },
+            onLeave:function(retval){}
+        })
+    
+    
+    }
+    //这一步是确定要hook的so,通过hook dlopen
+    // function hook_initarray_find_target_so(){
+    function hook_dlopen(addr,soname,callback){
+        Interceptor.attach(addr,{
+            onEnter:function(args){ 
+                var sopath = args[0].readCString()
+                if(sopath.indexOf(soname) != -1){
+                    callback()
+                }
+            },
+            onLeave:function(retval){}
+        })
+
+    }
+    var dlopen = Module.findExportByName('libdl.so','dlopen')
+    var android_dlopen_ext = Module.findExportByName('libdl.so','android_dlopen_ext')
+    hook_dlopen(dlopen,'libxiaojianbang.so',hook_initarray_by_hook_constructors)
+    hook_dlopen(android_dlopen_ext,'libxiaojianbang.so',hook_initarray_by_hook_constructors)
+    // }
+}
+
+
+
+//jnionload 是在dlopen完全加载后开始的，所以在dlopen onleave的时候开始的
+function hook_JNIonload(){
+    function hook_dlopen(addr,soname,callback){
+        Interceptor.attach(addr,{
+            onEnter:function(args){ 
+                var sopath = args[0].readCString()
+                if(sopath.indexOf(soname) != -1){
+                    this.hook = true
+                }
+            },
+            onLeave:function(retval){
+                if(this.hook) callback()
+            }
+        })
+
+    }
+    function hook_func_jnionload(){
+        //1CCC  
+        var soadder = Module.findBaseAddress('libxiaojianbang.so')
+        var funcaddr = soadder.add(0x1CCC)
+        Interceptor.replace(funcaddr,new NativeCallback(function(){
+            console.log('this func is replaced')
+        },'void',[]))
+
+    }
+
+    var dlopen = Module.findExportByName('libdl.so','dlopen')
+    var android_dlopen_ext = Module.findExportByName('libdl.so','android_dlopen_ext')
+    hook_dlopen(dlopen,'libxiaojianbang.so',hook_func_jnionload)
+    hook_dlopen(android_dlopen_ext,'libxiaojianbang.so',hook_func_jnionload)
+}
+
+
+//一般实时检测都是放在hook_pthread_create 中开启一个线程去处理
+//hook它来检查开启了哪些子线程，把和检测相关的子线程干掉
+//pthread_create一般是在libc.so中
+//通过查看输出可以看到除了系统的so启动的线程，app自己启动的线程的函数地址以及函数偏移，以及so名字，定位
+function hook_pthread_create(){
+    var soaddr = Module.findExportByName('libc.so','pthread_create')
+    console.log('soaddr =>',soaddr)
+    Interceptor.attach(soaddr,{
+        onEnter:function(args){
+            var Moudle = Process.findModuleByAddress(args[2])
+            if(Moudle){
+                console.log(Moudle.name,'func addr=>',args[2],'funcaddr sub soaddr=>',args[2].sub(Moudle.base))
+            }
+        },
+        onLeave:function(retval){}
+    })
+}
+
+//打印so的函数栈
+//env 和 env.handle 可以在一定程度上通用，或者自动完成转换，使用frida封装的jni相关的api，必须使用env当参数需求jnienv*时，可以使用env和env.handle
+//21B0 MD5 xiaojianbang.so
+function hook_xiaojianbangmd5(){
+    var soaddr = Module.findBaseAddress('libxiaojianbang.so')
+    var md5_upodatefunc = soaddr.add(0x21B0)
+    Interceptor.attach(md5_upodatefunc,{
+        onEnter:function(args){
+            console.log("=========================================================================")
+            console.log(soaddr)
+            //打印函数栈就这一行 map详单与把前面的地址 依次给到DebugSymbol.fromAddress
+            console.log(Thread.backtrace(this.context,Backtracer.ACCURATE).map(function(value){
+                var symbol = DebugSymbol.fromAddress(value) 
+                //map返回的还是数组
+                if(symbol.moduleName === 'libxiaojianbang.so'){
+                    return symbol + " offset: " + value.sub(soaddr)
+                }
+                return symbol
+            }).join('\n'))
+        },
+        onLeave:function(retval){}
+    })
+}
+
+//replcae 替换函数
+//在进行hook必须调用原函数 如果不想调用原函数 就直接replace
+function hook_add_by_replace(){
+    var soaddr = Module.findBaseAddress('libxiaojianbang.so')
+    var addfunc = soaddr.add(0x1A0C) //add
+    //Interceptor.replace 两个参数都是指针，一个是目标函数指针，一个是要替换的函数指针
+    //因为new NativeCallback 返回的是函数指针所以直接这么用
+    // Interceptor.replace(addfunc,new NativeCallback(function(){
+    //     console.log(100)
+    // },'void',[]))
+
+    //构建函数，主动调用
+    var add =  new NativeFunction(addfunc,'int',['pointer','pointer','int','int','int'])
+
+    //一般替换函数时要保证返回值 最好是同一个类型
+    //如果返回值类型不一样 
+    Interceptor.replace(addfunc,new NativeCallback(function(a,b,c,d,e){
+        console.log(a,b,c,d,e)
+        var oldresult = add(a,b,c,d,e)
+        console.log(oldresult)
+        return oldresult
+    },'int',['pointer','pointer','int','int','int']))
+}
+
+
+
+//hexdump
+function hook_xiaojianbangmd5_hexdump(){
+    var soaddr = Module.findBaseAddress('libxiaojianbang.so')
+    var md5_upodatefunc = soaddr.add(0x21B0)
+    Interceptor.attach(md5_upodatefunc,{
+        onEnter:function(args){
+            //ansi 输出颜色
+            //length 给一个整数字节
+            //header 是否要头 
+            //offset 偏移多少个字节 从什么地方开始显示 一般offset 为0
+            console.log(hexdump(args[1],{offset:0,length:args[2].toInt32(),header:false,ansi:true}))
+            console.log("======================================")
+        },
+        onLeave:function(retval){}
+    })
+}
+
+
+//frida-trace+tracenatives
+//tracenatives IDA中的插件
+
