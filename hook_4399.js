@@ -99,3 +99,6 @@ function hook_downmodel(){
 // hook_file()
 hook_toast()
 // hook_kill()
+
+
+// android hooking watch class_method com.android.okhttp.CertificatePinner$Builder.add --dump-args --dump-backtrace --dump-return
