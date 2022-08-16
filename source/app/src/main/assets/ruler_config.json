@@ -1,0 +1,766 @@
+{
+  "version": 18,
+  "strategy_set": {
+    "guard_fuse": {
+      "strategy_select_break": false,
+      "rule_exec_break": true,
+      "policies": {
+        "disable_for_privacy_alert": {
+          "title": "disable_for_privacy_alert",
+          "conf": {
+            "action": "fuse"
+          },
+          "cel": "has_agreed_privacy == false"
+        },
+        "disable_for_basic_mode": {
+          "title": "disable_for_basic_mode",
+          "conf": {
+            "action": "fuse"
+          },
+          "cel": "is_basic_mode == true"
+        },
+        "disable_for_teen_mode": {
+          "title": "disable_for_teen_mode",
+          "conf": {
+            "action": "fuse"
+          },
+          "cel": "is_teen_mode == true"
+        },
+        "disable_anyway": {
+          "title": "完全禁止",
+          "conf": {
+            "action": "fuse"
+          },
+          "cel": "true"
+        }
+      },
+      "strategies": {
+        "forbidden_api": {
+          "rules": ["disable_anyway"]
+        },
+        "application": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "device_info_teen_mode": {
+          "rules": ["disable_for_teen_mode"]
+        },
+        "network": {
+          "rules": ["disable_for_privacy_alert", "disable_for_basic_mode"]
+        },
+        "audio_basic_mode": {
+          "rules": ["disable_for_basic_mode"]
+        },
+        "screen_record": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "video": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "audio": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "location": {
+          "rules": ["disable_for_privacy_alert", "disable_for_basic_mode"]
+        },
+        "application_teen_mode": {
+          "rules": ["disable_for_teen_mode"]
+        },
+        "account": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "clipboard": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "video_basic_mode": {
+          "rules": ["disable_for_basic_mode"]
+        },
+        "bluetooth": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "wifi": {
+          "rules": ["disable_for_privacy_alert", "disable_for_basic_mode"]
+        },
+        "bookmark": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "device_info": {
+          "rules": ["disable_for_privacy_alert", "disable_for_basic_mode"]
+        },
+        "motion": {
+          "rules": ["disable_for_privacy_alert", "disable_for_basic_mode"]
+        },
+        "location_teen_mode": {
+          "rules": ["disable_for_teen_mode"]
+        },
+        "application_basic_mode": {
+          "rules": ["disable_for_basic_mode"]
+        }
+      },
+      "strategy_map": {
+        "keys": ["data_types", "api_id"],
+        "rules": [{
+          "title": "地理位置权限",
+          "conf": {
+            "strategy": "location"
+          },
+          "cel": "data_types isIntersect [\"location\"] && api_id in [102301, 100901, 100902, 100903, 100904, 100905, 100906, 100907, 100908, 100911, 100912, 100909, 100900, 100910, 101000, 101100, 102300, 100000, 100001, 100002, 100003, 100019, 100020, 100021, 100022, 100023]"
+        }, {
+          "title": "应用列表权限",
+          "conf": {
+            "strategy": "application"
+          },
+          "cel": "data_types isIntersect [\"application\"] && api_id in [101309, 101308, 101304, 101311, 101310, 101300, 101301, 101302, 101306, 101307]"
+        }, {
+          "title": "设备信息权限",
+          "conf": {
+            "strategy": "device_info"
+          },
+          "cel": "data_types isIntersect [\"device_info\"] && api_id in [102001, 101600, 101601, 101602, 101900, 101400, 101500, 102002, 101200, 101700, 101701, 100015,100014]"
+        }, {
+          "title": "应用列表权限(青少年模式)",
+          "conf": {
+            "strategy": "application_teen_mode"
+          },
+          "cel": "data_types isIntersect [\"application\"] && api_id in [101309, 101304, 101308, 101310]"
+        }, {
+          "title": "设备信息权限(青少年模式)",
+          "conf": {
+            "strategy": "device_info_teen_mode"
+          },
+          "cel": "data_types isIntersect [\"device_info\"] && api_id in [101000, 101100, 102001, 102015]"
+        }, {
+          "title": "账户权限",
+          "conf": {
+            "strategy": "account"
+          },
+          "cel": "data_types isIntersect [\"account\"] && api_id in [102500, 102501, 102502]"
+        }, {
+          "title": "剪切板权限",
+          "conf": {
+            "strategy": "clipboard"
+          },
+          "cel": "data_types isIntersect [\"clipboard\"]"
+        }, {
+          "title": "传感器权限",
+          "conf": {
+            "strategy": "motion"
+          },
+          "cel": "data_types isIntersect [\"motion\"] && api_id in [100702, 100703]"
+        }, {
+          "title": "录屏权限",
+          "conf": {
+            "strategy": "screen_record"
+          },
+          "cel": "data_types isIntersect [\"screen_record\"] && api_id in [102100, 102101, 102102, 102103, 102104, 102105]"
+        }, {
+          "title": "地理位置权限(青少年模式)",
+          "conf": {
+            "strategy": "location_teen_mode"
+          },
+          "cel": "data_types isIntersect [\"location\"] && api_id in [100003, 100019, 100020, 100021, 100022, 100023]"
+        }, {
+          "title": "应用列表权限(基本模式)",
+          "conf": {
+            "strategy": "application_basic_mode"
+          },
+          "cel": "data_types isIntersect [\"application\"] && api_id in [101309, 101308, 101304, 101311, 101310]"
+        }, {
+          "title": "蓝牙权限",
+          "conf": {
+            "strategy": "bluetooth"
+          },
+          "cel": "data_types isIntersect [\"bluetooth\"] && api_id in [100017, 100018]"
+        }, {
+          "title": "网络状态权限",
+          "conf": {
+            "strategy": "network"
+          },
+          "cel": "data_types isIntersect [\"network\"] && api_id in [100016, 102015, 102016, 102017]"
+        }, {
+          "title": "WIFI权限",
+          "conf": {
+            "strategy": "wifi"
+          },
+          "cel": "data_types isIntersect [\"wifi\"] && api_id in [101001, 102302]"
+        }, {
+          "title": "相机权限",
+          "conf": {
+            "strategy": "video"
+          },
+          "cel": "data_types isIntersect [\"video\"] && api_id in [100100, 100206, 100101, 100201]"
+        }, {
+          "title": "麦克风权限",
+          "conf": {
+            "strategy": "audio"
+          },
+          "cel": "data_types isIntersect [\"audio\"] && api_id in [100400, 100500, 100502, 100401, 100403, 100501, 100503]"
+        }, {
+          "title": "相机权限(基本模式)",
+          "conf": {
+            "strategy": "video_basic_mode"
+          },
+          "cel": "data_types isIntersect [\"video\"] && api_id in [100100, 100206]"
+        }, {
+          "title": "麦克风权限(基本模式)",
+          "conf": {
+            "strategy": "audio_basic_mode"
+          },
+          "cel": "data_types isIntersect [\"audio\"] && api_id in [100400, 100500, 100502]"
+        }, {
+          "title": "完全禁用",
+          "conf": {
+            "strategy": "forbidden_api"
+          },
+          "cel": "api_id in [102000]"
+        }, {
+          "title": "浏览器历史记录管控",
+          "conf": {
+            "strategy": "bookmark"
+          },
+          "cel": "data_types isIntersect [\"bookmark\"]"
+        }]
+      }
+    },
+    "guard": {
+      "strategy_select_break": false,
+      "rule_exec_break": false,
+      "policies": {
+        "frequency_for_device": {
+          "title": "frequency_for_device_info",
+          "conf": {
+            "action": "report"
+          },
+          "cel": "frequency(\"device_info\")"
+        },
+        "disable_for_background": {
+          "title": "disable_for_background",
+          "conf": {
+            "action": "report"
+          },
+          "cel": "enter_background_duration >= 15000 && cold_launch_duration >= 30000"
+        },
+        "pair_not_close": {
+          "title": "pair_not_close",
+          "conf": {
+            "upload_params": {
+              "upload_alog": true,
+              "filter_extra_info": true
+            },
+            "action": "report"
+          },
+          "cel": "is_pair_not_close == true"
+        },
+        "pair_delay_close": {
+          "title": "pair_delay_close",
+          "conf": {
+            "action": "report",
+            "upload_params": {
+              "upload_alog": true,
+              "filter_extra_info": true
+            }
+          },
+          "cel": "is_pair_delay_close == true"
+        },
+        "disable_for_teen_mode": {
+          "title": "disable_for_teen_mode",
+          "conf": {
+            "action": "report"
+          },
+          "cel": "is_teen_mode == true"
+        },
+        "disable_for_privacy_alert": {
+          "title": "disable_for_privacy_alert",
+          "conf": {
+            "action": "report"
+          },
+          "cel": "has_agreed_privacy == false"
+        },
+        "disable_for_basic_mode": {
+          "title": "disable_for_basic_mode",
+          "conf": {
+            "action": "report"
+          },
+          "cel": "is_basic_mode == true"
+        },
+        "frequency_for_location": {
+          "title": "frequency_for_location",
+          "conf": {
+            "action": "report"
+          },
+          "cel": "frequency(\"location\")"
+        },
+        "frequency_for_clipboard": {
+          "title": "frequency_for_clipboard",
+          "conf": {
+            "action": "report"
+          },
+          "cel": "frequency(\"clipboard\")"
+        }
+      },
+      "strategies": {
+        "account": {
+          "rules": ["disable_for_basic_mode", "disable_for_teen_mode", "disable_for_background"]
+        },
+        "location_with_position": {
+          "rules": ["disable_for_teen_mode", "disable_for_background"]
+        },
+        "bookmark": {
+          "rules": ["disable_for_background"]
+        },
+        "screen_record": {
+          "rules": ["disable_for_background"]
+        },
+        "pair": {
+          "rules": ["pair_not_close", "pair_delay_close"]
+        },
+        "frequency_for_device_info": {
+          "rules": ["frequency_for_device"]
+        },
+        "location": {
+          "rules": ["disable_for_privacy_alert", "disable_for_basic_mode"]
+        },
+        "location_teen_mode": {
+          "rules": ["disable_for_teen_mode"]
+        },
+        "account_privacy_alert": {
+          "rules": ["disable_for_privacy_alert"]
+        },
+        "video": {
+          "rules": ["disable_for_background"]
+        },
+        "audio": {
+          "rules": ["disable_for_background"]
+        },
+        "frequency_for_clipboard": {
+          "rules": ["frequency_for_clipboard"]
+        },
+        "other": {
+          "rules": ["disable_for_privacy_alert", "disable_for_background"]
+        },
+        "wifi_strict": {
+          "rules": ["disable_for_teen_mode", "disable_for_background"]
+        },
+        "motion": {
+          "rules": ["disable_for_privacy_alert", "disable_for_basic_mode"]
+        },
+        "network": {
+          "rules": ["disable_for_privacy_alert", "disable_for_basic_mode"]
+        },
+        "network_teen_mode": {
+          "rules": ["disable_for_teen_mode"]
+        },
+        "device_info": {
+          "rules": ["disable_for_teen_mode"]
+        },
+        "frequency_for_location": {
+          "rules": ["frequency_for_location"]
+        },
+        "wifi": {
+          "rules": ["disable_for_teen_mode"]
+        },
+        "clipboard": {
+          "rules": ["disable_for_background"]
+        },
+        "location_with_exif": {
+          "rules": ["disable_for_background"]
+        }
+      },
+      "strategy_map": {
+        "keys": ["data_types", "api_id"],
+        "rules": [{
+          "title": "相机权限",
+          "conf": {
+            "strategy": "video"
+          },
+          "cel": "data_types isIntersect [\"video\"] && api_id in [100100, 100206]"
+        }, {
+          "title": "麦克风权限",
+          "conf": {
+            "strategy": "audio"
+          },
+          "cel": "data_types isIntersect [\"audio\"] && api_id in [100400, 100500, 100502]"
+        }, {
+          "title": "配对型权限",
+          "conf": {
+            "strategy": "pair"
+          },
+          "cel": "data_types isIntersect [\"video\", \"audio\"]"
+        }, {
+          "title": "设备信息权限",
+          "conf": {
+            "strategy": "device_info"
+          },
+          "cel": "data_types isIntersect [\"device_info\"] && api_id in [101600, 101601, 101602, 101500, 100014, 100015, 101700, 101701]"
+        }, {
+          "title": "地理位置权限",
+          "conf": {
+            "strategy": "location"
+          },
+          "cel": "data_types isIntersect [\"location\"] && api_id in [100012]"
+        }, {
+          "title": "地理位置频控",
+          "conf": {
+            "strategy": "frequency_for_location"
+          },
+          "cel": "data_types isIntersect [\"location\"] && api_id != 102301"
+        }, {
+          "title": "设备信息频控",
+          "conf": {
+            "strategy": "frequency_for_device_info"
+          },
+          "cel": "data_types isIntersect [\"device_info\"]"
+        }, {
+          "title": "剪切板频控",
+          "conf": {
+            "strategy": "frequency_for_clipboard"
+          },
+          "cel": "data_types isIntersect [\"clipboard\"]"
+        }, {
+          "title": "其他权限",
+          "conf": {
+            "strategy": "other"
+          },
+          "cel": "api_id in [102600, 102601]"
+        }, {
+          "title": "WIFI信息获取管控-严格",
+          "conf": {
+            "strategy": "wifi_strict"
+          },
+          "cel": "data_types isIntersect [\"wifi\"] && api_id in [102300, 102302]"
+        }, {
+          "title": "地理位置权限(青少年模式)",
+          "conf": {
+            "strategy": "location_teen_mode"
+          },
+          "cel": "data_types isIntersect [\"location\"] && api_id in [102301, 100901, 100902, 100903, 100904, 100905, 100906, 100907, 100908, 100911, 100912, 100909, 100900, 100910, 101001, 102300, 100001, 100002, 100000, 100012, 100913]"
+        }, {
+          "title": "传感器权限",
+          "conf": {
+            "strategy": "motion"
+          },
+          "cel": "data_types isIntersect [\"motion\"] && api_id in [100700]"
+        }, {
+          "title": "网络状态权限",
+          "conf": {
+            "strategy": "network"
+          },
+          "cel": "data_types isIntersect [\"network\"] && api_id in [100913]"
+        }, {
+          "title": "网络状态权限(青少年模式)",
+          "conf": {
+            "strategy": "network_teen_mode"
+          },
+          "cel": "data_types isIntersect [\"network\"] && api_id in [102016, 102017, 100913, 100016]"
+        }, {
+          "title": "账户权限(隐私弹窗前)",
+          "conf": {
+            "strategy": "account_privacy_alert"
+          },
+          "cel": "data_types isIntersect [\"account\"] && api_id in [102503, 102504]"
+        }, {
+          "title": "账户权限",
+          "conf": {
+            "strategy": "account"
+          },
+          "cel": "data_types isIntersect [\"account\"] && api_id in [102500, 102501, 102502, 102503, 102504]"
+        }, {
+          "title": "位置-使用定位信息管控（GPS、基站等定位相关API集合）",
+          "conf": {
+            "strategy": "location_with_position"
+          },
+          "cel": "data_types isIntersect [\"location\"] && api_id in [100900, 100901, 100902, 100903, 100904, 100905, 100906, 100907, 100908, 100909, 100910, 100911, 100912, 100000, 100001, 100002, 100003, 100012]"
+        }, {
+          "title": "WIFI信息获取管控",
+          "conf": {
+            "strategy": "wifi"
+          },
+          "cel": "data_types isIntersect [\"wifi\"] && api_id in [102301, 101001]"
+        }, {
+          "title": "剪切板管控",
+          "conf": {
+            "strategy": "clipboard"
+          },
+          "cel": "data_types isIntersect [\"clipboard\"]"
+        }, {
+          "title": "浏览器历史记录管控",
+          "conf": {
+            "strategy": "bookmark"
+          },
+          "cel": "data_types isIntersect [\"bookmark\"]"
+        }, {
+          "title": "录屏管控",
+          "conf": {
+            "strategy": "screen_record"
+          },
+          "cel": "data_types isIntersect [\"screen_record\"] && api_id in [102100, 102101, 102102, 102103, 102104, 102105]"
+        }, {
+          "title": "图片扩展信息管控",
+          "conf": {
+            "strategy": "location_with_exif"
+          },
+          "cel": "data_types isIntersect [\"location\"] && api_id in [100019, 100020, 100023, 100021, 100022]"
+        }]
+      }
+    },
+    "bpea": {
+      "policies": {
+        "enable": {
+          "title": "允许",
+          "conf": {
+            "action": "pass"
+          },
+          "cel": "true"
+        },
+        "disable_in_basic_mode_mark": {
+          "title": "基本模式下调用 mark",
+          "conf": {
+            "action": "mark",
+            "reason": "disable in basic mode"
+          },
+          "cel": "is_basic_mode == true"
+        },
+        "disable_in_background_mark_new": {
+          "title": "后台调用 mark （disable_in_background_mark 有问题，千万别用！）",
+          "conf": {
+            "action": "mark",
+            "reason": "disable when app in strict background"
+          },
+          "cel": "enter_background_duration >= 15000 && cold_launch_duration >= 30000"
+        },
+        "disable_in_teenmode_mark": {
+          "title": "青少年模式下调用 mark",
+          "conf": {
+            "reason": "disable in teen mode",
+            "action": "mark"
+          },
+          "cel": "is_teen_mode==true"
+        },
+        "pasteboard_auto_read": {
+          "title": "剪切板自动读取",
+          "conf": {
+            "action": "block",
+            "reason": "pasteboard auto read is disabled"
+          },
+          "cel": "enable_auto_read_clip_board == false && cert_token out [\"bpea-live_comment_paste\", \"bpea-cjpay_android_edit_text_clipboard\"]"
+        },
+        "disable_anyway_mark": {
+          "title": "完全禁止",
+          "conf": {
+            "action": "mark",
+            "reason": "disable anyway"
+          },
+          "cel": "true"
+        },
+        "monitor_escape": {
+          "title": "逃逸处理",
+          "conf": {
+            "action": "pass",
+            "reason": "case not config"
+          },
+          "cel": "true"
+        },
+        "disable_for_privacy_alert_mark": {
+          "title": "隐私协议不同意 mark",
+          "conf": {
+            "action": "mark",
+            "reason": "disable when privacy is not agreed"
+          },
+          "cel": "has_agreed_privacy == false"
+        },
+        "location_disable_in_specfic_page_mark": {
+          "title": "地理位置黑名单页面 mark",
+          "conf": {
+            "action": "mark",
+            "reason": "disable in specific page"
+          },
+          "cel": "current_page in [\"personal_tab\", \"setting\"]"
+        },
+        "disable_in_splash_mark": {
+          "title": "开屏禁用，调用 mark",
+          "conf": {
+            "reason": "disable in splash mode",
+            "action": "mark"
+          },
+          "cel": "is_in_splash == true"
+        }
+      },
+      "strategies": {
+        "pasteboard_common": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "disable_in_background_mark_new"]
+        },
+        "audio_common": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "disable_in_background_mark_new"]
+        },
+        "device_info_strategy5": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_teenmode_mark"]
+        },
+        "record_release": {
+          "rules": ["enable"]
+        },
+        "location_init_enable": {
+          "rules": ["enable"]
+        },
+        "pasteboard_read": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "disable_in_background_mark_new", "pasteboard_auto_read"]
+        },
+        "audio_release": {
+          "rules": ["disable_for_privacy_alert_mark"]
+        },
+        "device_info_strategy4": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "disable_in_background_mark_new", "disable_in_teenmode_mark"]
+        },
+        "device_info_strict_mode": {
+          "rules": ["disable_anyway_mark"]
+        },
+        "permission_common": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark"]
+        },
+        "record_common": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "disable_in_background_mark_new"]
+        },
+        "location_common": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark"]
+        },
+        "video_common": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "disable_in_background_mark_new"]
+        },
+        "device_info_strategy1": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "disable_in_teenmode_mark"]
+        },
+        "monitor_escape": {
+          "rules": ["monitor_escape"]
+        },
+        "device_info_strategy3": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "disable_in_background_mark_new"]
+        },
+        "device_info_strategy6": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark"]
+        },
+        "location_request": {
+          "rules": ["disable_for_privacy_alert_mark", "disable_in_basic_mode_mark", "location_disable_in_specfic_page_mark", "disable_in_background_mark_new", "disable_in_teenmode_mark", "disable_in_splash_mark"]
+        },
+        "video_release": {
+          "rules": ["enable"]
+        }
+      },
+      "strategy_map": {
+        "keys": ["entry_datatypes", "entry_token"],
+        "rules": [{
+          "title": "地理位置初始化函数豁免",
+          "conf": {
+            "strategy": "location_init_enable"
+          },
+          "cel": "\"locationSDK\" in entry_datatypes && entry_token in [\"init\",\"locationSDK_init\"]"
+        }, {
+          "title": "过滤特定情况，默认走 location",
+          "conf": {
+            "strategy": "location_common"
+          },
+          "cel": "\"locationSDK\" in entry_datatypes && entry_token in [\"location_getLastKnownLocation\",\"locationSDK_getLastKnowLocation\"]"
+        }, {
+          "title": "请求地理位置有额外策略",
+          "conf": {
+            "strategy": "location_request"
+          },
+          "cel": "\"locationSDK\" in entry_datatypes"
+        }, {
+          "title": "剪切板读取",
+          "conf": {
+            "strategy": "pasteboard_read"
+          },
+          "cel": "\"clipboard\" in entry_datatypes && entry_token in [\"clipboard_getText\", \"clipboard_getClip\", \"clipboard_getDescription\", \"clipboard_addListener\"]"
+        }, {
+          "title": "剪切板通用规则",
+          "conf": {
+            "strategy": "pasteboard_common"
+          },
+          "cel": "\"clipboard\" in entry_datatypes"
+        }, {
+          "title": "视频通用规则",
+          "conf": {
+            "strategy": "video_common"
+          },
+          "cel": "\"video\" in entry_datatypes && entry_token in [\"camera_open1\",\"camera_open2\"]"
+        }, {
+          "title": "关闭相机",
+          "conf": {
+            "strategy": "video_release"
+          },
+          "cel": "\"video\" in entry_datatypes && entry_token in [\"camera_close1\", \"camera_close2\"]"
+        }, {
+          "title": "关闭麦克风",
+          "conf": {
+            "strategy": "audio_release"
+          },
+          "cel": "\"audio\" in entry_datatypes && entry_token in [\"audio_release\", \"audio_stop\"]"
+        }, {
+          "title": "音频通用规则",
+          "conf": {
+            "strategy": "audio_common"
+          },
+          "cel": "\"audio\" in entry_datatypes && entry_token in [\"audio_start\"]"
+        }, {
+          "title": "设备信息策略1命中条件",
+          "conf": {
+            "strategy": "device_info_strategy1"
+          },
+          "cel": "\"deviceInfo\" in entry_datatypes  && entry_token in [\"deviceInfo_bluetoothAdapter_getAddress\", \"deviceInfo_bluetoothDevice_getAddress\", \"deviceInfo_networkInterface_getHardwareAddress\", \"deviceInfo_networkInterface_getNetworkInterfaces\", \"deviceInfo_subscriptionInfo_getIccId\", \"deviceInfo_telephonyManager_getSimSerialNumber\", \"deviceInfo_telephonyManager_getImei\", \"deviceInfo_telephonyManager_getDeviceSoftwareVersion\", \"deviceInfo_wifiInfo_getMacAddress\", \"deviceInfo_wifiInfo_getBSSID\",\"deviceInfo_wifimanager_getConfiguredNetworks\",\"deviceInfo_wifiInfo_getSSID\",\"deviceInfo_packageManger_getInstalledApplications\",\"deviceInfo_packageManger_getInstalledPackages\",\"deviceInfo_telephonyManager_getDeviceId\",\"deviceInfo_wifimanager_getConnectionInfo\"]"
+        }, {
+          "title": "设备信息策略3命中条件",
+          "conf": {
+            "strategy": "device_info_strategy3"
+          },
+          "cel": "\"deviceInfo\" in entry_datatypes  && entry_token in [\"deviceInfo_telephonyManager_getCellLocation\", \"deviceInfo_sensorManager_getDefaultSensor\", \"deviceInfo_sensorManager_getSensorList\", \"deviceInfo_sensorManager_getDynamicSensorList\"]"
+        }, {
+          "title": "设备信息策略4命中条件",
+          "conf": {
+            "strategy": "device_info_strategy4"
+          },
+          "cel": "\"deviceInfo\" in entry_datatypes  && entry_token in [\"deviceInfo_BluetoothLeScanner_startScan\", \"deviceInfo_wifimanager_startScan\", \"deviceInfo_wifimanager_getScanResults\", \"deviceInfo_telephonyManager_getAllCellInfo\"]"
+        }, {
+          "title": "设备信息策略5命中条件",
+          "conf": {
+            "strategy": "device_info_strategy5"
+          },
+          "cel": "\"deviceInfo\" in entry_datatypes  && entry_token in [\"deviceInfo_inet4Address_getHostAddress\", \"deviceInfo_inet6Address_getHostAddress\", \"deviceInfo_wifiInfo_getIpAddress\"]"
+        }, {
+          "title": "设备信息策略6命中条件",
+          "conf": {
+            "strategy": "device_info_strategy6"
+          },
+          "cel": "\"deviceInfo\" in entry_datatypes  && entry_token in [\"deviceInfo_build_getSerial\", \"deviceInfo_telephonyManager_getSubscriberId\"]"
+        }, {
+          "title": "设备信息全禁用策略命中条件",
+          "conf": {
+            "strategy": "device_info_strict_mode"
+          },
+          "cel": "\"deviceInfo\" in entry_datatypes  && entry_token in [\"deviceInfo_telephonyManager_getLine1Number\", \"deviceInfo_telecomManager_getLine1Number\"]"
+        }, {
+          "title": "权限申请通用规则",
+          "conf": {
+            "strategy": "permission_common"
+          },
+          "cel": "\"permission\" in entry_datatypes  && entry_token in [\"EzPermission_requestPermission\"]"
+        }, {
+          "title": "录制通用规则",
+          "conf": {
+            "strategy": "record_common"
+          },
+          "cel": "\"mediaRecord\" in entry_datatypes && entry_token in [\"mediaRecord_start\""
+        }, {
+          "title": "结束录制",
+          "conf": {
+            "strategy": "record_release"
+          },
+          "cel": "\"mediaRecord\" in entry_datatypes && entry_token in [\"mediaRecord_stop\", \"mediaRecord_release\"]"
+        }, {
+          "title": "未监控场景",
+          "conf": {
+            "strategy": "monitor_escape"
+          },
+          "cel": "true"
+        }]
+      }
+    }
+  }
+}

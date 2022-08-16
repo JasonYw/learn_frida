@@ -1,0 +1,4 @@
+com.bytedance.android.livesdk.gecko.LiveGeckoRegister
+com.ss.android.ugc.aweme.cert.CertGeckoRegister
+com.bytedance.android.ec.hybrid.card.global.ECGeckoRegister
+com.android.ttcjpaysdk.base.gecko.GeckoRegisterImpl

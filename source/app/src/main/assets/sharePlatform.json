@@ -1,0 +1,703 @@
+{
+  "scene": {
+    "video": {
+      "common": {
+        "channels": [
+          {
+            "name": "share_to_daily"
+          },
+          {
+            "name": "chat_merge"
+          },
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "qzone"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "duoshan"
+          },
+          {
+            "name": "toutiao"
+          },
+          {
+            "name": "weibo"
+          },
+          {
+            "name": "lark"
+          },
+          {
+            "name": "instagram"
+          },
+          {
+            "name": "forward"
+          },
+          {
+            "name": "more_channel"
+          }
+        ],
+        "actions": [
+          {
+            "name": "play_remote"
+          },
+          {
+            "name": "report"
+          },
+          {
+            "name": "data_analytics"
+          },
+          {
+            "name": "download"
+          },
+          {
+            "name": "create_mix"
+          },
+          {
+            "name": "fans_tools"
+          },
+          {
+            "name": "favorite"
+          },
+          {
+            "name": "ad_cooperation"
+          },
+          {
+            "name": "reuse_sticker"
+          },
+          {
+            "name": "reuse_mv_template"
+          },
+          {
+            "name": "duet"
+          },
+          {
+            "name": "upstage"
+          },
+          {
+            "name": "black_list"
+          },
+          {
+            "name": "live_wallpaper"
+          },
+          {
+            "name": "dislike"
+          },
+          {
+            "name": "permission_settings"
+          },
+          {
+            "name": "ad_auth"
+          },
+          {
+            "name": "allow_comment"
+          },
+          {
+            "name": "reedit"
+          },
+          {
+            "name": "delete"
+          },
+          {
+            "name": "copy"
+          },
+          {
+            "name": "qr_code"
+          },
+          {
+            "name": "reward"
+          },
+          {
+            "name": "ad_plan"
+          },
+          {
+            "name": "cannot_distribute"
+          },
+          {
+            "name": "dou_plus"
+          },
+          {
+            "name": "dou_shop"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "report_music"
+          },
+          {
+            "name": "video_feedback"
+          }
+        ]
+      },
+      "planA": {
+        "users": [
+          {
+            "name": "share_to_daily"
+          }
+        ],
+        "channels": [
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "download"
+          },
+          {
+            "name": "copy"
+          },
+          {
+            "name": "duet"
+          },
+          {
+            "name": "more_channel_list",
+            "need_channel_list": "moreChannelList"
+          }
+        ],
+        "actions": [
+          {
+            "name": "play_remote"
+          },
+          {
+            "name": "report"
+          },
+          {
+            "name": "data_analytics"
+          },
+          {
+            "name": "create_mix"
+          },
+          {
+            "name": "fans_tools"
+          },
+          {
+            "name": "favorite"
+          },
+          {
+            "name": "ad_cooperation"
+          },
+          {
+            "name": "ad_plan"
+          },
+          {
+            "name": "reuse_sticker"
+          },
+          {
+            "name": "reuse_mv_template"
+          },
+          {
+            "name": "upstage"
+          },
+          {
+            "name": "black_list"
+          },
+          {
+            "name": "live_wallpaper"
+          },
+          {
+            "name": "dislike"
+          },
+          {
+            "name": "permission_settings"
+          },
+          {
+            "name": "ad_auth"
+          },
+          {
+            "name": "allow_comment"
+          },
+          {
+            "name": "reedit"
+          },
+          {
+            "name": "delete"
+          },
+          {
+            "name": "qr_code",
+            "title": {
+              "default": "生成图片"
+            }
+          },
+          {
+            "name": "reward"
+          },
+          {
+            "name": "cannot_distribute"
+          },
+          {
+            "name": "dou_plus"
+          },
+          {
+            "name": "dou_shop"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "copy_data"
+          },
+          {
+            "name": "report_music"
+          },
+          {
+            "name": "visualize_aweme"
+          },
+          {
+            "name": "video_feedback"
+          }
+        ],
+        "moreChannelList": [
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "qzone"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "duoshan"
+          },
+          {
+            "name": "toutiao"
+          },
+          {
+            "name": "weibo"
+          },
+          {
+            "name": "lark"
+          }
+        ]
+      },
+      "planC": {
+        "users": [
+          {
+            "name": "share_to_daily"
+          }
+        ],
+        "channels": [
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "download"
+          },
+          {
+            "name": "copy"
+          },
+          {
+            "name": "duet"
+          },
+          {
+            "name": "more_channel_list",
+            "need_channel_list": "moreChannelList"
+          }
+        ],
+        "actions": [
+          {
+            "name": "play_remote"
+          },
+          {
+            "name": "report"
+          },
+          {
+            "name": "data_analytics"
+          },
+          {
+            "name": "create_mix"
+          },
+          {
+            "name": "fans_tools"
+          },
+          {
+            "name": "favorite"
+          },
+          {
+            "name": "ad_cooperation"
+          },
+          {
+            "name": "ad_plan"
+          },
+          {
+            "name": "reuse_sticker"
+          },
+          {
+            "name": "reuse_mv_template"
+          },
+          {
+            "name": "upstage"
+          },
+          {
+            "name": "black_list"
+          },
+          {
+            "name": "live_wallpaper"
+          },
+          {
+            "name": "dislike"
+          },
+          {
+            "name": "permission_settings"
+          },
+          {
+            "name": "ad_auth"
+          },
+          {
+            "name": "allow_comment"
+          },
+          {
+            "name": "reedit"
+          },
+          {
+            "name": "delete"
+          },
+          {
+            "name": "qr_code",
+            "title": {
+              "default": "生成图片"
+            }
+          },
+          {
+            "name": "reward"
+          },
+          {
+            "name": "cannot_distribute"
+          },
+          {
+            "name": "dou_plus"
+          },
+          {
+            "name": "dou_shop"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "copy_data"
+          },
+          {
+            "name": "report_music"
+          },
+          {
+            "name": "visualize_aweme"
+          },
+          {
+            "name": "video_feedback"
+          }
+        ],
+        "moreChannelList": [
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "qzone"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "duoshan"
+          },
+          {
+            "name": "toutiao"
+          },
+          {
+            "name": "weibo"
+          },
+          {
+            "name": "lark"
+          }
+        ]
+      },
+      "planB": {
+        "channels": [
+          {
+            "name": "share_to_daily"
+          }
+        ],
+        "actions": [
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "play_remote"
+          },
+          {
+            "name": "report"
+          },
+          {
+            "name": "data_analytics"
+          },
+          {
+            "name": "download"
+          },
+          {
+            "name": "create_mix"
+          },
+          {
+            "name": "fans_tools"
+          },
+          {
+            "name": "favorite"
+          },
+          {
+            "name": "ad_cooperation"
+          },
+          {
+            "name": "ad_plan"
+          },
+          {
+            "name": "reuse_sticker"
+          },
+          {
+            "name": "reuse_mv_template"
+          },
+          {
+            "name": "duet"
+          },
+          {
+            "name": "upstage"
+          },
+          {
+            "name": "black_list"
+          },
+          {
+            "name": "live_wallpaper"
+          },
+          {
+            "name": "dislike"
+          },
+          {
+            "name": "permission_settings"
+          },
+          {
+            "name": "ad_auth"
+          },
+          {
+            "name": "allow_comment"
+          },
+          {
+            "name": "reedit"
+          },
+          {
+            "name": "delete"
+          },
+          {
+            "name": "copy"
+          },
+          {
+            "name": "qr_code",
+            "title": {
+              "default": "生成图片"
+            }
+          },
+          {
+            "name": "reward"
+          },
+          {
+            "name": "cannot_distribute"
+          },
+          {
+            "name": "dou_plus"
+          },
+          {
+            "name": "dou_shop"
+          },
+          {
+            "name": "top"
+          },
+          {
+            "name": "report_music"
+          },
+          {
+            "name": "visualize_aweme"
+          },
+          {
+            "name": "video_feedback"
+          },
+          {
+            "name": "more_channel_list",
+            "need_channel_list": "moreChannelList"
+          }
+        ],
+        "moreChannelList": [
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "qzone"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "duoshan"
+          },
+          {
+            "name": "toutiao"
+          },
+          {
+            "name": "weibo"
+          },
+          {
+            "name": "lark"
+          }
+        ]
+      },
+      "landscape": {
+        "channels": [
+          {
+            "name": "share_to_daily"
+          },
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "qzone"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "duoshan"
+          },
+          {
+            "name": "toutiao"
+          },
+          {
+            "name": "weibo"
+          },
+          {
+            "name": "lark"
+          },
+          {
+            "name": "copy"
+          }
+        ],
+        "actions": [
+          {
+            "name": "report"
+          },
+          {
+            "name": "dislike"
+          },
+          {
+            "name": "favorite"
+          }
+        ]
+      }
+    },
+    "music": {
+      "common": {
+        "channels": [
+          {
+            "name": "chat_merge"
+          },
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "qzone"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "weibo"
+          }
+        ],
+        "actions": [
+          {
+            "name": "report_music"
+          },
+          {
+            "name": "copy"
+          },
+          {
+            "name": "qr_code"
+          },
+          {
+            "name": "music_dislike"
+          }
+        ]
+      }
+    },
+    "challenge": {
+      "common": {
+        "channels": [
+          {
+            "name": "chat_merge"
+          },
+          {
+            "name": "weixin_moments"
+          },
+          {
+            "name": "weixin"
+          },
+          {
+            "name": "qzone"
+          },
+          {
+            "name": "qq"
+          },
+          {
+            "name": "weibo"
+          }
+        ],
+        "actions": [
+          {
+            "name": "copy"
+          },
+          {
+            "name": "qr_code"
+          }
+        ]
+      }
+    }
+  }
+}
+
+
+
+
+

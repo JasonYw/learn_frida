@@ -1,0 +1,430 @@
+{
+    "secondPartyConfigList": [
+        {
+            "clientKey": "awg2scqjqlzosr0y",
+            "whiteJsbList": [
+                "ofg.sendLogV3",
+                "ofg.x.showLoading",
+                "ofg.getCurrentLocation",
+                "ofg.share",
+                "ofg.setTitle",
+                "ofg.x.hideLoading"
+            ],
+            "domainList": [
+                "45215d.gf.bytedance.net"
+            ]
+        },
+        {
+            "clientKey": "awkfs6876ejms8gt",
+            "whiteJsbList": [
+                "adInfo",
+                "apiParam",
+                "webviewControl",
+                "baseInfo",
+                "close",
+                "copy",
+                "darkMode",
+                "downloadMedia",
+                "fetch",
+                "gallery",
+                "ofg.getCurrentLocation",
+                "getNativeItem",
+                "getWebViewInfo",
+                "interceptPreloadEvent",
+                "localPhoneNo",
+                "login",
+                "notification",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "launchWXMiniPro",
+                "music",
+                "openBrowser",
+                "openSchema",
+                "showOpenAuth",
+                "showToast",
+                "viewAppeared",
+                "viewDisappeared",
+                "ofg.sendLogV3",
+                "setNativeItem",
+                "setStatusBar",
+                "ofg.setTitle",
+                "ofg.share",
+                "userInfo",
+                "x.getContainerID"
+            ],
+            "domainList": [
+                "api.dcarapi.com",
+                "m.dcdapp.com"
+            ]
+        },
+        {
+            "clientKey": "awchstlwlz5swjg8",
+            "whiteJsbList": [
+                "adInfo",
+                "musicCollect",
+                "musicCollectStatus",
+                "webviewControl",
+                "close",
+                "closeLoading",
+                "fetch",
+                "ofg.getCurrentLocation",
+                "getWebViewInfo",
+                "hideLoading",
+                "interceptPreloadEvent",
+                "localPhoneNo",
+                "login",
+                "jumpOpenAuthPage",
+                "music",
+                "showOpenAuth",
+                "ofg.sendLogV3",
+                "ofg.setTitle",
+                "ofg.share",
+                "x.getAppInfo",
+                "ofg.x.hideLoading"
+            ],
+            "domainList": [
+                "fangchan.toutiao.com",
+                "m.99hdf.com",
+                "m.xflapp.com"
+            ]
+        },
+        {
+            "clientKey": "awh7gw2c83cfik3v",
+            "whiteJsbList": [
+                "fetch",
+                "launchChat",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "showOpenAuth"
+            ],
+            "domainList": [
+                "m.zhuxiaobang.com",
+                "www.zhuxiaobang.com"
+            ]
+        },
+        {
+            "clientKey": "aw9m0xeb11izgdlz",
+            "whiteJsbList": [
+                "close",
+                "copy",
+                "darkMode",
+                "downloadApp",
+                "downloadMedia",
+                "fetch",
+                "gsdk.getSdkInfo",
+                "gsdk.orderApp",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "download_app_ad",
+                "openSchema",
+                "showOpenAuth",
+                "showToast",
+                "ofg.sendLogV3",
+                "userInfo"
+            ],
+            "domainList": [
+                "3d2y.nvsgames.cn",
+                "act-sandbox.dailygn.com",
+                "act-sandbox.nvsgames.cn",
+                "act.bytedance.net",
+                "act.nvsgames.cn",
+                "allstar.nvsgames.cn",
+                "cat.nvsgames.cn",
+                "coa.nvsgames.cn",
+                "columba.nvsgames.cn",
+                "flower.nvsgames.cn",
+                "gcommunity.nvsgames.cn",
+                "huoying.nvsgames.cn",
+                "op.nvsgames.cn",
+                "opsea.nvsgames.cn",
+                "reso.nvsgames.cn",
+                "rxjl.nvsgames.cn",
+                "spark.nvsgames.cn",
+                "sxd.nvsgames.cn",
+                "wulin.nvsgames.cn",
+                "www.gamearrival.cn"
+            ]
+        },
+        {
+            "clientKey": "aw2fli8pafiqfr0m",
+            "whiteJsbList": [
+                "adInfo",
+                "notification",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "openSchema",
+                "showOpenAuth",
+                "x.copy",
+                "x.downloadFile",
+                "x.reportAppLog"
+            ],
+            "domainList": [
+                "m.xiaohe-jiankang.com"
+            ]
+        },
+        {
+            "clientKey": "awmlcncn8fhdj7ll",
+            "whiteJsbList": [
+                "adInfo",
+                "close",
+                "fetch",
+                "getUserInfo",
+                "launchChat",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "openBrowser",
+                "showOpenAuth",
+                "openConfig",
+                "ofg.sendLogV3",
+                "userInfo",
+                "openAweme",
+                "showToast",
+                "x.open"
+            ],
+            "domainList": [
+                "saletools.yangyi07.com"
+            ]
+        },
+        {
+            "clientKey": "awt9m5aizl54txla",
+            "whiteJsbList": [
+                "adInfo",
+                "app.getStorage",
+                "app.setStorage",
+                "close",
+                "darkMode",
+                "fetch",
+                "ofg.getCurrentLocation",
+                "hideLoading",
+                "is_visible",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "showOpenAuth",
+                "ofg.setTitle",
+                "ofg.share",
+                "updateWapStayPageArg",
+                "x.open"
+            ],
+            "domainList": [
+                "api.toutiaoapi.com"
+            ]
+        },
+        {
+            "clientKey": "awbz3ng7jss36nxq",
+            "whiteJsbList": [
+                "adInfo",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "showOpenAuth",
+                "ofg.sendLogV3"
+            ],
+            "domainList": [
+                "wj.toutiao.com"
+            ]
+        },
+        {
+            "clientKey": "awqm4owbavkyisc6",
+            "whiteJsbList": [
+                "apiParam",
+                "musicCollect",
+                "musicCollectStatus",
+                "webviewControl",
+                "close",
+                "copy",
+                "darkMode",
+                "fetch",
+                "getLiveGameParams",
+                "getLiveRoomInfo",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "music",
+                "openSchema",
+                "showOpenAuth",
+                "showToast",
+                "ofg.sendLogV3",
+                "userInfo"
+            ],
+            "domainList": [
+                "gamepublisher-boe.bytedance.net",
+                "gamepublisher.nvsgames.cn"
+            ]
+        },
+        {
+            "clientKey": "awe8knppwfsdo4hz",
+            "whiteJsbList": [
+                "appInfo",
+                "jumpOpenAuthPage",
+                "openSchema",
+                "showOpenAuth",
+                "x.getAppInfo"
+            ],
+            "domainList": [
+                "meihejia.xiangyujiankang.com"
+            ]
+        },
+        {
+            "clientKey": "awup8qv4xqom4smy",
+            "whiteJsbList": [
+                "adInfo",
+                "notification",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "openSchema",
+                "showOpenAuth",
+                "viewAppeared",
+                "viewDisappeared",
+                "openConfig",
+                "routePop",
+                "routePush",
+                "ofg.share",
+                "x.close",
+                "x.copy",
+                "x.downloadFile",
+                "x.reportAppLog"
+            ],
+            "domainList": [
+                "h5.xiangyujiankang.com",
+                "m.xiaohe.cn"
+            ]
+        },
+        {
+            "clientKey": "awj04fu40u8k4o9m",
+            "whiteJsbList": [
+                "adInfo",
+                "musicCollect",
+                "musicCollectStatus",
+                "webviewControl",
+                "ofg.getCurrentLocation",
+                "getLiveRoomInfo",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "music",
+                "openSchema",
+                "showOpenAuth",
+                "openLiveRoom",
+                "ofg.share",
+                "userInfo"
+            ],
+            "domainList": [
+                "cars.toutiao.com"
+            ]
+        },
+        {
+            "clientKey": "awzinjgzov34l3n2",
+            "whiteJsbList": [
+                "alert",
+                "app.getStorage",
+                "app.setStorage",
+                "checkAssets",
+                "close",
+                "fetch",
+                "impression",
+                "is_login",
+                "is_visible",
+                "login",
+                "novel.download_app_ad",
+                "novel.subscribe_app_ad",
+                "novel.toast",
+                "novel.unsubscribe_app_ad",
+                "onBackPressed",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "download_app_ad",
+                "openSchema",
+                "showOpenAuth",
+                "showToast",
+                "page_state_change",
+                "ofg.sendLogV3",
+                "sendNotification",
+                "showSharePanel",
+                "ttcjpay.isAppInstalled",
+                "ttcjpay.openAppByScheme",
+                "unsubscribe_app_ad",
+                "x.batchEvents",
+                "x.getStorageItem",
+                "x.open",
+                "x.publishEvent",
+                "x.setStorageItem",
+                "x.subscribeEvent",
+                "x.unsubscribeEvent"
+            ],
+            "domainList": [
+                "novel.snssdk.com"
+            ]
+        },
+        {
+            "clientKey": "awdmobuns5eonjjd",
+            "whiteJsbList": [
+                "close",
+                "darkMode",
+                "downloadMedia",
+                "faceVerification",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "openSchema",
+                "showOpenAuth",
+                "x.getAppInfo"
+            ],
+            "domainList": [
+                "teacher-api.iyincaishijiao.com"
+            ]
+        },
+        {
+            "clientKey": "aw1j5bqrsawzyldp",
+            "whiteJsbList": [
+                "webviewControl",
+                "close",
+                "copy",
+                "fetch",
+                "notification",
+                "appInfo",
+                "app_ad_event",
+                "jumpOpenAuthPage",
+                "disableSwipe",
+                "downloadAppAd",
+                "download_app_ad",
+                "enableSwipe",
+                "getAppInfo",
+                "isAppInstalled",
+                "onAdEvent",
+                "onPageInvisible",
+                "onPageVisible",
+                "open",
+                "openApp",
+                "openBrowser",
+                "openSchema",
+                "setTitle",
+                "showOpenAuth",
+                "showToast",
+                "subscribeAppAd",
+                "subscribe_app_ad",
+                "toast",
+                "viewAppeared",
+                "viewDisappeared",
+                "requestJoinImGroup",
+                "ofg.setTitle",
+                "x.allowCaptureScreen",
+                "x.getCaptureScreenStatus",
+                "x.subscribeEvent"
+            ],
+            "domainList": [
+                "student-api.iyincaishijiao.com"
+            ]
+        },
+        {
+            "clientKey": "awlv5rjh4h7gro8p",
+            "whiteJsbList": [
+                "login",
+                "appInfo",
+                "jumpOpenAuthPage",
+                "openSchema",
+                "showOpenAuth",
+                "userInfo"
+            ],
+            "domainList": [
+                "live.bytedance.com",
+                "live.byteoc.com"
+            ]
+        }
+    ]
+}

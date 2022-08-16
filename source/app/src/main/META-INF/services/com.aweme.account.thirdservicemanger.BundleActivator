@@ -1,0 +1,5 @@
+com.aweme.account.wxauth.WXBundleActivator
+com.aweme.account.toutiaoauth.ToutiaoBundleActivator
+com.aweme.account.xiguaauth.XiguaBundleActivator
+com.aweme.account.qqauth.QQBundleActivator
+com.aweme.account.weiboauth.WeiboBundleActivator

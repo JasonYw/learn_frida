@@ -1,0 +1,16 @@
+{
+  "easyGoVersion": "1.0",
+  "client": "com.ss.android.ugc.aweme",
+  "logicEntities": [
+    {
+      "head": {
+        "function": "magicwindow",
+        "required": "true"
+      },
+      "body": {
+        "mode": "1",
+        "excludeDevice": "PAD"
+      }
+    }
+  ]
+}
