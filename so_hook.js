@@ -1,3 +1,5 @@
+//https://github.com/gchq/CyberChef/releases
+
 function stringToBytes(str){
     return hexToBytes(stringToHex(str));
 }
@@ -1028,3 +1030,105 @@ function hook_xiaojianbangmd5_hexdump(){
 //frida-trace+tracenatives
 //tracenatives IDA中的插件
 
+//内存读写监控 并不推荐frida 不是很精确 利用了frida 的异常回调 
+//原理是 通过权限控制 触发权限异常，之后再通过setExceptionHandler 异常发生时 处理异常，之后解决掉异常 让frida继续执行，解决异常的方式就是修复权限
+//如果想监控内存读的情况 就把读权限制空，如果是写就把写制空
+function monitor_ram_wr(){
+    function _set_read_write_break(){
+        //details 为里面的异常信息
+        Process.setExceptionHandler(function(details){
+            //解决下面主动触发的异常
+            console.log(JSON.stringify(details)) // 包含的是错误信息
+            console.log("lr",DebugSymbol.fromAddress(details.context.lr))
+            console.log("pc",DebugSymbol.fromAddress(details.context.pc))
+            //通过修改权限解决异常
+            Memory.protect(details.memory.address,Process.pointerSize,'rwx')
+            //打印堆栈
+            console.log(Thread.backtrace(details.context,Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join('\n')+'\n')
+            return true
+        })
+        var addr = Module.findBaseAddress('libxiaojianbang.so').add(0x3CFD) // 要监控的地址
+        Memory.protect(addr,8,'---') //修改的是内存页的权限，之后触发异常，所以修改的是 4096个地址的 所以那一页的访问都会报错
+    }
+    function _hook_dlopen(addr,soname,callback){
+        Interceptor.attach(addr,{
+            onEnter:function(args){
+                var sopath = args[0].readCString()
+                if(sopath.indexOf(soname) != -1){
+                    this.hook = true
+                }
+            },
+            onLeave:function(retval){
+                if(this.hook) callback()
+            }
+        })
+    }
+
+    //为了监控内存还需要用到dlopen,通过hook dlopen 在一开始去监控内存
+    var dlopen = Module.findExportByName('libdl.so','dlopen')
+    var android_dlopen_ext = Module.findExportByName('libdl.so','android_dlopen_ext')
+    _hook_dlopen(dlopen,'libxiaojianbang.so',_set_read_write_break)
+    _hook_dlopen(android_dlopen_ext,'libxiaojianbang.so',_set_read_write_break)
+}
+
+
+//frida检测
+//相关文章 https://bbs.pediy.com/thread-217482.htm
+//1.ptrace 占坑 开启一个子进程附加主进程 原理一个app进程只能被一个app附加 
+//Failed to attach: unable to access process with pid 8961 due to system restrictions; try `sudo sysctl kernel.yama.ptrace_scope=0`, or run Frida as root 提示无法附加 通常就是 ptrac
+//解决办法 以spawn方式进行注入 spwan 模式注入成功后 会被kill掉 之后就可以进行frida attach 方式注入 ptrace 是一瞬间的事情
+//com.wujie.chengxin 用的是双进程  PID 指定的父进程id 用子进程附加自己
+//app 可以双进程 1.守护进程 防止app挂掉 当主进程挂掉 保证 服务不会死  2.子进程附加主进程 目的是 不让别人附加 3.普通的双进程
+//2.进程名检测 检测frida-server是否在进程列表里 解决改名字 
+//3.端口检测  检测frida-server的端口  frida 可以指定端口
+//4.dbus协议通信 向每个端口发送dbus 认证消息 哪个端口回复了reject 就是frida-server 也可以每个端口都试一下 从0-65535端口 过dubs hook strcmp 改参数 或者改返回值 hook strstr
+//5.扫描maps文件 maps文件是一个app加载的依赖库  /proc/进程pid/maps
+//内存地址 权限 
+//749419a000-749419b000 r-xp 00000000 103:1d 3375610                       /data/app/com.xiaojianbang.app-QTWcjBSoZCLsdnHN86PaQw==/lib/arm64/libxiaojianbangA.so
+//frida注入时 会注入frida-agent 一个so
+// 7490223000-74908d9000 r--p 00000000 103:1d 2523142                       /data/local/tmp/re.frida.server/frida-agent-64.so
+// 74908da000-74916c9000 r-xp 006b6000 103:1d 2523142                       /data/local/tmp/re.frida.server/frida-agent-64.so
+// 74916c9000-7491764000 r--p 014a4000 103:1d 2523142                       /data/local/tmp/re.frida.server/frida-agent-64.so
+// 7491764000-749177b000 rw-p 0153e000 103:1d 2523142                       /data/local/tmp/re.frida.server/frida-agent-64.so
+//6.扫描task目录 /proc/进程pid/task
+//task目录下的数字代表app代表进程开启的线程
+//每个数字目录下面 会有 status文件 文件里会记录线程相关的信息 
+//status 中 name为 gdbus 或者gmain 或者 gum-js-loop 或者 pool-frida为 frida注入特征   
+//status 中 tracepid 不为  0  代表被附加
+//所以一些app会遍历  /proc/进程pid/task/ 目录
+//8.通过readlink查看/proc/self/fd /proc/self/task/pid/fd下 打开所有文件 检测是否有frida相关文件
+//9.常用frida检测的系统函数 strstr strcmp open read fread readlink
+//readlink打开的同时进行读取
+//10.扫描内存中是否有frida库特征是否出现 例如 LIBFRIDA
+//11.frida-serve 启动后 会 /data/local/tmp/re.frida.server 有这个目录 所以这也是一个监测点 
+//hluwa的去掉字符串特征的frida-server 课件里有 主要是去掉了一些字符串的信息
+//12.frida检测补充
+//riru的特征文件 /system/lib/libmemtrack.so /system/lib/libmemtrack_real.so
+//下面都是/proc/进程pid/
+//task/xxx/cmdline 检测进程名，防止重打包 cmdline 有包名
+//task/xxx/status 检测进程是否被附加 
+//task/xxx/stat 检测进程是否被附加 stat 里很多数值 和  status差不多 
+//task/xxx/status 检测线程name是否包含frida关键字
+//fd/xxx 检测app是否打开的frida相关文件 fd记录app所打开的一些文件
+//maps 检测app是否加载依赖库里含有frida
+//net/tcp 检测app打开端口
+//huluwa
+//huluda-server 处理了re.frida.server文件夹以及该文件夹下面的的文件名字，若使用这个server 并不放在 /data/local/tmp目录下就可以不用担心fd和maps检测
+//frida-agent相关文章 https://bbs.pediy.com/thread-269866.htm 关于frida持久化的知识
+
+
+//frida-gadget 持久化介绍 不需要root权限 
+//通过魔改系统来实现frida-gadget持久化，比重打包的方式更通用 脱离pc
+//关于编译
+//编译报错或者修改文件系统以后，都可以直接make，已经编译的部分会跳过
+//make clean 会清楚已经编译的 全部重来 在编译不同的lunch选项时使用
+//修改art源码时需要make clean 否则编译出来system/lib 里面的so不变(fart)
+//单独编译的system.img 在根目录下
+//source build/envsetup.sh
+//lunch xxx
+//make systemimage -j4
+//单独编译某个模块 mmm packages/apps/xiaojianbang
+//将文件打包成img镜像 make snod
+//更多其它编译方式自行百度
+//参考https://wuxiaolong.me/2018/08/15/AOSP3
+//这个先跳过不看了缺少学习环境 
