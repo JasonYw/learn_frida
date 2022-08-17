@@ -95,9 +95,22 @@ function hook_downmodel(){
     })
 }
 
+function hook_login(){
+    Java.perform(function(){
+        var buildparam = Java.use('com.m4399.gamecenter.plugin.main.providers.be.d')
+        buildparam.buildRequestParams.implementation = function(a,b){
+            var b_ = Java.cast(b,Java.use('java.util.HashMap'))
+            console.log(a,b_,JSON.stringify(b))
+            var  result = this.buildRequestParams(a,b)
+            return result
+        }
+    })
+}
+
+hook_login()
 // hook_update()
 // hook_file()
-hook_toast()
+// hook_toast()
 // hook_kill()
 
 
