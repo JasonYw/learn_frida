@@ -45,28 +45,31 @@ function hook_login(){
     })
 }
 
+function print_arg(addr){
+    var module = Process.findRangeByAddress(addr)
+    if(module != null) return hexdump(addr) + "\n"
+    return ptr(addr) + "\n"
+}
 
 
-
-function hook_so_func(addr){
+function hook_so_func(addr,paramsnum){
     var so_addr = Module.findBaseAddress("libNativeHelper.so")
     var func_addr = so_addr.add(addr)
     Interceptor.attach(func_addr,{
         onEnter:function(args){
-            console.log(addr,'enter =>')
-            this.args = args
-            console.log(hexdump(args[0]))
-            console.log(hexdump(args[1]))
-            console.log(hexdump(args[2]))
-
+            this.logs = []
+            this.params =[]
+            for(var i=0;i<paramsnum;i++){
+                this.params.push(args[i])
+                this.logs.push("this.args-"+i+"-onEnter:"+print_arg(args[i]))
+            }
         },
         onLeave:function(retval){
-            console.log(addr,'leave =>')
-            console.log(hexdump(this.args[0]))
-            console.log(hexdump(this.args[1]))
-            console.log(hexdump(this.args[2]))
-            console.log('result =>',retval)
-
+            for(var i=0;i<paramsnum;i++){
+                this.logs.push("this.args-"+i+"-onLeave:"+print_arg(this.params[i]))
+            }
+            this.logs.push("retval onLeave =>"+print_arg(retval)+"\n")
+            console.log(this.logs)
         }
     })
 }
