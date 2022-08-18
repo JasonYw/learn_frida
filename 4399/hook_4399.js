@@ -61,30 +61,31 @@ function hook_so_func(addr,paramsnum){
             this.params =[]
             for(var i=0;i<paramsnum;i++){
                 this.params.push(args[i])
-                this.logs.push(addr+"this.args-"+i+"-onEnter:"+print_arg(args[i]))
+                this.logs.push(addr.toString(16) +" this.args-"+i+"-onEnter:"+print_arg(args[i]))
             }
         },
         onLeave:function(retval){
             for(var i=0;i<paramsnum;i++){
-                this.logs.push(addr+"this.args-"+i+"-onLeave:"+print_arg(this.params[i]))
+                this.logs.push(addr.toString(16) +" this.args-"+i+"-onLeave:"+print_arg(this.params[i]))
             }
-            this.logs.push("retval onLeave =>"+print_arg(retval)+"\n")
+            this.logs.push(addr.toString(16) +" retval onLeave =>"+print_arg(retval)+"\n")
             console.log(this.logs)
+            console.log('====================================================================')
         }
     })
 }
 
 
-hook_so_func(0x71fc,4)
-hook_so_func(0x78b0,4)
-hook_so_func(0x22bc,4)
-hook_so_func(0x46c0,4)
-hook_so_func(0x2454,4)
-hook_so_func(0x1fec,4)
-hook_so_func(0x5ae4,4)
-hook_so_func(0x4a4c,4)
-hook_so_func(0x4c54,4)
-hook_so_func(0x596c,4)
+hook_so_func(0x71fc,6)
+hook_so_func(0x78b0,6)
+hook_so_func(0x22bc,6)
+hook_so_func(0x46c0,6)
+hook_so_func(0x2454,6)
+hook_so_func(0x1fec,6)
+hook_so_func(0x5ae4,6)
+hook_so_func(0x4a4c,6)
+hook_so_func(0x4c54,6)
+hook_so_func(0x596c,6)
 
 
     //   /* TID 0x1acb */
