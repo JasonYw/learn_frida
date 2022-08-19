@@ -122,6 +122,42 @@ def get_result(dic):
 # 处理结果，生成frida脚本
 def generate_script(funclist,constlist):
     script_module = """
+
+
+function print_arg(addr){
+    var module = Process.findRangeByAddress(addr)
+    if(module != null) return hexdump(addr) + "\n"
+    return ptr(addr) + "\n"
+}
+
+
+function hook_so_func(addr,paramsnum){
+    var so_addr = Module.findBaseAddress("libNativeHelper.so")
+    var func_addr = so_addr.add(addr)
+    Interceptor.attach(func_addr,{
+        onEnter:function(args){
+            console.log(addr.toString(16),"====>")
+            this.logs = []
+            this.params =[]
+            for(var i=0;i<paramsnum;i++){
+                this.params.push(args[i])
+                this.logs.push("args-"+i+"-onEnter:"+print_arg(args[i]))
+            }
+        },
+        onLeave:function(retval){
+            for(var i=0;i<paramsnum;i++){
+                this.logs.push("args-"+i+"-onLeave:"+print_arg(this.params[i]))
+            }
+            this.logs.push("retval onLeave=>"+print_arg(retval)+"\n")
+            console.log(this.logs)
+            console.log('====================================================================')
+        }
+    })
+}
+
+
+
+
 function monitor_constants(targetSo) {
     let const_array = [];
     let const_name = [];
@@ -155,7 +191,8 @@ function hook_suspected_function(targetSo) {
             console.log(Thread.backtrace(this.context,Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join("\\n"));
         };
         })();
-    Interceptor.attach(funcPtr, {onEnter: handler});
+    hook_so_func(funcPtr,6)
+    //Interceptor.attach(funcPtr, {onEnter: handler});
 }
 }
 

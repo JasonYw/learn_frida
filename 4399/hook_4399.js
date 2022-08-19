@@ -57,18 +57,19 @@ function hook_so_func(addr,paramsnum){
     var func_addr = so_addr.add(addr)
     Interceptor.attach(func_addr,{
         onEnter:function(args){
+            console.log(addr.toString(16),"====>")
             this.logs = []
             this.params =[]
             for(var i=0;i<paramsnum;i++){
                 this.params.push(args[i])
-                this.logs.push(addr.toString(16) +" this.args-"+i+"-onEnter:"+print_arg(args[i]))
+                this.logs.push("args-"+i+"-onEnter:"+print_arg(args[i]))
             }
         },
         onLeave:function(retval){
             for(var i=0;i<paramsnum;i++){
-                this.logs.push(addr.toString(16) +" this.args-"+i+"-onLeave:"+print_arg(this.params[i]))
+                this.logs.push("args-"+i+"-onLeave:"+print_arg(this.params[i]))
             }
-            this.logs.push(addr.toString(16) +" retval onLeave =>"+print_arg(retval)+"\n")
+            this.logs.push("retval onLeave=>"+print_arg(retval)+"\n")
             console.log(this.logs)
             console.log('====================================================================')
         }
