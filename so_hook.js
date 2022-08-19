@@ -1132,3 +1132,11 @@ function monitor_ram_wr(){
 //更多其它编译方式自行百度
 //参考https://wuxiaolong.me/2018/08/15/AOSP3
 //这个先跳过不看了缺少学习环境 
+
+
+//ida 插件 
+//https://github.com/polymorf/findcrypt-yara
+//pip install yara-python
+// https://github.com/L4ys/IDASignsrch
+// https://github.com/Pr0214/findhash
+
