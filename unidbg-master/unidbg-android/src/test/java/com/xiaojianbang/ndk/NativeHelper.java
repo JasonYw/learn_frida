@@ -5,11 +5,15 @@ import com.github.unidbg.Emulator;
 import com.github.unidbg.Module;
 import com.github.unidbg.Symbol;
 import com.github.unidbg.arm.HookStatus;
+import com.github.unidbg.arm.backend.Backend;
+import com.github.unidbg.arm.backend.CodeHook;
+import com.github.unidbg.arm.backend.UnHook;
 import com.github.unidbg.arm.backend.Unicorn2Factory;
 import com.github.unidbg.arm.context.Arm64RegisterContext;
 // import com.github.unidbg.arm.context.Arm32RegisterContext;
 // import com.github.unidbg.arm.context.Arm64RegisterContext;
 import com.github.unidbg.arm.context.RegisterContext;
+import com.github.unidbg.debugger.Debugger;
 import com.github.unidbg.debugger.DebuggerType;
 import com.github.unidbg.hook.HookContext;
 import com.github.unidbg.hook.IHook;
@@ -42,7 +46,14 @@ import com.sun.jna.Pointer;
 import javafx.geometry.Orientation;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
 
+import javax.jws.WebParam.Mode;
+import javax.print.DocFlavor.STRING;
+
+import org.omg.CORBA.REBIND;
 import org.omg.PortableInterceptor.Interceptor;
 
 
@@ -143,7 +154,10 @@ public class NativeHelper extends AbstractJni  {
         // test.hookzz_inlinehook();
         // test.get_arg();
         // test.get_arg_set_xlong();
-        test.hook_replace();
+        // test.hook_replace();
+        // test.unicorn_hook();
+        // test.unicorn_debug();
+        test.unicorn_monitor();
     }
 
 
@@ -346,6 +360,7 @@ public class NativeHelper extends AbstractJni  {
 
     void hook_replace(){
         //hook代码 替换之后依然可以调用原函数
+
         IHookZz hookzz = HookZz.getInstance(emulator);
         hookzz.replace(module.findSymbolByName("Java_com_xiaojianbang_ndk_NativeHelper_md5"), new ReplaceCallback(){
             @Override
@@ -366,6 +381,91 @@ public class NativeHelper extends AbstractJni  {
         int md5result = NativeHelper.callStaticJniMethodInt(emulator, "md5(Ljava/lang/String;)Ljava/lang/String;", new StringObject(vm, "xiaojianbang"));
         System.out.println(md5result);
     }
+
+    //Unicorn api 进行hook时 不需要考虑地址+1问题，会自己转换
+    //Unicorn 原生的hook功能强大，而且不容易被检测
+    void unicorn_hook(){
+        //hook 代码
+        emulator.getBackend().hook_add_new(new CodeHook() {
+            @Override
+            public void hook(Backend backend,long address,int size,Object user){
+                //从module.base + 0x1FE8, module.base + 0x1FF8 两条指令之间 每执行一条指令 会执行此块中的代码
+                // System.out.println(user); 
+                //打印调用栈
+                //栈只有一层是无法打印的
+
+                emulator.getUnwinder().unwind();
+                RegisterContext context = emulator.getContext();
+                if(address == 0x1FF4){
+                    UnidbgPointer md5_ctx = context.getPointerArg(0);
+                    Inspector.inspect(md5_ctx.getByteArray(0, 20),"md5_ctx");
+                    UnidbgPointer plain = context.getPointerArg(1);
+                    Inspector.inspect(plain.getByteArray(0, context.getIntArg(2)),"plain");
+                }else if (address == module.base + 0x2004){
+    
+                    UnidbgPointer ciphertext = context.getPointerArg(1);
+                    Inspector.inspect(ciphertext.getByteArray(0, 16),"ciphertext");
+
+                }
+            }
+            @Override
+            public void onAttach(UnHook unhook){
+
+            }
+            @Override
+            public void detach(){
+
+            }
+            //user_data的作用 当需要外部的值传递时 可以使用user_data进行传递
+            //module.base + 0x1FE8, module.base + 0x2004, "xiaojianbang"
+        }, module.base + 0x22A0, module.base + 0x22A0, "xiaojianbang");
+
+        //主动调用
+        StringObject retval = NativeHelper.callStaticJniMethodObject(emulator,"md5(Ljava/lang/String;)Ljava/lang/String;",new StringObject(vm, "xiaojianbang"));
+        System.out.println("md5 =>"+retval.getValue());
+
+    }
+
+
+    void unicorn_debug(){
+        //unicorn 动态调试 断点触发后 会显示寄存器信息汇编指令
+        //先打断点
+        //到达断点后 可以输入指令 按两下回车 指令提示
+        //c 继续执行到下一个断点 bt 打印堆栈 n 步进 mx0查看寄存器x0的内存 m(address) 查看地址内容 b(address) 下在address下断点
+        Debugger debugger = emulator.attach();
+        debugger.addBreakPoint(module.base+0x1FF4);
+        // debugger.addBreakPoint(module.base+0x1AEC);
+
+        //主动调用
+        StringObject retval = NativeHelper.callStaticJniMethodObject(emulator,"md5(Ljava/lang/String;)Ljava/lang/String;",new StringObject(vm, "xiaojianbang"));
+        System.out.println("md5 =>"+retval.getValue());
+        
+    }
+
+    void unicorn_monitor(){
+        //定义文件名字
+        String traceFile = "yourpath";
+        PrintStream traceStream = null;
+        //构建输出流
+        try{
+            //默认在项目根目录
+            traceStream = new PrintStream(new FileOutputStream(traceFile),true);
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+        //监控读 参数 起始地址 结束地址 
+        //setRedirect 用来做重定向
+        emulator.traceRead(module.base,module.base+module.size).setRedirect(traceStream);
+        //监控写 参数 起始地址 结束地址 
+        emulator.traceWrite(module.base,module.base+module.size).setRedirect(traceStream);
+
+
+        //
+        //主动调用
+        StringObject retval = NativeHelper.callStaticJniMethodObject(emulator,"md5(Ljava/lang/String;)Ljava/lang/String;",new StringObject(vm, "xiaojianbang"));
+        System.out.println("md5 =>"+retval.getValue());
+    }
+
 
 
     //由于继承了AbstractJni 所以直接在后面进行补环境即可
