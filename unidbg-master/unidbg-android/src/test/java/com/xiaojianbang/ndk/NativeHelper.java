@@ -6,14 +6,18 @@ import com.github.unidbg.Module;
 import com.github.unidbg.Symbol;
 import com.github.unidbg.arm.HookStatus;
 import com.github.unidbg.arm.backend.Unicorn2Factory;
-import com.github.unidbg.arm.context.Arm32RegisterContext;
+import com.github.unidbg.arm.context.Arm64RegisterContext;
+// import com.github.unidbg.arm.context.Arm32RegisterContext;
+// import com.github.unidbg.arm.context.Arm64RegisterContext;
 import com.github.unidbg.arm.context.RegisterContext;
 import com.github.unidbg.debugger.DebuggerType;
 import com.github.unidbg.hook.HookContext;
+import com.github.unidbg.hook.IHook;
 import com.github.unidbg.hook.ReplaceCallback;
 import com.github.unidbg.hook.hookzz.Dobby;
 import com.github.unidbg.hook.hookzz.HookEntryInfo;
 import com.github.unidbg.hook.hookzz.HookZz;
+import com.github.unidbg.hook.hookzz.HookZzArm64RegisterContext;
 import com.github.unidbg.hook.hookzz.IHookZz;
 import com.github.unidbg.hook.hookzz.InstrumentCallback;
 import com.github.unidbg.hook.hookzz.WrapCallback;
@@ -35,6 +39,8 @@ import com.github.unidbg.pointer.UnidbgPointer;
 import com.github.unidbg.utils.Inspector;
 import com.sun.jna.Pointer;
 
+import javafx.geometry.Orientation;
+
 import java.io.File;
 
 import org.omg.PortableInterceptor.Interceptor;
@@ -42,6 +48,17 @@ import org.omg.PortableInterceptor.Interceptor;
 
 
 public class NativeHelper extends AbstractJni  {
+    //unidbg 支持dobby hookzz whale xhook
+    //hookzz是dobby的前身 hookzz 对32位支持较好 dobby对64位支持较好
+    //unidbg 支持unicorn 自带的hook
+    //需要掌握原生unicorn hook 以及console debugger
+    //原生unicorn hook不容易被检测
+    //console debugger 可下多个断点 用于快速验证
+    //hook的作用 和 frida差不多 unidbg hook 不容易被检测
+    //unidbg没办法模拟子线程中 
+    //hookzz支持 符号hook 地址hook 但是本质都是地址hook
+    //
+
 
     private final AndroidEmulator emulator;
     private final VM vm;
@@ -50,6 +67,8 @@ public class NativeHelper extends AbstractJni  {
     private final DvmClass NativeHelper;
 
     private final boolean logging;
+    Pointer md5_ctx;
+
 
     NativeHelper(boolean logging) {
         this.logging = logging;
@@ -110,16 +129,21 @@ public class NativeHelper extends AbstractJni  {
 
     public static void main(String[] args) throws Exception {
         NativeHelper test = new NativeHelper(false);
-        int retval = test.jadd();
-        test.jmd5();
-        test.jencode();
-        test.cadd();
-        test.cstrcat();
-        test.mstrcat();
-        test.pstrcat();
-        test.pmd5();
-        System.out.println("retval =>" + retval + " hex =>" + Integer.toHexString(retval));
-        test.destroy();
+        // int retval = test.jadd();
+        // test.jmd5();
+        // test.jencode();
+        // test.cadd();
+        // test.cstrcat();
+        // test.mstrcat();
+        // test.pstrcat();
+        // test.pmd5();
+        // System.out.println("retval =>" + retval + " hex =>" + Integer.toHexString(retval));
+        // test.destroy();
+        // test.hookzz_md5();
+        // test.hookzz_inlinehook();
+        // test.get_arg();
+        // test.get_arg_set_xlong();
+        test.hook_replace();
     }
 
 
@@ -209,6 +233,139 @@ public class NativeHelper extends AbstractJni  {
     }
 
 
+    void hookzz_md5(){
+        IHookZz hookzz  = HookZz.getInstance(emulator);
+        // hookzz.enable_arm_arm64_b_branch(); // 可有可无
+        //RegisterContext 是 Arm32RegisterContext Arm64RegisterContext 的父类 访问寄存器用的
+        //先执行precall，执行原函数，在执行postcall
+
+        hookzz.wrap(module.findSymbolByName("_Z9MD5UpdateP7MD5_CTXPhj"),new WrapCallback<RegisterContext>() {
+            @Override
+            public void preCall(Emulator<?> emulator,RegisterContext ctx,HookEntryInfo info){
+                //获取 参数
+                md5_ctx = ctx.getPointerArg(0);
+                Pointer md5_plain = ctx.getPointerArg(1);
+                int len_ = ctx.getIntArg(2);
+                Inspector.inspect(md5_ctx.getByteArray(0, 64),"md5_ctx");
+                Inspector.inspect(md5_plain.getByteArray(0, len_), "preCall md5_plain");
+            }
+            @Override
+            public void postCall(Emulator<?> enmulator, RegisterContext ctx,HookEntryInfo info){
+                Inspector.inspect(md5_ctx.getByteArray(0, 64),"postCall md5_ctx");
+            }
+
+        });
+        StringObject md5_result = NativeHelper.callStaticJniMethodObject(emulator, "md5(Ljava/lang/String;)Ljava/lang/String;", new StringObject(vm, "xiaojianbang"));
+        System.out.println(md5_result.getValue());
+    }
+
+
+    void hookzz_inlinehook(){
+        //汇编级别的hook 可以hook函数的中间部分
+        IHookZz hookzz = HookZz.getInstance(emulator);
+        //使用偏移地址进行hook，也要有+1 不加1 的问题
+        hookzz.instrument(module.base+0x1AEC,new InstrumentCallback<Arm64RegisterContext>() {
+            @Override
+            //dbiCall 我们指令执行的时候 可以操作模拟器 寄存器
+            public void dbiCall(Emulator<?> emulator,Arm64RegisterContext ctx,HookEntryInfo info){
+                System.out.println("w8:" + Integer.toHexString(ctx.getXInt(8)) + "w9:" + Integer.toHexString(ctx.getXInt(9)) );
+                
+            }
+            
+        });
+
+        //主动调用
+        int retval = NativeHelper.callStaticJniMethodInt(emulator, "add(III)I", 0x100,0x200,0x300);
+        System.out.println(retval);
+
+    }
+
+    void get_arg(){
+        //HOOK 无修改
+        IHookZz hookzz = HookZz.getInstance(emulator);
+        hookzz.wrap(module.findSymbolByName("_Z12jstring2cstrP7_JNIEnvP8_jstring"),new WrapCallback<RegisterContext>() {
+            @Override
+            public void preCall(Emulator<?> emulator,RegisterContext ctx,HookEntryInfo hookinfo){
+                //获取第2个参数 得到stringobject
+                StringObject arg0 = vm.getObject(ctx.getIntArg(1));
+                System.out.println("arg0 =>" + arg0.getValue());
+            } 
+            @Override
+            public void postCall(Emulator<?> emulator,RegisterContext ctx,HookEntryInfo hookinfo){
+                //获取返回值 获取w0或者x0
+                byte[] revtal = ctx.getPointerArg(0).getByteArray(0, 16);
+                Inspector.inspect(revtal, "revtal => ");
+                //也可以
+                // Arm64RegisterContext CTX.getXPointer.getByteArray
+
+            }
+        });
+        //主动调用
+        Number result =  module.callFunction(emulator, "_Z12jstring2cstrP7_JNIEnvP8_jstring", vm.getJNIEnv(),vm.addLocalObject(new StringObject(vm, "xiaojianbang")));
+        //获取结果
+        long cstringaddr = result.longValue(); //获得是c语言的string 是个指针
+        //直接读内存
+        byte[] revtal = emulator.getMemory().pointer(cstringaddr).getByteArray(0, 16);
+        Inspector.inspect(revtal, "get_arg");
+    }
+
+
+    void get_arg_set_xlong(){
+        //修改寄存器
+        //HOOK
+        IHookZz hookzz = HookZz.getInstance(emulator);
+        hookzz.wrap(module.findSymbolByName("_Z12jstring2cstrP7_JNIEnvP8_jstring"),new WrapCallback<HookZzArm64RegisterContext>() {
+            @Override
+            public void preCall(Emulator<?> emulator,HookZzArm64RegisterContext ctx,HookEntryInfo hookinfo){
+                //获取第2个参数 得到stringobject
+                StringObject arg0 = vm.getObject(ctx.getIntArg(1));
+                System.out.println("arg0 =>" + arg0.getValue());
+            } 
+            @Override
+            public void postCall(Emulator<?> emulator,HookZzArm64RegisterContext ctx,HookEntryInfo hookinfo){
+                //读取返回值
+                String revtal = ctx.getXPointer(0).getString(0);
+                System.out.println("result =>" + revtal);
+                //修改返回
+                int hashcode = vm.addLocalObject(new StringObject(vm, "xiaojianbang_replcae"));
+                ctx.setXLong(0, hashcode);
+                //由于上面修改返回值返回的是jsting，所以下面主动调用时取返回值要变
+                //获取返回值 获取w0或者x0
+                // byte[] revtal = ctx.getXPointer(0).getByteArray(0, 16);
+                // Inspector.inspect(revtal, "revtal => ");
+            }
+        });
+        //主动调用
+        Number result =  module.callFunction(emulator, "_Z12jstring2cstrP7_JNIEnvP8_jstring", vm.getJNIEnv(),vm.addLocalObject(new StringObject(vm, "xiaojianbang")));
+        //获取结果
+        int hashcode = result.intValue(); //获得是c语言的string 是个指针
+        StringObject jstring =  vm.getObject(hashcode);
+        System.out.println(jstring);
+        
+    }
+
+    void hook_replace(){
+        //hook代码 替换之后依然可以调用原函数
+        IHookZz hookzz = HookZz.getInstance(emulator);
+        hookzz.replace(module.findSymbolByName("Java_com_xiaojianbang_ndk_NativeHelper_md5"), new ReplaceCallback(){
+            @Override
+            public HookStatus onCall(Emulator<?> emulator,HookContext context,long orginFunction){
+                //自己的函数
+                System.out.println("replaced");
+                //又调用了原函数 也可以不调用 调用原函数有两种方式
+                // return HookStatus.RET(emulator, orginFunction); //调用原函数
+                // return super.onCall(emulator,context,orginFunction); //调用原函数
+
+                //如果不调用原函数 就要这样返回，如果自己给了返回值 在主动调用时需要去改
+                return HookStatus.LR(emulator, 100);
+
+            }
+        });
+
+        //主动触发
+        int md5result = NativeHelper.callStaticJniMethodInt(emulator, "md5(Ljava/lang/String;)Ljava/lang/String;", new StringObject(vm, "xiaojianbang"));
+        System.out.println(md5result);
+    }
 
 
     //由于继承了AbstractJni 所以直接在后面进行补环境即可
