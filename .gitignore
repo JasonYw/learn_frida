@@ -7,3 +7,5 @@ __pycache__/*
 env
 .env
 source_code_*
+.DS_Store
+.DS_Store
