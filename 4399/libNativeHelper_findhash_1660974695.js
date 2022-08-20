@@ -8,7 +8,7 @@ function print_arg(addr){
 }
 
 
-function hook_so_func(addr,paramsnum,relativePtr){
+function hook_so_func(addr,paramsnum,relativePtr,funcname){
     Interceptor.attach(addr,{
         onEnter:function(args){
             this.logs = []
