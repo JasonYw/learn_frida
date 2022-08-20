@@ -191,9 +191,9 @@ function hook_suspected_function(targetSo) {
             console.log(Thread.backtrace(this.context,Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join("\\n"));
         };
         })();
-    hook_so_func(funcPtr,6)
-    //Interceptor.attach(funcPtr, {onEnter: handler});
-}
+        hook_so_func(funcPtr,6)
+        //Interceptor.attach(funcPtr, {onEnter: handler});
+    }
 }
 
 

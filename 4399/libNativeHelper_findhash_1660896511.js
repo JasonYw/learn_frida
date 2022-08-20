@@ -1,23 +1,23 @@
 
-function monitor_constants(targetSo) {
-    let const_array = [];
-    let const_name = [];
-    let const_addr = [['padding used in hashing algorithms (0x80 0 ... 0)', '0x34008']];
+// function monitor_constants(targetSo) {
+//     let const_array = [];
+//     let const_name = [];
+//     let const_addr = [['padding used in hashing algorithms (0x80 0 ... 0)', '0x34008']];
 
-    for (var i = 0; i < const_addr.length; i++) {
-        const_array.push({base:targetSo.add(const_addr[i][1]),size:0x1});
-        const_name.push(const_addr[i][0]);
-    }
+//     for (var i = 0; i < const_addr.length; i++) {
+//         const_array.push({base:targetSo.add(const_addr[i][1]),size:0x1});
+//         const_name.push(const_addr[i][0]);
+//     }
 
-    MemoryAccessMonitor.enable(const_array, {
-        onAccess: function (details) {
-            console.log("\n");
-            console.log("监控到疑似加密常量的内存访问\n");
-            console.log(const_name[details.rangeIndex]);
-            console.log("访问来自:"+details.from.sub(targetSo)+"(可能有误差)");
-    }
-});
-}
+//     MemoryAccessMonitor.enable(const_array, {
+//         onAccess: function (details) {
+//             console.log("\n");
+//             console.log("监控到疑似加密常量的内存访问\n");
+//             console.log(const_name[details.rangeIndex]);
+//             console.log("访问来自:"+details.from.sub(targetSo)+"(可能有误差)");
+//     }
+// });
+// }
 
 function hook_suspected_function(targetSo) {
     const funcs = [['sub_2454', '函数sub_2454疑似哈希函数运算部分。', '0x2454'], ['sub_3350', '函数sub_3350疑似哈希函数运算部分。', '0x3350'], ['sub_4C54', '函数sub_4C54疑似哈希函数运算部分。', '0x4c54'], ['sub_6044', '函数sub_6044疑似哈希函数，包含初始化魔数的代码。', '0x6044'], ['sub_672C', '函数sub_672C疑似哈希函数，包含初始化魔数的代码。', '0x672c'], ['sub_8AD8', '函数sub_8AD8疑似哈希函数，包含初始化魔数的代码。', '0x8ad8']];
@@ -32,8 +32,8 @@ function hook_suspected_function(targetSo) {
             console.log(Thread.backtrace(this.context,Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join("\n"));
         };
         })();
-    Interceptor.attach(funcPtr, {onEnter: handler});
-}
+        Interceptor.attach(funcPtr, {onEnter: handler});
+    }
 }
 
 
