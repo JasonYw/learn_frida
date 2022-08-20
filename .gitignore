@@ -9,3 +9,4 @@ env
 source_code_*
 .DS_Store
 .DS_Store
+.vscode
