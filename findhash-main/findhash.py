@@ -126,8 +126,8 @@ def generate_script(funclist,constlist):
 
 function print_arg(addr){
     var module = Process.findRangeByAddress(addr)
-    if(module != null) return hexdump(addr) + "\n"
-    return ptr(addr) + "\n"
+    if(module != null) return hexdump(addr) + "\\n"
+    return ptr(addr) + "\\n"
 }
 
 
@@ -148,7 +148,7 @@ function hook_so_func(addr,paramsnum){
             for(var i=0;i<paramsnum;i++){
                 this.logs.push("args-"+i+"-onLeave:"+print_arg(this.params[i]))
             }
-            this.logs.push("retval onLeave=>"+print_arg(retval)+"\n")
+            this.logs.push("retval onLeave=>"+print_arg(retval)+"\\n")
             console.log(this.logs)
             console.log('====================================================================')
         }

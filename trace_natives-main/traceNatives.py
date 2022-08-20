@@ -135,7 +135,7 @@ class traceNatives(plugin_t):
             PLAIN_TEXT = PLAIN_TEXT.replace("{{ soname }}",so_name) 
             search_result =f"[{','.join(list(map(lambda x:str(x),search_result)))}]"
             PLAIN_TEXT = PLAIN_TEXT.replace("{{ funcs }}",search_result)
-            script_name = f'{so_name.split(".")[0]}"_build_hooks_{str(int(time.time()))}.js'
+            script_name = f'{so_name.split(".")[0]}_build_hooks_{str(int(time.time()))}.js'
             save_path = os.path.join(so_path, script_name)
             with open(save_path, "w", encoding="utf-8")as F:
                 F.write(PLAIN_TEXT)
