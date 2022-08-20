@@ -131,26 +131,24 @@ function print_arg(addr){
 }
 
 
-function hook_so_func(addr,paramsnum){
-    var so_addr = Module.findBaseAddress("libNativeHelper.so")
-    var func_addr = so_addr.add(addr)
-    Interceptor.attach(func_addr,{
+function hook_so_func(addr,paramsnum,relativePtr){
+    Interceptor.attach(addr,{
         onEnter:function(args){
-            console.log(addr.toString(16),"====>")
             this.logs = []
             this.params =[]
             for(var i=0;i<paramsnum;i++){
                 this.params.push(args[i])
-                this.logs.push("args-"+i+"-onEnter:"+print_arg(args[i]))
+                this.logs.push("args"+i+"-onEnter:"+print_arg(args[i]))
             }
         },
         onLeave:function(retval){
             for(var i=0;i<paramsnum;i++){
-                this.logs.push("args-"+i+"-onLeave:"+print_arg(this.params[i]))
+                this.logs.push("args"+i+"-onLeave:"+print_arg(this.params[i]))
             }
             this.logs.push("retval onLeave=>"+print_arg(retval)+"\\n")
+            console.log("funcname:",funcname,"funcaddr:",addr.toString(16),"relativePtr:",relativePtr.toString(16),"====>")
             console.log(this.logs)
-            console.log('====================================================================')
+            console.log('====================================================================\\n')
         }
     })
 }
@@ -191,7 +189,7 @@ function hook_suspected_function(targetSo) {
             console.log(Thread.backtrace(this.context,Backtracer.ACCURATE).map(DebugSymbol.fromAddress).join("\\n"));
         };
         })();
-        hook_so_func(funcPtr,6)
+        hook_so_func(funcPtr,6,relativePtr,funcs[i][0])
         //Interceptor.attach(funcPtr, {onEnter: handler});
     }
 }
@@ -212,7 +210,7 @@ function main() {
     hook_suspected_function(targetSo);
 }
 
-setImmediate(main);
+main()
     """
     hookscript = script_module.replace("$$$.so", so_name).replace("$$$const_addrs",str(constlist)).replace("$$$funcs",str(funclist))
 

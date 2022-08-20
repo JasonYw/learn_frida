@@ -8,6 +8,7 @@ import idaapi
 import idautils
 import idc
 import time
+from copy import deepcopy
 
 
 
@@ -62,7 +63,8 @@ class traceNatives(plugin_t):
                     search_result.append(hex(func))
             except:
                 pass
-
+        
+        search_result_cp = deepcopy(search_result)
         so_path, so_name = getSoPathAndName()
         search_result = [f"-a '{so_name}!{offset}'" for offset in search_result]
         search_result = " ".join(search_result)
@@ -72,7 +74,7 @@ class traceNatives(plugin_t):
         with open(save_path, "w", encoding="utf-8")as F:
             F.write(search_result)
 
-        self.build_js(so_name,search_result,so_path)
+        self.build_js(so_name,search_result_cp,so_path)
         print("使用方法如下：")
         print(f"frida-trace -UF -O {save_path}")
 
@@ -83,53 +85,53 @@ class traceNatives(plugin_t):
         '''
         PLAIN_TEXT ='''
 
-        function print_arg(addr){
-            var module = Process.findRangeByAddress(addr)
-            if(module != null) return hexdump(addr) + "\\n"
-            return ptr(addr) + "\\n"
-        }
+
+function print_arg(addr){
+    var module = Process.findRangeByAddress(addr)
+    if(module != null) return hexdump(addr) + "\\n"
+    return ptr(addr) + "\\n"
+}
 
 
-        function hook_so_func(addr,paramsnum){
-            var so_addr = Module.findBaseAddress("libNativeHelper.so")
-            var func_addr = so_addr.add(addr)
-            Interceptor.attach(func_addr,{
-                onEnter:function(args){
-                    console.log(addr.toString(16),"====>")
-                    this.logs = []
-                    this.params =[]
-                    for(var i=0;i<paramsnum;i++){
-                        this.params.push(args[i])
-                        this.logs.push("args-"+i+"-onEnter:"+print_arg(args[i]))
-                    }
-                },
-                onLeave:function(retval){
-                    for(var i=0;i<paramsnum;i++){
-                        this.logs.push("args-"+i+"-onLeave:"+print_arg(this.params[i]))
-                    }
-                    this.logs.push("retval onLeave=>"+print_arg(retval)+"\\n")
-                    console.log(this.logs)
-                    console.log('====================================================================')
-                }
-            })
-        }
-
-
-        function hook_suspected_function(targetSo) {
-            var funcs = {{ funcs }}
-            for (var i =0;i<funcs.length;i++) {
-                var funcPtr = targetSo.add(funcs[i])
-                hook_so_func(funcPtr,6)
+function hook_so_func(addr,paramsnum,relativePtr){
+    Interceptor.attach(addr,{
+        onEnter:function(args){
+            this.logs = []
+            this.params =[]
+            for(var i=0;i<paramsnum;i++){
+                this.params.push(args[i])
+                this.logs.push("args"+i+"-onEnter:"+print_arg(args[i]))
             }
+        },
+        onLeave:function(retval){
+            for(var i=0;i<paramsnum;i++){
+                this.logs.push("args"+i+"-onLeave:"+print_arg(this.params[i]))
+            }
+            this.logs.push("retval onLeave=>"+print_arg(retval)+"\\n")
+            console.log("funcaddr:",addr.toString(16),"relativePtr:",relativePtr.toString(16),"====>")
+            console.log(this.logs)
+            console.log('====================================================================\\n')
         }
+    })
+}
 
 
-        function main() {
-            var targetSo = Module.findBaseAddress('{{ soname }}')
-            hook_suspected_function(targetSo)
-        }
 
-        main()
+function hook_suspected_function(targetSo) {
+    const funcs = {{ funcs }}
+    for (var i =0;i<funcs.length;i++) {
+        var funcPtr =targetSo.add(funcs[i])
+        hook_so_func(funcPtr,6,funcs[i])
+    }
+}
+
+
+function main() {
+    var targetSo = Module.findBaseAddress("{{ soname }}")
+    hook_suspected_function(targetSo)
+}
+
+main()
         '''
         if search_result:
             PLAIN_TEXT = PLAIN_TEXT.replace("{{ soname }}",so_name) 
