@@ -42,13 +42,14 @@ enum {
 * hashing operation
 */
 typedef struct SHA1Context {
-    uint32_t Intermediate_Hash[SHA1HashSize / 4]; /* Message Digest */
-    uint32_t Length_Low; /* Message length in bits */
-    uint32_t Length_High; /* Message length in bits */
+    //初始化常量
+    uint32_t Intermediate_Hash[SHA1HashSize / 4]; /* Message Digest */ //8个字节的长度 分成了2个
+    uint32_t Length_Low; /* Message length in bits */ //低位
+    uint32_t Length_High; /* Message length in bits */ //高位
     /* Index into message block array */
-    int_least16_t Message_Block_Index;
-    uint8_t Message_Block[64]; /* 512-bit message blocks */
-    int Computed; /* Is the digest computed? */
+    int_least16_t Message_Block_Index; //明文索引
+    uint8_t Message_Block[64]; /* 512-bit message blocks */ //放明文
+    int Computed; /* Is the digest computed? */ 
     int Corrupted; /* Is the message digest corrupted? */
 } SHA1Context;
 
