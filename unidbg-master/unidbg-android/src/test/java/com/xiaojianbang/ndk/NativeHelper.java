@@ -556,7 +556,7 @@ public class NativeHelper extends AbstractJni implements IOResolver {
         // test.unicorn_hook();
         // test.unicorn_debug();
         // test.unicorn_monitor();
-        test.read_something();
+        // test.read_something();
         
     }
 
