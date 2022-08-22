@@ -213,6 +213,10 @@ public abstract class AbstractARM64Emulator<T extends NewFileIO> extends Abstrac
             builder.append('\n');
             builder.append(dateFormat.format(new Date()));
             builder.append(ARM.assembleDetail(this, ins, address, false, maxLengthLibraryName));
+            builder.append('\t');
+            builder.append('\t');
+            builder.append(ARM.showRegsARM64(this));
+            builder.append('\n');
             if (visitor != null) {
                 visitor.visit(builder, ins);
             }

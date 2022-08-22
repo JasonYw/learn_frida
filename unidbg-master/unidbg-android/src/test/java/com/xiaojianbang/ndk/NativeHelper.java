@@ -138,27 +138,6 @@ public class NativeHelper extends AbstractJni  {
         }
     }
 
-    public static void main(String[] args) throws Exception {
-        NativeHelper test = new NativeHelper(false);
-        // int retval = test.jadd();
-        // test.jmd5();
-        // test.jencode();
-        // test.cadd();
-        // test.cstrcat();
-        // test.mstrcat();
-        // test.pstrcat();
-        // test.pmd5();
-        // System.out.println("retval =>" + retval + " hex =>" + Integer.toHexString(retval));
-        // test.destroy();
-        // test.hookzz_md5();
-        // test.hookzz_inlinehook();
-        // test.get_arg();
-        // test.get_arg_set_xlong();
-        // test.hook_replace();
-        // test.unicorn_hook();
-        // test.unicorn_debug();
-        test.unicorn_monitor();
-    }
 
 
     //j开头是通过定位java中的native方法来调用
@@ -444,6 +423,7 @@ public class NativeHelper extends AbstractJni  {
 
     void unicorn_monitor(){
         //定义文件名字
+        //监控内存读写
         String traceFile = "yourpath";
         PrintStream traceStream = null;
         //构建输出流
@@ -466,6 +446,30 @@ public class NativeHelper extends AbstractJni  {
         System.out.println("md5 =>"+retval.getValue());
     }
 
+    void unidbg_trace(){
+        //记录执行了哪些汇编语句
+        //基本写法 无法打印寄存器的值
+        //通过修改源码达到打印变动的寄存器的值
+        String traceFile = "yourpath";
+        PrintStream traceStream = null;
+        try{
+            traceStream = new PrintStream(new FileOutputStream(traceFile),true);
+        }catch(FileNotFoundException e){
+            e.printStackTrace();
+        }
+
+        emulator.traceCode(module.base,module.base+module.size).setRedirect(traceStream);
+        //也可以增加内存读写
+        emulator.traceRead(module.base,module.base+module.size).setRedirect(traceStream);
+        //监控写 参数 起始地址 结束地址 
+        emulator.traceWrite(module.base,module.base+module.size).setRedirect(traceStream);
+        
+        //主动调用
+        int retval = NativeHelper.callStaticJniMethodInt(emulator, "add(III)I", 0x100,0x200,0x300);
+        System.out.println(retval);
+
+    }
+
 
 
     //由于继承了AbstractJni 所以直接在后面进行补环境即可
@@ -484,5 +488,33 @@ public class NativeHelper extends AbstractJni  {
         //直接调用父类的方法 最偷懒的办法
         return super.callObjectMethodV(vm, dvmObject, signature, vaList);
     }
+
+
+    
+    public static void main(String[] args) throws Exception {
+        NativeHelper test = new NativeHelper(false);
+        // int retval = test.jadd();
+        // test.jmd5();
+        // test.jencode();
+        // test.cadd();
+        // test.cstrcat();
+        // test.mstrcat();
+        // test.pstrcat();
+        // test.pmd5();
+        // System.out.println("retval =>" + retval + " hex =>" + Integer.toHexString(retval));
+        // test.destroy();
+        // test.hookzz_md5();
+        // test.hookzz_inlinehook();
+        // test.get_arg();
+        // test.get_arg_set_xlong();
+        // test.hook_replace();
+        // test.unicorn_hook();
+        // test.unicorn_debug();
+        // test.unicorn_monitor();
+        test.unidbg_trace();
+        
+    }
+
+
 
 }
