@@ -15,6 +15,8 @@ import com.github.unidbg.arm.context.Arm64RegisterContext;
 import com.github.unidbg.arm.context.RegisterContext;
 import com.github.unidbg.debugger.Debugger;
 import com.github.unidbg.debugger.DebuggerType;
+import com.github.unidbg.file.FileResult;
+import com.github.unidbg.file.IOResolver;
 import com.github.unidbg.hook.HookContext;
 import com.github.unidbg.hook.IHook;
 import com.github.unidbg.hook.ReplaceCallback;
@@ -38,6 +40,8 @@ import com.github.unidbg.linux.android.dvm.StringObject;
 import com.github.unidbg.linux.android.dvm.VM;
 import com.github.unidbg.linux.android.dvm.VaList;
 import com.github.unidbg.linux.android.dvm.array.ByteArray;
+import com.github.unidbg.linux.file.ByteArrayFileIO;
+import com.github.unidbg.linux.file.SimpleFileIO;
 import com.github.unidbg.memory.Memory;
 import com.github.unidbg.pointer.UnidbgPointer;
 import com.github.unidbg.utils.Inspector;
@@ -58,7 +62,8 @@ import org.omg.PortableInterceptor.Interceptor;
 
 
 
-public class NativeHelper extends AbstractJni  {
+public class NativeHelper extends AbstractJni implements IOResolver {
+    
     //unidbg 支持dobby hookzz whale xhook
     //hookzz是dobby的前身 hookzz 对32位支持较好 dobby对64位支持较好
     //unidbg 支持unicorn 自带的hook
@@ -68,7 +73,7 @@ public class NativeHelper extends AbstractJni  {
     //hook的作用 和 frida差不多 unidbg hook 不容易被检测
     //unidbg没办法模拟子线程中 
     //hookzz支持 符号hook 地址hook 但是本质都是地址hook
-    //
+   
 
 
     private final AndroidEmulator emulator;
@@ -87,7 +92,14 @@ public class NativeHelper extends AbstractJni  {
         emulator = AndroidEmulatorBuilder.for64Bit()
                 .setProcessName("com.xiaojianbang.app")
                 .addBackendFactory(new Unicorn2Factory(true))
+                //创建虚拟文件系统 给一个文件路径 指定根目录路径  虚拟文件系统的优先级比IOResolver io重定向的优先级低
+                //但是要注意对于maps这种文件来说 依然不生效 unidbg内部给了maps 并且使用的是IOResolver io重定向
+                .setRootDir(new File("unidbg-master/unidbg-android/src/test/java/com/xiaojianbang/ndk/rootfs")) 
                 .build(); // 创建模拟器实例，要模拟32位或者64位，在这里区分
+        System.out.println(emulator.getFileSystem().getRootDir()); //获取当前模拟器的root路径
+
+        System.out.println(emulator.getPid()); //获取pid 但是pid每次都不一样 所以最好固定下来或者将文件中的pid改掉
+
         final Memory memory = emulator.getMemory(); // 模拟器的内存操作接口
         memory.setLibraryResolver(new AndroidResolver(23)); // 设置系统类库解析 19或者23 目前只有这两个 获取内存操作接口
         vm = emulator.createDalvikVM(); // 创建Android虚拟机
@@ -121,13 +133,17 @@ public class NativeHelper extends AbstractJni  {
         //枚举导入表，拿到地址，通过地址获取so基址即可找到so
         //unidbg 已经处理dlopen 加载了libl.so
         //unidbg 首先加载了一些系统函数 在加载我们的so之前
-        DalvikModule dmA = vm.loadLibrary(new File("unidbg-master/unidbg-android/src/test/java/com/xiaojianbang/ndk/libxiaojianbangA.so"), false); 
+        DalvikModule dmA = vm.loadLibrary(new File("unidbg-master/unidbg-android/src/test/java/com/xiaojianbang/ndk/libxiaojianbangA.so"), false);
+        //遇到so依赖可以 loadLibrary加载 也可以使用虚拟module
+        // new XIAOJIANBANGAModule(emulator,vm).register(memory); //相当于加载so，把自己写的so实现注册到内存中去
         DalvikModule dm = vm.loadLibrary(new File("unidbg-master/unidbg-android/src/test/java/com/xiaojianbang/ndk/libxiaojianbang.so"), false); 
         dm.callJNI_OnLoad(emulator); // 手动执行JNI_OnLoad函数 看自己的函数需要不需要jnionload 如果需要就需要调用不需要注释掉即可 动态注册就需要jnionload
         module = dm.getModule(); // 加载好的libxiaojianbang.so对应为一个模块
         // module.callFunction(emulator, symbolName, args) 针对so做操作
         //可以resolve多个类
         NativeHelper = vm.resolveClass("com/xiaojianbang/ndk/NativeHelper"); //加载类的一个过程
+
+        emulator.getSyscallHandler().addIOResolver(this); //进行注册 要实现io重定向的话
     
     }
   
@@ -471,12 +487,41 @@ public class NativeHelper extends AbstractJni  {
     }
 
 
+    void read_something(){
+        //处理系统读取文件
+        //自己补maps
+        //实现io重定向要去实现IOResolver 
+        //还可以使用虚拟文件系统
+        //主动带哦用
+        NativeHelper.callStaticJniMethod(emulator, "readSomething()");
+    }
+
+    @Override
+    public FileResult resolve(Emulator emulator, String pathname, int oflags) {
+        //实现io重定向要去实现IOResolver
+        //当需要读取文件时 会转到这个地方执行
+        //推荐任何时候都去处理一下这个问题
+        //resolve优先级高于虚拟文件系统
+    
+        if(pathname.equals("/proc/self/maps")){
+            //第一种方式以文件的形式返回
+            return FileResult.success(new SimpleFileIO(oflags, new File("unidbg-master\\unidbg-android\\src\\test\\java\\com\\xiaojianbang\\ndk\\maps"), pathname));
+            //第二种以字符串常量的方式返回 适合字符串短的时候
+            //从内存种返回文件读取之后的结果
+            //如果每次运行 文件中的值不一样 那最好 固定下来读取进来改掉在返回 比如pid
+            // return FileResult.success(new ByteArrayFileIO(oflags, pathname, "xiaojianbangmaps".getBytes()));
+        }
+        System.out.println(pathname);
+        return null;
+    }
+
+
 
     //由于继承了AbstractJni 所以直接在后面进行补环境即可
     @Override
     public DvmObject<?> callObjectMethodV(BaseVM vm, DvmObject<?> dvmObject,String signature,VaList vaList){
         //自己补环境自己去写调用的so方法
-        //通过signature 知道so 调用的是啥方法 java/lang/String->getBytes(Ljava/lang/String;)[B
+        //通过signature 知道so 调用的是啥方法 java/lang/String->getBytes(Ljava/lang/String;)[
         System.out.println("signature:"+signature);
         if(signature.equals("java/lang/String->getBytes(Ljava/lang/String;)[B")){
             String args = (String)dvmObject.getValue();
@@ -511,7 +556,7 @@ public class NativeHelper extends AbstractJni  {
         // test.unicorn_hook();
         // test.unicorn_debug();
         // test.unicorn_monitor();
-        test.unidbg_trace();
+        test.read_something();
         
     }
 
