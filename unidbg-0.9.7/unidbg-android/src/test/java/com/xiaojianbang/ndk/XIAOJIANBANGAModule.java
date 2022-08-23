@@ -1,4 +1,4 @@
-package com.github.unidbg.virtualmodule.android;
+package com.xiaojianbang.ndk;
 
 import com.github.unidbg.Emulator;
 import com.github.unidbg.arm.Arm64Svc;

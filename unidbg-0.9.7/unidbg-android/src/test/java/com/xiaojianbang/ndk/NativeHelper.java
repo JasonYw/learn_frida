@@ -13,10 +13,12 @@ import com.github.unidbg.arm.context.Arm64RegisterContext;
 // import com.github.unidbg.arm.context.Arm32RegisterContext;
 // import com.github.unidbg.arm.context.Arm64RegisterContext;
 import com.github.unidbg.arm.context.RegisterContext;
+import com.github.unidbg.debugger.BreakPointCallback;
 import com.github.unidbg.debugger.Debugger;
 import com.github.unidbg.debugger.DebuggerType;
 import com.github.unidbg.file.FileResult;
 import com.github.unidbg.file.IOResolver;
+import com.github.unidbg.file.linux.AndroidFileIO;
 import com.github.unidbg.hook.HookContext;
 import com.github.unidbg.hook.IHook;
 import com.github.unidbg.hook.ReplaceCallback;
@@ -28,6 +30,7 @@ import com.github.unidbg.hook.hookzz.IHookZz;
 import com.github.unidbg.hook.hookzz.InstrumentCallback;
 import com.github.unidbg.hook.hookzz.WrapCallback;
 import com.github.unidbg.hook.xhook.IxHook;
+import com.github.unidbg.linux.android.AndroidARMEmulator;
 import com.github.unidbg.linux.android.AndroidEmulatorBuilder;
 import com.github.unidbg.linux.android.AndroidResolver;
 import com.github.unidbg.linux.android.XHookImpl;
@@ -43,19 +46,24 @@ import com.github.unidbg.linux.android.dvm.array.ByteArray;
 import com.github.unidbg.linux.file.ByteArrayFileIO;
 import com.github.unidbg.linux.file.SimpleFileIO;
 import com.github.unidbg.memory.Memory;
+import com.github.unidbg.memory.SvcMemory;
 import com.github.unidbg.pointer.UnidbgPointer;
+import com.github.unidbg.unix.UnixSyscallHandler;
 import com.github.unidbg.utils.Inspector;
 import com.sun.jna.Pointer;
 
 import javafx.geometry.Orientation;
+import unicorn.Arm64Const;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
+import java.util.PrimitiveIterator.OfLong;
 
 import javax.jws.WebParam.Mode;
 import javax.print.DocFlavor.STRING;
+import javax.print.attribute.standard.MediaSize.NA;
 
 import org.omg.CORBA.REBIND;
 import org.omg.PortableInterceptor.Interceptor;
@@ -84,11 +92,14 @@ public class NativeHelper extends AbstractJni implements IOResolver {
 
     private final boolean logging;
     Pointer md5_ctx;
+    private int count;
 
 
     NativeHelper(boolean logging) {
         this.logging = logging;
 
+
+        // 初始化模拟器 
         emulator = AndroidEmulatorBuilder.for64Bit()
                 .setProcessName("com.xiaojianbang.app")
                 .addBackendFactory(new Unicorn2Factory(true))
@@ -96,6 +107,28 @@ public class NativeHelper extends AbstractJni implements IOResolver {
                 //但是要注意对于maps这种文件来说 依然不生效 unidbg内部给了maps 并且使用的是IOResolver io重定向
                 // .setRootDir(new File("unidbg-master/unidbg-android/src/test/java/com/xiaojianbang/ndk/rootfs")) 
                 .build(); // 创建模拟器实例，要模拟32位或者64位，在这里区分
+
+        // //如果要用自己写的处理syscall的类 注释掉上面的类
+        // AndroidEmulatorBuilder builder = new AndroidEmulatorBuilder(true){
+        //     //相当于实现一个匿名类 复写父类的方法
+        //     //这段代码的目的就是复写createSyscallHandler
+        //     public AndroidEmulator build(){
+        //         return new AndroidARMEmulator(processName,rootDir,backendFactories){
+        //             @Override
+        //             protected UnixSyscallHandler<AndroidFileIO> createSyscallHandler(SvcMemory svcMemory){
+        //                 return new MySyscallHandler(svcMemory);
+        //             }
+        //         };
+        //     }
+        // };
+        // emulator = builder.setProcessName("com.xiaojianbang.app")
+        //         .setRootDir(new File("unidbg-0.9.7/unidbg-android/src/test/java/com/xiaojianbang/ndk/rootfs"))
+        //         .build();
+
+
+
+
+
         System.out.println(emulator.getFileSystem().getRootDir()); //获取当前模拟器的root路径
 
         System.out.println(emulator.getPid()); //获取pid 但是pid每次都不一样 所以最好固定下来或者将文件中的pid改掉
@@ -152,6 +185,10 @@ public class NativeHelper extends AbstractJni implements IOResolver {
         NativeHelper = vm.resolveClass("com/xiaojianbang/ndk/NativeHelper"); //加载类的一个过程
 
         emulator.getSyscallHandler().addIOResolver(this); //进行注册 要实现io重定向的话
+
+        //使用GetEnvHOOK
+        // GetEnvHook getenvhook = new GetEnvHook(emulator);
+        // memory.addHookListener(getenvhook);
     
     }
   
@@ -504,6 +541,103 @@ public class NativeHelper extends AbstractJni implements IOResolver {
         NativeHelper.callStaticJniMethod(emulator, "readSomething()");
     }
 
+
+    void solve_env(){
+        //unidbg 处理环境变量
+        //第一种方式
+        // emulator.set(key, value);
+        // emulator.get(key);
+        //第二种方式
+        //src/main/java/com/github/unidbg/linux/AndroidEIfLoader.java 中
+        //this.environ = initializeTLS函数中直接进行设置
+        //第三种通过libc里的setenv
+        //第二种方式高于第三种，所以使用第三种时需要把第二种删掉
+        Symbol setenv = module.findSymbolByName("setenv",true);
+        setenv.call(emulator, "/sbin:/vendor/bin:/system/sbin:/system/bin:/system/xbin");
+    }
+
+    void hook_getenv(){
+        //通过hook 获取环境变量
+        //打断点方式hook
+        emulator.attach().addBreakPoint(module.findSymbolByName("getenv").getAddress(), new BreakPointCallback() {
+            @Override
+            public boolean onHit(Emulator<?> emulator, long address) {
+                //获取参数
+                RegisterContext context = emulator.getContext();
+                //获取第0个参数
+                UnidbgPointer pointerarg = context.getPointerArg(0);
+                //指针读string
+                String arg = pointerarg.getString(0);
+                System.out.println("getenv key"+arg);
+
+                return true;
+            }
+        });
+    }
+
+    void hook_ppoen(){
+        //不全popen很麻烦  所以一般hook popen 不让他执行
+        emulator.attach().addBreakPoint(module.findSymbolByName("popen").getAddress(),new BreakPointCallback() {
+
+            @Override
+            public boolean onHit(Emulator<?> emulator, long address) {
+                RegisterContext context = emulator.getContext();
+                UnidbgPointer pointerarg = context.getPointerArg(0);
+                String arg0 = pointerarg.getString(0);
+                System.out.println("command:"+arg0);
+                return false;
+            }
+        
+        });
+
+
+        //跳过某一行代码bl popen
+        emulator.attach().addBreakPoint(module.base+0x26E4,new BreakPointCallback() {
+
+            @Override
+            public boolean onHit(Emulator<?> emulator, long address) {
+                emulator.getBackend().reg_write(Arm64Const.UC_ARM64_REG_PC, address+4);
+                return true;
+            }
+            
+        });
+
+
+        //bl _FGETS_CHK 根据下面判断 第一此寄存器不为0 第二次为0 可循环一次
+        emulator.attach().addBreakPoint(module.base+0x2744,new BreakPointCallback() {
+
+            @Override
+            public boolean onHit(Emulator<?> emulator, long address) {
+                if(count == 0){
+                    count =1;
+                    System.out.println(count);
+                }else{
+                    //计数器大于1 寄存器置0 跳出循环
+                    //UC_ARM64_REG_X8 代表x8寄存器
+                    emulator.getBackend().reg_write(Arm64Const.UC_ARM64_REG_X8, address+4);
+                    System.out.println("break");
+
+                }
+                //emulator.getBackend().reg_write(Arm64Const.UC_ARM64_REG_PC, address+4);
+                return true;
+            }
+            
+        });
+
+
+        //遇到循环时先下断点看一下 对应汇编指令 寄存器的值,动态调试 下断点 看寄存器的值 之后hook取反就可以跳出循环
+        emulator.attach().addBreakPoint(module.base+0x276c);
+    }
+
+    void hook_syscall(){
+        //unidng处理syscall 在这个位置
+        //unidbg-0.9.7/unidbg-android/src/main/java/com/github/unidbg/linux/ARM64SyscallHandler.java
+        //如果碰上没有实现的 联系作者在github上
+    }
+
+
+
+
     @Override
     public FileResult resolve(Emulator emulator, String pathname, int oflags) {
         //实现io重定向要去实现IOResolver
@@ -519,7 +653,7 @@ public class NativeHelper extends AbstractJni implements IOResolver {
             //如果每次运行 文件中的值不一样 那最好 固定下来读取进来改掉在返回 比如pid
             // return FileResult.success(new ByteArrayFileIO(oflags, pathname, "xiaojianbangmaps".getBytes()));
         }
-        System.out.println(pathname);
+        // System.out.println(pathname);
         return null;
     }
 
@@ -546,7 +680,6 @@ public class NativeHelper extends AbstractJni implements IOResolver {
     
     public static void main(String[] args) throws Exception {
         NativeHelper test = new NativeHelper(false);
-        System.out.println("1111");
         // int retval = test.jadd();
         // test.jmd5();
         // test.jencode();
@@ -567,6 +700,8 @@ public class NativeHelper extends AbstractJni implements IOResolver {
         // test.unicorn_monitor();
         test.read_something();
         // test.unidbg_trace();
+        // test.hook_getenv();
+        // test.hook_ppoen();
         
         
     }

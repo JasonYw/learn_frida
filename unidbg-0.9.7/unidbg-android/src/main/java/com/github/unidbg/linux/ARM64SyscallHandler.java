@@ -976,6 +976,7 @@ public class ARM64SyscallHandler extends AndroidSyscallHandler {
         nodeName.setString(0, "localhost"); /* Name within "some implementation-defined network" */
 
         Pointer release = nodeName.share(SYS_NMLN);
+        //检测点可以改
         release.setString(0, "1.0.0-unidbg"); /* Operating system release (e.g., "2.6.28") */
 
         Pointer version = release.share(SYS_NMLN);
