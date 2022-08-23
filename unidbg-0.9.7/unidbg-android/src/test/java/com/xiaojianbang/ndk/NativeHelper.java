@@ -11,7 +11,7 @@ import com.github.unidbg.arm.backend.UnHook;
 import com.github.unidbg.arm.backend.Unicorn2Factory;
 import com.github.unidbg.arm.context.Arm64RegisterContext;
 // import com.github.unidbg.arm.context.Arm32RegisterContext;
-
+// import com.github.unidbg.arm.context.Arm64RegisterContext;
 import com.github.unidbg.arm.context.RegisterContext;
 import com.github.unidbg.debugger.Debugger;
 import com.github.unidbg.debugger.DebuggerType;
@@ -73,6 +73,9 @@ public class NativeHelper extends AbstractJni implements IOResolver {
     //hook的作用 和 frida差不多 unidbg hook 不容易被检测
     //unidbg没办法模拟子线程中 
     //hookzz支持 符号hook 地址hook 但是本质都是地址hook
+   
+
+
     private final AndroidEmulator emulator;
     private final VM vm;
     private final Module module;
@@ -85,26 +88,28 @@ public class NativeHelper extends AbstractJni implements IOResolver {
 
     NativeHelper(boolean logging) {
         this.logging = logging;
+
         emulator = AndroidEmulatorBuilder.for64Bit()
                 .setProcessName("com.xiaojianbang.app")
                 .addBackendFactory(new Unicorn2Factory(true))
                 //创建虚拟文件系统 给一个文件路径 指定根目录路径  虚拟文件系统的优先级比IOResolver io重定向的优先级低
                 //但是要注意对于maps这种文件来说 依然不生效 unidbg内部给了maps 并且使用的是IOResolver io重定向
-                .setRootDir(new File("unidbg-0.9.7/unidbg-android/src/test/java/com/xiaojianbang/ndk/rootfs")) 
+                // .setRootDir(new File("unidbg-master/unidbg-android/src/test/java/com/xiaojianbang/ndk/rootfs")) 
                 .build(); // 创建模拟器实例，要模拟32位或者64位，在这里区分
         System.out.println(emulator.getFileSystem().getRootDir()); //获取当前模拟器的root路径
+
         System.out.println(emulator.getPid()); //获取pid 但是pid每次都不一样 所以最好固定下来或者将文件中的pid改掉
+
         final Memory memory = emulator.getMemory(); // 模拟器的内存操作接口
         memory.setLibraryResolver(new AndroidResolver(23)); // 设置系统类库解析 19或者23 目前只有这两个 获取内存操作接口
+
         // emulator.set(key, value); 设置系统的环境变量
         // emulator.get(key); 获取系统的环境变量
-        //修改环境变量
-        //unidbg-0.9.7\unidbg-android\src\main\java\com\github\unidbg\linux\AndroidElfLoader.java AndroidElfLoader 中添加了环境变量
-        //所以修改环境变量 AndroidElfLoader.java文件 中的这块代码 this.environ = initializeTLS 直接改就行
         //unidbg对于多线程目前没有处理的
         //所以要hook pthrea
         //https://github.com/asmjmp0/unidbgMutilThread 支持多线程的arm32版本的unidbg
         //也可以通过getenv 获取环境变量
+
         vm = emulator.createDalvikVM(); // 创建Android虚拟机
         // vm.setJni(new AbstractJni() {});
         // vm.setJni(new AbstractJni() {
@@ -125,23 +130,27 @@ public class NativeHelper extends AbstractJni implements IOResolver {
         //         return super.callObjectMethodV(vm, dvmObject, signature, vaList);
         //     }
         // });
+
         //当类继承了 AbstractJni 可以直接这样写 向上转型 在后面又重写了callObjectMethodV方法，上面与下面两种方式均可
         vm.setJni(this);
+
+
         vm.setVerbose(logging); // 设置是否打印Jni调用细节
         // 加载libxiaojianbang到unicorn虚拟内存，加载成功以后会默认调用init_array等函数
         //若目标函数还引用了其他so中的函数，需要把导入表中的函数所在的so也找到 也进行导入即可
         //枚举导入表，拿到地址，通过地址获取so基址即可找到so
         //unidbg 已经处理dlopen 加载了libl.so
         //unidbg 首先加载了一些系统函数 在加载我们的so之前
-        DalvikModule dmA = vm.loadLibrary(new File("unidbg-0.9.7/unidbg-android/src/test/java/com/xiaojianbang/ndk/libxiaojianbangA.so"), false);
+        // DalvikModule dmA = vm.loadLibrary(new File("unidbg-master/unidbg-android/src/test/java/com/xiaojianbang/ndk/libxiaojianbangA.so"), false);
         //遇到so依赖可以 loadLibrary加载 也可以使用虚拟module
         // new XIAOJIANBANGAModule(emulator,vm).register(memory); //相当于加载so，把自己写的so实现注册到内存中去
-        DalvikModule dm = vm.loadLibrary(new File("unidbg-0.9.7\\unidbg-android\\src\\test\\java\\com\\xiaojianbang\\ndk\\libxiaojianbang.so"), false); 
+        DalvikModule dm = vm.loadLibrary(new File("unidbg-0.9.7/unidbg-android/src/test/java/com/xiaojianbang/ndk/libxiaojianbang.so"), false); 
         dm.callJNI_OnLoad(emulator); // 手动执行JNI_OnLoad函数 看自己的函数需要不需要jnionload 如果需要就需要调用不需要注释掉即可 动态注册就需要jnionload
         module = dm.getModule(); // 加载好的libxiaojianbang.so对应为一个模块
         // module.callFunction(emulator, symbolName, args) 针对so做操作
         //可以resolve多个类
         NativeHelper = vm.resolveClass("com/xiaojianbang/ndk/NativeHelper"); //加载类的一个过程
+
         emulator.getSyscallHandler().addIOResolver(this); //进行注册 要实现io重定向的话
     
     }
@@ -493,7 +502,6 @@ public class NativeHelper extends AbstractJni implements IOResolver {
         //还可以使用虚拟文件系统
         //主动带哦用
         NativeHelper.callStaticJniMethod(emulator, "readSomething()");
-        System.out.println("1");
     }
 
     @Override
@@ -505,7 +513,7 @@ public class NativeHelper extends AbstractJni implements IOResolver {
     
         if(pathname.equals("/proc/self/maps")){
             //第一种方式以文件的形式返回
-            return FileResult.success(new SimpleFileIO(oflags, new File("unidbg-0.9.7\\unidbg-android\\src\\test\\java\\com\\xiaojianbang\\ndk\\maps"), pathname));
+            return FileResult.success(new SimpleFileIO(oflags, new File("unidbg-0.9.7/unidbg-android/src/test/java/com/xiaojianbang/ndk/maps"), pathname));
             //第二种以字符串常量的方式返回 适合字符串短的时候
             //从内存种返回文件读取之后的结果
             //如果每次运行 文件中的值不一样 那最好 固定下来读取进来改掉在返回 比如pid
@@ -513,21 +521,6 @@ public class NativeHelper extends AbstractJni implements IOResolver {
         }
         System.out.println(pathname);
         return null;
-    }
-
-
-    void solve_env(){
-    
-        
-        // emulator.set(key, value); 设置系统的环境变量
-        // emulator.get(key); 获取系统的环境变量
-        //修改环境变量
-        //unidbg-0.9.7\unidbg-android\src\main\java\com\github\unidbg\linux\AndroidElfLoader.java AndroidElfLoader 中添加了环境变量
-        //所以修改环境变量 AndroidElfLoader.java文件 中的这块代码 this.environ = initializeTLS 直接改就行
-        //通过hook 也可以修改环境变量
-        Symbol setenv = module.findSymbolByName("setenv",true);
-        setenv.call(emulator,"path","xxx",0);
-
     }
 
 
@@ -552,7 +545,8 @@ public class NativeHelper extends AbstractJni implements IOResolver {
 
     
     public static void main(String[] args) throws Exception {
-        NativeHelper test = new NativeHelper(true);
+        NativeHelper test = new NativeHelper(false);
+        System.out.println("1111");
         // int retval = test.jadd();
         // test.jmd5();
         // test.jencode();
@@ -571,7 +565,10 @@ public class NativeHelper extends AbstractJni implements IOResolver {
         // test.unicorn_hook();
         // test.unicorn_debug();
         // test.unicorn_monitor();
-        // test.read_something();
+        test.read_something();
+        // test.unidbg_trace();
+        
+        
     }
 
 
