@@ -220,3 +220,7 @@ function hook_vpn_4(){
 //setHostnameVerifier()
 //setSSLSocketFactory()
 //不一定是哪个类会调用检测休要配合objection去使用 上面三个关键类需要看一下
+
+//okhttp3框架
+//拦截器
+//网络拦截器  和 应用拦截器
