@@ -102,12 +102,33 @@ hook list:
 	try {
 
 		var CertificatePinner = Java.use('okhttp3.CertificatePinner');
-
 		quiet_send('OkHTTP 3.x Found');
-
 		CertificatePinner.check.overload('java.lang.String', 'java.util.List').implementation = function() {
-
 			quiet_send('OkHTTP 3.x check() called. Not throwing an exception.');
+		}
+
+		var OkHttpClient$Builder = Java.use('okhttp3.OkHttpClient$Builder');
+		quiet_send('OkHttpClient$Builder Found');
+		console.log("hostnameVerifier", OkHttpClient$Builder.hostnameVerifier);
+		OkHttpClient$Builder.hostnameVerifier.implementation = function () {
+			quiet_send('OkHttpClient$Builder hostnameVerifier() called. Not throwing an exception.');
+			return this;
+		}
+
+		var myHostnameVerifier = Java.registerClass({
+			name: 'com.xiaojianbang.MyHostnameVerifier',
+			implements: [HostnameVerifier],
+			methods: {
+				verify: function (hostname, session) {
+					return true;
+				}
+			}
+		});
+
+		var OkHttpClient = Java.use('okhttp3.OkHttpClient');
+		OkHttpClient.hostnameVerifier.implementation = function () {
+			quiet_send('OkHttpClient hostnameVerifier() called. Not throwing an exception.');
+			return myHostnameVerifier.$new();
 		}
 
 	} catch (err) {
