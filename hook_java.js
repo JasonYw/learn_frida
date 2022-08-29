@@ -27,6 +27,14 @@ function showStacks() {
 }
 
 
+//so层打印堆栈
+//obj传递this即可
+function print_trace(obj){
+    //FUZZY 是模糊的 但是对所有的so都有效，但是不准确
+    //ACCURATE 是准确的 但是并不是对所有so都有效
+    console.log(Thread.backtrace(obj.context,Backtracer.FUZZY).map(DebugSymbol.fromAddress).join('\n')+'\n')
+}
+
 //com.bytedance.retrofit2.client.Response.getBody
 // function hook_response(){
 //     Java.perform(function(){
@@ -460,3 +468,182 @@ function confirm_certificatepinner(){
 
 }
 
+
+//okhttp3底层
+//com.android.org.conscrypt.Java8FileDescriptorSocket  getOutoutStream
+//安卓在线源码查看http://aospxref.com
+// HTTPS的流程
+// com.android.org.conscrypt.Java8FileDescriptorSocket
+// getOutputStream
+// com.android.org.conscrypt.ConscryptFileDescriptorSocket$SSLOutputStream
+// NativeCrypto.SSL_write(ssl, this, fd, handshakeCallbacks, buf, offset, len, timeoutMillis);
+// com.android.org.conscrypt.NativeCrypto SSL_write
+// HTTP的流程
+// java.net.Socket
+// getOutputStream
+
+
+//java层ssl源码，https自吐
+function hook_java_SSL(){
+    Java.perform(function () {
+
+        var ByteString = Java.use("com.android.okhttp.okio.ByteString");
+        function toBase64(tag, data) {
+            console.log(tag + " Base64: \n", ByteString.of(data).base64())
+        }
+        function toHex(tag, data) {
+            console.log(tag + " Hex: \n", ByteString.of(data).hex())
+        }
+        function toUtf8(tag, data) {
+            console.log(tag + " Utf8: \n", ByteString.of(data).utf8())
+        }
+    
+        var NativeCrypto = Java.use("com.android.org.conscrypt.NativeCrypto");
+        NativeCrypto.SSL_write.implementation = function (ssl, nativeCrypto, fd, handshakeCallbacks, buf, offset, len, timeoutMillis) {
+            console.log(offset, len)
+            toUtf8("SSL_write: ", buf)
+            console.log("=======================================================")
+            this.SSL_write(ssl, nativeCrypto, fd, handshakeCallbacks, buf, offset, len, timeoutMillis)
+        }
+    
+        NativeCrypto.SSL_read.implementation = function (ssl, nativeCrypto, fd, handshakeCallbacks, buf, offset, len, timeoutMillis) {
+            console.log(offset, len)
+            toUtf8("SSL_read", buf)
+            console.log("=======================================================")
+            return this.SSL_read(ssl, nativeCrypto, fd, handshakeCallbacks, buf, offset, len, timeoutMillis)
+        }
+
+    })
+
+}
+
+
+//jni层ssl系统源码
+// /external/conscrypt/common/src/jni/main/cpp/conscrypt/native_crypto.cc
+// static void NativeCrypto_SSL_write(JNIEnv* env, jclass, jlong ssl_address, CONSCRYPT_UNUSED jobject ssl_holder, jobject fdObject,
+// 8286                                     jobject shc, jbyteArray b, jint offset, jint len,
+// 8287                                     jint write_timeout_millis)
+// /external/conscrypt/common/src/jni/main/cpp/conscrypt/native_crypto.cc
+// static int sslWrite(JNIEnv* env, SSL* ssl, jobject fdObject, jobject shc, const char* buf, jint len,
+// 8146                      SslError* sslError, int write_timeout_millis)
+// boringssl是谷歌从openssl改过来的，ssl_lib.cc会编译到libssl.so中
+// /external/boringssl/src/ssl/ssl_lib.cc
+// int SSL_write(SSL *ssl, const void *buf, int num) 一般选择这进行hook 
+// int SSL_read(SSL *ssl, void *buf, int num)
+// 以上两个函数就是r0capture的hook点
+
+// /external/boringssl/src/ssl/s3_pkt.cc
+// int ssl3_write_app_data(SSL *ssl, bool *out_needs_handshake, const uint8_t *in,
+// 130                          int len)
+// /external/boringssl/src/ssl/s3_pkt.cc
+// static int do_ssl3_write(SSL *ssl, int type, const uint8_t *in, unsigned len)
+// 在这之前，数据是明文
+// hook点就是上述的函数
+// ========================================================================================================
+// 在这之后，数据是密文
+// /external/boringssl/src/ssl/s3_pkt.cc
+// static int ssl3_write_pending(SSL *ssl, int type, const uint8_t *in,
+// 205                                unsigned int len)
+// /external/boringssl/src/ssl/ssl_buffer.cc
+// int ssl_write_buffer_flush(SSL *ssl) 
+// static int dtls_write_buffer_flush(SSL *ssl)
+// /external/boringssl/src/crypto/bio/bio.c
+// int BIO_write(BIO *bio, const void *in, int inl)
+
+
+// libcrypto.so
+// /external/boringssl/src/crypto/bio/socket.c
+// static int sock_read(BIO *b, char *out, int outl) {
+// 108    int ret = 0;
+// 109  
+// 110    if (out == NULL) {
+// 111      return 0;
+// 112    }
+// 113  
+// 114    bio_clear_socket_error();
+// 115  #if defined(OPENSSL_WINDOWS)
+// 116    ret = recv(b->num, out, outl, 0);
+// 117  #else
+// 118    ret = read(b->num, out, outl);
+// 119  #endif
+// 120    BIO_clear_retry_flags(b);
+// 121    if (ret <= 0) {
+// 122      if (bio_fd_should_retry(ret)) {
+// 123        BIO_set_retry_read(b);
+// 124      }
+// 125    }
+// 126    return ret;
+// 127  }
+// 128  
+// 129  static int sock_write(BIO *b, const char *in, int inl) {
+// 130    int ret;
+// 131  
+// 132    bio_clear_socket_error();
+// 133  #if defined(OPENSSL_WINDOWS)
+// 134    ret = send(b->num, in, inl, 0);
+// 135  #else
+// 136    ret = write(b->num, in, inl);
+// 137  #endif
+// 138    BIO_clear_retry_flags(b);
+// 139    if (ret <= 0) {
+// 140      if (bio_fd_should_retry(ret)) {
+// 141        BIO_set_retry_write(b);
+// 142      }
+// 143    }
+// 144    return ret;
+// 145  }
+
+// 最终交给libc.so中的 write函数
+function hook_so_ssl(){
+    var SSL_write_addr = Module.findExportByName("libssl.so","SSL_write")
+    var SSL_read_addr = Module.findExportByName("libssl.so","SSL_read")
+    var write_addr = Module.findExportByName("libc.so","write")
+    var read_addr = Module.findExportByName("libc.so","read")
+    Interceptor.attach(SSL_write_addr,{
+        onEnter:function(args){
+            // print_trace(this)
+            console.log("SSL_write_addr:",Process.getCurrentThreadId())
+            console.log(hexdump(args[1],{length:args[2].toInt32()}))
+        },
+        onLeave:function(retval){}
+    })
+    Interceptor.attach(SSL_read_addr,{
+        onEnter:function(args){
+            this.args1 =  args[1]
+        },
+        onLeave:function(retval){
+            // print_trace(this)
+            var nums = retval.toInt32()
+            if(nums > 0){
+                console.log("SSL_read_addr:",Process.getCurrentThreadId())
+                console.log(hexdump(this.args1,{length:nums}))
+            }
+        }
+    })
+
+    Interceptor.attach(write_addr,{
+        onEnter:function(args){
+            // print_trace(this)
+            console.log("write_addr:",Process.getCurrentThreadId())
+            console.log(hexdump(args[1],{length:args[2].toInt32()}))
+        },
+        onLeave:function(retval){}
+    })
+
+    Interceptor.attach(read_addr,{
+        onEnter:function(args){
+            this.args1 =  args[1]
+        },
+        onLeave:function(retval){
+            // print_trace(this)
+            var nums = retval.toInt32()
+            if(nums > 0){
+                console.log("read_addr:",Process.getCurrentThreadId())
+                console.log(hexdump(this.args1,{length:nums}))
+            }
+        }
+    })
+    
+
+}
+//如果遇到gzip压缩的话，需要from hexdump 之后 找1f 8b gzip起始位置，之后gunzip 就可以获取加密后的结果
