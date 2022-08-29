@@ -594,6 +594,7 @@ function hook_java_SSL(){
 // 145  }
 
 // 最终交给libc.so中的 write函数
+//如果遇到gzip压缩的话，需要from hexdump 之后 找1f 8b gzip起始位置，之后gunzip 就可以获取加密后的结果
 function hook_so_ssl(){
     var SSL_write_addr = Module.findExportByName("libssl.so","SSL_write")
     var SSL_read_addr = Module.findExportByName("libssl.so","SSL_read")
@@ -646,4 +647,12 @@ function hook_so_ssl(){
     
 
 }
-//如果遇到gzip压缩的话，需要from hexdump 之后 找1f 8b gzip起始位置，之后gunzip 就可以获取加密后的结果
+
+//r0capture的使用
+//https://github.com/r0ysue/r0capture
+//pip install hexdump
+//Spawn 模式：
+//python3 r0capture.py -U -f com.qiyi.video -v
+//Attach 模式，抓包内容保存成pcap文件供后续分析
+//python3 r0capture.py -U com.qiyi.video -v -p iqiyi.pcap
+//此项目从frida_ssl_logger项目改的
