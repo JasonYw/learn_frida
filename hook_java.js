@@ -16,7 +16,7 @@ function bytesToHex(bytes) {
 
 
 
-function showStacks() {
+function showStacks(this) {
     Java.perform(function(){
         console.log(
             Java.use('android.util.Log').getStackTraceString(
@@ -35,26 +35,145 @@ function print_trace(obj){
     console.log(Thread.backtrace(obj.context,Backtracer.FUZZY).map(DebugSymbol.fromAddress).join('\n')+'\n')
 }
 
-//com.bytedance.retrofit2.client.Response.getBody
-// function hook_response(){
-//     Java.perform(function(){
-//         var response = Java.use("com.bytedance.retrofit2.client.Response")
-//         response.getBody.implementation = function(){
-//             var result = this.getBody()
-//             var arry = Java.use(result.$className)
-//             var new_result = Java.cast(result,arry)
-//             // console.log(Object.keys(new_result))
-//             try {
-//                 send(new_result.getBytes())
-//             }
-//             catch(error){}
-//             // console.log(new_result.toString())
-//             // console.log('result =>',new_result,hexToString(bytesToHex(new_result.getBytes())))
-//             return result
-//         }
 
-//     })
-// }
+//关键代码定位
+//先抓包之后通过这些打印的参数确定位置
+//查看线程池中的堆栈
+function hook_ThreadPoolExecutor(){
+    Java.perform(function() {
+        var ThreadPoolExecutor = Java.use("java.util.concurrent.ThreadPoolExecutor");
+        ThreadPoolExecutor.execute.implementation = function (a) {
+            showStacks(this);
+            console.log("ThreadPoolExecutor ============================================== ");
+            return this.execute(a);
+        }
+        ThreadPoolExecutor.submit.overload('java.lang.Runnable').implementation = function (a) {
+            showStacks(this);
+            console.log("ThreadPoolExecutor ============================================== ");
+            return this.submit(a);
+        }
+        ThreadPoolExecutor.submit.overload('java.util.concurrent.Callable').implementation = function (a) {
+            showStacks(this);
+            console.log("ThreadPoolExecutor ============================================== ");
+            return this.submit(a);
+        }
+        ThreadPoolExecutor.submit.overload('java.lang.Runnable', 'java.lang.Object').implementation = function (a, b) {
+            showStacks(this);
+            console.log("ThreadPoolExecutor ============================================== ");
+            return this.submit(a, b);
+        }
+    })
+}
+
+
+//hook ArrayList 的 add方法 addall set 
+function hook_ArrayList(){
+    Java.perform(function() {
+        var arrayList = Java.use("java.util.ArrayList");
+        arrayList.add.overload('java.lang.Object').implementation = function (a) {
+            showStacks(this);
+            console.log("arrayList.add: ", a);
+            console.log("arrayList.add: ", a);
+            return this.add(a);
+        }
+        arrayList.add.overload('int', 'java.lang.Object').implementation = function (a, b) {
+            console.log("arrayList.add: ", a, b);
+            return this.add(a, b);
+        }
+    })
+}
+
+//hook Collections java.util.Arrays sort toString
+function hook_Collections(){
+    Java.perform(function(){
+        var collections = Java.use("java.util.Collections");
+        collections.sort.overload('java.util.List').implementation = function (a) {
+            showStacks(this);
+            try{
+                var result = Java.cast(a, Java.use("java.util.LinkedList"));
+                console.log("collections.sort List: ", result.toString());
+            }catch (e) {
+                result = Java.cast(a, Java.use("java.util.ArrayList"));
+                console.log("collections.sort List: ", result.toString());
+            }
+            return this.sort(a);
+        }
+        collections.sort.overload('java.util.List', 'java.util.Comparator').implementation = function (a, b) {
+            showStacks(this);
+            try{
+                var result = Java.cast(a, Java.use("java.util.LinkedList"));
+                console.log("collections.sort List Comparator: ", result.toString());
+            }catch (e) {
+                result = Java.cast(a, Java.use("java.util.ArrayList"));
+                console.log("collections.sort List Comparator: ", result.toString());
+            }
+            return this.sort(a, b);
+        }
+    })
+
+}
+
+//hook HashMap
+function hook_HashMap(){
+    Java.perform(function(){
+        var HashMap = Java.use("java.util.HashMap")
+        HashMap.put.implementation = function(a,b){
+            showStacks(this)
+            console.log(a,b)
+            return this.put(a,b)
+        }
+    })
+}
+
+//hook log
+function hook_Log(){
+    Java.perform(function(){
+        var Log = Java.use("android.util.Log")
+        Log.w.overload('java.lang.String','java.lang.String').implementation = function(tag,message){
+            showStacks(this)
+            console.log(tag,message)
+            return this.w(tag,message)
+        }
+    })
+}
+
+//hook TextUtils
+function hook_TextUtils(){
+    Java.perform(function(){
+        var TextUtils = Java.use("android.text.TextUtils")
+        TextUtils.isEmpty.implementation = function(a){
+            showStacks(this)
+            console.log(a)
+            return this.isEmpty(a)
+        }
+    })
+}
+
+
+//快速定位webview 找到app资源路径
+function hook_WebView(){
+    Java.perform(function(){
+        var WebView = Java.use("android.webkit.WebView")
+        WebView.loadData.implementation = function(a,b,c){
+            showStacks(this)
+            console.log(a,b,c)
+            return this.loadData(a,b,c)
+        }
+        WebView.loadUrl.overload("java.lang.String").implementation = function(a){
+            showStacks(this)
+            console.log(a)
+            return this.loadUrl(a)
+        }
+        WebView.loadUrl.overload("java.lang.String","java.util.Map").implementation = function(a,b){
+            showStacks(this)
+            console.log(a,b)
+            return this.loadUrl(a,b)
+        }
+
+    })
+}
+
+
 
 //com.bytedance.retrofit2.client.Request
 // function hook_all(){
@@ -273,7 +392,7 @@ function getokhttp3header(){
     Java.perform(function(){
         var okhttp3_builder = Java.use("okhttp3.Request$Builder")
         okhttp3_builder.addHeader.implementation = function(a,b){
-            showStacks()
+            showStacks(this)
             return this.addHeader(a,b)
         }
     })
@@ -397,9 +516,9 @@ function locateokhttp3_byArrayList(){
         arrayList.add.overload('java.lang.Object').implementation = function (a) {
             // console.log("realStr: ", a.toString());
             if (a.toString().startsWith("sha1/")) {
-                showStacks();
+                showStacks(this);
             }else if (a.toString().startsWith("sha256/")) {
-                showStacks();
+                showStacks(this);
             }
             return this.add(a);
         }
@@ -422,7 +541,7 @@ function locateokhttp3_byMessageDigest(){
         var messageDigest = Java.use("java.security.MessageDigest");
         messageDigest.digest.overload('[B').implementation = function (data) {
             console.log("MessageDigest.digest('[B') is called!");
-            showStacks();
+            showStacks(this);
             var algorithm = this.getAlgorithm();
             var tag = algorithm + " digest data";
             toUtf8(tag, data);
@@ -437,7 +556,7 @@ function locateokhttp3_byMessageDigest(){
         }
         var SSLHandshakeException = Java.use("javax.net.ssl.SSLHandshakeException");
         SSLHandshakeException.$init.implementation = function (args) {
-            showStacks();
+            showStacks(this);
             console.log(args);
             return this.$init(args);
         }
@@ -449,7 +568,7 @@ function locateokhttp3_bySSLHandshakeException(){
     Java.perform(function(){
         var SSLHandshakeException = Java.use("javax.net.ssl.SSLHandshakeException");
         SSLHandshakeException.$init.implementation = function (args) {
-            showStacks();
+            showStacks(this);
             console.log(args);
             return this.$init(args);
         }
@@ -656,3 +775,39 @@ function hook_so_ssl(){
 //Attach 模式，抓包内容保存成pcap文件供后续分析
 //python3 r0capture.py -U com.qiyi.video -v -p iqiyi.pcap
 //此项目从frida_ssl_logger项目改的
+
+//证书的dump
+//首先要在没有抓包的时候先试一试能否正常访问
+//在抓包的同时开启logcat 查看是否有报错
+//抓包工具中 有正常返回 但是返回的是 400 则 是服务端校验 客户端没有校验证书
+//如果是客户端校验 需要去找证书
+//证书一般是 p12 bks结尾 证书一般也需要密码 都需要得到
+//KeyStore.load 此方法第一个参数就是证书的输入流，第二个参数是密码
+//KeyStore.setcertificateEntry
+function hook_KeyStore(){
+    Java.perform(function () {
+        var KeyStore = Java.use("java.security.KeyStore");
+        var str = Java.use("java.lang.String");
+        KeyStore.load.overload("java.io.InputStream", "[C").implementation = function (input, pwdStr) {
+            //input证书的输入流 pwdstr 证书密码
+            if (input) {
+                console.log("pwdStr: ", str.$new(pwdStr));
+                var file = Java.use("java.io.File").$new("/data/data/com.xh.xinghe/xiaojianbang.p12"); //保存的位置
+                var output = Java.use("java.io.FileOutputStream").$new(file);
+                var r, myArr = [];
+                for (var i = 0; i < 1024; i++) {
+                    myArr[i] = 0;
+                }
+                var buffer = Java.array("byte", myArr);
+                while((r = input.read(buffer)) > 0) {
+                    output.write(buffer, 0, r);
+                }
+                console.log("save");
+                output.close();
+            }
+            return this.load(input, pwdStr);
+        }
+    
+    });
+}
+
