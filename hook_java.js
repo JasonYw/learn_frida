@@ -812,3 +812,4 @@ function hook_KeyStore(){
 }
 
 //如果没有用java.security.KeyStore，可以直接脱壳反编译，之后看字符串是否被加密，如果没有被混淆直接搜索字符串.p12 或者.bks
+//只要确定服务器认证 就是找证书和密钥，如果遇到加密 直接hook 解密函数就可以
