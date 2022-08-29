@@ -111,12 +111,10 @@ function hook_okhttp3ssl(){
         var OkHttpClient$Builder = Java.use("okhttp3.OkHttpClient$Builder")
         OkHttpClient$Builder.hostnameVerifier.implementation = function(args){
             console.log('OkHTTP 3.x OkHttpClient$Builder hostnameVerifier() called')
-            // result = this.hostnameVerifier(args)
-            // console.log(JSON.stringify(result))
         }
-        var X509TrustManager = Java.use('javax.net.ssl.X509TrustManager');
-	    var SSLContext = Java.use('javax.net.ssl.SSLContext');
-        var TrustManager;
+        var X509TrustManager = Java.use('javax.net.ssl.X509TrustManager')
+	    var SSLContext = Java.use('javax.net.ssl.SSLContext')
+        var TrustManager
         TrustManager = Java.registerClass({
 			name: 'org.wooyun.TrustManager',
 			implements: [X509TrustManager],
@@ -124,20 +122,19 @@ function hook_okhttp3ssl(){
 				checkClientTrusted: function(chain, authType) {},
 				checkServerTrusted: function(chain, authType) {},
 				getAcceptedIssuers: function() {
-					return [];
+					return []
 				}
 			}
-		});
-        var TrustManagers = [TrustManager.$new()];
-        var TLS_SSLContext = SSLContext.getInstance("TLS");
-		TLS_SSLContext.init(null, TrustManagers, null);
+		})
+        var TrustManagers = [TrustManager.$new()]
+        var TLS_SSLContext = SSLContext.getInstance("TLS")
+		TLS_SSLContext.init(null, TrustManagers, null)
         var SSLContext_init = SSLContext.init.overload('[Ljavax.net.ssl.KeyManager;', '[Ljavax.net.ssl.TrustManager;', 'java.security.SecureRandom')
         SSLContext_init.implementation = function(keyManager, trustManager, secureRandom) {
-            console.log('Overriding SSLContext.init() with the custom TrustManager');
+            console.log('Overriding SSLContext.init() with the custom TrustManager')
             SSLContext_init.call(this, null, TrustManagers, null)
         }
-        var CertificatePinner = Java.use('okhttp3.CertificatePinner');
-        // console.log('okhttp3.CertificatePinner 3.x Found')
+        var CertificatePinner = Java.use('okhttp3.CertificatePinner')
         CertificatePinner.check.overload('java.lang.String', 'java.util.List').implementation = function() {
             console.log('OkHTTP 3.x check() called')
         }
