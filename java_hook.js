@@ -220,3 +220,16 @@ function hook_vpn_4(){
 //setHostnameVerifier()
 //setSSLSocketFactory()
 //不一定是哪个类会调用检测休要配合objection去使用 上面三个关键类需要看一下
+
+function hook_ssl(){
+    Java.perform(function(){
+        var HttpsURLConnectionImpl = Java.use("com.android.okhttp.internal.huc.HttpsURLConnectionImpl")
+        HttpsURLConnectionImpl.setHostnameVerifier.implementation = function(hostnameVerifier){
+            return
+        }
+        HttpsURLConnectionImpl.setSSLSocketFactory.implementation = function(SSLSocketFactory){
+            return
+        }
+
+    })
+}
