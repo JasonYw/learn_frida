@@ -32,31 +32,6 @@ function hook_response(){
     }
 }
 
-//com.bytedance.retrofit2.client.Request
-function hook_headers(){
-    var req = Java.use('com.bytedance.retrofit2.client.Request')
-    req.getHeaders.implementation= function(){
-        var result = this.getHeaders()
-        // var a = JSON.stringify(result)
-        // var b = JSON.parse(a)
-        var Map = Java.use('java.util.Collections$UnmodifiableRandomAccessList')
-        var NewP = Java.cast(result, Map)
-        // console.log('header =>',NewP)
-        send(NewP.toString())
-        return result
-    }
-}
-
-//com.bytedance.retrofit2.client.Request
-function hook_method(){
-    var req = Java.use('com.bytedance.retrofit2.client.Request')
-    req.getMethod.implementation = function(){
-        var result = this.getMethod()
-        console.log('method =>',result)
-        return result
-    }
-
-}
 
 
 //com.bytedance.retrofit2.client.Request
@@ -116,147 +91,60 @@ function hook_ssresponse(){
 }
 
 
-function hook_all(){
-    Java.enumerateLoadedClasses({
-        onMatch: function(name){
-            var clazz = Java.use(name);
-            console.log(name);
-            for(var method in clazz.class.getDeclaredMethods()){
-                console.log(method);
-            }
-            console.log(methods);
-        },
-        onComplete: function(){}
-    })
-}
-
-function hook_all_sync(){
-    var classes = Java.enumerateLoadedClassesSync();
-    for (var i in classes){
-        var obj = Java.use(classes[i])
-        var methods = obj.class.getDeclaredMethods()
-        for(var j in methods){
-            console.log(classes[i],"=>",methods[j].getName());
-        }
-    }
-}
 
 
-function hook_ssl(){
-    var obj = Java.use('javax.net.ssl.TrustManagerFactory');
-    obj.getAlgorithm.implementation = function() {
-        var result  = this.getAlgorithm()
-        console.log('getAlgorithm =>',result)
-        return result
-    },
-    obj.getTrustManagers.implementation = function() {
-        var result  = this.getTrustManagers()
-        var arry = Java.use(result.$className)
-        var new_result = Java.cast(result,arry)
-
-        console.log('getTrustManagers =>',new_result)
-        return result
-    }
-    obj.getInstance.overload("java.lang.String").implementation = function(params){
-        var result  = this.getInstance(params)
-        console.log('getInstance =>',result)
-        return result
-
-    }
-
-}
-//X.akO.onFullFeedVideoChangeEvent
 function hook_RecyclerView(){
-    var obj =Java.use("X.akO")
-    // Java.choose("androidx.recyclerview.widget.RecyclerView",{
-    //     onMatch:function(instance){
-    //         console.log('a')
-    //         instance.getAdapter();
-    //     },
-    //     onComplete:function(instance){
-    //         instance.getAdapter();
-
-    //     }
-    // });
-    obj.onFullFeedVideoChangeEvent.implementation = function(args){
-        var result = this.onFullFeedVideoChangeEvent(args)
-
-        console.log(args)
-        return result
-    }
-
-}
-
-
-
-function hook_package(){
-    var obj = Java.use('com.bytedance.retrofit2.SsHttpCall')
-    obj.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute.implementation = function(arg_) {
-        var result = this.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute(arg_)
-        // console.log(result,arg_,Object.keys(result),Object.keys(arg_))
-        var request_ = arg_.request()
-        var header = Java.cast(request_.getHeaders(),Java.use(request_.getHeaders().$className)).toString()
-        console.log(request_.getUrl(),header)
-        return result
-    }
-}
-//com.bytedance.retrofit2.SsHttpCall.com_bytedance_retrofit2_SsHttpCall_com_ss_android_ugc_aweme_lancet_NetIOCheckLancet_execute
-
-// javax.net.ssl.TrustManagerFactory.getInstance
-function hook_ssl(){
-    var obj = Java.use('javax.net.ssl.TrustManagerFactory');
-    var methods = obj.class.getDeclaredMethods();
-    for(var i in methods){
-        var methodname =methods[i].getName();
-        if(methodname =="init" && methodname =="instance"){
-            console.log(methodname)
-            for(var j =0;j<obj.$init.overloads.length;j++){
-                console.log(j)
-                obj.$init.overloads[j].implementation = function(){
-                    var result = this.$init.apply(this,arguments)
-                    console.log(methods[i],'result =>',result)
-                    return result
-                }
-            }
-
-        }else{
-            console.log(methodname)
-            for(var k =0;k<obj[methodname].overloads.length;k++){
-                obj[methodname].overloads[k].implementation = function(){
-                    var result = this[methodname].apply(this,arguments)
-                    console.log(methods[i],'result =>',result)
-                    return result
-                }
-            }
-        }
-    }
-}
-
-
-
-function main() {
     Java.perform(function(){
-        // hook_response();
-        // hook_headers();
-        // hook_url();
-        // hook_protodecode();
-        // hook_ssresponse();
-        // hook_RecyclerView();
-        hook_package()
+        var panelC =Java.use("com.ss.android.ugc.aweme.feed.panel.c")
+        panelC.LIZ.overload("com.ss.android.ugc.aweme.feed.model.Aweme",'boolean').implementation = function(aweme,int0){
+            var result = this.LIZ(aweme,int0)
+            // send(aweme.toString())
+            console.log(Object.keys(aweme))
+            return result
+        }
     })
 }
-setImmediate(main)
 
-// (agent) Hooking com.bytedance.retrofit2.client.SsCall.cancel()
-// (agent) Hooking com.bytedance.retrofit2.client.SsCall.execute()
-// (agent) Hooking com.bytedance.retrofit2.client.SsCall.getRequest()
-// (agent) Hooking com.bytedance.retrofit2.client.SsCall.setThrottleNetSpeed(long)
-// public final java.lang.String javax.net.ssl.TrustManagerFactory.getAlgorithm()
-// public final java.security.Provider javax.net.ssl.TrustManagerFactory.getProvider()
-// public final javax.net.ssl.TrustManager[] javax.net.ssl.TrustManagerFactory.getTrustManagers()
-// public final void javax.net.ssl.TrustManagerFactory.init(java.security.KeyStore) throws java.security.KeyStoreException
-// public final void javax.net.ssl.TrustManagerFactory.init(javax.net.ssl.ManagerFactoryParameters) throws java.security.InvalidAlgorithmParameterException
-// public static final java.lang.String javax.net.ssl.TrustManagerFactory.getDefaultAlgorithm()
-// public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String) throws java.security.NoSuchAlgorithmException
-// public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String,java.lang.String) throws java.security.NoSuchAlgorithmException,java.security.NoSuchProviderException
-// public static final javax.net.ssl.TrustManagerFactory javax.net.ssl.TrustManagerFactory.getInstance(java.lang.String,java.security.Provider) throws java.security.NoSuchAlgorithmException
+
+function hook_okhttp3ssl(){
+    Java.perform(function(){
+        var OkHttpClient$Builder = Java.use("okhttp3.OkHttpClient$Builder")
+        OkHttpClient$Builder.hostnameVerifier.implementation = function(args){
+            console.log('OkHTTP 3.x OkHttpClient$Builder hostnameVerifier() called')
+        }
+        var X509TrustManager = Java.use('javax.net.ssl.X509TrustManager')
+	    var SSLContext = Java.use('javax.net.ssl.SSLContext')
+        var TrustManager
+        TrustManager = Java.registerClass({
+			name: 'org.wooyun.TrustManager',
+			implements: [X509TrustManager],
+			methods: {
+				checkClientTrusted: function(chain, authType) {},
+				checkServerTrusted: function(chain, authType) {},
+				getAcceptedIssuers: function() {
+					return []
+				}
+			}
+		})
+        var TrustManagers = [TrustManager.$new()]
+        var TLS_SSLContext = SSLContext.getInstance("TLS")
+		TLS_SSLContext.init(null, TrustManagers, null)
+        var SSLContext_init = SSLContext.init.overload('[Ljavax.net.ssl.KeyManager;', '[Ljavax.net.ssl.TrustManager;', 'java.security.SecureRandom')
+        SSLContext_init.implementation = function(keyManager, trustManager, secureRandom) {
+            console.log('Overriding SSLContext.init() with the custom TrustManager')
+            SSLContext_init.call(this, null, TrustManagers, null)
+        }
+        var CertificatePinner = Java.use('okhttp3.CertificatePinner')
+        CertificatePinner.check.overload('java.lang.String', 'java.util.List').implementation = function() {
+            console.log('OkHTTP 3.x check() called')
+        }
+
+    })
+
+}
+
+hook_okhttp3ssl()
+
+
+
+    
