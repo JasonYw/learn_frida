@@ -224,3 +224,6 @@ function hook_vpn_4(){
 //okhttp3框架
 //拦截器
 //网络拦截器  和 应用拦截器
+//hook 查找混淆后的okhttp3
+//ArrayList add 方法
+//List get方法
