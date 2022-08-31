@@ -114,6 +114,21 @@ function change_classloader(){
 // https://www.cs.android.com/
 //dex的加载流程 通过mcookie 脱壳 通过openCommen函数脱壳 通过DexFile构造函数脱壳 youpk 通过ClassLinker来得到DexFile 缺点现在很多加固 都不走这些系统函数了 
 //dex2oat的编译流程 通过修改dex2oat脱壳
-//类的加载和初始化流程脱壳点 DexHunter在defineClass进行类解析 针对抽取壳的
+//类的加载和初始化流程脱壳点 DexHunter在defineClass进行类解析 针对抽取壳的 LoadMethod、LinkCode
 //函数执行中脱壳点 FART Execute整体脱壳 ArtMethod::invoke函数中的dump CodeItem youpk 直接到了解释执行的函数中进行dump CodeItem
-
+//InMemoryDexClassLoader 源码分析
+//mCookie脱壳原理 ConvertJavaArrayToDexFiles ConvertDexFilesToJavaArray
+//ArtDexFileLoader::Open、ArtDexFileLoader::openCommen DexFile
+//整体脱壳本质 就是找到DexFile对象
+//DexClassLoader源码分析
+//https://developer.android.com/about/versions/10/behavior-changes-10?hl=zh-cn#system-only-oat
+//https://blog.csdn.net/YZcoder/article/details/120648821
+//OpenAndReadMagic 早期脱壳点
+//dex2oat android10不再从应用进程调用dex2oat
+//https://www.jianshu.com/p/7af31cc5130e
+//youpk
+//https://github.com/youlor/unpacker 开源代码
+//fdex2的脱壳 android8.0以下能用 从classObj - getDex() - getBytes
+//只要能获取到DexFile的地方都可以进行尝试脱壳，也可以是间接得到DexFile的地方，比如ArtMethod->getDexFile()
+//FART
+//https://github.com/hanbinglengyue/FART
