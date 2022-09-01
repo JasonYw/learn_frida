@@ -1130,7 +1130,7 @@ function monitor_ram_wr(){
 //单独编译某个模块 mmm packages/apps/xiaojianbang
 //将文件打包成img镜像 make snod
 //更多其它编译方式自行百度
-//参考https://wuxiaolong.me/2018/08/15/AOSP3
+//参考https://wuxiaolong.me/20     18/08/15/AOSP3
 //这个先跳过不看了缺少学习环境 
 
 
