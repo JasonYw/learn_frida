@@ -113,6 +113,7 @@ function hook_Collections(){
 
 }
 
+
 //hook HashMap
 function hook_HashMap(){
     Java.perform(function(){
