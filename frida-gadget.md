@@ -222,6 +222,7 @@
     }
 
     //核心函数
+    //拷贝so 拷贝注入js 生成gadget文件 最后加载
     public static boolean doMydemoPersisit(Context context,String so32Path,String so64Path,String srcJSPath){
         //首先判断so是32位还是64位
         File srcSoFile = new File(so32Path);
@@ -275,6 +276,30 @@
             LOGD("happen error: "+ e.toString());
         }
         return false;
+    }
+
+    //6532行 handleBindApplication 中 第二个Application app上面;
+    //获取当前运行app的包名
+    String curPkgName = data.appInfo.packageName;
+    //获取进程的uid
+    int curUid = Process.myUid();
+    //uid大于10000 非系统
+    if(curUid > 10000){
+        LOGD("curPkgName: "+ curPkgName + " curUid: "+ curUid);
+        //是否启动持久化，判断是否存在文件
+        Boolean isPersist = isEnablePersist(curPkgName,"persist_mydemo");
+        LOGD("isPersist: "+ isPersist);
+        if(isPersist){
+            //获取hookjs路径
+            String JSPath = getAppJSPath(curPkgName);
+            LOGD("JSPath: "+ JSPath);
+            if(JSPath != null){
+                boolean isOk = doMydemoPersisit(appContext,LIB32_MYDEMO,LIB64_MYDEMO,JSPath);
+                LOGD("doMydemoPersist: "+ isOk);
+            }else{
+                LOGD("JSPath is null");
+            }
+        }
     }
 
 ```
