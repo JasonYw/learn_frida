@@ -352,4 +352,3 @@
     3. 编写Android.mk 并且同时放入/packages/apps/mydemopersist/ 与apk放一起
     4. 增加内置模块，如果为app，把模块名字加入到/build/make/target/product/handheld_product.mk中的PRODUCT_PACKAGES 变量后面
     5. 增加的内置模块，如果为可执行程序，加入到如下文件夹中/build/make/target/product/base_system.mk
-
