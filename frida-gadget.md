@@ -161,8 +161,11 @@
 ```
 
 ```Java
+    //引入
+    import java.io.FileInputStream;
+    import org.json.JSONObject;
+
     //6121行
-    //add start
     private static boolean isDebug = true;
     private static void LOGD(String msg){
         if(isDebug) {
@@ -173,7 +176,6 @@
     public static final String LIB64_MYDEMO = "/system/lib64/libmydemo.so";
     public static final String SETTINGS_DIR = "/data/system/xsettings/mydemo/persisit";
     public static final String CONFIG_JS_DIR = "/data/system/xsettings/mydemo/jscfg";
-
     //用来保存文件的工具函数
     public static boolean saveFile(String filePath,String textMsg){
         try{
@@ -187,7 +189,6 @@
         }
         return false;
     }
-
     //用来复制文件
     public static boolean copyFile(File srcFile,File dstFile){
         try{
@@ -207,23 +208,20 @@
         }
         return false;
     }
-
     //判断app是否打开自动注入脚本功能 
     ///data/system/xsettings/mydemo/persisit/pkgName/persist_on 判断此文件是否存在
     public static boolean isEnablePersist(String pkgName, String methodType){
         File enableFile = new File(SETTINGS_DIR,pkgName + "/" + methodType);
         return enableFile.exists();
     }
-
     //获取js代码
     public static String getAppJSPath(String pkgName){
         File file = new File(CONFIG_JS_DIR,pkgName + "/config.js");
         return file.getAbsolutePath();
     }
-
     //核心函数
     //拷贝so 拷贝注入js 生成gadget文件 最后加载
-    public static boolean doMydemoPersisit(Context context,String so32Path,String so64Path,String srcJSPath){
+    public static boolean doMydemoPersisit(Context context, String so32Path, String so64Path, String srcJSPath){
         //首先判断so是32位还是64位
         File srcSoFile = new File(so32Path);
         //如果是64位的进程就用64位的so
@@ -244,12 +242,12 @@
                 return false;
             }
         }
+        //把js拷贝到app私有目录中
         File srcJSFile = new File(srcJSPath);
         if(!srcJSFile.exists()){
             LOGD("srcJSFile not exists");
             return false;
         }
-        //把js拷贝到app私有目录中
         File dstJSFile = new File(context.getFilesDir(),"config.js");
         boolean isCopyJSOk = copyFile(srcJSFile,dstJSFile);
         if(!isCopyJSOk){
@@ -257,7 +255,7 @@
             return false;
         }
         //运行fridagadget 的配置文件
-        String configFilePath = context.getFilesDir() + File.separatar + "libmydemo.config.so";
+        String configFilePath = context.getFilesDir() + File.separator + "libmydemo.config.so";
         //这里构造的是 fridagadget 监听目录的方式 
         try {
             JSONObject jsonObject = new JSONObject();
@@ -265,7 +263,7 @@
             childObj.put("type","script");
             childObj.put("path",dstJSFile.toString());
             jsonObject.put("interaction",childObj);
-            boolean isSaveOk = saveFile(configFilePath,jasonObject.toString());
+            boolean isSaveOk = saveFile(configFilePath,jsonObject.toString());
             if(!isSaveOk){
                 LOGD("saveFile fail: "+ configFilePath);
                 return false;
@@ -277,11 +275,13 @@
         }
         return false;
     }
+    //add end
+
 
     //6532行 handleBindApplication 中 第二个Application app上面;
+    //add start
     //获取当前运行app的包名
     String curPkgName = data.appInfo.packageName;
-    //获取进程的uid
     int curUid = Process.myUid();
     //uid大于10000 非系统
     if(curUid > 10000){
@@ -301,6 +301,7 @@
             }
         }
     }
+    //add end
 
 ```
 
