@@ -113,6 +113,7 @@ function hook_Collections(){
 
 }
 
+
 //hook HashMap
 function hook_HashMap(){
     Java.perform(function(){
@@ -748,3 +749,43 @@ function hook_KeyStore(){
 
 //如果没有用java.security.KeyStore，可以直接脱壳反编译，之后看字符串是否被加密，如果没有被混淆直接搜索字符串.p12 或者.bks
 //只要确定服务器认证 就是找证书和密钥，如果遇到加密 直接hook 解密函数就可以
+
+
+
+
+// # hook无法找到类
+//原因 类名不对 类路径不对 classloader不对 
+//枚举classloader 去找类 如果还没有说明类没有用到就没有加载
+function change_classloader(){
+    Java.perform(function(){
+        //由于使用默认的Dexclassloader加载类的 所以找不到 利用pathclassloader去找加载类 所以找不到
+        //pathclassloader:找不到去bootclassloader去找 找不到 去 pathclassloader去找
+        //com.xiaojiangbang.app.Dynamic 这个类在dexclass loader 所以classloader没有就找不到了
+        // var Dynamic = Java.use('com.xiaojiangbang.app.Dynamic')
+        // console.log(Dynamic)
+        //枚举已经加载的类,一般这种就可以找到目标类，会把所有classloader的类都找到
+        // console.log(Java.enumerateLoadedClassesSync())
+        //枚举classloader
+        Java.enumerateClassLoaders({
+            onMatch:function(loader){
+                try{
+                    //切换frida的classloader
+                    Java.classFactory.loader = loader
+                    var Dynamic = Java.use('com.xiaojianbang.app.Dynamic')
+                    console.log("Dynamic",Dynamic,"Loader",loader)
+                    //找到后在进行hook
+                    Dynamic.sayHello.implementation = function(){
+                        console.log('hooked yes')
+                        return "xiaojianbang"
+                    }
+
+                }catch (e){
+                    console.log("wrong loader",loader)
+                }
+            },
+            onComplete:function(){}
+        })
+
+
+    })
+}

@@ -1,0 +1,3149 @@
+syntax = "proto3";
+
+
+message taginteractionstickerstruct {
+   optional int32 type = 1;
+   optional int32 orientation = 2;
+   optional string title = 3;
+   optional customtaginteractionstickerstruct customTag = 4;
+   optional usertaginteractionstickerstruct userTag = 5;
+   optional poitaginteractionstickerstruct poiTag = 6;
+   optional producttaginteractionstickerstruct productTag = 7;
+   optional brandtaginteractionstickerstruct brandTag = 8;
+}
+message textinteractionstickerstruct {
+   optional int32 type = 1;
+   optional int32 index = 2;
+   optional mentionstruct mentionInfo = 3;
+   optional hashtagstruct hashtagInfo = 4;
+}
+message floatingcardinfo {
+   optional string schema = 1;
+   optional string schema_desc = 2;
+   repeated urlmodel icons = 3;
+   optional string title = 4;
+   optional string description = 5;
+   optional string button_desc = 6;
+   optional urlmodel button_bg = 7;
+}
+message awemestatistics {
+   optional string aweme_id = 1;
+   optional int64 comment_count = 2;
+   optional int64 digg_count = 3;
+   optional int64 download_count = 4;
+   optional int64 play_count = 5;
+   optional int64 share_count = 6;
+   optional int64 forward_count = 7;
+   optional int32 lose_count = 8;
+   optional int32 lose_comment_count = 9;
+   optional int64 whatsapp_share_count = 10;
+   optional int64 collect_count = 11;
+   optional int64 admire_count = 12;
+}
+message challengecardstruct {
+   optional string title = 1;
+   optional urlmodel cover = 2;
+   optional string description = 3;
+   optional string schema = 4;
+   optional int64 locationIndex = 5;
+   optional int64 challengeId = 6;
+   optional string stickerId = 7;
+}
+message addfansinfo {
+   optional string LIZIZ = 1;
+   optional imageitem LIZJ = 2;
+   optional string LIZLLL = 3;
+   optional double f34382LJ = 4;
+   optional string LJFF = 5;
+}
+message simpleuserstruct {
+   optional string uid = 1;
+   optional string nickname = 2;
+   optional string signature = 3;
+   optional urlmodel avatarThumb = 4;
+   optional int32 followStatus = 5;
+   optional int32 status = 6;
+   optional int32 userRate = 7;
+   optional urlmodel avatarLarger = 8;
+   optional hittaskinfo hitTaskInfo = 9;
+   optional string uniqueId = 10;
+   optional string secUid = 11;
+}
+message hashtagstruct {
+   optional string hashtag_name = 1;
+   optional string hashtag_id = 2;
+}
+message linkdata {
+   optional double LIZIZ = 1;
+   optional double LIZJ = 2;
+   optional imageitem LIZLLL = 3;
+   optional string f34389LJ = 4;
+   optional string LJFF = 5;
+   optional string LJI = 6;
+   optional string LJII = 7;
+   optional string LJIIIIZZ = 8;
+}
+message livenoticestruct {
+   optional int64 live_start_time = 1;
+   optional int32 status = 3;
+   optional bool is_show_btn = 4;
+   optional bool has_clicked_btn = 5;
+   optional int64 room_id = 6;
+   optional int32 type = 7;
+   optional int64 appointment_id = 8;
+   repeated int64 promotion_ids = 9;
+   optional string promotion_detail = 10;
+   optional string sticker_extra_info = 11;
+}
+message customtaginteractionstickerstruct {
+   optional string name = 1;
+}
+message xiguarelatedbarstruct {
+   optional string f41294id = 1;
+   optional urlmodel icon = 2;
+   optional string title = 3;
+   optional string openUrl = 4;
+   optional int32 type = 5;
+   optional string openAppSchema = 6;
+   optional string rightDesc = 7;
+   optional string jumpConfirmTitle = 8;
+}
+message feeddiversitysurvey {
+   optional string lynxSchema = 1;
+   optional string rawData = 2;
+   optional int32 styleType = 3;
+}
+message commercepermissionstruct {
+   optional int32 top_item = 1;
+   optional int32 ad_link = 2;
+   optional int32 star_atlas_order = 3;
+}
+message generalpermission {
+   optional int32 follow_toast = 1;
+   optional int32 original_list = 2;
+   optional int32 shop_toast = 3;
+   optional int32 share_toast = 4;
+}
+message grootinteractionstickerstruct {
+   optional int32 type = 1;
+   optional int32 index = 2;
+   optional grootinfostruct userGrootInfo = 3;
+   optional string grootH5 = 4;
+}
+message user {
+   optional string uid = 1;
+   optional string short_id = 2;
+   optional string nickname = 3;
+   optional int32 gender = 4;
+   optional string signature = 5;
+   optional urlmodel avatar_larger = 6;
+   optional urlmodel avatar_thumb = 7;
+   optional urlmodel avatar_medium = 8;
+   optional string birthday = 9;
+   optional bool is_verified = 10;
+   optional int32 allow_status = 11;
+   optional int32 follow_status = 12;
+   optional int32 aweme_count = 13;
+   optional int32 following_count = 14;
+   optional int32 follower_count = 15;
+   optional int32 favoriting_count = 16;
+   optional int64 total_favorited = 17;
+   optional bool is_block = 18;
+   optional string third_name = 19;
+   optional bool hide_search = 20;
+   optional int32 constellation = 21;
+   optional string location = 22;
+   optional bool hide_location = 23;
+   optional string weibo_verify = 24;
+   optional string custom_verify = 25;
+   optional string unique_id = 26;
+   optional string bind_phone = 27;
+   optional int32 special_lock = 28;
+   optional int32 need_recommend = 29;
+   optional bool is_binded_weibo = 30;
+   optional string weibo_name = 31;
+   optional string weibo_schema = 32;
+   optional string weibo_url = 33;
+   optional bool story_open = 34;
+   optional int32 story_count = 35;
+   optional string recommend_reason = 36;
+   optional bool has_facebook_token = 37;
+   optional bool has_twitter_token = 38;
+   optional int64 fb_expire_time = 39;
+   optional int64 tw_expire_time = 40;
+   optional bool has_youtube_token = 41;
+   optional int64 youtube_expire_time = 42;
+   optional int64 room_id = 43;
+   optional int32 live_verify = 44;
+   optional int64 authority_status = 45;
+   optional string verify_info = 46;
+   optional int32 shield_follow_notice = 47;
+   optional int32 shield_digg_notice = 48;
+   optional int32 shield_comment_notice = 49;
+   optional string school_name = 50;
+   optional string school_poi_id = 51;
+   optional int32 school_type = 52;
+   optional shareinfo share_info = 53;
+   optional bool with_commerce_entry = 54;
+   optional int32 verification_type = 55;
+   optional originalmusician original_musician = 56;
+   optional activitystruct activity = 57;
+   optional string enterprise_verify_reason = 58;
+   optional bool is_ad_fake = 59;
+   optional bool star_use_new_download = 60;
+   optional int32 mplatform_followers_count = 61;
+   repeated followerdetail followers_detail = 62;
+   optional bool has_activity_medal = 63;
+   optional string region = 64;
+   optional string account_region = 65;
+   optional int32 sync_to_toutiao = 66;
+   optional int32 commerce_user_level = 67;
+   optional commerceinfo commerce_info = 68;
+   optional int32 live_agreement = 69;
+   repeated platforminfo platform_sync_info = 70;
+   optional bool with_shop_entry = 71;
+   optional bool is_discipline_member = 72;
+   optional int32 secret = 73;
+   optional bool has_orders = 74;
+   optional bool prevent_download = 75;
+   optional bool show_image_bubble = 76;
+   repeated string geofencing = 77;
+   optional int64 unique_id_modify_time = 78;
+   optional urlmodel video_icon = 79;
+   optional string ins_id = 80;
+   optional string google_account = 81;
+   optional string youtube_channel_id = 82;
+   optional string youtube_channel_title = 83;
+   optional int32 apple_account = 84;
+   optional bool with_dou_entry = 85;
+   optional bool with_fusion_shop_entry = 86;
+   optional bool is_phone_binded = 87;
+   optional int32 login_platform = 88;
+   optional bool accept_private_policy = 89;
+   optional int32 realname_verify_status = 90;
+   optional string twitter_id = 91;
+   optional string twitter_name = 92;
+   optional bool user_canceled = 93;
+   optional bool has_email = 94;
+   optional bool is_gov_media_vip = 95;
+   optional int32 dongtai_count = 96;
+   optional int32 live_agreement_time = 97;
+   optional int64 register_time = 98;
+   optional int32 status = 99;
+   optional bool with_douplus_entry = 100;
+   optional string avatar_uri = 102;
+   optional int32 follower_status = 103;
+   optional int32 neiguang_shield = 104;
+   optional int32 comment_setting = 105;
+   optional int32 duet_setting = 106;
+   optional int64 reflow_page_gid = 107;
+   optional int64 reflow_page_uid = 108;
+   optional int32 user_rate = 109;
+   optional bool with_new_goods = 110;
+   optional bool is_flowcard_member = 111;
+   optional urlmodel room_cover = 112;
+   optional int32 download_setting = 113;
+   optional int64 download_prompt_ts = 114;
+   optional int32 react_setting = 115;
+   optional bool live_commerce = 116;
+   optional string college_name = 117;
+   optional string enroll_year = 118;
+   optional string country = 119;
+   optional string province = 120;
+   optional string city = 121;
+   optional string recommend_reason_relation = 123;
+   optional string iso_country_code = 124;
+   optional string district = 126;
+   optional string language = 127;
+   optional string room_type_tag = 128;
+   optional int32 dou_plus_share_location = 129;
+   optional bool has_insights = 130;
+   optional string remark_name = 131;
+   optional string video_icon_virtual_URI = 132;
+   optional string share_qrcode_uri = 133;
+   optional int32 profile_tab_type = 134;
+   optional avatardecoration avatar_decoration = 135;
+   optional bool watch_status = 136;
+   optional bool with_commerce_newbie_task = 137;
+   optional bool with_item_commerce_entry = 138;
+   optional int32 star_billboard_rank = 139;
+   optional int32 education = 140;
+   optional bool can_modify_school_info = 141;
+   optional int32 school_visible = 142;
+   optional urlmodel avatar_pendant_larger = 143;
+   optional urlmodel avatar_pendant_thumb = 144;
+   optional urlmodel avatar_pendant_medium = 145;
+   repeated recommendawemeitem item_list = 146;
+   optional int32 user_period = 148;
+   optional bool is_effect_artist = 149;
+   optional effectartistdetail effect_detail = 150;
+   optional commercepermissionstruct commerce_permissions = 151;
+   optional storyblockinfo life_story_block = 152;
+   optional int32 hide_following_follower_list = 153;
+   optional bool has_unread_story = 154;
+   repeated urlmodel new_story_cover = 155;
+   optional int32 user_story_count = 156;
+   optional bool has_story = 157;
+   optional bool is_star = 158;
+   optional douplustoaststruct douplus_toast = 159;
+   optional string cv_level = 160;
+   optional int32 creator_level = 161;
+   optional bool is_mirror = 162;
+   optional int32 pr_exempt = 163;
+   repeated int64 type_label = 164;
+   optional int64 avatar_decoration_id = 165;
+   optional bool with_luban_entry = 166;
+   repeated urlmodel ad_cover_url = 167;
+   optional adcovertitle ad_cover_title = 168;
+   optional string ad_order_id = 169;
+   optional rfansgroupinfo r_fans_group_info = 170;
+   optional bool with_commerce_enterprise_tab_entry = 171;
+   optional honorstruct honor_info = 172;
+   optional int32 comment_filter_status = 173;
+   optional int32 notify_private_account = 174;
+   optional urlmodel avatar_168x168 = 175;
+   optional urlmodel avatar_300x300 = 176;
+   optional bool is_blocked = 177;
+   optional bool force_private_account = 178;
+   optional bool with_star_atlas_entry = 179;
+   optional hotsearchsprintstruct sprint_support_user_info = 180;
+   optional string signature_language = 181;
+   optional bluevbrandinfo brand_info = 182;
+   optional bool display_wvalantine_activity_entry = 183;
+   optional string shop_micro_app = 184;
+   optional commerceuserinfo commerce_user_info = 185;
+   repeated relationlabeluser relative_users = 186;
+   optional quickshopinfo quick_shop_info = 187;
+   optional string relation_label = 188;
+   repeated challenge cha_list = 189;
+   optional bool is_minor = 190;
+   optional string sec_uid = 191;
+   optional double recommend_score = 192;
+   optional int32 wx_tag = 193;
+   optional int64 open_insight_time = 194;
+   optional generalpermission general_permission = 195;
+   optional int32 birthday_hide_level = 196;
+   optional string bio_url = 197;
+   optional string bio_email = 198;
+   optional int64 latest_order_time = 199;
+   optional bool is_pro_account = 200;
+   optional bool with_stick_entry = 201;
+   optional string email = 202;
+   optional bool is_email_verified = 203;
+   optional string bio_secure_url = 204;
+   optional int32 collect_count = 205;
+   optional bool nickname_update_reminder = 206;
+   optional bool avatar_update_reminder = 207;
+   optional bool is_activity_user = 208;
+   optional string room_data = 209;
+   optional unreadvideoinfo video_unread_info = 210;
+   optional bool is_life_style = 211;
+   optional int32 stitch_setting = 212;
+   optional bool is_mix_user = 213;
+   optional bool show_favorite_list_on_item = 214;
+   optional int32 signature_display_lines = 215;
+   optional int64 live_status = 216;
+   optional bool is_series_user = 217;
+   optional recommendtemplatestruct recommend_template = 218;
+   optional int32 new_friend_type = 219;
+   repeated int32 common_interest = 221;
+   optional string mkey = 222;
+   optional int32 online_status = 223;
+   optional int64 last_active_time = 224;
+   optional int64 total_favorited_new = 225;
+   optional recommendreasondata recommend_reason_data = 226;
+   optional uservirtualcharacterstruct user_virtual_character = 227;
+   optional uservirtualemotionstruct user_virtual_emotion = 228;
+}
+message awemecommercestruct {
+   optional int32 ad_auth_status = 1;
+   optional int32 ad_source = 2;
+   optional bool avoid_global_pendant = 3;
+   optional bool with_comment_filter_words = 4;
+   optional int32 ad_style = 5;
+   optional bool prevent_share = 6;
+   optional int32 ad_auth_target_type = 7;
+}
+message hotwordguideinfostruct {
+   optional string title = 1;
+   optional string content = 2;
+   optional urlmodel url = 3;
+}
+message sharetask {
+   optional int32 showTimestamp = 1;
+   optional int32 coinCount = 2;
+}
+message uservirtualcharacterstruct {
+   optional uservirtualanimavatarstruct virtualAnimAvatar = 1;
+   optional urlmodel virtualAvatar = 2;
+   optional int64 version = 3;
+   optional bool useVirtualAvatar = 4;
+}
+message hotsearchitem {
+   optional string word = 1;
+   optional int32 label = 2;
+   optional int64 hot_value = 3;
+   optional string search_word = 4;
+   optional string challenge_id = 5;
+   optional urlmodel word_cover = 6;
+   optional string ad_data = 7;
+   optional int32 position = 8;
+   optional int32 video_count = 9;
+   optional string group_id = 10;
+   optional string top_aweme_id = 11;
+   optional bool can_extend_detail = 12;
+   optional string schema = 13;
+   optional int32 word_type = 14;
+   optional int32 room_count = 15;
+   optional string sentence_id = 16;
+   optional string customer_label = 17;
+   optional int64 event_time = 18;
+   repeated hotsearchitem related_words = 19;
+   optional hotwordguideinfostruct hot_word_guide_info = 20;
+   optional int64 view_count = 21;
+   optional string hotlist_param = 22;
+}
+message poitaginteractionstickerstruct {
+   optional string poiId = 1;
+}
+message livefeedbackoption {
+   optional string key = 1;
+   optional string text = 2;
+   optional int64 subQuestionId = 3;
+   optional bool negative = 4;
+   optional string toastText = 5;
+}
+message streamurlstruct {
+   optional int64 sid = 1;
+   optional string rtmp_pull_url = 2;
+   optional string rtmp_push_url = 3;
+   optional int32 provider = 4;
+   optional string extra = 5;
+   optional string m8196id = 6;
+}
+message livefeedbackcondition {
+   optional int64 fromTime = 1;
+   optional int64 toTime = 2;
+   repeated int64 actionIds = 3;
+   optional int64 actionType = 4;
+   optional int64 previewTime = 5;
+}
+message anchorcommonstruct {
+   optional string keyword = 1;
+   optional string url = 2;
+   optional string language = 3;
+   optional string schema = 4;
+   optional string m8209id = 5;
+   optional int32 type = 6;
+   optional urlmodel icon = 7;
+   optional string extra = 8;
+   optional string deep_link = 9;
+   optional string universal_link = 10;
+   optional int32 general_type = 11;
+   optional string log_extra = 12;
+   optional string description = 13;
+   optional urlmodel thumbnail = 14;
+   repeated anchorpanelactionstruct actions = 15;
+}
+message searchadinfo {
+   optional easteregginfo easter_egg = 1;
+   optional string ad_data = 2;
+   optional string log_data = 3;
+   optional int32 asso_g_pos = 4;
+   optional int32 req_asso_num = 5;
+   optional string group_ad_infos = 6;
+   optional string feed_extra = 7;
+}
+message grootinfostruct {
+   optional int64 baikeId = 1;
+   optional string speciesName = 2;
+   optional float prob = 3;
+}
+message extra {
+   optional int64 now = 1;
+   optional string logid = 2;
+   repeated string fatal_item_ids = 3;
+   optional string search_request_id = 4;
+}
+message promotionvisitor {
+   repeated urlmodel avatar = 1;
+   optional int64 count = 2;
+}
+message commerceconfigdata {
+   optional int32 type = 1;
+   optional int32 priority = 2;
+   optional itemlikeeggdata item_like_egg = 3;
+   optional stickerpendantstruct sticker_pendant = 4;
+   optional string data = 5;
+}
+message storystruct {
+   optional aweme story = 1;
+   optional bool unread = 2;
+}
+message activitybuttonstruct {
+   optional string label = 1;
+   optional string color = 2;
+}
+message awemeactivity {
+   optional string activity_id = 1;
+   optional int64 show_delay_time = 2;
+   optional string schema_url = 3;
+   optional textcontentstruct content = 4;
+   optional activitybuttonstruct primary_btn = 5;
+}
+message clickarea {
+   optional string LIZIZ = 1;
+   optional clickextrasize LIZJ = 2;
+   optional string LIZLLL = 3;
+   optional string f34384LJ = 4;
+   optional string LJFF = 5;
+   optional double LJI = 6;
+   optional string LJII = 7;
+   optional string LJIIIIZZ = 8;
+   optional int32 LJIIIZ = 9;
+   repeated schedule LJIIJ = 10;
+   optional int64 LJIIJJI = 11;
+   optional int64 LJIIL = 12;
+   optional int64 LJIILIIL = 13;
+   optional int64 LJIILJJIL = 14;
+   optional breathextrasize LJIILL = 15;
+   optional string LJIILLIIL = 16;
+   optional string LJIIZILJ = 17;
+   optional string LJIJ = 18;
+   optional string LJIJI = 19;
+   optional string LJIJJ = 20;
+}
+message poitagrategradestruct {
+   optional int32 type = 1;
+}
+message impressionstruct {
+   repeated int64 groupIdListA = 1;
+   repeated int64 groupIdListB = 2;
+   repeated int64 similarIdListA = 3;
+   repeated int64 similarIdListB = 4;
+}
+message imagealbummusicinfo {
+   optional int32 beginTime = 1;
+   optional int32 endTime = 2;
+   optional int32 volume = 3;
+}
+message feedcomponentctrl {
+   optional bool showAnchor = 1;
+   optional bool showMix = 2;
+   optional bool showHotspot = 3;
+   optional bool showToutiao = 4;
+   optional bool showXigua = 5;
+   optional bool showVs = 6;
+   optional bool showSearch = 7;
+   optional bool showRelateRec = 8;
+}
+message imagegearedstruct {
+   optional string name = 1;
+   repeated imageurlstruct images = 2;
+}
+message tcbonus {
+   optional int32 bonus_type = 1;
+   optional bonusauthor author = 2;
+   optional string title = 3;
+   optional string subTitle = 4;
+   optional string text = 5;
+   optional string style = 6;
+   optional bonuscommerce commerce_info = 7;
+   optional string open_url = 8;
+   optional string token = 9;
+   optional int32 source = 10;
+   optional int64 scene_id = 11;
+   optional string digg_text = 12;
+   optional string digg_toast = 13;
+   optional bool maybe_carp = 14;
+}
+message hotcommentstruct {
+   optional string cid = 1;
+   optional string text = 2;
+   optional int32 diggCount = 3;
+}
+message commercestickerinfo {
+   optional int64 commerce_sticker_id = 1;
+   optional urlmodel icon_url = 2;
+   optional string letters = 3;
+   optional string open_url = 4;
+   optional string web_url = 5;
+   optional string web_url_title = 6;
+}
+message specialsticker {
+   optional int32 sticker_type = 1;
+   optional string link = 2;
+   optional string title = 3;
+   optional string sticker_id = 4;
+   optional urlmodel icon_url = 5;
+   optional string open_url = 6;
+   optional string compliance_data = 7;
+}
+message cfgroupstruct {
+   repeated cfstruct cfList = 1;
+   optional int32 offset = 2;
+   optional int32 total = 3;
+   optional int64 minCursor = 4;
+   optional int64 maxCursor = 5;
+   optional string folderId = 6;
+   optional int64 headCursor = 7;
+   optional int64 tailCursor = 8;
+   repeated cfidstruct cfIdList = 9;
+}
+message easteregginfo {
+   optional string source_type = 1;
+   optional urlmodel source_url = 2;
+   optional string open_url = 3;
+   optional string web_url = 4;
+   optional string web_title = 5;
+   optional int64 easter_egg_id = 6;
+   optional string easter_egg_name = 7;
+   optional bool is_h5 = 8;
+}
+message tabfeedmodel {
+   optional string tab_type = 1;
+   optional string tab_name = 2;
+   optional int32 feed_type = 3;
+}
+message webcastroomdatasyncmessage {
+   optional common common = 1;
+   optional int64 roomID = 2;
+   optional string syncKey = 3;
+   optional int64 version = 4;
+   optional bytes payload = 5;
+   optional string bizLogID = 6;
+}
+message mentionstruct {
+   optional string sec_uid = 1;
+   optional string user_name = 2;
+   optional string user_id = 3;
+   optional urlmodel avatar_thumb = 4;
+   optional string signature = 5;
+}
+message searchv2niltextstruct {
+   optional string content = 1;
+   optional string url = 2;
+   optional string link = 3;
+}
+message hotsearchguideword {
+   optional string word = 1;
+   optional string search_word = 2;
+   optional int32 type = 3;
+   optional int32 breathe_times = 4;
+}
+message admireauth {
+   optional int32 isShowAdmireTab = 1;
+   optional int32 isShowAdmireButton = 2;
+   optional int32 admireButton = 3;
+   optional int32 isAdmire = 4;
+}
+message uservirtualanimavatarstruct {
+   optional urlmodel largeVirtualAvatar = 1;
+   optional urlmodel smallVirtualAvatar = 2;
+}
+message redpacketstruct {
+   optional int32 type = 1;
+   optional int64 tillSeckillTime = 2;
+   optional int64 seckillTime = 3;
+   optional string starName = 4;
+   optional string words = 5;
+   optional string timestampInfo = 6;
+   optional urlmodel voice = 7;
+   optional urlmodel defaultVoice = 8;
+   optional int32 voiceStart = 9;
+   optional int32 voiceEnd = 10;
+   optional urlmodel tagIcon = 11;
+}
+message awemeaclshare {
+   optional aclcommonshare download_general = 1;
+   optional aclcommonshare download_mask_panel = 2;
+   optional aclcommonshare download_share_panel = 3;
+}
+message miniappcard {
+   optional string image_url = 1;
+   optional string text = 2;
+   optional int32 wait_time = 3;
+}
+message linkmatch {
+   optional int32 total_limit = 1;
+   optional int32 query_limit = 2;
+   repeated matchinfo match_info = 3;
+   optional captioninfo caption_info = 4;
+   optional captionanchor caption_anchor = 5;
+}
+message seriesstatusstruct {
+   optional int32 status = 1;
+   optional string statusDesc = 2;
+   optional int32 isCollected = 3;
+}
+message sdkmessage {
+   optional string method = 1;
+   optional bytes payload = 2;
+   optional int64 msg_id = 3;
+   optional int32 msg_type = 4;
+   optional int64 offset = 5;
+}
+message doublebutton {
+   optional clickarea LIZIZ = 1;
+   optional clickarea LIZJ = 2;
+}
+message mixstruct {
+   optional string mix_id = 1;
+   optional string mix_name = 2;
+   optional urlmodel cover_url = 3;
+   optional urlmodel icon_url = 4;
+   optional mixstatusstruct status = 5;
+   optional mixstatisstruct statis = 6;
+   optional string desc = 7;
+   optional user author = 8;
+   optional string extra = 9;
+   optional shareinfo share_info = 10;
+   optional int32 is_serial_mix = 11;
+   optional int32 mix_pic_type = 12;
+   optional int32 mix_type = 13;
+}
+message rewardstatisticsstruct {
+   optional int32 type = 1;
+   optional int32 status = 2;
+   optional string result = 3;
+   optional urlmodel icon = 4;
+   optional string schema = 5;
+   optional string taskType = 6;
+}
+message effectartistdetail {
+   optional int32 total = 1;
+}
+message recommendawemeitem {
+   optional string aweme_id = 1;
+   optional urlmodel cover = 2;
+   optional urlmodel dynamic_cover = 3;
+   optional int64 media_type = 4;
+}
+message awemestaratlas {
+   optional int32 review_status = 1;
+   optional staratlaslink link_info = 2;
+   optional string log_extra = 3;
+   optional staratlasliveinfoforbarstruct live_attract_info = 4;
+}
+message shakestyleinfo {
+   optional int64 LIZIZ = 1;
+   optional string LIZJ = 2;
+   optional int64 LIZLLL = 3;
+   optional videoinfo f34392LJ = 4;
+   optional imageitem LJFF = 5;
+   optional imageitem LJI = 6;
+   optional string LJII = 7;
+   optional string LJIIIIZZ = 8;
+   optional imageitem LJIIIZ = 9;
+   repeated shakesensitivity LJIIJ = 10;
+}
+message breathextrasize {
+   optional int32 LIZIZ = 1;
+   optional int32 LIZJ = 2;
+   optional int32 LIZLLL = 3;
+   optional int32 f34383LJ = 4;
+}
+message openplatformstruct {
+   optional string name = 1;
+   optional string icon = 2;
+   optional string link = 3;
+   optional string rawData = 4;
+}
+message position {
+   optional int32 begin = 1;
+   optional int32 end = 2;
+}
+message music {
+   optional int64 m7669id = 1;
+   optional string id_str = 2;
+   optional string title = 3;
+   optional string author = 4;
+   optional string album = 5;
+   optional urlmodel cover_hd = 6;
+   optional urlmodel cover_large = 7;
+   optional urlmodel cover_medium = 8;
+   optional urlmodel cover_thumb = 9;
+   optional urlmodel play_url = 10;
+   optional string schema_url = 11;
+   optional int32 source_platform = 12;
+   optional int32 start_time = 13;
+   optional int32 end_time = 14;
+   optional int32 duration = 15;
+   optional string extra = 16;
+   optional int32 user_count = 17;
+   repeated position position = 18;
+   optional shareinfo share_info = 19;
+   optional int32 collect_stat = 20;
+   optional int32 status = 21;
+   optional string offline_desc = 22;
+   optional urlmodel effects_data = 23;
+   optional string owner_id = 24;
+   optional string owner_nickname = 25;
+   optional string use_count_desc = 26;
+   optional urlmodel audio_track = 27;
+   optional urlmodel bodydance_url = 28;
+   optional challenge bodydance_challenge = 29;
+   optional bool is_original = 30;
+   optional challenge challenge = 31;
+   optional int32 billboard_rank = 32;
+   optional string mid = 33;
+   optional urlmodel bodydance_challenge_id = 34;
+   optional int64 binded_challenge_id = 35;
+   optional bool redirect = 36;
+   optional bool is_restricted = 37;
+   optional bool author_deleted = 38;
+   optional bool is_del_video = 39;
+   optional bool is_video_self_see = 40;
+   optional string owner_handle = 41;
+   repeated position author_position = 42;
+   optional bool prevent_download = 43;
+   optional int32 music_billboard_type = 44;
+   optional billboardweeklyinfo music_billboard_weekly_info = 45;
+   optional categorycoverstruct category_cover_info = 46;
+   optional bool is_only_owner_use = 47;
+   optional bool is_video_not_recommend = 48;
+   optional urlmodel strong_beat_url = 49;
+   repeated string unshelve_countries = 50;
+   optional int32 prevent_item_download_status = 51;
+   repeated externalmusicinfo external_song_info = 52;
+   optional string sec_uid = 53;
+   optional int32 lyric_type = 54;
+   optional string lyric_url = 55;
+   optional urlmodel avatar_thumb = 56;
+   optional urlmodel avatar_medium = 57;
+   optional urlmodel avatar_large = 58;
+   optional double preview_start_time = 59;
+   optional double preview_end_time = 60;
+   optional int64 cluster_id = 61;
+   optional bool mute_share = 62;
+   optional bool is_author_artist = 63;
+   optional bool is_pgc = 64;
+   optional matchedpgcsoundinfo matched_pgc_sound = 65;
+   optional matchedsongstruct matched_song = 66;
+   optional musicanchorstruct music_anchor = 67;
+   optional int32 audition_duration = 68;
+   optional int32 shoot_duration = 69;
+   optional int32 video_duration = 70;
+   optional songstruct song = 99;
+   repeated user artist_user_infos = 100;
+   optional musicimagebeatsstruct music_image_beats = 102;
+}
+message cfstruct {
+   optional aweme f41270cf = 1;
+}
+message descendantsmodel {
+   repeated string platforms = 1;
+   optional string notify_msg = 2;
+}
+message gradientbgdata {
+   optional string start_color = 1;
+   optional string center_color = 2;
+   optional int32 screens = 3;
+}
+message videotagstruct {
+   optional int64 tagId = 1;
+   optional string tagName = 2;
+   optional int32 level = 3;
+}
+message relationlabelnew {
+   repeated relationlabeluser user_list = 1;
+   optional int32 type = 2;
+   optional string extra = 3;
+}
+message seriescontentstruct {
+   optional int32 seriesContentType = 1;
+   optional string name = 2;
+}
+message awemerelationrecommendmodel {
+   optional int64 recommend_type = 1;
+   optional string relation_text_key = 2;
+}
+message livepaidroom {
+   optional int32 paidLiveType = 1;
+   optional int32 viewRight = 2;
+   optional int32 delivery = 3;
+   optional int64 ticketId = 4;
+}
+message relationdynamiclabel {
+   optional string nickname = 1;
+   optional string label_info = 2;
+   optional int32 count = 3;
+   optional string user_id = 4;
+   optional int32 type = 5;
+   optional int32 show_type = 6;
+   optional string label_info_color = 7;
+   optional string label_info_background_color = 8;
+   optional urlmodel label_info_background_img = 9;
+   optional string schema = 10;
+   optional string label_info_background_img_stretch_position = 11;
+   optional string label_tag = 12;
+   optional string label_type = 13;
+   optional int64 tag_id = 14;
+}
+message condition {
+   optional int64 fromTime = 1;
+   optional int64 toTime = 2;
+   repeated int64 actionIds = 3;
+   optional int64 actionType = 4;
+   optional int64 previewTime = 5;
+}
+message liveappointmentstruct {
+   optional string webUrl = 1;
+   optional string type = 2;
+   optional lynxrawdatastruct lynxRawData = 3;
+   optional string templateUrl = 4;
+   optional int32 showButtonSeconds = 5;
+   optional int32 position = 6;
+   optional int64 buttonStyle = 7;
+}
+message categorycoverstruct {
+   optional string aweme_id = 1;
+   optional urlmodel cover = 2;
+   optional urlmodel dynamic_cover = 3;
+}
+message imageitem {
+   optional string LIZIZ = 1;
+   optional int32 LIZJ = 2;
+   optional int32 LIZLLL = 3;
+   repeated url f34387LJ = 4;
+   optional string LJFF = 5;
+   optional string LJI = 6;
+   repeated url LJII = 7;
+}
+message gameinfo {
+   optional int32 game_type = 1;
+   optional int32 game_score = 2;
+}
+message relevantlive {
+   optional int64 videoRelevantCategory = 1;
+   optional string title = 2;
+   optional int64 linkmicKtvSongAuthorId = 3;
+   optional int64 linkmicKtvSongId = 4;
+   optional string linkmicKtvSongName = 5;
+   optional string extra = 6;
+}
+message hotsearchentity {
+   repeated hotsearchitem word_list = 1;
+   optional shareinfo share_info = 2;
+   optional string active_time = 3;
+}
+message liveroomstruct {
+   optional int64 room_id = 1;
+   optional int32 status = 2;
+   optional user owner = 3;
+   optional string title = 4;
+   optional int32 user_count = 5;
+   optional int64 create_time = 6;
+   optional int64 finish_time = 7;
+   optional int64 stream_id = 8;
+   optional streamurlstruct stream_url = 9;
+   optional shareinfo share_info = 10;
+   optional int32 digg_count = 11;
+   optional int32 total_user_count = 12;
+   optional int32 coins = 13;
+   optional bool in_sandbox = 14;
+   optional urlmodel dynamic_cover = 15;
+   optional urlmodel room_cover = 16;
+   optional string room_type_tag = 17;
+   optional streamurlstruct additional_stream_url = 18;
+   optional urlmodel webp_cover = 19;
+   optional string extra = 20;
+   optional bool live_type_audio = 21;
+   optional bool live_type_third_party = 22;
+   optional bool live_type_screenshot = 23;
+   optional bool live_type_official = 24;
+   optional bool live_type_normal = 25;
+   optional bool live_type_linkmic = 26;
+   optional bool live_type_sandbox = 27;
+   optional bool with_linkmic = 28;
+}
+message visualsearch {
+   optional bool visual_search_show_entry = 1;
+   optional string visual_search_goods_label = 2;
+   optional urlmodel visual_search_img = 3;
+   optional string entry_text = 4;
+}
+message livefeedbackquestion {
+   optional string questionKey = 1;
+   optional string questionText = 2;
+   optional int64 type = 3;
+   repeated livefeedbackoption options = 4;
+   optional int64 questionId = 5;
+}
+message effectguidestruct {
+   optional bool showGuide = 1;
+   optional urlmodel icon = 2;
+   optional string effectId = 3;
+   optional string effectName = 4;
+}
+message labelinfo {
+   optional int32 LIZIZ = 1;
+   optional string LIZJ = 2;
+   optional string LIZLLL = 3;
+   optional string f34388LJ = 4;
+}
+message seriesstatsstruct {
+   optional int64 playVv = 1;
+   optional int64 collectVv = 2;
+   optional int64 currentEpisode = 3;
+   optional int64 updatedToEpisode = 4;
+   optional int64 totalEpisode = 5;
+}
+message roomfeedcellstruct {
+   optional liveroomstruct room = 1;
+   optional int32 type = 2;
+   optional fansstruct fans_struct = 3;
+   optional string tag = 4;
+   optional int64 tag_id = 5;
+   optional urlmodel icon = 6;
+   optional string distance = 7;
+   optional string rawdata = 8;
+}
+message searchuserguide {
+   optional string show_resp_guide = 1;
+   optional int32 resp_second = 2;
+   optional bool show_inflow_guide = 3;
+   optional int32 inflow_second = 4;
+   optional int32 inflow_stop = 5;
+}
+message urlmodel {
+   optional string uri = 1;
+   repeated string url_list = 2;
+   optional int32 width = 3;
+   optional int32 height = 4;
+   optional string url_key = 5;
+   optional int64 data_size = 6;
+   optional string file_hash = 7;
+   optional string file_cs = 8;
+   optional string player_access_key = 9;
+   optional string bgimg_url = 10;
+}
+message poifootprintstruct {
+   optional string title = 1;
+   optional string schema = 2;
+}
+message poioptionstruct {
+   optional string title = 1;
+   optional string value = 2;
+   optional string log_value = 3;
+   optional int64 show_dot = 4;
+}
+message itemcommenteggmaterialdata {
+   optional string fileType = 1;
+   optional string materialUrl = 2;
+   optional string openUrl = 3;
+   optional string webUrl = 4;
+   optional string regex = 5;
+   optional string eggId = 6;
+}
+message textextrastruct {
+   optional int32 start = 1;
+   optional int32 end = 2;
+   optional string user_id = 3;
+   optional int32 type = 4;
+   optional string hashtag_name = 5;
+   optional string hashtag_id = 6;
+   optional bool is_commerce = 7;
+   optional string hashTagName1 = 8;
+   optional string sec_uid = 9;
+   optional string aweme_id = 10;
+   optional int32 sub_type = 11;
+   optional string live_data = 12;
+   optional string search_text = 13;
+   optional string search_query_id = 14;
+   optional int32 search_hide_words = 15;
+   optional int32 tag_mention_need_fold = 16;
+}
+message lynxbuttonstruct {
+   optional string buttonBackgroundColor = 1;
+   optional string source = 2;
+   optional string title = 3;
+   optional string imageUrl = 4;
+   optional string liveGroupId = 5;
+}
+message cooperationinfostruct {
+   optional string tag = 1;
+   optional string extra = 2;
+   repeated cocreatorstruct coCreators = 3;
+}
+message matchinfo {
+   optional string query = 1;
+   optional string link = 2;
+   optional int32 begin = 3;
+   optional int32 end = 4;
+}
+message chapterinfo {
+   optional string key_word = 1;
+   optional string desc = 2;
+   optional int32 timestamp = 3;
+}
+message slideperiod {
+   optional int64 LIZIZ = 1;
+   optional int64 LIZJ = 2;
+   optional double LIZLLL = 3;
+}
+message optionsbean {
+   optional string option_text = 1;
+   optional int64 option_id = 2;
+   optional int64 vote_count = 3;
+   optional string option = 4;
+}
+message microappinfo {
+   optional string app_id = 1;
+   optional string app_name = 2;
+   optional string icon = 3;
+   optional int32 orientation = 4;
+   optional string schema = 5;
+   optional int32 state = 6;
+   optional string summary = 7;
+   optional int32 type = 8;
+   optional string description = 9;
+   optional string title = 10;
+   optional miniappcard card = 11;
+   optional string web_url = 12;
+}
+message hotliststruct {
+   optional string title = 1;
+   optional string image_url = 2;
+   optional string schema = 3;
+   optional int32 type = 4;
+   optional string i18n_title = 5;
+   optional string header = 6;
+   optional string footer = 7;
+   optional int32 pattern_type = 8;
+   optional int32 rank = 9;
+   optional int32 hot_score = 10;
+   optional int32 view_count = 11;
+   optional string group_id = 12;
+   optional string sentence = 13;
+   optional int64 sentence_id = 14;
+   optional int32 label = 15;
+   optional string extra = 16;
+   optional urlmodel icon = 17;
+}
+message relatedsearchbarstruct {
+   optional urlmodel icon = 1;
+   optional string guideText = 2;
+   optional string queryWord = 3;
+   optional int32 jumpType = 4;
+   optional string schema = 5;
+   optional string queryId = 6;
+}
+message cloudgamestruct {
+   optional string cloud_game_id = 1;
+   optional cloudgameentrancestruct entrance_info = 2;
+   optional string download_url = 3;
+   optional string extra = 4;
+}
+message platforminfo {
+   optional string platform_name = 1;
+   optional string nickname = 2;
+   optional bool full_synced = 3;
+}
+message searchmusic {
+   optional int32 card_type = 1;
+   optional bool has_more = 2;
+   optional dynamicpatch dynamic_patch = 7;
+}
+message unreadvideoinfo {
+   optional int32 unread_count = 1;
+   optional int64 latest_unread_video_created_time = 2;
+}
+message offlineinfo {
+   optional int32 offline_info_type = 1;
+   optional string text = 2;
+   optional string action = 3;
+}
+message votestruct {
+   optional int64 vote_id = 1;
+   optional int64 ref_id = 2;
+   optional int32 ref_type = 3;
+   optional string question = 4;
+   repeated optionsbean options = 5;
+   optional int64 select_option_id = 6;
+}
+message storyidstruct {
+   optional string m8201id = 1;
+   optional int32 offset = 2;
+   optional int32 pic_count = 3;
+}
+message recommendreasondata {
+   optional bool addressBookPermission = 1;
+   optional bool gpsPermission = 2;
+}
+message commercestickerunlockstruct {
+   optional string desc = 1;
+   optional string webUrl = 2;
+   optional string openUrl = 3;
+}
+message xiguataskstruct {
+   optional bool is_xigua_task = 1;
+   optional string jump_url = 2;
+   optional string title = 3;
+   optional string desc = 4;
+   optional string icon_url = 5;
+   optional int32 switch_type = 6;
+   optional string entrance_url = 7;
+}
+message addicstruct {
+   optional string info = 1;
+}
+message backgroundimage {
+   optional int32 offset = 1;
+   optional int32 screen_width = 2;
+   optional urlmodel dark_image = 3;
+   optional urlmodel light_image = 4;
+   optional int32 light_title_theme_style = 5;
+}
+message tcvideoredpacketstruct {
+   optional string videoRedPacketUri = 1;
+   optional string videoRedPacketUrl = 2;
+   optional string videoRedPacketId = 3;
+   optional string videoRedPacketOrderId = 4;
+   optional string firstShowTime = 5;
+   optional int32 videoRedPacketType = 6;
+   optional string couponId = 7;
+   optional int32 scope = 8;
+   optional bool isVisible = 9;
+}
+message poistruct {
+   optional string poi_id = 1;
+   optional string poi_name = 2;
+   optional string type_code = 3;
+   optional int32 user_count = 4;
+   optional int32 item_count = 5;
+   optional shareinfo share_info = 6;
+   optional urlmodel cover_hd = 7;
+   optional urlmodel cover_large = 8;
+   optional urlmodel cover_medium = 9;
+   optional urlmodel cover_thumb = 10;
+   optional string distance = 11;
+   optional address address_info = 12;
+   optional int32 icon_type = 13;
+   optional int32 collect_stat = 14;
+   optional double poi_longitude = 15;
+   optional double poi_latitude = 16;
+   optional int32 expand_type = 17;
+   optional urlmodel icon_on_map = 18;
+   optional urlmodel icon_on_entry = 19;
+   optional urlmodel icon_on_info = 20;
+   optional int32 poi_type = 21;
+   optional string poi_voucher = 22;
+   optional double rating = 23;
+   optional double cost = 24;
+   optional string poi_rank_desc = 25;
+   optional string business_area_name = 26;
+   optional bool is_local_city = 27;
+   optional string option_name = 28;
+   optional string poi_subtitle = 29;
+   optional string sp_source = 30;
+   optional int32 show_type = 31;
+   optional bool is_candidate = 32;
+   optional poicardstruct poi_card = 33;
+   optional int32 poi_subtitle_type = 34;
+   repeated string voucher_release_areas = 35;
+   optional int32 is_show_halfcard = 36;
+   repeated poifrontendtypestruct poi_frontend_type = 37;
+   optional poibackendtype poi_backend_type = 38;
+   optional urlmodel cover_item = 39;
+   optional bool is_top_recommend = 40;
+   optional bool is_admin_area = 41;
+   optional string collected_count = 42;
+   optional string view_count = 43;
+   optional bool within_geo_fence = 47;
+   optional string ext_json = 48;
+   optional bool is_food_group_buy = 49;
+   optional bool is_at_call_back_collect = 50;
+}
+message poibackendtype {
+   optional string code = 1;
+   optional string name = 2;
+   optional string desc = 3;
+}
+message btnpropertystruct {
+   optional string btnText = 1;
+   optional string btnSchema = 2;
+   optional int32 status = 3;
+   optional string btnIcon = 4;
+}
+message externalmusicinfo {
+   optional string h5_url = 1;
+   optional string partner_name = 2;
+   optional string partner_song_id = 3;
+   optional string external_song_key = 4;
+}
+message producttaginteractionstickerstruct {
+   optional string productId = 1;
+   optional string schema = 2;
+}
+message awemelitestruct {
+   optional int32 is_lite_red_pack_item = 1;
+   optional bool can_done_share_private_chat_task = 2;
+   optional bool can_done_lite_video_interaction = 3;
+   optional bool is_lite_video_interaction_item = 4;
+   optional string task_token = 5;
+   optional int32 red_pack_user_status = 6;
+}
+message imageinfo {
+   optional int32 height = 1;
+   optional int32 width = 2;
+   optional urlmodel label_large = 3;
+   optional urlmodel label_thumb = 4;
+}
+message editawemebarinfo {
+   optional int32 buttonStatus = 1;
+   optional string buttonToast = 2;
+   optional string barToast = 3;
+}
+message clickextrasize {
+   optional int32 LIZIZ = 1;
+   optional int32 LIZJ = 2;
+   optional int32 LIZLLL = 3;
+   optional int32 f34385LJ = 4;
+}
+
+message socialtagstruct {
+   optional string title = 1;
+   optional urlmodel image = 2;
+   optional string schema = 3;
+   optional string mobLabel = 4;
+   optional int32 type = 5;
+}
+message bonuscommerce {
+   optional int64 m8194id = 1;
+}
+message awemestatus {
+   optional string aweme_id = 1;
+   optional bool is_delete = 2;
+   optional bool allow_share = 3;
+   optional bool allow_comment = 4;
+   optional bool is_private = 5;
+   optional bool with_goods = 6;
+   optional int32 private_status = 7;
+   optional bool with_fusion_goods = 8;
+   optional bool in_reviewing = 9;
+   optional int32 reviewed = 10;
+   optional bool self_see = 11;
+   optional bool is_prohibited = 12;
+   optional int32 download_status = 13;
+   optional int32 dont_share_status = 14;
+   optional int32 video_hide_search = 15;
+   optional editawemebarinfo aweme_edit_info = 16;
+   optional bool reviewed_friend_see = 17;
+   optional int32 part_see = 18;
+   optional int64 item_version = 19;
+}
+message cloudgameentrancestruct {
+   optional string button_color = 1;
+   optional string button_title = 2;
+   optional string sticker_info_url = 3;
+   optional string sticker_title = 4;
+   optional int32 show_sticker_time = 5;
+}
+message brandtaginteractionstickerstruct {
+   optional string brandId = 1;
+   optional string schema = 2;
+}
+message bigthumb {
+   optional int64 imgNum = 1;
+   optional string uri = 2;
+   optional string imgUrl = 3;
+   optional int64 imgXSize = 4;
+   optional int64 imgYSize = 5;
+   optional int64 imgXLen = 6;
+   optional int64 imgYLen = 7;
+   optional double duration = 8;
+   optional double interval = 9;
+   optional string fext = 10;
+}
+message imageurlstruct {
+   optional string uri = 1;
+   repeated string urlList = 2;
+   repeated string downloadUrlList = 3;
+   optional int32 height = 5;
+   optional int32 width = 6;
+}
+message challengedisclaimer {
+   optional string title = 1;
+   optional string content = 2;
+}
+message bannertip {
+   optional int32 banner_type = 1;
+   optional string banner_txt = 2;
+   optional int32 link_type = 3;
+   optional string link_url = 4;
+   optional string link_txt = 5;
+}
+message tc21interactivevideostruct {
+   optional string activityId = 1;
+   optional string schemaUrl = 2;
+   optional int64 showDelayTime = 3;
+   optional string tagText = 4;
+   optional string extra = 5;
+}
+message commentpermissioninfo {
+   optional int32 commentPermissionStatus = 1;
+   optional bool canComment = 2;
+   optional bool itemDetailEntry = 3;
+   optional bool pressEntry = 4;
+   optional bool toastGuide = 5;
+}
+message anchorpanelactionstruct {
+   optional urlmodel icon = 1;
+   optional string schema = 2;
+   optional int32 actionType = 3;
+}
+message staratlaslink {
+   optional string m8200id = 1;
+   optional string title = 2;
+   optional string sub_title = 3;
+   optional urlmodel avatar_icon = 4;
+   optional string web_url = 5;
+   optional string open_url = 6;
+   optional string compliance_data = 7;
+   optional string download_url = 8;
+}
+message adcovertitle {
+   optional string title = 1;
+   optional string web_url = 2;
+}
+message seriesrankinfostruct {
+   optional string rankCardText = 1;
+   optional int32 rank = 2;
+   optional string rankType = 3;
+   optional string rankSchema = 4;
+}
+message musicpromotecommentanchorstruct {
+   optional string tag = 1;
+   optional string comment = 2;
+   optional int64 metaSongId = 3;
+   optional musicpromotelinkinfostruct musicPromoteLinkInfo = 4;
+}
+message originalaudiostruct {
+   optional urlmodel playUrl = 1;
+   optional string vid = 2;
+   optional double volume = 3;
+}
+message grootbottombarinfo {
+   optional int64 speciesId = 1;
+   optional string description = 3;
+   optional string schema = 4;
+   optional string speciesName = 5;
+}
+message awemenationaltask {
+   optional nationaltasklink link_info = 1;
+   optional liveappointmentstruct live_appointment = 2;
+}
+message awemelabelmodel {
+   optional urlmodel label_url = 1;
+   optional int32 label_type = 2;
+}
+message videoshareinfostruct {
+   optional string awemeId = 1;
+   optional string authorId = 2;
+   optional string secAuthorId = 3;
+   optional string authorName = 4;
+   optional string commentUserId = 5;
+   optional string commentUserSecId = 6;
+   optional string commentContent = 7;
+   optional string commentUserNickname = 8;
+   optional string commentId = 9;
+   optional string imageIndex = 10;
+}
+message awemeriskmodel {
+   optional bool vote = 1;
+   optional bool warn = 2;
+   optional bool risk_sink = 3;
+   optional int32 type = 4;
+   optional string content = 5;
+   optional bool notice = 6;
+   optional string url = 7;
+}
+message feedbackentranceintentinfo {
+   optional string feedbackInfo1 = 1;
+   optional string feedbackInfo2 = 2;
+   optional string feedbackInfo3 = 3;
+   optional string feedbackInfo4 = 4;
+   optional string feedbackInfo5 = 5;
+   optional string feedbackInfo6 = 6;
+   optional string feedbackInfo7 = 7;
+   optional string feedbackInfo8 = 8;
+   optional string feedbackInfo9 = 9;
+}
+message option {
+   optional string key = 1;
+   optional string text = 2;
+   optional int64 subQuestionId = 3;
+   optional bool negative = 4;
+}
+message poiclassfilteroptionstruct {
+   optional string title = 1;
+   optional string name = 2;
+   optional string log_name = 3;
+   optional int32 default_index = 4;
+   repeated poioptionstruct items = 5;
+   optional poifilteroptionlesstipstruct search_nil_text = 6;
+   optional poifilteroptionlesstipstruct search_less_text = 7;
+}
+message shareinfo {
+   optional string share_url = 1;
+   optional string share_weibo_desc = 2;
+   optional string share_desc = 3;
+   optional string share_title = 4;
+   optional urlmodel share_qrcode_url = 5;
+   optional string manage_goods_url = 6;
+   optional urlmodel share_image_url = 7;
+   optional int32 bool_persist = 8;
+   optional string goods_rec_url = 9;
+   optional string share_title_myself = 10;
+   optional string share_title_other = 11;
+   optional string share_link_desc = 12;
+   optional string share_signature_url = 13;
+   optional string share_signature_desc = 14;
+   optional string share_quote = 15;
+   optional string whatsapp_desc = 16;
+   optional string share_desc_info = 17;
+}
+message relationlabeluser {
+   optional int64 uid = 1;
+   optional urlmodel avatar = 2;
+   optional string nickname = 3;
+   optional string remark_name = 4;
+   optional urlmodel avatar_larger = 5;
+   optional urlmodel avatar_thumb = 6;
+   optional int32 follow_status = 7;
+   optional string sec_uid = 8;
+}
+message suggestoneword {
+   optional string word = 1;
+   optional string wordId = 2;
+   optional string info = 3;
+}
+message challengeannouncement {
+   optional string title = 1;
+   optional string body = 2;
+}
+message avatardecoration {
+   optional int64 m7511id = 1;
+   optional string name = 2;
+   optional urlmodel source_url = 3;
+   optional int32 position_type = 4;
+   optional string dynamic_source_url = 5;
+   optional string dynamic_source_url_profile = 6;
+   optional string web_url = 7;
+   optional bool is_first_post = 8;
+   optional string config_id = 9;
+   optional string dynamic_source_url_feed = 10;
+   optional int32 btn_type = 11;
+   optional string btn_text = 12;
+   optional string atmosphere = 13;
+   optional string open_url = 14;
+   optional string prepage_url = 15;
+}
+message readingbarstruct {
+   optional string f41286id = 1;
+   optional urlmodel icon = 2;
+   optional string title = 3;
+   optional string openUrl = 4;
+   optional string webUrl = 5;
+   optional string extra = 6;
+   optional string openAppSchema = 7;
+   optional string abParam = 8;
+   optional string tag = 9;
+   optional string prefix = 10;
+   optional string fontColor = 11;
+   optional string backgroundColor = 12;
+}
+message anchor {
+   optional int32 show_type = 1;
+   optional int32 business_type = 2;
+   optional wikipediainfo wikipedia_info = 3;
+   optional anchorshoplinkstruct shop_link = 4;
+   optional anchorcommonstruct anchor_info = 5;
+   optional string anchor_id = 6;
+}
+message musicanchorstruct {
+   optional string schemaUrl = 1;
+   optional string title = 2;
+   optional string f41282id = 3;
+}
+message itemcommentegggroup {
+   repeated edithint editHintList = 1;
+   repeated itemcommenteggmaterialdata itemCommentEggs = 2;
+}
+message commerceuserinfo {
+   optional int32 star_atlas = 1;
+   optional bool show_star_atlas_cooperation = 2;
+   optional bool has_ads_entry = 3;
+   optional linkuserinfostruct link_user_info = 4;
+   optional int32 ad_influencer_type = 5;
+}
+message slidearea {
+   optional string LIZIZ = 1;
+   optional double LIZJ = 2;
+   optional int64 LIZLLL = 3;
+   optional int64 f34395LJ = 4;
+   repeated slideperiod LJFF = 5;
+}
+message nationaltasklink {
+   optional string m8202id = 1;
+   optional string title = 2;
+   optional string sub_title = 3;
+   optional urlmodel avatar_icon = 4;
+   optional string web_url = 5;
+   optional string open_url = 6;
+}
+message activitytimerange {
+   optional double start = 1;
+   optional double end = 2;
+   optional double duration = 3;
+}
+message stickerpendantstruct {
+   optional int32 stickerType = 1;
+   optional string link = 2;
+   optional string title = 3;
+   optional string stickerId = 4;
+   optional urlmodel iconUrl = 5;
+   optional string openUrl = 6;
+   optional string complianceData = 7;
+}
+message fakehorizontalstruct {
+   optional double top = 1;
+   optional double bottom = 2;
+   optional double left = 3;
+   optional double right = 4;
+   optional bool needDefaultScale = 5;
+}
+message compliancearea {
+   optional int64 LIZIZ = 1;
+   optional clickarea LIZJ = 2;
+   optional slidearea LIZLLL = 3;
+   repeated linkdata f34386LJ = 4;
+   optional doublebutton LJFF = 5;
+}
+message commerceactivitystruct {
+   optional int32 act_type = 1;
+   optional urlmodel image = 2;
+   optional string jump_web_url = 3;
+   optional string jump_open_url = 4;
+   optional string title = 5;
+   optional int64 start_time = 6;
+   optional int64 end_time = 7;
+   repeated activitytimerange time_range = 8;
+   optional urlmodel track_url_list = 9;
+   optional urlmodel click_track_url_list = 10;
+   optional string lottie = 11;
+   optional int32 material_type = 12;
+   optional int64 appear_time = 13;
+   optional string compliance_data = 14;
+   optional string config_id = 15;
+}
+message cocreatorstruct {
+   optional string uid = 1;
+   optional string secUid = 2;
+   optional string nickname = 3;
+   optional urlmodel avatarThumb = 4;
+   optional int32 roleId = 5;
+   optional string roleTitle = 6;
+   optional int32 inviteStatus = 7;
+   optional int32 index = 8;
+   optional int32 followStatus = 9;
+   optional int32 followerStatus = 10;
+   optional string extra = 11;
+}
+message awemecontrol {
+   optional bool can_forward = 1;
+   optional bool can_share = 2;
+   optional bool can_comment = 3;
+   optional bool can_show_comment = 4;
+}
+message common {
+   optional string method = 1;
+   optional int64 msg_id = 2;
+   optional int64 room_id = 3;
+   optional int64 create_time = 4;
+}
+message hittaskinfo {
+   optional int32 compeletedTaskCnt = 1;
+   optional int32 totalTaskCnt = 2;
+}
+message feedeventcardinfo {
+   optional string setting_key = 1;
+   optional string schema = 2;
+   optional string fe_data = 3;
+   optional string client_data = 4;
+   optional string extra = 5;
+}
+message interactstickerstruct {
+   optional int32 type = 1;
+   optional int32 index = 2;
+   optional poistruct poi_info = 3;
+   optional string track_info = 4;
+   optional string attr = 5;
+   optional votestruct vote_info = 6;
+   optional string text_info = 7;
+   optional mentionstruct mention_info = 8;
+   optional hashtagstruct hashtag_info = 9;
+   optional livenoticestruct live_preview_info = 10;
+   repeated textinteractionstickerstruct text_interaction = 11;
+   optional videoshareinfostruct video_share_info = 12;
+   optional grootinteractionstickerstruct groot_interaction = 13;
+   optional replytoawemestruct reply_to_aweme = 14;
+   optional taginteractionstickerstruct tag_interaction = 15;
+   optional int32 image_index = 16;
+   optional replytocommentstruct reply_to_comment = 17;
+   optional string sticker_config = 18;
+}
+message mixstatisstruct {
+   optional int64 play_vv = 1;
+   optional int64 collect_vv = 2;
+   optional int64 current_episode = 3;
+   optional int64 updated_to_episode = 4;
+   optional int64 has_updated_episode = 5;
+}
+message usershopcategory {
+   optional int64 f41292id = 1;
+   optional string name = 2;
+   optional int64 count = 3;
+}
+message matchedpgcsoundinfo {
+   optional int64 m7671id = 1;
+   optional string author = 2;
+   optional string title = 3;
+   optional string mixed_title = 4;
+   optional string mixed_author = 5;
+}
+message musicartiststruct {
+   optional string uid = 1;
+   optional string artistName = 2;
+}
+message dislikedynamicreasoninfo {
+   optional string buttonType = 1;
+   optional string text = 2;
+   optional urlmodel iconUrl = 3;
+   optional string clientAnchorExtra = 4;
+   optional string serverAnchorExtra = 5;
+}
+message captioninfo {
+   optional string keyword = 1;
+   optional string link = 2;
+   optional string extra = 3;
+}
+message lynxrawdatastruct {
+   optional string refer = 1;
+   optional string webTitle = 2;
+   optional int32 templateType = 3;
+   optional string openUrl = 4;
+   optional lynxbuttonstruct buttonInfo = 5;
+   optional string webUrl = 6;
+}
+message video {
+   optional urlmodel play_addr = 1;
+   optional urlmodel cover = 2;
+   optional int32 height = 3;
+   optional int32 width = 4;
+   optional urlmodel dynamic_cover = 5;
+   optional urlmodel origin_cover = 6;
+   optional string ratio = 7;
+   optional urlmodel download_addr = 8;
+   optional bool has_watermark = 9;
+   optional urlmodel play_addr_lowbr = 10;
+   repeated bitrate bit_rate = 11;
+   optional urlmodel new_download_addr = 12;
+   optional int32 duration = 13;
+   optional urlmodel download_suffix_logo_addr = 14;
+   optional bool has_download_suffix_logo_addr = 15;
+   optional urlmodel play_addr_265 = 16;
+   optional int32 is_h265 = 17;
+   optional urlmodel play_addr_h264 = 18;
+   optional urlmodel ui_alike_download_addr = 19;
+   optional urlmodel caption_download_addr = 20;
+   optional int64 cdn_url_expired = 21;
+   optional int32 is_long_video = 22;
+   optional string video_model = 23;
+   optional bool need_set_token = 24;
+   optional string misc_download_addrs = 25;
+   optional playtokenauth token_auth = 26;
+   optional urlmodel play_addr_bytevc1 = 27;
+   optional int32 is_bytevc1 = 28;
+   repeated bigthumb big_thumbs = 29;
+   optional string meta = 30;
+   optional urlmodel blur_cover = 31;
+   optional urlmodel AiCover = 32;
+   optional int32 is_source_HDR = 33;
+}
+message poicardstruct {
+   optional int32 is_show = 1;
+   optional string url = 2;
+}
+message showfollowbutton {
+   optional bool showButton = 1;
+   optional int32 showTag = 2;
+}
+message url {
+   optional string LIZIZ = 1;
+}
+message quickshopinfo {
+   optional string quick_shop_url = 1;
+   optional string quick_shop_name = 2;
+   optional bool with_text_entry = 3;
+   optional quickshopsecondfloorinfo second_floor_info = 4;
+}
+message feedcomponenthidectrl {
+   optional bool hideAnchor = 1;
+   optional bool hideMix = 2;
+   optional bool hideHotspot = 3;
+   optional bool hideToutiao = 4;
+   optional bool hideXigua = 5;
+   optional bool hideVs = 6;
+   optional bool hideSearch = 7;
+   optional bool hideRelateRec = 8;
+}
+message searchpreventsuicide {
+   optional string phone = 1;
+   optional string url = 2;
+   optional string agent = 3;
+}
+message newfacestickerstruct {
+   optional string f41284id = 1;
+   optional string name = 2;
+   repeated string children = 3;
+   optional urlmodel iconUrl = 4;
+   optional string ownerId = 5;
+   optional string ownerNickname = 6;
+   optional int32 userCount = 7;
+   optional string desc = 8;
+   optional string effectId = 9;
+   optional shareinfo shareInfo = 10;
+   optional bool isFavorite = 11;
+   optional commercestickerstruct commerceSticker = 12;
+   repeated string tags = 13;
+   optional urlmodel avatarThumb = 14;
+   optional urlmodel avatarMedium = 15;
+   optional urlmodel avatarLarge = 16;
+   optional int64 vvCount = 17;
+   optional string extra = 18;
+   optional string secUid = 19;
+}
+message relatedmusicanchorstruct {
+   optional string type = 1;
+   optional string schemaUrl = 2;
+   optional urlmodel imageUrl = 3;
+   optional int64 priority = 4;
+}
+message chorusstruct {
+   optional int64 startMs = 1;
+   optional int64 durationMs = 2;
+}
+message quickshopsecondfloorinfo {
+   optional string process_text = 1;
+   optional string enter_text = 2;
+   optional string trans_bg_text = 3;
+}
+message musicimagebeatsstruct {
+   optional urlmodel musicImageBeatsUrl = 1;
+   optional string musicImageBeatsRaw = 2;
+}
+message itemproductrelatedinfostruct {
+   optional int32 type = 1;
+   optional string rawData = 2;
+}
+message shakesensitivity {
+   optional schedule LIZIZ = 1;
+   optional int64 LIZJ = 2;
+}
+message circletipstruct {
+   optional string f41272id = 1;
+   optional string title = 2;
+   optional int32 userRole = 3;
+   optional int32 contentType = 4;
+   optional string commonSchema = 5;
+   optional string text = 6;
+   optional string schemaType = 7;
+}
+message cfidstruct {
+   optional string f41268id = 1;
+   optional int32 offset = 2;
+   optional int32 picCount = 3;
+}
+message fansstruct {
+   optional string fans_name = 1;
+   optional int32 fans_level = 2;
+   optional bool is_fan = 3;
+   optional bool light_up = 4;
+}
+message storygroupstruct {
+   repeated storystruct story_list = 1;
+   optional int32 offset = 2;
+   optional int32 total = 3;
+   optional int64 min_cursor = 4;
+   optional int64 max_cursor = 5;
+   optional string folder_id = 6;
+   optional int64 head_cursor = 7;
+   optional int64 tail_cursor = 8;
+   optional bool need_normal = 9;
+   optional string has_insert_id = 10;
+   optional int32 is_ttl_story = 11;
+   optional string has_insert_create_time = 12;
+   repeated storyidstruct story_id_list = 13;
+}
+message guidebtnstruct {
+   optional string config = 1;
+   repeated btnpropertystruct buttons = 2;
+}
+message nearbytradingdecisioninfo {
+   optional string firstText = 1;
+   optional string firstTextDarkColor = 2;
+   optional string firstTextDarkBackgroundColor = 3;
+   optional string firstTextLightColor = 4;
+   optional string firstTextLightBackgroundColor = 5;
+   optional string secondText = 6;
+   optional string thirdText = 7;
+}
+message familiaractivitystruct {
+   optional string activityId = 1;
+   optional bool showActivityBtn = 2;
+   optional string schemaUrl = 3;
+   optional string followText = 4;
+   optional string followedText = 5;
+   optional int64 endTime = 6;
+   optional string followedToast = 7;
+}
+message feedcommentconfigstruct {
+   optional string inputConfigText = 1;
+}
+message replytoawemestruct {
+   optional string aweme_id = 1;
+   optional string desc = 2;
+   optional string author_nickname = 3;
+   optional urlmodel cover = 4;
+   optional string sec_user_id = 5;
+   optional string alias_comment_id = 6;
+   optional int32 aweme_type = 7;
+   optional bool is_available = 8;
+   optional urlmodel author_avatar = 13;
+   optional int32 type = 14;
+}
+message questionnairestruct {
+   optional string taskId = 1;
+   optional bool isExpired = 2;
+   optional string taskSetting = 3;
+   optional bool isPopped = 4;
+   optional string schema = 5;
+   optional string feData = 6;
+   optional string version = 7;
+   optional int32 style = 8;
+   optional string extra = 9;
+   optional string backgroundUrl = 10;
+   optional int32 popUpMinProgress = 11;
+   optional int32 popUpMaxProgress = 12;
+}
+message commercestickerstruct {
+   optional string f41274id = 1;
+   optional string adOwnerId = 2;
+   optional string adOwnerName = 3;
+   optional string detailDesc = 4;
+   optional string detailLetters = 5;
+   optional string detailOpenUrl = 6;
+   optional string detailWebUrl = 7;
+   optional string detailWebUrlTitle = 8;
+   optional string screenDesc = 9;
+   optional bool screenSwitch = 10;
+   optional urlmodel publishIconUrl = 11;
+   optional string publishLetters = 12;
+   optional string publishOpenUrl = 13;
+   optional string publishWebUrl = 14;
+   optional string publishWebUrlTitle = 15;
+   optional string musicId = 16;
+   optional string challengeId = 17;
+   optional urlmodel screenIcon = 18;
+   optional int64 expireTime = 19;
+   optional commercestickerunlockstruct unlockInfo = 20;
+}
+message billboardweeklyinfo {
+   optional string uid = 1;
+   optional int32 edition_no = 2;
+   optional int64 start_time = 3;
+   optional int64 end_time = 4;
+}
+message videoinfo {
+   optional string LIZIZ = 1;
+   optional int64 LIZJ = 2;
+   repeated string LIZLLL = 3;
+   optional string f34398LJ = 4;
+   repeated string LJFF = 5;
+   repeated string LJI = 6;
+   repeated string LJII = 7;
+   optional bool LJIIIIZZ = 8;
+   optional string LJIIIZ = 9;
+   optional int64 LJIIJ = 10;
+   optional int64 LJIIJJI = 11;
+}
+message uservirtualemotionstruct {
+   optional string text = 1;
+   optional urlmodel icon = 2;
+}
+message itemlikeeggdata {
+   optional string material_url = 1;
+   optional string file_type = 2;
+}
+message vsepisodestruct {
+   optional string raw_data = 1;
+}
+message nativesiteconfig {
+   optional string LIZIZ = 1;
+   optional string LIZJ = 2;
+   optional string LIZLLL = 3;
+   optional int32 f34390LJ = 4;
+   optional string LJFF = 5;
+   optional bool LJI = 6;
+   optional string LJII = 7;
+   repeated string LJIIIIZZ = 8;
+   repeated string LJIIIZ = 9;
+   optional string LJIIJ = 10;
+   optional string LJIIJJI = 11;
+   optional string LJIIL = 12;
+}
+message poibizstruct {
+   optional poidoudiscountstruct dou_discount_info = 1;
+   optional bool show_want_to_go_button = 2;
+   optional poiawemetagratestruct tag_rate_info = 9;
+   optional bool show_poi_collect_button = 10;
+   optional string show_poi_collect_button_rule_json = 11;
+}
+message nearbybubblestruct {
+   optional string nearby_tab_bubble_text = 1;
+   optional string nearby_tab_bubble_message = 2;
+   optional string nearby_diamond_message = 3;
+   optional int32 nearby_tab_bubble_type = 4;
+   repeated int32 life_bubble_show_condition = 5;
+}
+message awemehybridlabelmodel {
+   optional string background_color = 1;
+   optional string text = 2;
+   optional string text_color = 3;
+   optional urlmodel image = 4;
+   optional string ref_url = 5;
+}
+message searchnilinfo {
+   optional string search_nil_type = 1;
+   optional string is_load_more = 2;
+   optional string search_nil_item = 3;
+   optional int32 text_type = 4;
+}
+message topsearchinfo {
+   optional imageitem LIZIZ = 1;
+   optional string LIZJ = 2;
+}
+message knowledgebar {
+   optional string content = 1;
+   optional string knowledgeSchema = 2;
+   optional string extra = 3;
+}
+message mixstatusstruct {
+   optional int32 status = 1;
+   optional int32 is_collected = 2;
+}
+message splashresponse {
+   optional splashpreloaddata LIZIZ = 1;
+   optional int64 LIZJ = 2;
+   optional string LIZLLL = 3;
+}
+
+message question {
+   optional string questionKey = 1;
+   optional string questionText = 2;
+   optional int64 type = 3;
+   repeated option options = 4;
+   optional int64 questionId = 5;
+}
+message ancestorinfostruct {
+   optional int32 productId = 1;
+   optional int64 gid = 2;
+   optional int64 uid = 3;
+}
+message standardbarinfostruct {
+   optional string f41290id = 1;
+   optional string title = 2;
+   optional string text = 3;
+   optional int32 bizScene = 4;
+   optional int32 appId = 5;
+   optional int32 relationType = 6;
+   optional int64 itemId = 7;
+   optional int32 standardBarId = 8;
+   optional urlmodel iconUrl = 9;
+   optional string appletSchema = 10;
+   optional string jumpConfirmTitle = 11;
+   optional string appSchema = 12;
+   optional string extra = 13;
+}
+message anchorstyleinfo {
+   optional string defaultIcon = 1;
+   optional string sceneIcon = 2;
+   optional string extra = 3;
+}
+message recommendtemplatestruct {
+   optional int32 templateId = 1;
+   optional string template = 2;
+   repeated string valueList = 3;
+}
+message skipinfo {
+   optional string LIZIZ = 1;
+   optional int32 LIZJ = 2;
+   optional int32 LIZLLL = 3;
+   optional string f34394LJ = 4;
+   optional string LJFF = 5;
+   optional string LJI = 6;
+   optional int32 LJII = 7;
+   optional int32 LJIIIIZZ = 8;
+   optional int32 LJIIIZ = 9;
+   optional string LJIIJ = 10;
+   optional string LJIIJJI = 11;
+   optional double LJIIL = 12;
+   optional int32 LJIILIIL = 13;
+   optional int32 LJIILJJIL = 14;
+   optional int32 LJIILL = 15;
+}
+message userprofileinitinfo {
+   optional double head_model_score = 1;
+}
+message promotionstruct {
+   optional string promotionId = 1;
+   optional string gid = 2;
+   optional string title = 3;
+   optional urlmodel image = 4;
+   optional int64 price = 5;
+   optional int64 marketPrice = 6;
+   optional int64 cosFee = 7;
+   optional string url = 8;
+   optional int64 itemType = 9;
+   optional int64 sales = 10;
+   optional string extra = 11;
+   optional bool favorited = 12;
+   optional string lastAwemeId = 13;
+   optional string elasticTitle = 14;
+   optional string elasticIntroduction = 15;
+   repeated urlmodel elasticImg = 16;
+   repeated string label = 17;
+   optional promotionvisitor visitor = 18;
+   optional string h5Url = 19;
+   repeated urlmodel imgs = 23;
+   optional int32 promotionSource = 24;
+   optional int32 elasticType = 25;
+   optional string titlePrefix = 26;
+   optional int32 views = 27;
+   optional int32 clicks = 28;
+   optional int32 rank = 29;
+   optional string rankUrl = 30;
+   optional string traceAuthorId = 31;
+   optional string traceAwemeId = 32;
+   optional double cosRadio = 20;
+   optional string logo = 21;
+   optional string source = 22;
+   optional urlmodel brandIcon = 33;
+   optional string smallAppUrl = 34;
+   repeated usershopcategory userShopCategories = 35;
+}
+message globaldoodleconfig {
+   optional string keyword = 1;
+   repeated poiclassfilteroptionstruct filter_settings = 2;
+   repeated poiclassfilteroptionstruct filter_search_text = 3;
+   optional bool show_feedback_entrance = 4;
+   optional string feedback_entrance_title = 5;
+   optional string feedback_entrance_subtitle = 6;
+   repeated tabfeedmodel dynamic_tab_info = 7;
+   optional string home_text = 8;
+   optional int32 jump_general = 9;
+   optional int32 jump_recommendation = 10;
+   optional feedback feedback = 11;
+   optional feedbackentranceintentinfo feedback_entrance_intent_info = 12;
+   optional gradientbgdata gradient_bg = 13;
+   optional bool hidden_filter = 14;
+   optional string user_personality = 15;
+   optional searchuserguide user_guide = 16;
+   optional int32 hide_load_more = 17;
+   optional floatingbgcolor floating_bg_color = 18;
+   optional backgroundimage background_image = 19;
+   optional backgroundimage full_screen_bg_image = 20;
+   optional bool refresh_has_new_content = 21;
+   optional int32 display_music_anchor = 22;
+   optional bool isNeedFloating = 23;
+   optional bool hidden_tab_line = 24;
+   optional backgroundimage full_screen_bg_image_douyin_vs_v2 = 25;
+}
+message aweme {
+   optional string aweme_id = 1;
+   optional string desc = 2;
+   optional int64 create_time = 3;
+   optional user author = 4;
+   optional music music = 5;
+   repeated challenge cha_list = 6;
+   optional video video = 7;
+   optional string share_url = 8;
+   optional int32 user_digged = 9;
+   optional awemestatistics statistics = 10;
+   optional awemestatus status = 11;
+   optional string extra = 12;
+   optional int32 rate = 13;
+   repeated textextrastruct text_extra = 14;
+   optional urlmodel label_large = 15;
+   optional urlmodel label_thumb = 16;
+   optional int32 is_top = 17;
+   optional urlmodel label_top = 18;
+   optional shareinfo share_info = 19;
+   optional urlmodel label_origin_author = 20;
+   optional string distance = 21;
+   optional urlmodel label_music_starter = 22;
+   optional urlmodel label_private = 23;
+   repeated awemelabelmodel video_labels = 24;
+   optional bool is_vr = 25;
+   optional string landing_page = 26;
+   optional bool is_ads = 27;
+   optional poistruct poi_info = 28;
+   optional int32 duration = 29;
+   optional int32 aweme_type = 30;
+   optional awemegdadstruct gd_ad = 31;
+   optional relationdynamiclabel relation_label = 32;
+   optional redpacketstruct red_packet = 33;
+   optional bool is_fantasy = 34;
+   optional bool cmt_swt = 35;
+   repeated imageinfo image_infos = 36;
+   optional awemeriskmodel risk_infos = 37;
+   optional bool is_relieve = 38;
+   optional urlmodel label_friend = 39;
+   optional string sort_label = 40;
+   repeated position position = 41;
+   repeated position uniqid_position = 42;
+   repeated commentstruct comment_list = 43;
+   optional int64 author_user_id = 44;
+   optional int32 bodydance_score = 45;
+   repeated string geofencing = 46;
+   optional int32 is_hash_tag = 47;
+   optional bool is_pgcshow = 48;
+   optional string region = 49;
+   repeated awemetextlabelmodel video_text = 50;
+   optional int32 vr_type = 51;
+   optional specialsticker sp_sticker = 52;
+   optional string ad_schedule = 53;
+   optional int32 collect_stat = 54;
+   repeated awemetextlabelmodel label_top_text = 55;
+   repeated promotionstruct promotions = 56;
+   optional string stickers = 57;
+   optional aweme forward_item = 58;
+   optional string forward_comment_id = 59;
+   optional string segment_longitudes = 60;
+   optional string segment_latitudes = 61;
+   optional string forward_item_id = 62;
+   optional string group_id = 63;
+   optional string pre_forward_id = 64;
+   optional bool prevent_download = 65;
+   repeated position nickname_position = 66;
+   repeated position challenge_position = 67;
+   optional int32 item_comment_settings = 68;
+   optional descendantsmodel descendants = 69;
+   optional string raw_ad_data = 70;
+   optional gameinfo game_info = 71;
+   optional microappinfo micro_app_info = 72;
+   optional bool with_promotional_music = 73;
+   optional string link_ad_data = 74;
+   optional xiguataskstruct xigua_task = 75;
+   optional commerceactivitystruct gesture_red_packet = 76;
+   optional commerceactivitystruct activity_pendant = 77;
+   optional newfacestickerstruct sticker_detail = 78;
+   repeated longvideo long_video = 79;
+   optional int32 item_duet = 80;
+   optional int32 item_react = 81;
+   optional hotsearchinfo hot_info = 82;
+   optional int64 star_atlas_order_id = 83;
+   optional string label_music_starter_text = 84;
+   optional bool without_watermark = 85;
+   optional preload preload = 86;
+   optional string star_recommend_tag = 87;
+   optional string ad_order_id = 88;
+   optional string open_platform_name = 89;
+   optional awemestaratlas star_atlas_info = 90;
+   optional string desc_language = 91;
+   optional floatingcardinfo floating_card_content = 92;
+   repeated interactstickerstruct interaction_stickers = 93;
+   optional openplatformstruct open_platform_info = 94;
+   optional int32 ad_link_type = 95;
+   optional int32 take_down_reason = 96;
+   optional string take_down_desc = 97;
+   optional string simple_promotions = 98;
+   optional string misc_info = 99;
+   optional promotionotherinfo promotion_other_info = 100;
+   repeated commerceconfigdata commerce_config_data = 102;
+   optional commercestickerinfo commerce_sticker_info = 103;
+   optional bool enable_top_view = 104;
+   optional int32 distribute_type = 105;
+   optional videocontrol video_control = 106;
+   optional int32 is_effect_designer = 107;
+   optional int32 ad_aweme_source = 108;
+   optional awemecontrol aweme_control = 109;
+   optional bool has_vs_entry = 110;
+   optional anchor anchor = 111;
+   optional relationlabelnew feed_relation_label = 112;
+   optional mixstruct mix_info = 113;
+   optional string simple_shop_seeding = 114;
+   optional hotliststruct hot_list = 115;
+   optional awemecommercestruct commerce_info = 116;
+   optional awemenationaltask national_task_info = 117;
+   optional bannertip banner_tip = 118;
+   optional awemeaclshare acl_info = 119;
+   optional anchorinfo anchor_info = 121;
+   optional liveawesomesplashinfo cny_info = 123;
+   optional bool is_familiar = 124;
+   optional roomfeedcellstruct cell_room = 126;
+   optional string live_reason = 127;
+   optional string video_feed_tag = 128;
+   optional videomaskinfo mask_info = 129;
+   optional linkmatch link_match = 130;
+   optional videoreplystruct video_reply_info = 131;
+   repeated anchorcommonstruct anchors = 132;
+   repeated awemehybridlabelmodel hybrid_label = 133;
+   optional awemerelationrecommendmodel relation_recommend_info = 134;
+   optional userprofileinitinfo user_profile_init_info = 135;
+   optional bool with_survey = 136;
+   optional hotsearchinfo dou_discount_mix_info = 137;
+   optional awemeaclshare aweme_acl = 138;
+   optional awemeactivity activity = 139;
+   optional storygroupstruct story_group = 140;
+   optional int32 is_story = 141;
+   optional visionsearch vs_entry = 142;
+   optional int32 item_stitch = 143;
+   optional cloudgamestruct cloud_game = 144;
+   optional sharetask share_task = 145;
+   optional rapidredpacketstruct rapid_red_packet = 146;
+   optional int32 story_ttl = 148;
+   optional bool is_horizontal = 149;
+   repeated string geofencing_regions = 150;
+   optional string city = 151;
+   optional int32 follow_up_type = 152;
+   optional string live_type = 153;
+   optional bool hide_mix_entry = 154;
+   optional int32 media_simid = 155;
+   optional int64 media_similar_id = 156;
+   optional int32 is_text_mode = 157;
+   optional string story_ttl_label = 158;
+   optional bool is_first_video = 159;
+   optional hotsearchentity cell_hotsearch_data = 160;
+   optional nearbycircletipstruct nearby_circle_tip_info = 161;
+   optional int32 nearby_level = 162;
+   optional tcbonus bonus = 163;
+   optional visualsearch visual_search = 164;
+   optional tcvideoredpacketstruct video_red_packet_info = 165;
+   optional int32 guide_btn_type = 166;
+   optional bool is_in_scope = 167;
+   optional tc21interactivevideostruct tc21_light_up = 168;
+   optional readingbarstruct toutiao_reading_bar = 169;
+   optional videosafetycontrol video_safety_check_control = 170;
+   optional vsepisodestruct variety_video = 171;
+   optional vsbarstruct vs_bar = 172;
+   optional bool is_creator = 173;
+   optional xiguarelatedbarstruct xigua_related_bar = 174;
+   optional ancestorinfostruct ancestor_info = 175;
+   optional familiaractivitystruct familiar_activity = 176;
+   optional effectguidestruct effect_guide = 179;
+   repeated imageurlstruct images = 180;
+   optional poibizstruct poi_biz = 181;
+   optional bool need_mark_friend = 182;
+   optional questionnairestruct questionnaire = 183;
+   optional int32 horizontal_type = 184;
+   optional fakehorizontalstruct fake_horizontal_info = 185;
+   optional string duet_origin_item_id = 186;
+   optional string guide_btn_text = 187;
+   optional bool is_karaoke = 188;
+   optional relatedsearchbarstruct related_search_bar = 189;
+   optional awemelitestruct lite_info = 190;
+   optional impressionstruct impression_data = 191;
+   optional string guide_btn_schema = 193;
+   optional string guide_btn_config = 194;
+   optional bool is_force_placed = 195;
+   optional seriesstructv2 series_info = 196;
+   optional int32 story_source_type = 197;
+   optional string share_from = 198;
+   optional int32 item_share = 199;
+   optional circletipstruct circle_info = 200;
+   optional int32 is_meteor = 201;
+   optional int32 has_viewed = 202;
+   optional grootbottombarinfo groot_bottom_bar_info = 203;
+   optional recommendtemplatestruct recommend_template = 204;
+   optional showfollowbutton show_follow_button = 205;
+   optional string geohash = 206;
+   optional string digg_btn_type = 207;
+   optional string quick_comment_type = 208;
+   optional string libfinsert_task_id = 209;
+   optional poifootprintstruct poi_footprint_info = 210;
+   optional int32 vs_distribute_type = 211;
+   optional string story_section_id = 212;
+   optional feeddiversitysurvey feed_diversity_survey = 213;
+   optional bool show_social_tag_arraw = 215;
+   optional relatedrecom related_recom = 216;
+   optional guidebtnstruct guide_btn = 217;
+   optional suggestwords suggest_words = 218;
+   repeated socialtagstruct social_tag_list = 219;
+   optional string item_pitaya_param = 220;
+   optional aweme shared_item = 221;
+   optional string boost_history_id = 222;
+   optional aweme duet_origin_item = 223;
+   optional bool duet_aggregate_in_music_tab = 224;
+   optional bool is_duet_sing = 225;
+   optional string fullscreen_strategy = 226;
+   optional commentpermissioninfo comment_permission_info = 227;
+   optional string web_raw_data = 228;
+   optional int32 no_selected_music = 229;
+   optional string addic_info = 230;
+   repeated imageurlstruct original_images = 231;
+   optional livefeedbackcard live_feedback_card = 232;
+   repeated standardbarinfostruct standard_bar_info_list = 233;
+   optional int32 is_multi_content = 234;
+   optional int32 category_da = 235;
+   optional nearbybubblestruct nearby_tab_bubble = 236;
+   optional bool show_music_collect_button = 237;
+   optional feedeventcardinfo feed_event_card_info = 238;
+   optional string extra_info = 239;
+   repeated imagegearedstruct img_bitrate = 240;
+   optional string music_display_mapping_title = 241;
+   optional admireauth admire_auth = 242;
+   optional string press_panel_info = 243;
+   optional relevantlive relevant_live = 244;
+   optional int32 external_video_type = 245;
+   optional digglottie digg_lottie = 246;
+   optional relatedmusicanchorstruct related_music_anchor = 247;
+   optional imagealbummusicinfo image_album_music_info = 248;
+   repeated videotagstruct video_tag = 249;
+   optional int32 recall_type = 250;
+   optional knowledgebar knowledge_bar = 251;
+   optional readingbarstruct comment_toutiao_reading_bar = 252;
+   optional itemproductrelatedinfostruct item_product_related_info = 253;
+   optional hotcommentstruct hot_comment = 254;
+   optional xiguarelatedbarstruct comment_xigua_related_bar = 256;
+   optional int32 story_ttl_minute = 257;
+   repeated chapterinfo chapter_list = 258;
+   optional bool is_study_content = 259;
+   optional fromnearbybarstruct from_nearby_bar = 260;
+   optional originalaudiostruct original_audio = 261;
+   optional int64 user_digged_emoji = 262;
+   optional feedcomponentctrl feed_component_crtl = 263;
+   optional diarystruct video_diary_info = 264;
+   optional feedcomponenthidectrl feed_component_hide_ctrl = 265;
+   optional string component_info = 266;
+   optional dislikedynamicreasonlist dislike_reason_list = 277;
+   optional videonodeinfostruct video_node_info = 278;
+   optional string ip_attribution = 279;
+   optional string xigua_extra_info = 280;
+   optional bool is_origin_text = 281;
+   optional cooperationinfostruct cooperation_info = 282;
+   optional int32 show_collect_hint = 283;
+   optional feedcommentconfigstruct feed_comment_config = 284;
+   optional recommendreasondata recommend_reason_data = 285;
+   optional bool is_image_beat = 286;
+   optional musicpromotecommentanchorstruct music_promote_comment_anchor = 287;
+   optional relatedvideostruct related_video = 288;
+   optional addicstruct addic_data = 289;
+   optional cfgroupstruct cf_group = 290;
+   optional int32 cf_item_type = 291;
+}
+message suggestwords {
+   repeated suggestword suggestWords = 1;
+}
+message periodfirstlist {
+   optional int64 LIZIZ = 1;
+   repeated schedule LIZJ = 2;
+}
+message rfansgroupinfo {
+   optional string schema = 1;
+   optional string token = 2;
+   optional string downloadUrl = 3;
+}
+message rapidredpacketstruct {
+   optional bool topRedPacket = 1;
+   optional int32 alertRedPacketSecond = 2;
+   optional bool redPacketGuide = 3;
+   optional bool welfareGuide = 4;
+   optional rapidpopwindowstruct welfareGuideInfo = 5;
+   optional int32 videoType = 6;
+   optional string popUpSource = 7;
+}
+message splashpreloaddata {
+   repeated int64 LIZIZ = 1;
+   optional int64 LIZJ = 2;
+   optional int64 LIZLLL = 3;
+   optional int64 f34397LJ = 4;
+   optional bool LJFF = 5;
+   optional int64 LJI = 6;
+   repeated splashitem LJII = 7;
+   repeated string LJIIIIZZ = 8;
+   optional string LJIIIZ = 9;
+   optional int64 LJIIJ = 10;
+   optional int64 LJIIJJI = 11;
+   repeated periodfirstlist LJIIL = 12;
+   optional int32 LJIILIIL = 13;
+   optional bool LJIILJJIL = 14;
+   optional string LJIILL = 15;
+}
+message videoreplystruct {
+   optional int64 aweme_id = 1;
+   optional int64 comment_id = 2;
+   optional int64 alias_comment_id = 3;
+   optional int32 reply_type = 4;
+   optional int64 reply_user_id = 5;
+   optional int32 reply_aweme_version = 6;
+}
+message aclcommonshare {
+   optional int32 code = 1;
+   optional int32 show_type = 2;
+   optional string toast_msg = 3;
+   optional string extra = 4;
+}
+message promotionotherinfo {
+   optional string recall_reason = 1;
+   optional int32 card_predict_duration = 2;
+   optional bool order_share_recommend = 3;
+}
+message feedback {
+   optional string text_first = 1;
+   optional string text_second = 2;
+   optional string url = 3;
+}
+message followerdetail {
+   optional string name = 1;
+   optional string icon = 2;
+   optional int32 fans_count = 3;
+   optional string open_url = 4;
+   optional string apple_id = 5;
+   optional string download_url = 6;
+   optional string package_name = 7;
+   optional string app_name = 8;
+}
+message floatingbgcolor {
+   optional int32 offset = 1;
+   optional int32 gradient_height = 2;
+   optional string dark_color = 3;
+   optional string light_color = 4;
+   optional int32 screen_width = 5;
+}
+message poifrontendtypestruct {
+   optional string code = 1;
+   optional string name = 2;
+   optional string desc = 3;
+}
+message awemetextlabelmodel {
+   optional string text = 1;
+   optional string color = 2;
+   optional string color_text = 3;
+   optional int32 type = 4;
+}
+message musicpromotelinkinfostruct {
+   optional string openUrl = 1;
+}
+message poidoudiscountstruct {
+   optional string dou_discount_label = 1;
+   optional hotsearchinfo dou_discount_mix_info = 2;
+   optional poidoudiscountrankinfostruct dou_discount_rank_info = 3;
+}
+message videosafetycontrol {
+   optional bool needPlayCheck = 1;
+   optional int32 potentialRiskLevel = 2;
+}
+message smartphone {
+   optional string phone_number = 1;
+   optional string phone_id = 2;
+   optional string encrypt_key = 3;
+}
+message hotsearchinfo {
+   optional string sentence = 1;
+   optional string challenge_id = 2;
+   optional string search_word = 3;
+   optional int64 value = 4;
+   optional int32 vb_rank = 5;
+   optional int64 vb_rank_value = 6;
+   optional int32 rank = 7;
+   optional string group_id = 8;
+   optional int32 label = 9;
+   optional int32 pattern_type = 10;
+}
+message seriesstructv2 {
+   optional string series_id = 1;
+   optional string series_name = 2;
+   optional urlmodel cover_url = 3;
+   optional urlmodel icon_url = 4;
+   optional seriesstatusstruct status = 5;
+   optional seriesstatsstruct stats = 6;
+   optional string desc = 7;
+   optional user author = 8;
+   optional string extra = 9;
+   optional shareinfo share_info = 10;
+}
+message poidoudiscountrankinfostruct {
+   optional string rankCode = 1;
+   optional string rankName = 2;
+   optional urlmodel categoryIcon = 3;
+   optional string categoryName = 4;
+   optional int32 itemCount = 5;
+   optional int64 vvTotal = 6;
+}
+message liveawesomesplashinfo {
+   optional int64 start_time = 1;
+   optional int64 end_time = 2;
+   optional bool topview_valid = 3;
+   optional int32 feed_show_time = 4;
+   optional string live_info = 5;
+}
+message challenge {
+   optional string cid = 1;
+   optional string cha_name = 2;
+   optional string desc = 3;
+   optional string schema = 4;
+   optional user author = 5;
+   optional int32 user_count = 6;
+   optional shareinfo share_info = 7;
+   repeated music connect_music = 8;
+   optional int32 type = 9;
+   optional string use_count_desc = 10;
+   optional int32 sub_type = 11;
+   optional urlmodel background_image_url = 12;
+   optional string sticker_id = 13;
+   optional string link_text = 14;
+   optional string link_action = 15;
+   optional bool is_pgcshow = 16;
+   optional int32 collect_stat = 17;
+   optional urlmodel cover_item = 18;
+   optional int32 is_challenge = 19;
+   optional int64 view_count = 20;
+   optional challengedisclaimer disclaimer = 21;
+   optional bool allow_upload_cover = 22;
+   optional bool is_commerce = 23;
+   optional categorycoverstruct category_cover_info = 24;
+   optional string hashtag_profile = 25;
+   optional string cover_photo = 26;
+   optional int32 is_hot_search = 27;
+   optional int32 link_type = 28;
+   optional challengeannouncement announcement_info = 29;
+   optional int32 content_type = 30;
+   optional int32 module_type = 31;
+   optional string profile_tag = 32;
+   repeated string cha_attrs = 33;
+   optional challengetransform button = 34;
+}
+message promotionicon {
+   optional string LIZIZ = 1;
+   optional int64 LIZJ = 2;
+   optional int64 LIZLLL = 3;
+   repeated int32 f34391LJ = 4;
+   optional string LJFF = 5;
+   optional int64 LJI = 6;
+   optional string LJII = 7;
+   optional string LJIIIIZZ = 8;
+   optional int64 LJIIIZ = 9;
+   optional topsearchinfo LJIIJ = 10;
+}
+message originalmusician {
+   optional int32 music_count = 1;
+   optional int32 music_used_count = 2;
+   optional urlmodel music_qrcode_url = 3;
+   optional urlmodel music_cover_url = 4;
+   optional int32 digg_count = 5;
+}
+message awemegdadstruct {
+   optional int64 adId = 1;
+   optional int64 cptSeq = 2;
+   optional string reqId = 3;
+   optional int64 rit = 4;
+   optional int32 adPrice = 5;
+   optional int64 creativeId = 6;
+   optional string title = 7;
+   optional string source = 8;
+   optional string openUrl = 9;
+   optional string webUrl = 10;
+   optional string webTitle = 11;
+   optional urlmodel trackUrlList = 12;
+   optional urlmodel clickTrackUrlList = 13;
+   optional bool isPreview = 14;
+   optional urlmodel playTrackUrlList = 15;
+   optional urlmodel playoverTrackUrlList = 16;
+   optional int32 effectivePlayTime = 17;
+   optional urlmodel effectivePlayTrackUrlList = 18;
+   optional int64 groupId = 19;
+   optional int32 videoTranspose = 20;
+}
+message activitystruct {
+   optional int32 useMusicCount = 1;
+   optional int32 diggCount = 2;
+   optional urlmodel musicCoverUrl = 3;
+   optional urlmodel musicQrcodeUrl = 4;
+}
+message relatedvideostruct {
+   optional bool showBar = 1;
+   optional string barName = 2;
+   optional string itemId = 3;
+   optional string awemeId = 4;
+   optional string source = 5;
+   optional int32 jumpStyle = 6;
+   optional int32 type = 7;
+}
+message address {
+   optional string province = 1;
+   optional string city = 2;
+   optional string district = 3;
+   optional string address = 4;
+   optional string simple_addr = 5;
+   optional string city_code = 6;
+   optional string country = 7;
+   optional string country_code = 8;
+   optional string ad_code_v2 = 9;
+   optional string city_code_v2 = 10;
+}
+message anchordisplayinfo {
+   optional int64 after_play_times = 1;
+   optional int64 after_play_ms = 2;
+   repeated int32 time_slices = 3;
+   optional bool is_slide_back_display = 4;
+   optional string extra = 100;
+}
+message videocontrol {
+   optional bool allow_download = 1;
+   optional int32 share_type = 2;
+   optional int32 show_progress_bar = 3;
+   optional int32 draft_progress_bar = 4;
+   optional bool allow_duet = 5;
+   optional bool allow_react = 6;
+   optional int32 prevent_download_type = 7;
+   optional bool allow_dynamic_wallpaper = 8;
+   optional int32 timer_status = 9;
+   optional bool allow_music = 10;
+   optional bool allow_stitch = 11;
+   optional bool allow_douplus = 12;
+   optional int32 download_setting = 13;
+   optional bool allow_share = 14;
+   optional bool share_grayed = 15;
+   optional bool download_ignore_visibility = 16;
+   optional bool duet_ignore_visibility = 17;
+   optional bool share_ignore_visibility = 18;
+}
+message splashitem {
+   optional int64 LIZIZ = 1;
+   optional int64 LIZJ = 2;
+   optional string LIZLLL = 3;
+   optional string f34396LJ = 4;
+   optional string LJFF = 5;
+   optional string LJI = 6;
+   optional string LJII = 7;
+   optional string LJIIIIZZ = 8;
+   optional string LJIIIZ = 9;
+   optional string LJIIJ = 10;
+   optional string LJIIJJI = 11;
+   optional string LJIIL = 12;
+   optional int32 LJIILIIL = 13;
+   repeated string LJIILJJIL = 14;
+   repeated string LJIILL = 15;
+   optional shareinfo LJIILLIIL = 16;
+   optional imageitem LJIIZILJ = 17;
+   optional videoinfo LJIJ = 18;
+   repeated string LJIJI = 19;
+   repeated string LJIJJ = 20;
+   repeated splashitem LJIJJLI = 21;
+   optional string LJIL = 22;
+   optional int32 LJJ = 23;
+   optional int32 LJJI = 25;
+   optional int32 LJJIFFI = 26;
+   optional int32 LJJII = 27;
+   optional int32 LJJIII = 28;
+   optional int32 LJJIIJ = 29;
+   optional int64 LJJIIJZLJL = 30;
+   optional int64 LJJIIZ = 31;
+   optional double LJJIIZI = 32;
+   optional double LJJIJ = 33;
+   optional string LJJIJIIJI = 34;
+   optional string LJJIJIIJIL = 35;
+   optional int32 LJJIJIL = 36;
+   optional int32 LJJIJL = 37;
+   optional int32 LJJIJLIJ = 38;
+   optional int32 LJJIL = 39;
+   optional int32 LJJIZ = 40;
+   optional string LJJJ = 41;
+   optional string LJJJI = 42;
+   optional string LJJJIL = 43;
+   optional string LJJJJ = 44;
+   optional int64 LJJJJI = 45;
+   optional int64 LJJJJIZL = 46;
+   optional labelinfo LJJJJJ = 49;
+   optional skipinfo LJJJJJL = 50;
+   optional string LJJJJL = 51;
+   optional int32 LJJJJLI = 52;
+   optional int64 LJJJJLL = 53;
+   optional int32 LJJJJZ = 54;
+   optional int32 LJJJJZI = 57;
+   optional string LJJJLIIL = 58;
+   optional promotionicon LJJJLL = 61;
+   optional int32 LJJJLZIJ = 62;
+   optional int64 LJJJZ = 63;
+   optional string LJJL = 64;
+   optional string LJJLI = 65;
+   optional string LJJLIIIIJ = 67;
+   optional int32 LJJLIIIJ = 69;
+   optional int32 LJJLIIIJILLIZJL = 70;
+   optional string LJJLIIIJJI = 71;
+   optional string LJJLIIIJJIZ = 72;
+   optional shakestyleinfo LJJLIIIJL = 74;
+   optional int32 LJJLIIIJLJLI = 75;
+   optional clickarea LJJLIIIJLLLLLLLZ = 76;
+   optional int32 LJJLIIJ = 77;
+   optional addfansinfo LJJLIL = 78;
+   optional string LJJLJ = 79;
+   optional nativesiteconfig LJJLJLI = 80;
+   optional string LJJLL = 81;
+   optional string LJJZ = 82;
+   optional compliancearea LJJZZI = 83;
+}
+message diarystruct {
+   optional int32 f41276id = 1;
+   optional string name = 2;
+   optional string desc = 3;
+   optional urlmodel icon = 4;
+}
+message rapidpopwindowstruct {
+   optional string amountType = 1;
+   optional int32 amount = 2;
+   optional string topText = 3;
+   optional string middleText = 4;
+   optional string bottomText = 5;
+   optional string buttonText = 6;
+   optional string schema = 7;
+}
+message dislikedynamicreasonlist {
+   optional string title = 1;
+   repeated dislikedynamicreasoninfo reasonList = 2;
+   optional string extra = 3;
+}
+message schedule {
+   optional int64 LIZIZ = 1;
+   optional int64 LIZJ = 2;
+}
+message visionsearch {
+   optional string title = 1;
+   optional string sub_title = 2;
+   optional string text_color = 3;
+   optional urlmodel icon_url = 4;
+}
+message livefeedbackcard {
+   optional string title = 1;
+   optional int64 feedbackId = 2;
+   optional int32 feedbackType = 3;
+   repeated livefeedbackquestion question = 4;
+   optional livefeedbackcondition condition = 5;
+   optional string negativeText = 6;
+}
+message feeditemlist {
+   optional int32 status_code = 1;
+   optional int64 min_cursor = 2;
+   optional int64 max_cursor = 3;
+   optional int32 has_more = 4;
+   repeated aweme aweme_list = 5;
+   optional string rid = 6;
+   optional int32 home_model = 7;
+   optional int32 refresh_clear = 8;
+   optional extra extra = 9;
+   optional logpbbean log_pb = 10;
+   optional string DebugInfo = 11;
+   optional hotsearchguideword guide_word = 12;
+   repeated aweme preload_ads = 13;
+   optional string status_msg = 14;
+   optional int32 block_code = 15;
+   repeated aweme preload_awemes = 16;
+   optional bool enable_re_rank = 17;
+   optional bool disable_adjust_for_cache = 18;
+   optional int32 pitaya_type = 19;
+   optional string pitaya_features = 20;
+   optional bool enable_splash_show = 21;
+   optional bool enable_client_ads_strategy = 22;
+   optional int32 rec_follow_unread_cnt = 23;
+   optional string sati_param_for_pitaya = 24;
+   optional string extra_info = 25;
+}
+message challengetransform {
+   optional string text = 1;
+   optional urlmodel icon = 2;
+   optional string action = 3;
+}
+message poiawemetagratestruct {
+   optional string rate_id = 1;
+   optional poitagrategradestruct rate_grade = 3;
+}
+message preload {
+   optional int32 comment = 1;
+   optional int32 profile = 2;
+   optional double comment_pro = 3;
+   optional double profile_pro = 4;
+   optional double comment_thres = 5;
+   optional double profile_thres = 6;
+   optional double comment_median_time = 7;
+   optional double profile_median_time = 8;
+   optional int32 model_v2 = 9;
+}
+message douplustoaststruct {
+   optional int32 f41278id = 1;
+   optional string toast = 2;
+}
+message songstruct {
+   optional int64 f41288id = 1;
+   optional string idStr = 2;
+   optional string title = 3;
+   repeated musicartiststruct artists = 4;
+   optional chorusstruct chorus = 5;
+}
+message poifilteroptionlesstipstruct {
+   optional string info = 1;
+   optional string jump_text = 2;
+}
+message longvideo {
+   optional video video = 1;
+   optional int32 long_video_type = 2;
+   optional double trailer_start_time = 3;
+   optional videocontrol video_control = 4;
+}
+message staratlasliveinfoforbarstruct {
+   optional string liveDesc = 1;
+   optional string liveData = 2;
+   optional string userId = 3;
+   optional string secUid = 4;
+}
+message textcontentstruct {
+   optional string text = 1;
+   optional string color = 2;
+   optional string size = 3;
+}
+message videonodeinfostruct {
+   optional int32 playType = 1;
+   optional int64 highLight = 2;
+}
+message dynamicpatch {
+   optional int32 height = 1;
+   optional int32 origin_type = 2;
+   optional string raw_data = 3;
+   optional string schema = 4;
+}
+message anchorinfo {
+   optional int32 type = 1;
+   optional string m8208id = 2;
+   optional urlmodel icon = 3;
+   optional string title = 4;
+   optional string open_url = 5;
+   optional string web_url = 6;
+   optional string mp_url = 7;
+   optional string title_tag = 8;
+   optional anchordisplayinfo display_info = 9;
+   optional string content = 10;
+   optional anchorstyleinfo style_info = 11;
+   optional string extra = 99;
+   optional string log_extra = 100;
+}
+message commerceinfo {
+   optional urlmodel head_image_url = 1;
+   repeated offlineinfo offline_info_list = 2;
+   repeated challenge challenge_list = 3;
+   optional smartphone smart_phone = 4;
+   optional string quick_shop_url = 5;
+   optional string quick_shop_name = 6;
+   optional string site_id = 7;
+}
+message storyblockinfo {
+   optional bool life_story_block = 1;
+   optional bool life_story_blocked = 2;
+}
+message digglottie {
+   optional string lottieId = 1;
+   optional int32 canBomb = 2;
+}
+message hotsearchsprintstruct {
+   optional int32 sprint = 1;
+   repeated simpleuserstruct followers = 2;
+}
+message searchmusiclist {
+   optional int32 status_code = 1;
+   optional int32 has_more = 2;
+   optional int32 cursor = 3;
+   optional string m8378qc = 4;
+   optional searchadinfo ad_info = 5;
+   optional querycorrectinfo query_correct_info = 7;
+   repeated searchmusic music_info_list = 8;
+   optional extra extra = 9;
+   optional logpbbean log_pb = 10;
+   optional searchnilinfo search_nil_info = 11;
+   optional searchv2niltextstruct search_nil_text = 12;
+   optional searchpreventsuicide suicide_prevent = 13;
+   optional int32 tab_hide = 14;
+   optional globaldoodleconfig global_doodle_config = 15;
+   optional string api_debug_info = 16;
+}
+message anchorshoplinkstruct {
+   optional string keyword = 1;
+   optional string url = 2;
+}
+message querycorrectinfo {
+   optional string corrected_query = 1;
+   optional int32 correct_level = 2;
+}
+message wikipediainfo {
+   optional string keyword = 1;
+   optional string lang = 2;
+   optional string url = 3;
+}
+message suggestword {
+   repeated suggestoneword words = 1;
+   optional string scene = 2;
+   optional string iconUrl = 3;
+   optional string hintText = 4;
+   optional string extraInfo = 5;
+}
+message vpainfostruct {
+   optional bool showOptOutButton = 1;
+   optional int32 showInfoBarType = 2;
+}
+message bitrate {
+   optional string gear_name = 1;
+   optional int32 quality_type = 2;
+   optional int32 bit_rate = 3;
+   optional urlmodel play_addr = 4;
+   optional int32 is_h265 = 5;
+   optional urlmodel play_addr_265 = 6;
+   optional int32 is_bytevc1 = 7;
+   optional urlmodel play_addr_bytevc1 = 8;
+   optional string HDR_type = 9;
+   optional string HDR_bit = 10;
+   optional int64 FPS = 11;
+}
+message honorstruct {
+   optional int32 honor_level = 1;
+   optional int64 honor_score = 2;
+   optional urlmodel badge_thumb = 3;
+}
+message bonusauthor {
+   optional int64 m8195id = 1;
+   optional string name = 2;
+   optional urlmodel avatar_larger = 3;
+   optional urlmodel avatar_thumb = 4;
+   optional urlmodel avatar_medium = 5;
+}
+message edithint {
+   optional string language = 1;
+   optional string hint = 2;
+}
+message bluevbrandinfo {
+   optional int32 category_id = 1;
+   optional string category_name = 2;
+   optional int32 brand_id = 3;
+   optional string brand_name = 4;
+   optional urlmodel logo_url = 5;
+   optional int32 heat = 6;
+   optional int32 rank = 7;
+   optional int32 rank_diff = 8;
+   optional string tag_name = 9;
+}
+message usertaginteractionstickerstruct {
+   optional string userId = 1;
+   optional string userSecId = 2;
+}
+message nearbycircletipstruct {
+   optional int64 douyin_circle_id = 1;
+   optional string circle_title = 2;
+   optional string circle_copywriter = 3;
+   repeated relationlabeluser relative_users = 4;
+}
+message fromnearbybarstruct {
+   optional string f41280id = 1;
+   optional string text = 2;
+   optional urlmodel icon = 3;
+   optional string schema = 4;
+   optional int32 frequencyLimit = 5;
+   repeated namevaluepair reportValues = 6;
+   optional string extra = 100;
+}
+message playtokenauth {
+   optional string vid = 1;
+   optional string token = 2;
+   optional string auth = 3;
+   optional string tv_token = 4;
+   repeated string hosts = 5;
+}
+message vsbarstruct {
+   optional string content = 1;
+}
+message relatedrecom {
+   optional bool relatedBar = 1;
+   optional int32 barEject = 2;
+   optional string relatedText = 3;
+   optional string relatedInfo = 4;
+}
+message commentstruct {
+   optional string cid = 1;
+   optional string text = 2;
+   optional string awemeId = 3;
+   optional int64 createTime = 4;
+   optional int32 diggCount = 5;
+   optional int32 status = 6;
+   optional user user = 7;
+   optional string replyId = 8;
+   optional int32 userDigged = 9;
+   repeated commentstruct replyComment = 10;
+   repeated textextrastruct textExtra = 11;
+   optional string labelText = 12;
+   optional int32 labelType = 13;
+   optional relationdynamiclabel relationLabel = 14;
+   optional string forwardId = 15;
+   optional int64 replyCommentTotal = 16;
+   optional string replyToReplyId = 17;
+   optional string replyToUsername = 18;
+   optional string replyToUserid = 19;
+   optional bool isAuthorDigged = 20;
+}
+message videomaskinfo {
+   optional bool show_mask = 1;
+   optional int32 mask_type = 2;
+   optional int32 status = 3;
+   optional string title = 4;
+   optional string content = 5;
+   optional string cancel_mask_label = 6;
+}
+message logpbbean {
+   optional string impr_id = 2;
+}
+message webcastroomdatasynckeyvalue {
+   optional int64 version = 1;
+   optional bytes payload = 2;
+   optional int64 msgID = 3;
+   optional string bizLogID = 4;
+}
+message namevaluepair {
+   optional string name = 1;
+   optional string value = 2;
+}
+message replytocommentstruct {
+   optional int32 type = 1;
+   optional string commentText = 2;
+   optional urlmodel commentSticker = 3;
+   optional string commentAuthorNickname = 4;
+   optional urlmodel commentAuthorAvatar = 5;
+   optional urlmodel awemeCover = 6;
+   optional string awemeDesc = 7;
+   optional bool commentDeleted = 8;
+   optional int32 nativeType = 9;
+}
+message captionanchor {
+   optional string keyword = 1;
+   optional string link = 2;
+   optional urlmodel icon = 3;
+}
+message linkuserinfostruct {
+   optional int32 auth_status = 1;
+   optional int32 auth_type = 2;
+}
+message matchedsongstruct {
+   optional string m7670id = 1;
+   optional string author = 2;
+   optional string title = 3;
+   optional string h5_url = 4;
+   optional urlmodel cover_medium = 5;
+   optional string dsp_name = 6;
+   optional string source_id = 7;
+}

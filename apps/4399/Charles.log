@@ -1,0 +1,21 @@
+POST /user/box/android/v2.0/log-in.html HTTP/1.1
+pauth: 
+s-id: 
+mudid: 1019gKHg4uTKWgskOGrCe87ad
+SM-DEVICEID: 202208161102328b22a93ba49638768a7fc1b8347e6d290173572bb14c08d0
+User-Agent: 4399GameCenter/6.8.0.59(android;Pixel 2;8.1.0;1080x1794;WIFI;1791.840;upgrade)
+m-id: 40%3A4E%3A36%3A86%3AC1%3AF9
+mauthcode: 
+a-id: 2c1d7000523555f9
+e-id: 
+zxaid: A01-2otMBjE0ZOp%2BwcWBVp2%2BVuDO7XHtRgCQ
+mauth: 
+mareacode: 110000
+mdeviceId: 40:4E:36:86:C1:F9
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 197
+Host: mapi.yxhapi.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+referer=%3A&password=ytHJhV3wqmTLqeV%2BzhXB%2BA%3D%3D&deviceIdentifier=40%3A4E%3A36%3A86%3AC1%3AF9&dateline=1660714810&sign=58d2412ed2de4c857c89699460886fd7&model=Pixel%202&info=1&username=wulalala
