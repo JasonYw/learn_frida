@@ -789,3 +789,37 @@ function change_classloader(){
 
     })
 }
+
+
+
+//设置配置文件，类似白名单，对指定类进行主动调用，或者避开指定类的调用 利用frida主动调用FART的函数，对指定类进行脱壳 frida hook loadClassAndInvoke
+//使用frida与fart配合脱壳时 要注释掉 ActivityThread.java  handleBindApplication 方法中开启线程的过程 就是要关闭部分脱壳功能
+function frida_and_fart0(){
+    Java.perform(function () {
+        Java.choose("dalvik.system.DexClassLoader", {
+            onMatch: function (instanse) {
+                console.log(instanse);
+                var activityThread = Java.use("android.app.ActivityThread");
+                activityThread.xiaojianbangWithClassloader(instanse);
+            }, onComplete: function () {
+        
+            }
+        });
+    });
+}
+
+//利用frida枚举所有ClassLoader，再主动调用FART的函数进行脱壳 Exexute脱壳点对于动态加载的dex也可以脱壳，除非这个dex没有类的初始化函数
+
+function frida_and_fart1(){
+    Java.perform(function () {
+        var activityThread = Java.use("android.app.ActivityThread");
+        var classloader = activityThread.getClassloader();
+        console.log("classloader: ", classloader);
+        var dexFile = Java.use("dalvik.system.DexFile");
+        var params = [Java.use("java.lang.Object").class];
+        var saveMethodCodeItem = dexFile.class.getDeclaredMethod("saveMethodCodeItem", params);
+        console.log("saveMethodCodeItem: ", saveMethodCodeItem);
+        saveMethodCodeItem.setAccessible(true);
+        activityThread.loadClassAndInvoke(classloader, "com.xiaojianbang.encrypt.DES", saveMethodCodeItem);
+    });
+}

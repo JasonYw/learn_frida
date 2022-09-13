@@ -169,3 +169,54 @@
 - CodeItem长度要求是4的倍数
 - len = len - len % 4 + 4
 - https://bbs.pediy.com/thread-268760.htm
+
+## dex重构
+
+- youpk 修复dex https://github.com/youlor/unpacker 已经有工具可以
+- 将dexfixer-main 打包成jar包
+
+## Fart存在的问题
+
+- 调用链的深度不够 有些壳将原有的函数体替换为解密代码，运行时才解密执行
+- 有些壳设置一些垃圾类，当该类被初始化时自动退出
+- 有些壳设置一些垃圾类，实时检测这些类是否加载
+- 动态加载的dex文件，如果没有修正ClassLoader，不会出现在双亲委派关系中，也不会被Fart遍历到
+
+## 改进方案
+
+- 学习youpk的调用深度
+- 不进行类的初始化，或者不主动调用该类
+- 设置配置文件，类似白名单，对指定类进行主动调用，或者避开指定类的调用 利用frida主动调用FART的函数，对指定类进行脱壳 frida hook loadClassAndInvoke
+- 使用frida与fart配合脱壳时 要注释掉 ActivityThread.java  handleBindApplication 方法中开启线程的过程 就是要关闭部分脱壳功能
+
+```JavaScript
+    Java.perform(function () {
+        Java.choose("dalvik.system.DexClassLoader", {
+            onMatch: function (instanse) {
+                console.log(instanse);
+                var activityThread = Java.use("android.app.ActivityThread");
+                activityThread.xiaojianbangWithClassloader(instanse);
+            }, onComplete: function () {
+        
+            }
+        });
+    });
+
+```
+
+- 利用frida枚举所有ClassLoader，再主动调用FART的函数进行脱壳 Exexute脱壳点对于动态加载的dex也可以脱壳，除非这个dex没有类的初始化函数
+
+```JavaScript
+
+    Java.perform(function () {
+        var activityThread = Java.use("android.app.ActivityThread");
+        var classloader = activityThread.getClassloader();
+        console.log("classloader: ", classloader);
+        var dexFile = Java.use("dalvik.system.DexFile");
+        var params = [Java.use("java.lang.Object").class];
+        var saveMethodCodeItem = dexFile.class.getDeclaredMethod("saveMethodCodeItem", params);
+        console.log("saveMethodCodeItem: ", saveMethodCodeItem);
+        saveMethodCodeItem.setAccessible(true);
+        activityThread.loadClassAndInvoke(classloader, "com.xiaojianbang.encrypt.DES", saveMethodCodeItem);
+    });
+```
