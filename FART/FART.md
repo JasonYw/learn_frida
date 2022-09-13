@@ -147,3 +147,25 @@
 - FART
 - youpk
 
+## FART主动调用源码分析
+
+- 遍历ClassLoader
+- 从ClassLoader 中取出DexFile，调用getClassNameList的方法得到所有类名
+- 遍历类中的所有函数  
+- 完成对函数的主动调用，但不能影响app的正常运行
+- 函数执行过程中dump函数体数据 DexCode/CodeItem
+- CodeItem起始地址的获取:artMethod->GetCodeItem()
+- CodeItem长度的计算：dex_file->GetCodeItemSize(const CodeItem& code)
+
+## 在系统中主动调用函数的方法
+
+- 无法使用HOOK框架的主动调用
+- Java层可以利用反射
+- jni层可以参阅CallVoidMethod:artMethod->invoke(...)
+
+## dex文件格式
+
+- 自己计算CodeItem长度
+- CodeItem长度要求是4的倍数
+- len = len - len % 4 + 4
+- https://bbs.pediy.com/thread-268760.htm
