@@ -1,0 +1,951 @@
+2022-09-14 14:24:09,623 INFO    
+
+     _   _         _   _
+ ___| |_|_|___ ___| |_|_|___ ___
+| . | . | | -_|  _|  _| | . |   |
+|___|___| |___|___|_| |_|___|_|_|
+      |___|(object)inject(ion) v1.11.0
+
+     Runtime Mobile Exploration
+        by: @leonjza from @sensepost
+
+
+2022-09-14 14:24:09,624 INFO    
+[tab] for command suggestions
+
+2022-09-14 14:24:09,626 DEBUG   
+Using selector: SelectSelector
+
+2022-09-14 14:24:37,250 INFO    
+android hooking watch class_method java.util.HashSet.add --dump-args --dump-backtrace --dump-return  
+
+2022-09-14 14:24:37,268 INFO    
+(agent) Attempting to watch class [32mjava.util.HashSet[39m and method [32madd[39m.
+
+2022-09-14 14:24:37,274 INFO    
+(agent) Hooking [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:37,398 INFO    
+(agent) Registering job [94m535924[39m. Type: [92mwatch-method for: java.util.HashSet.add[39m
+
+2022-09-14 14:24:40,431 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,445 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	com.tencent.mm.at.s.a(SourceFile:223)
+	com.tencent.mm.plugin.account.ui.LoginHistoryUI.bWx(SourceFile:656)
+	com.tencent.mm.plugin.account.ui.LoginPasswordUI.b(SourceFile:1193)
+	com.tencent.mm.plugin.account.ui.LoginPasswordUI$7.run(SourceFile:187)
+	com.tencent.mm.platformtools.u.c(SourceFile:82)
+	com.tencent.mm.plugin.account.ui.LoginPasswordUI.bWy(SourceFile:184)
+	com.tencent.mm.plugin.account.ui.LoginPasswordUI$5.onClick(SourceFile:144)
+	android.view.View.performClick(View.java:6294)
+	android.view.View$PerformClick.run(View.java:24770)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:40,450 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mcom.tencent.mm.plugin.account.ui.LoginPasswordUI@4d7712a[39m)
+
+2022-09-14 14:24:40,451 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,452 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,453 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	com.tencent.mm.at.s.a(SourceFile:223)
+	com.tencent.mm.plugin.account.ui.LoginHistoryUI.bWx(SourceFile:657)
+	com.tencent.mm.plugin.account.ui.LoginPasswordUI.b(SourceFile:1193)
+	com.tencent.mm.plugin.account.ui.LoginPasswordUI$7.run(SourceFile:187)
+	com.tencent.mm.platformtools.u.c(SourceFile:82)
+	com.tencent.mm.plugin.account.ui.LoginPasswordUI.bWy(SourceFile:184)
+	com.tencent.mm.plugin.account.ui.LoginPasswordUI$5.onClick(SourceFile:144)
+	android.view.View.performClick(View.java:6294)
+	android.view.View$PerformClick.run(View.java:24770)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:40,455 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mcom.tencent.mm.plugin.account.ui.LoginPasswordUI@4d7712a[39m)
+
+2022-09-14 14:24:40,456 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,478 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,480 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,481 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:67)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:40,484 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:40,485 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,485 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,490 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:67)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:40,491 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:40,492 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,493 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,494 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:67)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:40,495 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:40,496 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,497 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,500 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:68)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:40,501 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:40,502 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,503 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,504 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:67)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:40,507 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:40,508 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,508 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:68)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:40,509 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:40,510 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,511 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,511 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,514 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:69)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:40,515 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:40,516 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,516 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,518 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:68)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:40,521 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:40,522 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,522 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,523 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:69)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:40,525 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:40,525 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,527 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:68)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:40,528 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:40,529 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,530 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,532 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:69)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:40,535 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:40,536 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:40,537 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:40,539 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:69)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:40,541 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:40,542 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:42,926 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:42,933 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	java.util.AbstractCollection.addAll(AbstractCollection.java:344)
+	com.tencent.mm.at.s$6.run(SourceFile:558)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	com.tencent.mm.sdk.platformtools.MMHandler$2.dispatchMessage(SourceFile:418)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:42,935 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mcom.tencent.mm.plugin.account.ui.LoginPasswordUI@4d7712a[39m)
+
+2022-09-14 14:24:42,936 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:42,952 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:42,959 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	java.util.AbstractCollection.addAll(AbstractCollection.java:344)
+	com.tencent.mm.at.s$6.run(SourceFile:573)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	com.tencent.mm.sdk.platformtools.MMHandler$2.dispatchMessage(SourceFile:418)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:42,960 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mcom.tencent.mm[39m)
+
+2022-09-14 14:24:42,961 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:42,983 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:42,986 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,004 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:67)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:43,006 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:43,008 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,008 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,015 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:67)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:43,018 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:43,019 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,020 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,027 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:67)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:43,029 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:43,030 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,032 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,041 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:67)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:43,043 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:43,044 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,044 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:68)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:43,045 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:43,046 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,047 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,048 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,058 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:68)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:43,059 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:43,060 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,061 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,066 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:68)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:43,069 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:43,070 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,070 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,074 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:69)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:43,076 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:43,076 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,077 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,087 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:69)
+	android.util.MergedConfiguration.<init>(MergedConfiguration.java:56)
+	android.util.MergedConfiguration.<init>(Unknown Source:0)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:80)
+	android.util.MergedConfiguration$1.createFromParcel(MergedConfiguration.java:78)
+	android.view.IWindow$Stub.onTransact(IWindow.java:117)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-14 14:24:43,090 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:68)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:43,092 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:43,093 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,094 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:43,094 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,095 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,096 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:69)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:43,098 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31mzh_CN_#Hans[39m)
+
+2022-09-14 14:24:43,100 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:43,101 INFO    
+(agent) [90m[535924] [39mCalled [32mjava.util.HashSet[39m.[92madd[39m([31mjava.lang.Object[39m)
+
+2022-09-14 14:24:43,102 INFO    
+(agent) [90m[535924] [39mBacktrace:
+	java.util.HashSet.add(Native Method)
+	android.os.LocaleList.<init>(LocaleList.java:180)
+	android.content.res.Configuration.readFromParcel(Configuration.java:1555)
+	android.content.res.Configuration.<init>(Configuration.java:1596)
+	android.content.res.Configuration.<init>(Unknown Source:0)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1584)
+	android.content.res.Configuration$1.createFromParcel(Configuration.java:1583)
+	android.os.Parcel.readParcelable(Parcel.java:2852)
+	android.util.MergedConfiguration.readFromParcel(MergedConfiguration.java:69)
+	android.view.IWindowSession$Stub$Proxy.relayout(IWindowSession.java:940)
+	android.view.ViewRootImpl.relayoutWindow(ViewRootImpl.java:6120)
+	android.view.ViewRootImpl.performTraversals(ViewRootImpl.java:1901)
+	android.view.ViewRootImpl.doTraversal(ViewRootImpl.java:1392)
+	android.view.ViewRootImpl$TraversalRunnable.run(ViewRootImpl.java:6752)
+	android.view.Choreographer$CallbackRecord.run(Choreographer.java:911)
+	android.view.Choreographer.doCallbacks(Choreographer.java:723)
+	android.view.Choreographer.doFrame(Choreographer.java:658)
+	android.view.Choreographer$FrameDisplayEventReceiver.run(Choreographer.java:897)
+	android.os.Handler.handleCallback(Handler.java:790)
+	android.os.Handler.dispatchMessage(Handler.java:99)
+	android.os.Looper.loop(Looper.java:164)
+	android.app.ActivityThread.main(ActivityThread.java:6494)
+	java.lang.reflect.Method.invoke(Native Method)
+	com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+	
+
+2022-09-14 14:24:43,104 INFO    
+(agent) [90m[535924] [39mArguments [32mjava.util.HashSet[39m.[92madd[39m([31men_US[39m)
+
+2022-09-14 14:24:43,105 INFO    
+(agent) [90m[535924] [39mReturn Value: [31mtrue[39m
+
+2022-09-14 14:24:44,696 INFO    
+
+
+2022-09-14 14:24:44,831 INFO    
+
+
+2022-09-14 14:24:44,975 INFO    
+
+
+2022-09-14 14:24:45,119 INFO    
+
+
+2022-09-14 14:25:05,319 INFO    
+Exiting...
+
+2022-09-14 14:25:05,323 INFO    
+Asking jobs to stop...
+
+2022-09-14 14:25:05,324 INFO    
+Unloading objection agent...
+
