@@ -1,0 +1,3761 @@
+0x79c6abb4d8
+=======================
+classname => com.tencent.mmkv.MMKV
+name => onExit
+signature => ()V
+funcaddr => 0x79a3c1ac9c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x16c9c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => cryptKey
+signature => ()Ljava/lang/String;
+funcaddr => 0x79a3c1aca0
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x16ca0
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => reKey
+signature => (Ljava/lang/String;)Z
+funcaddr => 0x79a3c1ad9c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x16d9c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => checkReSetCryptKey
+signature => (Ljava/lang/String;)V
+funcaddr => 0x79a3c1af28
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x16f28
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => pageSize
+signature => ()I
+funcaddr => 0x79a3c1b0d4
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x170d4
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => mmapID
+signature => ()Ljava/lang/String;
+funcaddr => 0x79a3c1b0e4
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x170e4
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => version
+signature => ()Ljava/lang/String;
+funcaddr => 0x79a3c1b144
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17144
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => lock
+signature => ()V
+funcaddr => 0x79a3c1b1fc
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x171fc
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => unlock
+signature => ()V
+funcaddr => 0x79a3c1b22c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x1722c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => tryLock
+signature => ()Z
+funcaddr => 0x79a3c1b25c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x1725c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => allKeys
+signature => ()[Ljava/lang/String;
+funcaddr => 0x79a3c1b28c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x1728c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => removeValuesForKeys
+signature => ([Ljava/lang/String;)V
+funcaddr => 0x79a3c1b4c8
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x174c8
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => clearAll
+signature => ()V
+funcaddr => 0x79a3c1b614
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17614
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => trim
+signature => ()V
+funcaddr => 0x79a3c1b644
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17644
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => close
+signature => ()V
+funcaddr => 0x79a3c1b674
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17674
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => clearMemoryCache
+signature => ()V
+funcaddr => 0x79a3c1b6e0
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x176e0
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => sync
+signature => (Z)V
+funcaddr => 0x79a3c1b710
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17710
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => isFileValid
+signature => (Ljava/lang/String;Ljava/lang/String;)Z
+funcaddr => 0x79a3c1b754
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17754
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => ashmemFD
+signature => ()I
+funcaddr => 0x79a3c1b904
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17904
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => ashmemMetaFD
+signature => ()I
+funcaddr => 0x79a3c1b938
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17938
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => jniInitialize
+signature => (Ljava/lang/String;Ljava/lang/String;I)V
+funcaddr => 0x79a3c1b96c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x1796c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => getMMKVWithID
+signature => (Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)J
+funcaddr => 0x79a3c1baf0
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17af0
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => getMMKVWithIDAndSize
+signature => (Ljava/lang/String;IILjava/lang/String;)J
+funcaddr => 0x79a3c1be54
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x17e54
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => getDefaultMMKV
+signature => (ILjava/lang/String;)J
+funcaddr => 0x79a3c1c058
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x18058
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => getMMKVWithAshmemFD
+signature => (Ljava/lang/String;IILjava/lang/String;)J
+funcaddr => 0x79a3c1c190
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x18190
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => encodeBool
+signature => (JLjava/lang/String;Z)Z
+funcaddr => 0x79a3c1c390
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x18390
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => decodeBool
+signature => (JLjava/lang/String;Z)Z
+funcaddr => 0x79a3c1c49c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x1849c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => encodeInt
+signature => (JLjava/lang/String;I)Z
+funcaddr => 0x79a3c1c5a4
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x185a4
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => decodeInt
+signature => (JLjava/lang/String;I)I
+funcaddr => 0x79a3c1c6ac
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x186ac
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => encodeLong
+signature => (JLjava/lang/String;J)Z
+funcaddr => 0x79a3c1c7b0
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x187b0
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => decodeLong
+signature => (JLjava/lang/String;J)J
+funcaddr => 0x79a3c1c8b8
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x188b8
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => encodeFloat
+signature => (JLjava/lang/String;F)Z
+funcaddr => 0x79a3c1c9bc
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x189bc
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => decodeFloat
+signature => (JLjava/lang/String;F)F
+funcaddr => 0x79a3c1cacc
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x18acc
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => encodeDouble
+signature => (JLjava/lang/String;D)Z
+funcaddr => 0x79a3c1cbd8
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x18bd8
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => decodeDouble
+signature => (JLjava/lang/String;D)D
+funcaddr => 0x79a3c1cce8
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x18ce8
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => encodeString
+signature => (JLjava/lang/String;Ljava/lang/String;)Z
+funcaddr => 0x79a3c1cdf4
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x18df4
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => decodeString
+signature => (JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+funcaddr => 0x79a3c1cfb0
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x18fb0
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => encodeSet
+signature => (JLjava/lang/String;[Ljava/lang/String;)Z
+funcaddr => 0x79a3c1d138
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19138
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => decodeStringSet
+signature => (JLjava/lang/String;)[Ljava/lang/String;
+funcaddr => 0x79a3c1d330
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19330
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => encodeBytes
+signature => (JLjava/lang/String;[B)Z
+funcaddr => 0x79a3c1d608
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19608
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => decodeBytes
+signature => (JLjava/lang/String;)[B
+funcaddr => 0x79a3c1d830
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19830
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => containsKey
+signature => (JLjava/lang/String;)Z
+funcaddr => 0x79a3c1d9cc
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x199cc
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => count
+signature => (J)J
+funcaddr => 0x79a3c1dacc
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19acc
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => totalSize
+signature => (J)J
+funcaddr => 0x79a3c1dae0
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19ae0
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => actualSize
+signature => (J)J
+funcaddr => 0x79a3c1daf4
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19af4
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => removeValueForKey
+signature => (JLjava/lang/String;)V
+funcaddr => 0x79a3c1db08
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19b08
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => valueSize
+signature => (JLjava/lang/String;Z)I
+funcaddr => 0x79a3c1dbfc
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19bfc
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => setLogLevel
+signature => (I)V
+funcaddr => 0x79a3c1dd08
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19d08
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => setCallbackHandler
+signature => (ZZ)V
+funcaddr => 0x79a3c1dd10
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19d10
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => createNB
+signature => (I)J
+funcaddr => 0x79a3c1dd6c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19d6c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => destroyNB
+signature => (JI)V
+funcaddr => 0x79a3c1ddc8
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19dc8
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => writeValueToNB
+signature => (JLjava/lang/String;JI)I
+funcaddr => 0x79a3c1ddd0
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19dd0
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => setWantsContentChangeNotify
+signature => (Z)V
+funcaddr => 0x79a3c1dee8
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19ee8
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => checkContentChangedByOuterProcess
+signature => ()V
+funcaddr => 0x79a3c1df04
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19f04
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => checkProcessMode
+signature => (J)Z
+funcaddr => 0x79a3c1df34
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19f34
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => backupOneToDirectory
+signature => (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+funcaddr => 0x79a3c1df5c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x19f5c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => restoreOneMMKVFromDirectory
+signature => (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+funcaddr => 0x79a3c1e2d4
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x1a2d4
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => backupAllToDirectory
+signature => (Ljava/lang/String;)J
+funcaddr => 0x79a3c1e64c
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x1a64c
+=======================
+
+=======================
+classname => com.tencent.mmkv.MMKV
+name => restoreAllFromDirectory
+signature => (Ljava/lang/String;)J
+funcaddr => 0x79a3c1e738
+so_name => libmmkv.so
+so_addr => 0x79a3c04000
+funcaddr_sub_soaddr => 0x1a738
+=======================
+
+=======================
+classname => com.tencent.nativecrash.NativeCrash
+name => nativeInit
+signature => (Ljava/lang/String;IIZ)V
+funcaddr => 0x79a02306bc
+so_name => libwechatcrash.so
+so_addr => 0x79a0209000
+funcaddr_sub_soaddr => 0x276bc
+=======================
+
+=======================
+classname => com.tencent.nativecrash.NativeCrash
+name => nativeInitFd
+signature => ([III)V
+funcaddr => 0x79a0230ab4
+so_name => libwechatcrash.so
+so_addr => 0x79a0209000
+funcaddr_sub_soaddr => 0x27ab4
+=======================
+
+=======================
+classname => com.tencent.nativecrash.NativeCrash
+name => nativeCustomInfo
+signature => ([B)V
+funcaddr => 0x79a0230c0c
+so_name => libwechatcrash.so
+so_addr => 0x79a0209000
+funcaddr_sub_soaddr => 0x27c0c
+=======================
+
+=======================
+classname => com.tencent.nativecrash.NativeCrash
+name => nativeResetCustomInfo
+signature => ()V
+funcaddr => 0x79a0230c9c
+so_name => libwechatcrash.so
+so_addr => 0x79a0209000
+funcaddr_sub_soaddr => 0x27c9c
+=======================
+
+=======================
+classname => com.tencent.nativecrash.NativeCrash
+name => nativeReserveMemory
+signature => ()V
+funcaddr => 0x79a0230cd8
+so_name => libwechatcrash.so
+so_addr => 0x79a0209000
+funcaddr_sub_soaddr => 0x27cd8
+=======================
+
+=======================
+classname => com.tencent.matrix.trace.tracer.SignalAnrTracer
+name => nativeInitSignalAnrDetective
+signature => (Ljava/lang/String;Ljava/lang/String;)V
+funcaddr => 0x799fe1c2a4
+so_name => libtrace-canary.so
+so_addr => 0x799fdd0000
+funcaddr_sub_soaddr => 0x4c2a4
+=======================
+
+=======================
+classname => com.tencent.matrix.trace.tracer.SignalAnrTracer
+name => nativeFreeSignalAnrDetective
+signature => ()V
+funcaddr => 0x799fe1c500
+so_name => libtrace-canary.so
+so_addr => 0x799fdd0000
+funcaddr_sub_soaddr => 0x4c500
+=======================
+
+=======================
+classname => com.tencent.matrix.trace.tracer.SignalAnrTracer
+name => nativePrintTrace
+signature => ()V
+funcaddr => 0x799fe1c538
+so_name => libtrace-canary.so
+so_addr => 0x799fdd0000
+funcaddr_sub_soaddr => 0x4c538
+=======================
+
+=======================
+classname => com.tencent.matrix.trace.tracer.ThreadTracer
+name => nativeInitThreadHook
+signature => (II)V
+funcaddr => 0x799fe1c55c
+so_name => libtrace-canary.so
+so_addr => 0x799fdd0000
+funcaddr_sub_soaddr => 0x4c55c
+=======================
+
+=======================
+classname => com.tencent.matrix.trace.tracer.ThreadTracer
+name => nativeGetPthreadKeySeq
+signature => ()I
+funcaddr => 0x799fe1c694
+so_name => libtrace-canary.so
+so_addr => 0x799fdd0000
+funcaddr_sub_soaddr => 0x4c694
+=======================
+
+=======================
+classname => com.tencent.matrix.trace.tracer.TouchEventLagTracer
+name => nativeInitTouchEventLagDetective
+signature => (I)V
+funcaddr => 0x799fe1c6f0
+so_name => libtrace-canary.so
+so_addr => 0x799fdd0000
+funcaddr_sub_soaddr => 0x4c6f0
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeCreate
+signature => (Ljava/lang/String;I)J
+funcaddr => 0x799f472b20
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fb20
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeDispose
+signature => (J)V
+funcaddr => 0x799f472ba0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fba0
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeClear
+signature => (J)V
+funcaddr => 0x799f472bd0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fbd0
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeGetNumRows
+signature => (J)I
+funcaddr => 0x799f472c0c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fc0c
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeSetNumColumns
+signature => (JI)Z
+funcaddr => 0x799f472c18
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fc18
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeAllocRow
+signature => (J)Z
+funcaddr => 0x799f472c3c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fc3c
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeFreeLastRow
+signature => (J)V
+funcaddr => 0x799f472c60
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fc60
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeGetType
+signature => (JII)I
+funcaddr => 0x799f472c68
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fc68
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeGetBlob
+signature => (JII)[B
+funcaddr => 0x799f472d24
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fd24
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeGetString
+signature => (JII)Ljava/lang/String;
+funcaddr => 0x799f472ea8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x2fea8
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeGetLong
+signature => (JII)J
+funcaddr => 0x799f4730c4
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x300c4
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeGetDouble
+signature => (JII)D
+funcaddr => 0x799f47321c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3021c
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativeCopyStringToBuffer
+signature => (JIILandroid/database/CharArrayBuffer;)V
+funcaddr => 0x799f47338c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3038c
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativePutBlob
+signature => (J[BII)Z
+funcaddr => 0x799f473584
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30584
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativePutString
+signature => (JLjava/lang/String;II)Z
+funcaddr => 0x799f47366c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3066c
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativePutLong
+signature => (JJII)Z
+funcaddr => 0x799f473734
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30734
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativePutDouble
+signature => (JDII)Z
+funcaddr => 0x799f473788
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30788
+=======================
+
+=======================
+classname => com.tencent.wcdb.CursorWindow
+name => nativePutNull
+signature => (JII)Z
+funcaddr => 0x799f4737dc
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x307dc
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeCreate
+signature => (I)J
+funcaddr => 0x799f473a14
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30a14
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeDispose
+signature => (J)V
+funcaddr => 0x799f473a94
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30a94
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeClear
+signature => (J)V
+funcaddr => 0x799f473ac4
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30ac4
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeRemoveChunk
+signature => (JI)J
+funcaddr => 0x799f473b00
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30b00
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeGetNumChunks
+signature => (J)I
+funcaddr => 0x799f473b68
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30b68
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeSetNumColumns
+signature => (JI)Z
+funcaddr => 0x799f473ba0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30ba0
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeGetRow
+signature => (JI)J
+funcaddr => 0x799f473bc4
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30bc4
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeEndRow
+signature => (JJ)V
+funcaddr => 0x799f473bec
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30bec
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeGetType
+signature => (JI)I
+funcaddr => 0x799f473bf8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30bf8
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeGetBlob
+signature => (JI)[B
+funcaddr => 0x799f473ca4
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30ca4
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeGetString
+signature => (JI)Ljava/lang/String;
+funcaddr => 0x799f473e1c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x30e1c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeGetLong
+signature => (JI)J
+funcaddr => 0x799f47402c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3102c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.ChunkedCursorWindow
+name => nativeGetDouble
+signature => (JI)D
+funcaddr => 0x799f474178
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x31178
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteAsyncQuery
+name => nativeFillRows
+signature => (JJII)I
+funcaddr => 0x799f4742dc
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x312dc
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteAsyncQuery
+name => nativeCount
+signature => (J)I
+funcaddr => 0x799f47448c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3148c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeOpen
+signature => (Ljava/lang/String;ILjava/lang/String;)J
+funcaddr => 0x799f47489c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3189c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeClose
+signature => (J)V
+funcaddr => 0x799f474b60
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x31b60
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeSetKey
+signature => (J[B)V
+funcaddr => 0x799f474bf8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x31bf8
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeRegisterCustomFunction
+signature => (JLcom/tencent/wcdb/database/SQLiteCustomFunction;)V
+funcaddr => 0x799f474cf8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x31cf8
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeRegisterLocalizedCollators
+signature => (JLjava/lang/String;)V
+funcaddr => 0x799f474e50
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x31e50
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativePrepareStatement
+signature => (JLjava/lang/String;)J
+funcaddr => 0x799f474e98
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x31e98
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeFinalizeStatement
+signature => (JJ)V
+funcaddr => 0x799f474ffc
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x31ffc
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeGetParameterCount
+signature => (JJ)I
+funcaddr => 0x799f475004
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32004
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeIsReadOnly
+signature => (JJ)Z
+funcaddr => 0x799f47500c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3200c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeGetColumnCount
+signature => (JJ)I
+funcaddr => 0x799f47502c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3202c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeGetColumnName
+signature => (JJI)Ljava/lang/String;
+funcaddr => 0x799f475034
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32034
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeBindNull
+signature => (JJI)V
+funcaddr => 0x799f475090
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32090
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeBindLong
+signature => (JJIJ)V
+funcaddr => 0x799f4750d8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x320d8
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeBindDouble
+signature => (JJID)V
+funcaddr => 0x799f475124
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32124
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeBindString
+signature => (JJILjava/lang/String;)V
+funcaddr => 0x799f47516c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3216c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeBindBlob
+signature => (JJI[B)V
+funcaddr => 0x799f47523c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3223c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeResetStatement
+signature => (JJZ)V
+funcaddr => 0x799f475310
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32310
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeExecute
+signature => (JJ)V
+funcaddr => 0x799f475378
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32378
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeExecuteForLong
+signature => (JJ)J
+funcaddr => 0x799f4753dc
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x323dc
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeExecuteForString
+signature => (JJ)Ljava/lang/String;
+funcaddr => 0x799f47545c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3245c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeExecuteForChangedRowCount
+signature => (JJ)I
+funcaddr => 0x799f475508
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32508
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeExecuteForLastInsertedRowId
+signature => (JJ)J
+funcaddr => 0x799f47557c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3257c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeExecuteForCursorWindow
+signature => (JJJIIZ)J
+funcaddr => 0x799f475600
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32600
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeGetDbLookaside
+signature => (J)I
+funcaddr => 0x799f4758c4
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x328c4
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeCancel
+signature => (J)V
+funcaddr => 0x799f475928
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32928
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeResetCancel
+signature => (JZ)V
+funcaddr => 0x799f475934
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32934
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeSetWalHook
+signature => (J)V
+funcaddr => 0x799f47596c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3296c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeWalCheckpoint
+signature => (JLjava/lang/String;)J
+funcaddr => 0x799f47597c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3297c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeSQLiteHandle
+signature => (JZ)J
+funcaddr => 0x799f475a60
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32a60
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteConnection
+name => nativeSetUpdateNotification
+signature => (JZZ)V
+funcaddr => 0x799f475b08
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x32b08
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDebug
+name => nativeGetPagerStats
+signature => (Lcom/tencent/wcdb/database/SQLiteDebug$PagerStats;)V
+funcaddr => 0x799f477a94
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x34a94
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDebug
+name => nativeGetLastErrorLine
+signature => ()I
+funcaddr => 0x799f477b80
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x34b80
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDebug
+name => nativeSetIOTraceFlags
+signature => (I)V
+funcaddr => 0x799f477b90
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x34b90
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDebug
+name => nativeGetIOTraceStats
+signature => (JLjava/util/ArrayList;)V
+funcaddr => 0x799f477ba0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x34ba0
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDirectQuery
+name => nativeGetLong
+signature => (JI)J
+funcaddr => 0x799f478774
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35774
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDirectQuery
+name => nativeGetDouble
+signature => (JI)D
+funcaddr => 0x799f478780
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35780
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDirectQuery
+name => nativeGetString
+signature => (JI)Ljava/lang/String;
+funcaddr => 0x799f47878c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3578c
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDirectQuery
+name => nativeGetBlob
+signature => (JI)[B
+funcaddr => 0x799f4787f0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x357f0
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDirectQuery
+name => nativeGetType
+signature => (JI)I
+funcaddr => 0x799f478878
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35878
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteDirectQuery
+name => nativeStep
+signature => (JI)I
+funcaddr => 0x799f478884
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35884
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteGlobal
+name => nativeInitialize
+signature => (I)V
+funcaddr => 0x799f4789cc
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x359cc
+=======================
+
+=======================
+classname => com.tencent.wcdb.database.SQLiteGlobal
+name => nativeReleaseMemory
+signature => ()I
+funcaddr => 0x799f478a50
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35a50
+=======================
+
+=======================
+classname => com.tencent.wcdb.extension.fts.MMFtsTokenizer
+name => nativeInitialize
+signature => (JJ)V
+funcaddr => 0x799f478cb0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35cb0
+=======================
+
+=======================
+classname => com.tencent.wcdb.FileUtils
+name => setPermissions
+signature => (Ljava/lang/String;III)I
+funcaddr => 0x799f478d2c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35d2c
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.BackupKit
+name => nativeInit
+signature => (Ljava/lang/String;[BI)J
+funcaddr => 0x799f478e8c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35e8c
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.BackupKit
+name => nativeRun
+signature => (JJ[Ljava/lang/String;)I
+funcaddr => 0x799f478f84
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x35f84
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.BackupKit
+name => nativeCancel
+signature => (J)V
+funcaddr => 0x799f479198
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x36198
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.BackupKit
+name => nativeFinish
+signature => (J)V
+funcaddr => 0x799f4791a0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x361a0
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.BackupKit
+name => nativeStatementCount
+signature => (J)I
+funcaddr => 0x799f4791a8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x361a8
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.BackupKit
+name => nativeLastError
+signature => (J)Ljava/lang/String;
+funcaddr => 0x799f4791f8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x361f8
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RecoverKit
+name => nativeInit
+signature => (Ljava/lang/String;[B)J
+funcaddr => 0x799f47928c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3628c
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RecoverKit
+name => nativeRun
+signature => (JJZ)I
+funcaddr => 0x799f479374
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x36374
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RecoverKit
+name => nativeCancel
+signature => (J)V
+funcaddr => 0x799f479388
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x36388
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RecoverKit
+name => nativeFinish
+signature => (J)V
+funcaddr => 0x799f479390
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x36390
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RecoverKit
+name => nativeSuccessCount
+signature => (J)I
+funcaddr => 0x799f479398
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x36398
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RecoverKit
+name => nativeFailureCount
+signature => (J)I
+funcaddr => 0x799f4793f0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x363f0
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RecoverKit
+name => nativeLastError
+signature => (J)Ljava/lang/String;
+funcaddr => 0x799f479448
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x36448
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.DBDumpUtil
+name => nativeDumpDB
+signature => (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+funcaddr => 0x799f47a32c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3732c
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.DBDumpUtil
+name => nativeIsSqlComplete
+signature => (Ljava/lang/String;)Z
+funcaddr => 0x799f47a430
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x37430
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeInit
+signature => (Ljava/lang/String;[BLcom/tencent/wcdb/database/SQLiteCipherSpec;[B)J
+funcaddr => 0x799f47a6d4
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x376d4
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeFini
+signature => (J)V
+funcaddr => 0x799f47a9a0
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x379a0
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeOutput
+signature => (JJJI)I
+funcaddr => 0x799f47a9a8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x379a8
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeCancel
+signature => (J)V
+funcaddr => 0x799f47aa30
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x37a30
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeIntegrityFlags
+signature => (J)I
+funcaddr => 0x799f47aa38
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x37a38
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeLastError
+signature => ()Ljava/lang/String;
+funcaddr => 0x799f47aa40
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x37a40
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeMakeMaster
+signature => ([Ljava/lang/String;)J
+funcaddr => 0x799f47aa54
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x37a54
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeSaveMaster
+signature => (JLjava/lang/String;[B)Z
+funcaddr => 0x799f47abcc
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x37bcc
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeLoadMaster
+signature => (Ljava/lang/String;[B[Ljava/lang/String;[B)J
+funcaddr => 0x799f47acf8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x37cf8
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit
+name => nativeFreeMaster
+signature => (J)V
+funcaddr => 0x799f47af9c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x37f9c
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit$RepairCursor
+name => nativeGetColumnCount
+signature => (J)I
+funcaddr => 0x799f47b100
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x38100
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit$RepairCursor
+name => nativeGetType
+signature => (JI)I
+funcaddr => 0x799f47b108
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x38108
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit$RepairCursor
+name => nativeGetLong
+signature => (JI)J
+funcaddr => 0x799f47b114
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x38114
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit$RepairCursor
+name => nativeGetDouble
+signature => (JI)D
+funcaddr => 0x799f47b120
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x38120
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit$RepairCursor
+name => nativeGetString
+signature => (JI)Ljava/lang/String;
+funcaddr => 0x799f47b12c
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x3812c
+=======================
+
+=======================
+classname => com.tencent.wcdb.repair.RepairKit$RepairCursor
+name => nativeGetBlob
+signature => (JI)[B
+funcaddr => 0x799f47b164
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x38164
+=======================
+
+=======================
+classname => com.tencent.wcdb.support.Log
+name => nativeSetLogger
+signature => (ILcom/tencent/wcdb/support/Log$LogCallback;)V
+funcaddr => 0x799f47b2e8
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x382e8
+=======================
+
+=======================
+classname => com.tencent.wcdb.support.Log
+name => nativePrintLn
+signature => (ILjava/lang/String;Ljava/lang/String;)V
+funcaddr => 0x799f47b398
+so_name => libwcdb.so
+so_addr => 0x799f443000
+funcaddr_sub_soaddr => 0x38398
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fa
+signature => (Ljava/lang/String;II)V
+funcaddr => 0x799c8b2c58
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x731c58
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fb
+signature => (ILjava/util/List;)V
+funcaddr => 0x799c8b3510
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x732510
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fc
+signature => ()Z
+funcaddr => 0x799c8b49e0
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x7339e0
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fd
+signature => ()V
+funcaddr => 0x799c8b4b64
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x733b64
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fe
+signature => (I)V
+funcaddr => 0x799c8b4be0
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x733be0
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ff
+signature => (I)V
+funcaddr => 0x799c8b4ca8
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x733ca8
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fg
+signature => (Ljava/lang/String;)Z
+funcaddr => 0x799c8b4d70
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x733d70
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fh
+signature => (Ljava/lang/String;)V
+funcaddr => 0x799c8b5118
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x734118
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fi
+signature => (Ljava/lang/String;)[B
+funcaddr => 0x799c8b531c
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x73431c
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fj
+signature => (Ljava/lang/String;)V
+funcaddr => 0x799c90d0ec
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x78c0ec
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fk
+signature => ()V
+funcaddr => 0x799c90d490
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x78c490
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => fl
+signature => (Ljava/lang/String;)I
+funcaddr => 0x799c90d4cc
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x78c4cc
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ea
+signature => (II)[B
+funcaddr => 0x799c815ab8
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x694ab8
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => eb
+signature => ([BII)Z
+funcaddr => 0x799c894590
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x713590
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ec
+signature => ()Z
+funcaddr => 0x799c89edd8
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x71ddd8
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ed
+signature => ()[B
+funcaddr => 0x799c89f0cc
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x71e0cc
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ee
+signature => ()[B
+funcaddr => 0x799c89f9ec
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x71e9ec
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ef
+signature => ()Ljava/lang/String;
+funcaddr => 0x799c8a49b8
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x7239b8
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => eg
+signature => ()Ljava/lang/String;
+funcaddr => 0x799c8a51f4
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x7241f4
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => eh
+signature => ()Ljava/lang/String;
+funcaddr => 0x799c8a59c0
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x7249c0
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ba
+signature => (I)Ljava/lang/String;
+funcaddr => 0x799c25c4a0
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0xdb4a0
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => bb
+signature => (I)Ljava/lang/String;
+funcaddr => 0x799c25deb8
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0xdceb8
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => bc
+signature => (I[BIILcom/tencent/mm/normsg/PValue;Lcom/tencent/mm/normsg/PValue;Lcom/tencent/mm/normsg/PValue;)Z
+funcaddr => 0x799c260f98
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0xdff98
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => bd
+signature => ([BIILcom/tencent/mm/normsg/PValue;Lcom/tencent/mm/normsg/PValue;)Z
+funcaddr => 0x799c2bff24
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x13ef24
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => be
+signature => ([BIILcom/tencent/mm/normsg/PValue;Lcom/tencent/mm/normsg/PValue;)Z
+funcaddr => 0x799c2bff2c
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x13ef2c
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => aa
+signature => (II)[B
+funcaddr => 0x799c2c17c0
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x1407c0
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ab
+signature => ()Z
+funcaddr => 0x799c6aec34
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x52dc34
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ac
+signature => (Ljava/lang/String;Z)Ljava/lang/String;
+funcaddr => 0x799c6af314
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x52e314
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ad
+signature => ()[B
+funcaddr => 0x799c6b3228
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x532228
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ae
+signature => (I)[B
+funcaddr => 0x799c6b51d8
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5341d8
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => af
+signature => (I)[B
+funcaddr => 0x799c6b6c94
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x535c94
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ag
+signature => ()Z
+funcaddr => 0x799c6b9cb4
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x538cb4
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ah
+signature => ()Z
+funcaddr => 0x799c6bb004
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x53a004
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ai
+signature => ()Z
+funcaddr => 0x799c6bdf4c
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x53cf4c
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => aj
+signature => ()Z
+funcaddr => 0x799c6bdf78
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x53cf78
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ak
+signature => ()V
+funcaddr => 0x799c6c59d8
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5449d8
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => al
+signature => ()Z
+funcaddr => 0x799c6c59dc
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5449dc
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => am
+signature => (Landroid/content/Intent;)[B
+funcaddr => 0x799c6c64f4
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5454f4
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => an
+signature => (Ljava/lang/String;JLjava/lang/String;I)[B
+funcaddr => 0x799c7086a4
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5876a4
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => da
+signature => (Ljava/lang/String;)V
+funcaddr => 0x799c74afc0
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5c9fc0
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => db
+signature => (Ljava/lang/String;)V
+funcaddr => 0x799c74b38c
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5ca38c
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => dc
+signature => (Ljava/lang/String;)V
+funcaddr => 0x799c74b778
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5ca778
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => dd
+signature => (Ljava/lang/String;)Z
+funcaddr => 0x799c74b974
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5ca974
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => de
+signature => (Ljava/lang/String;)[B
+funcaddr => 0x799c74bba4
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x5caba4
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => df
+signature => (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+funcaddr => 0x799c7c7d94
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x646d94
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => dg
+signature => (Ljava/lang/String;Landroid/view/MotionEvent;)V
+funcaddr => 0x799c7c8254
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x647254
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => dh
+signature => (Ljava/lang/String;)V
+funcaddr => 0x799c7cb6f4
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x64a6f4
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => di
+signature => (Ljava/lang/String;)Z
+funcaddr => 0x799c7cb8c0
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x64a8c0
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => dj
+signature => (Ljava/lang/String;)[B
+funcaddr => 0x799c7cbcf0
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x64acf0
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => dk
+signature => (Ljava/lang/String;)Ljava/lang/String;
+funcaddr => 0x799c80c67c
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x68b67c
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => ca
+signature => (Ljava/lang/Object;Ljava/lang/Class;)Z
+funcaddr => 0x799c8109bc
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x68f9bc
+=======================
+
+=======================
+classname => com.tencent.mm.normsg.c$p
+name => cb
+signature => (Ljava/lang/Object;)Z
+funcaddr => 0x799c8128c4
+so_name => libwechatnormsg.so
+so_addr => 0x799c181000
+funcaddr_sub_soaddr => 0x6918c4
+=======================
+
+=======================
+classname => com.tencent.mm.plugin.fts.jni.FTSJNIUtils
+name => stringCompareUtfBinary
+signature => (Ljava/lang/String;Ljava/lang/String;)I
+funcaddr => 0x79976a46ec
+so_name => libwechatcommon.so
+so_addr => 0x7997600000
+funcaddr_sub_soaddr => 0xa46ec
+=======================
+
+=======================
+classname => com.tencent.mm.plugin.fts.jni.FTSJNIUtils
+name => countTokens
+signature => (Ljava/lang/String;)I
+funcaddr => 0x79976a4798
+so_name => libwechatcommon.so
+so_addr => 0x7997600000
+funcaddr_sub_soaddr => 0xa4798
+=======================
+
+=======================
+classname => com.tencent.mm.plugin.fts.jni.FTSJNIUtils
+name => nativeInitFts
+signature => (J[B)V
+funcaddr => 0x79976a49d0
+so_name => libwechatcommon.so
+so_addr => 0x7997600000
+funcaddr_sub_soaddr => 0xa49d0
+=======================
+
+=======================
+classname => com.tencent.mm.plugin.fts.jni.FTSJNIUtils
+name => icuTokenizer
+signature => (Ljava/lang/String;)Ljava/lang/String;
+funcaddr => 0x79976a4c2c
+so_name => libwechatcommon.so
+so_addr => 0x7997600000
+funcaddr_sub_soaddr => 0xa4c2c
+=======================
+
+=======================
+classname => com.tencent.mm.plugin.fts.jni.FTSJNIUtils
+name => icuInitialize
+signature => (Ljava/lang/String;)I
+funcaddr => 0x79976a4e1c
+so_name => libwechatcommon.so
+so_addr => 0x7997600000
+funcaddr_sub_soaddr => 0xa4e1c
+=======================
+
+=======================
+classname => com.tencent.tencentmap.lbssdk.sapp.service.e
+name => v
+signature => (Ljava/lang/String;)I
+funcaddr => 0x79998595f8
+so_name => libtencentlocsapp.so
+so_addr => 0x7999858000
+funcaddr_sub_soaddr => 0x15f8
+=======================
+
+=======================
+classname => com.tencent.tencentmap.lbssdk.sapp.service.e
+name => o
+signature => ([BI)I
+funcaddr => 0x79998598dc
+so_name => libtencentlocsapp.so
+so_addr => 0x7999858000
+funcaddr_sub_soaddr => 0x18dc
+=======================
+
+=======================
+classname => com.tencent.tencentmap.lbssdk.sapp.service.e
+name => r
+signature => (DII)D
+funcaddr => 0x7999859ad4
+so_name => libtencentlocsapp.so
+so_addr => 0x7999858000
+funcaddr_sub_soaddr => 0x1ad4
+=======================
+
+=======================
+classname => com.tencent.tencentmap.lbssdk.sapp.service.e
+name => w
+signature => (Ljava/lang/String;Ljava/lang/String;)I
+funcaddr => 0x7999859ba0
+so_name => libtencentlocsapp.so
+so_addr => 0x7999858000
+funcaddr_sub_soaddr => 0x1ba0
+=======================
+
+=======================
+classname => com.tencent.wxperf.thread.ThreadInspect
+name => nativeLog
+signature => (IILjava/lang/String;ILjava/lang/String;)V
+funcaddr => 0x79968cc230
+so_name => libwxperf-tkill.so
+so_addr => 0x79968c5000
+funcaddr_sub_soaddr => 0x7230
+=======================
+
+=======================
+classname => com.tencent.wxperf.thread.ThreadInspect
+name => nativeDump
+signature => (IIILjava/lang/String;)V
+funcaddr => 0x79968cc3c4
+so_name => libwxperf-tkill.so
+so_addr => 0x79968c5000
+funcaddr_sub_soaddr => 0x73c4
+=======================
+
+=======================
+classname => com.tencent.wxperf.thread.ThreadInspect
+name => nativeGet
+signature => (IILjava/lang/String;)Ljava/lang/String;
+funcaddr => 0x79968cc4b0
+so_name => libwxperf-tkill.so
+so_addr => 0x79968c5000
+funcaddr_sub_soaddr => 0x74b0
+=======================
+
+=======================
+classname => com.tencent.kinda.ConstructProxy
+name => proxyDefaultConstructor
+signature => (Ljava/lang/String;Ljava/lang/String;)V
+funcaddr => 0x79954cefbc
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xd0bfbc
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigNewJNI
+signature => ()J
+funcaddr => 0x79955c41a4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe011a4
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigFreeJNI
+signature => (J)V
+funcaddr => 0x79955c41a8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe011a8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigSetExperimentalFeatureEnabledJNI
+signature => (JIZ)V
+funcaddr => 0x79955c4210
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01210
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigSetUseWebDefaultsJNI
+signature => (JZ)V
+funcaddr => 0x79955c4228
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01228
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigSetPrintTreeFlagJNI
+signature => (JZ)V
+funcaddr => 0x79955c4238
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01238
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigSetPointScaleFactorJNI
+signature => (JF)V
+funcaddr => 0x79955c4248
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01248
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigSetUseLegacyStretchBehaviourJNI
+signature => (JZ)V
+funcaddr => 0x79955c4250
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01250
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigSetShouldDiffLayoutWithoutLegacyStretchBehaviourJNI
+signature => (JZ)V
+funcaddr => 0x79955c4260
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01260
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGConfigSetLoggerJNI
+signature => (JLcom/facebook/yoga/YogaLogger;)V
+funcaddr => 0x79955c4270
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01270
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeNewJNI
+signature => ()J
+funcaddr => 0x79955c436c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0136c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeNewWithConfigJNI
+signature => (J)J
+funcaddr => 0x79955c4398
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01398
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeFreeJNI
+signature => (J)V
+funcaddr => 0x79955c43b0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe013b0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeResetJNI
+signature => (J)V
+funcaddr => 0x79955c43c0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe013c0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeInsertChildJNI
+signature => (JJI)V
+funcaddr => 0x79955c43e8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe013e8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeSwapChildJNI
+signature => (JJI)V
+funcaddr => 0x79955c43f8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe013f8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeSetIsReferenceBaselineJNI
+signature => (JZ)V
+funcaddr => 0x79955c4408
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01408
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeIsReferenceBaselineJNI
+signature => (J)Z
+funcaddr => 0x79955c4418
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01418
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeClearChildrenJNI
+signature => (J)V
+funcaddr => 0x79955c4430
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01430
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeRemoveChildJNI
+signature => (JJ)V
+funcaddr => 0x79955c4438
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01438
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeCalculateLayoutJNI
+signature => (JFF[J[Lcom/facebook/yoga/YogaNodeJNIBase;)V
+funcaddr => 0x79955c4444
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01444
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeMarkDirtyJNI
+signature => (J)V
+funcaddr => 0x79955c4688
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01688
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeMarkDirtyAndPropogateToDescendantsJNI
+signature => (J)V
+funcaddr => 0x79955c4690
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01690
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeIsDirtyJNI
+signature => (J)Z
+funcaddr => 0x79955c4698
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01698
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeCopyStyleJNI
+signature => (JJ)V
+funcaddr => 0x79955c46a4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016a4
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetDirectionJNI
+signature => (J)I
+funcaddr => 0x79955c46b0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016b0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetDirectionJNI
+signature => (JI)V
+funcaddr => 0x79955c46b8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016b8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetFlexDirectionJNI
+signature => (J)I
+funcaddr => 0x79955c46c4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016c4
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetFlexDirectionJNI
+signature => (JI)V
+funcaddr => 0x79955c46cc
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016cc
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetJustifyContentJNI
+signature => (J)I
+funcaddr => 0x79955c46d8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016d8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetJustifyContentJNI
+signature => (JI)V
+funcaddr => 0x79955c46e0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016e0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetAlignItemsJNI
+signature => (J)I
+funcaddr => 0x79955c46ec
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016ec
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetAlignItemsJNI
+signature => (JI)V
+funcaddr => 0x79955c46f4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe016f4
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetAlignSelfJNI
+signature => (J)I
+funcaddr => 0x79955c4700
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01700
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetAlignSelfJNI
+signature => (JI)V
+funcaddr => 0x79955c4708
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01708
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetAlignContentJNI
+signature => (J)I
+funcaddr => 0x79955c4714
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01714
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetAlignContentJNI
+signature => (JI)V
+funcaddr => 0x79955c471c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0171c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetPositionTypeJNI
+signature => (J)I
+funcaddr => 0x79955c4728
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01728
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetPositionTypeJNI
+signature => (JI)V
+funcaddr => 0x79955c4730
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01730
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetFlexWrapJNI
+signature => (J)I
+funcaddr => 0x79955c473c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0173c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetFlexWrapJNI
+signature => (JI)V
+funcaddr => 0x79955c4744
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01744
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetOverflowJNI
+signature => (J)I
+funcaddr => 0x79955c4750
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01750
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetOverflowJNI
+signature => (JI)V
+funcaddr => 0x79955c4758
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01758
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetDisplayJNI
+signature => (J)I
+funcaddr => 0x79955c4764
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01764
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetDisplayJNI
+signature => (JI)V
+funcaddr => 0x79955c476c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0176c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetFlexJNI
+signature => (J)F
+funcaddr => 0x79955c4778
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01778
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetFlexJNI
+signature => (JF)V
+funcaddr => 0x79955c4780
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01780
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetFlexGrowJNI
+signature => (J)F
+funcaddr => 0x79955c4788
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01788
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetFlexGrowJNI
+signature => (JF)V
+funcaddr => 0x79955c4790
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01790
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetFlexShrinkJNI
+signature => (J)F
+funcaddr => 0x79955c4798
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01798
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetFlexShrinkJNI
+signature => (JF)V
+funcaddr => 0x79955c47a0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe017a0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetFlexBasisJNI
+signature => (J)J
+funcaddr => 0x79955c47a8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe017a8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetFlexBasisJNI
+signature => (JF)V
+funcaddr => 0x79955c47b0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe017b0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetFlexBasisPercentJNI
+signature => (JF)V
+funcaddr => 0x79955c47b8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe017b8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetFlexBasisAutoJNI
+signature => (J)V
+funcaddr => 0x79955c47c0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe017c0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetMarginJNI
+signature => (JI)J
+funcaddr => 0x79955c47c8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe017c8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMarginJNI
+signature => (JIF)V
+funcaddr => 0x79955c47e4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe017e4
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMarginPercentJNI
+signature => (JIF)V
+funcaddr => 0x79955c47fc
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe017fc
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMarginAutoJNI
+signature => (JI)V
+funcaddr => 0x79955c4814
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01814
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetPaddingJNI
+signature => (JI)J
+funcaddr => 0x79955c482c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0182c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetPaddingJNI
+signature => (JIF)V
+funcaddr => 0x79955c4848
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01848
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetPaddingPercentJNI
+signature => (JIF)V
+funcaddr => 0x79955c4860
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01860
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetBorderJNI
+signature => (JI)F
+funcaddr => 0x79955c4878
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01878
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetBorderJNI
+signature => (JIF)V
+funcaddr => 0x79955c4898
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01898
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetPositionJNI
+signature => (JI)J
+funcaddr => 0x79955c48b0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018b0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetPositionJNI
+signature => (JIF)V
+funcaddr => 0x79955c48bc
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018bc
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetPositionPercentJNI
+signature => (JIF)V
+funcaddr => 0x79955c48c8
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018c8
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetWidthJNI
+signature => (J)J
+funcaddr => 0x79955c48d4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018d4
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetWidthJNI
+signature => (JF)V
+funcaddr => 0x79955c48dc
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018dc
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetWidthPercentJNI
+signature => (JF)V
+funcaddr => 0x79955c48e4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018e4
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetWidthAutoJNI
+signature => (J)V
+funcaddr => 0x79955c48ec
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018ec
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetHeightJNI
+signature => (J)J
+funcaddr => 0x79955c48f4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018f4
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetHeightJNI
+signature => (JF)V
+funcaddr => 0x79955c48fc
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe018fc
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetHeightPercentJNI
+signature => (JF)V
+funcaddr => 0x79955c4904
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01904
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetHeightAutoJNI
+signature => (J)V
+funcaddr => 0x79955c490c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0190c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetMinWidthJNI
+signature => (J)J
+funcaddr => 0x79955c4914
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01914
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMinWidthJNI
+signature => (JF)V
+funcaddr => 0x79955c491c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0191c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMinWidthPercentJNI
+signature => (JF)V
+funcaddr => 0x79955c4924
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01924
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetMinHeightJNI
+signature => (J)J
+funcaddr => 0x79955c492c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0192c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMinHeightJNI
+signature => (JF)V
+funcaddr => 0x79955c4934
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01934
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMinHeightPercentJNI
+signature => (JF)V
+funcaddr => 0x79955c493c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0193c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetMaxWidthJNI
+signature => (J)J
+funcaddr => 0x79955c4944
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01944
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMaxWidthJNI
+signature => (JF)V
+funcaddr => 0x79955c494c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0194c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMaxWidthPercentJNI
+signature => (JF)V
+funcaddr => 0x79955c4954
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01954
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetMaxHeightJNI
+signature => (J)J
+funcaddr => 0x79955c495c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0195c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMaxHeightJNI
+signature => (JF)V
+funcaddr => 0x79955c4964
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01964
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetMaxHeightPercentJNI
+signature => (JF)V
+funcaddr => 0x79955c496c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0196c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleGetAspectRatioJNI
+signature => (J)F
+funcaddr => 0x79955c4974
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01974
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeStyleSetAspectRatioJNI
+signature => (JF)V
+funcaddr => 0x79955c497c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0197c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeSetHasMeasureFuncJNI
+signature => (JZ)V
+funcaddr => 0x79955c4984
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe01984
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeSetHasBaselineFuncJNI
+signature => (JZ)V
+funcaddr => 0x79955c499c
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe0199c
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodePrintJNI
+signature => (J)V
+funcaddr => 0x79955c49c0
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe019c0
+=======================
+
+=======================
+classname => com.facebook.yoga.YogaNative
+name => jni_YGNodeCloneJNI
+signature => (J)J
+funcaddr => 0x79955c49c4
+so_name => libkinda_android.so
+so_addr => 0x79947c3000
+funcaddr_sub_soaddr => 0xe019c4
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeInit
+signature => (Landroid/content/Context;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;JZ)V
+funcaddr => 0x7993622ad4
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x357ad4
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativePrefetchDefaultFontManager
+signature => (Ljava/lang/String;)V
+funcaddr => 0x799362760c
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x35c60c
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeInitNotInMainThread
+signature => (Landroid/content/Context;[Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
+funcaddr => 0x79936275f0
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x35c5f0
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeAfterInit
+signature => ()V
+funcaddr => 0x7993624af4
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x359af4
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeAttach
+signature => (Lio/flutter/embedding/engine/FlutterJNI;)J
+funcaddr => 0x799362b2c0
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3602c0
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeDestroy
+signature => (J)V
+funcaddr => 0x799362bb6c
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x360b6c
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeSpawn
+signature => (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/List;)Lio/flutter/embedding/engine/FlutterJNI;
+funcaddr => 0x799362bb94
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x360b94
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeRunBundleAndSnapshotFromLibrary
+signature => (JLjava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/res/AssetManager;Ljava/util/List;)V
+funcaddr => 0x799362c1d8
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3611d8
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeDispatchEmptyPlatformMessage
+signature => (JLjava/lang/String;I)V
+funcaddr => 0x799362c3c4
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3613c4
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeCleanupMessageData
+signature => (J)V
+funcaddr => 0x799362c4b4
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3614b4
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeDispatchPlatformMessage
+signature => (JLjava/lang/String;Ljava/nio/ByteBuffer;II)V
+funcaddr => 0x799362c4bc
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3614bc
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeInvokePlatformMessageResponseCallback
+signature => (JILjava/nio/ByteBuffer;I)V
+funcaddr => 0x799362c5fc
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3615fc
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeInvokePlatformMessageEmptyResponseCallback
+signature => (JI)V
+funcaddr => 0x799362c690
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x361690
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeNotifyLowMemoryWarning
+signature => (J)V
+funcaddr => 0x799362c6a8
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3616a8
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeGetBitmap
+signature => (J)Landroid/graphics/Bitmap;
+funcaddr => 0x799362c778
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x361778
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeSurfaceCreated
+signature => (JLandroid/view/Surface;)V
+funcaddr => 0x799362ca10
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x361a10
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeSurfaceWindowChanged
+signature => (JLandroid/view/Surface;)V
+funcaddr => 0x799362cc08
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x361c08
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeSurfaceChanged
+signature => (JII)V
+funcaddr => 0x799362cce0
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x361ce0
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeSurfaceDestroyed
+signature => (J)V
+funcaddr => 0x799362cda4
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x361da4
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeSetViewportMetrics
+signature => (JFIIIIIIIIIIIIIII[I[I[I)V
+funcaddr => 0x799362cde8
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x361de8
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeDispatchPointerDataPacket
+signature => (JLjava/nio/ByteBuffer;I)V
+funcaddr => 0x799362d0f4
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3620f4
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeDispatchSemanticsAction
+signature => (JIILjava/nio/ByteBuffer;I)V
+funcaddr => 0x799362d688
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362688
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeSetSemanticsEnabled
+signature => (JZ)V
+funcaddr => 0x799362d768
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362768
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeSetAccessibilityFeatures
+signature => (JI)V
+funcaddr => 0x799362d7b8
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3627b8
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeGetIsSoftwareRenderingEnabled
+signature => ()Z
+funcaddr => 0x799362d804
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362804
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeRegisterTexture
+signature => (JJLjava/lang/ref/WeakReference;)V
+funcaddr => 0x799362d81c
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x36281c
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeMarkTextureFrameAvailable
+signature => (JJ)V
+funcaddr => 0x799362d930
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362930
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeUnregisterTexture
+signature => (JJ)V
+funcaddr => 0x799362d978
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362978
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeLookupCallbackInformation
+signature => (J)Lio/flutter/view/FlutterCallbackInformation;
+funcaddr => 0x799362d9c0
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x3629c0
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeFlutterTextUtilsIsEmoji
+signature => (I)Z
+funcaddr => 0x799362daac
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362aac
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeFlutterTextUtilsIsEmojiModifier
+signature => (I)Z
+funcaddr => 0x799362dac0
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362ac0
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeFlutterTextUtilsIsEmojiModifierBase
+signature => (I)Z
+funcaddr => 0x799362dad4
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362ad4
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeFlutterTextUtilsIsVariationSelector
+signature => (I)Z
+funcaddr => 0x799362dae8
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362ae8
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeFlutterTextUtilsIsRegionalIndicator
+signature => (I)Z
+funcaddr => 0x799362dafc
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362afc
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeLoadDartDeferredLibrary
+signature => (JI[Ljava/lang/String;)V
+funcaddr => 0x799362db0c
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362b0c
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeUpdateJavaAssetManager
+signature => (JLandroid/content/res/AssetManager;Ljava/lang/String;)V
+funcaddr => 0x799362dc68
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362c68
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeDeferredComponentInstallFailure
+signature => (ILjava/lang/String;Z)V
+funcaddr => 0x799362dd0c
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x362d0c
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeOnVsync
+signature => (JJJ)V
+funcaddr => 0x799362f518
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x364518
+=======================
+
+=======================
+classname => io.flutter.embedding.engine.FlutterJNI
+name => nativeImageHeaderCallback
+signature => (JII)V
+funcaddr => 0x799394a59c
+so_name => libflutter.so
+so_addr => 0x79932cb000
+funcaddr_sub_soaddr => 0x67f59c
+=======================
+

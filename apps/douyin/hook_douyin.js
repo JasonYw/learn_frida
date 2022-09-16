@@ -99,7 +99,7 @@ function hook_RecyclerView(){
         panelC.LIZ.overload("com.ss.android.ugc.aweme.feed.model.Aweme",'boolean').implementation = function(aweme,int0){
             var result = this.LIZ(aweme,int0)
             // send(aweme.toString())
-            console.log(Object.keys(aweme))
+            console.log(aweme.toString())
             return result
         }
     })
@@ -143,7 +143,7 @@ function hook_okhttp3ssl(){
 
 }
 
-hook_okhttp3ssl()
+hook_RecyclerView()
 
 
 

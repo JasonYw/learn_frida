@@ -1,0 +1,27 @@
+syntax = "proto2";
+message dtg{
+    optional string  = 11;
+    optional string BIJ = 10;
+    optional string PGr = 3;
+    optional string agZh = 25;
+    optional string ahRq = 18;
+    optional jt ahfk = 2;
+    optional string ahfl = 4;
+    optional int32 ahfm = 5;
+    optional string ahfn = 6;
+    optional string ahfo = 9;
+    optional int32 ahfp = 13;
+    optional gxj ahfq = 23;
+    optional gxj ahfr = 24;
+    optional string ahfs = 19;
+    optional eqf ahft = 26;
+    optional string ajvu = 17;
+    optional string ajvv = 20;
+    optional string ajvw = 21;
+    optional int32 ajvx = 22;
+    optional string oqh = 16;
+    optional string oqi = 15;
+    optional int oqp = 14;
+    optional string sez = 7;
+    optional string xSA = 8;
+}
