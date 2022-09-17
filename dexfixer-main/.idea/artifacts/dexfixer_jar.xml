@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="dexfixer:jar">
+    <output-path>$PROJECT_DIR$/classes/artifacts/dexfixer_jar</output-path>
+    <root id="archive" name="dexfixer.jar">
+      <element id="module-output" name="dexfixer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/gson-2.7.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/junit.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

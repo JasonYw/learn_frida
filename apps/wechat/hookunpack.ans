@@ -1,0 +1,48 @@
+022-09-16 09:33:15,182 INFO    
+
+     _   _         _   _
+ ___| |_|_|___ ___| |_|_|___ ___
+| . | . | | -_|  _|  _| | . |   |
+|___|___| |___|___|_| |_|___|_|_|
+      |___|(object)inject(ion) v1.11.0
+
+     Runtime Mobile Exploration
+        by: @leonjza from @sensepost
+
+
+2022-09-16 09:33:15,200 INFO    
+[tab] for command suggestions
+
+2022-09-16 09:33:15,201 DEBUG   
+Using selector: SelectSelector
+
+2022-09-16 09:33:39,985 INFO    
+android hooking watch class_method com.tencent.mm.protocal.MMProtocalJni.unpack --dump-args --dump-backtrace --dump-return 
+
+2022-09-16 09:33:39,998 INFO    
+(agent) Attempting to watch class [32mcom.tencent.mm.protocal.MMProtocalJni[39m and method [32munpack[39m.
+
+2022-09-16 09:33:40,013 INFO    
+(agent) Hooking [32mcom.tencent.mm.protocal.MMProtocalJni[39m.[92munpack[39m([31mcom.tencent.mm.pointers.PByteArray, [B, [B, com.tencent.mm.pointers.PByteArray, com.tencent.mm.pointers.PInt, com.tencent.mm.pointers.PInt, com.tencent.mm.pointers.PInt, com.tencent.mm.pointers.PInt[39m)
+
+2022-09-16 09:33:40,117 INFO    
+(agent) Registering job [94m107310[39m. Type: [92mwatch-method for: com.tencent.mm.protocal.MMProtocalJni.unpack[39m
+
+2022-09-16 09:33:44,259 INFO    
+(agent) [90m[107310] [39mCalled [32mcom.tencent.mm.protocal.MMProtocalJni[39m.[92munpack[39m([31mcom.tencent.mm.pointers.PByteArray, [B, [B, com.tencent.mm.pointers.PByteArray, com.tencent.mm.pointers.PInt, com.tencent.mm.pointers.PInt, com.tencent.mm.pointers.PInt, com.tencent.mm.pointers.PInt[39m)
+
+2022-09-16 09:33:44,287 INFO    
+(agent) [90m[107310] [39mBacktrace:
+	com.tencent.mm.protocal.MMProtocalJni.unpack(Native Method)
+	com.tencent.mm.at.y.c(SourceFile:87)
+	com.tencent.mm.protocal.k$a.onTransact(SourceFile:135)
+	android.os.Binder.execTransact(Binder.java:697)
+	
+
+2022-09-16 09:33:44,289 INFO    
+(agent) [90m[107310] [39mArguments [32mcom.tencent.mm.protocal.MMProtocalJni[39m.[92munpack[39m([31mcom.tencent.mm.pointers.PByteArray@11a7b3f, -65,122,-58,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-4,1,-32,3,-32,3,0,0,0,-1,0,0,0,10,70,8,-97,3,18,65,4,86,-16,-117,82,-19,48,17,-74,-10,22,-67,57,62,21,27,-84,-116,-18,35,-69,38,59,-19,-3,-70,-118,-81,12,-111,62,16,52,100,117,-77,-122,-94,62,-104,-103,-92,48,36,66,64,-66,-31,82,63,-128,88,-82,-11,104,-79,14,-68,89,-2,-125,15,-42,56,-23,16,1,26,-23,2,-83,-16,57,-118,-98,64,32,105,96,-65,96,13,-10,-78,64,-12,83,-97,27,74,-63,64,-7,18,-18,-111,-88,-94,-31,-119,-19,41,-124,1,82,-100,25,5,-84,-127,104,96,80,80,30,103,112,-44,-74,-14,-56,-85,52,-82,-38,34,100,105,28,104,-16,-24,97,66,-106,-105,-7,-9,-40,83,-47,59,53,-105,-113,-49,-98,-122,-102,-46,-79,-28,-124,93,41,82,55,-111,125,-127,125,-79,-63,21,95,-104,70,-36,49,43,98,55,5,-12,-75,20,30,-4,126,-43,10,-23,-45,-47,12,-34,66,-90,-44,-63,-46,-59,-60,126,83,-53,94,-91,124,92,93,41,54,98,-108,124,-125,-116,-15,86,95,69,-7,-124,12,-120,-105,111,-44,-49,-8,92,74,18,84,67,-53,-69,117,102,-40,114,-68,79,37,38,-9,-3,126,125,-9,119,-9,-94,-108,-89,20,11,14,-1,23,20,46,-23,76,-100,-56,68,-87,66,-40,-116,52,-31,-78,40,-73,109,-108,82,43,-65,120,117,8,-109,-87,-9,88,-33,-77,-14,-122,-93,-115,98,19,120,-20,-97,-95,-84,-90,7,-38,67,106,-81,20,27,31,-48,91,-85,-43,18,-67,-122,-87,-25,99,87,116,-21,-45,67,93,108,-2,2,115,15,-49,-49,57,-23,-80,-31,93,-78,95,-76,80,-37,-7,-37,-44,127,57,17,-9,41,37,-58,-1,0,13,17,101,-6,-68,-111,-87,-2,-28,57,56,17,43,55,-43,50,-4,-102,21,-65,-115,-11,-2,-83,-27,-53,87,-109,15,29,72,16,62,-18,88,-47,8,25,-51,91,28,124,44,120,-34,32,108,-88,106,-67,16,-110,33,60,-58,-60,-83,44,-84,-53,-99,41,14,-110,-21,121,-128,-91,-38,125,-37,22,-111,-96,-29,-25,-71,-45,53,78,99,-56,81,58,-29,34,70,48,68,2,32,88,-86,-39,-108,73,82,88,-5,104,2,-3,-59,-76,-90,95,93,-67,-29,42,-93,-24,56,-121,51,-39,-119,97,42,-124,-52,-24,-112,2,32,34,42,-44,-79,-9,60,-114,33,-88,-60,-48,80,-22,-11,97,-64,110,-49,-23,120,-83,-2,37,-46,-85,32,-6,14,102,-75,-65,15, , com.tencent.mm.pointers.PByteArray@b8ddc0c, com.tencent.mm.pointers.PInt@1ba8955, com.tencent.mm.pointers.PInt@f028f6a, com.tencent.mm.pointers.PInt@1c58c5b, com.tencent.mm.pointers.PInt@b42acf8[39m)
+
+2022-09-16 09:33:44,292 INFO    
+(agent) [90m[107310] [39mReturn Value: [31mtrue[39m
+
+2022-09-16 09:34:01,678 INFO    
