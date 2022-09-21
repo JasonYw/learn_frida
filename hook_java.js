@@ -27,6 +27,34 @@ function showStacks(this) {
 }
 
 
+//过简单的root
+//吐司
+function hook_toast(){
+    Java.perform(function(){
+        var toast = Java.use('android.widget.Toast')
+        toast.show.implementation = function(){
+            console.log(4)
+            showStacks()
+            return this.show()
+        }
+    })
+}
+
+//HOOK STRING
+function hook_string(){
+    Java.perform(function(){
+        var hook_string = Java.use('java.lang.String')
+        for(var k =0;k<hook_string['getBytes'].overloads.length;k++){
+            hook_string.getBytes.overloads[k].implementation = function(argumensts){
+                showStacks()
+                return this.getBytes.apply(this,argumensts)
+            }
+        }
+    })
+
+}
+
+
 //so层打印堆栈
 //obj传递this即可
 function print_trace(obj){
