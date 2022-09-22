@@ -1,6 +1,3 @@
-
-
-
 function print_arg(addr){
     var module = Process.findRangeByAddress(addr)
     if(module != null) return hexdump(addr) + "\n"
