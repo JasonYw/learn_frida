@@ -157,18 +157,34 @@ function AesEncryptionHelper(){
 
 function Cipher(){
     Java.perform(function(){
+        var SecretKeySpec = Java.use("javax.crypto.spec.SecretKeySpec")
+        var IvParameterSpec = Java.use("javax.crypto.spec.IvParameterSpec")
         var Cipher = Java.use("javax.crypto.Cipher")
-        Cipher.init.implementation = function(a,b,c){
+        Cipher.init.overload('int', 'java.security.Key', 'java.security.spec.AlgorithmParameterSpec').implementation = function(a,b,c){
             console.log(a)
-            console.log(b)
-            console.log(c)
+            var b_ = Java.cast(b,SecretKeySpec)
+            var c_ = Java.cast(c,IvParameterSpec)
+            console.log(b.getEncoded())
+            console.log(c_.getIV())
             return this.init(a,b,c)
         }
     })
 }
 
+// io.rong.push.pushconfig
+function PushConfig(){
+    Java.perform(function(){
+        var PushConfig = Java.use("io.rong.push.pushconfig.PushConfig")
+        PushConfig.getAppKey.implementation = function(){
+            var result = this.getAppKey()
+            console.log(result)
+            return result
+        }
+    })
 
-// hook_exit()
+}
+hook_exit()
 // hook_hashmap()
-AesEncryptionHelper()
+// AesEncryptionHelper()
 // Cipher()
+PushConfig()

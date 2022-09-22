@@ -1,0 +1,15 @@
+Error: java.lang.ClassNotFoundException: Didn't find class "io.rong.push.pushconfig.PushConfig" on path: DexPathList[[zip file "/data/app/com.peopledailychina.activity-QGgpbL8rzYjaC2_XZfNkdw==/base.apk"],nativeLibraryDirectories=[/data/app/com.peopledailychina.activity-QGgpbL8rzYjaC2_XZfNkdw==/lib/arm64, /data/app/com.peopledailychina.activity-QGgpbL8rzYjaC2_XZfNkdw==/base.apk!/lib/arm64-v8a, /system/lib64]]
+    at <anonymous> (frida/node_modules/frida-java-bridge/lib/env.js:124)
+    at <anonymous> (frida/node_modules/frida-java-bridge/lib/class-factory.js:449)
+    at value (frida/node_modules/frida-java-bridge/lib/class-factory.js:819)
+    at _make (frida/node_modules/frida-java-bridge/lib/class-factory.js:112)
+    at use (frida/node_modules/frida-java-bridge/lib/class-factory.js:63)
+    at use (frida/node_modules/frida-java-bridge/index.js:258)
+    at <anonymous> (/frida/repl-2.js:177)
+    at <anonymous> (frida/node_modules/frida-java-bridge/lib/vm.js:12)
+    at _performPendingVmOps (frida/node_modules/frida-java-bridge/index.js:250)
+    at <anonymous> (frida/node_modules/frida-java-bridge/index.js:242)
+    at apply (native)
+    at ne (frida/node_modules/frida-java-bridge/lib/class-factory.js:620)
+    at <anonymous> (frida/node_modules/frida-java-bridge/lib/class-factory.js:598)
+exit hooked 0

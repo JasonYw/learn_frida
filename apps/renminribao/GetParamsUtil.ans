@@ -1,0 +1,507 @@
+[35;01mr0tracer begin ... ![39;49;00m
+[31;01mstart[39;49;00m
+[31;01mBegin Search Class...[39;49;00m
+tracerpid replaced: TracerPid:	0
+[30;01mFound Class => com.peopledaily.common.http.GetParamsUtil[39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.addGlobalParams [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.addUAHeader [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.filterCacheKey [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.printNetworkRequest [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.sortParamsKey [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.tryInitUA [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.add [2 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.addAndFilterCache [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.addUrl [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.get [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.getParams [2 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.http.GetParamsUtil.$init [2 overload(s)][39;49;00m
+[32;01m	Spec: => 
+private native void com.peopledaily.common.http.GetParamsUtil.addGlobalParams()
+private native void com.peopledaily.common.http.GetParamsUtil.addUAHeader(org.xutils.http.RequestParams)
+private native boolean com.peopledaily.common.http.GetParamsUtil.filterCacheKey(java.lang.String)
+private native void com.peopledaily.common.http.GetParamsUtil.printNetworkRequest(java.lang.String,java.util.List,java.lang.String)
+private native java.util.List com.peopledaily.common.http.GetParamsUtil.sortParamsKey(java.util.List)
+private native void com.peopledaily.common.http.GetParamsUtil.tryInitUA()
+public native void com.peopledaily.common.http.GetParamsUtil.add(java.lang.String,java.lang.String)
+public native void com.peopledaily.common.http.GetParamsUtil.add(java.lang.String,java.lang.String,boolean)
+public native void com.peopledaily.common.http.GetParamsUtil.addAndFilterCache(java.lang.String,java.lang.String)
+public native void com.peopledaily.common.http.GetParamsUtil.addUrl(java.lang.String)
+public native java.lang.String com.peopledaily.common.http.GetParamsUtil.get(java.lang.String)
+public native org.xutils.http.RequestParams com.peopledaily.common.http.GetParamsUtil.getParams()
+public native org.xutils.http.RequestParams com.peopledaily.common.http.GetParamsUtil.getParams(boolean)
+Tracing public com.peopledaily.common.http.GetParamsUtil()
+Tracing public com.peopledaily.common.http.GetParamsUtil(java.lang.String)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mSearch Class Completed![39;49;00m
+[32;01mOn Total Tracing :1 classes :
+com.peopledaily.common.http.GetParamsUtil
+Start Tracing ...[39;49;00m
+tracerpid replaced: TracerPid:	0
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url =>  => ""
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@eeaf53e 	[Ljava.lang.reflect.Field;@eeaf53e => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.tryInitUA
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.tryInitUA(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.<init>(GetParamsUtil.java:49)
+	at com.peopledaily.common.http.GetParamsUtil.<init>(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:178)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.common.http.GetParamsUtil.tryInitUA[39;49;00m
+[33;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => null => null
+java.lang.String 	url => null => null
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@c1851f9 	[Ljava.lang.reflect.Field;@c1851f9 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.$init
+arg[0]: MineApi/login => "MineApi/login"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.<init>(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:178)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.common.http.GetParamsUtil.$init[39;49;00m
+[32;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@e8314b5 	[Ljava.lang.reflect.Field;@e8314b5 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.add
+arg[0]: mobile => "mobile"
+arg[1]: 15801367777 => "15801367777"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.add(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:180)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.common.http.GetParamsUtil.add[39;49;00m
+[36;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@69e76bb 	[Ljava.lang.reflect.Field;@69e76bb => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.add
+arg[0]: device_name => "device_name"
+arg[1]: Pixel 2 => "Pixel 2"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.add(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:184)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.common.http.GetParamsUtil.add[39;49;00m
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@69d4731 	[Ljava.lang.reflect.Field;@69d4731 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.add
+arg[0]: password => "password"
+arg[1]: 4C196B29E085E57269FC151945F559B9 => "4C196B29E085E57269FC151945F559B9"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.add(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:185)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.common.http.GetParamsUtil.add[39;49;00m
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@76c7984 	[Ljava.lang.reflect.Field;@76c7984 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.filterCacheKey
+arg[0]: device_name => "device_name"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.filterCacheKey(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: false => false
+*** exiting com.peopledaily.common.http.GetParamsUtil.filterCacheKey[39;49;00m
+[32;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@dfb55a2 	[Ljava.lang.reflect.Field;@dfb55a2 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.filterCacheKey
+arg[0]: password => "password"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.filterCacheKey(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: false => false
+*** exiting com.peopledaily.common.http.GetParamsUtil.filterCacheKey[39;49;00m
+[35;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@5f9a9f0 	[Ljava.lang.reflect.Field;@5f9a9f0 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.filterCacheKey
+arg[0]: mobile => "mobile"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.filterCacheKey(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: false => false
+*** exiting com.peopledaily.common.http.GetParamsUtil.filterCacheKey[39;49;00m
+[35;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@15d29ee 	[Ljava.lang.reflect.Field;@15d29ee => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.addGlobalParams
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.addGlobalParams(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.common.http.GetParamsUtil.addGlobalParams[39;49;00m
+[35;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@2e7751c 	[Ljava.lang.reflect.Field;@2e7751c => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.sortParamsKey
+arg[0]: [object Object] => "<instance: java.util.List, $className: java.util.ArrayList>"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.sortParamsKey(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: [object Object] => "<instance: java.util.List, $className: java.util.ArrayList>"
+*** exiting com.peopledaily.common.http.GetParamsUtil.sortParamsKey[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@4f5f6fa 	[Ljava.lang.reflect.Field;@4f5f6fa => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.printNetworkRequest
+arg[0]: https://app.peopleapp.com/Api/700/MineApi/login => "https://app.peopleapp.com/Api/700/MineApi/login"
+arg[1]: [object Object] => "<instance: java.util.List, $className: java.util.ArrayList>"
+arg[2]: 5904bc8f9e4b8418cf6ca6f081ada6f7 => "5904bc8f9e4b8418cf6ca6f081ada6f7"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.printNetworkRequest(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.common.http.GetParamsUtil.printNetworkRequest[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@184c708 	[Ljava.lang.reflect.Field;@184c708 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.addUAHeader
+arg[0]: https://app.peopleapp.com/Api/700/MineApi/login?<city=&citycode=&device=a07b3c0b-9940-384e-be0b-95e600ec9016&device_model=Pixel 2&device_name=Pixel 2&device_os=Android 8.1.0&device_product=Google&device_size=1080*1794&device_type=1&district=&fake_id=271311371&interface_code=7244&latitude=&longitude=&mobile=15801367777&nonce=TOoWrnjfMMLfHkws&password=4C196B29E085E57269FC151945F559B9&province=&province_code=196943954&timestamp=1663832409&version=7.2.4.4&securitykey=5904bc8f9e4b8418cf6ca6f081ada6f7> => "<instance: org.xutils.http.RequestParams>"
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.addUAHeader(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.common.http.GetParamsUtil.addUAHeader[39;49;00m
+[33;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.common.http.GetParamsUtil
+java.util.List 	filterCacheKey => undefined => undefined
+java.util.Map 	paramMap => [object Object] => "<instance: java.util.Map, $className: java.util.HashMap>"
+java.lang.String 	url => MineApi/login => "MineApi/login"
+java.lang.String 	GLOBAL_PARAMS_KEY => securitykey => "securitykey"
+java.lang.String 	LOG_TAG => GetParamsUtil => "GetParamsUtil"
+int 	mConnectTimeOutSpace => 5000 => 5000
+java.lang.String 	sUSER_AGENT_LOCAL => DailyNewspaper/7.2.4.4 => "DailyNewspaper/7.2.4.4"
+java.lang.String 	sUSER_AGENT_SYSTEM => Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1) => "Dalvik/2.1.0 (Linux; U; Android 8.1.0; Pixel 2 Build/OPM4.171019.021.Q1)"
+[Ljava.lang.reflect.Field;@633c397 	[Ljava.lang.reflect.Field;@633c397 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.common.http.GetParamsUtil.getParams
+arg[0]: true => true
+java.lang.Throwable
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: https://app.peopleapp.com/Api/700/MineApi/login?<city=&citycode=&device=a07b3c0b-9940-384e-be0b-95e600ec9016&device_model=Pixel 2&device_name=Pixel 2&device_os=Android 8.1.0&device_product=Google&device_size=1080*1794&device_type=1&district=&fake_id=271311371&interface_code=7244&latitude=&longitude=&mobile=15801367777&nonce=TOoWrnjfMMLfHkws&password=4C196B29E085E57269FC151945F559B9&province=&province_code=196943954&timestamp=1663832409&version=7.2.4.4&securitykey=5904bc8f9e4b8418cf6ca6f081ada6f7> => "<instance: org.xutils.http.RequestParams>"
+*** exiting com.peopledaily.common.http.GetParamsUtil.getParams[39;49;00m
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
