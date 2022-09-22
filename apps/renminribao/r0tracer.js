@@ -241,10 +241,6 @@ function hook(white, black, target = null) {
 function main() {
     Java.perform(function () {
         console.Purple("r0tracer begin ... !")
-        var sys = Java.use("java.lang.System");
-        sys.exit.overload("int").implementation = function(var_0) {
-            console.log("java.lang.System.exit(I)V  // We avoid exiting the application  :)");
-        };
         //0. 增加精简模式，就是以彩虹色只显示进出函数。默认是关闭的，注释此行打开精简模式。
         //isLite = true;
         /*
@@ -255,7 +251,7 @@ function main() {
         //B. 黑白名单trace多个函数，第一个参数是白名单(包含关键字)，第二个参数是黑名单(不包含的关键字)
         // hook("javax.crypto.Cipher", "$");
         //C. 报某个类找不到时，将某个类名填写到第三个参数，比如找不到com.roysue.check类。（前两个参数依旧是黑白名单）
-        hook("","","com.peopledailychina.activity.application.NewsApplication");        
+        hook("com.peopledaily.common.utils.encrtption");        
     })
 }
 /*
@@ -264,9 +260,9 @@ function main() {
 //在spawn模式下，hook系统API时如javax.crypto.Cipher建议使用setImmediate立即执行，不需要延时
 //在spawn模式下，hook应用自己的函数或含壳时，建议使用setTimeout并给出适当的延时(500~5000)
 */
-// setImmediate(main)
+setImmediate(main)
 //
-setTimeout(main, 2000);
+// setTimeout(main, 2000);
 
 
 // 玄之又玄，众妙之门
