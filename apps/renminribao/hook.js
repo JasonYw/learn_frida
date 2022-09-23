@@ -29,11 +29,24 @@ function hook_hashmap(){
 function hook_exit(){
 
     Java.perform(function () {
-        var sys = Java.use("java.lang.System");
-        sys.exit.overload("int").implementation = function(var_0) {
+        var Sys = Java.use("java.lang.System");
+        var Random = Java.use("java.util.Random")
+        Sys.exit.overload("int").implementation = function(var_0) {
             console.log('exit hooked',var_0)
-        };
-    });
+        }
+        Sys.currentTimeMillis.implementation = function(){
+            var result = this.currentTimeMillis()
+            console.log('currentTimeMillis hooked => ',result)
+            return result
+        }
+        Random.nextInt.overload('int').implementation = function(args){
+            var result = this.nextInt(args)
+            console.log('nextInt hooked !','args => ',args,'result => ',result)
+            return result
+        }
+        
+
+    })
 
 }
 
@@ -183,6 +196,12 @@ function PushConfig(){
     })
 
 }
+
+
+function randomAndtimer(){
+
+}
+
 hook_exit()
 // hook_hashmap()
 // AesEncryptionHelper()

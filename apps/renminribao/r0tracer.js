@@ -251,7 +251,7 @@ function main() {
         //B. 黑白名单trace多个函数，第一个参数是白名单(包含关键字)，第二个参数是黑名单(不包含的关键字)
         // hook("javax.crypto.Cipher", "$");
         //C. 报某个类找不到时，将某个类名填写到第三个参数，比如找不到com.roysue.check类。（前两个参数依旧是黑白名单）
-        hook("com.peopledaily.common.utils.encrtption.MD5Helper");        
+        hook("com.peopledailychina.activity.listener.recycler.detector.PerLoadScrollDetector");        
     })
 }
 /*

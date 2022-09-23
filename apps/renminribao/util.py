@@ -1,3 +1,9 @@
+appkey = '585e2e0e7666137e67000274'
+time = '1663899022693'
+random = '11'
 
-a = bytearray([98,49,101,55,57,52,102,48,97,50,98,98,102,50,56,51])
-print(a.decode('utf-8'))
+appkey_re = ''.join(reversed(appkey))
+print(appkey_re)
+
+
+ 
