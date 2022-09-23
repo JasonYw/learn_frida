@@ -34,20 +34,27 @@ function hook_exit(){
         Sys.exit.overload("int").implementation = function(var_0) {
             console.log('exit hooked',var_0)
         }
-        Sys.currentTimeMillis.implementation = function(){
-            var result = this.currentTimeMillis()
-            console.log('currentTimeMillis hooked => ',result)
-            return result
-        }
-        Random.nextInt.overload('int').implementation = function(args){
-            var result = this.nextInt(args)
-            console.log('nextInt hooked !','args => ',args,'result => ',result)
-            return result
-        }
+        // Sys.currentTimeMillis.implementation = function(){
+        //     var result = this.currentTimeMillis()
+        //     console.log('currentTimeMillis hooked => ',result)
+        //     return result
+        // }
+        // Random.nextInt.overload('int').implementation = function(args){
+        //     var result = this.nextInt(args)
+        //     console.log('nextInt hooked !','args => ',args,'result => ',result)
+        //     return result
+        // }
         
 
     })
 
+}
+
+
+function print_arg(addr){
+    var module = Process.findRangeByAddress(addr)
+    if(module != null) return hexdump(addr) + "\n"
+    return ptr(addr) + "\n"
 }
 
 
@@ -198,12 +205,72 @@ function PushConfig(){
 }
 
 
-function randomAndtimer(){
-
+function sodump(so_name){
+    Java.perform(function(){
+        var currentapp = Java.use("android.app.ActivityThread").currentApplication()
+        var dir = currentapp.getApplicationContext().getFilesDir().getPath()
+        var libso = Process.getModuleByName(so_name)
+        console.log("[name]",libso.name)
+        console.log("[base]",libso.base)
+        console.log("[size]",ptr(libso.size))
+        console.log("[path]",libso.path)
+        var file_path = dir + "/" + libso.name + "_" + libso.base + "_" + ptr(libso.size) + ".so"
+        var file_handle = new File(file_path,"wb")
+        if (file_handle && file_handle != null){
+            Memory.protect(ptr(libso.base),libso.size,"rwx")
+            var libso_buffer = ptr(libso.base).readByteArray(libso.size)
+            file_handle.write(libso_buffer)
+            file_handle.flush()
+            file_handle.close()
+            console.log("[dump]",file_path)
+        }
+    })
 }
 
+
+
+
+function hook_so_func(addr,paramsnum,funcname){
+    Interceptor.attach(addr,{
+        onEnter:function(args){
+            this.logs = []
+            this.params =[]
+            for(var i=0;i<paramsnum;i++){
+                this.params.push(args[i])
+                this.logs.push("args"+i+"-onEnter:"+print_arg(args[i]))
+            }
+        },
+        onLeave:function(retval){
+            for(var i=0;i<paramsnum;i++){
+                this.logs.push("args"+i+"-onLeave:"+print_arg(this.params[i]))
+            }
+            this.logs.push("retval onLeave=>"+print_arg(retval)+"\n")
+            console.log("funcname: ",funcname,"funcaddr: ",addr.toString(16),"====>")
+            this.logs.push("backtrace => \n")
+            this.logs.push(Thread.backtrace(this.context,Backtracer.FUZZY).map(DebugSymbol.fromAddress).join('\n')+'\n')
+            console.log(this.logs)
+            console.log('====================================================================\n')
+        }
+    })
+}
+
+
+
+function hook_suspected_function(targetSo,funcname,argnum) {
+    var funcPtr =Module.findExportByName(targetSo,funcname)
+    hook_so_func(funcPtr,argnum,funcname)
+  
+}
+
+
+// hook_suspected_function("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_NewNetWorkUtil_safeNetObject__Lorg_xutils_http_RequestParams_2ILcom_peopledaily_common_http_callback_NetDataCallback_2Ljava_lang_Class_2Ljava_lang_String_2",7)
+// hook_suspected_function("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_GetParamsUtil_getParams__Z",3)
+// hook_suspected_function("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_GetParamsUtil_tryInitUA__",2)
+
+        
 hook_exit()
 // hook_hashmap()
 // AesEncryptionHelper()
 // Cipher()
-PushConfig()
+// PushConfig()
+
