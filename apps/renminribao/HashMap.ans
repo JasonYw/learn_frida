@@ -1,0 +1,400 @@
+[35;01mr0tracer begin ... ![39;49;00m
+[31;01mstart[39;49;00m
+[31;01mBegin Search Class...[39;49;00m
+[30;01mFound Class => java.util.HashMap$EntryIterator[39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntryIterator.next [2 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntryIterator.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public java.lang.Object java.util.HashMap$EntryIterator.next()
+public final java.util.Map$Entry java.util.HashMap$EntryIterator.next()
+Tracing java.util.HashMap$EntryIterator(java.util.HashMap)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => java.util.HashMap$ValueIterator[39;49;00m
+[31;01mTracing Method : java.util.HashMap$ValueIterator.next [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$ValueIterator.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public final java.lang.Object java.util.HashMap$ValueIterator.next()
+Tracing java.util.HashMap$ValueIterator(java.util.HashMap)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => java.util.HashMap$TreeNode[39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.balanceDeletion [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.balanceInsertion [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.checkInvariants [1 overload(s)][39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class java.util.HashMap$EntryIterator
+java.util.HashMap 	this$0 => {app_end_data={"$screen_name":"com.peopledailychina.activity.activity.MainActivity","$title":"人民日报","event_timer":197676550,"track_timer":1663833170581,"$app_version":"7.2.4.4","$lib_version":"5.2.1"}} => "<instance: java.util.HashMap>"
+[Ljava.lang.reflect.Field;@e0c4669 	[Ljava.lang.reflect.Field;@e0c4669 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered java.util.HashMap$EntryIterator.next
+java.lang.Throwable
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at android.app.SharedPreferencesImpl$EditorImpl.commitToMemory(SharedPreferencesImpl.java:485)
+	at android.app.SharedPreferencesImpl$EditorImpl.apply(SharedPreferencesImpl.java:413)
+	at com.sensorsdata.analytics.android.sdk.data.persistent.PersistentIdentity.commit(PersistentIdentity.java:104)
+	at com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider.insert(SensorsDataContentProvider.java:279)
+	at com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider.insert(SensorsDataContentProvider.java:153)
+	at android.content.ContentProvider$Transport.insert(ContentProvider.java:265)
+	at android.content.ContentResolver.insert(ContentResolver.java:1539)
+	at com.sensorsdata.analytics.android.sdk.data.PersistentDataOperation.handleInsertUri(PersistentDataOperation.java:88)
+	at com.sensorsdata.analytics.android.sdk.data.PersistentDataOperation.insertData(PersistentDataOperation.java:43)
+	at com.sensorsdata.analytics.android.sdk.data.DbAdapter.commitAppEndData(DbAdapter.java:187)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks.generateAppEndData(SensorsDataActivityLifecycleCallbacks.java:417)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks.access$400(SensorsDataActivityLifecycleCallbacks.java:55)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks$1.handleMessage(SensorsDataActivityLifecycleCallbacks.java:191)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.os.HandlerThread.run(HandlerThread.java:65)
+
+retval: app_end_data={"$screen_name":"com.peopledailychina.activity.activity.MainActivity","$title":"人民日报","event_timer":197676550,"track_timer":1663833170581,"$app_version":"7.2.4.4","$lib_version":"5.2.1"} => "<instance: java.lang.Object, $className: java.util.HashMap$Node>"
+*** exiting java.util.HashMap$EntryIterator.next[39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.moveRootToFront [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.rotateLeft [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.rotateRight [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.tieBreakOrder [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.find [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.getTreeNode [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.putTreeVal [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.removeTreeNode [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.root [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.split [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.treeify [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.untreeify [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$TreeNode.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+static java.util.HashMap$TreeNode java.util.HashMap$TreeNode.balanceDeletion(java.util.HashMap$TreeNode,java.util.HashMap$TreeNode)
+static java.util.HashMap$TreeNode java.util.HashMap$TreeNode.balanceInsertion(java.util.HashMap$TreeNode,java.util.HashMap$TreeNode)
+static boolean java.util.HashMap$TreeNode.checkInvariants(java.util.HashMap$TreeNode)
+static void java.util.HashMap$TreeNode.moveRootToFront(java.util.HashMap$Node[],java.util.HashMap$TreeNode)
+static java.util.HashMap$TreeNode java.util.HashMap$TreeNode.rotateLeft(java.util.HashMap$TreeNode,java.util.HashMap$TreeNode)
+static java.util.HashMap$TreeNode java.util.HashMap$TreeNode.rotateRight(java.util.HashMap$TreeNode,java.util.HashMap$TreeNode)
+static int java.util.HashMap$TreeNode.tieBreakOrder(java.lang.Object,java.lang.Object)
+final java.util.HashMap$TreeNode java.util.HashMap$TreeNode.find(int,java.lang.Object,java.lang.Class)
+final java.util.HashMap$TreeNode java.util.HashMap$TreeNode.getTreeNode(int,java.lang.Object)
+final java.util.HashMap$TreeNode java.util.HashMap$TreeNode.putTreeVal(java.util.HashMap,java.util.HashMap$Node[],int,java.lang.Object,java.lang.Object)
+final void java.util.HashMap$TreeNode.removeTreeNode(java.util.HashMap,java.util.HashMap$Node[],boolean)
+final java.util.HashMap$TreeNode java.util.HashMap$TreeNode.root()
+final void java.util.HashMap$TreeNode.split(java.util.HashMap,java.util.HashMap$Node[],int,int)
+final void java.util.HashMap$TreeNode.treeify(java.util.HashMap$Node[])
+final java.util.HashMap$Node java.util.HashMap$TreeNode.untreeify(java.util.HashMap)
+Tracing java.util.HashMap$TreeNode(int,java.lang.Object,java.lang.Object,java.util.HashMap$Node)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => java.util.HashMap$Values[39;49;00m
+[31;01mTracing Method : java.util.HashMap$Values.clear [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Values.contains [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Values.forEach [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Values.iterator [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Values.size [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Values.spliterator [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Values.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public final void java.util.HashMap$Values.clear()
+public final boolean java.util.HashMap$Values.contains(java.lang.Object)
+public final void java.util.HashMap$Values.forEach(java.util.function.Consumer)
+public final java.util.Iterator java.util.HashMap$Values.iterator()
+public final int java.util.HashMap$Values.size()
+public final java.util.Spliterator java.util.HashMap$Values.spliterator()
+Tracing java.util.HashMap$Values(java.util.HashMap)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => [Ljava.util.HashMap$Node;[39;49;00m
+[32;01m	Spec: => 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => java.util.HashMap$KeyIterator[39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeyIterator.next [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeyIterator.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public final java.lang.Object java.util.HashMap$KeyIterator.next()
+Tracing java.util.HashMap$KeyIterator(java.util.HashMap)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => java.util.HashMap$KeySet[39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeySet.clear [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeySet.contains [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeySet.forEach [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeySet.iterator [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeySet.remove [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeySet.size [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeySet.spliterator [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$KeySet.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public final void java.util.HashMap$KeySet.clear()
+public final boolean java.util.HashMap$KeySet.contains(java.lang.Object)
+public final void java.util.HashMap$KeySet.forEach(java.util.function.Consumer)
+public final java.util.Iterator java.util.HashMap$KeySet.iterator()
+public final boolean java.util.HashMap$KeySet.remove(java.lang.Object)
+public final int java.util.HashMap$KeySet.size()
+public final java.util.Spliterator java.util.HashMap$KeySet.spliterator()
+Tracing java.util.HashMap$KeySet(java.util.HashMap)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => java.util.HashMap$Node[39;49;00m
+[31;01mTracing Method : java.util.HashMap$Node.equals [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Node.getKey [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Node.getValue [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Node.hashCode [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Node.setValue [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Node.toString [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$Node.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public final boolean java.util.HashMap$Node.equals(java.lang.Object)
+public final java.lang.Object java.util.HashMap$Node.getKey()
+public final java.lang.Object java.util.HashMap$Node.getValue()
+public final int java.util.HashMap$Node.hashCode()
+public final java.lang.Object java.util.HashMap$Node.setValue(java.lang.Object)
+public final java.lang.String java.util.HashMap$Node.toString()
+Tracing java.util.HashMap$Node(int,java.lang.Object,java.lang.Object,java.util.HashMap$Node)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => java.util.HashMap$EntrySet[39;49;00m
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => true => class java.util.HashMap$Node
+int 	hash => 947205088 => 947205088
+java.lang.Object 	key => sensorsdata_sdk_configuration => "<instance: java.lang.Object, $className: java.lang.String>"
+java.util.HashMap$Node 	next => null => null
+java.lang.Object 	value => {"v":"v2","configs":{"disableDebugMode":false,"autoTrackMode":-1,"disableSDK":false,"nv":"","effect_mode":0}} => "<instance: java.lang.Object, $className: java.lang.String>"
+[Ljava.lang.reflect.Field;@9b2218f 	[Ljava.lang.reflect.Field;@9b2218f => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered java.util.HashMap$Node.getKey
+java.lang.Throwable
+	at java.util.HashMap$Node.getKey(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:555)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.HashMap.putMapEntries(HashMap.java:511)
+	at java.util.HashMap.<init>(HashMap.java:489)
+	at android.app.SharedPreferencesImpl$EditorImpl.commitToMemory(SharedPreferencesImpl.java:463)
+	at android.app.SharedPreferencesImpl$EditorImpl.apply(SharedPreferencesImpl.java:413)
+	at com.sensorsdata.analytics.android.sdk.data.persistent.PersistentIdentity.commit(PersistentIdentity.java:104)
+	at com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider.insert(SensorsDataContentProvider.java:276)
+	at com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider.insert(SensorsDataContentProvider.java:153)
+	at android.content.ContentProvider$Transport.insert(ContentProvider.java:265)
+	at android.content.ContentResolver.insert(ContentResolver.java:1539)
+	at com.sensorsdata.analytics.android.sdk.data.PersistentDataOperation.handleInsertUri(PersistentDataOperation.java:88)
+	at com.sensorsdata.analytics.android.sdk.data.PersistentDataOperation.insertData(PersistentDataOperation.java:43)
+	at com.sensorsdata.analytics.android.sdk.data.DbAdapter.commitAppEndTime(DbAdapter.java:157)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks.generateAppEndData(SensorsDataActivityLifecycleCallbacks.java:418)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks.access$400(SensorsDataActivityLifecycleCallbacks.java:55)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks$1.handleMessage(SensorsDataActivityLifecycleCallbacks.java:191)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.os.HandlerThread.run(HandlerThread.java:65)
+
+retval: sensorsdata_sdk_configuration => "<instance: java.lang.Object, $className: java.lang.String>"
+*** exiting java.util.HashMap$Node.getKey[39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntrySet.clear [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntrySet.contains [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntrySet.forEach [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntrySet.iterator [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntrySet.remove [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntrySet.size [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntrySet.spliterator [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$EntrySet.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public final void java.util.HashMap$EntrySet.clear()
+public final boolean java.util.HashMap$EntrySet.contains(java.lang.Object)
+public final void java.util.HashMap$EntrySet.forEach(java.util.function.Consumer)
+public final java.util.Iterator java.util.HashMap$EntrySet.iterator()
+public final boolean java.util.HashMap$EntrySet.remove(java.lang.Object)
+public final int java.util.HashMap$EntrySet.size()
+public final java.util.Spliterator java.util.HashMap$EntrySet.spliterator()
+Tracing java.util.HashMap$EntrySet(java.util.HashMap)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => true => class java.util.HashMap$Node
+int 	hash => 947205088 => 947205088
+java.lang.Object 	key => sensorsdata_sdk_configuration => "<instance: java.lang.Object, $className: java.lang.String>"
+java.util.HashMap$Node 	next => null => null
+java.lang.Object 	value => {"v":"v2","configs":{"disableDebugMode":false,"autoTrackMode":-1,"disableSDK":false,"nv":"","effect_mode":0}} => "<instance: java.lang.Object, $className: java.lang.String>"
+[Ljava.lang.reflect.Field;@99e025 	[Ljava.lang.reflect.Field;@99e025 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered java.util.HashMap$Node.getValue
+java.lang.Throwable
+	at java.util.HashMap$Node.getValue(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:556)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.AbstractMap.toString(AbstractMap.java:554)
+	at java.util.HashMap$EntryIterator.next(Native Method)
+	at java.util.HashMap.putMapEntries(HashMap.java:511)
+	at java.util.HashMap.<init>(HashMap.java:489)
+	at android.app.SharedPreferencesImpl$EditorImpl.commitToMemory(SharedPreferencesImpl.java:463)
+	at android.app.SharedPreferencesImpl$EditorImpl.apply(SharedPreferencesImpl.java:413)
+	at com.sensorsdata.analytics.android.sdk.data.persistent.PersistentIdentity.commit(PersistentIdentity.java:104)
+	at com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider.insert(SensorsDataContentProvider.java:276)
+	at com.sensorsdata.analytics.android.sdk.data.SensorsDataContentProvider.insert(SensorsDataContentProvider.java:153)
+	at android.content.ContentProvider$Transport.insert(ContentProvider.java:265)
+	at android.content.ContentResolver.insert(ContentResolver.java:1539)
+	at com.sensorsdata.analytics.android.sdk.data.PersistentDataOperation.handleInsertUri(PersistentDataOperation.java:88)
+	at com.sensorsdata.analytics.android.sdk.data.PersistentDataOperation.insertData(PersistentDataOperation.java:43)
+	at com.sensorsdata.analytics.android.sdk.data.DbAdapter.commitAppEndTime(DbAdapter.java:157)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks.generateAppEndData(SensorsDataActivityLifecycleCallbacks.java:418)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks.access$400(SensorsDataActivityLifecycleCallbacks.java:55)
+	at com.sensorsdata.analytics.android.sdk.SensorsDataActivityLifecycleCallbacks$1.handleMessage(SensorsDataActivityLifecycleCallbacks.java:191)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.os.HandlerThread.run(HandlerThread.java:65)
+
+retval: {"v":"v2","configs":{"disableDebugMode":false,"autoTrackMode":-1,"disableSDK":false,"nv":"","effect_mode":0}} => "<instance: java.lang.Object, $className: java.lang.String>"
+*** exiting java.util.HashMap$Node.getValue[39;49;00m
+[30;01mFound Class => java.util.HashMap$HashIterator[39;49;00m
+[31;01mTracing Method : java.util.HashMap$HashIterator.hasNext [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$HashIterator.nextNode [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$HashIterator.remove [1 overload(s)][39;49;00m
+[31;01mTracing Method : java.util.HashMap$HashIterator.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public final boolean java.util.HashMap$HashIterator.hasNext()
+final java.util.HashMap$Node java.util.HashMap$HashIterator.nextNode()
+public final void java.util.HashMap$HashIterator.remove()
+Tracing java.util.HashMap$HashIterator(java.util.HashMap)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => java.util.HashMap[39;49;00m

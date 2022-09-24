@@ -1,0 +1,416 @@
+[35;01mr0tracer begin ... ![39;49;00m
+[31;01mstart[39;49;00m
+[31;01mBegin Search Class...[39;49;00m
+tracerpid replaced: TracerPid:	0
+[30;01mFound Class => com.peopledaily.common.utils.encrtption.MD5Helper[39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.MD5Helper.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public static native java.lang.String com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str(java.lang.String)
+Tracing public com.peopledaily.common.utils.encrtption.MD5Helper()
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => com.peopledaily.common.utils.encrtption.CompressHelper[39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.CompressHelper.compressForGzip [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.CompressHelper.compressForZip [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.CompressHelper.decompressForGzip [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.CompressHelper.decompressForZip [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.CompressHelper.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public static native java.lang.String com.peopledaily.common.utils.encrtption.CompressHelper.compressForGzip(java.lang.String)
+public static native java.lang.String com.peopledaily.common.utils.encrtption.CompressHelper.compressForZip(java.lang.String)
+public static native java.lang.String com.peopledaily.common.utils.encrtption.CompressHelper.decompressForGzip(java.lang.String)
+public static native java.lang.String com.peopledaily.common.utils.encrtption.CompressHelper.decompressForZip(java.lang.String)
+Tracing public com.peopledaily.common.utils.encrtption.CompressHelper()
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => com.peopledaily.common.utils.encrtption.Base64Helper[39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.Base64Helper.decode [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.Base64Helper.encode [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.Base64Helper.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public static byte[] com.peopledaily.common.utils.encrtption.Base64Helper.decode(char[]) throws java.lang.Exception
+public static native char[] com.peopledaily.common.utils.encrtption.Base64Helper.encode(byte[])
+Tracing public com.peopledaily.common.utils.encrtption.Base64Helper()
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => com.peopledaily.common.utils.encrtption.AesEncryptionHelper[39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.AesEncryptionHelper.byte2hex [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createIV [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createKey [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt [2 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt [2 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.AesEncryptionHelper.hex2byte [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.AesEncryptionHelper.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public static java.lang.String com.peopledaily.common.utils.encrtption.AesEncryptionHelper.byte2hex(byte[])
+private static native javax.crypto.spec.IvParameterSpec com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createIV(java.lang.String)
+private static native javax.crypto.spec.SecretKeySpec com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createKey(java.lang.String)
+public static native java.lang.String com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(java.lang.String,java.lang.String,java.lang.String)
+public static byte[] com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(byte[],java.lang.String,java.lang.String)
+public static native java.lang.String com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(java.lang.String,java.lang.String,java.lang.String)
+public static byte[] com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(byte[],java.lang.String,java.lang.String)
+private static native byte[] com.peopledaily.common.utils.encrtption.AesEncryptionHelper.hex2byte(java.lang.String)
+Tracing public com.peopledaily.common.utils.encrtption.AesEncryptionHelper()
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mSearch Class Completed![39;49;00m
+[32;01mOn Total Tracing :4 classes :
+com.peopledaily.common.utils.encrtption.MD5Helper
+com.peopledaily.common.utils.encrtption.CompressHelper
+com.peopledaily.common.utils.encrtption.Base64Helper
+com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+Start Tracing ...[39;49;00m
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+[34;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createKey
+arg[0]: a3266bc937f6e301 => "a3266bc937f6e301"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createKey(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(AesEncryptionHelper.java:73)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:648)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: javax.crypto.spec.SecretKeySpec@1664c => "<instance: javax.crypto.spec.SecretKeySpec>"
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createKey[39;49;00m
+[34;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createIV
+arg[0]: b1e794f0a2bbf283 => "b1e794f0a2bbf283"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createIV(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(AesEncryptionHelper.java:75)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:648)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: javax.crypto.spec.IvParameterSpec@6c1c0dc => "<instance: javax.crypto.spec.IvParameterSpec>"
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createIV[39;49;00m
+[35;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt
+arg[0]: 48,49,50,51,52,53,54,55,56,57,97,98,99 => [48,49,50,51,52,53,54,55,56,57,97,98,99]
+arg[1]: a3266bc937f6e301 => "a3266bc937f6e301"
+arg[2]: b1e794f0a2bbf283 => "b1e794f0a2bbf283"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:648)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: 76,25,107,41,-32,-123,-27,114,105,-4,21,25,69,-11,89,-71 => [76,25,107,41,-32,-123,-27,114,105,-4,21,25,69,-11,89,-71]
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt[39;49;00m
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.byte2hex
+arg[0]: 76,25,107,41,-32,-123,-27,114,105,-4,21,25,69,-11,89,-71 => [76,25,107,41,-32,-123,-27,114,105,-4,21,25,69,-11,89,-71]
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.byte2hex(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:648)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: 4C196B29E085E57269FC151945F559B9 => "4C196B29E085E57269FC151945F559B9"
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.byte2hex[39;49;00m
+[36;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt
+arg[0]: 0123456789abc => "0123456789abc"
+arg[1]: a3266bc937f6e301 => "a3266bc937f6e301"
+arg[2]: b1e794f0a2bbf283 => "b1e794f0a2bbf283"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt(Native Method)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:648)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: 4C196B29E085E57269FC151945F559B9 => "4C196B29E085E57269FC151945F559B9"
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.encrypt[39;49;00m
+[33;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.MD5Helper
+
+*** entered com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str
+arg[0]: ||a07b3c0b-9940-384e-be0b-95e600ec9016|Pixel 2|Pixel 2|Android 8.1.0|Google|1080*1794|1||271311371|7244|||15801367777|HayPX_`WPqbJyNgN|4C196B29E085E57269FC151945F559B9||181844583|1663817309|7.2.4.4rmrbsecurity$#%sutf3d247a75d9c7c4 => "||a07b3c0b-9940-384e-be0b-95e600ec9016|Pixel 2|Pixel 2|Android 8.1.0|Google|1080*1794|1||271311371|7244|||15801367777|HayPX_`WPqbJyNgN|4C196B29E085E57269FC151945F559B9||181844583|1663817309|7.2.4.4rmrbsecurity$#%sutf3d247a75d9c7c4"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: e9519e413a76347ba367ee41df7f62bc => "e9519e413a76347ba367ee41df7f62bc"
+*** exiting com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str[39;49;00m
+[35;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.hex2byte
+arg[0]: 934752355870b8a8d1e5c236a7bee9f8ac6b6cdb07972135fe8696697e634f6f61379d2847be3a6bf2420b45297f17e9a777a1b262474a48201310a279514e07c988cda26bbc635542ae1f5c51a101f83ac1f571b07bf7c82abbcfafd8f5670f3e5b23e9af23e2559ffb4aff062b8dd776505e26cf45a309383112129580e9463454ad7fa1e4a2403fe6925fc8d87b0e => "934752355870b8a8d1e5c236a7bee9f8ac6b6cdb07972135fe8696697e634f6f61379d2847be3a6bf2420b45297f17e9a777a1b262474a48201310a279514e07c988cda26bbc635542ae1f5c51a101f83ac1f571b07bf7c82abbcfafd8f5670f3e5b23e9af23e2559ffb4aff062b8dd776505e26cf45a309383112129580e9463454ad7fa1e4a2403fe6925fc8d87b0e"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.hex2byte(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.verifyLegalHttpData(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.proxyVerifyHttpResult(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:313)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: -109,71,82,53,88,112,-72,-88,-47,-27,-62,54,-89,-66,-23,-8,-84,107,108,-37,7,-105,33,53,-2,-122,-106,105,126,99,79,111,97,55,-99,40,71,-66,58,107,-14,66,11,69,41,127,23,-23,-89,119,-95,-78,98,71,74,72,32,19,16,-94,121,81,78,7,-55,-120,-51,-94,107,-68,99,85,66,-82,31,92,81,-95,1,-8,58,-63,-11,113,-80,123,-9,-56,42,-69,-49,-81,-40,-11,103,15,62,91,35,-23,-81,35,-30,85,-97,-5,74,-1,6,43,-115,-41,118,80,94,38,-49,69,-93,9,56,49,18,18,-107,-128,-23,70,52,84,-83,127,-95,-28,-94,64,63,-26,-110,95,-56,-40,123,14 => [-109,71,82,53,88,112,-72,-88,-47,-27,-62,54,-89,-66,-23,-8,-84,107,108,-37,7,-105,33,53,-2,-122,-106,105,126,99,79,111,97,55,-99,40,71,-66,58,107,-14,66,11,69,41,127,23,-23,-89,119,-95,-78,98,71,74,72,32,19,16,-94,121,81,78,7,-55,-120,-51,-94,107,-68,99,85,66,-82,31,92,81,-95,1,-8,58,-63,-11,113,-80,123,-9,-56,42,-69,-49,-81,-40,-11,103,15,62,91,35,-23,-81,35,-30,85,-97,-5,74,-1,6,43,-115,-41,118,80,94,38,-49,69,-93,9,56,49,18,18,-107,-128,-23,70,52,84,-83,127,-95,-28,-94,64,63,-26,-110,95,-56,-40,123,14]
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.hex2byte[39;49;00m
+[34;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createKey
+arg[0]: 56d48f3c3a684d97 => "56d48f3c3a684d97"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createKey(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(AesEncryptionHelper.java:104)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.verifyLegalHttpData(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.proxyVerifyHttpResult(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:313)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: javax.crypto.spec.SecretKeySpec@16770 => "<instance: javax.crypto.spec.SecretKeySpec>"
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createKey[39;49;00m
+[34;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createIV
+arg[0]: db78c962e4606255 => "db78c962e4606255"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createIV(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(AesEncryptionHelper.java:106)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.verifyLegalHttpData(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.proxyVerifyHttpResult(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:313)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: javax.crypto.spec.IvParameterSpec@5758255 => "<instance: javax.crypto.spec.IvParameterSpec>"
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.createIV[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt
+arg[0]: -109,71,82,53,88,112,-72,-88,-47,-27,-62,54,-89,-66,-23,-8,-84,107,108,-37,7,-105,33,53,-2,-122,-106,105,126,99,79,111,97,55,-99,40,71,-66,58,107,-14,66,11,69,41,127,23,-23,-89,119,-95,-78,98,71,74,72,32,19,16,-94,121,81,78,7,-55,-120,-51,-94,107,-68,99,85,66,-82,31,92,81,-95,1,-8,58,-63,-11,113,-80,123,-9,-56,42,-69,-49,-81,-40,-11,103,15,62,91,35,-23,-81,35,-30,85,-97,-5,74,-1,6,43,-115,-41,118,80,94,38,-49,69,-93,9,56,49,18,18,-107,-128,-23,70,52,84,-83,127,-95,-28,-94,64,63,-26,-110,95,-56,-40,123,14 => [-109,71,82,53,88,112,-72,-88,-47,-27,-62,54,-89,-66,-23,-8,-84,107,108,-37,7,-105,33,53,-2,-122,-106,105,126,99,79,111,97,55,-99,40,71,-66,58,107,-14,66,11,69,41,127,23,-23,-89,119,-95,-78,98,71,74,72,32,19,16,-94,121,81,78,7,-55,-120,-51,-94,107,-68,99,85,66,-82,31,92,81,-95,1,-8,58,-63,-11,113,-80,123,-9,-56,42,-69,-49,-81,-40,-11,103,15,62,91,35,-23,-81,35,-30,85,-97,-5,74,-1,6,43,-115,-41,118,80,94,38,-49,69,-93,9,56,49,18,18,-107,-128,-23,70,52,84,-83,127,-95,-28,-94,64,63,-26,-110,95,-56,-40,123,14]
+arg[1]: 56d48f3c3a684d97 => "56d48f3c3a684d97"
+arg[2]: db78c962e4606255 => "db78c962e4606255"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.verifyLegalHttpData(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.proxyVerifyHttpResult(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:313)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: 123,34,114,101,115,117,108,116,34,58,123,34,101,114,114,111,114,67,111,100,101,34,58,34,49,34,44,34,101,114,114,111,114,77,115,103,34,58,34,92,117,55,53,50,56,92,117,54,50,51,55,92,117,53,52,48,100,92,117,54,50,49,54,92,117,53,98,99,54,92,117,55,56,48,49,92,117,57,53,49,57,92,117,56,98,101,102,34,44,34,116,105,109,101,115,116,97,109,112,34,58,49,54,54,51,56,49,55,51,49,48,125,44,34,100,97,116,97,34,58,34,34,125,95,49,56,49,56,52,52,53,56,51 => [123,34,114,101,115,117,108,116,34,58,123,34,101,114,114,111,114,67,111,100,101,34,58,34,49,34,44,34,101,114,114,111,114,77,115,103,34,58,34,92,117,55,53,50,56,92,117,54,50,51,55,92,117,53,52,48,100,92,117,54,50,49,54,92,117,53,98,99,54,92,117,55,56,48,49,92,117,57,53,49,57,92,117,56,98,101,102,34,44,34,116,105,109,101,115,116,97,109,112,34,58,49,54,54,51,56,49,55,51,49,48,125,44,34,100,97,116,97,34,58,34,34,125,95,49,56,49,56,52,52,53,56,51]
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt[39;49;00m
+[33;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.AesEncryptionHelper
+java.lang.String 	CipherMode => AES/CBC/PKCS5Padding => "AES/CBC/PKCS5Padding"
+
+*** entered com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt
+arg[0]: 934752355870b8a8d1e5c236a7bee9f8ac6b6cdb07972135fe8696697e634f6f61379d2847be3a6bf2420b45297f17e9a777a1b262474a48201310a279514e07c988cda26bbc635542ae1f5c51a101f83ac1f571b07bf7c82abbcfafd8f5670f3e5b23e9af23e2559ffb4aff062b8dd776505e26cf45a309383112129580e9463454ad7fa1e4a2403fe6925fc8d87b0e => "934752355870b8a8d1e5c236a7bee9f8ac6b6cdb07972135fe8696697e634f6f61379d2847be3a6bf2420b45297f17e9a777a1b262474a48201310a279514e07c988cda26bbc635542ae1f5c51a101f83ac1f571b07bf7c82abbcfafd8f5670f3e5b23e9af23e2559ffb4aff062b8dd776505e26cf45a309383112129580e9463454ad7fa1e4a2403fe6925fc8d87b0e"
+arg[1]: 56d48f3c3a684d97 => "56d48f3c3a684d97"
+arg[2]: db78c962e4606255 => "db78c962e4606255"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.verifyLegalHttpData(Native Method)
+	at com.peopledaily.common.http.verify.HttpVerifyHandler.proxyVerifyHttpResult(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:313)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: {"result":{"errorCode":"1","errorMsg":"\u7528\u6237\u540d\u6216\u5bc6\u7801\u9519\u8bef","timestamp":1663817310},"data":""}_181844583 => "{\"result\":{\"errorCode\":\"1\",\"errorMsg\":\"\\u7528\\u6237\\u540d\\u6216\\u5bc6\\u7801\\u9519\\u8bef\",\"timestamp\":1663817310},\"data\":\"\"}_181844583"
+*** exiting com.peopledaily.common.utils.encrtption.AesEncryptionHelper.decrypt[39;49;00m
+[33;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.Base64Helper
+char[] 	alphabet => A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,0,1,2,3,4,5,6,7,8,9,+,/,= => ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","0","1","2","3","4","5","6","7","8","9","+","/","="]
+byte[] 	codes => -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,62,-1,-1,-1,63,52,53,54,55,56,57,58,59,60,61,-1,-1,-1,-1,-1,-1,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,-1,-1,-1,-1,-1,-1,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1 => [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,62,-1,-1,-1,63,52,53,54,55,56,57,58,59,60,61,-1,-1,-1,-1,-1,-1,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,-1,-1,-1,-1,-1,-1,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1]
+
+*** entered com.peopledaily.common.utils.encrtption.Base64Helper.encode
+arg[0]: 31,-117,8,0,0,0,0,0,0,0,-83,-110,77,111,-37,48,12,-122,-49,-37,-81,-48,33,7,-17,34,36,109,-102,-91,-67,101,-59,-128,118,88,-46,97,105,55,96,55,-58,102,109,37,-78,104,72,116,26,-1,-5,73,-106,-35,-72,13,-42,94,118,-47,7,-7,-66,-113,62,72,-78,-71,-36,58,50,-14,-37,-6,110,-11,-11,-112,98,-59,-118,-52,-107,-8,5,-70,70,33,-128,69,6,12,-126,30,5,55,21,-118,45,-20,65,106,48,-71,92,-77,85,38,23,41,24,67,44,54,40,82,50,123,-76,-116,-103,96,18,-127,118,-73,-39,98,-54,31,63,120,6,13,79,-111,-127,-76,84,-82,4,78,-117,-92,-115,4,-20,-43,100,60,-2,116,-86,-114,20,-103,35,31,119,-55,32,-47,90,103,-109,89,-76,-90,84,-54,10,-87,-46,-104,-127,-46,-115,-12,-5,-46,-125,10,-26,74,-82,-16,105,-123,-4,-101,-20,-18,-127,-107,30,93,72,50,-21,58,77,-47,-71,-28,101,42,50,-49,-49,46,-34,103,110,-64,-95,-4,-30,7,111,127,-22,-55,-109,33,25,88,-19,81,44,-111,11,-54,-2,3,-17,85,-82,-69,-22,-25,-29,-57,29,106,31,118,-111,118,-29,-121,123,112,-69,-127,-1,57,-44,26,-89,-45,83,103,119,29,14,-94,-96,-4,97,-23,-48,-116,110,13,-93,53,-96,111,-64,100,26,-83,44,-38,121,-23,-111,-112,99,-14,-84,-21,42,121,57,-113,88,47,-78,-92,50,73,78,-10,-58,76,-71,42,20,-66,-73,-10,-15,-82,5,102,39,-58,-17,68,-107,-49,107,63,37,-35,58,106,103,-45,-105,90,-88,42,-71,72,-3,119,43,110,-18,11,-117,-112,-55,18,-108,73,94,-59,98,-61,76,47,59,-9,-79,-93,45,62,-22,-48,81,-79,86,82,-103,61,-19,-16,95,5,-20,15,85,-35,-65,-124,-101,-2,-84,13,-85,18,111,-115,-30,81,-44,47,76,-74,-80,-71,-69,6,29,-98,104,107,-109,12,52,93,9,-50,-25,111,83,-1,52,57,113,52,-76,-49,25,-20,91,-64,124,-20,107,-8,23,52,-86,-2,-27,-57,3,0,0 => [31,-117,8,0,0,0,0,0,0,0,-83,-110,77,111,-37,48,12,-122,-49,-37,-81,-48,33,7,-17,34,36,109,-102,-91,-67,101,-59,-128,118,88,-46,97,105,55,96,55,-58,102,109,37,-78,104,72,116,26,-1,-5,73,-106,-35,-72,13,-42,94,118,-47,7,-7,-66,-113,62,72,-78,-71,-36,58,50,-14,-37,-6,110,-11,-11,-112,98,-59,-118,-52,-107,-8,5,-70,70,33,-128,69,6,12,-126,30,5,55,21,-118,45,-20,65,106,48,-71,92,-77,85,38,23,41,24,67,44,54,40,82,50,123,-76,-116,-103,96,18,-127,118,-73,-39,98,-54,31,63,120,6,13,79,-111,-127,-76,84,-82,4,78,-117,-92,-115,4,-20,-43,100,60,-2,116,-86,-114,20,-103,35,31,119,-55,32,-47,90,103,-109,89,-76,-90,84,-54,10,-87,-46,-104,-127,-46,-115,-12,-5,-46,-125,10,-26,74,-82,-16,105,-123,-4,-101,-20,-18,-127,-107,30,93,72,50,-21,58,77,-47,-71,-28,101,42,50,-49,-49,46,-34,103,110,-64,-95,-4,-30,7,111,127,-22,-55,-109,33,25,88,-19,81,44,-111,11,-54,-2,3,-17,85,-82,-69,-22,-25,-29,-57,29,106,31,118,-111,118,-29,-121,123,112,-69,-127,-1,57,-44,26,-89,-45,83,103,119,29,14,-94,-96,-4,97,-23,-48,-116,110,13,-93,53,-96,111,-64,100,26,-83,44,-38,121,-23,-111,-112,99,-14,-84,-21,42,121,57,-113,88,47,-78,-92,50,73,78,-10,-58,76,-71,42,20,-66,-73,-10,-15,-82,5,102,39,-58,-17,68,-107,-49,107,63,37,-35,58,106,103,-45,-105,90,-88,42,-71,72,-3,119,43,110,-18,11,-117,-112,-55,18,-108,73,94,-59,98,-61,76,47,59,-9,-79,-93,45,62,-22,-48,81,-79,86,82,-103,61,-19,-16,95,5,-20,15,85,-35,-65,-124,-101,-2,-84,13,-85,18,111,-115,-30,81,-44,47,76,-74,-80,-71,-69,6,29,-98,104,107,-109,12,52,93,9,-50,-25,111,83,-1,52,57,113,52,-76,-49,25,-20,91,-64,124,-20,107,-8,23,52,-86,-2,-27,-57,3,0,0]
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.Base64Helper.encode(Native Method)
+	at com.peopledaily.common.utils.encrtption.CompressHelper.compressForGzip(Native Method)
+	at com.peopledaily.common.utils.encrtption.CompressHelper.compressForGzip(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil.trySTDataFormatException(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil.access$000(NewNetWorkUtil.java:28)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:331)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: H,4,s,I,A,A,A,A,A,A,A,A,A,K,2,S,T,W,/,b,M,A,y,G,z,9,u,v,0,C,E,H,7,y,I,k,b,Z,q,l,v,W,X,F,g,H,Z,Y,0,m,F,p,N,2,A,3,x,m,Z,t,J,b,J,o,S,H,Q,a,/,/,t,J,l,t,2,4,D,d,Z,e,d,t,E,H,+,b,6,P,P,k,i,y,u,d,w,6,M,v,L,b,+,m,7,1,9,Z,B,i,x,Y,r,M,l,f,g,F,u,k,Y,h,g,E,U,G,D,I,I,e,B,T,c,V,i,i,3,s,Q,W,o,w,u,V,y,z,V,S,Y,X,K,R,h,D,L,D,Y,o,U,j,J,7,t,I,y,Z,Y,B,K,B,d,r,f,Z,Y,s,o,f,P,3,g,G,D,U,+,R,g,b,R,U,r,g,R,O,i,6,S,N,B,O,z,V,Z,D,z,+,d,K,q,O,F,J,k,j,H,3,f,J,I,N,F,a,Z,5,N,Z,t,K,Z,U,y,g,q,p,0,p,i,B,0,o,3,0,+,9,K,D,C,u,Z,K,r,v,B,p,h,f,y,b,7,O,6,B,l,R,5,d,S,D,L,r,O,k,3,R,u,e,R,l,K,j,L,P,z,y,7,e,Z,2,7,A,o,f,z,i,B,2,9,/,6,s,m,T,I,R,l,Y,7,V,E,s,k,Q,v,K,/,g,P,v,V,a,6,7,6,u,f,j,x,x,1,q,H,3,a,R,d,u,O,H,e,3,C,7,g,f,8,5,1,B,q,n,0,1,N,n,d,x,0,O,o,q,D,8,Y,e,n,Q,j,G,4,N,o,z,W,g,b,8,B,k,G,q,0,s,2,n,n,p,k,Z,B,j,8,q,z,r,K,n,k,5,j,1,g,v,s,q,Q,y,S,U,7,2,x,k,y,5,K,h,S,+,t,/,b,x,r,g,V,m,J,8,b,v,R,J,X,P,a,z,8,l,3,T,p,q,Z,9,O,X,W,q,g,q,u,U,j,9,d,y,t,u,7,g,u,L,k,M,k,S,l,E,l,e,x,W,L,D,T,C,8,7,9,7,G,j,L,T,7,q,0,F,G,x,V,l,K,Z,P,e,3,w,X,w,X,s,D,1,X,d,v,4,S,b,/,q,w,N,q,x,J,v,j,e,J,R,1,C,9,M,t,r,C,5,u,w,Y,d,n,m,h,r,k,w,w,0,X,Q,n,O,5,2,9,T,/,z,Q,5,c,T,S,0,z,x,n,s,W,8,B,8,7,G,v,4,F,z,S,q,/,u,X,H,A,w,A,A => ["H","4","s","I","A","A","A","A","A","A","A","A","A","K","2","S","T","W","/","b","M","A","y","G","z","9","u","v","0","C","E","H","7","y","I","k","b","Z","q","l","v","W","X","F","g","H","Z","Y","0","m","F","p","N","2","A","3","x","m","Z","t","J","b","J","o","S","H","Q","a","/","/","t","J","l","t","2","4","D","d","Z","e","d","t","E","H","+","b","6","P","P","k","i","y","u","d","w","6","M","v","L","b","+","m","7","1","9","Z","B","i","x","Y","r","M","l","f","g","F","u","k","Y","h","g","E","U","G","D","I","I","e","B","T","c","V","i","i","3","s","Q","W","o","w","u","V","y","z","V","S","Y","X","K","R","h","D","L","D","Y","o","U","j","J","7","t","I","y","Z","Y","B","K","B","d","r","f","Z","Y","s","o","f","P","3","g","G","D","U","+","R","g","b","R","U","r","g","R","O","i","6","S","N","B","O","z","V","Z","D","z","+","d","K","q","O","F","J","k","j","H","3","f","J","I","N","F","a","Z","5","N","Z","t","K","Z","U","y","g","q","p","0","p","i","B","0","o","3","0","+","9","K","D","C","u","Z","K","r","v","B","p","h","f","y","b","7","O","6","B","l","R","5","d","S","D","L","r","O","k","3","R","u","e","R","l","K","j","L","P","z","y","7","e","Z","2","7","A","o","f","z","i","B","2","9","/","6","s","m","T","I","R","l","Y","7","V","E","s","k","Q","v","K","/","g","P","v","V","a","6","7","6","u","f","j","x","x","1","q","H","3","a","R","d","u","O","H","e","3","C","7","g","f","8","5","1","B","q","n","0","1","N","n","d","x","0","O","o","q","D","8","Y","e","n","Q","j","G","4","N","o","z","W","g","b","8","B","k","G","q","0","s","2","n","n","p","k","Z","B","j","8","q","z","r","K","n","k","5","j","1","g","v","s","q","Q","y","S","U","7","2","x","k","y","5","K","h","S","+","t","/","b","x","r","g","V","m","J","8","b","v","R","J","X","P","a","z","8","l","3","T","p","q","Z","9","O","X","W","q","g","q","u","U","j","9","d","y","t","u","7","g","u","L","k","M","k","S","l","E","l","e","x","W","L","D","T","C","8","7","9","7","G","j","L","T","7","q","0","F","G","x","V","l","K","Z","P","e","3","w","X","w","X","s","D","1","X","d","v","4","S","b","/","q","w","N","q","x","J","v","j","e","J","R","1","C","9","M","t","r","C","5","u","w","Y","d","n","m","h","r","k","w","w","0","X","Q","n","O","5","2","9","T","/","z","Q","5","c","T","S","0","z","x","n","s","W","8","B","8","7","G","v","4","F","z","S","q","/","u","X","H","A","w","A","A"]
+*** exiting com.peopledaily.common.utils.encrtption.Base64Helper.encode[39;49;00m
+[33;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.CompressHelper
+int 	BUFFERSIZE => 512 => 512
+
+*** entered com.peopledaily.common.utils.encrtption.CompressHelper.compressForGzip
+arg[0]: org.json.JSONException: Value  at data of type java.lang.String cannot be converted to JSONObject
+	at org.json.JSON.typeMismatch(JSON.java:100)
+	at org.json.JSONObject.getJSONObject(JSONObject.java:616)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:325)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+ => "org.json.JSONException: Value  at data of type java.lang.String cannot be converted to JSONObject\n\tat org.json.JSON.typeMismatch(JSON.java:100)\n\tat org.json.JSONObject.getJSONObject(JSONObject.java:616)\n\tat com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:325)\n\tat com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)\n\tat com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)\n\tat org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)\n\tat org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)\n\tat android.os.Handler.dispatchMessage(Handler.java:106)\n\tat android.os.Looper.loop(Looper.java:164)\n\tat android.app.ActivityThread.main(ActivityThread.java:6494)\n\tat java.lang.reflect.Method.invoke(Native Method)\n\tat com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)\n\tat com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)\n"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.CompressHelper.compressForGzip(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil.trySTDataFormatException(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil.access$000(NewNetWorkUtil.java:28)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:331)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: H4sIAAAAAAAAAK2STW/bMAyGz9uv0CEH7yIkbZqlvWXFgHZY0mFpN2A3xmZtJbJoSHQa//tJlt24DdZedtEH+b6PPkiyudw6MvLb+m719ZBixYrMlfgFukYhgEUGDIIeBTcVii3sQWowuVyzVSYXKRhDLDYoUjJ7tIyZYBKBdrfZYsofP3gGDU+RgbRUrgROi6SNBOzVZDz+dKqOFJkjH3fJINFaZ5NZtKZUygqp0piB0o30+9KDCuZKrvBphfyb7O6BlR5dSDLrOk3RueRlKjLPzy7eZ27AofziB29/6smTIRlY7VEskQvK/gPvVa676ufjxx1qH3aRduOHe3C7gf851Bqn01Nndx0OoqD8YenQjG4NozWgb8BkGq0s2nnpkZBj8qzrKnk5j1gvsqQySU72xky5KhS+t/bxrgVmJ8bvRJXPaz8l3TpqZ9OXWqgquUj9dytu7guLkMkSlElexWLDTC8797GjLT7q0FGxVlKZPe3wXwXsD1Xdv4Sb/qwNqxJvjeJR1C9MtrC5uwYdnmhrkww0XQnO529T/zQ5cTS0zxnsW8B87Gv4FzSq/uXHAwAA => "H4sIAAAAAAAAAK2STW/bMAyGz9uv0CEH7yIkbZqlvWXFgHZY0mFpN2A3xmZtJbJoSHQa//tJlt24DdZedtEH+b6PPkiyudw6MvLb+m719ZBixYrMlfgFukYhgEUGDIIeBTcVii3sQWowuVyzVSYXKRhDLDYoUjJ7tIyZYBKBdrfZYsofP3gGDU+RgbRUrgROi6SNBOzVZDz+dKqOFJkjH3fJINFaZ5NZtKZUygqp0piB0o30+9KDCuZKrvBphfyb7O6BlR5dSDLrOk3RueRlKjLPzy7eZ27AofziB29/6smTIRlY7VEskQvK/gPvVa676ufjxx1qH3aRduOHe3C7gf851Bqn01Nndx0OoqD8YenQjG4NozWgb8BkGq0s2nnpkZBj8qzrKnk5j1gvsqQySU72xky5KhS+t/bxrgVmJ8bvRJXPaz8l3TpqZ9OXWqgquUj9dytu7guLkMkSlElexWLDTC8797GjLT7q0FGxVlKZPe3wXwXsD1Xdv4Sb/qwNqxJvjeJR1C9MtrC5uwYdnmhrkww0XQnO529T/zQ5cTS0zxnsW8B87Gv4FzSq/uXHAwAA"
+*** exiting com.peopledaily.common.utils.encrtption.CompressHelper.compressForGzip[39;49;00m
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0

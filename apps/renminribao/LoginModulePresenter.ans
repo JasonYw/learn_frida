@@ -1,0 +1,234 @@
+[35;01mr0tracer begin ... ![39;49;00m
+[31;01mstart[39;49;00m
+[31;01mBegin Search Class...[39;49;00m
+[30;01mFound Class => com.peopledaily.module.login.presenter.LoginModulePresenter[39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.loginSucceed [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.getIMToken [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.getUserInfo [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.initPresenterArs [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.isMarkDeal [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.loginWithThrid [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.onFail [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.onReceive [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.requestThirdParty [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.result [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.saveSetting [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.sendCode [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.start [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.synchroscopData [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.toNickName [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+private void com.peopledaily.module.login.presenter.LoginModulePresenter.loginSucceed()
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.getIMToken(java.lang.String,java.lang.String)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.getUserInfo(java.lang.String)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.initPresenterArs(com.peopledaily.common.bean.SettingBean,java.lang.String,boolean)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.isMarkDeal(com.peopledaily.common.bean.UserInfoBean)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.loginWithThrid(java.lang.String,java.lang.String,java.lang.String)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.onFail(int,java.lang.Object)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.onReceive(int,java.lang.String,java.lang.String,java.lang.Object)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.requestThirdParty(int,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.result(java.lang.String,java.lang.String,java.lang.Object)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.saveSetting(com.peopledaily.common.bean.SettingBean)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.sendCode(java.lang.String)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.start()
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.synchroscopData(com.peopledaily.common.bean.UserInfoBean)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter.toNickName()
+Tracing public com.peopledaily.module.login.presenter.LoginModulePresenter(com.peopledaily.module.login.base.contract.LoginContract$View,android.app.Activity,com.peopledaily.module.login.LoginImpl)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => com.peopledaily.module.login.presenter.LoginModulePresenter$1[39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter$1.onFail [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter$1.onReceive [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledaily.module.login.presenter.LoginModulePresenter$1.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public void com.peopledaily.module.login.presenter.LoginModulePresenter$1.onFail(int,java.lang.Object)
+public void com.peopledaily.module.login.presenter.LoginModulePresenter$1.onReceive(int,java.lang.String,java.lang.String,java.lang.Object)
+Tracing com.peopledaily.module.login.presenter.LoginModulePresenter$1(com.peopledaily.module.login.presenter.LoginModulePresenter)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+tracerpid replaced: TracerPid:	0
+[30;01mSearch Class Completed![39;49;00m
+[32;01mOn Total Tracing :2 classes :
+com.peopledaily.module.login.presenter.LoginModulePresenter
+com.peopledaily.module.login.presenter.LoginModulePresenter$1
+Start Tracing ...[39;49;00m
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.module.login.presenter.LoginModulePresenter
+android.app.Activity 	activity => com.peopledaily.module.login.ui.LoginActivity@97d32ec => "<instance: android.app.Activity, $className: com.peopledaily.module.login.ui.LoginActivity>"
+java.lang.String 	increase_type => null => null
+com.peopledailychina.middle.IIntegralTable 	integralTable => null => null
+java.lang.String 	is_register => null => null
+com.peopledaily.module.login.LoginImpl 	loginServer => com.peopledaily.module.login.LoginImpl@7301d78 => "<instance: com.peopledaily.module.login.LoginImpl>"
+com.peopledaily.common.http.NewNetWorkUtil 	netWorkUtill => com.peopledaily.common.http.NewNetWorkUtil@b474c51 => "<instance: com.peopledaily.common.http.NewNetWorkUtil>"
+java.lang.String 	nickname_state => null => null
+com.peopledaily.common.bean.SettingBean 	settingBean => SettingBean{searchRecord=null, thirdPartyLoginIdList=null, night='0', newNights='0', push='1', wifi='0', videoWifi='0', textSize='2', firstCollect='0', firstComment='0', firstLove='0', firstUserInfo='0', isV700ShowIntro='0', isShowCard='1', isAuthAlipay=false, isAlreadyScreenPrompt=false, isFirstInitWeb=true, versionCode=1068, cancleOpenPush=0, login_types='null', alipay_user_id='null', checkVesion='', userInfoBean=UserInfoBean{login_type='null', login_types='null', email='null', region_name='null', sex='null', userName='null', nickName='null', userId='null', authPhone='null', avatar='null', qq='null', weibo='null', weixin='null', is_password=0, have_syn=0, is_register='null', avatar_frame='null', background='null', level='null', level_name='null', coming_date='null', device_name='不显示', prompt=com.peopledaily.common.bean.UserInfoPromptBean@e425cb6, isSelect=false, active_data=null, have_active_avatar='', active_avatar_switch='100', active_total_switch='100,102,103', best_comment_avatar_time='0', best_comment_avatar_time_start='0', user_type='null', full_name='null', description='null', user_gov_id='0', send_message='null'}, alipayInfo=null} => "<instance: com.peopledaily.common.bean.SettingBean>"
+int 	thridTpye => -1 => -1
+boolean 	trackDetail => false => false
+com.peopledaily.module.login.base.contract.LoginContract$View 	view => [object Object] => "<instance: com.peopledaily.module.login.base.contract.LoginContract$View, $className: com.peopledaily.module.login.ui.LoginActivity>"
+int 	ACTION_FAST_LOGIN => 562 => 562
+int 	ACTION_GET_USER_INFO => 846 => 846
+java.lang.String 	ACTION_MINEPAGERACTION => NewMinePager.fragment.action => "NewMinePager.fragment.action"
+java.lang.String 	NewSettingAction => NewSettingAct.action.action => "NewSettingAct.action.action"
+int 	THRID_LOGIN => 275 => 275
+[Ljava.lang.reflect.Field;@5451db7 	[Ljava.lang.reflect.Field;@5451db7 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword
+arg[0]: 15801367777 => "15801367777"
+arg[1]: 15801367777 => "15801367777"
+arg[2]: Pixel 2 => "Pixel 2"
+arg[3]: 4C196B29E085E57269FC151945F559B9 => "4C196B29E085E57269FC151945F559B9"
+java.lang.Throwable
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(Native Method)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.module.login.presenter.LoginModulePresenter
+android.app.Activity 	activity => com.peopledaily.module.login.ui.LoginActivity@97d32ec => "<instance: android.app.Activity, $className: com.peopledaily.module.login.ui.LoginActivity>"
+java.lang.String 	increase_type => null => null
+com.peopledailychina.middle.IIntegralTable 	integralTable => null => null
+java.lang.String 	is_register => null => null
+com.peopledaily.module.login.LoginImpl 	loginServer => com.peopledaily.module.login.LoginImpl@7301d78 => "<instance: com.peopledaily.module.login.LoginImpl>"
+com.peopledaily.common.http.NewNetWorkUtil 	netWorkUtill => com.peopledaily.common.http.NewNetWorkUtil@b474c51 => "<instance: com.peopledaily.common.http.NewNetWorkUtil>"
+java.lang.String 	nickname_state => null => null
+com.peopledaily.common.bean.SettingBean 	settingBean => SettingBean{searchRecord=null, thirdPartyLoginIdList=null, night='0', newNights='0', push='1', wifi='0', videoWifi='0', textSize='2', firstCollect='0', firstComment='0', firstLove='0', firstUserInfo='0', isV700ShowIntro='0', isShowCard='1', isAuthAlipay=false, isAlreadyScreenPrompt=false, isFirstInitWeb=true, versionCode=1068, cancleOpenPush=0, login_types='null', alipay_user_id='null', checkVesion='', userInfoBean=UserInfoBean{login_type='null', login_types='null', email='null', region_name='null', sex='null', userName='null', nickName='null', userId='null', authPhone='null', avatar='null', qq='null', weibo='null', weixin='null', is_password=0, have_syn=0, is_register='null', avatar_frame='null', background='null', level='null', level_name='null', coming_date='null', device_name='不显示', prompt=com.peopledaily.common.bean.UserInfoPromptBean@e425cb6, isSelect=false, active_data=null, have_active_avatar='', active_avatar_switch='100', active_total_switch='100,102,103', best_comment_avatar_time='0', best_comment_avatar_time_start='0', user_type='null', full_name='null', description='null', user_gov_id='0', send_message='null'}, alipayInfo=null} => "<instance: com.peopledaily.common.bean.SettingBean>"
+int 	thridTpye => -1 => -1
+boolean 	trackDetail => false => false
+com.peopledaily.module.login.base.contract.LoginContract$View 	view => [object Object] => "<instance: com.peopledaily.module.login.base.contract.LoginContract$View, $className: com.peopledaily.module.login.ui.LoginActivity>"
+int 	ACTION_FAST_LOGIN => 562 => 562
+int 	ACTION_GET_USER_INFO => 846 => 846
+java.lang.String 	ACTION_MINEPAGERACTION => NewMinePager.fragment.action => "NewMinePager.fragment.action"
+java.lang.String 	NewSettingAction => NewSettingAct.action.action => "NewSettingAct.action.action"
+int 	THRID_LOGIN => 275 => 275
+[Ljava.lang.reflect.Field;@c952390 	[Ljava.lang.reflect.Field;@c952390 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.module.login.presenter.LoginModulePresenter.onReceive
+arg[0]: 0 => 0
+arg[1]: 1 => "1"
+arg[2]: 用户名或密码错误 => "用户名或密码错误"
+arg[3]: null => null
+java.lang.Throwable
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.onReceive(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:336)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.module.login.presenter.LoginModulePresenter.onReceive[39;49;00m
+tracerpid replaced: TracerPid:	0
+[36;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.module.login.presenter.LoginModulePresenter
+android.app.Activity 	activity => com.peopledaily.module.login.ui.LoginActivity@97d32ec => "<instance: android.app.Activity, $className: com.peopledaily.module.login.ui.LoginActivity>"
+java.lang.String 	increase_type => null => null
+com.peopledailychina.middle.IIntegralTable 	integralTable => null => null
+java.lang.String 	is_register => null => null
+com.peopledaily.module.login.LoginImpl 	loginServer => com.peopledaily.module.login.LoginImpl@7301d78 => "<instance: com.peopledaily.module.login.LoginImpl>"
+com.peopledaily.common.http.NewNetWorkUtil 	netWorkUtill => com.peopledaily.common.http.NewNetWorkUtil@b474c51 => "<instance: com.peopledaily.common.http.NewNetWorkUtil>"
+java.lang.String 	nickname_state => null => null
+com.peopledaily.common.bean.SettingBean 	settingBean => SettingBean{searchRecord=null, thirdPartyLoginIdList=null, night='0', newNights='0', push='1', wifi='0', videoWifi='0', textSize='2', firstCollect='0', firstComment='0', firstLove='0', firstUserInfo='0', isV700ShowIntro='0', isShowCard='1', isAuthAlipay=false, isAlreadyScreenPrompt=false, isFirstInitWeb=true, versionCode=1068, cancleOpenPush=0, login_types='null', alipay_user_id='null', checkVesion='', userInfoBean=UserInfoBean{login_type='null', login_types='null', email='null', region_name='null', sex='null', userName='null', nickName='null', userId='null', authPhone='null', avatar='null', qq='null', weibo='null', weixin='null', is_password=0, have_syn=0, is_register='null', avatar_frame='null', background='null', level='null', level_name='null', coming_date='null', device_name='不显示', prompt=com.peopledaily.common.bean.UserInfoPromptBean@e425cb6, isSelect=false, active_data=null, have_active_avatar='', active_avatar_switch='100', active_total_switch='100,102,103', best_comment_avatar_time='0', best_comment_avatar_time_start='0', user_type='null', full_name='null', description='null', user_gov_id='0', send_message='null'}, alipayInfo=null} => "<instance: com.peopledaily.common.bean.SettingBean>"
+int 	thridTpye => -1 => -1
+boolean 	trackDetail => false => false
+com.peopledaily.module.login.base.contract.LoginContract$View 	view => [object Object] => "<instance: com.peopledaily.module.login.base.contract.LoginContract$View, $className: com.peopledaily.module.login.ui.LoginActivity>"
+int 	ACTION_FAST_LOGIN => 562 => 562
+int 	ACTION_GET_USER_INFO => 846 => 846
+java.lang.String 	ACTION_MINEPAGERACTION => NewMinePager.fragment.action => "NewMinePager.fragment.action"
+java.lang.String 	NewSettingAction => NewSettingAct.action.action => "NewSettingAct.action.action"
+int 	THRID_LOGIN => 275 => 275
+[Ljava.lang.reflect.Field;@cc49045 	[Ljava.lang.reflect.Field;@cc49045 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword
+arg[0]: 15801367777 => "15801367777"
+arg[1]: 15801367777 => "15801367777"
+arg[2]: Pixel 2 => "Pixel 2"
+arg[3]: 4C196B29E085E57269FC151945F559B9 => "4C196B29E085E57269FC151945F559B9"
+java.lang.Throwable
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(Native Method)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword[39;49;00m
+[34;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledaily.module.login.presenter.LoginModulePresenter
+android.app.Activity 	activity => com.peopledaily.module.login.ui.LoginActivity@97d32ec => "<instance: android.app.Activity, $className: com.peopledaily.module.login.ui.LoginActivity>"
+java.lang.String 	increase_type => null => null
+com.peopledailychina.middle.IIntegralTable 	integralTable => null => null
+java.lang.String 	is_register => null => null
+com.peopledaily.module.login.LoginImpl 	loginServer => com.peopledaily.module.login.LoginImpl@7301d78 => "<instance: com.peopledaily.module.login.LoginImpl>"
+com.peopledaily.common.http.NewNetWorkUtil 	netWorkUtill => com.peopledaily.common.http.NewNetWorkUtil@b474c51 => "<instance: com.peopledaily.common.http.NewNetWorkUtil>"
+java.lang.String 	nickname_state => null => null
+com.peopledaily.common.bean.SettingBean 	settingBean => SettingBean{searchRecord=null, thirdPartyLoginIdList=null, night='0', newNights='0', push='1', wifi='0', videoWifi='0', textSize='2', firstCollect='0', firstComment='0', firstLove='0', firstUserInfo='0', isV700ShowIntro='0', isShowCard='1', isAuthAlipay=false, isAlreadyScreenPrompt=false, isFirstInitWeb=true, versionCode=1068, cancleOpenPush=0, login_types='null', alipay_user_id='null', checkVesion='', userInfoBean=UserInfoBean{login_type='null', login_types='null', email='null', region_name='null', sex='null', userName='null', nickName='null', userId='null', authPhone='null', avatar='null', qq='null', weibo='null', weixin='null', is_password=0, have_syn=0, is_register='null', avatar_frame='null', background='null', level='null', level_name='null', coming_date='null', device_name='不显示', prompt=com.peopledaily.common.bean.UserInfoPromptBean@e425cb6, isSelect=false, active_data=null, have_active_avatar='', active_avatar_switch='100', active_total_switch='100,102,103', best_comment_avatar_time='0', best_comment_avatar_time_start='0', user_type='null', full_name='null', description='null', user_gov_id='0', send_message='null'}, alipayInfo=null} => "<instance: com.peopledaily.common.bean.SettingBean>"
+int 	thridTpye => -1 => -1
+boolean 	trackDetail => false => false
+com.peopledaily.module.login.base.contract.LoginContract$View 	view => [object Object] => "<instance: com.peopledaily.module.login.base.contract.LoginContract$View, $className: com.peopledaily.module.login.ui.LoginActivity>"
+int 	ACTION_FAST_LOGIN => 562 => 562
+int 	ACTION_GET_USER_INFO => 846 => 846
+java.lang.String 	ACTION_MINEPAGERACTION => NewMinePager.fragment.action => "NewMinePager.fragment.action"
+java.lang.String 	NewSettingAction => NewSettingAct.action.action => "NewSettingAct.action.action"
+int 	THRID_LOGIN => 275 => 275
+[Ljava.lang.reflect.Field;@3795f66 	[Ljava.lang.reflect.Field;@3795f66 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledaily.module.login.presenter.LoginModulePresenter.onReceive
+arg[0]: 0 => 0
+arg[1]: 1 => "1"
+arg[2]: 用户名或密码错误 => "用户名或密码错误"
+arg[3]: null => null
+java.lang.Throwable
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.onReceive(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$5.onSuccess(NewNetWorkUtil.java:336)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:106)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: undefined => undefined
+*** exiting com.peopledaily.module.login.presenter.LoginModulePresenter.onReceive[39;49;00m
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
