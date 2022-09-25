@@ -7,3 +7,4 @@
 * pixel2 刷机包 https://dl.google.com/dl/android/aosp/walleye-qq3a.200805.001-factory-a3367352.zip
 * https://dl.google.com/dl/android/aosp/google_devices-walleye-qq3a.200805.001-f5aa9507.tgz google vendor
 * https://dl.google.com/dl/android/aosp/qcom-walleye-qq3a.200805.001-d57b23e6.tgz  Qualcomm vendor
+*
