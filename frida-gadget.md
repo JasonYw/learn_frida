@@ -2,7 +2,7 @@
 
 ## 自定义目录设计
 
-- /data/system/xsettings/mydemo/persisit/pkgName/persist_on 此文件存在表示开启持久化
+- /data/system/xsettings/mydemo/persisit/pkgName/persist_mydemo 此文件存在表示开启持久化
 - /data/system/xsettings/mydemo/jscfg/pkgName/config.js hook代码
 
 ## 配置开机就创建自定义目录
@@ -11,7 +11,7 @@
 
 ```Shell
     #//add start
-    #/data/system/xsettings/mydemo/persisit/pkgName/persist_on
+    #/data/system/xsettings/mydemo/persisit/pkgName/persist_mydemo
     mkdir /data/system/xsettings 0775 system system
     mkdir /data/system/xsettings/mydemo 0775 system system
     mkdir /data/system/xsettings/mydemo/persisit 0775 system system
@@ -208,7 +208,7 @@
         return false;
     }
     //判断app是否打开自动注入脚本功能 
-    ///data/system/xsettings/mydemo/persisit/pkgName/persist_on 判断此文件是否存在
+    ///data/system/xsettings/mydemo/persisit/pkgName/persist_mydemo 判断此文件是否存在
     public static boolean isEnablePersist(String pkgName, String methodType){
         File enableFile = new File(SETTINGS_DIR,pkgName + "/" + methodType);
         return enableFile.exists();
