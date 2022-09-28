@@ -26,6 +26,23 @@ function hook_hashmap(){
     })
 }
 
+
+function hook_string(){
+    Java.perform(function(){
+        var String = Java.use("java.util.String")
+        String.$new.implementation = function(a) {
+            console.log(
+                Java.use('android.util.Log').getStackTraceString(
+                    Java.use('java.lang.Throwable').$new()
+                )
+            )
+            console.log(a)
+        }
+
+    })
+}
+
+
 function hook_exit(){
 
     Java.perform(function () {
@@ -48,6 +65,14 @@ function hook_exit(){
 
     })
 
+}
+
+
+function hook_dialog(){
+    var Dialog = Java.use("android.app.Dialog") 
+    Dialog.onCreate.implementation = function(){
+        console.log('Dialog hooked ')
+    }
 }
 
 
@@ -256,19 +281,32 @@ function hook_so_func(addr,paramsnum,funcname){
 
 
 
-function hook_suspected_function(targetSo,funcname,argnum) {
+function hook_so_by_name(targetSo,funcname,argnum) {
     var funcPtr =Module.findExportByName(targetSo,funcname)
     hook_so_func(funcPtr,argnum,funcname)
   
 }
 
 
-// hook_suspected_function("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_NewNetWorkUtil_safeNetObject__Lorg_xutils_http_RequestParams_2ILcom_peopledaily_common_http_callback_NetDataCallback_2Ljava_lang_Class_2Ljava_lang_String_2",7)
-// hook_suspected_function("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_GetParamsUtil_getParams__Z",3)
-// hook_suspected_function("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_GetParamsUtil_tryInitUA__",2)
+function hook_so_by_addr(so_name,funcs,argnum) {
+    var targetSo = Module.getBaseAddress(so_name)
+    console.log(targetSo)
+    for (var i =0;i<funcs.length;i++) {
+        var funcPtr =targetSo.add(funcs[i])
+        hook_so_func(funcPtr,argnum,funcs[i])
+    }
+}
 
-        
+
+
+// hook_so_by_name("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_NewNetWorkUtil_safeNetObject__Lorg_xutils_http_RequestParams_2ILcom_peopledaily_common_http_callback_NetDataCallback_2Ljava_lang_Class_2Ljava_lang_String_2",7)
+// hook_so_by_name("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_GetParamsUtil_getParams__Z",3)
+// hook_so_by_name("libcom.peopledailychina.activity_alijtca_plus.so","Java_com_peopledaily_common_http_GetParamsUtil_tryInitUA__",2)
+// hook_so_by_addr("libcom.peopledailychina.activity_alijtca_plus.so",[0xEFF50, 0xF4BCC, 0xF4F80, 0xF00B8, 0xF36C4, 0xF3624],6)
+// hook_so_by_addr("libcom.peopledailychina.activity_alijtca_plus.so",[0xF50A4,,0xF3774],6)
+
 hook_exit()
+// hook_dialog()
 // hook_hashmap()
 // AesEncryptionHelper()
 // Cipher()
