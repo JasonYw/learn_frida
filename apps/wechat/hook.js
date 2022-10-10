@@ -147,58 +147,40 @@ function hook_log(){
     })
 }
 
-function hook_mmlnts(){
-    Java.perform(function(){
-        var MMLogic = Java.use("com.tencent.mars.mm.MMLogic")
-        MMLogic.setMmtlsCtrlInfo.implementation = function(args0){
-            console.log(args0)
-            result =  this.setMmtlsCtrlInfo(args0)
-            console.log(result)
-            return result
 
+Java.perform(function(){
+    // 完整代码：
+    
+    var SQLiteDatabase = Java.use('com.tencent.wcdb.database.SQLiteDatabase');
+    var Set = Java.use("java.util.Set");
+    var ContentValues = Java.use("android.content.ContentValues");
+    var xml = Java.use("com.tencent.mm.sdk.platformtools.SemiXml");
+    Java.openClassFile('/data/local/tmp/fastjson.dex').load();
+    var JSONObject = Java.use('com.alibaba.fastjson.JSONObject')
+
+    SQLiteDatabase.insertWithOnConflict.implementation = function (arg1, arg2, arg3, i) {
+
+        // 调用此函数，让其正常执行
+        var ret = this.insertWithOnConflict.call(this, arg1, arg2, arg3, i);
+        
+        // 我们重点关注一下参数，因为参数中包含着我们想要的数据
+        var values = Java.cast(arg3, ContentValues);
+        var sets = Java.cast(values.keySet(), Set);
+        var arr = sets.toArray().toString().split(",");
+
+        for (var i = 0; i < arr.length; i++){
+            var key = arr[i];
+            var value = values.get(key);
+            if(key === "content"){
+                var str_ = xml.decode(value)
+                var res = JSONObject.toJSONString(str_);
+                var data = JSONObject.parseObject(res)
+                var value_data = data.getString(".msg.appmsg.mmreader.category.item.url")
+                console.log(value_data);
+            }
         }
-        // var stnLogic = Java.use("com.tencent.mars.stn.StnLogic")
-        // stnLogic.makesureLongLinkConnected.implementation = function(){
-        //     console.log('makesureLongLinkConnected!')
+        console.log("____________________________________");
+        return ret;
+    };
 
-        // }
-
-    })
-}
-
-function hook_unpack(){
-    Java.perform(function(){
-        var MMProtocalJni = Java.use("com.tencent.mm.protocal.MMProtocalJni")
-        // var PByteArray = Java.use("com.tencent.mm.pointers.PByteArray")
-        // var  PInt = Java.use("com.tencent.mm.pointers.PInt")
-        // var AT_y = Java.use("com.tencent.mm.at.y")
-        MMProtocalJni.unpack.implementation = function(arg0, arg1, arg2, arg3, arg4, arg5, arg6,args7){
-            console.log('unpack=>\n')
-            console.log(arg0,JSON.stringify(arg0),Object.keys(arg0),arg0.value,JSON.stringify(arg0.value))
-            var result = this.unpack(arg0, arg1, arg2, arg3, arg4, arg5, arg6,args7)
-            return  result
-        }
-        // AT_y.c.implementation = function(arg17, arg18, arg19, arg20){
-        //     console.log("arg17", arg17)
-        //     console.log("arg18", arg18)
-        //     console.log("arg19", arg19)
-        //     console.log("arg20", arg20)
-        //     var result = this.c(arg17, arg18, arg19, arg20)
-        //     return result
-        // }
-        MMProtocalJni.pack.implementation = function(arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,arg12,arg13,arg14){
-            console.log('pack=>\n')
-            console.log(arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,arg12,arg13,arg14)
-            var result = this.unpack(arg0,arg1,arg2,arg3,arg4,arg5,arg6,arg7,arg8,arg9,arg10,arg11,arg12,arg13,arg14)
-            // console.log(byteToString(arg0))
-            return result
-        }
-        // MMProtocalJni.packHybrid.implementation = function(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12){
-        //     console.log(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12)
-        //     var result = this.unpack(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12)
-        //     return  result
-        // }
-    })
-}
-
-// function hook
+});
