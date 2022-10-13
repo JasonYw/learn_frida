@@ -4,7 +4,7 @@ import json
 from parsel import Selector
 from urllib.parse import urljoin
 from tqdm import tqdm
-
+import time
 
 session = requests.Session()
 header = {
@@ -62,36 +62,32 @@ def make_payload(text):
     }
 
 def get_index_list(url ='https://www.youtube.com/c/RelativitySpace/videos'):
-    video_list = []
+    video_list = list()
     res = session.get(url,headers=header,verify=False)
-    open('index.html','w').write(res.text)
+    video_list = video_list + get_url_list(res.text)
     payload = make_payload(res.text)
     key = findall(r'"INNERTUBE_API_KEY":"(.*?)"',res.text)
     next_url = f'https://www.youtube.com/youtubei/v1/browse?key={key}&prettyPrint=false'
+    continuation = findall(r'"continuationCommand":{"token":"(.*?)",',res.text)
     while True:
+        res = continuation_list(continuation,next_url,payload,res.text)
+        continuation = findall(r'"continuationCommand":{"token":"(.*?)",',res.text)
         video_list = video_list + get_url_list(res.text)
-        r = continuation_list(next_url,payload,res.text)
-        if not r:
-            video_list = video_list + get_url_list(res.text)
+        if not continuation:
             break
-        else:
-            res = r   
-    print(len(video_list)) 
+    print(len(video_list))
     return video_list
         
-def continuation_list(url,payload,text):
-    continuation = findall(r'"continuationCommand":{"token":"(.*?)",',text)
-    if continuation:
-        payload['continuation'] = continuation
-        # payload['context']['clickTracking']['clickTrackingParams'] = findall(r'"clickTrackingParams":"(.*?)",',text)
-        r = session.post(url,headers=header,data=json.dumps(make_payload(text)),verify=False)
-        return r
-    else:
-        return
+def continuation_list(continuation,url,payload,text):
+    payload['continuation'] = continuation
+    r = session.post(url,headers=header,data=json.dumps(make_payload(text)),verify=False)
+    return r
+  
 
 def parse_video_list(urllist):
-    for i in tqdm(urllist):
-        make_video(i)
+    for i in tqdm(set(urllist)):
+        open(f'video.log','a').write(i+'\n')
+        # make_video(i)
 
 def make_video(url):
     url = urljoin('https://www.youtube.com/',url)
