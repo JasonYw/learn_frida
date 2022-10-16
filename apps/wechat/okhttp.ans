@@ -1,0 +1,574 @@
+
+2022-10-11 16:33:35,836 INFO    
+android hooking search classes FormBody
+
+2022-10-11 16:33:35,836 INFO    
+Note that Java classes are only loaded when they are used, so if the expected class has not been found, it might not have been loaded yet.
+
+2022-10-11 16:33:41,664 INFO    
+
+Found 0 classes
+
+2022-10-11 16:33:52,779 INFO    
+android hooking search classes okhttp
+
+2022-10-11 16:33:52,779 INFO    
+Note that Java classes are only loaded when they are used, so if the expected class has not been found, it might not have been loaded yet.
+
+2022-10-11 16:33:58,571 INFO    
+[Lcom.android.okhttp.CipherSuite;
+
+2022-10-11 16:33:58,573 INFO    
+[Lcom.android.okhttp.ConnectionSpec;
+
+2022-10-11 16:33:58,573 INFO    
+[Lcom.android.okhttp.HttpUrl$Builder$ParseResult;
+
+2022-10-11 16:33:58,574 INFO    
+[Lcom.android.okhttp.Protocol;
+
+2022-10-11 16:33:58,574 INFO    
+[Lcom.android.okhttp.TlsVersion;
+
+2022-10-11 16:33:58,574 INFO    
+[Lcom.android.okhttp.internal.framed.ErrorCode;
+
+2022-10-11 16:33:58,575 INFO    
+[Lcom.android.okhttp.internal.framed.FramedStream;
+
+2022-10-11 16:33:58,575 INFO    
+[Lcom.android.okhttp.internal.framed.Header;
+
+2022-10-11 16:33:58,576 INFO    
+[Lcom.android.okhttp.internal.framed.HeadersMode;
+
+2022-10-11 16:33:58,577 INFO    
+[Lcom.android.okhttp.internal.framed.Huffman$Node;
+
+2022-10-11 16:33:58,577 INFO    
+[Lcom.android.okhttp.okio.ByteString;
+
+2022-10-11 16:33:58,579 INFO    
+com.android.okhttp.Address
+
+2022-10-11 16:33:58,580 INFO    
+com.android.okhttp.AndroidShimResponseCache
+
+2022-10-11 16:33:58,580 INFO    
+com.android.okhttp.Authenticator
+
+2022-10-11 16:33:58,581 INFO    
+com.android.okhttp.Cache
+
+2022-10-11 16:33:58,581 INFO    
+com.android.okhttp.Cache$1
+
+2022-10-11 16:33:58,582 INFO    
+com.android.okhttp.Cache$CacheResponseBody
+
+2022-10-11 16:33:58,583 INFO    
+com.android.okhttp.Cache$CacheResponseBody$1
+
+2022-10-11 16:33:58,583 INFO    
+com.android.okhttp.Cache$Entry
+
+2022-10-11 16:33:58,584 INFO    
+com.android.okhttp.CacheControl
+
+2022-10-11 16:33:58,584 INFO    
+com.android.okhttp.CacheControl$Builder
+
+2022-10-11 16:33:58,584 INFO    
+com.android.okhttp.Call
+
+2022-10-11 16:33:58,585 INFO    
+com.android.okhttp.Call$ApplicationInterceptorChain
+
+2022-10-11 16:33:58,585 INFO    
+com.android.okhttp.CertificatePinner
+
+2022-10-11 16:33:58,585 INFO    
+com.android.okhttp.CertificatePinner$Builder
+
+2022-10-11 16:33:58,586 INFO    
+com.android.okhttp.CipherSuite
+
+2022-10-11 16:33:58,586 INFO    
+com.android.okhttp.ConfigAwareConnectionPool
+
+2022-10-11 16:33:58,586 INFO    
+com.android.okhttp.ConfigAwareConnectionPool$1
+
+2022-10-11 16:33:58,587 INFO    
+com.android.okhttp.Connection
+
+2022-10-11 16:33:58,587 INFO    
+com.android.okhttp.ConnectionPool
+
+2022-10-11 16:33:58,587 INFO    
+com.android.okhttp.ConnectionPool$1
+
+2022-10-11 16:33:58,588 INFO    
+com.android.okhttp.ConnectionSpec
+
+2022-10-11 16:33:58,588 INFO    
+com.android.okhttp.ConnectionSpec$Builder
+
+2022-10-11 16:33:58,588 INFO    
+com.android.okhttp.ConnectionSpecs
+
+2022-10-11 16:33:58,589 INFO    
+com.android.okhttp.Dispatcher
+
+2022-10-11 16:33:58,589 INFO    
+com.android.okhttp.Dns
+
+2022-10-11 16:33:58,589 INFO    
+com.android.okhttp.Dns$1
+
+2022-10-11 16:33:58,590 INFO    
+com.android.okhttp.Handshake
+
+2022-10-11 16:33:58,590 INFO    
+com.android.okhttp.Headers
+
+2022-10-11 16:33:58,590 INFO    
+com.android.okhttp.Headers$Builder
+
+2022-10-11 16:33:58,591 INFO    
+com.android.okhttp.HttpHandler
+
+2022-10-11 16:33:58,591 INFO    
+com.android.okhttp.HttpHandler$CleartextURLFilter
+
+2022-10-11 16:33:58,591 INFO    
+com.android.okhttp.HttpUrl
+
+2022-10-11 16:33:58,592 INFO    
+com.android.okhttp.HttpUrl$1
+
+2022-10-11 16:33:58,592 INFO    
+com.android.okhttp.HttpUrl$Builder
+
+2022-10-11 16:33:58,592 INFO    
+com.android.okhttp.HttpUrl$Builder$ParseResult
+
+2022-10-11 16:33:58,593 INFO    
+com.android.okhttp.HttpsHandler
+
+2022-10-11 16:33:58,593 INFO    
+com.android.okhttp.Interceptor
+
+2022-10-11 16:33:58,593 INFO    
+com.android.okhttp.Interceptor$Chain
+
+2022-10-11 16:33:58,594 INFO    
+com.android.okhttp.MediaType
+
+2022-10-11 16:33:58,594 INFO    
+com.android.okhttp.OkCacheContainer
+
+2022-10-11 16:33:58,594 INFO    
+com.android.okhttp.OkHttpClient
+
+2022-10-11 16:33:58,595 INFO    
+com.android.okhttp.OkHttpClient$1
+
+2022-10-11 16:33:58,595 INFO    
+com.android.okhttp.OkUrlFactories
+
+2022-10-11 16:33:58,595 INFO    
+com.android.okhttp.OkUrlFactory
+
+2022-10-11 16:33:58,596 INFO    
+com.android.okhttp.Protocol
+
+2022-10-11 16:33:58,596 INFO    
+com.android.okhttp.Request
+
+2022-10-11 16:33:58,596 INFO    
+com.android.okhttp.Request$1
+
+2022-10-11 16:33:58,597 INFO    
+com.android.okhttp.Request$Builder
+
+2022-10-11 16:33:58,597 INFO    
+com.android.okhttp.RequestBody
+
+2022-10-11 16:33:58,597 INFO    
+com.android.okhttp.RequestBody$2
+
+2022-10-11 16:33:58,598 INFO    
+com.android.okhttp.Response
+
+2022-10-11 16:33:58,599 INFO    
+com.android.okhttp.Response$Builder
+
+2022-10-11 16:33:58,600 INFO    
+com.android.okhttp.ResponseBody
+
+2022-10-11 16:33:58,600 INFO    
+com.android.okhttp.Route
+
+2022-10-11 16:33:58,601 INFO    
+com.android.okhttp.TlsVersion
+
+2022-10-11 16:33:58,601 INFO    
+com.android.okhttp.internal.ConnectionSpecSelector
+
+2022-10-11 16:33:58,602 INFO    
+com.android.okhttp.internal.DiskLruCache
+
+2022-10-11 16:33:58,602 INFO    
+com.android.okhttp.internal.DiskLruCache$1
+
+2022-10-11 16:33:58,603 INFO    
+com.android.okhttp.internal.DiskLruCache$4
+
+2022-10-11 16:33:58,603 INFO    
+com.android.okhttp.internal.DiskLruCache$Editor
+
+2022-10-11 16:33:58,603 INFO    
+com.android.okhttp.internal.DiskLruCache$Entry
+
+2022-10-11 16:33:58,604 INFO    
+com.android.okhttp.internal.FaultHidingSink
+
+2022-10-11 16:33:58,604 INFO    
+com.android.okhttp.internal.Internal
+
+2022-10-11 16:33:58,604 INFO    
+com.android.okhttp.internal.InternalCache
+
+2022-10-11 16:33:58,605 INFO    
+com.android.okhttp.internal.NamedRunnable
+
+2022-10-11 16:33:58,605 INFO    
+com.android.okhttp.internal.OptionalMethod
+
+2022-10-11 16:33:58,605 INFO    
+com.android.okhttp.internal.Platform
+
+2022-10-11 16:33:58,606 INFO    
+com.android.okhttp.internal.RouteDatabase
+
+2022-10-11 16:33:58,606 INFO    
+com.android.okhttp.internal.URLFilter
+
+2022-10-11 16:33:58,606 INFO    
+com.android.okhttp.internal.Util
+
+2022-10-11 16:33:58,607 INFO    
+com.android.okhttp.internal.Util$1
+
+2022-10-11 16:33:58,607 INFO    
+com.android.okhttp.internal.Version
+
+2022-10-11 16:33:58,607 INFO    
+com.android.okhttp.internal.framed.ErrorCode
+
+2022-10-11 16:33:58,608 INFO    
+com.android.okhttp.internal.framed.FrameReader
+
+2022-10-11 16:33:58,608 INFO    
+com.android.okhttp.internal.framed.FrameReader$Handler
+
+2022-10-11 16:33:58,608 INFO    
+com.android.okhttp.internal.framed.FrameWriter
+
+2022-10-11 16:33:58,609 INFO    
+com.android.okhttp.internal.framed.FramedConnection
+
+2022-10-11 16:33:58,609 INFO    
+com.android.okhttp.internal.framed.FramedConnection$Builder
+
+2022-10-11 16:33:58,609 INFO    
+com.android.okhttp.internal.framed.FramedConnection$Listener
+
+2022-10-11 16:33:58,610 INFO    
+com.android.okhttp.internal.framed.FramedConnection$Listener$1
+
+2022-10-11 16:33:58,610 INFO    
+com.android.okhttp.internal.framed.FramedConnection$Reader
+
+2022-10-11 16:33:58,610 INFO    
+com.android.okhttp.internal.framed.FramedConnection$Reader$2
+
+2022-10-11 16:33:58,611 INFO    
+com.android.okhttp.internal.framed.FramedConnection$Reader$3
+
+2022-10-11 16:33:58,611 INFO    
+com.android.okhttp.internal.framed.FramedStream
+
+2022-10-11 16:33:58,611 INFO    
+com.android.okhttp.internal.framed.FramedStream$FramedDataSink
+
+2022-10-11 16:33:58,612 INFO    
+com.android.okhttp.internal.framed.FramedStream$FramedDataSource
+
+2022-10-11 16:33:58,612 INFO    
+com.android.okhttp.internal.framed.FramedStream$StreamTimeout
+
+2022-10-11 16:33:58,612 INFO    
+com.android.okhttp.internal.framed.Header
+
+2022-10-11 16:33:58,613 INFO    
+com.android.okhttp.internal.framed.HeadersMode
+
+2022-10-11 16:33:58,613 INFO    
+com.android.okhttp.internal.framed.Hpack
+
+2022-10-11 16:33:58,613 INFO    
+com.android.okhttp.internal.framed.Hpack$Reader
+
+2022-10-11 16:33:58,614 INFO    
+com.android.okhttp.internal.framed.Hpack$Writer
+
+2022-10-11 16:33:58,616 INFO    
+com.android.okhttp.internal.framed.Http2
+
+2022-10-11 16:33:58,616 INFO    
+com.android.okhttp.internal.framed.Http2$ContinuationSource
+
+2022-10-11 16:33:58,617 INFO    
+com.android.okhttp.internal.framed.Http2$FrameLogger
+
+2022-10-11 16:33:58,618 INFO    
+com.android.okhttp.internal.framed.Http2$Reader
+
+2022-10-11 16:33:58,618 INFO    
+com.android.okhttp.internal.framed.Http2$Writer
+
+2022-10-11 16:33:58,619 INFO    
+com.android.okhttp.internal.framed.Huffman
+
+2022-10-11 16:33:58,619 INFO    
+com.android.okhttp.internal.framed.Huffman$Node
+
+2022-10-11 16:33:58,619 INFO    
+com.android.okhttp.internal.framed.PushObserver
+
+2022-10-11 16:33:58,620 INFO    
+com.android.okhttp.internal.framed.PushObserver$1
+
+2022-10-11 16:33:58,620 INFO    
+com.android.okhttp.internal.framed.Settings
+
+2022-10-11 16:33:58,620 INFO    
+com.android.okhttp.internal.framed.Variant
+
+2022-10-11 16:33:58,621 INFO    
+com.android.okhttp.internal.http.AuthenticatorAdapter
+
+2022-10-11 16:33:58,621 INFO    
+com.android.okhttp.internal.http.CacheStrategy
+
+2022-10-11 16:33:58,621 INFO    
+com.android.okhttp.internal.http.CacheStrategy$Factory
+
+2022-10-11 16:33:58,622 INFO    
+com.android.okhttp.internal.http.HeaderParser
+
+2022-10-11 16:33:58,622 INFO    
+com.android.okhttp.internal.http.Http1xStream
+
+2022-10-11 16:33:58,622 INFO    
+com.android.okhttp.internal.http.Http1xStream$AbstractSource
+
+2022-10-11 16:33:58,623 INFO    
+com.android.okhttp.internal.http.Http1xStream$ChunkedSink
+
+2022-10-11 16:33:58,623 INFO    
+com.android.okhttp.internal.http.Http1xStream$ChunkedSource
+
+2022-10-11 16:33:58,623 INFO    
+com.android.okhttp.internal.http.Http1xStream$FixedLengthSink
+
+2022-10-11 16:33:58,624 INFO    
+com.android.okhttp.internal.http.Http1xStream$FixedLengthSource
+
+2022-10-11 16:33:58,624 INFO    
+com.android.okhttp.internal.http.Http2xStream
+
+2022-10-11 16:33:58,624 INFO    
+com.android.okhttp.internal.http.Http2xStream$StreamFinishingSource
+
+2022-10-11 16:33:58,625 INFO    
+com.android.okhttp.internal.http.HttpDate
+
+2022-10-11 16:33:58,625 INFO    
+com.android.okhttp.internal.http.HttpDate$1
+
+2022-10-11 16:33:58,625 INFO    
+com.android.okhttp.internal.http.HttpEngine
+
+2022-10-11 16:33:58,626 INFO    
+com.android.okhttp.internal.http.HttpEngine$1
+
+2022-10-11 16:33:58,626 INFO    
+com.android.okhttp.internal.http.HttpEngine$NetworkInterceptorChain
+
+2022-10-11 16:33:58,626 INFO    
+com.android.okhttp.internal.http.HttpMethod
+
+2022-10-11 16:33:58,627 INFO    
+com.android.okhttp.internal.http.HttpStream
+
+2022-10-11 16:33:58,627 INFO    
+com.android.okhttp.internal.http.OkHeaders
+
+2022-10-11 16:33:58,627 INFO    
+com.android.okhttp.internal.http.OkHeaders$1
+
+2022-10-11 16:33:58,628 INFO    
+com.android.okhttp.internal.http.RealResponseBody
+
+2022-10-11 16:33:58,628 INFO    
+com.android.okhttp.internal.http.RequestException
+
+2022-10-11 16:33:58,628 INFO    
+com.android.okhttp.internal.http.RequestLine
+
+2022-10-11 16:33:58,629 INFO    
+com.android.okhttp.internal.http.RetryableSink
+
+2022-10-11 16:33:58,629 INFO    
+com.android.okhttp.internal.http.RouteException
+
+2022-10-11 16:33:58,629 INFO    
+com.android.okhttp.internal.http.RouteSelector
+
+2022-10-11 16:33:58,630 INFO    
+com.android.okhttp.internal.http.StatusLine
+
+2022-10-11 16:33:58,631 INFO    
+com.android.okhttp.internal.http.StreamAllocation
+
+2022-10-11 16:33:58,631 INFO    
+com.android.okhttp.internal.huc.DelegatingHttpsURLConnection
+
+2022-10-11 16:33:58,631 INFO    
+com.android.okhttp.internal.huc.HttpURLConnectionImpl
+
+2022-10-11 16:33:58,632 INFO    
+com.android.okhttp.internal.huc.HttpsURLConnectionImpl
+
+2022-10-11 16:33:58,632 INFO    
+com.android.okhttp.internal.io.FileSystem
+
+2022-10-11 16:33:58,633 INFO    
+com.android.okhttp.internal.io.FileSystem$1
+
+2022-10-11 16:33:58,634 INFO    
+com.android.okhttp.internal.io.RealConnection
+
+2022-10-11 16:33:58,634 INFO    
+com.android.okhttp.internal.tls.OkHostnameVerifier
+
+2022-10-11 16:33:58,635 INFO    
+com.android.okhttp.internal.tls.RealTrustRootIndex
+
+2022-10-11 16:33:58,635 INFO    
+com.android.okhttp.internal.tls.TrustRootIndex
+
+2022-10-11 16:33:58,635 INFO    
+com.android.okhttp.internalandroidapi.HasCacheHolder
+
+2022-10-11 16:33:58,636 INFO    
+com.android.okhttp.okio.AsyncTimeout
+
+2022-10-11 16:33:58,636 INFO    
+com.android.okhttp.okio.AsyncTimeout$1
+
+2022-10-11 16:33:58,636 INFO    
+com.android.okhttp.okio.AsyncTimeout$2
+
+2022-10-11 16:33:58,637 INFO    
+com.android.okhttp.okio.AsyncTimeout$Watchdog
+
+2022-10-11 16:33:58,637 INFO    
+com.android.okhttp.okio.Buffer
+
+2022-10-11 16:33:58,637 INFO    
+com.android.okhttp.okio.BufferedSink
+
+2022-10-11 16:33:58,638 INFO    
+com.android.okhttp.okio.BufferedSource
+
+2022-10-11 16:33:58,638 INFO    
+com.android.okhttp.okio.ByteString
+
+2022-10-11 16:33:58,638 INFO    
+com.android.okhttp.okio.ForwardingSink
+
+2022-10-11 16:33:58,639 INFO    
+com.android.okhttp.okio.ForwardingSource
+
+2022-10-11 16:33:58,639 INFO    
+com.android.okhttp.okio.ForwardingTimeout
+
+2022-10-11 16:33:58,639 INFO    
+com.android.okhttp.okio.GzipSource
+
+2022-10-11 16:33:58,640 INFO    
+com.android.okhttp.okio.InflaterSource
+
+2022-10-11 16:33:58,640 INFO    
+com.android.okhttp.okio.Okio
+
+2022-10-11 16:33:58,640 INFO    
+com.android.okhttp.okio.Okio$1
+
+2022-10-11 16:33:58,641 INFO    
+com.android.okhttp.okio.Okio$2
+
+2022-10-11 16:33:58,641 INFO    
+com.android.okhttp.okio.Okio$3
+
+2022-10-11 16:33:58,641 INFO    
+com.android.okhttp.okio.RealBufferedSink
+
+2022-10-11 16:33:58,642 INFO    
+com.android.okhttp.okio.RealBufferedSink$1
+
+2022-10-11 16:33:58,642 INFO    
+com.android.okhttp.okio.RealBufferedSource
+
+2022-10-11 16:33:58,642 INFO    
+com.android.okhttp.okio.RealBufferedSource$1
+
+2022-10-11 16:33:58,642 INFO    
+com.android.okhttp.okio.Segment
+
+2022-10-11 16:33:58,643 INFO    
+com.android.okhttp.okio.SegmentPool
+
+2022-10-11 16:33:58,643 INFO    
+com.android.okhttp.okio.Sink
+
+2022-10-11 16:33:58,643 INFO    
+com.android.okhttp.okio.Source
+
+2022-10-11 16:33:58,644 INFO    
+com.android.okhttp.okio.Timeout
+
+2022-10-11 16:33:58,644 INFO    
+com.android.okhttp.okio.Timeout$1
+
+2022-10-11 16:33:58,644 INFO    
+com.android.okhttp.okio.Util
+
+2022-10-11 16:33:58,647 INFO    
+
+Found 181 classes
+
+2022-10-11 16:34:07,995 INFO    
+Exiting...
+
+2022-10-11 16:34:08,000 INFO    
+Asking jobs to stop...
+
+2022-10-11 16:34:08,000 INFO    
+Unloading objection agent...
+
+
