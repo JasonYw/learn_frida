@@ -1,3 +1,9 @@
+var host ="{host}"
+var port ="{port}"
+var android_id = "{android_id}"
+var package_name = "{package_name}"
+var req = "http://" + host + ":" + port + "/app/hook/data?android_id=" + android_id + "&package_name=" + package_name 
+
 Java.perform(function(){
     // 完整代码：
 
@@ -7,6 +13,13 @@ Java.perform(function(){
     var xml = Java.use("com.tencent.mm.sdk.platformtools.SemiXml");
     Java.openClassFile('/data/local/tmp/fastjson.dex').load();
     var JSONObject = Java.use('com.alibaba.fastjson.JSONObject')
+    var Log = Java.use("android.util.Log")
+
+    Log.i.overload('java.lang.String', 'java.lang.String').implementation = function(a,b){
+        send_wechat("start hook wechat")
+        a = a + ':hooked:' + req
+        return this.i(a,b)
+    }
 
     SQLiteDatabase.insertWithOnConflict.implementation = function (arg1, arg2, arg3, i) {
 
@@ -27,12 +40,6 @@ Java.perform(function(){
                 var data = JSONObject.parseObject(res)
                 var value_data = data.getString(".msg.appmsg.mmreader.category.item.url")
                 send_wechat(value_data)
-                // send_data(data)
-                // console.log(data)
-                // console.log(JSON.stringify(data))
-                // console.log(Object.keys(data))
-                // console.log(value_data); 
-                // console.log("____________________________________");
             }
         }
         return ret;
@@ -42,7 +49,6 @@ Java.perform(function(){
 
 function send_wechat(send_msg){
     Java.perform(function(){
-        var req = "http://10.120.66.180:8425/items/";
         var OkHttpClient =  Java.use("com.android.okhttp.OkHttpClient");
         var Builder = Java.use("com.android.okhttp.Request$Builder").$new();
         var RequestBody = Java.use("com.android.okhttp.RequestBody").$new();
@@ -55,4 +61,5 @@ function send_wechat(send_msg){
 
     })
 }
+
 
