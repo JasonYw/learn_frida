@@ -1,0 +1,620 @@
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeSet
+signature => (IJLjava/lang/String;[Ljava/lang/Object;)J
+funcaddr => 0xc378ae24
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5e24
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeCmd
+signature => (IJLjava/lang/String;[Ljava/lang/Object;)J
+funcaddr => 0xc378b514
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x6514
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeGet
+signature => (IJLjava/lang/String;)Ljava/lang/String;
+funcaddr => 0xc378b428
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x6428
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeSetForeground
+signature => (Z)V
+funcaddr => 0xc378a774
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5774
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeChangeState
+signature => (Ljava/lang/String;Ljava/lang/String;Z)Z
+funcaddr => 0xc378a844
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5844
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeAddHeaderInfo
+signature => (Ljava/lang/String;Ljava/lang/String;)V
+funcaddr => 0xc378aa24
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5a24
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeAddDumpFile
+signature => (Ljava/lang/String;Ljava/lang/String;ZZIZ)I
+funcaddr => 0xc378aa74
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5a74
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeAddCallbackInfo
+signature => (Ljava/lang/String;IJI)I
+funcaddr => 0xc378ab00
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5b00
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeGetCallbackInfo
+signature => (Ljava/lang/String;JIZ)Ljava/lang/String;
+funcaddr => 0xc378b39c
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x639c
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeCreateCachedInfo
+signature => (Ljava/lang/String;II)I
+funcaddr => 0xc378ab58
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5b58
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeAddCachedInfo
+signature => (Ljava/lang/String;Ljava/lang/String;)Z
+funcaddr => 0xc378ab9c
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5b9c
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeGenerateUnexpLog
+signature => (JI)I
+funcaddr => 0xc378a780
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5780
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeDumpThreads
+signature => (Ljava/lang/String;J)Ljava/lang/String;
+funcaddr => 0xc378bfbc
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x6fbc
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeOpenFile
+signature => (Ljava/lang/String;)I
+funcaddr => 0xc378a9a4
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x59a4
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeCloseFile
+signature => (I)V
+funcaddr => 0xc378a78c
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x578c
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeLockFile
+signature => (IZ)Z
+funcaddr => 0xc378aa04
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5a04
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeClientCreateConnection
+signature => (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)J
+funcaddr => 0xc378aca0
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5ca0
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeClientWriteData
+signature => (JLjava/lang/String;)I
+funcaddr => 0xc378b974
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x6974
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeClientCloseConnection
+signature => (J)V
+funcaddr => 0xc378a794
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5794
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeIsCrashing
+signature => ()Z
+funcaddr => 0xc378aa14
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x5a14
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeLog
+signature => (ILjava/lang/String;Ljava/lang/String;)I
+funcaddr => 0xc378a7dc
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x57dc
+=======================
+
+=======================
+classname => com.uc.crashsdk.JNIBridge
+name => nativeCrash
+signature => (II)V
+funcaddr => 0xc378bd50
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x6d50
+=======================
+
+=======================
+classname => com.pgl.sys.ces.a
+name => meta
+signature => (ILandroid/content/Context;Ljava/lang/Object;)Ljava/lang/Object;
+funcaddr => 0xc1bee445
+so_name => libnms.so
+so_addr => 0xc1bd9000
+funcaddr_sub_soaddr => 0x15445
+=======================
+
+=======================
+classname => android.os.Process
+name => sendSignal
+signature => (II)V
+funcaddr => 0xc37afa80
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x2aa80
+=======================
+
+=======================
+classname => android.os.Process
+name => sendSignalQuiet
+signature => (II)V
+funcaddr => 0xc37afb14
+so_name => libcrashsdk.so
+so_addr => 0xc3785000
+funcaddr_sub_soaddr => 0x2ab14
+=======================
+
+=======================
+classname => com.umeng.umzid.Spy
+name => getNativeID
+signature => ()Ljava/lang/String;
+funcaddr => 0xc064941d
+so_name => libumeng-spy.so
+so_addr => 0xc0645000
+funcaddr_sub_soaddr => 0x441d
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => closeSessionN
+signature => (J)I
+funcaddr => 0xc01b1795
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x5795
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => initAgent
+signature => (III)J
+funcaddr => 0xc01b175d
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x575d
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => freeAgent
+signature => (J)I
+funcaddr => 0xc01b1741
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x5741
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => getSession
+signature => (J[BC)J
+funcaddr => 0xc01b18dd
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x58dd
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => setSessionKind
+signature => (JI)I
+funcaddr => 0xc01b1469
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x5469
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => setConTimeout
+signature => (JI)I
+funcaddr => 0xc01b146d
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x546d
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => createSessionN
+signature => (JLorg/android/spdy/SpdySession;I[BC[BC[B[BLjava/lang/Object;III[B)J
+funcaddr => 0xc01b1521
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x5521
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => configLogFileN
+signature => (Ljava/lang/String;II)I
+funcaddr => 0xc01b14dd
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x54dd
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => configLogFileN
+signature => (Ljava/lang/String;III)I
+funcaddr => 0xc01b1499
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x5499
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => logFileFlushN
+signature => ()V
+funcaddr => 0xc01b1491
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x5491
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => logFileCloseN
+signature => ()V
+funcaddr => 0xc01b1489
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x5489
+=======================
+
+=======================
+classname => org.android.spdy.SpdyAgent
+name => configIpStackModeN
+signature => (I)I
+funcaddr => 0xc01b147d
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x547d
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => submitRequestN
+signature => (JLjava/lang/String;B[Ljava/lang/String;[BZIII)I
+funcaddr => 0xc01b2765
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x6765
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => sendHeadersN
+signature => (JI[Ljava/lang/String;Z)I
+funcaddr => 0xc01b2719
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x6719
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => streamSendDataN
+signature => (JI[BIIZ)I
+funcaddr => 0xc01b260d
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x660d
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => setOptionN
+signature => (JII)I
+funcaddr => 0xc01b26d5
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x66d5
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => submitPingN
+signature => (J)I
+funcaddr => 0xc01b26bd
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x66bd
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => streamCloseN
+signature => (JII)I
+funcaddr => 0xc01b2655
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x6655
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => sendCustomControlFrameN
+signature => (JIIII[B)I
+funcaddr => 0xc01b259d
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x659d
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => submitBioPingN
+signature => (J)I
+funcaddr => 0xc01b2585
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x6585
+=======================
+
+=======================
+classname => org.android.spdy.SpdySession
+name => NotifyNotInvokeAnyMoreN
+signature => (J)I
+funcaddr => 0xc01b2559
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x6559
+=======================
+
+=======================
+classname => org.android.netutil.UdpConnectType
+name => nativeTestUdpConnectIpv4
+signature => ()I
+funcaddr => 0xc01b1325
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x5325
+=======================
+
+=======================
+classname => org.android.netutil.UdpConnectType
+name => nativeTestUdpConnectIpv6
+signature => ()I
+funcaddr => 0xc01b12dd
+so_name => libtnet-3.1.14.so
+so_addr => 0xc01ac000
+funcaddr_sub_soaddr => 0x52dd
+=======================
+
+=======================
+classname => com.android.webview.chromium.DrawFunctor
+name => nativeGetFunctionTable
+signature => ()J
+funcaddr => 0xe6d1a081
+so_name => libwebviewchromium_plat_support.so
+so_addr => 0xe6d18000
+funcaddr_sub_soaddr => 0x2081
+=======================
+
+=======================
+classname => com.android.webview.chromium.DrawGLFunctor
+name => nativeCreateGLFunctor
+signature => (J)J
+funcaddr => 0xe6d1a4ad
+so_name => libwebviewchromium_plat_support.so
+so_addr => 0xe6d18000
+funcaddr_sub_soaddr => 0x24ad
+=======================
+
+=======================
+classname => com.android.webview.chromium.DrawGLFunctor
+name => nativeDestroyGLFunctor
+signature => (J)V
+funcaddr => 0xe6d1a4cd
+so_name => libwebviewchromium_plat_support.so
+so_addr => 0xe6d18000
+funcaddr_sub_soaddr => 0x24cd
+=======================
+
+=======================
+classname => com.android.webview.chromium.DrawGLFunctor
+name => nativeSetChromiumAwDrawGLFunction
+signature => (J)V
+funcaddr => 0xe6d1a4d9
+so_name => libwebviewchromium_plat_support.so
+so_addr => 0xe6d18000
+funcaddr_sub_soaddr => 0x24d9
+=======================
+
+=======================
+classname => com.android.webview.chromium.GraphicsUtils
+name => nativeGetDrawSWFunctionTable
+signature => ()J
+funcaddr => 0xe6d1a739
+so_name => libwebviewchromium_plat_support.so
+so_addr => 0xe6d18000
+funcaddr_sub_soaddr => 0x2739
+=======================
+
+=======================
+classname => com.android.webview.chromium.GraphicsUtils
+name => nativeGetDrawGLFunctionTable
+signature => ()J
+funcaddr => 0xe6d1a75d
+so_name => libwebviewchromium_plat_support.so
+so_addr => 0xe6d18000
+funcaddr_sub_soaddr => 0x275d
+=======================
+
+=======================
+classname => com.zhangyue.iReader.JNI.util.JNISecurity
+name => hash
+signature => (Ljava/security/Signature;Ljava/security/KeyFactory;[B)[B
+funcaddr => 0xbc17c6b5
+so_name => libUiControl.so
+so_addr => 0xbc136000
+funcaddr_sub_soaddr => 0x466b5
+=======================
+
+=======================
+classname => com.zhangyue.iReader.JNI.util.JNISecurity
+name => hash2
+signature => (ILjava/security/Signature;Ljava/security/KeyFactory;[B)[B
+funcaddr => 0xbc17c47d
+so_name => libUiControl.so
+so_addr => 0xbc136000
+funcaddr_sub_soaddr => 0x4647d
+=======================
+
+=======================
+classname => com.zhangyue.iReader.JNI.core
+name => openBook
+signature => (JLjava/lang/String;Ljava/lang/String;)I
+funcaddr => 0xbc18902d
+so_name => libUiControl.so
+so_addr => 0xbc136000
+funcaddr_sub_soaddr => 0x5302d
+=======================
+
+=======================
+classname => com.zy.base_module.utils.AaidUtil
+name => stringFromJNI1
+signature => ()Ljava/lang/String;
+funcaddr => 0xb9a4d3a9
+so_name => libnative-lib1668068620866.so
+so_addr => 0xb9a43000
+funcaddr_sub_soaddr => 0xa3a9
+=======================
+
+=======================
+classname => com.zy.base_module.utils.AaidUtil
+name => stringFromJNI2
+signature => ()Ljava/lang/String;
+funcaddr => 0xb9a4d4fd
+so_name => libnative-lib1668068620866.so
+so_addr => 0xb9a43000
+funcaddr_sub_soaddr => 0xa4fd
+=======================
+
+=======================
+classname => com.zhangyue.iReader.JNI.util.JNISecurity
+name => hash
+signature => (Ljava/security/Signature;Ljava/security/KeyFactory;[B)[B
+funcaddr => 0xb90c9ef9
+so_name => libtingReader.so
+so_addr => 0xb90c1000
+funcaddr_sub_soaddr => 0x8ef9
+=======================
+
+=======================
+classname => com.zhangyue.iReader.JNI.util.JNISecurity
+name => hash
+signature => (Ljava/security/Signature;Ljava/security/KeyFactory;[B)[B
+funcaddr => 0xb90c9ef9
+so_name => libtingReader.so
+so_addr => 0xb90c1000
+funcaddr_sub_soaddr => 0x8ef9
+=======================
+
