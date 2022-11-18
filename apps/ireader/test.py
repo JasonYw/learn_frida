@@ -106,7 +106,7 @@ def rsa_sign(data):
     # 实例化java对象
     javaInstance = javaClass()
     # ③、调用java方法
-    javaInstance.main("C:\Users\wkj\Desktop\com.chaozh.iReaderFree\ireader.apk",data)
+    javaInstance.main("C:/Users/wkj/Desktop/com.chaozh.iReaderFree/ireader.apk",data)
     # ④、关闭jvm:jvm随着python程序的退出而结束
     jpype.shutdownJVM()
 
