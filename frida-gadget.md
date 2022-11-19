@@ -2,7 +2,7 @@
 
 ## 自定义目录设计
 
-- /data/system/xsettings/mydemo/persisit/pkgName/persist_on 此文件存在表示开启持久化
+- /data/system/xsettings/mydemo/persisit/pkgName/persist_mydemo 此文件存在表示开启持久化
 - /data/system/xsettings/mydemo/jscfg/pkgName/config.js hook代码
 
 ## 配置开机就创建自定义目录
@@ -11,7 +11,7 @@
 
 ```Shell
     #//add start
-    #/data/system/xsettings/mydemo/persisit/pkgName/persist_on
+    #/data/system/xsettings/mydemo/persisit/pkgName/persist_mydemo
     mkdir /data/system/xsettings 0775 system system
     mkdir /data/system/xsettings/mydemo 0775 system system
     mkdir /data/system/xsettings/mydemo/persisit 0775 system system
@@ -127,8 +127,7 @@
 
 ## frida-gadget 集成到系统
 
-- frida-gadget:<https://github.com/frida/frida/releases> android arm64 版本 以及 android arm 版本
-
+- frida-gadget:[https://github.com/frida/frida/releases](https://github.com/frida/frida/releases) android arm64 版本 以及 android arm 版本
 - 将frida-gadget放到源码目录中，比如如下文件夹中
 
 ```Shell
@@ -209,7 +208,7 @@
         return false;
     }
     //判断app是否打开自动注入脚本功能 
-    ///data/system/xsettings/mydemo/persisit/pkgName/persist_on 判断此文件是否存在
+    ///data/system/xsettings/mydemo/persisit/pkgName/persist_mydemo 判断此文件是否存在
     public static boolean isEnablePersist(String pkgName, String methodType){
         File enableFile = new File(SETTINGS_DIR,pkgName + "/" + methodType);
         return enableFile.exists();
@@ -309,46 +308,44 @@
 
 - system权限app的开发
 
-    1. 在manifest中加入android:sharedUserId="android.uid.system"
-    2. 将编译出来的app放入 /packages/apps/mydemopersist/
-    3. 编写Android.mk 并且同时放入/packages/apps/mydemopersist/ 与apk放一起
+  1. 在manifest中加入android:sharedUserId="android.uid.system"
+  2. 将编译出来的app放入 /packages/apps/mydemopersist/
+  3. 编写Android.mk 并且同时放入/packages/apps/mydemopersist/ 与apk放一起
 
-    ```Shell
-        # ///ADD START
-        # ///ADD END
-        # 设置当前工作路径
-        LOCAL_PATH:= $(call my-dir)
-        # 清除变量值
-        include $(CLEAR_VARS)
-        # 生成的模块名称
-        LOCAL_MODULE := ControlAPP
-        # 生成的模块类型
-        LOCAL_MODULE_CLASS := APPS
-        # 生成的模块后缀名,此处为apk
-        LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
-        # 设置模块tag，tags取值可以为:user debug eng tests optional
-        # optional表示全平台编译
-        LOCAL_MODULE_TAGS := optional
-        # LOCAL_PRIVILEGED_MODULE := true
-        LOCAL_BUILT_MODULE_STEM := package.apk
-        LOCAL_DEX_PREOPT := false
-        # 设置源文件
-        LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
-        LOCAL_CERTIFICATE := platform
-        # 设置签名，此处表示保持apk原有签名
-        # LOCAL_CERTIFICATE := PRESIGNED
-        # 此处表示预编译方式
-        include $(BUILD_PREBUILT)
-    ```
-
-    4. 单独编译指定模块 mmm /packages/apps/mydemopersist/
-    5. 编译后的模块在 /out/target/product/sailfish/system/app/ControlAPP
-    6. 使用make snod 将编译出来的文件打包成镜像，刷入system.img即可
-
+  ```Shell
+      # ///ADD START
+      # ///ADD END
+      # 设置当前工作路径
+      LOCAL_PATH:= $(call my-dir)
+      # 清除变量值
+      include $(CLEAR_VARS)
+      # 生成的模块名称
+      LOCAL_MODULE := ControlAPP
+      # 生成的模块类型
+      LOCAL_MODULE_CLASS := APPS
+      # 生成的模块后缀名,此处为apk
+      LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+      # 设置模块tag，tags取值可以为:user debug eng tests optional
+      # optional表示全平台编译
+      LOCAL_MODULE_TAGS := optional
+      # LOCAL_PRIVILEGED_MODULE := true
+      LOCAL_BUILT_MODULE_STEM := package.apk
+      LOCAL_DEX_PREOPT := false
+      # 设置源文件
+      LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
+      LOCAL_CERTIFICATE := platform
+      # 设置签名，此处表示保持apk原有签名
+      # LOCAL_CERTIFICATE := PRESIGNED
+      # 此处表示预编译方式
+      include $(BUILD_PREBUILT)
+  ```
+  4. 单独编译指定模块 mmm /packages/apps/mydemopersist/
+  5. 编译后的模块在 /out/target/product/sailfish/system/app/ControlAPP
+  6. 使用make snod 将编译出来的文件打包成镜像，刷入system.img即可
 - 如果要在编译整个系统时，一起编译这个模块，需要将模块的ControlAPP加入源码编译链中
 
-    1. 在manifest中加入android:sharedUserId="android.uid.system"
-    2. 将编译出来的app放入 /packages/apps/mydemopersist/
-    3. 编写Android.mk 并且同时放入/packages/apps/mydemopersist/ 与apk放一起
-    4. 增加内置模块，如果为app，把模块名字加入到/build/make/target/product/handheld_product.mk中的PRODUCT_PACKAGES 变量后面
-    5. 增加的内置模块，如果为可执行程序，加入到如下文件夹中/build/make/target/product/base_system.mk
+  1. 在manifest中加入android:sharedUserId="android.uid.system"
+  2. 将编译出来的app放入 /packages/apps/mydemopersist/
+  3. 编写Android.mk 并且同时放入/packages/apps/mydemopersist/ 与apk放一起
+  4. 增加内置模块，如果为app，把模块名字加入到/build/make/target/product/handheld_product.mk中的PRODUCT_PACKAGES 变量后面
+  5. 增加的内置模块，如果为可执行程序，加入到如下文件夹中/build/make/target/product/base_system.mk

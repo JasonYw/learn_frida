@@ -1,0 +1,3 @@
+dalvik.system.PathClassLoader[DexPathList[[directory "."],nativeLibraryDirectories=[/system/lib64, /system/lib64]]]
+java.lang.BootClassLoader@25ff6ac
+finish

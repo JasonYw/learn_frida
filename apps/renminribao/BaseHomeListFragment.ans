@@ -1,0 +1,629 @@
+[35;01mr0tracer begin ... ![39;49;00m
+[31;01mstart[39;49;00m
+[31;01mBegin Search Class...[39;49;00m
+tracerpid replaced: TracerPid:	0
+[30;01mFound Class => com.peopledailychina.activity.fragment.BaseHomeListFragment[39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.advertClickEvent [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.bindItemBean [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.checkRobotics [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.getCache [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.goView [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.handleAdapterAnimator [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.intent [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$null$5 [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$null$6 [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.loadCache [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.removeDataById [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.resetListVideoPlayState [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.resultGetCache [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.showAreaLocationDialog [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.statisticsArticleClick [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.statisticsClick [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.statisticsComponentClick [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.statisticsOtherClick [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.articleDelete [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.articleOffline [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.attentionStatusChanged [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.beforeVideo [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.currentVideo [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.dropDown [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.exposureCurrent [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.getCacheUrl [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.getData [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.getNetReport [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.getScreenUrl [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.getTrackProperties [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.goStatistics [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.initArgs [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.initView [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initArgs$0$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initArgs$1$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initView$2$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initView$3$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initView$4$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showAreaLocationDialog$7$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$10$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$8$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$9$BaseHomeListFragment [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.leaveCurrent [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.loadMoreEnable [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onActivityResult [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onCreate [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onCreateView [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onDestroy [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onDestroyView [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onFail [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onFirstLoad [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onLazyLoad [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onPause [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onPopupWid [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceiveResult [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onResume [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onStart [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onStop [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onVideoDetailBack [2 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.onVideoDetailBack2 [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.pullUp [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.refreshRobotics [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.resetPage [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.resultGetNewsList [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.scrollVideo [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.setChannelName [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.setChannelShortName [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.setRobotics [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.setUserVisibleHint [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.showDropDownBar [2 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.startVideo [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.stopVideo [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.advertClickEvent(com.peopledaily.common.store.db.entity.TabFragMainBeanItemBean)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.bindItemBean(android.view.View,com.peopledaily.common.store.db.entity.TabFragMainBeanItemBean,com.peopledailychina.activity.constants.ViewTypes$ViewDataObject)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.checkRobotics(com.peopledaily.common.http.bean.NetResultBean,java.lang.Object)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.getCache()
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.goView(android.view.View,java.lang.Object)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.handleAdapterAnimator(boolean)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.intent(com.peopledailychina.activity.constants.ViewTypes$ViewDataObject,com.peopledaily.common.store.db.entity.TabFragMainBeanItemBean)
+static void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$null$5(android.view.View)
+static void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$null$6(android.app.Dialog)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.loadCache()
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.removeDataById(java.lang.String)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.resetListVideoPlayState()
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.resultGetCache(java.lang.String)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.showAreaLocationDialog()
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.statisticsArticleClick(com.peopledaily.common.store.db.entity.TabFragMainBeanItemBean)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.statisticsClick(com.peopledaily.common.store.db.entity.TabFragMainBeanItemBean)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.statisticsComponentClick(java.lang.Object,java.lang.String)
+private void com.peopledailychina.activity.fragment.BaseHomeListFragment.statisticsOtherClick(java.lang.Object,java.lang.String)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.articleDelete(com.peopledailychina.activity.bean.eventbus.PeoNumEventBean$DeleteBean)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.articleOffline(com.peopledailychina.activity.bean.eventbus.ArticleActionBean$ArticleOfflineBean)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.attentionStatusChanged(com.peopledailychina.activity.bean.eventbus.PeoNumEventBean$HomeAttentionStatusBean)
+protected void com.peopledailychina.activity.fragment.BaseHomeListFragment.beforeVideo()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.currentVideo()
+protected abstract void com.peopledailychina.activity.fragment.BaseHomeListFragment.dropDown()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.exposureCurrent()
+protected java.lang.String com.peopledailychina.activity.fragment.BaseHomeListFragment.getCacheUrl()
+protected abstract void com.peopledailychina.activity.fragment.BaseHomeListFragment.getData()
+protected void com.peopledailychina.activity.fragment.BaseHomeListFragment.getNetReport(java.lang.String,boolean,java.lang.String,boolean)
+public java.lang.String com.peopledailychina.activity.fragment.BaseHomeListFragment.getScreenUrl()
+public org.json.JSONObject com.peopledailychina.activity.fragment.BaseHomeListFragment.getTrackProperties() throws org.json.JSONException
+protected void com.peopledailychina.activity.fragment.BaseHomeListFragment.goStatistics(int,java.lang.Object)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.initArgs()
+public android.view.View com.peopledailychina.activity.fragment.BaseHomeListFragment.initView(android.view.LayoutInflater,android.view.ViewGroup)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initArgs$0$BaseHomeListFragment(android.view.View,java.lang.Object)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initArgs$1$BaseHomeListFragment(int,android.view.View,java.lang.Object)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initView$2$BaseHomeListFragment(android.view.View)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initView$3$BaseHomeListFragment()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$initView$4$BaseHomeListFragment(int)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showAreaLocationDialog$7$BaseHomeListFragment()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$10$BaseHomeListFragment(float)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$8$BaseHomeListFragment()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$9$BaseHomeListFragment(java.lang.String,int,boolean)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.leaveCurrent()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.loadMoreEnable(boolean)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onActivityResult(int,int,android.content.Intent)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onCreate(android.os.Bundle)
+public android.view.View com.peopledailychina.activity.fragment.BaseHomeListFragment.onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onDestroy()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onDestroyView()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onFail(int,java.lang.Object)
+protected void com.peopledailychina.activity.fragment.BaseHomeListFragment.onFirstLoad()
+protected void com.peopledailychina.activity.fragment.BaseHomeListFragment.onLazyLoad(boolean)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onPause()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onPopupWid(com.peopledailychina.activity.bean.eventbus.MarqueeBean$PopupWid)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive(int,java.lang.String,java.lang.String,java.lang.Object)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceiveResult(int,com.peopledaily.common.http.bean.NetResultBean,java.lang.Object)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onResume()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onStart()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onStop()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onVideoDetailBack(com.peopledailychina.activity.bean.eventbus.MarqueeBean$HomeVideoBack)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onVideoDetailBack(com.peopledailychina.activity.bean.eventbus.MarqueeBean$VideoDetailBack)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.onVideoDetailBack2(com.peopledailychina.activity.bean.eventbus.MarqueeBean$VideoDetailBack2)
+protected abstract void com.peopledailychina.activity.fragment.BaseHomeListFragment.pullUp()
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.refreshRobotics()
+protected abstract void com.peopledailychina.activity.fragment.BaseHomeListFragment.resetPage()
+protected abstract void com.peopledailychina.activity.fragment.BaseHomeListFragment.resultGetNewsList(boolean,java.lang.String,java.lang.String,java.lang.String)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.scrollVideo(int)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.setChannelName(java.lang.String)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.setChannelShortName(java.lang.String)
+void com.peopledailychina.activity.fragment.BaseHomeListFragment.setRobotics(com.peopledailychina.activity.bean.TabFragMainBean,java.lang.String)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.setUserVisibleHint(boolean)
+protected void com.peopledailychina.activity.fragment.BaseHomeListFragment.showDropDownBar(int,java.lang.String)
+protected void com.peopledailychina.activity.fragment.BaseHomeListFragment.showDropDownBar(int,java.lang.String,boolean)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.startVideo(int)
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment.stopVideo(int)
+Tracing public com.peopledailychina.activity.fragment.BaseHomeListFragment()
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => com.peopledailychina.activity.fragment.BaseHomeListFragment$1[39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment$1.onRefreshBegin [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment$1.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment$1.onRefreshBegin(com.peopledailychina.activity.views.refresh.PtrFrameLayout)
+Tracing com.peopledailychina.activity.fragment.BaseHomeListFragment$1(com.peopledailychina.activity.fragment.BaseHomeListFragment)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => com.peopledailychina.activity.fragment.BaseHomeListFragment$2[39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment$2.run [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment$2.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment$2.run()
+Tracing com.peopledailychina.activity.fragment.BaseHomeListFragment$2(com.peopledailychina.activity.fragment.BaseHomeListFragment)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => com.peopledailychina.activity.fragment.BaseHomeListFragment$3[39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment$3.run [1 overload(s)][39;49;00m
+[31;01mTracing Method : com.peopledailychina.activity.fragment.BaseHomeListFragment$3.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public void com.peopledailychina.activity.fragment.BaseHomeListFragment$3.run()
+Tracing com.peopledailychina.activity.fragment.BaseHomeListFragment$3(com.peopledailychina.activity.fragment.BaseHomeListFragment)
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mFound Class => com.peopledailychina.activity.fragment.BaseHomeListFragment$4[39;49;00m
+[32;01m	Spec: => 
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mSearch Class Completed![39;49;00m
+[32;01mOn Total Tracing :5 classes :
+com.peopledailychina.activity.fragment.BaseHomeListFragment
+com.peopledailychina.activity.fragment.BaseHomeListFragment$1
+com.peopledailychina.activity.fragment.BaseHomeListFragment$2
+com.peopledailychina.activity.fragment.BaseHomeListFragment$3
+com.peopledailychina.activity.fragment.BaseHomeListFragment$4
+Start Tracing ...[39;49;00m
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@7d4d4c6 	[Ljava.lang.reflect.Field;@7d4d4c6 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.stopVideo
+arg[0]: 0 => 0
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.stopVideo(Native Method)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment$1.onRefreshBegin(BaseHomeListFragment.java:255)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment$1.onRefreshBegin(Native Method)
+	at com.peopledailychina.activity.views.refresh.PtrFrameLayout.performRefresh(PtrFrameLayout.java:535)
+	at com.peopledailychina.activity.views.refresh.PtrFrameLayout.tryToPerformRefresh(PtrFrameLayout.java:521)
+	at com.peopledailychina.activity.views.refresh.PtrFrameLayout.onRelease(PtrFrameLayout.java:433)
+	at com.peopledailychina.activity.views.refresh.PtrFrameLayout.dispatchTouchEvent(PtrFrameLayout.java:283)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at com.peopledailychina.activity.view.HomeCustomViewPager.dispatchTouchEvent(HomeCustomViewPager.java:209)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at com.android.internal.policy.DecorView.superDispatchTouchEvent(DecorView.java:465)
+	at com.android.internal.policy.PhoneWindow.superDispatchTouchEvent(PhoneWindow.java:1849)
+	at android.app.Activity.dispatchTouchEvent(Activity.java:3993)
+	at com.peopledailychina.activity.activity.MainActivity.dispatchTouchEvent(MainActivity.java:563)
+	at android.support.v7.view.WindowCallbackWrapper.dispatchTouchEvent(WindowCallbackWrapper.java:69)
+	at com.android.internal.policy.DecorView.dispatchTouchEvent(DecorView.java:423)
+	at android.view.View.dispatchPointerEvent(View.java:13689)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl.java:5482)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:5285)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4788)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:4841)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4807)
+	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:4947)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4815)
+	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:5004)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4788)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:4841)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4807)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4815)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4788)
+	at android.view.ViewRootImpl.deliverInputEvent(ViewRootImpl.java:7505)
+	at android.view.ViewRootImpl.doProcessInputEvents(ViewRootImpl.java:7474)
+	at android.view.ViewRootImpl.enqueueInputEvent(ViewRootImpl.java:7435)
+	at android.view.ViewRootImpl$WindowInputEventReceiver.onInputEvent(ViewRootImpl.java:7630)
+	at android.view.InputEventReceiver.dispatchInputEvent(InputEventReceiver.java:188)
+	at android.os.MessageQueue.nativePollOnce(Native Method)
+	at android.os.MessageQueue.next(MessageQueue.java:336)
+	at android.os.Looper.loop(Looper.java:174)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.stopVideo[39;49;00m
+[32;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.BaseHomeListFragment$1
+com.peopledailychina.activity.fragment.BaseHomeListFragment 	this$0 => HomeListFragment{347b0f4 #0 id=0x7f0a034d} => "<instance: com.peopledailychina.activity.fragment.BaseHomeListFragment, $className: com.peopledailychina.activity.fragment.HomeListFragment>"
+[Ljava.lang.reflect.Field;@9d75aa1 	[Ljava.lang.reflect.Field;@9d75aa1 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment$1.onRefreshBegin
+arg[0]: com.peopledailychina.activity.views.refresh.PtrClassicFrameLayout{37277b4 VFE...C.. ......ID 0,0-1080,1480 #7f0a0577 app:id/layout_pull_refresh} => "<instance: com.peopledailychina.activity.views.refresh.PtrFrameLayout, $className: com.peopledailychina.activity.views.refresh.PtrClassicFrameLayout>"
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment$1.onRefreshBegin(Native Method)
+	at com.peopledailychina.activity.views.refresh.PtrFrameLayout.performRefresh(PtrFrameLayout.java:535)
+	at com.peopledailychina.activity.views.refresh.PtrFrameLayout.tryToPerformRefresh(PtrFrameLayout.java:521)
+	at com.peopledailychina.activity.views.refresh.PtrFrameLayout.onRelease(PtrFrameLayout.java:433)
+	at com.peopledailychina.activity.views.refresh.PtrFrameLayout.dispatchTouchEvent(PtrFrameLayout.java:283)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at com.peopledailychina.activity.view.HomeCustomViewPager.dispatchTouchEvent(HomeCustomViewPager.java:209)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at android.view.ViewGroup.dispatchTransformedTouchEvent(ViewGroup.java:3060)
+	at android.view.ViewGroup.dispatchTouchEvent(ViewGroup.java:2755)
+	at com.android.internal.policy.DecorView.superDispatchTouchEvent(DecorView.java:465)
+	at com.android.internal.policy.PhoneWindow.superDispatchTouchEvent(PhoneWindow.java:1849)
+	at android.app.Activity.dispatchTouchEvent(Activity.java:3993)
+	at com.peopledailychina.activity.activity.MainActivity.dispatchTouchEvent(MainActivity.java:563)
+	at android.support.v7.view.WindowCallbackWrapper.dispatchTouchEvent(WindowCallbackWrapper.java:69)
+	at com.android.internal.policy.DecorView.dispatchTouchEvent(DecorView.java:423)
+	at android.view.View.dispatchPointerEvent(View.java:13689)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.processPointerEvent(ViewRootImpl.java:5482)
+	at android.view.ViewRootImpl$ViewPostImeInputStage.onProcess(ViewRootImpl.java:5285)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4788)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:4841)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4807)
+	at android.view.ViewRootImpl$AsyncInputStage.forward(ViewRootImpl.java:4947)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4815)
+	at android.view.ViewRootImpl$AsyncInputStage.apply(ViewRootImpl.java:5004)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4788)
+	at android.view.ViewRootImpl$InputStage.onDeliverToNext(ViewRootImpl.java:4841)
+	at android.view.ViewRootImpl$InputStage.forward(ViewRootImpl.java:4807)
+	at android.view.ViewRootImpl$InputStage.apply(ViewRootImpl.java:4815)
+	at android.view.ViewRootImpl$InputStage.deliver(ViewRootImpl.java:4788)
+	at android.view.ViewRootImpl.deliverInputEvent(ViewRootImpl.java:7505)
+	at android.view.ViewRootImpl.doProcessInputEvents(ViewRootImpl.java:7474)
+	at android.view.ViewRootImpl.enqueueInputEvent(ViewRootImpl.java:7435)
+	at android.view.ViewRootImpl$WindowInputEventReceiver.onInputEvent(ViewRootImpl.java:7630)
+	at android.view.InputEventReceiver.dispatchInputEvent(InputEventReceiver.java:188)
+	at android.os.MessageQueue.nativePollOnce(Native Method)
+	at android.os.MessageQueue.next(MessageQueue.java:336)
+	at android.os.Looper.loop(Looper.java:174)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment$1.onRefreshBegin[39;49;00m
+[32;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@995b20 	[Ljava.lang.reflect.Field;@995b20 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.showDropDownBar
+arg[0]: 0 => 0
+arg[1]: 已更新至最新 => "已更新至最新"
+arg[2]: false => false
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.showDropDownBar(Native Method)
+	at com.peopledailychina.activity.fragment.HomeListFragment.resultGetNewsList(HomeListFragment.java:199)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive(BaseHomeListFragment.java:517)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive(Native Method)
+	at com.peopledailychina.activity.fragment.HomeListFragment.onReceive(HomeListFragment.java:295)
+	at com.peopledaily.common.http.NewNetWorkUtil$6.onSuccess(NewNetWorkUtil.java:390)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:107)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.showDropDownBar[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@dd3b69e 	[Ljava.lang.reflect.Field;@dd3b69e => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.getCacheUrl
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.getCacheUrl(Native Method)
+	at com.peopledailychina.activity.fragment.HomeListFragment.resultGetNewsList(HomeListFragment.java:266)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive(BaseHomeListFragment.java:517)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive(Native Method)
+	at com.peopledailychina.activity.fragment.HomeListFragment.onReceive(HomeListFragment.java:295)
+	at com.peopledaily.common.http.NewNetWorkUtil$6.onSuccess(NewNetWorkUtil.java:390)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:107)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: HomeApi/getContentList?category_id=1 => "HomeApi/getContentList?category_id=1"
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.getCacheUrl[39;49;00m
+[32;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@789094c 	[Ljava.lang.reflect.Field;@789094c => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.getNetReport
+arg[0]:  => ""
+arg[1]: true => true
+arg[2]:  => ""
+arg[3]: false => false
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.getNetReport(Native Method)
+	at com.peopledailychina.activity.fragment.HomeListFragment.resultGetNewsList(HomeListFragment.java:270)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive(BaseHomeListFragment.java:517)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive(Native Method)
+	at com.peopledailychina.activity.fragment.HomeListFragment.onReceive(HomeListFragment.java:295)
+	at com.peopledaily.common.http.NewNetWorkUtil$6.onSuccess(NewNetWorkUtil.java:390)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:107)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.getNetReport[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@9befa23 	[Ljava.lang.reflect.Field;@9befa23 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive
+arg[0]: 1001 => 1001
+arg[1]: 0 => "0"
+arg[2]: ok => "ok"
+arg[3]:  {"transparent_id":"edition_a","search_name":"","play_length":20,"refresh_time":1664335735,"update_time":0,"robotics":{"switch":0,"show_switch":1},"hots_list":[],"data":[{"view_type":"carousel","data":[{"view":0,"click_type":2,"id":"6878722","articleid":"6742960","news_link":"","view_type":"with_video","category_id":"1","title":"超萌！新生大熊猫集体亮相迎国庆","article_title":"超萌预警！成都熊猫基地2022级新生大熊猫齐亮相","news_timestamp":"1664333316","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281042535092.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281042535092.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 10-48-36","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":1,"open_com":1,"share_url":"https://wap.peopleapp.com/article/6878722/6742960","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281042538849.png?x-oss-process=style/w7","share_title":"超萌！新生大熊猫集体亮相迎国庆","comment_count":"61","read_count":"33361","likes_count":204,"join_count":"33361","share_count":30,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_73721664333390.jpg?x-oss-process=image/resize,m_fill,h_388,w_690/quality,q_90","article_weight":"normal","unique_id":null,"article_category_id":"6878722","position":0,"weather":"0","is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6877663","articleid":"6741958","news_link":"","view_type":"with_video","category_id":"1","title":"“鲲龙”完成关键试验！画面超燃！","article_title":"现场画面！“鲲龙”AG600M灭火机成功完成投汲水试验","news_timestamp":"1664249467","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209271052367588.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209271052367588.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-27 11-31-07","news_times":"2022-09-27","push_date":0,"to_category":0,"show_help":1,"open_com":1,"share_url":"https://wap.peopleapp.com/article/6877663/6741958","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220927/1664246964666369.jpg?x-oss-process=style/w7","share_title":"“鲲龙”完成关键试验！画面超燃！","comment_count":"532","read_count":"500324","likes_count":2502,"join_count":"500324","share_count":253,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_37671664320556.jpg?x-oss-process=image/resize,m_fill,h_388,w_690/quality,q_90","article_weight":"normal","unique_id":null,"article_category_id":"6877663","position":0,"weather":"0","is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6877771","articleid":"6742050","news_link":"","view_type":"with_video","category_id":"1","title":"汶川地震男孩成了“黄继光连”新排长","article_title":"汶川地震男孩，如今成了“黄继光连”新排长","news_timestamp":"1664261266","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209271210072220.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209271210072220.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-27 14-47-46","news_times":"2022-09-27","push_date":0,"to_category":0,"show_help":1,"open_com":1,"share_url":"https://wap.peopleapp.com/article/6877771/6742050","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220927/1664251038299714.png?x-oss-process=style/w7","share_title":"汶川地震男孩成了“黄继光连”新排长","comment_count":"570","read_count":"589598","likes_count":2684,"join_count":"589598","share_count":213,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_88821664266163.jpg?x-oss-process=image/resize,m_fill,h_388,w_690/quality,q_90","article_weight":"normal","unique_id":null,"article_category_id":"6877771","position":0,"weather":"0","is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6877842","articleid":"6742120","news_link":"","view_type":"normal","category_id":"1","title":"中国女篮小组第二晋级世界杯八强！","article_title":"战胜比利时队！中国女篮小组第二晋级八强","news_timestamp":"1664256101","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209271318352455.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209271318352455.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-27 13-21-41","news_times":"2022-09-27","push_date":0,"to_category":0,"show_help":1,"open_com":1,"share_url":"https://wap.peopleapp.com/article/6877842/6742120","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220927/1664255852853103.jpg?x-oss-process=style/w7","share_title":"中国女篮小组第二晋级世界杯八强！","comment_count":"763","read_count":"101.3万","likes_count":3109,"join_count":"101.3万","share_count":445,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_53801664258174.jpg?x-oss-process=image/resize,m_fill,h_388,w_690/quality,q_90","article_weight":"normal","unique_id":null,"article_category_id":"6877842","position":0,"weather":"0","is_attention":0,"is_like":0}]},{"view":0,"click_type":2,"id":"6878197","articleid":"6742464","news_link":"","view_type":"title_desc","category_id":"1","title":"习近平在参观“奋进新时代”主题成就展时强调 踔厉奋发勇毅前行团结奋斗 夺取中国特色社会主义新胜利","article_title":"习近平在参观“奋进新时代”主题成就展时强调 踔厉奋发勇毅前行团结奋斗 夺取中国特色社会主义新胜利","news_timestamp":"1664276716","image":[{"url":"","desc":"","sort":0,"is_thumb":0,"thumbnail":"","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-27 19-05-16","news_times":"2022-09-27","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878197/6742464","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbkhdxmtcms0612.peopleapp.com/bootstrap/images/icon_renminribao.png","share_title":"习近平在参观“奋进新时代”主题成就展时强调 踔厉奋发勇毅前行团结奋斗 夺取中国特色社会主义新胜利","comment_count":"3175","read_count":"183.1万","likes_count":8653,"join_count":"183.1万","share_count":2525,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":0,"news_type":"cms","copyfrom":"新华社","turns_image":null,"article_weight":"position","unique_id":"6878197","article_category_id":"6878197","position":"1","is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878200","articleid":"6742467","news_link":"","view_type":"with_video","category_id":"1","title":"我们这十年丨中国深度","article_title":"我们这十年丨中国深度","news_timestamp":"1664277396","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_17891664277305.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_17891664277305.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-27 19-16-36","news_times":"2022-09-27","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878200/6742467","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209271915284152.png?x-oss-process=style/w7","share_title":"我们这十年丨中国深度","comment_count":"1534","read_count":"208.9万","likes_count":5730,"join_count":"208.9万","share_count":905,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":null,"article_weight":"weight","unique_id":"6878200","article_category_id":"6878200","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878748","articleid":"6742985","news_link":"","view_type":"video","category_id":"1","title":"下早读前男生被老师隔空点名 下一秒全班送上生日祝福","article_title":"下早读前男生被老师隔空点名 下一秒全班送上生日祝福","news_timestamp":"1664334712","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281105511456.png?x-oss-process=image/resize,m_fill,h_422,w_750/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281105511456.png?x-oss-process=image/resize,m_fill,h_422,w_750/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 11-11-52","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/video/6878748/6742985","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281105514047.png?x-oss-process=style/w7","share_title":"下早读前男生被老师隔空点名 下一秒全班送上生日祝福","comment_count":"0","read_count":"15220","likes_count":64,"join_count":"15220","share_count":1,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281105511456.png?x-oss-process=style/w10","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"中国青年网微博","turns_image":null,"article_weight":"normal","unique_id":"6878748","article_category_id":"6878748","position":0,"video_url":"https://rmrbcmsonline.peopleapp.com/upload/video/mp4/202209/166433428534a31635c59d23a8.mp4","video_play_time":"00:23","video_type":"0","is_vertical":"1","cover_size":1,"small_image":"https://rmrbcmsonline.peopleapp.com/upload/video/202209/166433428534a31635c59d23a8.mp4.jpg?x-oss-process=style/w7","is_attention":0,"is_like":0},{"view":0,"click_type":"1","id":0,"articleid":0,"news_link":"","view_type":"advert","category_id":0,"title":"恒洁卫浴助力生活品质升级","article_title":"","news_timestamp":"1664294400","image":[{"url":"http://adstatic.peopleapp.com/upload/BannerInfo/6332b8b711d8b3910.jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"","news_times":"","push_date":"","to_category":0,"show_help":1,"open_com":1,"share_url":"https://www.hegii.com/salable/","shareMsg":"","share_image":"","share_title":"","comment_count":"","read_count":"","likes_count":0,"join_count":0,"share_count":0,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":"","article_weight":"normal","unique_id":0,"name":"恒洁-热点-信息流图文-长通栏（四）-0928","start_time":"1664294400","end_time":"1664380799","showtimes":"86400","flag":"1","click_data":"https://www.hegii.com/salable/","img_size":2,"adv_id":"3813","adv_put_id":"11844","adv_own_id":"329","have_more_botton":null},{"view":0,"click_type":2,"id":"6878751","articleid":"6742902","news_link":"","view_type":"normal","category_id":"1","title":"明年继续征战F1！周冠宇与阿尔法·罗密欧车队续约","article_title":"明年继续征战F1！周冠宇与阿尔法·罗密欧车队续约","news_timestamp":"1664334604","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220928/a_759564615553118211.jpeg?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220928/a_759564615553118211.jpeg?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 11-10-04","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878751/6742902","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbkhdxmtcms0612.peopleapp.com/bootstrap/images/icon_renminribao.png","share_title":"明年继续征战F1！周冠宇与阿尔法·罗密欧车队续约","comment_count":"33","read_count":"8851","likes_count":63,"join_count":"8851","share_count":9,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端体育频道","turns_image":null,"article_weight":"normal","unique_id":"6878751","article_category_id":"6878751","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6877744","articleid":"6742024","news_link":"","view_type":"normal","category_id":"1","title":"四万里挑一！二十大代表是怎么选出来的","article_title":"四万里挑一！二十大代表是怎么选出来的","news_timestamp":"1664257836","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_72341664257816.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_72341664257816.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-27 13-50-36","news_times":"2022-09-27","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6877744/6742024","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209271350369813.png","share_title":"四万里挑一！二十大代表是怎么选出来的","comment_count":"2670","read_count":"208.5万","likes_count":8957,"join_count":"208.5万","share_count":2173,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":null,"article_weight":"position","unique_id":"6877744","article_category_id":"6877744","position":"5","is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878721","articleid":"6742959","news_link":"","view_type":"normal","category_id":"1","title":"国庆假期7座以下小型客车免收通行费","article_title":"国庆假期7座以下小型客车免收通行费","news_timestamp":"1664333029","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_85611664332964.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_85611664332964.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 10-43-49","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878721/6742959","shareMsg":"车辆在10月1日0时至10月7日24时之间驶离高速公路出口的均可享受免费政策。","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_85611664332964.png?x-oss-process=style/w7","share_title":"国庆假期7座以下小型客车免收通行费","comment_count":"184","read_count":"327891","likes_count":968,"join_count":"327891","share_count":339,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"央视新闻","turns_image":null,"article_weight":"normal","unique_id":"6878721","article_category_id":"6878721","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878697","articleid":"6742935","news_link":"","view_type":"normal","category_id":"1","title":"重大发现！距今百万年头骨化石实证我国百万年人类史","article_title":"重大发现！距今百万年头骨化石实证我国百万年人类史","news_timestamp":"1664332083","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281026426198.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281026426198.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 10-28-03","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878697/6742935","shareMsg":"今天（28日）上午，国家文物局召开“考古中国”重大项目发布会。","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281026429793.png?x-oss-process=style/w7","share_title":"重大发现！距今百万年头骨化石实证我国百万年人类史","comment_count":"174","read_count":"326559","likes_count":1334,"join_count":"326559","share_count":276,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"央视新闻","turns_image":null,"article_weight":"normal","unique_id":"6878697","article_category_id":"6878697","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878679","articleid":"6742917","news_link":"","view_type":"normal_three_img","category_id":"1","title":"西气东输四线全面开工","article_title":"西气东输四线全面开工","news_timestamp":"1664331447","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281017287981.png?x-oss-process=style/w10","desc":"","sort":"0","is_thumb":"1","thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281017287981.png?x-oss-process=style/w7","image_height":"0","image_wide":"0","is_long_image":0},{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281017289965.png?x-oss-process=style/w10","desc":"","sort":"1","is_thumb":"1","thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281017289965.png?x-oss-process=style/w7","image_height":"0","image_wide":"0","is_long_image":0},{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281017281039.png?x-oss-process=style/w10","desc":"","sort":"2","is_thumb":"1","thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281017281039.png?x-oss-process=style/w7","image_height":"0","image_wide":"0","is_long_image":0}],"tags":"","news_time":"2022-09-28 10-17-27","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878679/6742917","shareMsg":"9月28日，西气东输四线天然气管道工程正式开工。","share_image":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220928/1664331124735552.png?x-oss-process=style/w7","share_title":"西气东输四线全面开工","comment_count":"55","read_count":"55717","likes_count":321,"join_count":"55717","share_count":61,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":3,"news_type":"cms","copyfrom":"央视新闻","turns_image":null,"article_weight":"normal","unique_id":"6878679","article_category_id":"6878679","position":0,"is_attention":0,"is_like":0,"img_count":3},{"view":0,"click_type":2,"id":"6878667","articleid":"6742905","news_link":"","view_type":"video","category_id":"1","title":"漠河局地雪深近5厘米，大兴安岭林海宛如童话世界","article_title":"漠河局地雪深近5厘米，大兴安岭林海宛如童话世界","news_timestamp":"1664330909","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281004089792.png?x-oss-process=image/resize,m_fill,h_422,w_750/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281004089792.png?x-oss-process=image/resize,m_fill,h_422,w_750/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 10-08-29","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/video/6878667/6742905","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281004083202.png?x-oss-process=style/w7","share_title":"漠河局地雪深近5厘米，大兴安岭林海宛如童话世界","comment_count":"14","read_count":"43730","likes_count":80,"join_count":"43730","share_count":10,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281004089792.png?x-oss-process=style/w10","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"央视财经","turns_image":null,"article_weight":"normal","unique_id":"6878667","article_category_id":"6878667","position":0,"video_url":"https://rmrbcmsonline.peopleapp.com/upload/video/mp4/202209/16643305789527940ce5a50681.mp4","video_play_time":"00:56","video_type":"0","is_vertical":"0","cover_size":1,"small_image":"https://rmrbcmsonline.peopleapp.com/upload/video/202209/16643305789527940ce5a50681.mp4.jpg?x-oss-process=style/w7","is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878663","articleid":"6742901","news_link":"","view_type":"normal","category_id":"1","title":"检察机关依法对刘彦平涉嫌受贿案提起公诉","article_title":"检察机关依法对刘彦平涉嫌受贿案提起公诉","news_timestamp":"1664330561","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281004162310.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281004162310.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 10-02-41","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878663/6742901","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209281004165734.png?x-oss-process=style/w7","share_title":"检察机关依法对刘彦平涉嫌受贿案提起公诉","comment_count":"294","read_count":"395905","likes_count":1042,"join_count":"395905","share_count":265,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":null,"article_weight":"normal","unique_id":"6878663","article_category_id":"6878663","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878620","articleid":"6742862","news_link":"","view_type":"with_video","category_id":"1","title":"能源价格飙升，丹麦巨头宣布今冬停产西红柿和黄瓜","article_title":"能源价格飙升，丹麦巨头宣布今冬停产西红柿和黄瓜","news_timestamp":"1664329610","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280937452888.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280937452888.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-46-50","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878620/6742862","shareMsg":"能源价格飙升，让北欧国家的普通人提前感受到了冬日的寒意。","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280937451359.png?x-oss-process=style/w7","share_title":"能源价格飙升，丹麦巨头宣布今冬停产西红柿和黄瓜","comment_count":"171","read_count":"99480","likes_count":567,"join_count":"99480","share_count":84,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"央视财经","turns_image":null,"article_weight":"normal","unique_id":"6878620","article_category_id":"6878620","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878641","articleid":"6742879","news_link":"","view_type":"normal","category_id":"1","title":"天津新增55例本土阳性感染者，1例为非管控人员","article_title":"天津新增55例本土阳性感染者，1例为非管控人员","news_timestamp":"1664329605","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280945187034.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280945187034.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-46-45","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"3","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878641/6742879","shareMsg":"55例感染者中，1例为非管控人员，54例为管控人员。","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280945189989.png?x-oss-process=style/w7","share_title":"天津新增55例本土阳性感染者，1例为非管控人员","comment_count":"37","read_count":"45368","likes_count":135,"join_count":"45368","share_count":52,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端","turns_image":null,"article_weight":"normal","unique_id":"6878641","article_category_id":"6878641","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878632","articleid":"6742848","news_link":"","view_type":"normal","category_id":"1","title":"陕西昨日新增本土“7+3”","article_title":"陕西昨日新增本土“7+3”","news_timestamp":"1664329603","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_10011664329424.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_10011664329424.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-46-43","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"3","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878632/6742848","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_10011664329424.png?x-oss-process=style/w7","share_title":"陕西昨日新增本土“7+3”","comment_count":"36","read_count":"45904","likes_count":81,"join_count":"45904","share_count":26,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端陕西频道","turns_image":null,"article_weight":"normal","unique_id":"6878632","article_category_id":"6878632","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878560","articleid":"6742807","news_link":"","view_type":"normal","category_id":"1","title":"布林肯回应北溪泄漏，称“对任何人都没有好处”","article_title":"布林肯回应北溪泄漏，称“对任何人都没有好处”","news_timestamp":"1664329042","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280850271746.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280850271746.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-37-22","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"4","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878560/6742807","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280850276003.png?x-oss-process=style/w7","share_title":"布林肯回应北溪泄漏，称“对任何人都没有好处”","comment_count":"305","read_count":"108324","likes_count":4,"join_count":"108324","share_count":51,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"环球网微博","turns_image":null,"article_weight":"normal","unique_id":"6878560","article_category_id":"6878560","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878591","articleid":"6742834","news_link":"","view_type":"video","category_id":"1","title":"北溪三条管线均遭到前所未有的破坏","article_title":"北溪三条管线均遭到前所未有的破坏","news_timestamp":"1664327879","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280913449745.png?x-oss-process=image/resize,m_fill,h_422,w_750/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280913449745.png?x-oss-process=image/resize,m_fill,h_422,w_750/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-17-59","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/video/6878591/6742834","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280917597623.png?x-oss-process=style/w7","share_title":"北溪三条管线均遭到前所未有的破坏","comment_count":"70","read_count":"14.2万","likes_count":143,"join_count":"142288","share_count":21,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280913449745.png?x-oss-process=style/w10","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"央视网","turns_image":null,"article_weight":"normal","unique_id":"6878591","article_category_id":"6878591","position":0,"video_url":"https://rmrbcmsonline.peopleapp.com/upload/video/mp4/202209/166432742607fb7dabed66efc2.mp4","video_play_time":"01:02","video_type":"0","is_vertical":"0","cover_size":1,"small_image":"https://rmrbcmsonline.peopleapp.com/upload/video/202209/166432742607fb7dabed66efc2.mp4.jpg?x-oss-process=style/w7","is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878574","articleid":"6742815","news_link":"","view_type":"normal","category_id":"1","title":"宁夏昨日新增本土“4+205”，均属管控人员","article_title":"宁夏昨日新增本土“4+205”，均属管控人员","news_timestamp":"1664327493","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_20701664326625.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_20701664326625.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-11-33","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878574/6742815","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_20701664326625.png?x-oss-process=style/w7","share_title":"宁夏昨日新增本土“4+205”，均属管控人员","comment_count":"39","read_count":"164497","likes_count":154,"join_count":"164497","share_count":94,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"人民日报客户端宁夏频道","turns_image":null,"article_weight":"normal","unique_id":"6878574","article_category_id":"6878574","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878582","articleid":"6741122","news_link":"","view_type":"normal_three_img","category_id":"1","title":"塑料瓶装的小学生自制奶茶，真甜！","article_title":"塑料瓶装的小学生自制奶茶，真甜！","news_timestamp":"1664327394","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220926/1664170885696554.jpg?x-oss-process=style/w10","desc":"","sort":"0","is_thumb":"1","thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220926/1664170885696554.jpg?x-oss-process=style/w7","image_height":"0","image_wide":"0","is_long_image":0},{"url":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220926/1664170974861330.jpg?x-oss-process=style/w10","desc":"","sort":"1","is_thumb":"1","thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220926/1664170974861330.jpg?x-oss-process=style/w7","image_height":"0","image_wide":"0","is_long_image":0},{"url":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220926/1664170790149040.jpg?x-oss-process=style/w10","desc":"","sort":"2","is_thumb":"1","thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220926/1664170790149040.jpg?x-oss-process=style/w7","image_height":"0","image_wide":"0","is_long_image":0}],"tags":"","news_time":"2022-09-28 09-09-54","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878582/6741122","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/ueditor/image/20220926/1664170885696554.jpg?x-oss-process=style/w7","share_title":"塑料瓶装的小学生自制奶茶，真甜！","comment_count":"34","read_count":"81849","likes_count":375,"join_count":"81849","share_count":20,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":3,"news_type":"cms","copyfrom":"人民日报客户端云南频道","turns_image":null,"article_weight":"normal","unique_id":"6878582","article_category_id":"6878582","position":0,"is_attention":0,"is_like":0,"img_count":3},{"view":0,"click_type":2,"id":"6878580","articleid":"6742826","news_link":"","view_type":"normal","category_id":"1","title":"国家卫健委：昨日新增本土“119+625”","article_title":"国家卫健委：昨日新增本土“119+625”","news_timestamp":"1664327172","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_97751664327098.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_97751664327098.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-06-12","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"3","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878580/6742826","shareMsg":"人民日报，有品质的新闻","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_97751664327098.png?x-oss-process=style/w7","share_title":"国家卫健委：昨日新增本土“119+625”","comment_count":"174","read_count":"611655","likes_count":756,"join_count":"611655","share_count":266,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"国家卫健委网站","turns_image":null,"article_weight":"normal","unique_id":"6878580","article_category_id":"6878580","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6878576","articleid":"6742822","news_link":"","view_type":"normal","category_id":"1","title":"丹麦首相称“北溪”管道泄漏系“蓄意破坏”所致","article_title":"丹麦首相称“北溪”管道泄漏系“蓄意破坏”所致","news_timestamp":"1664327148","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_33651664326969.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_33651664326969.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-05-48","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6878576/6742822","shareMsg":"丹麦能源署署长在新闻公报中说，天然气管道出现泄漏是极其罕见的。","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/202209280903044824.png?x-oss-process=style/w7","share_title":"丹麦首相称“北溪”管道泄漏系“蓄意破坏”所致","comment_count":"188","read_count":"118441","likes_count":508,"join_count":"118441","share_count":45,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"央视新闻","turns_image":null,"article_weight":"normal","unique_id":"6878576","article_category_id":"6878576","position":0,"is_attention":0,"is_like":0},{"view":0,"click_type":2,"id":"6877452","articleid":"6741758","news_link":"","view_type":"with_video","category_id":"1","title":"四大兽首齐聚上海！","article_title":"四大兽首齐聚上海！","news_timestamp":"1664327132","image":[{"url":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_21271664238731.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","desc":"","sort":0,"is_thumb":0,"thumbnail":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_21271664238731.png?x-oss-process=image/resize,m_fill,h_170,w_226/quality,q_90/format,jpg","image_height":0,"image_wide":0,"is_long_image":0}],"tags":"","news_time":"2022-09-28 09-05-32","news_times":"2022-09-28","push_date":0,"to_category":0,"show_help":"1","open_com":"1","share_url":"https://wap.peopleapp.com/article/6877452/6741758","shareMsg":"“盛世回归——海外回流文物特展”将持续展出至12月18日。","share_image":"https://rmrbcmsonline.peopleapp.com/upload/image/202209/rmrb_21271664238731.png?x-oss-process=style/w7","share_title":"四大兽首齐聚上海！","comment_count":"70","read_count":"123976","likes_count":535,"join_count":"123976","share_count":60,"is_collect":0,"is_recommend":0,"title_show_line":2,"default_image":"","love_num":0,"show_num":1,"news_type":"cms","copyfrom":"新华社","turns_image":null,"article_weight":"normal","unique_id":"6877452","article_category_id":"6877452","position":0,"is_attention":0,"is_like":0}],"news_num":0,"result":{"have_more":true,"update_time":0,"errorCode":"0","errorMsg":"ok"}} => "<instance: java.lang.Object, $className: java.lang.String>"
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive(Native Method)
+	at com.peopledailychina.activity.fragment.HomeListFragment.onReceive(HomeListFragment.java:295)
+	at com.peopledaily.common.http.NewNetWorkUtil$6.onSuccess(NewNetWorkUtil.java:390)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:107)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceive[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@1e36e38 	[Ljava.lang.reflect.Field;@1e36e38 => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.loadMoreEnable
+arg[0]: true => true
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.loadMoreEnable(Native Method)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceiveResult(BaseHomeListFragment.java:542)
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceiveResult(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$6.onSuccess(NewNetWorkUtil.java:392)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:107)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.loadMoreEnable[39;49;00m
+[31;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@7d78a9b 	[Ljava.lang.reflect.Field;@7d78a9b => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceiveResult
+arg[0]: 1001 => 1001
+arg[1]: NetResultBean{errorCode='0', errorMsg='ok', have_more=true, update_time='0', have_more_up='false', have_more_down='false'} => "<instance: com.peopledaily.common.http.bean.NetResultBean>"
+arg[2]: null => null
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceiveResult(Native Method)
+	at com.peopledaily.common.http.NewNetWorkUtil$6.onSuccess(NewNetWorkUtil.java:392)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(Native Method)
+	at com.peopledaily.common.http.base.BaseNetworkUtil$1.onSuccess(BaseNetworkUtil.java:37)
+	at org.xutils.http.HttpTask.onSuccess(HttpTask.java:447)
+	at org.xutils.common.task.TaskProxy$InternalHandler.handleMessage(TaskProxy.java:198)
+	at android.os.Handler.dispatchMessage(Handler.java:107)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.onReceiveResult[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@82dbfe 	[Ljava.lang.reflect.Field;@82dbfe => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$8$BaseHomeListFragment
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$8$BaseHomeListFragment(Native Method)
+	at com.peopledailychina.activity.fragment.-$$Lambda$BaseHomeListFragment$nlTorPssyEs5HTPXVkXuRAUAGxY.run(Unknown Source:2)
+	at android.os.Handler.handleCallback(Handler.java:883)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$8$BaseHomeListFragment[39;49;00m
+[37;11m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@49b1dac 	[Ljava.lang.reflect.Field;@49b1dac => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$9$BaseHomeListFragment
+arg[0]: 已更新至最新 => "已更新至最新"
+arg[1]: 0 => 0
+arg[2]: false => false
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$9$BaseHomeListFragment(Native Method)
+	at com.peopledailychina.activity.fragment.-$$Lambda$BaseHomeListFragment$ZTnuv3kr6qJY02OPqQgfcWo4Jh8.run(Unknown Source:8)
+	at android.os.Handler.handleCallback(Handler.java:883)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$9$BaseHomeListFragment[39;49;00m
+tracerpid replaced: TracerPid:	0
+[33;01m========================================================================================================================================================================================================Inspecting Fields: => true => class com.peopledailychina.activity.fragment.HomeListFragment
+boolean 	isCachePullUp => undefined => undefined
+boolean 	isFromCache => undefined => undefined
+boolean 	isLoading => undefined => undefined
+java.lang.String 	refresh_ids => undefined => undefined
+java.lang.String 	FRAGMENT_TAG => undefined => undefined
+[Ljava.lang.reflect.Field;@62cba0a 	[Ljava.lang.reflect.Field;@62cba0a => undefined => undefined
+[native 	function d() {
+    [native code]
+} => undefined => undefined
+
+*** entered com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$10$BaseHomeListFragment
+arg[0]: 105 => 105
+java.lang.Throwable
+	at com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$10$BaseHomeListFragment(Native Method)
+	at com.peopledailychina.activity.fragment.-$$Lambda$BaseHomeListFragment$H7HhdEvPRiJlybUblM4B3--9ee4.run(Unknown Source:4)
+	at android.os.Handler.handleCallback(Handler.java:883)
+	at android.os.Handler.dispatchMessage(Handler.java:100)
+	at android.os.Looper.loop(Looper.java:214)
+	at android.app.ActivityThread.main(ActivityThread.java:7495)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+retval: undefined => undefined
+*** exiting com.peopledailychina.activity.fragment.BaseHomeListFragment.lambda$showDropDownBar$10$BaseHomeListFragment[39;49;00m
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0

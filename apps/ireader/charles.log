@@ -1,0 +1,41 @@
+channel_id	108045
+is_mergeme	1
+encrypt_method	1
+device	Pixel 2
+version_id	17490003
+ver	1.0
+data	{"AesKey":"OUC0aJ2MRDh8MKOrJgTMVvB+mYafjMI4MJSin2UW639S+lB7hwdMuxQBPTDIsUtGjzwsuytcr7oWM6FMH36dGQDQT2IoC4kI3eA8r985a8TgpMkJi1P4NLmx8zJ\/GV8DjorCl4kTZ3NUr11clmpqG7v5++C96XLfhXagHgDdRdo=","Data":"zkMM0o0Vh4G5P58C5vHOW1jBU+WQ65ZaamXdUBgQFwM="}
+imei	__39827dd5eb14217a
+sign	jFMApmCLkdbHgcn8DFmHzcC8k9FYjwg51OM/guf/5JkzvkEfvKUHTptSOkJPk6IvEXBkjKri/TxFlL8vEF5SmZMcEVGYSIclED6nCH83lvJZQAtdBzaUoTIk3wKVW+Mb8gyhye3RGAf74crIm0X6uC35Fl/RGvhVQ05HAj56By4=
+timestamp	1668134170727
+user_name	0123456789
+
+
+Aes：
+    生成aes密钥 
+    base64 加密aes密钥
+
+
+AesKey
+    rsa生成公钥的key :"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCAqSnnZ9BVOZjIMTkATIn29nM0hLOsQsXlPbqrGE4CUmDCncVBHdkfEIF73tSKjhYfLuPH1gDtHRKeCC1DQ4uYJL83oeHtXSldGUlfuv9rh0Q/2Hxl3iG8TUc1drTKTZFfkQWWseTb3vAx8Ggse9xZNTjI6enOEjNyGlAIF+RKrwIDAQAB"
+    公钥 KeyFactory.getInstance(str).generatePublic(new X509EncodedKeySpec(BASE64.decode(rsa生成公钥的key)));
+    rsa 使用公钥给aes加密 
+    base64 rsa加密后的结果
+
+  
+Data： 
+    {"password":密码明文} 转成string
+    aes key iv 都是 Aes
+    使用 Aes 给  "AES/CBC/PKCS7Padding" 上面那个加密 并对结果做base64
+
+data：
+    {"AesKey":AesKey,"Data":Data}
+
+
+
+对这个做channel_id=108045&data={"AesKey":"X6CpIJVdlKbaDWZrqb72eJRNKMqS6jAGvUYmRcSbh2fn+Z915GODshGIrhhMadplYGn6q2DFGBOlFbRaR0wPhN82Vw5lHEvxj1UFRkH8fOaX6yd5XomL42+ylkN5sp6aKb7aFQkskkg0iJJwyzIVvLDYOYUeIsti6AFTTlu7gxg=","Data":"IVi6+A2zLxYLPxFdkj3gFZ83S\/cSN\/j6Lp\/CssSTwFw="}&device=Pixel 2&encrypt_method=1&imei=__39827dd5eb14217a&is_mergeme=1&timestamp=1668131610590&user_name=0123456789&ver=1.0&version_id=17490003
+
+
+cd785160vodcq1311742623%2F74bda530387702303637317816%2FZGAwr3frSqwA.mp4%3Ft%3D6375a072%26sign%3Daf9ae076da8824916d64868dbc608dfa&uuid=de8e25b9db820abe5511cbbc83cdfb56
+cd785160vodcq1311742623\/74bda530387702303637317816\/ZGAwr3frSqwA.mp4?t=6375a0a8&sign=ac835c273e3a2f02f52ac48e84f3e8a4
+https://home.cgpower.cn/html/lubo_video.html?mp=cd785160vodcq1311742623\/74bda530387702303637317816\/ZGAwr3frSqwA.mp4?t=6375a0a8&sign=ac835c273e3a2f02f52ac48e84f3e8a4&uuid=de8e25b9db820abe5511cbbc83cdfb56

@@ -1,0 +1,47 @@
+[35;01mr0tracer begin ... ![39;49;00m
+[31;01mstart[39;49;00m
+[31;01mBegin Search Class...[39;49;00m
+[30;01mFound Class => com.peopledaily.common.utils.encrtption.MD5Helper[39;49;00m
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str [1 overload(s)][39;49;00m
+tracerpid replaced: TracerPid:	0
+[31;01mTracing Method : com.peopledaily.common.utils.encrtption.MD5Helper.$init [1 overload(s)][39;49;00m
+[32;01m	Spec: => 
+public static native java.lang.String com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str(java.lang.String)
+Tracing public com.peopledaily.common.utils.encrtption.MD5Helper()
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++[39;49;00m
+[30;01mSearch Class Completed![39;49;00m
+[32;01mOn Total Tracing :1 classes :
+com.peopledaily.common.utils.encrtption.MD5Helper
+Start Tracing ...[39;49;00m
+[36;01m========================================================================================================================================================================================================Inspecting Fields: => false => class com.peopledaily.common.utils.encrtption.MD5Helper
+
+*** entered com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str
+arg[0]: ||a07b3c0b-9940-384e-be0b-95e600ec9016|Pixel 2|Pixel 2|Android 8.1.0|Google|1080*1794|1||271311371|7244|||15801367777|ZRjupg\yejubxQrO|4C196B29E085E57269FC151945F559B9||198476098|1663833940|7.2.4.4rmrbsecurity$#%sutf3d247a75d9c7c4 => "||a07b3c0b-9940-384e-be0b-95e600ec9016|Pixel 2|Pixel 2|Android 8.1.0|Google|1080*1794|1||271311371|7244|||15801367777|ZRjupg\\yejubxQrO|4C196B29E085E57269FC151945F559B9||198476098|1663833940|7.2.4.4rmrbsecurity$#%sutf3d247a75d9c7c4"
+java.lang.Throwable
+	at com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str(Native Method)
+	at com.peopledaily.common.http.GetParamsUtil.getParams(Native Method)
+	at com.peopledaily.module.login.presenter.LoginModulePresenter.loginUserPassword(LoginModulePresenter.java:186)
+	at com.peopledaily.module.login.ui.LoginActivity.requestLogin(LoginActivity.java:647)
+	at com.peopledaily.module.login.ui.LoginActivity.login(LoginActivity.java:635)
+	at com.peopledaily.module.login.ui.LoginActivity.onClick(LoginActivity.java:518)
+	at android.view.View.performClick(View.java:6294)
+	at android.view.View$PerformClick.run(View.java:24770)
+	at android.os.Handler.handleCallback(Handler.java:790)
+	at android.os.Handler.dispatchMessage(Handler.java:99)
+	at android.os.Looper.loop(Looper.java:164)
+	at android.app.ActivityThread.main(ActivityThread.java:6494)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:438)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+
+retval: fc3ade778711e31c96f97c845ad8ffc1 => "fc3ade778711e31c96f97c845ad8ffc1"
+*** exiting com.peopledaily.common.utils.encrtption.MD5Helper.getMD5Str[39;49;00m
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
+tracerpid replaced: TracerPid:	0
