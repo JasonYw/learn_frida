@@ -11,3 +11,4 @@ source_code_*
 .DS_Store
 .vscode
 *.jar
+*.exe
