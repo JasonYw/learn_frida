@@ -1,0 +1,343 @@
+{
+	"body": {
+		"bookInfo": {
+			"attribute": {
+				"fansNum": "3.9万",
+				"fansNumDesc": "粉丝",
+				"likeNum": "7.7万",
+				"likeNumDesc": "点赞",
+				"popularity": "5503.7万",
+				"popularityDesc": "人气",
+				"popularityNum": 55037002,
+				"star": 8.6,
+				"starStyle": 9,
+				"weekDownPv": "34.8万",
+				"weekDownPvDesc": "在读"
+			},
+			"author": "夜幕初垂",
+			"authorList": [{
+				"circleId": "",
+				"id": 1139828,
+				"name": "夜幕初垂",
+				"type": "",
+				"url": "https://ah2.zhangyue.com/zyuc/homepage/home/index?visitorName=i3475999344\u0026p1=ffffffffffffffffffffffff\u0026p16=Pixel+2\u0026p2=108045\u0026p21=31303\u0026p22=10\u0026p25=74901\u0026p29=zye5b814\u0026p3=17490003\u0026p31=__39827dd5eb14217a\u0026p33=com.chaozh.iReaderFree\u0026p34=google\u0026p4=501603\u0026p5=19\u0026p7=__39827dd5eb14217a\u0026p9=2\u0026rgt=7\u0026usr=i4413417392\u0026zysid=887cf6ce3998fa583cb171faa9d214bf",
+				"usr": "i3475999344"
+			}],
+			"bookId": 12335723,
+			"bookName": "大叔，乖乖宠我！",
+			"bookType": 1,
+			"breakPayInfo": "https://ah2.zhangyue.com/zytc/public/index.php?ca=Order.BreakPayRules\u0026p1=ffffffffffffffffffffffff\u0026p16=Pixel+2\u0026p2=108045\u0026p21=31303\u0026p22=10\u0026p25=74901\u0026p29=zye5b814\u0026p3=17490003\u0026p31=__39827dd5eb14217a\u0026p33=com.chaozh.iReaderFree\u0026p34=google\u0026p4=501603\u0026p5=19\u0026p7=__39827dd5eb14217a\u0026p9=2\u0026rgt=7\u0026usr=i4413417392\u0026zysid=887cf6ce3998fa583cb171faa9d214bf",
+			"cartoonBookInfo": [],
+			"categorys": [{
+				"id": 8,
+				"name": "总裁豪门"
+			}, {
+				"id": 1013,
+				"name": "现代言情"
+			}, {
+				"id": 1293,
+				"name": "总裁豪门"
+			}, {
+				"id": 967,
+				"name": "现代言情"
+			}],
+			"circleId": "book_12335720",
+			"completeState": "N",
+			"cpId": "4456",
+			"cpName": "阅文",
+			"currentTime": 1669274626,
+			"desc": "“大叔，我刚在外面装逼说要把一整家奢侈品店买下来！”“那就买下来。”“大叔我把林家大小姐鼻子揍歪了！”“让她歪着！”“大叔我把秦家大小姐的脸刮花了！”“苏暖暖！你不惹麻烦会死吗！”“大叔！是她们先欺负我的，我不过是反击罢了！你看我脸，都被打肿了！”“秦大小姐明天会被送进精神病院！”居然连他的人都敢动！“大叔，那个明星好帅啊，好喜欢！”“苏暖暖！你想红杏出墙？”小丫头笑得一脸欢乐道：“只要大叔一直乖乖宠我，我就永远喜欢大叔一个人！”“乖，什么都给你。”被小丫头吃得死死的总裁大人，直接给人宠上了天。",
+			"driveTag": [],
+			"feeUnit": 20,
+			"fromSource": "阅文",
+			"headPic": "",
+			"icon": "",
+			"isbn": "",
+			"lastChapterTime": "2022-09-25 13:36:49",
+			"lastSupportVersion": 700003,
+			"limitInfo": [],
+			"listenBookInfo": [],
+			"magazineId": 0,
+			"picUrl": "https://bookbk.img.zhangyue01.com/idc_1/group61/M00/76/BC/CmQUOF-b6Y-EZ_v-AAAAAAZBBhc869380353.jpg?v=qngFUNzs\u0026t=CmQUOF-b6Y8.",
+			"priceInfo": {
+				"activePrice": "",
+				"delPrice": "",
+				"discount": 10,
+				"isFree": false,
+				"label": "",
+				"promotionMark": 64,
+				"tag": "",
+				"timeType": 0
+			},
+			"publisher": "",
+			"putAwayDate": "2020-10-30",
+			"recommend": {
+				"desc": "小狐狸披狼皮，横行天下！被小丫头吃得死死的总裁大人，分分钟给宠上天。",
+				"type": "long"
+			},
+			"responsibleEditor": "",
+			"showEpubSerialWarning": false,
+			"size": null,
+			"tagInfo": [{
+				"name": "大叔",
+				"url": "https://ah2.zhangyue.com/zybk/tag/searchbook?sort=6\u0026tag=%E5%A4%A7%E5%8F%94"
+			}, {
+				"name": "豪门",
+				"url": "https://ah2.zhangyue.com/zybk/tag/searchbook?sort=6\u0026tag=%E8%B1%AA%E9%97%A8"
+			}, {
+				"name": "甜宠",
+				"url": "https://ah2.zhangyue.com/zybk/tag/searchbook?sort=6\u0026tag=%E7%94%9C%E5%AE%A0"
+			}],
+			"voteNum": 94,
+			"wordCount": "889.5万字"
+		},
+		"buttonInfo": [{
+			"btnText": "免费试读",
+			"cmd": {
+				"Action": "onlineReader",
+				"Data": {
+					"Charging": {
+						"FeeType": 0,
+						"OrderUrl": "https://ah2.zhangyue.com/zytc/public/index.php?ca=Order.Create\u0026bid=12335723\u0026cid=1\u0026pca=\u0026pk=\u0026pos=\u0026projectSource=zybook3\u0026vBuy=0",
+						"Price": 0
+					},
+					"DownloadInfo": {
+						"ChapterId": 1,
+						"DisplayBookName": "大叔，乖乖宠我！",
+						"DownloadUrl": "http://ah2.zhangyue.com/r/enc_dl?downInfo=blBasy8VkwQlJz4g9A4GRXz8HpXbRKsbB4pzuMEMJ71DE9nIRHTMms9fujjk128OjXesjdEpj8NrCmz30pftKW_eapuYX8vzGZNNMO9G6xa9jV1OEO1CaIkQf6BrlKoBRKut24-xXuhia9oHiacA7xQ6S1uC4vhqKDraJMoui4Dnv3uGTHUwgPftdk_pRywTCBvDAkv7W8Zbn-VmwNVgsg\u0026epubVer=2",
+						"Ebk3DownloadUrl": "http://ah2.zhangyue.com/r/enc_dl?downInfo=blBasy8VkwQlJz4g9A4GRXz8HpXbRKsbB4pzuMEMJ71DE9nIRHTMms9fujjk128OjXesjdEpj8NrCmz30pftKW_eapuYX8vzGZNNMO9G6xa9jV1OEO1CaIkQf6BrlKoBRKut24-xXuhia9oHiacA7xQ6S1uC4vhqKDraJMoui4Dnv3uGTHUwgPftdk_pRywTCBvDAkv7W8Zbn-VmwNVgsg\u0026epubVer=2",
+						"FeeUnit": 20,
+						"FileId": 12335723,
+						"FileName": "《大叔，乖乖宠我》.epub",
+						"FileSize": 10000000,
+						"OrderId": "B1182314335213475072",
+						"Type": 2,
+						"Version": "2"
+					},
+					"bookCatalog": {
+						"bookId": 12335723,
+						"bookType": 1,
+						"data": {
+							"genreDate": "",
+							"genreId": 0,
+							"genreName": "",
+							"orderId": 0
+						},
+						"downloadType": 1,
+						"isEpubSerialize": 1,
+						"relBookId": "12335720",
+						"relResource": [{
+							"book_id": "12335720",
+							"status": "10",
+							"type": "0"
+						}],
+						"type": 0
+					}
+				}
+			},
+			"encStr": "AS6AlrvBcCy8vgI80w%2FK1WfBd7dx3a8xAPSgMeHWXofSpCiaQ4LrLCvgtBDr6fffW82UHjm6RnuL09mFD57LnYBPatMDdg6rsVFAMS5JSZmh6ZzvdSpd%2Fc2nWJLiGIp3",
+			"type": "freeTry"
+		}, {
+			"btnText": "批量购买",
+			"encStr": "ZFMX8eulxVRLx0U8PhwceHZs5kF6LIfx0MkTwNbZAP4asRl3BAmchuzXx870EaLzR6iDrmLc7ZemGvNjjHwpxYjgKrt/iVyXcq8ybbk/wBJLudtd6CyGan/3/NcZe58d2S4ed6e5muqLosIh9Nn4Bg==",
+			"type": "batch"
+		}],
+		"chaperInfo": {
+			"chapterName": "第4424章 4227：大结局",
+			"chapterNum": 4424,
+			"orgStatus": "连载中"
+		},
+		"comicThumbs": {},
+		"commentList": {
+			"circleInfo": {
+				"circleId": "book_12335720",
+				"fansNum": "3.9万",
+				"replyNum": 106,
+				"topicNum": 1433,
+				"totalNum": "1539",
+				"url": "https://ah2.zhangyue.com/zysns/app/app.php?ca=Group.Show\u0026cache=no\u0026from=bkdetail\u0026id=book_12335720\u0026topicType=all"
+			},
+			"list": [{
+				"avatar": "https://ibk.ugc.corp3g.cn/idc_1/m_4,w_60,h_60,q_100/a157753d/group6/M00/13/A3/CmRaelsGujKEJrJnAAAAAMdWmNg057944965.jpg?v=Na3lWFhE\u0026t=CmRaelsGujI.",
+				"avatarFrame": "https://bookbk.img.zhangyue01.com/idc_1/group6/M00/D3/9D/CmQUNlpyyFGEXC12AAAAAItBnHU940272724.png?v=AeJNNiNy\u0026t=CmQUNlpyyFE.",
+				"content": "很正能量的一本书，我超级喜欢。因为从这本书里使我知道了很多知识，比如什么是圆滑做事，人与人之间相处的界线，如果处理与解决僵持的局面等等很多。总之都是实用于生活的知识，受益良多。希望更多的人来获取。",
+				"id": 196261440,
+				"isAdmin": false,
+				"isAuthor": false,
+				"isV": false,
+				"isVip": true,
+				"level": 23,
+				"likeNum": 137,
+				"liked": false,
+				"name": "",
+				"nick": "沉默",
+				"replyNum": 0,
+				"sUrl": "https://ah2.zhangyue.com/zysns/app/app.php?ca=Group.Show\u0026cache=no\u0026id=book_12335720\u0026key=BGROUP_book_12335720\u0026pk=client_bkCmt_more\u0026topicType=comment",
+				"source": "comment",
+				"spaceUrl": "https://ah2.zhangyue.com/zybook3/app/app.php?ca=User_Space.Index\u0026un=i1495304194\u0026mod=bookDetail",
+				"ts": "4月24日",
+				"url": "https://ah2.zhangyue.com/zysns/app/app.php?ca=Topic.Detail\u0026circleId=book_12335720\u0026key=BCM196261440\u0026pk=client_bkCmt\u0026topicId=196261440",
+				"userVipStatus": "2",
+				"usr": "i1495304194",
+				"vType": null,
+				"vote": 5
+			}, {
+				"avatar": "https://ibk.ugc.corp3g.cn/idc_1/m_4,w_60,h_60,q_100/ebc50274/group61/M00/4F/31/CmQUOWCuAkOEfcoCAAAAAGoQskI041857001.png?v=4cL0Lrsp\u0026t=CmQUOWCuAkM.",
+				"avatarFrame": "https://bookbk.img.zhangyue01.com/idc_1/group6/M00/D3/9D/CmQUNlpyyFGEXC12AAAAAItBnHU940272724.png?v=AeJNNiNy\u0026t=CmQUNlpyyFE.",
+				"content": "好看，推荐！写这个书评的我现在看到3102章，故事还未完结但还让我很想看下去！这是我看过长篇小说中最好看，看着也不会让人中途想弃书还想一直看下去的书，无论是从故事，文笔，人物性格人设，就感觉写这本书的作者很绝绝子。从男女主，到各个配角的故事，我都觉得很好看，。故事很长，完全不会让人觉得很啰嗦很烦。就很想看啊！故事也很甜，有虐的也不算虐，但是看的我很投入好几次也把我看落泪了。因为故事很好让我很有代入感很强。每天看都看的让我乐呵呵，作者的文笔也超幽默，很喜欢这个作者的文笔风采～哈哈。还很多时下网上流行语那些\u003czyemot\u003e呲牙_2_39_48_48\u003c/zyemot\u003e很喜欢男女主角，配角那几对也很喜欢。总之就是好看好看好看！天天脑补都不够啊！太特么绝了绝了！男主是真的很宠女主！拿命宠那种，现实生活中应该没有这样的男人，所以这样的故事情节更让人心生向往。因为太美好，因为太甜，因为都得不到，所以看着更让人觉得美好，哪怕只是小说。脑补也可以让人觉得很满足了！这就是我看这本书到现在的感受～",
+				"id": 192092358,
+				"isAdmin": false,
+				"isAuthor": false,
+				"isV": false,
+				"isVip": false,
+				"level": 6,
+				"likeNum": 70,
+				"liked": false,
+				"name": "",
+				"nick": "最爱傅沉寒",
+				"replyNum": 8,
+				"sUrl": "https://ah2.zhangyue.com/zysns/app/app.php?ca=Group.Show\u0026cache=no\u0026id=book_12335720\u0026key=BGROUP_book_12335720\u0026pk=client_bkCmt_more\u0026topicType=comment",
+				"source": "comment",
+				"spaceUrl": "https://ah2.zhangyue.com/zybook3/app/app.php?ca=User_Space.Index\u0026un=i3199428657\u0026mod=bookDetail",
+				"ts": "2021年11月5日",
+				"url": "https://ah2.zhangyue.com/zysns/app/app.php?ca=Topic.Detail\u0026circleId=book_12335720\u0026key=BCM192092358\u0026pk=client_bkCmt\u0026topicId=192092358",
+				"userVipStatus": "1",
+				"usr": "i3199428657",
+				"vType": null,
+				"vote": 5
+			}, {
+				"avatar": "https://ocs-cn-north1.heytapcs.com/titans-usercenter-avatar-bucket-cn/960/221/241/142122069.jpg?20170712171947",
+				"avatarFrame": "https://bookbk.img.zhangyue01.com/idc_1/group6/M00/D3/9D/CmQUNlpyyFGEXC12AAAAAItBnHU940272724.png?v=AeJNNiNy\u0026t=CmQUNlpyyFE.",
+				"content": "文笔流畅自然，每次看都会让人身心愉悦，重点是作者君大人每天更三章！更三章！更三章！",
+				"id": 187029821,
+				"isAdmin": false,
+				"isAuthor": false,
+				"isV": false,
+				"isVip": false,
+				"level": 7,
+				"likeNum": 61,
+				"liked": false,
+				"name": "",
+				"nick": "南栀倾涵",
+				"replyNum": 0,
+				"sUrl": "https://ah2.zhangyue.com/zysns/app/app.php?ca=Group.Show\u0026cache=no\u0026id=book_12335720\u0026key=BGROUP_book_12335720\u0026pk=client_bkCmt_more\u0026topicType=comment",
+				"source": "comment",
+				"spaceUrl": "https://ah2.zhangyue.com/zybook3/app/app.php?ca=User_Space.Index\u0026un=i828311786\u0026mod=bookDetail",
+				"ts": "2021年5月23日",
+				"url": "https://ah2.zhangyue.com/zysns/app/app.php?ca=Topic.Detail\u0026circleId=book_12335720\u0026key=BCM187029821\u0026pk=client_bkCmt\u0026topicId=187029821",
+				"userVipStatus": "1",
+				"usr": "i828311786",
+				"vType": null,
+				"vote": 5
+			}]
+		},
+		"commentSwitch": 1,
+		"disclaimer": " 本书数字版权由“阅文”提供，并由其授权掌阅科技股份有限公司制作发行，若书中含有不良信息，请书友积极告知客服。",
+		"gift": [],
+		"iconInfo": {
+			"bookListInfo": {
+				"data": {
+					"author": "夜幕初垂",
+					"id": 12335723,
+					"name": "大叔，乖乖宠我！",
+					"picUrl": "https://bookbk.img.zhangyue01.com/idc_1/group61/M00/76/BC/CmQUOF-b6Y-EZ_v-AAAAAAZBBhc869380353.jpg?v=qngFUNzs\u0026t=CmQUOF-b6Y8.",
+					"status": false
+				},
+				"isBookList": true
+			},
+			"cartInfo": {
+				"data": {
+					"isNewCart": 0,
+					"status": 0
+				},
+				"isCart": false,
+				"url": ""
+			},
+			"markInfo": {
+				"data": {
+					"id": "",
+					"status": false,
+					"vote": ""
+				},
+				"isMark": true
+			},
+			"rewardInfo": {
+				"data": {
+					"isActivity": false
+				},
+				"isReward": true,
+				"url": "https://ah2.zhangyue.com/zysns/app/app.php?ca=Ticket.Index\u0026bookId=12335723\u0026circleId=book_12335720"
+			},
+			"shareInfo": {
+				"data": {
+					"Action": "share",
+					"Data": {
+						"summary": "世界很美,旅途很长……带上一本好书《大叔，乖乖宠我！》,和我一起聆听时光",
+						"author": "夜幕初垂",
+						"title": "发现一本好书《大叔，乖乖宠我！》",
+						"picUrl": "https://bookbk.img.zhangyue01.com/idc_1/group61/M00/76/BC/CmQUOF-b6Y-EZ_v-AAAAAAZBBhc869380353.jpg?v=qngFUNzs\u0026t=CmQUOF-b6Y8.",
+						"attract": {
+							"type": "book",
+							"attr": {
+								"id": "12335723"
+							},
+							"pos": "bookdetail"
+						},
+						"Speaker": null,
+						"shareType": "none",
+						"url": "https://ah2.zhangyue.com/zybook3/u/p/api.php?Act=weixin\u0026bid=12335723\u0026fid=41\u0026p2=108045\u0026p3=17490003\u0026shareusr=i4413417392"
+					}
+				},
+				"feeUnit": 20,
+				"isShare": true
+			}
+		},
+		"sharePreferential": {
+			"btnDesc": "分享好书给小伙伴",
+			"isShowBtn": true
+		},
+		"svipZoneInfo": {},
+		"usrRecCard": {
+			"authorIcon": "https://ibk.ugc.corp3g.cn/idc_1/group61/M00/98/1D/CmQUOF4X-wmEW5BCAAAAAAT7nDA300529131.png?v=eb8ydy91\u0026t=CmQUOF4X-wk.",
+			"authorId": 1139828,
+			"authorName": "夜幕初垂",
+			"authorRankTag": "",
+			"books": [],
+			"circleId": "",
+			"fansCountText": "",
+			"followUrl": "https://ah2.zhangyue.com/zyuc/user/follow?act=follow\u0026userName=i3475999344",
+			"identityIntro": "",
+			"isFollow": 0,
+			"isShowFollow": true,
+			"isSupportLocal": 1,
+			"url": "https://ah2.zhangyue.com/zyuc/homepage/home/index?visitorName=i3475999344",
+			"userTag": "author",
+			"userTagName": "作者",
+			"userVInfo": {
+				"intro": "",
+				"tag": false
+			},
+			"usr": "i3475999344",
+			"verification": {},
+			"wordCountText": "累计889.5万字"
+		},
+		"vipBuyBookInfo": {
+			"isComicBook": 0,
+			"isVipBook": 0,
+			"isVipUser": 0,
+			"vBuy": 0,
+			"vipExpiretime": 0
+		},
+		"vipZoneInfo": {
+			"desc": "",
+			"isSVipUser": false,
+			"isVipUser": false,
+			"sVipDesc": "",
+			"statusDesc": "",
+			"url": ""
+		},
+		"wonderfulNote": {}
+	},
+	"code": 0,
+	"msg": ""
+}

@@ -8,13 +8,53 @@ from lxml import etree
 session = requests.session()
 USR = None
 
+
+def bytesToString(data):
+    plain = []
+    for i in data:
+        if i < 0:
+            plain.append(i+256)
+        else:
+            plain.append(i)
+    print(plain)
+    print(bytearray(plain).decode())
+        
+
+
 def jsonToUrl(params_dict):
     params = ''
-    for k in sorted(params_dict):
+    for k in params_dict:
         params = params + f'{k}={params_dict[k]}&'
     params = params.strip('&')
     return params
 
+def login(username, password):
+    res = list(map(lambda x: x.replace("\n", ""), os.popen(
+        f"iReaderSign.exe login C:\\Users\\rico\Desktop\\apk\\com.chaozh.iReaderFree.apk {username} {password}").readlines()))
+    json_ = {
+        "channel_id": "108045",
+        "is_mergeme": "1",
+        "encrypt_method": "1",
+        "device": "Pixel 2",
+        "version_id": "17490003",
+        "ver": "1.0",
+        "data": res[0],
+        "imei": "__39827dd5eb14217a",
+        "sign": res[2],
+        "timestamp": res[1],
+        "user_name": "17600539891",
+    }
+    url = "https://uc.ireader.com/user/slogin/passwd/v2?zyeid=6f511bea4bf9427ab88b137637dab7c4&usr=i4413417392&rgt=7&p1=ffffffffffffffffffffffff&pc=10&p2=108045&p3=17490003&p4=501603&p5=19&p7=__39827dd5eb14217a&p9=2&p16=Pixel+2&p21=31303&p22=10&p25=74901&p28=&p29=zye5b814&p30=&p31=__39827dd5eb14217a&p33=com.chaozh.iReaderFree&p34=google"
+    header = {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Host": "uc.ireader.com",
+        "User-Agent": "okhttp/3.11.0",
+
+    }
+    res = session.post(url=url, headers=header, data=json_)
+    global USR
+    USR = res.json()['body']['name']
+    print(USR)
 
 def getBookList(categoryId=1592):
     '''
@@ -71,6 +111,9 @@ def getBookList(categoryId=1592):
 
 
 def getBookInfo(bid):
+    '''
+        图书详情
+    '''
     params_dict ={
         'bid':bid,
         'style':'3',
@@ -97,65 +140,96 @@ def getBookInfo(bid):
         'p33':'com.chaozh.iReaderFree',
         'p34':'google'
     }
-    # https://ah2.zhangyue.com/zybk/api/detail/index?bid=12335723&style=3&pluginVersion=164&zysid=887cf6ce3998fa583cb171faa9d214bf&usr=i4413417392&rgt=7&p1=ffffffffffffffffffffffff&pc=10&p2=108045&p3=17490003&p4=501603&p5=19&p7=__39827dd5eb14217a&p9=2&p16=Pixel+2&p21=31303&p22=10&p25=74901&p28=&p29=zye5b814&p30=&p31=__39827dd5eb14217a&p33=com.chaozh.iReaderFree&p34=google
     url =  f'https://ah2.zhangyue.com/zybk/api/detail/index?{jsonToUrl(params_dict)}'
     header = {
         'Content-Type': 'application/json; charset=utf-8'
     }
     res = session.get(url, headers=header)
-    print(res.json())
-
-def parseEpbu(fname ='C:\\Users\\rico\\Downloads\\wKgHhVjfmOiENDljAAAAAFKHtw090503188.epub'):
-    # ns = {
-    #     'n':'urn:oasis:names:tc:opendocument:xmlns:container',
-    #     'pkg':'http://www.idpf.org/2007/opf',
-    #     'dc':'http://purl.org/dc/elements/1.1/'
-    # }
-    # prepare to read from the .epub file
-    zip = zipfile.ZipFile(fname)
-    # find the contents metafile
-    txt = zip.read('META-INF/container.xml')
-    tree = etree.fromstring(txt)
-    # cfname = tree.xpath('n:rootfiles/n:rootfile/@full-path',namespaces=ns)[0]
-    # # grab the metadata block from the contents metafile
-    # cf = zip.read(cfname)
-    # tree = etree.fromstring(cf)
-    # p = tree.xpath('/pkg:package/pkg:metadata',namespaces=ns)[0]
-    # repackage the data
-    # res = {}
-    # for s in ['title','language','creator','date','identifier']:
-    #     res[s] = p.xpath('dc:%s/text()'%(s),namespaces=ns)[0]
-    print(txt,tree)
-
-def login(username, password):
-    res = list(map(lambda x: x.replace("\n", ""), os.popen(
-        f"iReaderSign.exe login C:\\Users\\rico\Desktop\\apk\\com.chaozh.iReaderFree.apk {username} {password}").readlines()))
-    json_ = {
-        "channel_id": "108045",
-        "is_mergeme": "1",
-        "encrypt_method": "1",
-        "device": "Pixel 2",
-        "version_id": "17490003",
-        "ver": "1.0",
-        "data": res[0],
-        "imei": "__39827dd5eb14217a",
-        "sign": res[2],
-        "timestamp": res[1],
-        "user_name": "17600539891",
+    DownloadUrl = res.json()['body']['buttonInfo']['cmd']['Data']['DownloadInfo']['DownloadUrl']
+    params_dict ={
+        'epubversion':'2',
+        'bookId':bid,
+        'zysid':'887cf6ce3998fa583cb171faa9d214bf',
+        'usr':USR,
+        'rgt':'7',
+        'p1':'ffffffffffffffffffffffff',
+        'pc':'10',
+        'p2':'108045',
+        'p3':'17490003',
+        'p4':'501603',
+        'p5':'19',
+        'p7':'__39827dd5eb14217a',
+        'p9':'2',
+        'p16':'Pixel 2',
+        'p21':'31303',
+        'p22':'10',
+        'p25':'74901',
+        'p28':'',
+        'p29':'zye5b814',
+        'p30':'',
+        'p31':'__39827dd5eb14217a',
+        'p33':'com.chaozh.iReaderFree',
+        'p34':'google'
     }
-    url = "https://uc.ireader.com/user/slogin/passwd/v2?zyeid=6f511bea4bf9427ab88b137637dab7c4&usr=i4413417392&rgt=7&p1=ffffffffffffffffffffffff&pc=10&p2=108045&p3=17490003&p4=501603&p5=19&p7=__39827dd5eb14217a&p9=2&p16=Pixel+2&p21=31303&p22=10&p25=74901&p28=&p29=zye5b814&p30=&p31=__39827dd5eb14217a&p33=com.chaozh.iReaderFree&p34=google"
+    url =  f'https://ah2.zhangyue.com/r/book_pre_url?{jsonToUrl(params_dict)}'
     header = {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Host": "uc.ireader.com",
-        "User-Agent": "okhttp/3.11.0",
-
+        'Range':'bytes=0-',
+        'Host':'ah2.zhangyue.com',
+        'User-Agent':'okhttp/3.11.0',
+        'Connection':'Keep-alive',
     }
-    res = session.post(url=url, headers=header, data=json_)
-    USR = res.json()['body']['name']
+      #https://serial.d.ireader.com/group1/M00/99/5B/wKgHhVk0zqqEXLEhAAAAACetYQA94379845.ezip?v=3o_z25zO&t=CmQVd2FfpmQ.
+    res = session.get(url, headers=header,allow_redirects=True)
+    book_ezip_url = res.url
+
+
+
+def parseEpbu(book_id=11286072):
+    '''
+        处理epub
+    '''
+    params_dict ={
+        'epubversion':'2',
+        'bookId':book_id,
+        'zysid':'887cf6ce3998fa583cb171faa9d214bf',
+        'usr':USR,
+        'rgt':'7',
+        'p1':'ffffffffffffffffffffffff',
+        'pc':'10',
+        'p2':'108045',
+        'p3':'17490003',
+        'p4':'501603',
+        'p5':'19',
+        'p7':'__39827dd5eb14217a',
+        'p9':'2',
+        'p16':'Pixel 2',
+        'p21':'31303',
+        'p22':'10',
+        'p25':'74901',
+        'p28':'',
+        'p29':'zye5b814',
+        'p30':'',
+        'p31':'__39827dd5eb14217a',
+        'p33':'com.chaozh.iReaderFree',
+        'p34':'google'
+    }
+    url =  f'https://ah2.zhangyue.com/r/book_pre_url?{jsonToUrl(params_dict)}'
+    header = {
+        'Range':'bytes=0-',
+        'Host':'ah2.zhangyue.com',
+        'User-Agent':'okhttp/3.11.0',
+        'Connection':'Keep-alive',
+    }
+      #https://serial.d.ireader.com/group1/M00/99/5B/wKgHhVk0zqqEXLEhAAAAACetYQA94379845.ezip?v=3o_z25zO&t=CmQVd2FfpmQ.
+    res = session.get(url, headers=header,allow_redirects=True)
+    book_ezip_url = res.url
+    print(book_ezip_url)
 
 
 if __name__ == '__main__':
     # login("17600539891","a0123456789")
     # getBookList()
     # getBookInfo(11286072)
-    parseEpbu()
+    # parseEpbu()
+
+    bytesToString([55,20,71,-92,-23,51,-94,31,113,-4,-67,-127,56,16,43,42,115,-88,-91,-6,-62,124,3,-104,84,48,112,66,56,5,-62,62,10,-49,-96,12,-105,-114,-87,12,107,-91,-97,-29,85,45,-42,66,-18,53,107,-50,75,27,115,-1,18,46,-80,-82,24,49,-100,16,51,-74,-88,86,27,-113,115,95,-95,-16,-63,-122,39,-26,-103,83,52,121,-49,-37,65,-15,-70,-18,-32,-92,-34,45,-26,-9,60,30,-19,-100,-64,-100,53,-100,87,123,28,-35,-8,-103,-90,-34,-5,108,41,67,-45,78,-14,74,17,-36,-115,-121,-120,7,-19,-45,39,-105])

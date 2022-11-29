@@ -1112,7 +1112,7 @@ function monitor_ram_wr(){
 //fd/xxx 检测app是否打开的frida相关文件 fd记录app所打开的一些文件
 //maps 检测app是否加载依赖库里含有frida
 //net/tcp 检测app打开端口
-//huluwa
+//huluwa https://github.com/hzzheyang/strongR-frida-android/releases
 //huluda-server 处理了re.frida.server文件夹以及该文件夹下面的的文件名字，若使用这个server 并不放在 /data/local/tmp目录下就可以不用担心fd和maps检测
 //frida-agent相关文章 https://bbs.pediy.com/thread-269866.htm 关于frida持久化的知识
 
