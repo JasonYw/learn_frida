@@ -4,7 +4,6 @@ import requests
 import os
 session =requests.session()
 
-
 def getBookList(page=1000):
     '''
         com.km.encryption.api.Security
