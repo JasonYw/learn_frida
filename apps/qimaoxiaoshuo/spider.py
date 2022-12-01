@@ -4,9 +4,9 @@ import requests
 import os
 from fspider import utils
 session =requests.session()
-
-apk_path =f'{os.getcwd()}\\qimaomianfeixiaoshuo.apk'
-exe_path =f'{os.getcwd()}\\qmSign.exe'
+file_path = os.path.dirname(os.path.realpath(__file__))
+apk_path =f'{file_path}\\qimaomianfeixiaoshuo.apk'
+exe_path =f'{file_path}\\qmSign.exe'
 
 
 def getBookList(page=1000):
