@@ -5,13 +5,17 @@ import os
 from fspider import utils
 session =requests.session()
 
+apk_path =f'{os.getcwd()}\\qimaomianfeixiaoshuo.apk'
+exe_path =f'{os.getcwd()}\\qmSign.exe'
+
+
 def getBookList(page=1000):
     '''
         com.km.encryption.api.Security
     '''
     text = f'book_privacy=1new_user=1page_no={page}read_preference=0uid=8EE0AA7F8CD5'
     hedaer_text = 'AUTHORIZATION=app-version=71005application-id=com.kmxs.readerchannel=qm-wy2yd058_wmis-white=1net-env=1platform=androidqm-params=cLGeuyoMmqN6OlNDOzf5A5HwtTFUH5w5uCR1paHWHT9wgI9wgI9wthgYgT9QAI-MAaMwgI9wth9wgI9wgI9wgI9wgaHjHzk2uz2Tp3U1paHWHTHwgTHnghHrghfnAI9npzG5NINzgzHMpzHlpTfENyfrgzG-gTHe4eFw4hgrNz0wgqfe4es-gqflpyR2NI4lH5w5BqoTHTZ5A0fWkh9WFf0WNM4WA0gWkIf5taGeBERL4lRUmqF5A5HrkffwFf0EkTxIkIf5taGecCgQuzRLHTZ5gh95taGMOSReuyR-tq2-HTZ5koRDpCk6BU2huRp6302oOyJFRl-wNlkvp0x6gI0YNlk2Rlfef-pqu214fzp5gqnfpopmp2NoB0pTke2kRTGvuMrLfSGmkqxzhfkoNfrLfznqg2RW4eGZg3HjHSsZBlY2tqn2uzRjHTZ5h3HjHz2Qpq-5A5H5taGQBlk2BaHWH2s1cyRjHIH5taGEByHQmqU2m3HWH5HjHSuj45UUmqF5A5HrkffwFf0EkTxIkIf5taGTBy22BSFQmqF5A5HYghgnph0l4e9wgepT4lgYH5w54SGxBzF5A5GSBlJSByf5taGD4q2-HTZ5HSM=reg='
-    sign = os.popen(f'qmSign.exe C:\\Users\\rico\Desktop\\apk\\qimaomianfeixiaoshuo.apk {text}').read().replace('\n','')
+    sign = os.popen(f'{exe_path} {apk_path} {text}').read().replace('\n','')
     header = {
         'method':'GET',
         'path':f'/api/v5/book-store/recommend-guess-more?page_no={page}&read_preference=0&book_privacy=1&uid=8EE0AA7F8CD5&new_user=1&sign={sign}',
@@ -40,7 +44,7 @@ def getBookList(page=1000):
     
 def getChapterList(book_id=103152):
     text = f"chapter_ver=0id={book_id}"
-    sign = os.popen(f'qmSign.exe C:\\Users\\rico\Desktop\\apk\\qimaomianfeixiaoshuo.apk {text}').read().replace('\n','')
+    sign = os.popen(f'{exe_path} {apk_path} {text}').read().replace('\n','')
     header = {
         'net-env':'1',
         'channel':'qm-wy2yd058_wm',
@@ -66,7 +70,7 @@ def getChapterList(book_id=103152):
 
 def getContent(book_id=103152,chapter_id=26520):
     text = f"chapterId={chapter_id}id={book_id}"
-    sign = os.popen(f'qmSign.exe C:\\Users\\rico\Desktop\\apk\\qimaomianfeixiaoshuo.apk {text}').read().replace('\n','')
+    sign = os.popen(f'{exe_path} {apk_path} {text}').read().replace('\n','')
     header = {
         'net-env':'1',
         'channel':'qm-wy2yd058_wm',
