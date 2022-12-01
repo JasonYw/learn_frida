@@ -30,7 +30,7 @@ def getBookList(page=1000):
         'application-id':'com.kmxs.reader',
         'authorization':'',
         'qm-params':'cLGeuyoMmqN6OlNDOzf5A5HwtTFUH5w5uCR1paHWHT9wgI9wgI9wthgYgT9QAI-MAaMwgI9wth9wgI9wgI9wgI9wgaHjHzk2uz2Tp3U1paHWHTHwgTHnghHrghfnAI9npzG5NINzgzHMpzHlpTfENyfrgzG-gTHe4eFw4hgrNz0wgqfe4es-gqflpyR2NI4lH5w5BqoTHTZ5A0fWkh9WFf0WNM4WA0gWkIf5taGeBERL4lRUmqF5A5HrkffwFf0EkTxIkIf5taGecCgQuzRLHTZ5gh95taGMOSReuyR-tq2-HTZ5koRDpCk6BU2huRp6302oOyJFRl-wNlkvp0x6gI0YNlk2Rlfef-pqu214fzp5gqnfpopmp2NoB0pTke2kRTGvuMrLfSGmkqxzhfkoNfrLfznqg2RW4eGZg3HjHSsZBlY2tqn2uzRjHTZ5h3HjHz2Qpq-5A5H5taGQBlk2BaHWH2s1cyRjHIH5taGEByHQmqU2m3HWH5HjHSuj45UUmqF5A5HrkffwFf0EkTxIkIf5taGTBy22BSFQmqF5A5HYghgnph0l4e9wgepT4lgYH5w54SGxBzF5A5GSBlJSByf5taGD4q2-HTZ5HSM=',
-        'sign': os.popen(f'{exe_path} {apk_path} {text}').read().replace('\n',''),
+        'sign': os.popen(f'{exe_path} {apk_path} {hedaer_text}').read().replace('\n',''),
         'qm-uaf':'20221130-411684881',
         'qm-ii':'1875337936',
         'qm-it':'1669619881',
@@ -117,7 +117,7 @@ def main():
                     'chapter_title':chapter_info["title"],
                     'chapter_content':getContent(book_info["id"],chapter_info["id"]),
                 }
-                utils.parse_item(item = result)
+                utils.parse_item(item_ = result)
                 # f.write(f'{chapter_info["title"]}\n')
                 # f.write(getContent(book_info["id"],chapter_info["id"]))
             # f.close()
