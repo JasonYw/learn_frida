@@ -117,7 +117,7 @@ def main():
                     'chapter_title':chapter_info["title"],
                     'chapter_content':getContent(book_info["id"],chapter_info["id"]),
                 }
-                utils.parse_item(item_ = result)
+                utils.pipeline(item_ = result)
                 # f.write(f'{chapter_info["title"]}\n')
                 # f.write(getContent(book_info["id"],chapter_info["id"]))
             # f.close()
