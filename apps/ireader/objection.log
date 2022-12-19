@@ -1,0 +1,22 @@
+com.chaozh.iReaderFree on (google: 10) [usb] # jobs kill 113755
+com.chaozh.iReaderFree on (google: 10) [usb] # android hooking watch class_method  cg.b.k0 --dump-args --dump-backtrace --dump-return
+(agent) Attempting to watch class cg.b and method k0.
+(agent) Hooking cg.b.k0(java.lang.String, java.util.Map)
+(agent) Registering job 106347. Type: watch-method for: cg.b.k0
+com.chaozh.iReaderFree on (google: 10) [usb] # (agent) [106347] Called cg.b.k0(java.lang.String, java.util.Map)
+(agent) [106347] Backtrace:
+        cg.b.k0(Native Method)
+        y9.f.L(SourceFile:6)
+        y9.f.z(SourceFile:1)
+        y9.f$a.a(SourceFile:2)
+        nd.c$a.run(SourceFile:2)
+        android.os.Handler.handleCallback(Handler.java:883)
+        android.os.Handler.dispatchMessage(Handler.java:100)
+        android.os.Looper.loop(Looper.java:214)
+        android.app.ActivityThread.main(ActivityThread.java:7495)
+        java.lang.reflect.Method.invoke(Native Method)
+        com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:492)
+        com.android.internal.os.ZygoteInit.main(ZygoteInit.java:930)
+
+(agent) [106347] Arguments cg.b.k0(https://ah2.zhangyue.com/drm/drm/safe/getAuthChapter?zysid=887cf6ce3998fa583cb171faa9d214bf&usr=i4413417392&rgt=7&p1=ffffffffffffffffffffffff&pc=10&p2=108045&p3=17490003&p4=501603&p5=19&p7=__39827dd5eb14217a&p9=2&p16=Pixel+2&p21=31303&p22=10&p25=74901&p28=&p29=zye5b814&p30=&p31=__39827dd5eb14217a&p33=com.chaozh.iReaderFree&p34=google, [object Object])
+(agent) [106347] Return Value: (none)

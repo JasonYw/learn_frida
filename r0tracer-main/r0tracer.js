@@ -247,11 +247,11 @@ function main() {
         //以下三种模式，取消注释某一行以开启
         */
         //A. 简易trace单个函数
-        // traceClass("com.peopledailychina.activity.application.NewsApplication")
+        traceClass("com.km.encryption.api.Security.encrypt")
         //B. 黑白名单trace多个函数，第一个参数是白名单(包含关键字)，第二个参数是黑名单(不包含的关键字)
         // hook("javax.crypto.Cipher", "$");
         //C. 报某个类找不到时，将某个类名填写到第三个参数，比如找不到com.roysue.check类。（前两个参数依旧是黑白名单）
-        hook("com.peopledailychina.activity.application.NewsApplication","","com.peopledailychina.activity.application.NewsApplication");        
+        // hook("com.peopledailychina.activity.application.NewsApplication","","com.peopledailychina.activity.application.NewsApplication");        
     })
 }
 /*

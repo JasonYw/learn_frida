@@ -1082,7 +1082,107 @@ function monitor_ram_wr(){
 //2.进程名检测 检测frida-server是否在进程列表里 解决改名字 
 //3.端口检测  检测frida-server的端口  frida 可以指定端口
 //4.dbus协议通信 向每个端口发送dbus 认证消息 哪个端口回复了reject 就是frida-server 也可以每个端口都试一下 从0-65535端口 过dubs hook strcmp 改参数 或者改返回值 hook strstr
+function hookStrStr(){
+    //hook strstr
+    Java.perform(function(){
+        console.log("[*] I am  a hook function");
+        var strStr = Module.findExportByName("libc.so", "strstr");
+        console.log("[*] strstr addr: " + strStr);
+        Interceptor.attach(strStr,{
+            onEnter: function(args){
+                console.log("[*] strstr hooked");
+                var arg0= ptr(args[0]).readCString();
+                var arg1= ptr(args[1]).readCString();
+                if(arg1.indexOf(":5DBA")>=0){
+                    console.log("[*] strstr hooked"+arg0+","+arg1+")");
+                    this.dba=true
+                }
+                if(arg1.indexOf(":69A2")>=0){
+                    console.log("[*] strstr hooked"+arg0+","+arg1+")");
+                    this.a2=false
+                }
+                
+                if(arg1.indexOf("LIBFRIDA")>=0){
+                    console.log("[*] strstr hooked"+arg0+","+arg1+")");
+                    this.LIBFRIDA = true;
+                }
+                if(arg1.indexOf("frida")>=0){
+                    console.log("[*] strstr hooked"+arg0+","+arg1+")");
+                    this.frida = true;
+
+                }
+            },
+            onLeave: function(retval){
+                if(this.a2){
+                    console.log("[*] a2 hooked"+retval);
+                    retval.replace(0x0);
+                }
+                if(this.dba){
+                    console.log("[*] d8a hooked"+retval);
+                    retval.replace(0x0);
+                }
+                if(this.LIBFRIDA){
+                    console.log("[*] the LIBFRIDA result: "+retval);
+                    retval.replace(0x0)
+                }
+                if(this.frida){
+                    console.log("[*] the frida result: "+retval);
+                    retval.replace(0x0)
+                }
+            }
+        });
+
+        })
+}
+function hookCheckSoLoad(){
+    //查看加载了哪些so
+    Java.perform(function () {
+        var enumMoudle = Process.enumerateModules();
+        for (var i = 0; i < enumMoudle.length; i++){
+            console.log("", enumMoudle[i].name)
+        }
+    });
+    var pth = Module.findExportByName(null,"open");
+    Interceptor.attach(ptr(pth),{
+        onEnter:function(args){
+            this.filename = args[0];
+            console.log("",this.filename.readCString())
+            // if (this.filename.readCString().indexOf(".so") != -1){
+            //     args[0] = ptr(0)
+            // }
+        },onLeave:function(retval){
+            return retval;
+        }
+    })
+    //查看加载了哪些so
+}
+
 //5.扫描maps文件 maps文件是一个app加载的依赖库  /proc/进程pid/maps
+function hookMaps() {
+    const openPtr = Module.getExportByName('libc.so', 'open');
+    const open = new NativeFunction(openPtr, 'int', ['pointer', 'int']);
+    var readPtr = Module.findExportByName("libc.so", "read");
+    var read = new NativeFunction(readPtr, 'int', ['int', 'pointer', "int"]);
+    var fakePath = "/data/local/tmp/maps";
+    var file = new File(fakePath, "w");
+    var buffer = Memory.alloc(512);
+    Interceptor.replace(openPtr, new NativeCallback(function (pathnameptr, flag) {
+        var pathname = Memory.readUtf8String(pathnameptr);
+        var realFd = open(pathnameptr, flag);
+        if (pathname.indexOf("maps") != 0) {
+            while (parseInt(read(realFd, buffer, 512)) !== 0) {
+                var oneLine = Memory.readCString(buffer);
+                if (oneLine.indexOf("tmp") === -1) {
+                    file.write(oneLine);
+                }
+            }
+            var filename = Memory.allocUtf8String(fakePath);
+            return open(filename, flag);
+        }
+        var fd = open(pathnameptr, flag);
+        return fd;
+    }, 'int', ['pointer', 'int']));
+}
 //内存地址 权限 
 //749419a000-749419b000 r-xp 00000000 103:1d 3375610                       /data/app/com.xiaojianbang.app-QTWcjBSoZCLsdnHN86PaQw==/lib/arm64/libxiaojianbangA.so
 //frida注入时 会注入frida-agent 一个so
@@ -1112,7 +1212,7 @@ function monitor_ram_wr(){
 //fd/xxx 检测app是否打开的frida相关文件 fd记录app所打开的一些文件
 //maps 检测app是否加载依赖库里含有frida
 //net/tcp 检测app打开端口
-//huluwa
+//huluwa https://github.com/hzzheyang/strongR-frida-android/releases
 //huluda-server 处理了re.frida.server文件夹以及该文件夹下面的的文件名字，若使用这个server 并不放在 /data/local/tmp目录下就可以不用担心fd和maps检测
 //frida-agent相关文章 https://bbs.pediy.com/thread-269866.htm 关于frida持久化的知识
 
@@ -1140,3 +1240,7 @@ function monitor_ram_wr(){
 // https://github.com/L4ys/IDASignsrch
 // https://github.com/Pr0214/findhash
 
+
+
+//frida相关笔记 
+//https://kuizuo.cn/docs/frida-so-hook/

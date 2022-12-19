@@ -1,0 +1,7217 @@
+=======================
+func_name => oatdata
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa0c000
+funcaddr_sub_soaddr => 0x1000
+=======================
+
+=======================
+func_name => oatlastword
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa5f80c
+funcaddr_sub_soaddr => 0x5480c
+=======================
+
+=======================
+func_name => oatdatabimgrelro
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa60000
+funcaddr_sub_soaddr => 0x55000
+=======================
+
+=======================
+func_name => oatdatabimgrelrolastword
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa60320
+funcaddr_sub_soaddr => 0x55320
+=======================
+
+=======================
+func_name => oatbss
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa61000
+funcaddr_sub_soaddr => 0x56000
+=======================
+
+=======================
+func_name => oatbsslastword
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa619f0
+funcaddr_sub_soaddr => 0x569f0
+=======================
+
+=======================
+func_name => oatbssmethods
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa61000
+funcaddr_sub_soaddr => 0x56000
+=======================
+
+=======================
+func_name => oatbssroots
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa611d8
+funcaddr_sub_soaddr => 0x561d8
+=======================
+
+=======================
+func_name => oatdex
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa62000
+funcaddr_sub_soaddr => 0x57000
+=======================
+
+=======================
+func_name => oatdexlastword
+so_name => org.apache.http.legacy.odex
+func_address => 0x7eefa63082
+funcaddr_sub_soaddr => 0x58082
+=======================
+
+=======================
+func_name => oatdata
+so_name => base.odex
+func_address => 0x7e90f18000
+funcaddr_sub_soaddr => 0x1000
+=======================
+
+=======================
+func_name => oatlastword
+so_name => base.odex
+func_address => 0x7e918b80c8
+funcaddr_sub_soaddr => 0x9a10c8
+=======================
+
+=======================
+func_name => oatdatabimgrelro
+so_name => base.odex
+func_address => 0x7e918b9000
+funcaddr_sub_soaddr => 0x9a2000
+=======================
+
+=======================
+func_name => oatdatabimgrelrolastword
+so_name => base.odex
+func_address => 0x7e918bb148
+funcaddr_sub_soaddr => 0x9a4148
+=======================
+
+=======================
+func_name => oatbss
+so_name => base.odex
+func_address => 0x7e918bc000
+funcaddr_sub_soaddr => 0x9a5000
+=======================
+
+=======================
+func_name => oatbsslastword
+so_name => base.odex
+func_address => 0x7e918cff78
+funcaddr_sub_soaddr => 0x9b8f78
+=======================
+
+=======================
+func_name => oatbssmethods
+so_name => base.odex
+func_address => 0x7e918bc000
+funcaddr_sub_soaddr => 0x9a5000
+=======================
+
+=======================
+func_name => oatbssroots
+so_name => base.odex
+func_address => 0x7e918c40d0
+funcaddr_sub_soaddr => 0x9ad0d0
+=======================
+
+=======================
+func_name => oatdex
+so_name => base.odex
+func_address => 0x7e918d0000
+funcaddr_sub_soaddr => 0x9b9000
+=======================
+
+=======================
+func_name => oatdexlastword
+so_name => base.odex
+func_address => 0x7e93d3c8e0
+funcaddr_sub_soaddr => 0x2e258e0
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libmmkv.so
+func_address => 0x7ee5e166c4
+funcaddr_sub_soaddr => 0x166c4
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libimagepipeline.so
+func_address => 0x7e8468eb10
+funcaddr_sub_soaddr => 0xb10
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libBugly.so
+func_address => 0x7e84609624
+funcaddr_sub_soaddr => 0x8624
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libNativeFormats-v4.so
+func_address => 0x7e7bb30eb0
+funcaddr_sub_soaddr => 0xe1eb0
+=======================
+
+=======================
+func_name => Java_org_geometerplus_fbreader_formats_PluginCollection_nativePlugins
+so_name => libNativeFormats-v4.so
+func_address => 0x7e7bb3fcd8
+funcaddr_sub_soaddr => 0xf0cd8
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libcommon-encryption.so
+func_address => 0x7e7a4b1d7c
+funcaddr_sub_soaddr => 0x13d7c
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libdu.so
+func_address => 0x7e77243d80
+funcaddr_sub_soaddr => 0x37d80
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libbootupdatemark.so
+func_address => 0x7e77193a2c
+funcaddr_sub_soaddr => 0x13a2c
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libsmsdk.so
+func_address => 0x7e68e6288c
+funcaddr_sub_soaddr => 0x5688c
+=======================
+
+=======================
+func_name => creat
+so_name => libc.so
+func_address => 0x7f806b42b8
+funcaddr_sub_soaddr => 0x8c2b8
+=======================
+
+=======================
+func_name => open
+so_name => libc.so
+func_address => 0x7f806b42c8
+funcaddr_sub_soaddr => 0x8c2c8
+=======================
+
+=======================
+func_name => read
+so_name => libc.so
+func_address => 0x7f806f6580
+funcaddr_sub_soaddr => 0xce580
+=======================
+
+=======================
+func_name => write
+so_name => libc.so
+func_address => 0x7f806f6de0
+funcaddr_sub_soaddr => 0xcede0
+=======================
+
+=======================
+func_name => close
+so_name => libc.so
+func_address => 0x7f806adf08
+funcaddr_sub_soaddr => 0x85f08
+=======================
+
+=======================
+func_name => getppid
+so_name => libc.so
+func_address => 0x7f806f5f40
+funcaddr_sub_soaddr => 0xcdf40
+=======================
+
+=======================
+func_name => connect
+so_name => libc.so
+func_address => 0x7f806abfb8
+funcaddr_sub_soaddr => 0x83fb8
+=======================
+
+=======================
+func_name => select
+so_name => libc.so
+func_address => 0x7f806b4a18
+funcaddr_sub_soaddr => 0x8ca18
+=======================
+
+=======================
+func_name => ioctl
+so_name => libc.so
+func_address => 0x7f806b2770
+funcaddr_sub_soaddr => 0x8a770
+=======================
+
+=======================
+func_name => unlink
+so_name => libc.so
+func_address => 0x7f806ba120
+funcaddr_sub_soaddr => 0x92120
+=======================
+
+=======================
+func_name => __system_property_get
+so_name => libc.so
+func_address => 0x7f806b94c0
+funcaddr_sub_soaddr => 0x914c0
+=======================
+
+=======================
+func_name => Java_com_km_encryption_api_Security_sign
+so_name => libcommon-encryption.so
+func_address => 0x7e7a4b3620
+funcaddr_sub_soaddr => 0x15620
+=======================
+
+=======================
+func_name => oatdata
+so_name => gdt_plugin.odex
+func_address => 0x7e6088d000
+funcaddr_sub_soaddr => 0x1000
+=======================
+
+=======================
+func_name => oatlastword
+so_name => gdt_plugin.odex
+func_address => 0x7e609b68f8
+funcaddr_sub_soaddr => 0x12a8f8
+=======================
+
+=======================
+func_name => oatdatabimgrelro
+so_name => gdt_plugin.odex
+func_address => 0x7e609b7000
+funcaddr_sub_soaddr => 0x12b000
+=======================
+
+=======================
+func_name => oatdatabimgrelrolastword
+so_name => gdt_plugin.odex
+func_address => 0x7e609b7a1c
+funcaddr_sub_soaddr => 0x12ba1c
+=======================
+
+=======================
+func_name => oatbss
+so_name => gdt_plugin.odex
+func_address => 0x7e609b8000
+funcaddr_sub_soaddr => 0x12c000
+=======================
+
+=======================
+func_name => oatbsslastword
+so_name => gdt_plugin.odex
+func_address => 0x7e609bad9c
+funcaddr_sub_soaddr => 0x12ed9c
+=======================
+
+=======================
+func_name => oatbssmethods
+so_name => gdt_plugin.odex
+func_address => 0x7e609b8000
+funcaddr_sub_soaddr => 0x12c000
+=======================
+
+=======================
+func_name => oatbssroots
+so_name => gdt_plugin.odex
+func_address => 0x7e609b9158
+funcaddr_sub_soaddr => 0x12d158
+=======================
+
+=======================
+func_name => oatdata
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e604c8000
+funcaddr_sub_soaddr => 0x1000
+=======================
+
+=======================
+func_name => oatlastword
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e60546c88
+funcaddr_sub_soaddr => 0x7fc88
+=======================
+
+=======================
+func_name => oatdatabimgrelro
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e60547000
+funcaddr_sub_soaddr => 0x80000
+=======================
+
+=======================
+func_name => oatdex
+so_name => gdt_plugin.odex
+func_address => 0x7e609bb000
+funcaddr_sub_soaddr => 0x12f000
+=======================
+
+=======================
+func_name => oatdexlastword
+so_name => gdt_plugin.odex
+func_address => 0x7e60bd3c70
+funcaddr_sub_soaddr => 0x347c70
+=======================
+
+=======================
+func_name => oatdatabimgrelrolastword
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e605476b0
+funcaddr_sub_soaddr => 0x806b0
+=======================
+
+=======================
+func_name => oatbss
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e60548000
+funcaddr_sub_soaddr => 0x81000
+=======================
+
+=======================
+func_name => oatbsslastword
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e60549534
+funcaddr_sub_soaddr => 0x82534
+=======================
+
+=======================
+func_name => oatbssmethods
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e60548000
+funcaddr_sub_soaddr => 0x81000
+=======================
+
+=======================
+func_name => oatbssroots
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e60548898
+funcaddr_sub_soaddr => 0x81898
+=======================
+
+=======================
+func_name => oatdex
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e6054a000
+funcaddr_sub_soaddr => 0x83000
+=======================
+
+=======================
+func_name => oatdexlastword
+so_name => __xadsdk__remote__final__running__.odex
+func_address => 0x7e6087aea0
+funcaddr_sub_soaddr => 0x3b3ea0
+=======================
+
+=======================
+func_name => Java_com_umeng_umzid_Spy_getNativeID
+so_name => libumeng-spy.so
+func_address => 0x7e6dc1c46c
+funcaddr_sub_soaddr => 0x846c
+=======================
+
+=======================
+func_name => Java_com_umeng_umzid_Spy_getNativeLibraryVersion
+so_name => libumeng-spy.so
+func_address => 0x7e6dc1c060
+funcaddr_sub_soaddr => 0x8060
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libyaqpro.ffe89980.so
+func_address => 0x7e6cf4db1c
+funcaddr_sub_soaddr => 0xcb1c
+=======================
+
+=======================
+func_name => Java_com_dianping_logan_CLoganProtocol_clogan_1init
+so_name => liblogan.so
+func_address => 0x7e72d89a04
+funcaddr_sub_soaddr => 0x3a04
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libtnet-3.1.14.so
+func_address => 0x7e60210078
+funcaddr_sub_soaddr => 0x6078
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libyaqbasic.ffe89980.so
+func_address => 0x7e5bc50c30
+funcaddr_sub_soaddr => 0xc30
+=======================
+
+=======================
+func_name => Java_com_dianping_logan_CLoganProtocol_clogan_1debug
+so_name => liblogan.so
+func_address => 0x7e72d89bac
+funcaddr_sub_soaddr => 0x3bac
+=======================
+
+=======================
+func_name => Java_com_dianping_logan_CLoganProtocol_clogan_1open
+so_name => liblogan.so
+func_address => 0x7e72d89b44
+funcaddr_sub_soaddr => 0x3b44
+=======================
+
+=======================
+func_name => Java_com_dianping_logan_CLoganProtocol_clogan_1write
+so_name => liblogan.so
+func_address => 0x7e72d8992c
+funcaddr_sub_soaddr => 0x392c
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libturingau.ffe89980.so
+func_address => 0x7e5b49ed60
+funcaddr_sub_soaddr => 0x1dd60
+=======================
+
+=======================
+func_name => Java_com_dianping_logan_CLoganProtocol_clogan_1flush
+so_name => liblogan.so
+func_address => 0x7e72d89ba8
+funcaddr_sub_soaddr => 0x3ba8
+=======================
+
+=======================
+func_name => InitEsxProfile
+so_name => libGLESv2_adreno.so
+func_address => 0x7ee6e8eb98
+funcaddr_sub_soaddr => 0xbfb98
+=======================
+
+=======================
+func_name => HMI
+so_name => gralloc.msm8998.so
+func_address => 0x7e5b031018
+funcaddr_sub_soaddr => 0x13018
+=======================
+
+=======================
+func_name => compute_aligned_width_and_height
+so_name => libadreno_utils.so
+func_address => 0x7ee73698c8
+funcaddr_sub_soaddr => 0x98c8
+=======================
+
+=======================
+func_name => compute_surface_padding
+so_name => libadreno_utils.so
+func_address => 0x7ee7369f78
+funcaddr_sub_soaddr => 0x9f78
+=======================
+
+=======================
+func_name => compute_compressedfmt_aligned_width_and_height
+so_name => libadreno_utils.so
+func_address => 0x7ee736b158
+funcaddr_sub_soaddr => 0xb158
+=======================
+
+=======================
+func_name => isUBWCSupportedByGpu
+so_name => libadreno_utils.so
+func_address => 0x7ee736adf0
+funcaddr_sub_soaddr => 0xadf0
+=======================
+
+=======================
+func_name => get_gpu_pixel_alignment
+so_name => libadreno_utils.so
+func_address => 0x7ee736b2d0
+funcaddr_sub_soaddr => 0xb2d0
+=======================
+
+=======================
+func_name => eglSetBlobCacheFuncsANDROID
+so_name => libEGL_adreno.so
+func_address => 0x7ee731f5e8
+funcaddr_sub_soaddr => 0x65e8
+=======================
+
+=======================
+func_name => glGetStringi
+so_name => libGLESv2.so
+func_address => 0x7f82c34148
+funcaddr_sub_soaddr => 0x18148
+=======================
+
+=======================
+func_name => glBindVertexArray
+so_name => libGLESv2.so
+func_address => 0x7f82c30030
+funcaddr_sub_soaddr => 0x14030
+=======================
+
+=======================
+func_name => glDeleteVertexArrays
+so_name => libGLESv2.so
+func_address => 0x7f82c30048
+funcaddr_sub_soaddr => 0x14048
+=======================
+
+=======================
+func_name => glGenVertexArrays
+so_name => libGLESv2.so
+func_address => 0x7f82c30060
+funcaddr_sub_soaddr => 0x14060
+=======================
+
+=======================
+func_name => glBindFragDataLocationEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31c50
+funcaddr_sub_soaddr => 0x15c50
+=======================
+
+=======================
+func_name => glBindFragDataLocationIndexedEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31c38
+funcaddr_sub_soaddr => 0x15c38
+=======================
+
+=======================
+func_name => glBlendBarrierKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c31218
+funcaddr_sub_soaddr => 0x15218
+=======================
+
+=======================
+func_name => glDrawArraysInstanced
+so_name => libGLESv2.so
+func_address => 0x7f82c303f0
+funcaddr_sub_soaddr => 0x143f0
+=======================
+
+=======================
+func_name => glDrawBuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff08
+funcaddr_sub_soaddr => 0x13f08
+=======================
+
+=======================
+func_name => glDrawElementsInstanced
+so_name => libGLESv2.so
+func_address => 0x7f82c30408
+funcaddr_sub_soaddr => 0x14408
+=======================
+
+=======================
+func_name => glDrawArraysIndirect
+so_name => libGLESv2.so
+func_address => 0x7f82c30790
+funcaddr_sub_soaddr => 0x14790
+=======================
+
+=======================
+func_name => glDrawElementsIndirect
+so_name => libGLESv2.so
+func_address => 0x7f82c307a8
+funcaddr_sub_soaddr => 0x147a8
+=======================
+
+=======================
+func_name => glDrawRangeElements
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd90
+funcaddr_sub_soaddr => 0x13d90
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libmaparmor.so
+func_address => 0x7e1684c9d8
+funcaddr_sub_soaddr => 0x59d8
+=======================
+
+=======================
+func_name => glGetMultisamplefv
+so_name => libGLESv2.so
+func_address => 0x7f82c30d08
+funcaddr_sub_soaddr => 0x14d08
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libkeva.so
+func_address => 0x7e157ee178
+funcaddr_sub_soaddr => 0x21178
+=======================
+
+=======================
+func_name => glGetStringi
+so_name => libGLESv2.so
+func_address => 0x7f82c34148
+funcaddr_sub_soaddr => 0x18148
+=======================
+
+=======================
+func_name => glGetTexLevelParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c30d38
+funcaddr_sub_soaddr => 0x14d38
+=======================
+
+=======================
+func_name => glReadBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd78
+funcaddr_sub_soaddr => 0x13d78
+=======================
+
+=======================
+func_name => glTexBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c311d0
+funcaddr_sub_soaddr => 0x151d0
+=======================
+
+=======================
+func_name => glTexBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c311e8
+funcaddr_sub_soaddr => 0x151e8
+=======================
+
+=======================
+func_name => glTexStorage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c30718
+funcaddr_sub_soaddr => 0x14718
+=======================
+
+=======================
+func_name => glDiscardFramebufferEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d98
+funcaddr_sub_soaddr => 0x15d98
+=======================
+
+=======================
+func_name => glVertexAttribDivisor
+so_name => libGLESv2.so
+func_address => 0x7f82c305f0
+funcaddr_sub_soaddr => 0x145f0
+=======================
+
+=======================
+func_name => glVertexAttribIPointer
+so_name => libGLESv2.so
+func_address => 0x7f82c30140
+funcaddr_sub_soaddr => 0x14140
+=======================
+
+=======================
+func_name => glRenderbufferStorageMultisample
+so_name => libGLESv2.so
+func_address => 0x7f82c2ffc8
+funcaddr_sub_soaddr => 0x13fc8
+=======================
+
+=======================
+func_name => glBlitFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2ffb0
+funcaddr_sub_soaddr => 0x13fb0
+=======================
+
+=======================
+func_name => glFramebufferTexture2DMultisampleEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32310
+funcaddr_sub_soaddr => 0x16310
+=======================
+
+=======================
+func_name => glRenderbufferStorageMultisampleEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c322f8
+funcaddr_sub_soaddr => 0x162f8
+=======================
+
+=======================
+func_name => glMapBufferOES
+so_name => libGLESv2.so
+func_address => 0x7f82c31590
+funcaddr_sub_soaddr => 0x15590
+=======================
+
+=======================
+func_name => glUnmapBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2fed0
+funcaddr_sub_soaddr => 0x13ed0
+=======================
+
+=======================
+func_name => glMapBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c2fff8
+funcaddr_sub_soaddr => 0x13ff8
+=======================
+
+=======================
+func_name => glFlushMappedBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c30018
+funcaddr_sub_soaddr => 0x14018
+=======================
+
+=======================
+func_name => glInsertEventMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d50
+funcaddr_sub_soaddr => 0x15d50
+=======================
+
+=======================
+func_name => glPushGroupMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d68
+funcaddr_sub_soaddr => 0x15d68
+=======================
+
+=======================
+func_name => glPopGroupMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d80
+funcaddr_sub_soaddr => 0x15d80
+=======================
+
+=======================
+func_name => glInvalidateFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c306e8
+funcaddr_sub_soaddr => 0x146e8
+=======================
+
+=======================
+func_name => glInvalidateSubFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c30700
+funcaddr_sub_soaddr => 0x14700
+=======================
+
+=======================
+func_name => Java_com_km_encryption_api_Security_decrypt
+so_name => libcommon-encryption.so
+func_address => 0x7e7a4b3918
+funcaddr_sub_soaddr => 0x15918
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libPglmetasec_ml.so
+func_address => 0x7e101a3a70
+funcaddr_sub_soaddr => 0x23a70
+=======================
+
+=======================
+func_name => glGetProgramResourceLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c30858
+funcaddr_sub_soaddr => 0x14858
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libttmplayer_lite.so
+func_address => 0x7e0f4de7dc
+funcaddr_sub_soaddr => 0x5e7dc
+=======================
+
+=======================
+func_name => glDebugMessageControlKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c31230
+funcaddr_sub_soaddr => 0x15230
+=======================
+
+=======================
+func_name => glDebugMessageInsertKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c31248
+funcaddr_sub_soaddr => 0x15248
+=======================
+
+=======================
+func_name => glDebugMessageCallbackKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c31260
+funcaddr_sub_soaddr => 0x15260
+=======================
+
+=======================
+func_name => glGetDebugMessageLogKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c31278
+funcaddr_sub_soaddr => 0x15278
+=======================
+
+=======================
+func_name => glPushDebugGroupKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c31298
+funcaddr_sub_soaddr => 0x15298
+=======================
+
+=======================
+func_name => glPopDebugGroupKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c312b0
+funcaddr_sub_soaddr => 0x152b0
+=======================
+
+=======================
+func_name => glObjectLabelKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c312c8
+funcaddr_sub_soaddr => 0x152c8
+=======================
+
+=======================
+func_name => glFenceSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30420
+funcaddr_sub_soaddr => 0x14420
+=======================
+
+=======================
+func_name => glIsSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30440
+funcaddr_sub_soaddr => 0x14440
+=======================
+
+=======================
+func_name => glClientWaitSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30478
+funcaddr_sub_soaddr => 0x14478
+=======================
+
+=======================
+func_name => glWaitSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30498
+funcaddr_sub_soaddr => 0x14498
+=======================
+
+=======================
+func_name => glDeleteSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30460
+funcaddr_sub_soaddr => 0x14460
+=======================
+
+=======================
+func_name => glGetInternalformativ
+so_name => libGLESv2.so
+func_address => 0x7f82c30748
+funcaddr_sub_soaddr => 0x14748
+=======================
+
+=======================
+func_name => glGetProgramBinary
+so_name => libGLESv2.so
+func_address => 0x7f82c306a0
+funcaddr_sub_soaddr => 0x146a0
+=======================
+
+=======================
+func_name => glProgramBinary
+so_name => libGLESv2.so
+func_address => 0x7f82c306b8
+funcaddr_sub_soaddr => 0x146b8
+=======================
+
+=======================
+func_name => Java_com_bytedance_embedapplog_util_TTEncryptUtils_ttEncrypt
+so_name => libtobEmbedEncrypt.so
+func_address => 0x7e0f326fa8
+funcaddr_sub_soaddr => 0xfa8
+=======================
+
+=======================
+func_name => glProgramParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c306d0
+funcaddr_sub_soaddr => 0x146d0
+=======================
+
+=======================
+func_name => glBindSampler
+so_name => libGLESv2.so
+func_address => 0x7f82c30548
+funcaddr_sub_soaddr => 0x14548
+=======================
+
+=======================
+func_name => glDeleteSamplers
+so_name => libGLESv2.so
+func_address => 0x7f82c30510
+funcaddr_sub_soaddr => 0x14510
+=======================
+
+=======================
+func_name => glGenSamplers
+so_name => libGLESv2.so
+func_address => 0x7f82c304f8
+funcaddr_sub_soaddr => 0x144f8
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libavmdl_lite.so
+func_address => 0x7dff99dd9c
+funcaddr_sub_soaddr => 0xfd9c
+=======================
+
+=======================
+func_name => glSamplerParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c30560
+funcaddr_sub_soaddr => 0x14560
+=======================
+
+=======================
+func_name => glSamplerParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c30578
+funcaddr_sub_soaddr => 0x14578
+=======================
+
+=======================
+func_name => HIDL_FETCH_IMapper
+so_name => android.hardware.graphics.mapper@2.0-impl-2.1.so
+func_address => 0x7ee74d0020
+funcaddr_sub_soaddr => 0x3020
+=======================
+
+=======================
+func_name => HMI
+so_name => gralloc.msm8998.so
+func_address => 0x7e5b031018
+funcaddr_sub_soaddr => 0x13018
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libpanglarmor.so
+func_address => 0x7e0f1e5374
+funcaddr_sub_soaddr => 0x6374
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libnative-imagetranscoder.so
+func_address => 0x7e52019440
+funcaddr_sub_soaddr => 0xe440
+=======================
+
+=======================
+func_name => oatdata
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaaf5000
+funcaddr_sub_soaddr => 0x1000
+=======================
+
+=======================
+func_name => oatlastword
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaf5ccdc
+funcaddr_sub_soaddr => 0x468cdc
+=======================
+
+=======================
+func_name => oatdatabimgrelro
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaf5d000
+funcaddr_sub_soaddr => 0x469000
+=======================
+
+=======================
+func_name => oatdatabimgrelrolastword
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaf5ea88
+funcaddr_sub_soaddr => 0x46aa88
+=======================
+
+=======================
+func_name => oatbss
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaf5f000
+funcaddr_sub_soaddr => 0x46b000
+=======================
+
+=======================
+func_name => oatbsslastword
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaf66450
+funcaddr_sub_soaddr => 0x472450
+=======================
+
+=======================
+func_name => oatbssmethods
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaf5f000
+funcaddr_sub_soaddr => 0x46b000
+=======================
+
+=======================
+func_name => oatbssroots
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaf61e10
+funcaddr_sub_soaddr => 0x46de10
+=======================
+
+=======================
+func_name => oatdex
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbaf67000
+funcaddr_sub_soaddr => 0x473000
+=======================
+
+=======================
+func_name => oatdexlastword
+so_name => system@product@app@webview@webview.apk@classes.dex
+func_address => 0x7dbb0fb438
+funcaddr_sub_soaddr => 0x607438
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libwebviewchromium.so
+func_address => 0x7ea759c3ac
+funcaddr_sub_soaddr => 0x17db3ac
+=======================
+
+=======================
+func_name => Java_org_chromium_base_CommandLine_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea86f8aec
+funcaddr_sub_soaddr => 0x2937aec
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libwebviewchromium_plat_support.so
+func_address => 0x7ef6e368b0
+funcaddr_sub_soaddr => 0x28b0
+=======================
+
+=======================
+func_name => Java_org_chromium_base_library_1loader_LibraryLoader_nativeLibraryLoaded
+so_name => libwebviewchromium.so
+func_address => 0x7ea86fcf10
+funcaddr_sub_soaddr => 0x293bf10
+=======================
+
+=======================
+func_name => Java_org_chromium_base_library_1loader_LibraryLoader_nativeGetVersionNumber
+so_name => libwebviewchromium.so
+func_address => 0x7ea86fd1a4
+funcaddr_sub_soaddr => 0x293c1a4
+=======================
+
+=======================
+func_name => Java_org_chromium_base_TraceEvent_nativeRegisterEnabledObserver
+so_name => libwebviewchromium.so
+func_address => 0x7ea8700c78
+funcaddr_sub_soaddr => 0x293fc78
+=======================
+
+=======================
+func_name => Java_org_chromium_base_PathService_nativeOverride
+so_name => libwebviewchromium.so
+func_address => 0x7ea86fea28
+funcaddr_sub_soaddr => 0x293da28
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_gfx_AwDrawFnImpl_nativeSetDrawFnFunctionTable
+so_name => libwebviewchromium.so
+func_address => 0x7ea75de20c
+funcaddr_sub_soaddr => 0x181d20c
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContentsStatics_nativeGetProductVersion
+so_name => libwebviewchromium.so
+func_address => 0x7ea75af3b8
+funcaddr_sub_soaddr => 0x17ee3b8
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_gfx_AwGLFunctor_nativeGetAwDrawGLFunction
+so_name => libwebviewchromium.so
+func_address => 0x7ea75e0d2c
+funcaddr_sub_soaddr => 0x181fd2c
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetAwDrawSWFunctionTable
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a4894
+funcaddr_sub_soaddr => 0x17e3894
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetAwDrawGLFunctionTable
+so_name => libwebviewchromium.so
+func_address => 0x7ea7590c94
+funcaddr_sub_soaddr => 0x17cfc94
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContentsStatics_nativeSetCheckClearTextPermitted
+so_name => libwebviewchromium.so
+func_address => 0x7ea75af518
+funcaddr_sub_soaddr => 0x17ee518
+=======================
+
+=======================
+func_name => Java_org_chromium_base_metrics_RecordHistogram_nativeRecordCustomTimesHistogramMilliseconds
+so_name => libwebviewchromium.so
+func_address => 0x7ea86fef70
+funcaddr_sub_soaddr => 0x293df70
+=======================
+
+=======================
+func_name => Java_org_chromium_base_CommandLine_nativeHasSwitch
+so_name => libwebviewchromium.so
+func_address => 0x7ea86f8b48
+funcaddr_sub_soaddr => 0x2937b48
+=======================
+
+=======================
+func_name => Java_org_chromium_base_metrics_RecordHistogram_nativeRecordEnumeratedHistogram
+so_name => libwebviewchromium.so
+func_address => 0x7ea86ff0b4
+funcaddr_sub_soaddr => 0x293e0b4
+=======================
+
+=======================
+func_name => Java_org_chromium_base_CommandLine_nativeAppendSwitch
+so_name => libwebviewchromium.so
+func_address => 0x7ea86f8d04
+funcaddr_sub_soaddr => 0x2937d04
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_BrowserStartupControllerImpl_nativeSetCommandLineFlags
+so_name => libwebviewchromium.so
+func_address => 0x7ea7b90de4
+funcaddr_sub_soaddr => 0x1dcfde4
+=======================
+
+=======================
+func_name => Java_org_chromium_base_metrics_RecordHistogram_nativeRecordBooleanHistogram
+so_name => libwebviewchromium.so
+func_address => 0x7ea86ff030
+funcaddr_sub_soaddr => 0x293e030
+=======================
+
+=======================
+func_name => Java_org_chromium_content_app_ContentMain_nativeStart
+so_name => libwebviewchromium.so
+func_address => 0x7ea864d02c
+funcaddr_sub_soaddr => 0x288c02c
+=======================
+
+=======================
+func_name => Java_org_chromium_base_task_TaskRunnerImpl_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea87008b0
+funcaddr_sub_soaddr => 0x293f8b0
+=======================
+
+=======================
+func_name => Java_org_chromium_base_task_TaskRunnerImpl_nativePostDelayedTask
+so_name => libwebviewchromium.so
+func_address => 0x7ea8700a5c
+funcaddr_sub_soaddr => 0x293fa5c
+=======================
+
+=======================
+func_name => Java_org_chromium_policy_CombinedPolicyProvider_nativeFlushPolicies
+so_name => libwebviewchromium.so
+func_address => 0x7ea7f50868
+funcaddr_sub_soaddr => 0x218f868
+=======================
+
+=======================
+func_name => getauxval
+so_name => libc.so
+func_address => 0x7f806a5868
+funcaddr_sub_soaddr => 0x7d868
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_BrowserStartupControllerImpl_nativeFlushStartupTasks
+so_name => libwebviewchromium.so
+func_address => 0x7ea7b90df0
+funcaddr_sub_soaddr => 0x1dcfdf0
+=======================
+
+=======================
+func_name => ASurfaceControl_createFromWindow
+so_name => libandroid.so
+func_address => 0x7ef7ca4150
+funcaddr_sub_soaddr => 0x16150
+=======================
+
+=======================
+func_name => ASurfaceControl_create
+so_name => libandroid.so
+func_address => 0x7ef7ca42f8
+funcaddr_sub_soaddr => 0x162f8
+=======================
+
+=======================
+func_name => ASurfaceControl_release
+so_name => libandroid.so
+func_address => 0x7ef7ca4460
+funcaddr_sub_soaddr => 0x16460
+=======================
+
+=======================
+func_name => ASurfaceTransaction_create
+so_name => libandroid.so
+func_address => 0x7ef7ca44d0
+funcaddr_sub_soaddr => 0x164d0
+=======================
+
+=======================
+func_name => ASurfaceTransaction_delete
+so_name => libandroid.so
+func_address => 0x7ef7ca4568
+funcaddr_sub_soaddr => 0x16568
+=======================
+
+=======================
+func_name => ASurfaceTransaction_apply
+so_name => libandroid.so
+func_address => 0x7ef7ca4580
+funcaddr_sub_soaddr => 0x16580
+=======================
+
+=======================
+func_name => ASurfaceTransaction_setOnComplete
+so_name => libandroid.so
+func_address => 0x7ef7ca4958
+funcaddr_sub_soaddr => 0x16958
+=======================
+
+=======================
+func_name => ASurfaceTransaction_setVisibility
+so_name => libandroid.so
+func_address => 0x7ef7ca4b88
+funcaddr_sub_soaddr => 0x16b88
+=======================
+
+=======================
+func_name => ASurfaceTransaction_setZOrder
+so_name => libandroid.so
+func_address => 0x7ef7ca4c80
+funcaddr_sub_soaddr => 0x16c80
+=======================
+
+=======================
+func_name => ASurfaceTransaction_setBuffer
+so_name => libandroid.so
+func_address => 0x7ef7ca4d38
+funcaddr_sub_soaddr => 0x16d38
+=======================
+
+=======================
+func_name => ASurfaceTransaction_setGeometry
+so_name => libandroid.so
+func_address => 0x7ef7ca4ee0
+funcaddr_sub_soaddr => 0x16ee0
+=======================
+
+=======================
+func_name => ASurfaceTransaction_setBufferTransparency
+so_name => libandroid.so
+func_address => 0x7ef7ca5048
+funcaddr_sub_soaddr => 0x17048
+=======================
+
+=======================
+func_name => ASurfaceTransaction_setDamageRegion
+so_name => libandroid.so
+func_address => 0x7ef7ca5110
+funcaddr_sub_soaddr => 0x17110
+=======================
+
+=======================
+func_name => ASurfaceTransaction_setBufferDataSpace
+so_name => libandroid.so
+func_address => 0x7ef7ca5350
+funcaddr_sub_soaddr => 0x17350
+=======================
+
+=======================
+func_name => ASurfaceTransactionStats_getPresentFenceFd
+so_name => libandroid.so
+func_address => 0x7ef7ca45e0
+funcaddr_sub_soaddr => 0x165e0
+=======================
+
+=======================
+func_name => ASurfaceTransactionStats_getASurfaceControls
+so_name => libandroid.so
+func_address => 0x7ef7ca4618
+funcaddr_sub_soaddr => 0x16618
+=======================
+
+=======================
+func_name => ASurfaceTransactionStats_releaseASurfaceControls
+so_name => libandroid.so
+func_address => 0x7ef7ca4930
+funcaddr_sub_soaddr => 0x16930
+=======================
+
+=======================
+func_name => ASurfaceTransactionStats_getPreviousReleaseFenceFd
+so_name => libandroid.so
+func_address => 0x7ef7ca47f8
+funcaddr_sub_soaddr => 0x167f8
+=======================
+
+=======================
+func_name => Java_org_chromium_base_CommandLine_nativeGetSwitchValue
+so_name => libwebviewchromium.so
+func_address => 0x7ea86f8bdc
+funcaddr_sub_soaddr => 0x2937bdc
+=======================
+
+=======================
+func_name => Java_org_chromium_ui_display_DisplayAndroidManager_nativeSetPrimaryDisplayId
+so_name => libwebviewchromium.so
+func_address => 0x7ea950a1cc
+funcaddr_sub_soaddr => 0x37491cc
+=======================
+
+=======================
+func_name => Java_org_chromium_ui_display_DisplayAndroidManager_nativeUpdateDisplay
+so_name => libwebviewchromium.so
+func_address => 0x7ea950a0b4
+funcaddr_sub_soaddr => 0x37490b4
+=======================
+
+=======================
+func_name => ASharedMemory_create
+so_name => libandroid.so
+func_address => 0x7ef7ca2ac0
+funcaddr_sub_soaddr => 0x14ac0
+=======================
+
+=======================
+func_name => ASharedMemory_getSize
+so_name => libandroid.so
+func_address => 0x7ef7ca2ad0
+funcaddr_sub_soaddr => 0x14ad0
+=======================
+
+=======================
+func_name => ASharedMemory_setProt
+so_name => libandroid.so
+func_address => 0x7ef7ca2b08
+funcaddr_sub_soaddr => 0x14b08
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwDevToolsServer_nativeInitRemoteDebugging
+so_name => libwebviewchromium.so
+func_address => 0x7ea75b0198
+funcaddr_sub_soaddr => 0x17ef198
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwDevToolsServer_nativeSetRemoteDebuggingEnabled
+so_name => libwebviewchromium.so
+func_address => 0x7ea75b01e0
+funcaddr_sub_soaddr => 0x17ef1e0
+=======================
+
+=======================
+func_name => Java_org_chromium_components_minidump_1uploader_CrashReportMimeWriter_nativeRewriteMinidumpsAsMIMEs
+so_name => libwebviewchromium.so
+func_address => 0x7eaa3e8078
+funcaddr_sub_soaddr => 0x4627078
+=======================
+
+=======================
+func_name => Java_org_chromium_base_metrics_RecordHistogram_nativeRecordSparseHistogram
+so_name => libwebviewchromium.so
+func_address => 0x7ea86ff2c8
+funcaddr_sub_soaddr => 0x293e2c8
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwQuotaManagerBridge_nativeGetDefaultNativeAwQuotaManagerBridge
+so_name => libwebviewchromium.so
+func_address => 0x7ea75baad4
+funcaddr_sub_soaddr => 0x17f9ad4
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwQuotaManagerBridge_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea75baae0
+funcaddr_sub_soaddr => 0x17f9ae0
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwTracingController_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea75d5d78
+funcaddr_sub_soaddr => 0x1814d78
+=======================
+
+=======================
+func_name => Java_org_chromium_base_task_PostTask_nativePostDelayedTask
+so_name => libwebviewchromium.so
+func_address => 0x7ea8700494
+funcaddr_sub_soaddr => 0x293f494
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwSettings_nativeGetDefaultUserAgent
+so_name => libwebviewchromium.so
+func_address => 0x7ea75bdd98
+funcaddr_sub_soaddr => 0x17fcd98
+=======================
+
+=======================
+func_name => __system_property_get
+so_name => libc.so
+func_address => 0x7f806b94c0
+funcaddr_sub_soaddr => 0x914c0
+=======================
+
+=======================
+func_name => Java_org_chromium_base_task_TaskRunnerImpl_nativeBelongsToCurrentThread
+so_name => libwebviewchromium.so
+func_address => 0x7ea8700b78
+funcaddr_sub_soaddr => 0x293fb78
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeUpdateDefaultLocale
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a48bc
+funcaddr_sub_soaddr => 0x17e38bc
+=======================
+
+=======================
+func_name => Java_org_chromium_components_content_1capture_ContentCaptureFeatures_nativeIsEnabled
+so_name => libwebviewchromium.so
+func_address => 0x7ea862d344
+funcaddr_sub_soaddr => 0x286c344
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a47a4
+funcaddr_sub_soaddr => 0x17e37a4
+=======================
+
+=======================
+func_name => Java_org_chromium_net_NetworkChangeNotifier_nativeNotifyPurgeActiveNetworkList
+so_name => libwebviewchromium.so
+func_address => 0x7ea8747eac
+funcaddr_sub_soaddr => 0x2986eac
+=======================
+
+=======================
+func_name => Java_org_chromium_base_metrics_RecordHistogram_nativeRecordCustomCountHistogram
+so_name => libwebviewchromium.so
+func_address => 0x7ea86ff150
+funcaddr_sub_soaddr => 0x293e150
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetCompositorFrameConsumer
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a4d5c
+funcaddr_sub_soaddr => 0x17e3d5c
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeGetWebContents
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a4d04
+funcaddr_sub_soaddr => 0x17e3d04
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeSetViewAndroidDelegate
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec3974
+funcaddr_sub_soaddr => 0x2102974
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeSetTopLevelNativeWindow
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec270c
+funcaddr_sub_soaddr => 0x210170c
+=======================
+
+=======================
+func_name => Java_org_chromium_ui_base_WindowAndroid_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea950fc40
+funcaddr_sub_soaddr => 0x374ec40
+=======================
+
+=======================
+func_name => Java_org_chromium_ui_base_WindowAndroid_nativeSetVSyncPaused
+so_name => libwebviewchromium.so
+func_address => 0x7ea950ffe0
+funcaddr_sub_soaddr => 0x374efe0
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeGetTopLevelNativeWindow
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec26ac
+funcaddr_sub_soaddr => 0x21016ac
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_GestureListenerManagerImpl_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eaae20
+funcaddr_sub_soaddr => 0x20e9e20
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_ContentUiEventHandler_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ea9abc
+funcaddr_sub_soaddr => 0x20e8abc
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_selection_SelectionPopupControllerImpl_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eb43f4
+funcaddr_sub_soaddr => 0x20f33f4
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_input_ImeAdapterImpl_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eab6b4
+funcaddr_sub_soaddr => 0x20ea6b4
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_ContentFeatureList_nativeIsEnabled
+so_name => libwebviewchromium.so
+func_address => 0x7ea7b90f94
+funcaddr_sub_soaddr => 0x1dcff94
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_selection_SmartSelectionClient_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eb4d74
+funcaddr_sub_soaddr => 0x20f3d74
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetJavaPeers
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a4b04
+funcaddr_sub_soaddr => 0x17e3b04
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsObserverProxy_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eb832c
+funcaddr_sub_soaddr => 0x20f732c
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwSettings_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea75bc638
+funcaddr_sub_soaddr => 0x17fb638
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwSettings_nativeUpdateEverythingLocked
+so_name => libwebviewchromium.so
+func_address => 0x7ea75bd9e4
+funcaddr_sub_soaddr => 0x17fc9e4
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwSettings_nativePopulateWebPreferencesLocked
+so_name => libwebviewchromium.so
+func_address => 0x7ea75bc710
+funcaddr_sub_soaddr => 0x17fb710
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetDipScale
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a57c8
+funcaddr_sub_soaddr => 0x17e47c8
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeIsVisible
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a57ac
+funcaddr_sub_soaddr => 0x17e47ac
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_accessibility_captioning_CaptioningController_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ea4ad8
+funcaddr_sub_soaddr => 0x20e3ad8
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeOnShow
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec2a78
+funcaddr_sub_soaddr => 0x2101a78
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeSetImportance
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec2a88
+funcaddr_sub_soaddr => 0x2101a88
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetViewVisibility
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a5764
+funcaddr_sub_soaddr => 0x17e4764
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeOnSizeChanged
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a562c
+funcaddr_sub_soaddr => 0x17e462c
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_GestureListenerManagerImpl_nativeResetGestureDetection
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eaaed0
+funcaddr_sub_soaddr => 0x20e9ed0
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeIsBeingDestroyed
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec3abc
+funcaddr_sub_soaddr => 0x2102abc
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeDismissTextHandles
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec36f8
+funcaddr_sub_soaddr => 0x21026f8
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeCollapseSelection
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec2a58
+funcaddr_sub_soaddr => 0x2101a58
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeSetFocus
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec3a90
+funcaddr_sub_soaddr => 0x2102a90
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetShouldDownloadFavicons
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a48ac
+funcaddr_sub_soaddr => 0x17e38ac
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_JavascriptInjectorImpl_nativeInit
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eb21a8
+funcaddr_sub_soaddr => 0x20f11a8
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_JavascriptInjectorImpl_nativeRemoveInterface
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eb22dc
+funcaddr_sub_soaddr => 0x20f12dc
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_JavascriptInjectorImpl_nativeAddInterface
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eb2288
+funcaddr_sub_soaddr => 0x20f1288
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetBackgroundColor
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a590c
+funcaddr_sub_soaddr => 0x17e490c
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwSettings_nativeUpdateWebkitPreferencesLocked
+so_name => libwebviewchromium.so
+func_address => 0x7ea75bdd3c
+funcaddr_sub_soaddr => 0x17fcd3c
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwSettings_nativeResetScrollAndScaleState
+so_name => libwebviewchromium.so
+func_address => 0x7ea75bd9bc
+funcaddr_sub_soaddr => 0x17fc9bc
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeClearCache
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a529c
+funcaddr_sub_soaddr => 0x17e429c
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_framehost_NavigationControllerImpl_nativeClearHistory
+so_name => libwebviewchromium.so
+func_address => 0x7ea7cb5b3c
+funcaddr_sub_soaddr => 0x1ef4b3c
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwSettings_nativeUpdateUserAgentLocked
+so_name => libwebviewchromium.so
+func_address => 0x7ea75bdbc8
+funcaddr_sub_soaddr => 0x17fcbc8
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeEvaluateJavaScript
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec2d70
+funcaddr_sub_soaddr => 0x2101d70
+=======================
+
+=======================
+func_name => eglGetProcAddress
+so_name => libEGL.so
+func_address => 0x7f80361088
+funcaddr_sub_soaddr => 0x1d088
+=======================
+
+=======================
+func_name => eglBindAPI
+so_name => libEGL.so
+func_address => 0x7f80361440
+funcaddr_sub_soaddr => 0x1d440
+=======================
+
+=======================
+func_name => Java_org_chromium_base_JavaHandlerThread_nativeInitializeThread
+so_name => libwebviewchromium.so
+func_address => 0x7ea86fa304
+funcaddr_sub_soaddr => 0x2939304
+=======================
+
+=======================
+func_name => eglBindTexImage
+so_name => libEGL.so
+func_address => 0x7f80361358
+funcaddr_sub_soaddr => 0x1d358
+=======================
+
+=======================
+func_name => eglChooseConfig
+so_name => libEGL.so
+func_address => 0x7f80360b28
+funcaddr_sub_soaddr => 0x1cb28
+=======================
+
+=======================
+func_name => eglClientWaitSyncKHR
+so_name => libEGL.so
+func_address => 0x7f803618b8
+funcaddr_sub_soaddr => 0x1d8b8
+=======================
+
+=======================
+func_name => eglCopyBuffers
+so_name => libEGL.so
+func_address => 0x7f80361250
+funcaddr_sub_soaddr => 0x1d250
+=======================
+
+=======================
+func_name => eglCreateContext
+so_name => libEGL.so
+func_address => 0x7f80360e90
+funcaddr_sub_soaddr => 0x1ce90
+=======================
+
+=======================
+func_name => eglCreatePbufferFromClientBuffer
+so_name => libEGL.so
+func_address => 0x7f80361510
+funcaddr_sub_soaddr => 0x1d510
+=======================
+
+=======================
+func_name => eglCreatePbufferSurface
+so_name => libEGL.so
+func_address => 0x7f80360d18
+funcaddr_sub_soaddr => 0x1cd18
+=======================
+
+=======================
+func_name => eglCreatePixmapSurface
+so_name => libEGL.so
+func_address => 0x7f80360c78
+funcaddr_sub_soaddr => 0x1cc78
+=======================
+
+=======================
+func_name => eglCreateSyncKHR
+so_name => libEGL.so
+func_address => 0x7f80361768
+funcaddr_sub_soaddr => 0x1d768
+=======================
+
+=======================
+func_name => eglCreateWindowSurface
+so_name => libEGL.so
+func_address => 0x7f80360bd8
+funcaddr_sub_soaddr => 0x1cbd8
+=======================
+
+=======================
+func_name => eglDestroyContext
+so_name => libEGL.so
+func_address => 0x7f80360ee0
+funcaddr_sub_soaddr => 0x1cee0
+=======================
+
+=======================
+func_name => eglDestroySurface
+so_name => libEGL.so
+func_address => 0x7f80360d60
+funcaddr_sub_soaddr => 0x1cd60
+=======================
+
+=======================
+func_name => eglDestroySyncKHR
+so_name => libEGL.so
+func_address => 0x7f803617e8
+funcaddr_sub_soaddr => 0x1d7e8
+=======================
+
+=======================
+func_name => eglDupNativeFenceFDANDROID
+so_name => libEGL.so
+func_address => 0x7f80361d50
+funcaddr_sub_soaddr => 0x1dd50
+=======================
+
+=======================
+func_name => Java_org_chromium_base_CpuFeatures_nativeGetCoreCount
+so_name => libwebviewchromium.so
+func_address => 0x7ea86f94fc
+funcaddr_sub_soaddr => 0x29384fc
+=======================
+
+=======================
+func_name => eglGetConfigAttrib
+so_name => libEGL.so
+func_address => 0x7f80360b88
+funcaddr_sub_soaddr => 0x1cb88
+=======================
+
+=======================
+func_name => eglGetConfigs
+so_name => libEGL.so
+func_address => 0x7f80360ad8
+funcaddr_sub_soaddr => 0x1cad8
+=======================
+
+=======================
+func_name => eglGetCurrentContext
+so_name => libEGL.so
+func_address => 0x7f80360fb8
+funcaddr_sub_soaddr => 0x1cfb8
+=======================
+
+=======================
+func_name => eglGetCurrentDisplay
+so_name => libEGL.so
+func_address => 0x7f80361008
+funcaddr_sub_soaddr => 0x1d008
+=======================
+
+=======================
+func_name => eglGetCurrentSurface
+so_name => libEGL.so
+func_address => 0x7f80360fd8
+funcaddr_sub_soaddr => 0x1cfd8
+=======================
+
+=======================
+func_name => eglGetDisplay
+so_name => libEGL.so
+func_address => 0x7f803608a8
+funcaddr_sub_soaddr => 0x1c8a8
+=======================
+
+=======================
+func_name => eglGetError
+so_name => libEGL.so
+func_address => 0x7f80361078
+funcaddr_sub_soaddr => 0x1d078
+=======================
+
+=======================
+func_name => eglGetProcAddress
+so_name => libEGL.so
+func_address => 0x7f80361088
+funcaddr_sub_soaddr => 0x1d088
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeClearView
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a5a7c
+funcaddr_sub_soaddr => 0x17e4a7c
+=======================
+
+=======================
+func_name => eglGetSyncAttribKHR
+so_name => libEGL.so
+func_address => 0x7f80361958
+funcaddr_sub_soaddr => 0x1d958
+=======================
+
+=======================
+func_name => eglInitialize
+so_name => libEGL.so
+func_address => 0x7f80360a60
+funcaddr_sub_soaddr => 0x1ca60
+=======================
+
+=======================
+func_name => eglMakeCurrent
+so_name => libEGL.so
+func_address => 0x7f80360f18
+funcaddr_sub_soaddr => 0x1cf18
+=======================
+
+=======================
+func_name => eglQueryAPI
+so_name => libEGL.so
+func_address => 0x7f803614a0
+funcaddr_sub_soaddr => 0x1d4a0
+=======================
+
+=======================
+func_name => eglQueryContext
+so_name => libEGL.so
+func_address => 0x7f80360f68
+funcaddr_sub_soaddr => 0x1cf68
+=======================
+
+=======================
+func_name => eglQueryString
+so_name => libEGL.so
+func_address => 0x7f80361298
+funcaddr_sub_soaddr => 0x1d298
+=======================
+
+=======================
+func_name => eglQuerySurface
+so_name => libEGL.so
+func_address => 0x7f80360d98
+funcaddr_sub_soaddr => 0x1cd98
+=======================
+
+=======================
+func_name => eglReleaseTexImage
+so_name => libEGL.so
+func_address => 0x7f803613a0
+funcaddr_sub_soaddr => 0x1d3a0
+=======================
+
+=======================
+func_name => Java_org_chromium_base_CpuFeatures_nativeGetCpuFeatures
+so_name => libwebviewchromium.so
+func_address => 0x7ea86f9528
+funcaddr_sub_soaddr => 0x2938528
+=======================
+
+=======================
+func_name => eglReleaseThread
+so_name => libEGL.so
+func_address => 0x7f803614f0
+funcaddr_sub_soaddr => 0x1d4f0
+=======================
+
+=======================
+func_name => eglSurfaceAttrib
+so_name => libEGL.so
+func_address => 0x7f80361308
+funcaddr_sub_soaddr => 0x1d308
+=======================
+
+=======================
+func_name => eglSwapBuffers
+so_name => libEGL.so
+func_address => 0x7f803611a8
+funcaddr_sub_soaddr => 0x1d1a8
+=======================
+
+=======================
+func_name => eglSwapInterval
+so_name => libEGL.so
+func_address => 0x7f803613e8
+funcaddr_sub_soaddr => 0x1d3e8
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeGetLastCommittedURL
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec2cac
+funcaddr_sub_soaddr => 0x2101cac
+=======================
+
+=======================
+func_name => eglTerminate
+so_name => libEGL.so
+func_address => 0x7f80360aa8
+funcaddr_sub_soaddr => 0x1caa8
+=======================
+
+=======================
+func_name => eglWaitClient
+so_name => libEGL.so
+func_address => 0x7f80361420
+funcaddr_sub_soaddr => 0x1d420
+=======================
+
+=======================
+func_name => eglWaitGL
+so_name => libEGL.so
+func_address => 0x7f80361028
+funcaddr_sub_soaddr => 0x1d028
+=======================
+
+=======================
+func_name => eglWaitNative
+so_name => libEGL.so
+func_address => 0x7f80361048
+funcaddr_sub_soaddr => 0x1d048
+=======================
+
+=======================
+func_name => eglCreateImageKHR
+so_name => libEGL.so
+func_address => 0x7f803615f0
+funcaddr_sub_soaddr => 0x1d5f0
+=======================
+
+=======================
+func_name => eglDestroyImageKHR
+so_name => libEGL.so
+func_address => 0x7f803616b0
+funcaddr_sub_soaddr => 0x1d6b0
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeSetExtraHeadersForUrl
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a5a84
+funcaddr_sub_soaddr => 0x17e4a84
+=======================
+
+=======================
+func_name => eglGetCompositorTimingANDROID
+so_name => libEGL.so
+func_address => 0x7f80361f38
+funcaddr_sub_soaddr => 0x1df38
+=======================
+
+=======================
+func_name => eglGetCompositorTimingSupportedANDROID
+so_name => libEGL.so
+func_address => 0x7f80361f98
+funcaddr_sub_soaddr => 0x1df98
+=======================
+
+=======================
+func_name => eglGetFrameTimestampsANDROID
+so_name => libEGL.so
+func_address => 0x7f80361fe0
+funcaddr_sub_soaddr => 0x1dfe0
+=======================
+
+=======================
+func_name => eglGetFrameTimestampSupportedANDROID
+so_name => libEGL.so
+func_address => 0x7f80362048
+funcaddr_sub_soaddr => 0x1e048
+=======================
+
+=======================
+func_name => eglGetNativeClientBufferANDROID
+so_name => libEGL.so
+func_address => 0x7f80361dd0
+funcaddr_sub_soaddr => 0x1ddd0
+=======================
+
+=======================
+func_name => eglGetNextFrameIdANDROID
+so_name => libEGL.so
+func_address => 0x7f80361ef0
+funcaddr_sub_soaddr => 0x1def0
+=======================
+
+=======================
+func_name => eglSwapBuffersWithDamageKHR
+so_name => libEGL.so
+func_address => 0x7f803610e8
+funcaddr_sub_soaddr => 0x1d0e8
+=======================
+
+=======================
+func_name => eglWaitSyncKHR
+so_name => libEGL.so
+func_address => 0x7f80361cc0
+funcaddr_sub_soaddr => 0x1dcc0
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_ChildProcessLauncherHelperImpl_nativeOnChildProcessStarted
+so_name => libwebviewchromium.so
+func_address => 0x7ea7c15c80
+funcaddr_sub_soaddr => 0x1e54c80
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_framehost_NavigationControllerImpl_nativeLoadUrl
+so_name => libwebviewchromium.so
+func_address => 0x7ea7cb57dc
+funcaddr_sub_soaddr => 0x1ef47dc
+=======================
+
+=======================
+func_name => glActiveTexture
+so_name => libGLESv2.so
+func_address => 0x7f82c2f020
+funcaddr_sub_soaddr => 0x13020
+=======================
+
+=======================
+func_name => glAttachShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f038
+funcaddr_sub_soaddr => 0x13038
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeGetTitle
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec27dc
+funcaddr_sub_soaddr => 0x21017dc
+=======================
+
+=======================
+func_name => glBindAttribLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c2f050
+funcaddr_sub_soaddr => 0x13050
+=======================
+
+=======================
+func_name => glBindBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f068
+funcaddr_sub_soaddr => 0x13068
+=======================
+
+=======================
+func_name => glBindTexture
+so_name => libGLESv2.so
+func_address => 0x7f82c2f0b0
+funcaddr_sub_soaddr => 0x130b0
+=======================
+
+=======================
+func_name => glBlendColor
+so_name => libGLESv2.so
+func_address => 0x7f82c2f0c8
+funcaddr_sub_soaddr => 0x130c8
+=======================
+
+=======================
+func_name => glBlendEquation
+so_name => libGLESv2.so
+func_address => 0x7f82c2f0e0
+funcaddr_sub_soaddr => 0x130e0
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_BackgroundSyncNetworkObserver_nativeNotifyConnectionTypeChanged
+so_name => libwebviewchromium.so
+func_address => 0x7ea7b908cc
+funcaddr_sub_soaddr => 0x1dcf8cc
+=======================
+
+=======================
+func_name => glBlendEquationSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f0f8
+funcaddr_sub_soaddr => 0x130f8
+=======================
+
+=======================
+func_name => glBlendFunc
+so_name => libGLESv2.so
+func_address => 0x7f82c2f110
+funcaddr_sub_soaddr => 0x13110
+=======================
+
+=======================
+func_name => glBlendFuncSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f128
+funcaddr_sub_soaddr => 0x13128
+=======================
+
+=======================
+func_name => glBufferData
+so_name => libGLESv2.so
+func_address => 0x7f82c2f140
+funcaddr_sub_soaddr => 0x13140
+=======================
+
+=======================
+func_name => glBufferSubData
+so_name => libGLESv2.so
+func_address => 0x7f82c2f158
+funcaddr_sub_soaddr => 0x13158
+=======================
+
+=======================
+func_name => glClear
+so_name => libGLESv2.so
+func_address => 0x7f82c2f190
+funcaddr_sub_soaddr => 0x13190
+=======================
+
+=======================
+func_name => glClearColor
+so_name => libGLESv2.so
+func_address => 0x7f82c2f1a8
+funcaddr_sub_soaddr => 0x131a8
+=======================
+
+=======================
+func_name => Java_org_chromium_mojo_system_impl_CoreImpl_nativeGetNativeBufferOffset
+so_name => libwebviewchromium.so
+func_address => 0x7ea864eb30
+funcaddr_sub_soaddr => 0x288db30
+=======================
+
+=======================
+func_name => Java_org_chromium_mojo_system_impl_WatcherImpl_nativeCreateWatcher
+so_name => libwebviewchromium.so
+func_address => 0x7ea864ee68
+funcaddr_sub_soaddr => 0x288de68
+=======================
+
+=======================
+func_name => Java_org_chromium_mojo_system_impl_CoreImpl_nativeCreateMessagePipe
+so_name => libwebviewchromium.so
+func_address => 0x7ea864e25c
+funcaddr_sub_soaddr => 0x288d25c
+=======================
+
+=======================
+func_name => glClearStencil
+so_name => libGLESv2.so
+func_address => 0x7f82c2f1d8
+funcaddr_sub_soaddr => 0x131d8
+=======================
+
+=======================
+func_name => glColorMask
+so_name => libGLESv2.so
+func_address => 0x7f82c2f1f0
+funcaddr_sub_soaddr => 0x131f0
+=======================
+
+=======================
+func_name => glCompileShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f208
+funcaddr_sub_soaddr => 0x13208
+=======================
+
+=======================
+func_name => glCompressedTexImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f220
+funcaddr_sub_soaddr => 0x13220
+=======================
+
+=======================
+func_name => Java_org_chromium_mojo_system_impl_WatcherImpl_nativeStart
+so_name => libwebviewchromium.so
+func_address => 0x7ea864eef8
+funcaddr_sub_soaddr => 0x288def8
+=======================
+
+=======================
+func_name => glCompressedTexSubImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f238
+funcaddr_sub_soaddr => 0x13238
+=======================
+
+=======================
+func_name => glCopyTexImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f250
+funcaddr_sub_soaddr => 0x13250
+=======================
+
+=======================
+func_name => glCopyTexSubImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f268
+funcaddr_sub_soaddr => 0x13268
+=======================
+
+=======================
+func_name => glCreateProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2f280
+funcaddr_sub_soaddr => 0x13280
+=======================
+
+=======================
+func_name => glCreateShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f2a0
+funcaddr_sub_soaddr => 0x132a0
+=======================
+
+=======================
+func_name => glCullFace
+so_name => libGLESv2.so
+func_address => 0x7f82c2f2c0
+funcaddr_sub_soaddr => 0x132c0
+=======================
+
+=======================
+func_name => glDeleteBuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f2d8
+funcaddr_sub_soaddr => 0x132d8
+=======================
+
+=======================
+func_name => glDeleteProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2f308
+funcaddr_sub_soaddr => 0x13308
+=======================
+
+=======================
+func_name => glDeleteShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f338
+funcaddr_sub_soaddr => 0x13338
+=======================
+
+=======================
+func_name => glDeleteTextures
+so_name => libGLESv2.so
+func_address => 0x7f82c2f350
+funcaddr_sub_soaddr => 0x13350
+=======================
+
+=======================
+func_name => glDepthFunc
+so_name => libGLESv2.so
+func_address => 0x7f82c2f368
+funcaddr_sub_soaddr => 0x13368
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_accessibility_captioning_CaptioningController_nativeSetTextTrackSettings
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ea4b54
+funcaddr_sub_soaddr => 0x20e3b54
+=======================
+
+=======================
+func_name => glDepthMask
+so_name => libGLESv2.so
+func_address => 0x7f82c2f380
+funcaddr_sub_soaddr => 0x13380
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwFeatureList_nativeIsEnabled
+so_name => libwebviewchromium.so
+func_address => 0x7ea75b07c0
+funcaddr_sub_soaddr => 0x17ef7c0
+=======================
+
+=======================
+func_name => glDetachShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f3b0
+funcaddr_sub_soaddr => 0x133b0
+=======================
+
+=======================
+func_name => glDisable
+so_name => libGLESv2.so
+func_address => 0x7f82c2f3c8
+funcaddr_sub_soaddr => 0x133c8
+=======================
+
+=======================
+func_name => glDisableVertexAttribArray
+so_name => libGLESv2.so
+func_address => 0x7f82c2f3e0
+funcaddr_sub_soaddr => 0x133e0
+=======================
+
+=======================
+func_name => Java_org_chromium_net_ProxyChangeListener_nativeProxySettingsChangedTo
+so_name => libwebviewchromium.so
+func_address => 0x7ea87c5604
+funcaddr_sub_soaddr => 0x2a04604
+=======================
+
+=======================
+func_name => glDrawArrays
+so_name => libGLESv2.so
+func_address => 0x7f82c2f3f8
+funcaddr_sub_soaddr => 0x133f8
+=======================
+
+=======================
+func_name => glDrawElements
+so_name => libGLESv2.so
+func_address => 0x7f82c2f410
+funcaddr_sub_soaddr => 0x13410
+=======================
+
+=======================
+func_name => glEnable
+so_name => libGLESv2.so
+func_address => 0x7f82c2f428
+funcaddr_sub_soaddr => 0x13428
+=======================
+
+=======================
+func_name => glEnableVertexAttribArray
+so_name => libGLESv2.so
+func_address => 0x7f82c2f440
+funcaddr_sub_soaddr => 0x13440
+=======================
+
+=======================
+func_name => Java_org_chromium_net_NetworkChangeNotifier_nativeNotifyOfNetworkConnect
+so_name => libwebviewchromium.so
+func_address => 0x7ea8747c10
+funcaddr_sub_soaddr => 0x2986c10
+=======================
+
+=======================
+func_name => glFinish
+so_name => libGLESv2.so
+func_address => 0x7f82c2f458
+funcaddr_sub_soaddr => 0x13458
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_GestureListenerManagerImpl_nativeSetDoubleTapSupportEnabled
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eaaee0
+funcaddr_sub_soaddr => 0x20e9ee0
+=======================
+
+=======================
+func_name => glFlush
+so_name => libGLESv2.so
+func_address => 0x7f82c2f470
+funcaddr_sub_soaddr => 0x13470
+=======================
+
+=======================
+func_name => glFrontFace
+so_name => libGLESv2.so
+func_address => 0x7f82c2f4b8
+funcaddr_sub_soaddr => 0x134b8
+=======================
+
+=======================
+func_name => glGenBuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f4d0
+funcaddr_sub_soaddr => 0x134d0
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_GestureListenerManagerImpl_nativeSetMultiTouchZoomSupportEnabled
+so_name => libwebviewchromium.so
+func_address => 0x7ea7eaaefc
+funcaddr_sub_soaddr => 0x20e9efc
+=======================
+
+=======================
+func_name => glGenTextures
+so_name => libGLESv2.so
+func_address => 0x7f82c2f530
+funcaddr_sub_soaddr => 0x13530
+=======================
+
+=======================
+func_name => glGetActiveAttrib
+so_name => libGLESv2.so
+func_address => 0x7f82c2f548
+funcaddr_sub_soaddr => 0x13548
+=======================
+
+=======================
+func_name => glGetActiveUniform
+so_name => libGLESv2.so
+func_address => 0x7f82c2f560
+funcaddr_sub_soaddr => 0x13560
+=======================
+
+=======================
+func_name => glGetAttachedShaders
+so_name => libGLESv2.so
+func_address => 0x7f82c2f578
+funcaddr_sub_soaddr => 0x13578
+=======================
+
+=======================
+func_name => glGetAttribLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c2f590
+funcaddr_sub_soaddr => 0x13590
+=======================
+
+=======================
+func_name => glGetBooleanv
+so_name => libGLESv2.so
+func_address => 0x7f82c34180
+funcaddr_sub_soaddr => 0x18180
+=======================
+
+=======================
+func_name => glGetBufferParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f5b0
+funcaddr_sub_soaddr => 0x135b0
+=======================
+
+=======================
+func_name => glGetError
+so_name => libGLESv2.so
+func_address => 0x7f82c2f5c8
+funcaddr_sub_soaddr => 0x135c8
+=======================
+
+=======================
+func_name => glGetFloatv
+so_name => libGLESv2.so
+func_address => 0x7f82c341b8
+funcaddr_sub_soaddr => 0x181b8
+=======================
+
+=======================
+func_name => glGetIntegerv
+so_name => libGLESv2.so
+func_address => 0x7f82c341f0
+funcaddr_sub_soaddr => 0x181f0
+=======================
+
+=======================
+func_name => glGetProgramInfoLog
+so_name => libGLESv2.so
+func_address => 0x7f82c2f618
+funcaddr_sub_soaddr => 0x13618
+=======================
+
+=======================
+func_name => glGetProgramiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f600
+funcaddr_sub_soaddr => 0x13600
+=======================
+
+=======================
+func_name => glGetShaderInfoLog
+so_name => libGLESv2.so
+func_address => 0x7f82c2f660
+funcaddr_sub_soaddr => 0x13660
+=======================
+
+=======================
+func_name => glGetShaderiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f648
+funcaddr_sub_soaddr => 0x13648
+=======================
+
+=======================
+func_name => glGetShaderSource
+so_name => libGLESv2.so
+func_address => 0x7f82c2f690
+funcaddr_sub_soaddr => 0x13690
+=======================
+
+=======================
+func_name => glGetString
+so_name => libGLESv2.so
+func_address => 0x7f82c34120
+funcaddr_sub_soaddr => 0x18120
+=======================
+
+=======================
+func_name => glGetStringi
+so_name => libGLESv2.so
+func_address => 0x7f82c34148
+funcaddr_sub_soaddr => 0x18148
+=======================
+
+=======================
+func_name => glGetTexParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f6a8
+funcaddr_sub_soaddr => 0x136a8
+=======================
+
+=======================
+func_name => glGetTexParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f6c0
+funcaddr_sub_soaddr => 0x136c0
+=======================
+
+=======================
+func_name => glGetUniformfv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f6d8
+funcaddr_sub_soaddr => 0x136d8
+=======================
+
+=======================
+func_name => glGetUniformiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f6f0
+funcaddr_sub_soaddr => 0x136f0
+=======================
+
+=======================
+func_name => glGetUniformLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c2f708
+funcaddr_sub_soaddr => 0x13708
+=======================
+
+=======================
+func_name => glGetVertexAttribfv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f728
+funcaddr_sub_soaddr => 0x13728
+=======================
+
+=======================
+func_name => glGetVertexAttribiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f740
+funcaddr_sub_soaddr => 0x13740
+=======================
+
+=======================
+func_name => glGetVertexAttribPointerv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f758
+funcaddr_sub_soaddr => 0x13758
+=======================
+
+=======================
+func_name => glHint
+so_name => libGLESv2.so
+func_address => 0x7f82c2f770
+funcaddr_sub_soaddr => 0x13770
+=======================
+
+=======================
+func_name => glIsBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f788
+funcaddr_sub_soaddr => 0x13788
+=======================
+
+=======================
+func_name => glIsEnabled
+so_name => libGLESv2.so
+func_address => 0x7f82c2f7a8
+funcaddr_sub_soaddr => 0x137a8
+=======================
+
+=======================
+func_name => glIsProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2f7e8
+funcaddr_sub_soaddr => 0x137e8
+=======================
+
+=======================
+func_name => glIsShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f828
+funcaddr_sub_soaddr => 0x13828
+=======================
+
+=======================
+func_name => glIsTexture
+so_name => libGLESv2.so
+func_address => 0x7f82c2f848
+funcaddr_sub_soaddr => 0x13848
+=======================
+
+=======================
+func_name => glLineWidth
+so_name => libGLESv2.so
+func_address => 0x7f82c2f868
+funcaddr_sub_soaddr => 0x13868
+=======================
+
+=======================
+func_name => glLinkProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2f880
+funcaddr_sub_soaddr => 0x13880
+=======================
+
+=======================
+func_name => glPixelStorei
+so_name => libGLESv2.so
+func_address => 0x7f82c2f898
+funcaddr_sub_soaddr => 0x13898
+=======================
+
+=======================
+func_name => glPolygonOffset
+so_name => libGLESv2.so
+func_address => 0x7f82c2f8b0
+funcaddr_sub_soaddr => 0x138b0
+=======================
+
+=======================
+func_name => glReadPixels
+so_name => libGLESv2.so
+func_address => 0x7f82c2f8c8
+funcaddr_sub_soaddr => 0x138c8
+=======================
+
+=======================
+func_name => glSampleCoverage
+so_name => libGLESv2.so
+func_address => 0x7f82c2f910
+funcaddr_sub_soaddr => 0x13910
+=======================
+
+=======================
+func_name => glScissor
+so_name => libGLESv2.so
+func_address => 0x7f82c2f928
+funcaddr_sub_soaddr => 0x13928
+=======================
+
+=======================
+func_name => glShaderSource
+so_name => libGLESv2.so
+func_address => 0x7f82c2f958
+funcaddr_sub_soaddr => 0x13958
+=======================
+
+=======================
+func_name => glStencilFunc
+so_name => libGLESv2.so
+func_address => 0x7f82c2f970
+funcaddr_sub_soaddr => 0x13970
+=======================
+
+=======================
+func_name => glStencilFuncSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f988
+funcaddr_sub_soaddr => 0x13988
+=======================
+
+=======================
+func_name => glStencilMask
+so_name => libGLESv2.so
+func_address => 0x7f82c2f9a0
+funcaddr_sub_soaddr => 0x139a0
+=======================
+
+=======================
+func_name => glStencilMaskSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f9b8
+funcaddr_sub_soaddr => 0x139b8
+=======================
+
+=======================
+func_name => glStencilOp
+so_name => libGLESv2.so
+func_address => 0x7f82c2f9d0
+funcaddr_sub_soaddr => 0x139d0
+=======================
+
+=======================
+func_name => glStencilOpSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f9e8
+funcaddr_sub_soaddr => 0x139e8
+=======================
+
+=======================
+func_name => glTexImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa00
+funcaddr_sub_soaddr => 0x13a00
+=======================
+
+=======================
+func_name => glTexParameterf
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa18
+funcaddr_sub_soaddr => 0x13a18
+=======================
+
+=======================
+func_name => glTexParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa30
+funcaddr_sub_soaddr => 0x13a30
+=======================
+
+=======================
+func_name => glTexParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa48
+funcaddr_sub_soaddr => 0x13a48
+=======================
+
+=======================
+func_name => glTexParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa60
+funcaddr_sub_soaddr => 0x13a60
+=======================
+
+=======================
+func_name => glTexSubImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa78
+funcaddr_sub_soaddr => 0x13a78
+=======================
+
+=======================
+func_name => glUniform1f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa90
+funcaddr_sub_soaddr => 0x13a90
+=======================
+
+=======================
+func_name => glUniform1fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2faa8
+funcaddr_sub_soaddr => 0x13aa8
+=======================
+
+=======================
+func_name => glUniform1i
+so_name => libGLESv2.so
+func_address => 0x7f82c2fac0
+funcaddr_sub_soaddr => 0x13ac0
+=======================
+
+=======================
+func_name => glUniform1iv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fad8
+funcaddr_sub_soaddr => 0x13ad8
+=======================
+
+=======================
+func_name => glUniform2f
+so_name => libGLESv2.so
+func_address => 0x7f82c2faf0
+funcaddr_sub_soaddr => 0x13af0
+=======================
+
+=======================
+func_name => glUniform2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb08
+funcaddr_sub_soaddr => 0x13b08
+=======================
+
+=======================
+func_name => glUniform2i
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb20
+funcaddr_sub_soaddr => 0x13b20
+=======================
+
+=======================
+func_name => glUniform2iv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb38
+funcaddr_sub_soaddr => 0x13b38
+=======================
+
+=======================
+func_name => glUniform3f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb50
+funcaddr_sub_soaddr => 0x13b50
+=======================
+
+=======================
+func_name => glUniform3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb68
+funcaddr_sub_soaddr => 0x13b68
+=======================
+
+=======================
+func_name => glUniform3i
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb80
+funcaddr_sub_soaddr => 0x13b80
+=======================
+
+=======================
+func_name => glUniform3iv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb98
+funcaddr_sub_soaddr => 0x13b98
+=======================
+
+=======================
+func_name => glUniform4f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fbb0
+funcaddr_sub_soaddr => 0x13bb0
+=======================
+
+=======================
+func_name => glUniform4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fbc8
+funcaddr_sub_soaddr => 0x13bc8
+=======================
+
+=======================
+func_name => glUniform4i
+so_name => libGLESv2.so
+func_address => 0x7f82c2fbe0
+funcaddr_sub_soaddr => 0x13be0
+=======================
+
+=======================
+func_name => glUniform4iv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fbf8
+funcaddr_sub_soaddr => 0x13bf8
+=======================
+
+=======================
+func_name => glUniformMatrix2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc10
+funcaddr_sub_soaddr => 0x13c10
+=======================
+
+=======================
+func_name => glUniformMatrix3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc28
+funcaddr_sub_soaddr => 0x13c28
+=======================
+
+=======================
+func_name => glUniformMatrix4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc40
+funcaddr_sub_soaddr => 0x13c40
+=======================
+
+=======================
+func_name => glUseProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc58
+funcaddr_sub_soaddr => 0x13c58
+=======================
+
+=======================
+func_name => glValidateProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc70
+funcaddr_sub_soaddr => 0x13c70
+=======================
+
+=======================
+func_name => glVertexAttrib1f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc88
+funcaddr_sub_soaddr => 0x13c88
+=======================
+
+=======================
+func_name => glVertexAttrib1fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fca0
+funcaddr_sub_soaddr => 0x13ca0
+=======================
+
+=======================
+func_name => glVertexAttrib2f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fcb8
+funcaddr_sub_soaddr => 0x13cb8
+=======================
+
+=======================
+func_name => glVertexAttrib2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fcd0
+funcaddr_sub_soaddr => 0x13cd0
+=======================
+
+=======================
+func_name => glVertexAttrib3f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fce8
+funcaddr_sub_soaddr => 0x13ce8
+=======================
+
+=======================
+func_name => glVertexAttrib3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd00
+funcaddr_sub_soaddr => 0x13d00
+=======================
+
+=======================
+func_name => glVertexAttrib4f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd18
+funcaddr_sub_soaddr => 0x13d18
+=======================
+
+=======================
+func_name => glVertexAttrib4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd30
+funcaddr_sub_soaddr => 0x13d30
+=======================
+
+=======================
+func_name => glVertexAttribPointer
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd48
+funcaddr_sub_soaddr => 0x13d48
+=======================
+
+=======================
+func_name => glViewport
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd60
+funcaddr_sub_soaddr => 0x13d60
+=======================
+
+=======================
+func_name => glActiveShaderProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c30890
+funcaddr_sub_soaddr => 0x14890
+=======================
+
+=======================
+func_name => glBeginQuery
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe70
+funcaddr_sub_soaddr => 0x13e70
+=======================
+
+=======================
+func_name => glBeginTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c300b0
+funcaddr_sub_soaddr => 0x140b0
+=======================
+
+=======================
+func_name => glBindBufferBase
+so_name => libGLESv2.so
+func_address => 0x7f82c300f8
+funcaddr_sub_soaddr => 0x140f8
+=======================
+
+=======================
+func_name => glBindBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c300e0
+funcaddr_sub_soaddr => 0x140e0
+=======================
+
+=======================
+func_name => glBindFragDataLocationEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31c50
+funcaddr_sub_soaddr => 0x15c50
+=======================
+
+=======================
+func_name => glBindFragDataLocationIndexedEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31c38
+funcaddr_sub_soaddr => 0x15c38
+=======================
+
+=======================
+func_name => glBindFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f080
+funcaddr_sub_soaddr => 0x13080
+=======================
+
+=======================
+func_name => glBindImageTexture
+so_name => libGLESv2.so
+func_address => 0x7f82c30c90
+funcaddr_sub_soaddr => 0x14c90
+=======================
+
+=======================
+func_name => glBindProgramPipeline
+so_name => libGLESv2.so
+func_address => 0x7f82c308c8
+funcaddr_sub_soaddr => 0x148c8
+=======================
+
+=======================
+func_name => glBindRenderbuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f098
+funcaddr_sub_soaddr => 0x13098
+=======================
+
+=======================
+func_name => glBindSampler
+so_name => libGLESv2.so
+func_address => 0x7f82c30548
+funcaddr_sub_soaddr => 0x14548
+=======================
+
+=======================
+func_name => glBindTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c30608
+funcaddr_sub_soaddr => 0x14608
+=======================
+
+=======================
+func_name => glBindVertexArray
+so_name => libGLESv2.so
+func_address => 0x7f82c30030
+funcaddr_sub_soaddr => 0x14030
+=======================
+
+=======================
+func_name => glBindVertexBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c30d68
+funcaddr_sub_soaddr => 0x14d68
+=======================
+
+=======================
+func_name => glBlendBarrierKHR
+so_name => libGLESv2.so
+func_address => 0x7f82c31218
+funcaddr_sub_soaddr => 0x15218
+=======================
+
+=======================
+func_name => glBlitFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2ffb0
+funcaddr_sub_soaddr => 0x13fb0
+=======================
+
+=======================
+func_name => glCheckFramebufferStatus
+so_name => libGLESv2.so
+func_address => 0x7f82c2f170
+funcaddr_sub_soaddr => 0x13170
+=======================
+
+=======================
+func_name => glClearBufferfi
+so_name => libGLESv2.so
+func_address => 0x7f82c30328
+funcaddr_sub_soaddr => 0x14328
+=======================
+
+=======================
+func_name => glClearBufferfv
+so_name => libGLESv2.so
+func_address => 0x7f82c30310
+funcaddr_sub_soaddr => 0x14310
+=======================
+
+=======================
+func_name => glClearBufferiv
+so_name => libGLESv2.so
+func_address => 0x7f82c302e0
+funcaddr_sub_soaddr => 0x142e0
+=======================
+
+=======================
+func_name => glClearBufferuiv
+so_name => libGLESv2.so
+func_address => 0x7f82c302f8
+funcaddr_sub_soaddr => 0x142f8
+=======================
+
+=======================
+func_name => glClearDepthf
+so_name => libGLESv2.so
+func_address => 0x7f82c2f1c0
+funcaddr_sub_soaddr => 0x131c0
+=======================
+
+=======================
+func_name => glClientWaitSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30478
+funcaddr_sub_soaddr => 0x14478
+=======================
+
+=======================
+func_name => glCompressedTexImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fdf0
+funcaddr_sub_soaddr => 0x13df0
+=======================
+
+=======================
+func_name => glCompressedTexSubImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe08
+funcaddr_sub_soaddr => 0x13e08
+=======================
+
+=======================
+func_name => glCopyBufferSubData
+so_name => libGLESv2.so
+func_address => 0x7f82c30340
+funcaddr_sub_soaddr => 0x14340
+=======================
+
+=======================
+func_name => glCopyTexSubImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fdd8
+funcaddr_sub_soaddr => 0x13dd8
+=======================
+
+=======================
+func_name => glCreateMemoryObjectsEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32148
+funcaddr_sub_soaddr => 0x16148
+=======================
+
+=======================
+func_name => glCreateShaderProgramv
+so_name => libGLESv2.so
+func_address => 0x7f82c308a8
+funcaddr_sub_soaddr => 0x148a8
+=======================
+
+=======================
+func_name => glDebugMessageCallback
+so_name => libGLESv2.so
+func_address => 0x7f82c30e40
+funcaddr_sub_soaddr => 0x14e40
+=======================
+
+=======================
+func_name => glDebugMessageControl
+so_name => libGLESv2.so
+func_address => 0x7f82c30e10
+funcaddr_sub_soaddr => 0x14e10
+=======================
+
+=======================
+func_name => glDebugMessageInsert
+so_name => libGLESv2.so
+func_address => 0x7f82c30e28
+funcaddr_sub_soaddr => 0x14e28
+=======================
+
+=======================
+func_name => glDeleteFramebuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f2f0
+funcaddr_sub_soaddr => 0x132f0
+=======================
+
+=======================
+func_name => glDeleteProgramPipelines
+so_name => libGLESv2.so
+func_address => 0x7f82c308e0
+funcaddr_sub_soaddr => 0x148e0
+=======================
+
+=======================
+func_name => glDeleteQueries
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe38
+funcaddr_sub_soaddr => 0x13e38
+=======================
+
+=======================
+func_name => glDeleteRenderbuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f320
+funcaddr_sub_soaddr => 0x13320
+=======================
+
+=======================
+func_name => glDeleteSamplers
+so_name => libGLESv2.so
+func_address => 0x7f82c30510
+funcaddr_sub_soaddr => 0x14510
+=======================
+
+=======================
+func_name => glDeleteSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30460
+funcaddr_sub_soaddr => 0x14460
+=======================
+
+=======================
+func_name => glDeleteTransformFeedbacks
+so_name => libGLESv2.so
+func_address => 0x7f82c30620
+funcaddr_sub_soaddr => 0x14620
+=======================
+
+=======================
+func_name => glDeleteVertexArrays
+so_name => libGLESv2.so
+func_address => 0x7f82c30048
+funcaddr_sub_soaddr => 0x14048
+=======================
+
+=======================
+func_name => glDepthRangef
+so_name => libGLESv2.so
+func_address => 0x7f82c2f398
+funcaddr_sub_soaddr => 0x13398
+=======================
+
+=======================
+func_name => glDiscardFramebufferEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d98
+funcaddr_sub_soaddr => 0x15d98
+=======================
+
+=======================
+func_name => glDispatchCompute
+so_name => libGLESv2.so
+func_address => 0x7f82c30760
+funcaddr_sub_soaddr => 0x14760
+=======================
+
+=======================
+func_name => glDispatchComputeIndirect
+so_name => libGLESv2.so
+func_address => 0x7f82c30778
+funcaddr_sub_soaddr => 0x14778
+=======================
+
+=======================
+func_name => glDrawArraysIndirect
+so_name => libGLESv2.so
+func_address => 0x7f82c30790
+funcaddr_sub_soaddr => 0x14790
+=======================
+
+=======================
+func_name => glDrawArraysInstanced
+so_name => libGLESv2.so
+func_address => 0x7f82c303f0
+funcaddr_sub_soaddr => 0x143f0
+=======================
+
+=======================
+func_name => glDrawBuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff08
+funcaddr_sub_soaddr => 0x13f08
+=======================
+
+=======================
+func_name => glDrawElementsIndirect
+so_name => libGLESv2.so
+func_address => 0x7f82c307a8
+funcaddr_sub_soaddr => 0x147a8
+=======================
+
+=======================
+func_name => glDrawElementsInstanced
+so_name => libGLESv2.so
+func_address => 0x7f82c30408
+funcaddr_sub_soaddr => 0x14408
+=======================
+
+=======================
+func_name => glDrawRangeElements
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd90
+funcaddr_sub_soaddr => 0x13d90
+=======================
+
+=======================
+func_name => glEGLImageTargetRenderbufferStorageOES
+so_name => libGLESv2.so
+func_address => 0x7f82c313f0
+funcaddr_sub_soaddr => 0x153f0
+=======================
+
+=======================
+func_name => glEGLImageTargetTexture2DOES
+so_name => libGLESv2.so
+func_address => 0x7f82c313d8
+funcaddr_sub_soaddr => 0x153d8
+=======================
+
+=======================
+func_name => glEndQuery
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe88
+funcaddr_sub_soaddr => 0x13e88
+=======================
+
+=======================
+func_name => glEndTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c300c8
+funcaddr_sub_soaddr => 0x140c8
+=======================
+
+=======================
+func_name => glFenceSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30420
+funcaddr_sub_soaddr => 0x14420
+=======================
+
+=======================
+func_name => glFlushMappedBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c30018
+funcaddr_sub_soaddr => 0x14018
+=======================
+
+=======================
+func_name => glFramebufferParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c307c0
+funcaddr_sub_soaddr => 0x147c0
+=======================
+
+=======================
+func_name => glFramebufferRenderbuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f488
+funcaddr_sub_soaddr => 0x13488
+=======================
+
+=======================
+func_name => glFramebufferTexture2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f4a0
+funcaddr_sub_soaddr => 0x134a0
+=======================
+
+=======================
+func_name => glFramebufferTexture2DMultisampleEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32310
+funcaddr_sub_soaddr => 0x16310
+=======================
+
+=======================
+func_name => glFramebufferTextureLayer
+so_name => libGLESv2.so
+func_address => 0x7f82c2ffe0
+funcaddr_sub_soaddr => 0x13fe0
+=======================
+
+=======================
+func_name => glGenerateMipmap
+so_name => libGLESv2.so
+func_address => 0x7f82c2f4e8
+funcaddr_sub_soaddr => 0x134e8
+=======================
+
+=======================
+func_name => glGenFramebuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f500
+funcaddr_sub_soaddr => 0x13500
+=======================
+
+=======================
+func_name => glGenProgramPipelines
+so_name => libGLESv2.so
+func_address => 0x7f82c308f8
+funcaddr_sub_soaddr => 0x148f8
+=======================
+
+=======================
+func_name => glGenQueries
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe20
+funcaddr_sub_soaddr => 0x13e20
+=======================
+
+=======================
+func_name => glGenRenderbuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f518
+funcaddr_sub_soaddr => 0x13518
+=======================
+
+=======================
+func_name => glGenSamplers
+so_name => libGLESv2.so
+func_address => 0x7f82c304f8
+funcaddr_sub_soaddr => 0x144f8
+=======================
+
+=======================
+func_name => glGenTransformFeedbacks
+so_name => libGLESv2.so
+func_address => 0x7f82c30638
+funcaddr_sub_soaddr => 0x14638
+=======================
+
+=======================
+func_name => glGenVertexArrays
+so_name => libGLESv2.so
+func_address => 0x7f82c30060
+funcaddr_sub_soaddr => 0x14060
+=======================
+
+=======================
+func_name => glGetActiveUniformBlockiv
+so_name => libGLESv2.so
+func_address => 0x7f82c303a8
+funcaddr_sub_soaddr => 0x143a8
+=======================
+
+=======================
+func_name => glGetActiveUniformBlockName
+so_name => libGLESv2.so
+func_address => 0x7f82c303c0
+funcaddr_sub_soaddr => 0x143c0
+=======================
+
+=======================
+func_name => glGetActiveUniformsiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30370
+funcaddr_sub_soaddr => 0x14370
+=======================
+
+=======================
+func_name => glGetBooleani_v
+so_name => libGLESv2.so
+func_address => 0x7f82c30ca8
+funcaddr_sub_soaddr => 0x14ca8
+=======================
+
+=======================
+func_name => glGetDebugMessageLog
+so_name => libGLESv2.so
+func_address => 0x7f82c30e58
+funcaddr_sub_soaddr => 0x14e58
+=======================
+
+=======================
+func_name => glGetFragDataIndexEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31c88
+funcaddr_sub_soaddr => 0x15c88
+=======================
+
+=======================
+func_name => glGetFragDataLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c30200
+funcaddr_sub_soaddr => 0x14200
+=======================
+
+=======================
+func_name => glGetFramebufferAttachmentParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f5e8
+funcaddr_sub_soaddr => 0x135e8
+=======================
+
+=======================
+func_name => glGetFramebufferParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c307d8
+funcaddr_sub_soaddr => 0x147d8
+=======================
+
+=======================
+func_name => glGetGraphicsResetStatus
+so_name => libGLESv2.so
+func_address => 0x7f82c31060
+funcaddr_sub_soaddr => 0x15060
+=======================
+
+=======================
+func_name => glGetInteger64i_v
+so_name => libGLESv2.so
+func_address => 0x7f82c304c8
+funcaddr_sub_soaddr => 0x144c8
+=======================
+
+=======================
+func_name => glGetInteger64v
+so_name => libGLESv2.so
+func_address => 0x7f82c34228
+funcaddr_sub_soaddr => 0x18228
+=======================
+
+=======================
+func_name => glGetIntegeri_v
+so_name => libGLESv2.so
+func_address => 0x7f82c30098
+funcaddr_sub_soaddr => 0x14098
+=======================
+
+=======================
+func_name => glGetInternalformativ
+so_name => libGLESv2.so
+func_address => 0x7f82c30748
+funcaddr_sub_soaddr => 0x14748
+=======================
+
+=======================
+func_name => glGetMultisamplefv
+so_name => libGLESv2.so
+func_address => 0x7f82c30d08
+funcaddr_sub_soaddr => 0x14d08
+=======================
+
+=======================
+func_name => glGetObjectLabel
+so_name => libGLESv2.so
+func_address => 0x7f82c30ec0
+funcaddr_sub_soaddr => 0x14ec0
+=======================
+
+=======================
+func_name => glGetObjectPtrLabel
+so_name => libGLESv2.so
+func_address => 0x7f82c30ef0
+funcaddr_sub_soaddr => 0x14ef0
+=======================
+
+=======================
+func_name => glGetPointerv
+so_name => libGLESv2.so
+func_address => 0x7f82c30f08
+funcaddr_sub_soaddr => 0x14f08
+=======================
+
+=======================
+func_name => glGetProgramBinary
+so_name => libGLESv2.so
+func_address => 0x7f82c306a0
+funcaddr_sub_soaddr => 0x146a0
+=======================
+
+=======================
+func_name => glGetProgramInterfaceiv
+so_name => libGLESv2.so
+func_address => 0x7f82c307f0
+funcaddr_sub_soaddr => 0x147f0
+=======================
+
+=======================
+func_name => glGetProgramPipelineInfoLog
+so_name => libGLESv2.so
+func_address => 0x7f82c30c78
+funcaddr_sub_soaddr => 0x14c78
+=======================
+
+=======================
+func_name => glGetProgramPipelineiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30930
+funcaddr_sub_soaddr => 0x14930
+=======================
+
+=======================
+func_name => glGetProgramResourceIndex
+so_name => libGLESv2.so
+func_address => 0x7f82c30808
+funcaddr_sub_soaddr => 0x14808
+=======================
+
+=======================
+func_name => glGetProgramResourceiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30840
+funcaddr_sub_soaddr => 0x14840
+=======================
+
+=======================
+func_name => glGetProgramResourceLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c30858
+funcaddr_sub_soaddr => 0x14858
+=======================
+
+=======================
+func_name => glGetProgramResourceName
+so_name => libGLESv2.so
+func_address => 0x7f82c30828
+funcaddr_sub_soaddr => 0x14828
+=======================
+
+=======================
+func_name => glGetQueryiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fea0
+funcaddr_sub_soaddr => 0x13ea0
+=======================
+
+=======================
+func_name => glGetQueryObjecti64vEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31e90
+funcaddr_sub_soaddr => 0x15e90
+=======================
+
+=======================
+func_name => glGetQueryObjectivEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31e60
+funcaddr_sub_soaddr => 0x15e60
+=======================
+
+=======================
+func_name => glGetQueryObjectui64vEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31ea8
+funcaddr_sub_soaddr => 0x15ea8
+=======================
+
+=======================
+func_name => glGetQueryObjectuiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2feb8
+funcaddr_sub_soaddr => 0x13eb8
+=======================
+
+=======================
+func_name => glGetRenderbufferParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f630
+funcaddr_sub_soaddr => 0x13630
+=======================
+
+=======================
+func_name => glGetSamplerParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c305d8
+funcaddr_sub_soaddr => 0x145d8
+=======================
+
+=======================
+func_name => glGetSamplerParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c305c0
+funcaddr_sub_soaddr => 0x145c0
+=======================
+
+=======================
+func_name => glGetShaderPrecisionFormat
+so_name => libGLESv2.so
+func_address => 0x7f82c2f678
+funcaddr_sub_soaddr => 0x13678
+=======================
+
+=======================
+func_name => glGetSynciv
+so_name => libGLESv2.so
+func_address => 0x7f82c304b0
+funcaddr_sub_soaddr => 0x144b0
+=======================
+
+=======================
+func_name => glGetTexLevelParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c30d50
+funcaddr_sub_soaddr => 0x14d50
+=======================
+
+=======================
+func_name => glGetTexLevelParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c30d38
+funcaddr_sub_soaddr => 0x14d38
+=======================
+
+=======================
+func_name => glGetTransformFeedbackVarying
+so_name => libGLESv2.so
+func_address => 0x7f82c30128
+funcaddr_sub_soaddr => 0x14128
+=======================
+
+=======================
+func_name => glGetUniformBlockIndex
+so_name => libGLESv2.so
+func_address => 0x7f82c30388
+funcaddr_sub_soaddr => 0x14388
+=======================
+
+=======================
+func_name => glGetUniformIndices
+so_name => libGLESv2.so
+func_address => 0x7f82c30358
+funcaddr_sub_soaddr => 0x14358
+=======================
+
+=======================
+func_name => glGetUniformuiv
+so_name => libGLESv2.so
+func_address => 0x7f82c301e8
+funcaddr_sub_soaddr => 0x141e8
+=======================
+
+=======================
+func_name => glImportMemoryFdEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32280
+funcaddr_sub_soaddr => 0x16280
+=======================
+
+=======================
+func_name => glInsertEventMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d50
+funcaddr_sub_soaddr => 0x15d50
+=======================
+
+=======================
+func_name => glInvalidateFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c306e8
+funcaddr_sub_soaddr => 0x146e8
+=======================
+
+=======================
+func_name => glInvalidateSubFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c30700
+funcaddr_sub_soaddr => 0x14700
+=======================
+
+=======================
+func_name => glIsFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f7c8
+funcaddr_sub_soaddr => 0x137c8
+=======================
+
+=======================
+func_name => glIsProgramPipeline
+so_name => libGLESv2.so
+func_address => 0x7f82c30910
+funcaddr_sub_soaddr => 0x14910
+=======================
+
+=======================
+func_name => glIsQuery
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe50
+funcaddr_sub_soaddr => 0x13e50
+=======================
+
+=======================
+func_name => glIsRenderbuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f808
+funcaddr_sub_soaddr => 0x13808
+=======================
+
+=======================
+func_name => glIsSampler
+so_name => libGLESv2.so
+func_address => 0x7f82c30528
+funcaddr_sub_soaddr => 0x14528
+=======================
+
+=======================
+func_name => glIsSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30440
+funcaddr_sub_soaddr => 0x14440
+=======================
+
+=======================
+func_name => glIsTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c30650
+funcaddr_sub_soaddr => 0x14650
+=======================
+
+=======================
+func_name => glIsVertexArray
+so_name => libGLESv2.so
+func_address => 0x7f82c30078
+funcaddr_sub_soaddr => 0x14078
+=======================
+
+=======================
+func_name => glMapBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c2fff8
+funcaddr_sub_soaddr => 0x13ff8
+=======================
+
+=======================
+func_name => glMemoryBarrierByRegion
+so_name => libGLESv2.so
+func_address => 0x7f82c30cd8
+funcaddr_sub_soaddr => 0x14cd8
+=======================
+
+=======================
+func_name => glMemoryBarrier
+so_name => libGLESv2.so
+func_address => 0x7f82c30cc0
+funcaddr_sub_soaddr => 0x14cc0
+=======================
+
+=======================
+func_name => glMinSampleShading
+so_name => libGLESv2.so
+func_address => 0x7f82c310e0
+funcaddr_sub_soaddr => 0x150e0
+=======================
+
+=======================
+func_name => glObjectLabel
+so_name => libGLESv2.so
+func_address => 0x7f82c30ea8
+funcaddr_sub_soaddr => 0x14ea8
+=======================
+
+=======================
+func_name => glObjectPtrLabel
+so_name => libGLESv2.so
+func_address => 0x7f82c30ed8
+funcaddr_sub_soaddr => 0x14ed8
+=======================
+
+=======================
+func_name => glPauseTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c30670
+funcaddr_sub_soaddr => 0x14670
+=======================
+
+=======================
+func_name => glPopDebugGroup
+so_name => libGLESv2.so
+func_address => 0x7f82c30e90
+funcaddr_sub_soaddr => 0x14e90
+=======================
+
+=======================
+func_name => glPopGroupMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d80
+funcaddr_sub_soaddr => 0x15d80
+=======================
+
+=======================
+func_name => glProgramBinary
+so_name => libGLESv2.so
+func_address => 0x7f82c306b8
+funcaddr_sub_soaddr => 0x146b8
+=======================
+
+=======================
+func_name => glProgramParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c306d0
+funcaddr_sub_soaddr => 0x146d0
+=======================
+
+=======================
+func_name => glProgramUniform1f
+so_name => libGLESv2.so
+func_address => 0x7f82c30a08
+funcaddr_sub_soaddr => 0x14a08
+=======================
+
+=======================
+func_name => glProgramUniform1fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b28
+funcaddr_sub_soaddr => 0x14b28
+=======================
+
+=======================
+func_name => glProgramUniform1i
+so_name => libGLESv2.so
+func_address => 0x7f82c30948
+funcaddr_sub_soaddr => 0x14948
+=======================
+
+=======================
+func_name => glProgramUniform1iv
+so_name => libGLESv2.so
+func_address => 0x7f82c30a68
+funcaddr_sub_soaddr => 0x14a68
+=======================
+
+=======================
+func_name => glProgramUniform1ui
+so_name => libGLESv2.so
+func_address => 0x7f82c309a8
+funcaddr_sub_soaddr => 0x149a8
+=======================
+
+=======================
+func_name => glProgramUniform1uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30ac8
+funcaddr_sub_soaddr => 0x14ac8
+=======================
+
+=======================
+func_name => glProgramUniform2f
+so_name => libGLESv2.so
+func_address => 0x7f82c30a20
+funcaddr_sub_soaddr => 0x14a20
+=======================
+
+=======================
+func_name => glProgramUniform2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b40
+funcaddr_sub_soaddr => 0x14b40
+=======================
+
+=======================
+func_name => Java_org_geometerplus_fbreader_formats_NativeFormatPlugin_readModelNative
+so_name => libNativeFormats-v4.so
+func_address => 0x7e7bb33304
+funcaddr_sub_soaddr => 0xe4304
+=======================
+
+=======================
+func_name => glProgramUniform2i
+so_name => libGLESv2.so
+func_address => 0x7f82c30960
+funcaddr_sub_soaddr => 0x14960
+=======================
+
+=======================
+func_name => glProgramUniform2iv
+so_name => libGLESv2.so
+func_address => 0x7f82c30a80
+funcaddr_sub_soaddr => 0x14a80
+=======================
+
+=======================
+func_name => glProgramUniform2ui
+so_name => libGLESv2.so
+func_address => 0x7f82c309c0
+funcaddr_sub_soaddr => 0x149c0
+=======================
+
+=======================
+func_name => glProgramUniform2uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30ae0
+funcaddr_sub_soaddr => 0x14ae0
+=======================
+
+=======================
+func_name => glProgramUniform3f
+so_name => libGLESv2.so
+func_address => 0x7f82c30a38
+funcaddr_sub_soaddr => 0x14a38
+=======================
+
+=======================
+func_name => glProgramUniform3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b58
+funcaddr_sub_soaddr => 0x14b58
+=======================
+
+=======================
+func_name => glProgramUniform3i
+so_name => libGLESv2.so
+func_address => 0x7f82c30978
+funcaddr_sub_soaddr => 0x14978
+=======================
+
+=======================
+func_name => glProgramUniform3iv
+so_name => libGLESv2.so
+func_address => 0x7f82c30a98
+funcaddr_sub_soaddr => 0x14a98
+=======================
+
+=======================
+func_name => glProgramUniform3ui
+so_name => libGLESv2.so
+func_address => 0x7f82c309d8
+funcaddr_sub_soaddr => 0x149d8
+=======================
+
+=======================
+func_name => glProgramUniform3uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30af8
+funcaddr_sub_soaddr => 0x14af8
+=======================
+
+=======================
+func_name => glProgramUniform4f
+so_name => libGLESv2.so
+func_address => 0x7f82c30a50
+funcaddr_sub_soaddr => 0x14a50
+=======================
+
+=======================
+func_name => glProgramUniform4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b70
+funcaddr_sub_soaddr => 0x14b70
+=======================
+
+=======================
+func_name => glProgramUniform4i
+so_name => libGLESv2.so
+func_address => 0x7f82c30990
+funcaddr_sub_soaddr => 0x14990
+=======================
+
+=======================
+func_name => glProgramUniform4iv
+so_name => libGLESv2.so
+func_address => 0x7f82c30ab0
+funcaddr_sub_soaddr => 0x14ab0
+=======================
+
+=======================
+func_name => glProgramUniform4ui
+so_name => libGLESv2.so
+func_address => 0x7f82c309f0
+funcaddr_sub_soaddr => 0x149f0
+=======================
+
+=======================
+func_name => glProgramUniform4uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b10
+funcaddr_sub_soaddr => 0x14b10
+=======================
+
+=======================
+func_name => glProgramUniformMatrix2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b88
+funcaddr_sub_soaddr => 0x14b88
+=======================
+
+=======================
+func_name => glProgramUniformMatrix2x3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30bd0
+funcaddr_sub_soaddr => 0x14bd0
+=======================
+
+=======================
+func_name => glProgramUniformMatrix2x4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30c00
+funcaddr_sub_soaddr => 0x14c00
+=======================
+
+=======================
+func_name => Java_org_vimgadgets_linebreak_LineBreaker_init
+so_name => libLineBreak-v2.so
+func_address => 0x7d9c4b6cbc
+funcaddr_sub_soaddr => 0xcbc
+=======================
+
+=======================
+func_name => glProgramUniformMatrix3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30ba0
+funcaddr_sub_soaddr => 0x14ba0
+=======================
+
+=======================
+func_name => glProgramUniformMatrix3x2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30be8
+funcaddr_sub_soaddr => 0x14be8
+=======================
+
+=======================
+func_name => glProgramUniformMatrix3x4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30c30
+funcaddr_sub_soaddr => 0x14c30
+=======================
+
+=======================
+func_name => glProgramUniformMatrix4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30bb8
+funcaddr_sub_soaddr => 0x14bb8
+=======================
+
+=======================
+func_name => Java_org_vimgadgets_linebreak_LineBreaker_setLineBreaksForCharArray
+so_name => libLineBreak-v2.so
+func_address => 0x7d9c4b6cc0
+funcaddr_sub_soaddr => 0xcc0
+=======================
+
+=======================
+func_name => glProgramUniformMatrix4x2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30c18
+funcaddr_sub_soaddr => 0x14c18
+=======================
+
+=======================
+func_name => glProgramUniformMatrix4x3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30c48
+funcaddr_sub_soaddr => 0x14c48
+=======================
+
+=======================
+func_name => glPushDebugGroup
+so_name => libGLESv2.so
+func_address => 0x7f82c30e78
+funcaddr_sub_soaddr => 0x14e78
+=======================
+
+=======================
+func_name => glPushGroupMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d68
+funcaddr_sub_soaddr => 0x15d68
+=======================
+
+=======================
+func_name => glQueryCounterEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31e30
+funcaddr_sub_soaddr => 0x15e30
+=======================
+
+=======================
+func_name => glReadBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd78
+funcaddr_sub_soaddr => 0x13d78
+=======================
+
+=======================
+func_name => glReleaseShaderCompiler
+so_name => libGLESv2.so
+func_address => 0x7f82c2f8e0
+funcaddr_sub_soaddr => 0x138e0
+=======================
+
+=======================
+func_name => glRenderbufferStorage
+so_name => libGLESv2.so
+func_address => 0x7f82c2f8f8
+funcaddr_sub_soaddr => 0x138f8
+=======================
+
+=======================
+func_name => glRenderbufferStorageMultisample
+so_name => libGLESv2.so
+func_address => 0x7f82c2ffc8
+funcaddr_sub_soaddr => 0x13fc8
+=======================
+
+=======================
+func_name => glRenderbufferStorageMultisampleEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c322f8
+funcaddr_sub_soaddr => 0x162f8
+=======================
+
+=======================
+func_name => glResumeTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c30688
+funcaddr_sub_soaddr => 0x14688
+=======================
+
+=======================
+func_name => glSampleMaski
+so_name => libGLESv2.so
+func_address => 0x7f82c30d20
+funcaddr_sub_soaddr => 0x14d20
+=======================
+
+=======================
+func_name => glSamplerParameterf
+so_name => libGLESv2.so
+func_address => 0x7f82c30590
+funcaddr_sub_soaddr => 0x14590
+=======================
+
+=======================
+func_name => glSamplerParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c305a8
+funcaddr_sub_soaddr => 0x145a8
+=======================
+
+=======================
+func_name => glSamplerParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c30560
+funcaddr_sub_soaddr => 0x14560
+=======================
+
+=======================
+func_name => glSamplerParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c30578
+funcaddr_sub_soaddr => 0x14578
+=======================
+
+=======================
+func_name => glShaderBinary
+so_name => libGLESv2.so
+func_address => 0x7f82c2f940
+funcaddr_sub_soaddr => 0x13940
+=======================
+
+=======================
+func_name => glTexBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c311d0
+funcaddr_sub_soaddr => 0x151d0
+=======================
+
+=======================
+func_name => glTexBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c311e8
+funcaddr_sub_soaddr => 0x151e8
+=======================
+
+=======================
+func_name => glTexImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fda8
+funcaddr_sub_soaddr => 0x13da8
+=======================
+
+=======================
+func_name => glTexStorage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c30718
+funcaddr_sub_soaddr => 0x14718
+=======================
+
+=======================
+func_name => glTexStorage2DMultisample
+so_name => libGLESv2.so
+func_address => 0x7f82c30cf0
+funcaddr_sub_soaddr => 0x14cf0
+=======================
+
+=======================
+func_name => glTexStorage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c30730
+funcaddr_sub_soaddr => 0x14730
+=======================
+
+=======================
+func_name => glTexStorageMem2DEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32190
+funcaddr_sub_soaddr => 0x16190
+=======================
+
+=======================
+func_name => glTexSubImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fdc0
+funcaddr_sub_soaddr => 0x13dc0
+=======================
+
+=======================
+func_name => glTransformFeedbackVaryings
+so_name => libGLESv2.so
+func_address => 0x7f82c30110
+funcaddr_sub_soaddr => 0x14110
+=======================
+
+=======================
+func_name => glUniform1ui
+so_name => libGLESv2.so
+func_address => 0x7f82c30220
+funcaddr_sub_soaddr => 0x14220
+=======================
+
+=======================
+func_name => glUniform1uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30280
+funcaddr_sub_soaddr => 0x14280
+=======================
+
+=======================
+func_name => glUniform2ui
+so_name => libGLESv2.so
+func_address => 0x7f82c30238
+funcaddr_sub_soaddr => 0x14238
+=======================
+
+=======================
+func_name => glUniform2uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30298
+funcaddr_sub_soaddr => 0x14298
+=======================
+
+=======================
+func_name => glUniform3ui
+so_name => libGLESv2.so
+func_address => 0x7f82c30250
+funcaddr_sub_soaddr => 0x14250
+=======================
+
+=======================
+func_name => glUniform3uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c302b0
+funcaddr_sub_soaddr => 0x142b0
+=======================
+
+=======================
+func_name => glUniform4ui
+so_name => libGLESv2.so
+func_address => 0x7f82c30268
+funcaddr_sub_soaddr => 0x14268
+=======================
+
+=======================
+func_name => glUniform4uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c302c8
+funcaddr_sub_soaddr => 0x142c8
+=======================
+
+=======================
+func_name => glUniformBlockBinding
+so_name => libGLESv2.so
+func_address => 0x7f82c303d8
+funcaddr_sub_soaddr => 0x143d8
+=======================
+
+=======================
+func_name => glUniformMatrix2x3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff20
+funcaddr_sub_soaddr => 0x13f20
+=======================
+
+=======================
+func_name => glUniformMatrix2x4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff50
+funcaddr_sub_soaddr => 0x13f50
+=======================
+
+=======================
+func_name => glUniformMatrix3x2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff38
+funcaddr_sub_soaddr => 0x13f38
+=======================
+
+=======================
+func_name => glUniformMatrix3x4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff80
+funcaddr_sub_soaddr => 0x13f80
+=======================
+
+=======================
+func_name => glUniformMatrix4x2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff68
+funcaddr_sub_soaddr => 0x13f68
+=======================
+
+=======================
+func_name => glUniformMatrix4x3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff98
+funcaddr_sub_soaddr => 0x13f98
+=======================
+
+=======================
+func_name => glUnmapBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2fed0
+funcaddr_sub_soaddr => 0x13ed0
+=======================
+
+=======================
+func_name => glUseProgramStages
+so_name => libGLESv2.so
+func_address => 0x7f82c30878
+funcaddr_sub_soaddr => 0x14878
+=======================
+
+=======================
+func_name => glValidateProgramPipeline
+so_name => libGLESv2.so
+func_address => 0x7f82c30c60
+funcaddr_sub_soaddr => 0x14c60
+=======================
+
+=======================
+func_name => glVertexAttribBinding
+so_name => libGLESv2.so
+func_address => 0x7f82c30db0
+funcaddr_sub_soaddr => 0x14db0
+=======================
+
+=======================
+func_name => glVertexAttribDivisor
+so_name => libGLESv2.so
+func_address => 0x7f82c305f0
+funcaddr_sub_soaddr => 0x145f0
+=======================
+
+=======================
+func_name => glVertexAttribFormat
+so_name => libGLESv2.so
+func_address => 0x7f82c30d80
+funcaddr_sub_soaddr => 0x14d80
+=======================
+
+=======================
+func_name => glVertexAttribI4i
+so_name => libGLESv2.so
+func_address => 0x7f82c30188
+funcaddr_sub_soaddr => 0x14188
+=======================
+
+=======================
+func_name => glVertexAttribI4iv
+so_name => libGLESv2.so
+func_address => 0x7f82c301b8
+funcaddr_sub_soaddr => 0x141b8
+=======================
+
+=======================
+func_name => glVertexAttribI4ui
+so_name => libGLESv2.so
+func_address => 0x7f82c301a0
+funcaddr_sub_soaddr => 0x141a0
+=======================
+
+=======================
+func_name => glVertexAttribI4uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c301d0
+funcaddr_sub_soaddr => 0x141d0
+=======================
+
+=======================
+func_name => glVertexAttribIFormat
+so_name => libGLESv2.so
+func_address => 0x7f82c30d98
+funcaddr_sub_soaddr => 0x14d98
+=======================
+
+=======================
+func_name => glVertexAttribIPointer
+so_name => libGLESv2.so
+func_address => 0x7f82c30140
+funcaddr_sub_soaddr => 0x14140
+=======================
+
+=======================
+func_name => glVertexBindingDivisor
+so_name => libGLESv2.so
+func_address => 0x7f82c30dc8
+funcaddr_sub_soaddr => 0x14dc8
+=======================
+
+=======================
+func_name => glWaitSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30498
+funcaddr_sub_soaddr => 0x14498
+=======================
+
+=======================
+func_name => glActiveTexture
+so_name => libGLESv2.so
+func_address => 0x7f82c2f020
+funcaddr_sub_soaddr => 0x13020
+=======================
+
+=======================
+func_name => glAttachShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f038
+funcaddr_sub_soaddr => 0x13038
+=======================
+
+=======================
+func_name => glBindAttribLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c2f050
+funcaddr_sub_soaddr => 0x13050
+=======================
+
+=======================
+func_name => glBindBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f068
+funcaddr_sub_soaddr => 0x13068
+=======================
+
+=======================
+func_name => glBindTexture
+so_name => libGLESv2.so
+func_address => 0x7f82c2f0b0
+funcaddr_sub_soaddr => 0x130b0
+=======================
+
+=======================
+func_name => glBlendColor
+so_name => libGLESv2.so
+func_address => 0x7f82c2f0c8
+funcaddr_sub_soaddr => 0x130c8
+=======================
+
+=======================
+func_name => glBlendEquation
+so_name => libGLESv2.so
+func_address => 0x7f82c2f0e0
+funcaddr_sub_soaddr => 0x130e0
+=======================
+
+=======================
+func_name => glBlendEquationSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f0f8
+funcaddr_sub_soaddr => 0x130f8
+=======================
+
+=======================
+func_name => glBlendFunc
+so_name => libGLESv2.so
+func_address => 0x7f82c2f110
+funcaddr_sub_soaddr => 0x13110
+=======================
+
+=======================
+func_name => glBlendFuncSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f128
+funcaddr_sub_soaddr => 0x13128
+=======================
+
+=======================
+func_name => glBufferData
+so_name => libGLESv2.so
+func_address => 0x7f82c2f140
+funcaddr_sub_soaddr => 0x13140
+=======================
+
+=======================
+func_name => glBufferSubData
+so_name => libGLESv2.so
+func_address => 0x7f82c2f158
+funcaddr_sub_soaddr => 0x13158
+=======================
+
+=======================
+func_name => glClear
+so_name => libGLESv2.so
+func_address => 0x7f82c2f190
+funcaddr_sub_soaddr => 0x13190
+=======================
+
+=======================
+func_name => glClearColor
+so_name => libGLESv2.so
+func_address => 0x7f82c2f1a8
+funcaddr_sub_soaddr => 0x131a8
+=======================
+
+=======================
+func_name => glClearStencil
+so_name => libGLESv2.so
+func_address => 0x7f82c2f1d8
+funcaddr_sub_soaddr => 0x131d8
+=======================
+
+=======================
+func_name => glColorMask
+so_name => libGLESv2.so
+func_address => 0x7f82c2f1f0
+funcaddr_sub_soaddr => 0x131f0
+=======================
+
+=======================
+func_name => glCompileShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f208
+funcaddr_sub_soaddr => 0x13208
+=======================
+
+=======================
+func_name => glCompressedTexImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f220
+funcaddr_sub_soaddr => 0x13220
+=======================
+
+=======================
+func_name => glCompressedTexSubImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f238
+funcaddr_sub_soaddr => 0x13238
+=======================
+
+=======================
+func_name => glCopyTexImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f250
+funcaddr_sub_soaddr => 0x13250
+=======================
+
+=======================
+func_name => glCopyTexSubImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f268
+funcaddr_sub_soaddr => 0x13268
+=======================
+
+=======================
+func_name => glCreateProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2f280
+funcaddr_sub_soaddr => 0x13280
+=======================
+
+=======================
+func_name => glCreateShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f2a0
+funcaddr_sub_soaddr => 0x132a0
+=======================
+
+=======================
+func_name => glCullFace
+so_name => libGLESv2.so
+func_address => 0x7f82c2f2c0
+funcaddr_sub_soaddr => 0x132c0
+=======================
+
+=======================
+func_name => glDeleteBuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f2d8
+funcaddr_sub_soaddr => 0x132d8
+=======================
+
+=======================
+func_name => glDeleteProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2f308
+funcaddr_sub_soaddr => 0x13308
+=======================
+
+=======================
+func_name => glDeleteShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f338
+funcaddr_sub_soaddr => 0x13338
+=======================
+
+=======================
+func_name => glDeleteTextures
+so_name => libGLESv2.so
+func_address => 0x7f82c2f350
+funcaddr_sub_soaddr => 0x13350
+=======================
+
+=======================
+func_name => glDepthFunc
+so_name => libGLESv2.so
+func_address => 0x7f82c2f368
+funcaddr_sub_soaddr => 0x13368
+=======================
+
+=======================
+func_name => glDepthMask
+so_name => libGLESv2.so
+func_address => 0x7f82c2f380
+funcaddr_sub_soaddr => 0x13380
+=======================
+
+=======================
+func_name => glDetachShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f3b0
+funcaddr_sub_soaddr => 0x133b0
+=======================
+
+=======================
+func_name => glDisable
+so_name => libGLESv2.so
+func_address => 0x7f82c2f3c8
+funcaddr_sub_soaddr => 0x133c8
+=======================
+
+=======================
+func_name => glDisableVertexAttribArray
+so_name => libGLESv2.so
+func_address => 0x7f82c2f3e0
+funcaddr_sub_soaddr => 0x133e0
+=======================
+
+=======================
+func_name => glDrawArrays
+so_name => libGLESv2.so
+func_address => 0x7f82c2f3f8
+funcaddr_sub_soaddr => 0x133f8
+=======================
+
+=======================
+func_name => glDrawElements
+so_name => libGLESv2.so
+func_address => 0x7f82c2f410
+funcaddr_sub_soaddr => 0x13410
+=======================
+
+=======================
+func_name => glEnable
+so_name => libGLESv2.so
+func_address => 0x7f82c2f428
+funcaddr_sub_soaddr => 0x13428
+=======================
+
+=======================
+func_name => glEnableVertexAttribArray
+so_name => libGLESv2.so
+func_address => 0x7f82c2f440
+funcaddr_sub_soaddr => 0x13440
+=======================
+
+=======================
+func_name => glFinish
+so_name => libGLESv2.so
+func_address => 0x7f82c2f458
+funcaddr_sub_soaddr => 0x13458
+=======================
+
+=======================
+func_name => glFlush
+so_name => libGLESv2.so
+func_address => 0x7f82c2f470
+funcaddr_sub_soaddr => 0x13470
+=======================
+
+=======================
+func_name => glFrontFace
+so_name => libGLESv2.so
+func_address => 0x7f82c2f4b8
+funcaddr_sub_soaddr => 0x134b8
+=======================
+
+=======================
+func_name => glGenBuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f4d0
+funcaddr_sub_soaddr => 0x134d0
+=======================
+
+=======================
+func_name => glGenTextures
+so_name => libGLESv2.so
+func_address => 0x7f82c2f530
+funcaddr_sub_soaddr => 0x13530
+=======================
+
+=======================
+func_name => glGetActiveAttrib
+so_name => libGLESv2.so
+func_address => 0x7f82c2f548
+funcaddr_sub_soaddr => 0x13548
+=======================
+
+=======================
+func_name => glGetActiveUniform
+so_name => libGLESv2.so
+func_address => 0x7f82c2f560
+funcaddr_sub_soaddr => 0x13560
+=======================
+
+=======================
+func_name => glGetAttachedShaders
+so_name => libGLESv2.so
+func_address => 0x7f82c2f578
+funcaddr_sub_soaddr => 0x13578
+=======================
+
+=======================
+func_name => glGetAttribLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c2f590
+funcaddr_sub_soaddr => 0x13590
+=======================
+
+=======================
+func_name => glGetBooleanv
+so_name => libGLESv2.so
+func_address => 0x7f82c34180
+funcaddr_sub_soaddr => 0x18180
+=======================
+
+=======================
+func_name => glGetBufferParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f5b0
+funcaddr_sub_soaddr => 0x135b0
+=======================
+
+=======================
+func_name => glGetError
+so_name => libGLESv2.so
+func_address => 0x7f82c2f5c8
+funcaddr_sub_soaddr => 0x135c8
+=======================
+
+=======================
+func_name => glGetFloatv
+so_name => libGLESv2.so
+func_address => 0x7f82c341b8
+funcaddr_sub_soaddr => 0x181b8
+=======================
+
+=======================
+func_name => glGetIntegerv
+so_name => libGLESv2.so
+func_address => 0x7f82c341f0
+funcaddr_sub_soaddr => 0x181f0
+=======================
+
+=======================
+func_name => glGetProgramInfoLog
+so_name => libGLESv2.so
+func_address => 0x7f82c2f618
+funcaddr_sub_soaddr => 0x13618
+=======================
+
+=======================
+func_name => glGetProgramiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f600
+funcaddr_sub_soaddr => 0x13600
+=======================
+
+=======================
+func_name => glGetShaderInfoLog
+so_name => libGLESv2.so
+func_address => 0x7f82c2f660
+funcaddr_sub_soaddr => 0x13660
+=======================
+
+=======================
+func_name => glGetShaderiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f648
+funcaddr_sub_soaddr => 0x13648
+=======================
+
+=======================
+func_name => glGetShaderSource
+so_name => libGLESv2.so
+func_address => 0x7f82c2f690
+funcaddr_sub_soaddr => 0x13690
+=======================
+
+=======================
+func_name => glGetString
+so_name => libGLESv2.so
+func_address => 0x7f82c34120
+funcaddr_sub_soaddr => 0x18120
+=======================
+
+=======================
+func_name => glGetStringi
+so_name => libGLESv2.so
+func_address => 0x7f82c34148
+funcaddr_sub_soaddr => 0x18148
+=======================
+
+=======================
+func_name => glGetTexParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f6a8
+funcaddr_sub_soaddr => 0x136a8
+=======================
+
+=======================
+func_name => glGetTexParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f6c0
+funcaddr_sub_soaddr => 0x136c0
+=======================
+
+=======================
+func_name => glGetUniformfv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f6d8
+funcaddr_sub_soaddr => 0x136d8
+=======================
+
+=======================
+func_name => glGetUniformiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f6f0
+funcaddr_sub_soaddr => 0x136f0
+=======================
+
+=======================
+func_name => glGetUniformLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c2f708
+funcaddr_sub_soaddr => 0x13708
+=======================
+
+=======================
+func_name => glGetVertexAttribfv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f728
+funcaddr_sub_soaddr => 0x13728
+=======================
+
+=======================
+func_name => glGetVertexAttribiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f740
+funcaddr_sub_soaddr => 0x13740
+=======================
+
+=======================
+func_name => glGetVertexAttribPointerv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f758
+funcaddr_sub_soaddr => 0x13758
+=======================
+
+=======================
+func_name => glHint
+so_name => libGLESv2.so
+func_address => 0x7f82c2f770
+funcaddr_sub_soaddr => 0x13770
+=======================
+
+=======================
+func_name => glIsBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f788
+funcaddr_sub_soaddr => 0x13788
+=======================
+
+=======================
+func_name => glIsEnabled
+so_name => libGLESv2.so
+func_address => 0x7f82c2f7a8
+funcaddr_sub_soaddr => 0x137a8
+=======================
+
+=======================
+func_name => glIsProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2f7e8
+funcaddr_sub_soaddr => 0x137e8
+=======================
+
+=======================
+func_name => glIsShader
+so_name => libGLESv2.so
+func_address => 0x7f82c2f828
+funcaddr_sub_soaddr => 0x13828
+=======================
+
+=======================
+func_name => glIsTexture
+so_name => libGLESv2.so
+func_address => 0x7f82c2f848
+funcaddr_sub_soaddr => 0x13848
+=======================
+
+=======================
+func_name => glLineWidth
+so_name => libGLESv2.so
+func_address => 0x7f82c2f868
+funcaddr_sub_soaddr => 0x13868
+=======================
+
+=======================
+func_name => glLinkProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2f880
+funcaddr_sub_soaddr => 0x13880
+=======================
+
+=======================
+func_name => glPixelStorei
+so_name => libGLESv2.so
+func_address => 0x7f82c2f898
+funcaddr_sub_soaddr => 0x13898
+=======================
+
+=======================
+func_name => glPolygonOffset
+so_name => libGLESv2.so
+func_address => 0x7f82c2f8b0
+funcaddr_sub_soaddr => 0x138b0
+=======================
+
+=======================
+func_name => glReadPixels
+so_name => libGLESv2.so
+func_address => 0x7f82c2f8c8
+funcaddr_sub_soaddr => 0x138c8
+=======================
+
+=======================
+func_name => glSampleCoverage
+so_name => libGLESv2.so
+func_address => 0x7f82c2f910
+funcaddr_sub_soaddr => 0x13910
+=======================
+
+=======================
+func_name => glScissor
+so_name => libGLESv2.so
+func_address => 0x7f82c2f928
+funcaddr_sub_soaddr => 0x13928
+=======================
+
+=======================
+func_name => glShaderSource
+so_name => libGLESv2.so
+func_address => 0x7f82c2f958
+funcaddr_sub_soaddr => 0x13958
+=======================
+
+=======================
+func_name => glStencilFunc
+so_name => libGLESv2.so
+func_address => 0x7f82c2f970
+funcaddr_sub_soaddr => 0x13970
+=======================
+
+=======================
+func_name => glStencilFuncSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f988
+funcaddr_sub_soaddr => 0x13988
+=======================
+
+=======================
+func_name => glStencilMask
+so_name => libGLESv2.so
+func_address => 0x7f82c2f9a0
+funcaddr_sub_soaddr => 0x139a0
+=======================
+
+=======================
+func_name => glStencilMaskSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f9b8
+funcaddr_sub_soaddr => 0x139b8
+=======================
+
+=======================
+func_name => glStencilOp
+so_name => libGLESv2.so
+func_address => 0x7f82c2f9d0
+funcaddr_sub_soaddr => 0x139d0
+=======================
+
+=======================
+func_name => glStencilOpSeparate
+so_name => libGLESv2.so
+func_address => 0x7f82c2f9e8
+funcaddr_sub_soaddr => 0x139e8
+=======================
+
+=======================
+func_name => glTexImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa00
+funcaddr_sub_soaddr => 0x13a00
+=======================
+
+=======================
+func_name => glTexParameterf
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa18
+funcaddr_sub_soaddr => 0x13a18
+=======================
+
+=======================
+func_name => glTexParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa30
+funcaddr_sub_soaddr => 0x13a30
+=======================
+
+=======================
+func_name => glTexParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa48
+funcaddr_sub_soaddr => 0x13a48
+=======================
+
+=======================
+func_name => glTexParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa60
+funcaddr_sub_soaddr => 0x13a60
+=======================
+
+=======================
+func_name => glTexSubImage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa78
+funcaddr_sub_soaddr => 0x13a78
+=======================
+
+=======================
+func_name => glUniform1f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fa90
+funcaddr_sub_soaddr => 0x13a90
+=======================
+
+=======================
+func_name => glUniform1fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2faa8
+funcaddr_sub_soaddr => 0x13aa8
+=======================
+
+=======================
+func_name => glUniform1i
+so_name => libGLESv2.so
+func_address => 0x7f82c2fac0
+funcaddr_sub_soaddr => 0x13ac0
+=======================
+
+=======================
+func_name => glUniform1iv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fad8
+funcaddr_sub_soaddr => 0x13ad8
+=======================
+
+=======================
+func_name => glUniform2f
+so_name => libGLESv2.so
+func_address => 0x7f82c2faf0
+funcaddr_sub_soaddr => 0x13af0
+=======================
+
+=======================
+func_name => glUniform2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb08
+funcaddr_sub_soaddr => 0x13b08
+=======================
+
+=======================
+func_name => glUniform2i
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb20
+funcaddr_sub_soaddr => 0x13b20
+=======================
+
+=======================
+func_name => glUniform2iv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb38
+funcaddr_sub_soaddr => 0x13b38
+=======================
+
+=======================
+func_name => glUniform3f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb50
+funcaddr_sub_soaddr => 0x13b50
+=======================
+
+=======================
+func_name => glUniform3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb68
+funcaddr_sub_soaddr => 0x13b68
+=======================
+
+=======================
+func_name => glUniform3i
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb80
+funcaddr_sub_soaddr => 0x13b80
+=======================
+
+=======================
+func_name => glUniform3iv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fb98
+funcaddr_sub_soaddr => 0x13b98
+=======================
+
+=======================
+func_name => glUniform4f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fbb0
+funcaddr_sub_soaddr => 0x13bb0
+=======================
+
+=======================
+func_name => glUniform4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fbc8
+funcaddr_sub_soaddr => 0x13bc8
+=======================
+
+=======================
+func_name => glUniform4i
+so_name => libGLESv2.so
+func_address => 0x7f82c2fbe0
+funcaddr_sub_soaddr => 0x13be0
+=======================
+
+=======================
+func_name => glUniform4iv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fbf8
+funcaddr_sub_soaddr => 0x13bf8
+=======================
+
+=======================
+func_name => glUniformMatrix2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc10
+funcaddr_sub_soaddr => 0x13c10
+=======================
+
+=======================
+func_name => glUniformMatrix3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc28
+funcaddr_sub_soaddr => 0x13c28
+=======================
+
+=======================
+func_name => glUniformMatrix4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc40
+funcaddr_sub_soaddr => 0x13c40
+=======================
+
+=======================
+func_name => glUseProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc58
+funcaddr_sub_soaddr => 0x13c58
+=======================
+
+=======================
+func_name => glValidateProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc70
+funcaddr_sub_soaddr => 0x13c70
+=======================
+
+=======================
+func_name => glVertexAttrib1f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fc88
+funcaddr_sub_soaddr => 0x13c88
+=======================
+
+=======================
+func_name => glVertexAttrib1fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fca0
+funcaddr_sub_soaddr => 0x13ca0
+=======================
+
+=======================
+func_name => glVertexAttrib2f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fcb8
+funcaddr_sub_soaddr => 0x13cb8
+=======================
+
+=======================
+func_name => glVertexAttrib2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fcd0
+funcaddr_sub_soaddr => 0x13cd0
+=======================
+
+=======================
+func_name => glVertexAttrib3f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fce8
+funcaddr_sub_soaddr => 0x13ce8
+=======================
+
+=======================
+func_name => glVertexAttrib3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd00
+funcaddr_sub_soaddr => 0x13d00
+=======================
+
+=======================
+func_name => glVertexAttrib4f
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd18
+funcaddr_sub_soaddr => 0x13d18
+=======================
+
+=======================
+func_name => glVertexAttrib4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd30
+funcaddr_sub_soaddr => 0x13d30
+=======================
+
+=======================
+func_name => glVertexAttribPointer
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd48
+funcaddr_sub_soaddr => 0x13d48
+=======================
+
+=======================
+func_name => glViewport
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd60
+funcaddr_sub_soaddr => 0x13d60
+=======================
+
+=======================
+func_name => glActiveShaderProgram
+so_name => libGLESv2.so
+func_address => 0x7f82c30890
+funcaddr_sub_soaddr => 0x14890
+=======================
+
+=======================
+func_name => glBeginQuery
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe70
+funcaddr_sub_soaddr => 0x13e70
+=======================
+
+=======================
+func_name => glBeginTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c300b0
+funcaddr_sub_soaddr => 0x140b0
+=======================
+
+=======================
+func_name => glBindBufferBase
+so_name => libGLESv2.so
+func_address => 0x7f82c300f8
+funcaddr_sub_soaddr => 0x140f8
+=======================
+
+=======================
+func_name => glBindBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c300e0
+funcaddr_sub_soaddr => 0x140e0
+=======================
+
+=======================
+func_name => glBindFragDataLocationEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31c50
+funcaddr_sub_soaddr => 0x15c50
+=======================
+
+=======================
+func_name => glBindFragDataLocationIndexedEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31c38
+funcaddr_sub_soaddr => 0x15c38
+=======================
+
+=======================
+func_name => glBindFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f080
+funcaddr_sub_soaddr => 0x13080
+=======================
+
+=======================
+func_name => glBindImageTexture
+so_name => libGLESv2.so
+func_address => 0x7f82c30c90
+funcaddr_sub_soaddr => 0x14c90
+=======================
+
+=======================
+func_name => glBindProgramPipeline
+so_name => libGLESv2.so
+func_address => 0x7f82c308c8
+funcaddr_sub_soaddr => 0x148c8
+=======================
+
+=======================
+func_name => glBindRenderbuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f098
+funcaddr_sub_soaddr => 0x13098
+=======================
+
+=======================
+func_name => glBindSampler
+so_name => libGLESv2.so
+func_address => 0x7f82c30548
+funcaddr_sub_soaddr => 0x14548
+=======================
+
+=======================
+func_name => glBindTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c30608
+funcaddr_sub_soaddr => 0x14608
+=======================
+
+=======================
+func_name => glBindVertexArray
+so_name => libGLESv2.so
+func_address => 0x7f82c30030
+funcaddr_sub_soaddr => 0x14030
+=======================
+
+=======================
+func_name => glBindVertexBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c30d68
+funcaddr_sub_soaddr => 0x14d68
+=======================
+
+=======================
+func_name => glBlitFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2ffb0
+funcaddr_sub_soaddr => 0x13fb0
+=======================
+
+=======================
+func_name => glCheckFramebufferStatus
+so_name => libGLESv2.so
+func_address => 0x7f82c2f170
+funcaddr_sub_soaddr => 0x13170
+=======================
+
+=======================
+func_name => glClearBufferfi
+so_name => libGLESv2.so
+func_address => 0x7f82c30328
+funcaddr_sub_soaddr => 0x14328
+=======================
+
+=======================
+func_name => glClearBufferfv
+so_name => libGLESv2.so
+func_address => 0x7f82c30310
+funcaddr_sub_soaddr => 0x14310
+=======================
+
+=======================
+func_name => glClearBufferiv
+so_name => libGLESv2.so
+func_address => 0x7f82c302e0
+funcaddr_sub_soaddr => 0x142e0
+=======================
+
+=======================
+func_name => glClearBufferuiv
+so_name => libGLESv2.so
+func_address => 0x7f82c302f8
+funcaddr_sub_soaddr => 0x142f8
+=======================
+
+=======================
+func_name => glClearDepthf
+so_name => libGLESv2.so
+func_address => 0x7f82c2f1c0
+funcaddr_sub_soaddr => 0x131c0
+=======================
+
+=======================
+func_name => glClientWaitSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30478
+funcaddr_sub_soaddr => 0x14478
+=======================
+
+=======================
+func_name => glCompressedTexImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fdf0
+funcaddr_sub_soaddr => 0x13df0
+=======================
+
+=======================
+func_name => glCompressedTexSubImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe08
+funcaddr_sub_soaddr => 0x13e08
+=======================
+
+=======================
+func_name => glCopyBufferSubData
+so_name => libGLESv2.so
+func_address => 0x7f82c30340
+funcaddr_sub_soaddr => 0x14340
+=======================
+
+=======================
+func_name => glCopyTexSubImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fdd8
+funcaddr_sub_soaddr => 0x13dd8
+=======================
+
+=======================
+func_name => glCreateMemoryObjectsEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32148
+funcaddr_sub_soaddr => 0x16148
+=======================
+
+=======================
+func_name => glCreateShaderProgramv
+so_name => libGLESv2.so
+func_address => 0x7f82c308a8
+funcaddr_sub_soaddr => 0x148a8
+=======================
+
+=======================
+func_name => glDebugMessageCallback
+so_name => libGLESv2.so
+func_address => 0x7f82c30e40
+funcaddr_sub_soaddr => 0x14e40
+=======================
+
+=======================
+func_name => glDebugMessageControl
+so_name => libGLESv2.so
+func_address => 0x7f82c30e10
+funcaddr_sub_soaddr => 0x14e10
+=======================
+
+=======================
+func_name => glDebugMessageInsert
+so_name => libGLESv2.so
+func_address => 0x7f82c30e28
+funcaddr_sub_soaddr => 0x14e28
+=======================
+
+=======================
+func_name => glDeleteFramebuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f2f0
+funcaddr_sub_soaddr => 0x132f0
+=======================
+
+=======================
+func_name => glDeleteProgramPipelines
+so_name => libGLESv2.so
+func_address => 0x7f82c308e0
+funcaddr_sub_soaddr => 0x148e0
+=======================
+
+=======================
+func_name => glDeleteQueries
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe38
+funcaddr_sub_soaddr => 0x13e38
+=======================
+
+=======================
+func_name => glDeleteRenderbuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f320
+funcaddr_sub_soaddr => 0x13320
+=======================
+
+=======================
+func_name => glDeleteSamplers
+so_name => libGLESv2.so
+func_address => 0x7f82c30510
+funcaddr_sub_soaddr => 0x14510
+=======================
+
+=======================
+func_name => glDeleteSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30460
+funcaddr_sub_soaddr => 0x14460
+=======================
+
+=======================
+func_name => glDeleteTransformFeedbacks
+so_name => libGLESv2.so
+func_address => 0x7f82c30620
+funcaddr_sub_soaddr => 0x14620
+=======================
+
+=======================
+func_name => glDeleteVertexArrays
+so_name => libGLESv2.so
+func_address => 0x7f82c30048
+funcaddr_sub_soaddr => 0x14048
+=======================
+
+=======================
+func_name => glDepthRangef
+so_name => libGLESv2.so
+func_address => 0x7f82c2f398
+funcaddr_sub_soaddr => 0x13398
+=======================
+
+=======================
+func_name => glDiscardFramebufferEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d98
+funcaddr_sub_soaddr => 0x15d98
+=======================
+
+=======================
+func_name => glDispatchCompute
+so_name => libGLESv2.so
+func_address => 0x7f82c30760
+funcaddr_sub_soaddr => 0x14760
+=======================
+
+=======================
+func_name => glDispatchComputeIndirect
+so_name => libGLESv2.so
+func_address => 0x7f82c30778
+funcaddr_sub_soaddr => 0x14778
+=======================
+
+=======================
+func_name => glDrawArraysIndirect
+so_name => libGLESv2.so
+func_address => 0x7f82c30790
+funcaddr_sub_soaddr => 0x14790
+=======================
+
+=======================
+func_name => glDrawArraysInstanced
+so_name => libGLESv2.so
+func_address => 0x7f82c303f0
+funcaddr_sub_soaddr => 0x143f0
+=======================
+
+=======================
+func_name => glDrawBuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff08
+funcaddr_sub_soaddr => 0x13f08
+=======================
+
+=======================
+func_name => glDrawElementsIndirect
+so_name => libGLESv2.so
+func_address => 0x7f82c307a8
+funcaddr_sub_soaddr => 0x147a8
+=======================
+
+=======================
+func_name => glDrawElementsInstanced
+so_name => libGLESv2.so
+func_address => 0x7f82c30408
+funcaddr_sub_soaddr => 0x14408
+=======================
+
+=======================
+func_name => glDrawRangeElements
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd90
+funcaddr_sub_soaddr => 0x13d90
+=======================
+
+=======================
+func_name => glEGLImageTargetRenderbufferStorageOES
+so_name => libGLESv2.so
+func_address => 0x7f82c313f0
+funcaddr_sub_soaddr => 0x153f0
+=======================
+
+=======================
+func_name => glEGLImageTargetTexture2DOES
+so_name => libGLESv2.so
+func_address => 0x7f82c313d8
+funcaddr_sub_soaddr => 0x153d8
+=======================
+
+=======================
+func_name => glEndQuery
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe88
+funcaddr_sub_soaddr => 0x13e88
+=======================
+
+=======================
+func_name => glEndTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c300c8
+funcaddr_sub_soaddr => 0x140c8
+=======================
+
+=======================
+func_name => glFenceSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30420
+funcaddr_sub_soaddr => 0x14420
+=======================
+
+=======================
+func_name => glFlushMappedBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c30018
+funcaddr_sub_soaddr => 0x14018
+=======================
+
+=======================
+func_name => glFramebufferParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c307c0
+funcaddr_sub_soaddr => 0x147c0
+=======================
+
+=======================
+func_name => glFramebufferRenderbuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f488
+funcaddr_sub_soaddr => 0x13488
+=======================
+
+=======================
+func_name => glFramebufferTexture2D
+so_name => libGLESv2.so
+func_address => 0x7f82c2f4a0
+funcaddr_sub_soaddr => 0x134a0
+=======================
+
+=======================
+func_name => glFramebufferTexture2DMultisampleEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32310
+funcaddr_sub_soaddr => 0x16310
+=======================
+
+=======================
+func_name => glFramebufferTextureLayer
+so_name => libGLESv2.so
+func_address => 0x7f82c2ffe0
+funcaddr_sub_soaddr => 0x13fe0
+=======================
+
+=======================
+func_name => glGenerateMipmap
+so_name => libGLESv2.so
+func_address => 0x7f82c2f4e8
+funcaddr_sub_soaddr => 0x134e8
+=======================
+
+=======================
+func_name => glGenFramebuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f500
+funcaddr_sub_soaddr => 0x13500
+=======================
+
+=======================
+func_name => glGenProgramPipelines
+so_name => libGLESv2.so
+func_address => 0x7f82c308f8
+funcaddr_sub_soaddr => 0x148f8
+=======================
+
+=======================
+func_name => glGenQueries
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe20
+funcaddr_sub_soaddr => 0x13e20
+=======================
+
+=======================
+func_name => glGenRenderbuffers
+so_name => libGLESv2.so
+func_address => 0x7f82c2f518
+funcaddr_sub_soaddr => 0x13518
+=======================
+
+=======================
+func_name => glGenSamplers
+so_name => libGLESv2.so
+func_address => 0x7f82c304f8
+funcaddr_sub_soaddr => 0x144f8
+=======================
+
+=======================
+func_name => glGenTransformFeedbacks
+so_name => libGLESv2.so
+func_address => 0x7f82c30638
+funcaddr_sub_soaddr => 0x14638
+=======================
+
+=======================
+func_name => glGenVertexArrays
+so_name => libGLESv2.so
+func_address => 0x7f82c30060
+funcaddr_sub_soaddr => 0x14060
+=======================
+
+=======================
+func_name => glGetActiveUniformBlockiv
+so_name => libGLESv2.so
+func_address => 0x7f82c303a8
+funcaddr_sub_soaddr => 0x143a8
+=======================
+
+=======================
+func_name => glGetActiveUniformBlockName
+so_name => libGLESv2.so
+func_address => 0x7f82c303c0
+funcaddr_sub_soaddr => 0x143c0
+=======================
+
+=======================
+func_name => glGetActiveUniformsiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30370
+funcaddr_sub_soaddr => 0x14370
+=======================
+
+=======================
+func_name => glGetBooleani_v
+so_name => libGLESv2.so
+func_address => 0x7f82c30ca8
+funcaddr_sub_soaddr => 0x14ca8
+=======================
+
+=======================
+func_name => glGetDebugMessageLog
+so_name => libGLESv2.so
+func_address => 0x7f82c30e58
+funcaddr_sub_soaddr => 0x14e58
+=======================
+
+=======================
+func_name => glGetFragDataIndexEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31c88
+funcaddr_sub_soaddr => 0x15c88
+=======================
+
+=======================
+func_name => glGetFragDataLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c30200
+funcaddr_sub_soaddr => 0x14200
+=======================
+
+=======================
+func_name => glGetFramebufferAttachmentParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f5e8
+funcaddr_sub_soaddr => 0x135e8
+=======================
+
+=======================
+func_name => glGetFramebufferParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c307d8
+funcaddr_sub_soaddr => 0x147d8
+=======================
+
+=======================
+func_name => glGetGraphicsResetStatus
+so_name => libGLESv2.so
+func_address => 0x7f82c31060
+funcaddr_sub_soaddr => 0x15060
+=======================
+
+=======================
+func_name => glGetInteger64i_v
+so_name => libGLESv2.so
+func_address => 0x7f82c304c8
+funcaddr_sub_soaddr => 0x144c8
+=======================
+
+=======================
+func_name => glGetInteger64v
+so_name => libGLESv2.so
+func_address => 0x7f82c34228
+funcaddr_sub_soaddr => 0x18228
+=======================
+
+=======================
+func_name => glGetIntegeri_v
+so_name => libGLESv2.so
+func_address => 0x7f82c30098
+funcaddr_sub_soaddr => 0x14098
+=======================
+
+=======================
+func_name => glGetInternalformativ
+so_name => libGLESv2.so
+func_address => 0x7f82c30748
+funcaddr_sub_soaddr => 0x14748
+=======================
+
+=======================
+func_name => glGetMultisamplefv
+so_name => libGLESv2.so
+func_address => 0x7f82c30d08
+funcaddr_sub_soaddr => 0x14d08
+=======================
+
+=======================
+func_name => glGetObjectLabel
+so_name => libGLESv2.so
+func_address => 0x7f82c30ec0
+funcaddr_sub_soaddr => 0x14ec0
+=======================
+
+=======================
+func_name => glGetObjectPtrLabel
+so_name => libGLESv2.so
+func_address => 0x7f82c30ef0
+funcaddr_sub_soaddr => 0x14ef0
+=======================
+
+=======================
+func_name => glGetPointerv
+so_name => libGLESv2.so
+func_address => 0x7f82c30f08
+funcaddr_sub_soaddr => 0x14f08
+=======================
+
+=======================
+func_name => glGetProgramBinary
+so_name => libGLESv2.so
+func_address => 0x7f82c306a0
+funcaddr_sub_soaddr => 0x146a0
+=======================
+
+=======================
+func_name => glGetProgramInterfaceiv
+so_name => libGLESv2.so
+func_address => 0x7f82c307f0
+funcaddr_sub_soaddr => 0x147f0
+=======================
+
+=======================
+func_name => glGetProgramPipelineInfoLog
+so_name => libGLESv2.so
+func_address => 0x7f82c30c78
+funcaddr_sub_soaddr => 0x14c78
+=======================
+
+=======================
+func_name => glGetProgramPipelineiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30930
+funcaddr_sub_soaddr => 0x14930
+=======================
+
+=======================
+func_name => glGetProgramResourceIndex
+so_name => libGLESv2.so
+func_address => 0x7f82c30808
+funcaddr_sub_soaddr => 0x14808
+=======================
+
+=======================
+func_name => glGetProgramResourceiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30840
+funcaddr_sub_soaddr => 0x14840
+=======================
+
+=======================
+func_name => glGetProgramResourceLocation
+so_name => libGLESv2.so
+func_address => 0x7f82c30858
+funcaddr_sub_soaddr => 0x14858
+=======================
+
+=======================
+func_name => glGetProgramResourceName
+so_name => libGLESv2.so
+func_address => 0x7f82c30828
+funcaddr_sub_soaddr => 0x14828
+=======================
+
+=======================
+func_name => glGetQueryiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2fea0
+funcaddr_sub_soaddr => 0x13ea0
+=======================
+
+=======================
+func_name => glGetQueryObjecti64vEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31e90
+funcaddr_sub_soaddr => 0x15e90
+=======================
+
+=======================
+func_name => glGetQueryObjectivEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31e60
+funcaddr_sub_soaddr => 0x15e60
+=======================
+
+=======================
+func_name => glGetQueryObjectui64vEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31ea8
+funcaddr_sub_soaddr => 0x15ea8
+=======================
+
+=======================
+func_name => glGetQueryObjectuiv
+so_name => libGLESv2.so
+func_address => 0x7f82c2feb8
+funcaddr_sub_soaddr => 0x13eb8
+=======================
+
+=======================
+func_name => glGetRenderbufferParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c2f630
+funcaddr_sub_soaddr => 0x13630
+=======================
+
+=======================
+func_name => glGetSamplerParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c305d8
+funcaddr_sub_soaddr => 0x145d8
+=======================
+
+=======================
+func_name => glGetSamplerParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c305c0
+funcaddr_sub_soaddr => 0x145c0
+=======================
+
+=======================
+func_name => glGetShaderPrecisionFormat
+so_name => libGLESv2.so
+func_address => 0x7f82c2f678
+funcaddr_sub_soaddr => 0x13678
+=======================
+
+=======================
+func_name => glGetSynciv
+so_name => libGLESv2.so
+func_address => 0x7f82c304b0
+funcaddr_sub_soaddr => 0x144b0
+=======================
+
+=======================
+func_name => glGetTexLevelParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c30d50
+funcaddr_sub_soaddr => 0x14d50
+=======================
+
+=======================
+func_name => glGetTexLevelParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c30d38
+funcaddr_sub_soaddr => 0x14d38
+=======================
+
+=======================
+func_name => glGetTransformFeedbackVarying
+so_name => libGLESv2.so
+func_address => 0x7f82c30128
+funcaddr_sub_soaddr => 0x14128
+=======================
+
+=======================
+func_name => glGetUniformBlockIndex
+so_name => libGLESv2.so
+func_address => 0x7f82c30388
+funcaddr_sub_soaddr => 0x14388
+=======================
+
+=======================
+func_name => glGetUniformIndices
+so_name => libGLESv2.so
+func_address => 0x7f82c30358
+funcaddr_sub_soaddr => 0x14358
+=======================
+
+=======================
+func_name => glGetUniformuiv
+so_name => libGLESv2.so
+func_address => 0x7f82c301e8
+funcaddr_sub_soaddr => 0x141e8
+=======================
+
+=======================
+func_name => glImportMemoryFdEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32280
+funcaddr_sub_soaddr => 0x16280
+=======================
+
+=======================
+func_name => glInsertEventMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d50
+funcaddr_sub_soaddr => 0x15d50
+=======================
+
+=======================
+func_name => glInvalidateFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c306e8
+funcaddr_sub_soaddr => 0x146e8
+=======================
+
+=======================
+func_name => glInvalidateSubFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c30700
+funcaddr_sub_soaddr => 0x14700
+=======================
+
+=======================
+func_name => glIsFramebuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f7c8
+funcaddr_sub_soaddr => 0x137c8
+=======================
+
+=======================
+func_name => glIsProgramPipeline
+so_name => libGLESv2.so
+func_address => 0x7f82c30910
+funcaddr_sub_soaddr => 0x14910
+=======================
+
+=======================
+func_name => glIsQuery
+so_name => libGLESv2.so
+func_address => 0x7f82c2fe50
+funcaddr_sub_soaddr => 0x13e50
+=======================
+
+=======================
+func_name => glIsRenderbuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2f808
+funcaddr_sub_soaddr => 0x13808
+=======================
+
+=======================
+func_name => glIsSampler
+so_name => libGLESv2.so
+func_address => 0x7f82c30528
+funcaddr_sub_soaddr => 0x14528
+=======================
+
+=======================
+func_name => glIsSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30440
+funcaddr_sub_soaddr => 0x14440
+=======================
+
+=======================
+func_name => glIsTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c30650
+funcaddr_sub_soaddr => 0x14650
+=======================
+
+=======================
+func_name => glIsVertexArray
+so_name => libGLESv2.so
+func_address => 0x7f82c30078
+funcaddr_sub_soaddr => 0x14078
+=======================
+
+=======================
+func_name => glMapBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c2fff8
+funcaddr_sub_soaddr => 0x13ff8
+=======================
+
+=======================
+func_name => glMemoryBarrierByRegion
+so_name => libGLESv2.so
+func_address => 0x7f82c30cd8
+funcaddr_sub_soaddr => 0x14cd8
+=======================
+
+=======================
+func_name => glMemoryBarrier
+so_name => libGLESv2.so
+func_address => 0x7f82c30cc0
+funcaddr_sub_soaddr => 0x14cc0
+=======================
+
+=======================
+func_name => glMinSampleShading
+so_name => libGLESv2.so
+func_address => 0x7f82c310e0
+funcaddr_sub_soaddr => 0x150e0
+=======================
+
+=======================
+func_name => glObjectLabel
+so_name => libGLESv2.so
+func_address => 0x7f82c30ea8
+funcaddr_sub_soaddr => 0x14ea8
+=======================
+
+=======================
+func_name => glObjectPtrLabel
+so_name => libGLESv2.so
+func_address => 0x7f82c30ed8
+funcaddr_sub_soaddr => 0x14ed8
+=======================
+
+=======================
+func_name => glPauseTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c30670
+funcaddr_sub_soaddr => 0x14670
+=======================
+
+=======================
+func_name => glPopDebugGroup
+so_name => libGLESv2.so
+func_address => 0x7f82c30e90
+funcaddr_sub_soaddr => 0x14e90
+=======================
+
+=======================
+func_name => glPopGroupMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d80
+funcaddr_sub_soaddr => 0x15d80
+=======================
+
+=======================
+func_name => glProgramBinary
+so_name => libGLESv2.so
+func_address => 0x7f82c306b8
+funcaddr_sub_soaddr => 0x146b8
+=======================
+
+=======================
+func_name => glProgramParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c306d0
+funcaddr_sub_soaddr => 0x146d0
+=======================
+
+=======================
+func_name => glProgramUniform1f
+so_name => libGLESv2.so
+func_address => 0x7f82c30a08
+funcaddr_sub_soaddr => 0x14a08
+=======================
+
+=======================
+func_name => glProgramUniform1fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b28
+funcaddr_sub_soaddr => 0x14b28
+=======================
+
+=======================
+func_name => glProgramUniform1i
+so_name => libGLESv2.so
+func_address => 0x7f82c30948
+funcaddr_sub_soaddr => 0x14948
+=======================
+
+=======================
+func_name => glProgramUniform1iv
+so_name => libGLESv2.so
+func_address => 0x7f82c30a68
+funcaddr_sub_soaddr => 0x14a68
+=======================
+
+=======================
+func_name => glProgramUniform1ui
+so_name => libGLESv2.so
+func_address => 0x7f82c309a8
+funcaddr_sub_soaddr => 0x149a8
+=======================
+
+=======================
+func_name => glProgramUniform1uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30ac8
+funcaddr_sub_soaddr => 0x14ac8
+=======================
+
+=======================
+func_name => glProgramUniform2f
+so_name => libGLESv2.so
+func_address => 0x7f82c30a20
+funcaddr_sub_soaddr => 0x14a20
+=======================
+
+=======================
+func_name => glProgramUniform2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b40
+funcaddr_sub_soaddr => 0x14b40
+=======================
+
+=======================
+func_name => glProgramUniform2i
+so_name => libGLESv2.so
+func_address => 0x7f82c30960
+funcaddr_sub_soaddr => 0x14960
+=======================
+
+=======================
+func_name => glProgramUniform2iv
+so_name => libGLESv2.so
+func_address => 0x7f82c30a80
+funcaddr_sub_soaddr => 0x14a80
+=======================
+
+=======================
+func_name => glProgramUniform2ui
+so_name => libGLESv2.so
+func_address => 0x7f82c309c0
+funcaddr_sub_soaddr => 0x149c0
+=======================
+
+=======================
+func_name => glProgramUniform2uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30ae0
+funcaddr_sub_soaddr => 0x14ae0
+=======================
+
+=======================
+func_name => glProgramUniform3f
+so_name => libGLESv2.so
+func_address => 0x7f82c30a38
+funcaddr_sub_soaddr => 0x14a38
+=======================
+
+=======================
+func_name => glProgramUniform3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b58
+funcaddr_sub_soaddr => 0x14b58
+=======================
+
+=======================
+func_name => glProgramUniform3i
+so_name => libGLESv2.so
+func_address => 0x7f82c30978
+funcaddr_sub_soaddr => 0x14978
+=======================
+
+=======================
+func_name => glProgramUniform3iv
+so_name => libGLESv2.so
+func_address => 0x7f82c30a98
+funcaddr_sub_soaddr => 0x14a98
+=======================
+
+=======================
+func_name => glProgramUniform3ui
+so_name => libGLESv2.so
+func_address => 0x7f82c309d8
+funcaddr_sub_soaddr => 0x149d8
+=======================
+
+=======================
+func_name => glProgramUniform3uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30af8
+funcaddr_sub_soaddr => 0x14af8
+=======================
+
+=======================
+func_name => glProgramUniform4f
+so_name => libGLESv2.so
+func_address => 0x7f82c30a50
+funcaddr_sub_soaddr => 0x14a50
+=======================
+
+=======================
+func_name => glProgramUniform4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b70
+funcaddr_sub_soaddr => 0x14b70
+=======================
+
+=======================
+func_name => glProgramUniform4i
+so_name => libGLESv2.so
+func_address => 0x7f82c30990
+funcaddr_sub_soaddr => 0x14990
+=======================
+
+=======================
+func_name => glProgramUniform4iv
+so_name => libGLESv2.so
+func_address => 0x7f82c30ab0
+funcaddr_sub_soaddr => 0x14ab0
+=======================
+
+=======================
+func_name => glProgramUniform4ui
+so_name => libGLESv2.so
+func_address => 0x7f82c309f0
+funcaddr_sub_soaddr => 0x149f0
+=======================
+
+=======================
+func_name => glProgramUniform4uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b10
+funcaddr_sub_soaddr => 0x14b10
+=======================
+
+=======================
+func_name => glProgramUniformMatrix2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30b88
+funcaddr_sub_soaddr => 0x14b88
+=======================
+
+=======================
+func_name => glProgramUniformMatrix2x3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30bd0
+funcaddr_sub_soaddr => 0x14bd0
+=======================
+
+=======================
+func_name => glProgramUniformMatrix2x4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30c00
+funcaddr_sub_soaddr => 0x14c00
+=======================
+
+=======================
+func_name => glProgramUniformMatrix3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30ba0
+funcaddr_sub_soaddr => 0x14ba0
+=======================
+
+=======================
+func_name => glProgramUniformMatrix3x2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30be8
+funcaddr_sub_soaddr => 0x14be8
+=======================
+
+=======================
+func_name => glProgramUniformMatrix3x4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30c30
+funcaddr_sub_soaddr => 0x14c30
+=======================
+
+=======================
+func_name => glProgramUniformMatrix4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30bb8
+funcaddr_sub_soaddr => 0x14bb8
+=======================
+
+=======================
+func_name => glProgramUniformMatrix4x2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30c18
+funcaddr_sub_soaddr => 0x14c18
+=======================
+
+=======================
+func_name => glProgramUniformMatrix4x3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c30c48
+funcaddr_sub_soaddr => 0x14c48
+=======================
+
+=======================
+func_name => glPushDebugGroup
+so_name => libGLESv2.so
+func_address => 0x7f82c30e78
+funcaddr_sub_soaddr => 0x14e78
+=======================
+
+=======================
+func_name => glPushGroupMarkerEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31d68
+funcaddr_sub_soaddr => 0x15d68
+=======================
+
+=======================
+func_name => glQueryCounterEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c31e30
+funcaddr_sub_soaddr => 0x15e30
+=======================
+
+=======================
+func_name => glReadBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2fd78
+funcaddr_sub_soaddr => 0x13d78
+=======================
+
+=======================
+func_name => glReleaseShaderCompiler
+so_name => libGLESv2.so
+func_address => 0x7f82c2f8e0
+funcaddr_sub_soaddr => 0x138e0
+=======================
+
+=======================
+func_name => glRenderbufferStorage
+so_name => libGLESv2.so
+func_address => 0x7f82c2f8f8
+funcaddr_sub_soaddr => 0x138f8
+=======================
+
+=======================
+func_name => glRenderbufferStorageMultisample
+so_name => libGLESv2.so
+func_address => 0x7f82c2ffc8
+funcaddr_sub_soaddr => 0x13fc8
+=======================
+
+=======================
+func_name => glRenderbufferStorageMultisampleEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c322f8
+funcaddr_sub_soaddr => 0x162f8
+=======================
+
+=======================
+func_name => glResumeTransformFeedback
+so_name => libGLESv2.so
+func_address => 0x7f82c30688
+funcaddr_sub_soaddr => 0x14688
+=======================
+
+=======================
+func_name => glSampleMaski
+so_name => libGLESv2.so
+func_address => 0x7f82c30d20
+funcaddr_sub_soaddr => 0x14d20
+=======================
+
+=======================
+func_name => glSamplerParameterf
+so_name => libGLESv2.so
+func_address => 0x7f82c30590
+funcaddr_sub_soaddr => 0x14590
+=======================
+
+=======================
+func_name => glSamplerParameterfv
+so_name => libGLESv2.so
+func_address => 0x7f82c305a8
+funcaddr_sub_soaddr => 0x145a8
+=======================
+
+=======================
+func_name => glSamplerParameteri
+so_name => libGLESv2.so
+func_address => 0x7f82c30560
+funcaddr_sub_soaddr => 0x14560
+=======================
+
+=======================
+func_name => glSamplerParameteriv
+so_name => libGLESv2.so
+func_address => 0x7f82c30578
+funcaddr_sub_soaddr => 0x14578
+=======================
+
+=======================
+func_name => glShaderBinary
+so_name => libGLESv2.so
+func_address => 0x7f82c2f940
+funcaddr_sub_soaddr => 0x13940
+=======================
+
+=======================
+func_name => glTexBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c311d0
+funcaddr_sub_soaddr => 0x151d0
+=======================
+
+=======================
+func_name => glTexBufferRange
+so_name => libGLESv2.so
+func_address => 0x7f82c311e8
+funcaddr_sub_soaddr => 0x151e8
+=======================
+
+=======================
+func_name => glTexImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fda8
+funcaddr_sub_soaddr => 0x13da8
+=======================
+
+=======================
+func_name => glTexStorage2D
+so_name => libGLESv2.so
+func_address => 0x7f82c30718
+funcaddr_sub_soaddr => 0x14718
+=======================
+
+=======================
+func_name => glTexStorage2DMultisample
+so_name => libGLESv2.so
+func_address => 0x7f82c30cf0
+funcaddr_sub_soaddr => 0x14cf0
+=======================
+
+=======================
+func_name => glTexStorage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c30730
+funcaddr_sub_soaddr => 0x14730
+=======================
+
+=======================
+func_name => glTexStorageMem2DEXT
+so_name => libGLESv2.so
+func_address => 0x7f82c32190
+funcaddr_sub_soaddr => 0x16190
+=======================
+
+=======================
+func_name => glTexSubImage3D
+so_name => libGLESv2.so
+func_address => 0x7f82c2fdc0
+funcaddr_sub_soaddr => 0x13dc0
+=======================
+
+=======================
+func_name => glTransformFeedbackVaryings
+so_name => libGLESv2.so
+func_address => 0x7f82c30110
+funcaddr_sub_soaddr => 0x14110
+=======================
+
+=======================
+func_name => glUniform1ui
+so_name => libGLESv2.so
+func_address => 0x7f82c30220
+funcaddr_sub_soaddr => 0x14220
+=======================
+
+=======================
+func_name => glUniform1uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30280
+funcaddr_sub_soaddr => 0x14280
+=======================
+
+=======================
+func_name => glUniform2ui
+so_name => libGLESv2.so
+func_address => 0x7f82c30238
+funcaddr_sub_soaddr => 0x14238
+=======================
+
+=======================
+func_name => glUniform2uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c30298
+funcaddr_sub_soaddr => 0x14298
+=======================
+
+=======================
+func_name => glUniform3ui
+so_name => libGLESv2.so
+func_address => 0x7f82c30250
+funcaddr_sub_soaddr => 0x14250
+=======================
+
+=======================
+func_name => glUniform3uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c302b0
+funcaddr_sub_soaddr => 0x142b0
+=======================
+
+=======================
+func_name => glUniform4ui
+so_name => libGLESv2.so
+func_address => 0x7f82c30268
+funcaddr_sub_soaddr => 0x14268
+=======================
+
+=======================
+func_name => glUniform4uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c302c8
+funcaddr_sub_soaddr => 0x142c8
+=======================
+
+=======================
+func_name => glUniformBlockBinding
+so_name => libGLESv2.so
+func_address => 0x7f82c303d8
+funcaddr_sub_soaddr => 0x143d8
+=======================
+
+=======================
+func_name => glUniformMatrix2x3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff20
+funcaddr_sub_soaddr => 0x13f20
+=======================
+
+=======================
+func_name => glUniformMatrix2x4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff50
+funcaddr_sub_soaddr => 0x13f50
+=======================
+
+=======================
+func_name => glUniformMatrix3x2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff38
+funcaddr_sub_soaddr => 0x13f38
+=======================
+
+=======================
+func_name => glUniformMatrix3x4fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff80
+funcaddr_sub_soaddr => 0x13f80
+=======================
+
+=======================
+func_name => glUniformMatrix4x2fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff68
+funcaddr_sub_soaddr => 0x13f68
+=======================
+
+=======================
+func_name => glUniformMatrix4x3fv
+so_name => libGLESv2.so
+func_address => 0x7f82c2ff98
+funcaddr_sub_soaddr => 0x13f98
+=======================
+
+=======================
+func_name => glUnmapBuffer
+so_name => libGLESv2.so
+func_address => 0x7f82c2fed0
+funcaddr_sub_soaddr => 0x13ed0
+=======================
+
+=======================
+func_name => glUseProgramStages
+so_name => libGLESv2.so
+func_address => 0x7f82c30878
+funcaddr_sub_soaddr => 0x14878
+=======================
+
+=======================
+func_name => glValidateProgramPipeline
+so_name => libGLESv2.so
+func_address => 0x7f82c30c60
+funcaddr_sub_soaddr => 0x14c60
+=======================
+
+=======================
+func_name => glVertexAttribBinding
+so_name => libGLESv2.so
+func_address => 0x7f82c30db0
+funcaddr_sub_soaddr => 0x14db0
+=======================
+
+=======================
+func_name => glVertexAttribDivisor
+so_name => libGLESv2.so
+func_address => 0x7f82c305f0
+funcaddr_sub_soaddr => 0x145f0
+=======================
+
+=======================
+func_name => glVertexAttribFormat
+so_name => libGLESv2.so
+func_address => 0x7f82c30d80
+funcaddr_sub_soaddr => 0x14d80
+=======================
+
+=======================
+func_name => glVertexAttribI4i
+so_name => libGLESv2.so
+func_address => 0x7f82c30188
+funcaddr_sub_soaddr => 0x14188
+=======================
+
+=======================
+func_name => glVertexAttribI4iv
+so_name => libGLESv2.so
+func_address => 0x7f82c301b8
+funcaddr_sub_soaddr => 0x141b8
+=======================
+
+=======================
+func_name => glVertexAttribI4ui
+so_name => libGLESv2.so
+func_address => 0x7f82c301a0
+funcaddr_sub_soaddr => 0x141a0
+=======================
+
+=======================
+func_name => glVertexAttribI4uiv
+so_name => libGLESv2.so
+func_address => 0x7f82c301d0
+funcaddr_sub_soaddr => 0x141d0
+=======================
+
+=======================
+func_name => glVertexAttribIFormat
+so_name => libGLESv2.so
+func_address => 0x7f82c30d98
+funcaddr_sub_soaddr => 0x14d98
+=======================
+
+=======================
+func_name => glVertexAttribIPointer
+so_name => libGLESv2.so
+func_address => 0x7f82c30140
+funcaddr_sub_soaddr => 0x14140
+=======================
+
+=======================
+func_name => glVertexBindingDivisor
+so_name => libGLESv2.so
+func_address => 0x7f82c30dc8
+funcaddr_sub_soaddr => 0x14dc8
+=======================
+
+=======================
+func_name => glWaitSync
+so_name => libGLESv2.so
+func_address => 0x7f82c30498
+funcaddr_sub_soaddr => 0x14498
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeInsertVisualStateCallback
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a5994
+funcaddr_sub_soaddr => 0x17e4994
+=======================
+
+=======================
+func_name => Java_org_chromium_ui_base_WindowAndroid_nativeOnVSync
+so_name => libwebviewchromium.so
+func_address => 0x7ea950fd98
+funcaddr_sub_soaddr => 0x374ed98
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsImpl_nativeGetVisibleURL
+so_name => libwebviewchromium.so
+func_address => 0x7ea7ec285c
+funcaddr_sub_soaddr => 0x210185c
+=======================
+
+=======================
+func_name => Java_org_chromium_android_1webview_AwContents_nativeDestroy
+so_name => libwebviewchromium.so
+func_address => 0x7ea75a483c
+funcaddr_sub_soaddr => 0x17e383c
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_webcontents_WebContentsObserverProxy_nativeDestroy
+so_name => libwebviewchromium.so
+func_address => 0x7ea75bc6f8
+funcaddr_sub_soaddr => 0x17fb6f8
+=======================
+
+=======================
+func_name => Java_org_chromium_content_browser_ChildProcessLauncherHelperImpl_nativeSetTerminationInfo
+so_name => libwebviewchromium.so
+func_address => 0x7ea7c15d10
+funcaddr_sub_soaddr => 0x1e54d10
+=======================
+
