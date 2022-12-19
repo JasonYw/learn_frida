@@ -1,3 +1,37 @@
+:method	POST
+:path	/sdk/staticlogin
+:authority	ptlogin6.qidian.com
+:scheme	https
+referer	http://android.qidian.com
+content-type	application/x-www-form-urlencoded
+content-length	637
+accept-encoding	gzip
+user-agent	okhttp/3.12.13
+
+
+areaid	30
+format	json
+returnurl	http://www.qidian.com
+source	1000009
+ticket	0
+username	15801367777
+auto	1
+appid	12
+osversion	Android10_7.9.198_696
+version	696
+sdkversion	220
+devicename	Pixel 2
+devicetype	google_Pixel 2
+signature	ZOk/8J13LxuTJ5/qL0NEkUQW56x6UT1hyg11VcioEi7bf7VzSDliMoqOeGdn a+Ep3IwiVdItZiu8NrkWOr6qGPpaMbZIPOXiM/yVCyrKMDJvKWMU/EfWHQ==
+referer	http://android.qidian.com
+password	LCz7CpsBP3wnIkXkhkI5lEnQgNz2y/UQalciRH0Rlv9Ibe/iv6llzNoN1tZV8GM0Wi44KVmeu6xF
+OeP/AY3Vwed9R2P+jV4NAW0dnPWvakYBJ2WtQ483PkMG+Uoek0nEoX5hMpoC/s1ZI/hfLVV0W7IS
+duv9KZJYsiZmddg+FUs=
+
+autotime	30
+
+
+
 :method: POST
 :path: /sdk/checkcodelogin
 :authority: ptlogin6.qidian.com
@@ -15,7 +49,7 @@ returnurl	http://www.qidian.com
 source	1000009
 ticket	0
 username	15801367777
-sig	t030-654d3M6OWgS94ybu1iDN_RKqZskslygxevZ9TV1PHrfrR2ryMQ_P9mlNZ76IsI4XNklWL_Lkzmeoocu-QghgBdNo9ZYXcf9D4pemsnm4j4Mw4t0_TzRSz6bLt5hT9b
+sig	t030-654d3M6OWgS94ybu1iDN_RKqZskslygxevZ9TV1PHrfrR2ryMQ_P9mlNZ76IsI4XNklWL_Lkzmeoocu-QghgBdNo9ZYXcf9D4pemsnm4j4Mw4t0_TzRSz6bLt5hT9b //滑块
 auto	1
 code	@Qvi
 appid	12
@@ -26,10 +60,110 @@ devicename	Pixel 2
 devicetype	google_Pixel 2
 signature	ZOk/8J13LxuTJ5/qL0NEkUQW56x6UT1hyg11VcioEi7bf7VzSDliMoqOeGdn a+Ep3IwiVdItZiu8NrkWOr6qGPpaMbZIPOXiU2QqFGGL26YTuGJYV90Jrw==
 referer	http://android.qidian.com
-password	CuKU+lFKu139uYPn/J02OsY0Y/nfQC4YmPitPC9Cb+oi+I2OcFsMqjZ5w67HWusr9gRhq4WS05T0
-2htLSLSz1MEMFMQ2EyCQo7VVYjm05oddiMG7hXXX45mH3xMUnYtmejhnb2l2xyi4YUeQTuhPhZPY
-z5cMKvVryGriDoXJz8Q=
+password	CuKU+lFKu139uYPn/J02OsY0Y/nfQC4YmPitPC9Cb+oi+I2OcFsMqjZ5w67HWusr9gRhq4WS05T02htLSLSz1MEMFMQ2EyCQo7VVYjm05oddiMG7hXXX45mH3xMUnYtmejhnb2l2xyi4YUeQTuhPhZPYz5cMKvVryGriDoXJz8Q=
 
 autotime	30
 sessionkey	966bcd45f6794c18bd7745abf451ba1et01361585
 
+
+package a;
+
+import com.tencent.matrix.trace.core.AppMethodBeat;
+
+/* loaded from: classes.dex */
+public class d {
+    static {
+        AppMethodBeat.i(109286);
+        try {
+            System.loadLibrary("d-lib");
+        } catch (Exception | UnsatisfiedLinkError e2) {
+            e2.printStackTrace();
+        }
+        AppMethodBeat.o(109286);
+    }
+
+    public static native byte[] c(String str);
+}
+
+
+package e.a.a;
+
+import com.tencent.matrix.trace.core.AppMethodBeat;
+
+/* loaded from: classes.dex */
+public class c {
+    public static String a(String str) {
+        AppMethodBeat.i(109339);
+        String a2 = a.a(a.d.c(str));
+        AppMethodBeat.o(109339);
+        return a2;
+    }
+}
+
+
+package e.a.a;
+
+import com.huawei.hms.framework.common.ContainerUtils;
+import com.tencent.matrix.trace.core.AppMethodBeat;
+
+/* loaded from: classes.dex */
+public class a {
+
+    /* renamed from: a  reason: collision with root package name */
+    public static final char[] f37649a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".toCharArray();
+
+    static {
+        AppMethodBeat.i(109308);
+        AppMethodBeat.o(109308);
+    }
+
+    public static String a(byte[] bArr) {
+        String str;
+        AppMethodBeat.i(109302);
+        int length = bArr.length;
+        StringBuilder sb = new StringBuilder((bArr.length * 3) / 2);
+        int i2 = length - 3;
+        int i3 = 0;
+        loop0: while (true) {
+            int i4 = 0;
+            while (i3 <= i2) {
+                int i5 = ((bArr[i3] & 255) << 16) | ((bArr[i3 + 1] & 255) << 8) | (bArr[i3 + 2] & 255);
+                char[] cArr = f37649a;
+                sb.append(cArr[(i5 >> 18) & 63]);
+                sb.append(cArr[(i5 >> 12) & 63]);
+                sb.append(cArr[(i5 >> 6) & 63]);
+                sb.append(cArr[i5 & 63]);
+                i3 += 3;
+                int i6 = i4 + 1;
+                if (i4 >= 14) {
+                    break;
+                }
+                i4 = i6;
+            }
+            sb.append(" ");
+        }
+        int i7 = 0 + length;
+        if (i3 != i7 - 2) {
+            if (i3 == i7 - 1) {
+                int i8 = (bArr[i3] & 255) << 16;
+                char[] cArr2 = f37649a;
+                sb.append(cArr2[(i8 >> 18) & 63]);
+                sb.append(cArr2[(i8 >> 12) & 63]);
+                str = "==";
+            }
+            String sb2 = sb.toString();
+            AppMethodBeat.o(109302);
+            return sb2;
+        }
+        int i9 = ((bArr[i3 + 1] & 255) << 8) | ((bArr[i3] & 255) << 16);
+        char[] cArr3 = f37649a;
+        sb.append(cArr3[(i9 >> 18) & 63]);
+        sb.append(cArr3[(i9 >> 12) & 63]);
+        sb.append(cArr3[(i9 >> 6) & 63]);
+        str = ContainerUtils.KEY_VALUE_DELIMITER;
+        sb.append(str);
+        String sb22 = sb.toString();
+        AppMethodBeat.o(109302);
+        return sb22;
+    }
+}
