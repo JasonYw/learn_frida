@@ -1,0 +1,245 @@
+=======================
+func_name => oatdata
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a286000
+funcaddr_sub_soaddr => 0x1000
+=======================
+
+=======================
+func_name => oatlastword
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2d980c
+funcaddr_sub_soaddr => 0x5480c
+=======================
+
+=======================
+func_name => oatdatabimgrelro
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2da000
+funcaddr_sub_soaddr => 0x55000
+=======================
+
+=======================
+func_name => oatdatabimgrelrolastword
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2da320
+funcaddr_sub_soaddr => 0x55320
+=======================
+
+=======================
+func_name => oatbss
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2db000
+funcaddr_sub_soaddr => 0x56000
+=======================
+
+=======================
+func_name => oatbsslastword
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2db9f0
+funcaddr_sub_soaddr => 0x569f0
+=======================
+
+=======================
+func_name => oatbssmethods
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2db000
+funcaddr_sub_soaddr => 0x56000
+=======================
+
+=======================
+func_name => oatbssroots
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2db1d8
+funcaddr_sub_soaddr => 0x561d8
+=======================
+
+=======================
+func_name => oatdex
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2dc000
+funcaddr_sub_soaddr => 0x57000
+=======================
+
+=======================
+func_name => oatdexlastword
+so_name => org.apache.http.legacy.odex
+func_address => 0x773a2dd082
+funcaddr_sub_soaddr => 0x58082
+=======================
+
+=======================
+func_name => oatdata
+so_name => base.odex
+func_address => 0x7736ecb000
+funcaddr_sub_soaddr => 0x1000
+=======================
+
+=======================
+func_name => oatlastword
+so_name => base.odex
+func_address => 0x77378be3d8
+funcaddr_sub_soaddr => 0x9f43d8
+=======================
+
+=======================
+func_name => oatdatabimgrelro
+so_name => base.odex
+func_address => 0x77378bf000
+funcaddr_sub_soaddr => 0x9f5000
+=======================
+
+=======================
+func_name => oatdatabimgrelrolastword
+so_name => base.odex
+func_address => 0x77378c10dc
+funcaddr_sub_soaddr => 0x9f70dc
+=======================
+
+=======================
+func_name => oatbss
+so_name => base.odex
+func_address => 0x77378c2000
+funcaddr_sub_soaddr => 0x9f8000
+=======================
+
+=======================
+func_name => oatbsslastword
+so_name => base.odex
+func_address => 0x77378d7e1c
+funcaddr_sub_soaddr => 0xa0de1c
+=======================
+
+=======================
+func_name => oatbssmethods
+so_name => base.odex
+func_address => 0x77378c2000
+funcaddr_sub_soaddr => 0x9f8000
+=======================
+
+=======================
+func_name => oatbssroots
+so_name => base.odex
+func_address => 0x77378cb6c0
+funcaddr_sub_soaddr => 0xa016c0
+=======================
+
+=======================
+func_name => oatdex
+so_name => base.odex
+func_address => 0x77378d8000
+funcaddr_sub_soaddr => 0xa0e000
+=======================
+
+=======================
+func_name => oatdexlastword
+so_name => base.odex
+func_address => 0x773a270b48
+funcaddr_sub_soaddr => 0x33a6b48
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libshell-superv.2019.so
+func_address => 0x773550d1e8
+funcaddr_sub_soaddr => 0x61e8
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libshell-supervbasic.2019.so
+func_address => 0x77319a7a08
+funcaddr_sub_soaddr => 0xe2a08
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libmmkv.so
+func_address => 0x773182d1c0
+funcaddr_sub_soaddr => 0xf1c0
+=======================
+
+=======================
+func_name => Java_a_b_c
+so_name => libload-jni.so
+func_address => 0x77317e5fe8
+funcaddr_sub_soaddr => 0xfe8
+=======================
+
+=======================
+func_name => oatdata
+so_name => gdt_plugin.odex
+func_address => 0x772f2ec000
+funcaddr_sub_soaddr => 0x1000
+=======================
+
+=======================
+func_name => oatlastword
+so_name => gdt_plugin.odex
+func_address => 0x772f368728
+funcaddr_sub_soaddr => 0x7d728
+=======================
+
+=======================
+func_name => oatdatabimgrelro
+so_name => gdt_plugin.odex
+func_address => 0x772f369000
+funcaddr_sub_soaddr => 0x7e000
+=======================
+
+=======================
+func_name => oatdatabimgrelrolastword
+so_name => gdt_plugin.odex
+func_address => 0x772f3695a8
+funcaddr_sub_soaddr => 0x7e5a8
+=======================
+
+=======================
+func_name => oatbss
+so_name => gdt_plugin.odex
+func_address => 0x772f36a000
+funcaddr_sub_soaddr => 0x7f000
+=======================
+
+=======================
+func_name => oatbsslastword
+so_name => gdt_plugin.odex
+func_address => 0x772f36b374
+funcaddr_sub_soaddr => 0x80374
+=======================
+
+=======================
+func_name => oatbssmethods
+so_name => gdt_plugin.odex
+func_address => 0x772f36a000
+funcaddr_sub_soaddr => 0x7f000
+=======================
+
+=======================
+func_name => oatbssroots
+so_name => gdt_plugin.odex
+func_address => 0x772f36a768
+funcaddr_sub_soaddr => 0x7f768
+=======================
+
+=======================
+func_name => oatdex
+so_name => gdt_plugin.odex
+func_address => 0x772f36c000
+funcaddr_sub_soaddr => 0x81000
+=======================
+
+=======================
+func_name => oatdexlastword
+so_name => gdt_plugin.odex
+func_address => 0x772f5ba4d0
+funcaddr_sub_soaddr => 0x2cf4d0
+=======================
+
+=======================
+func_name => JNI_OnLoad
+so_name => libturingga.so
+func_address => 0x772595fb90
+funcaddr_sub_soaddr => 0x1bb90
+=======================
+
