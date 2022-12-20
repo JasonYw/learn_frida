@@ -75,3 +75,56 @@ array_a.forEach(function(key,value){
 })
 
 //js对象详解与hook
+//过检测1
+function Navigator(){}
+Navigator.prototype.constructor.toString = function(){
+    return "function Navigator() { [native code] }"
+}
+//过检测2
+var oldstr = Function.prototype.toString
+Function.prototype.toString = function(){
+    var res = oldstr.call(this);
+    if(this.name =="Navigator"){
+        console.log(this.name,res)
+        return "function Navigator() { [native code] }"
+    }
+    return res
+}
+//以下两行代码效果相同
+// var navigator = new Navigator();
+var navigator =Object.setPrototypeOf({},Navigator);
+(function(){console.log(navigator.prototype.constructor.toString() === "function Navigator() { [native code] }")}()); //检测方法1
+(function(){console.log(navigator.constructor.toString() === Function.prototype.toString.call(navigator.constructor))}()); //检测方法2
+
+
+
+//存储器
+var obj = Object.defineProperties({},{
+    'p':{
+        get:function(){
+            return 'getter'
+        },
+        set:function(value){
+            console.log('setter: ' + value)
+        }
+    }
+})
+console.log(obj.p) // "getter"
+obj.p = 123// "setter: 123"
+//监听cookie
+// var cookie = document.cookie
+// document = Object.defineProperty(document,'cookie',{
+//     get:function(){
+//         console.log("get:"+cookie)
+//         return cookie;
+//     },
+//     set:function(value){
+//         console.log("set:"+cookie)
+//         cookie = value
+//     }
+// });
+
+//es6 尽量使用let取代var，let没有变量提升，以及块级作用域 const 修饰的变量 只可读不能改
+
+
+
