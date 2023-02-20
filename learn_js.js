@@ -253,3 +253,6 @@ module.exports = {
     window,
     navigator
 }
+
+
+//jsdom https://github.com/jsdom/jsdom 也可以帮助补环境 npm install jsdom
