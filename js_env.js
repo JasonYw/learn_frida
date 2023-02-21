@@ -78,6 +78,7 @@ let mynavigator = {
     appCodeName:"Mozilla",
     languages:["en-US", "en"],
     platform:"Win32",
+    webdriver: false,
 }
 
 let myscreen = {

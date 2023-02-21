@@ -1,5 +1,4 @@
-let { window, navigator,screen } = require('D:\\learn_frida\\js_example\\js_env.js');
-// let { window, navigator,screen } = require('D:\\learn_frida\\js_env.js');
+let { window, navigator,screen } = require('D:\\learn_frida\\js_env.js');
 
 var _0x50a5 = ['descriptio', 'language', 'prototype', 'ptors', 'encode', 'uest', '424903OaQuQn', 'localStora', '&sign=', '_0x52090d', '728729iGHjxZ', '1WapAad', '161813UuqhdB', 'rage', 'led', 'hash', '_0x38f011', 'POST', 'charCodeAt', 'Header', 'ptor', 'readyState', 'onreadysta', 'hasOwnProp', 'applicatio', 'charAt', '_0x1c07be', 'call', 'indexOf', 'n/x-www-fo', 'fromCharCo', '_0x201b65', '1196071sykmIs', 'erty', 'cookieEnab', 'map', '0123456789', 'length', 'userAgent', 'push', 'get', '_0x30d5e0', '31708ChKfFi', '1089334mZrsID', '31tbgDQl', 'Request\x20Er', 'height', 'rm-urlenco', 'http://119', 'JHrCELycAz', '_0x23aaf5', '_0x1be32e', 'isIZUF8ThR', 'Content-ty', '/a6DfO+kW4', 'ror', '38RLqviz', 'abcdef', 'getTimezon', 'width', 'languages', 'getTime', 'replace', 'techange', 'getOwnProp', 'results', 'responseTe', 'XMLHttpReq', 'eOffset', 'setRequest', 'join', '18905qgNzku', 'type', 'gbKB=', '.29.118.11', 'data=', 'ertyDescri', 'XMLHTTP', 'colorDepth', 'forEach'];
 var _0x3aa96e = _0x4576;
