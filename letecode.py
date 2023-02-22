@@ -28,8 +28,6 @@ class Solution:
                             break
                         if isallone(x,y,i):
                             result = pow(i+1,2)
-                            if result == 4:
-                                print(x,y,i)
                         else:
                             break
                 p1 = test(x+1,y)
