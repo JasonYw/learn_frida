@@ -6,7 +6,7 @@ let {
     String,
     Image,
     document
-} = require('D:\\learn_frida\\js_env.js');
+} = require('D:\\learn_frida\\js_env.js'); 
 
 var json={
   "ret": true,

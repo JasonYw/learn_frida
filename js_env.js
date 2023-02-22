@@ -1,12 +1,33 @@
+
+function getMethodHandler(WatchName) {
+    let methodhandler = {
+        apply(target, thisArg, argArray) {
+            let result = Reflect.apply(target, thisArg, argArray)
+            console.log(`[${WatchName}] apply function name is [${target.name}], argArray is [${argArray}], result is [${result}].`)
+            return result
+        },
+        construct(target, argArray, newTarget) {
+            var result = Reflect.construct(target, argArray, newTarget)
+            console.log(`[${WatchName}] construct function name is [${target.name}], argArray is [${argArray}], result is [${JSON.stringify(result)}].`)
+            return result;
+        }
+    }
+    return methodhandler
+}
+
 function getObjhandler(watchname){
     let handler = {
         get:function(target,proKey,receiver){
             let result = Reflect.get(target,proKey,receiver)
             if(result instanceof Object){
-                console.log(`${watchname} get proKey is ${proKey}, result is ${JSON.stringify(result)}`)
-                return new Proxy(result,getObjhandler(`${watchname}.${proKey}`))
+                if (typeof result === "function") {
+                    console.log(`${watchname} getting proKey is ${proKey} , it is function`)
+                } else {
+                    console.log(`${watchname} getting proKey is ${proKey}, result is ${JSON.stringify(result)}`);
+                }
+                return new Proxy(result, getObjhandler(`${watchname}.${proKey}`))
             }
-            console.log(`${watchname} get proKey is ${proKey}, result is ${result}`)
+            console.log(`${watchname} getting proKey is ${proKey?.description ?? proKey}, result is ${result}`);
             return result
         },
         set:function(target,proKey,value,receiver){
@@ -66,10 +87,21 @@ function getObjhandler(watchname){
     return handler
 }
 
-let mywindow = {
-    XMLHttpRequest: function(){},
-    sessionStorage:{},
-    localStorage:{},
+let mylocation = {
+    "protocol": "https:",
+    "href": "http://www.dtasecurity.cn/flightlist",
+    "pathname": "/flightlist",
+    "host": "www.dtasecurity.cn",
+    "hostname": "www.dtasecurity.cn",
+}
+
+
+
+let rawIndexOf = String.prototype.indexOf
+String.prototype.indexOf = function(str) {
+    var res = rawIndexOf.call(this,str)
+    console.log(`[String] "${this}" is indexof "${str}",res is ${res}`)
+    return res
 }
 
 let mynavigator = {
@@ -87,11 +119,62 @@ let myscreen = {
     colorDepth:24,
 }
 
+let Image = function() {}
+
+
+
+let mydocument = {
+    "head": {},
+    "documentElement": {
+        "getAttribute": function () {
+        }
+    },
+    "readyState": "complete",
+    "addEventListener": function () {
+    },
+    "createElement": function () {
+        return {}
+    },
+    "getElementsByTagName": function (str) {
+        console.log(str)
+        if (str === "meta") {
+            let metaRes = []
+            metaRes["meta-pro"] = {
+                "content": {
+                    "length": 6
+                }
+            }
+            return metaRes
+        }
+    }
+}
+
+let mywindow = {
+    XMLHttpRequest: function(){},
+    sessionStorage:{},
+    localStorage:{},
+    navigator:mynavigator,
+    location:mylocation,
+    scrollTo:function(){},
+    document:mydocument,
+}
+
+
+
+
+
+
 const window = new Proxy(Object.assign(global,mywindow),getObjhandler("window"))
 const navigator = new Proxy(Object.create(mynavigator),getObjhandler("navigator"))
 const screen = new Proxy(Object.create(myscreen),getObjhandler("screen"))
+const document = new Proxy(mydocument,getObjhandler("document"))
+const location = new Proxy(mylocation,getObjhandler("location")) //Object.getOwnPropertyDescriptors(location) 看是否是继承还是自身的方法多
 module.exports = {
     window,
     navigator,
     screen,
+    location,
+    String,
+    Image,
+    document
 }
