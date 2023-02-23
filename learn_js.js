@@ -477,3 +477,23 @@ function getObjhandler(WatchName) {
 //     document
 // }
 //jsdom https://github.com/jsdom/jsdom 也可以帮助补环境 npm install jsdom
+
+//验证码逆向关键点 图片的识别
+//hook canvas
+let _drawImage = CanvasRenderingContext2D.prototype.drawImage
+CanvasRenderingContext2D.prototype.drawImage = function() {
+    console.log("drawImage",[...arguments])
+    return _drawImage.apply(this,arguments)
+}
+
+let _putImageData = CanvasRenderingContext2D.prototype.putImageData
+CanvasRenderingContext2D.prototype.putImageData = function() {
+    console.log("putImageData",[...arguments])
+    return _putImageData.apply(this,arguments)
+}
+
+let _getImageData = CanvasRenderingContext2D.prototype.getImageData
+CanvasRenderingContext2D.prototype.getImageData = function() {
+    console.log("getImageData",[...arguments])
+    return _getImageData.apply(this,arguments)
+}
