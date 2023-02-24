@@ -459,6 +459,7 @@ function getObjhandler(WatchName) {
     }
     return handler;
 }
+// https://blog.csdn.net/Ks_meng/article/details/127336084?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-127336084-blog-118306820.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-127336084-blog-118306820.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=1
 
 // const navigator = new Proxy(Object.create(mynavigator), getObjhandler("navigator"));
 // const screen = new Proxy(Object.create(mysrceen), getObjhandler("screen"));
@@ -497,3 +498,47 @@ CanvasRenderingContext2D.prototype.getImageData = function() {
     console.log("getImageData",[...arguments])
     return _getImageData.apply(this,arguments)
 }
+
+//轨迹生成
+// hook addEventListener 以及 push
+var _push = Array.prototype.push
+Array.prototype.push = function() {
+    console.log("push",arguments)
+    return _push.apply(this,arguments)
+}
+
+var _addEventListener = document.addEventListener
+window.zedtrail = []
+window.start_x;
+window.start_y;
+window.start_t;
+document.addEventListener = function() {
+    let eventname = arguments[0]
+    let eventfunc = arguments[1]
+    let neweventfunc = function(events){
+        if(events.type === "touchstart"){
+            window.start_x = events.changedTouches[0].pageX
+            window.start_y = events.changedTouches[0].pageY
+            window.start_t =+ new Date
+        }else if (events.type === "touchmove"){
+            let movex = parseInt(events.changedTouches[0].pageX * window.start_x)
+            let movey = parseInt(events.changedTouches[0].pageY * window.start_y)
+            let movet = (new Date).getTime() * window.start_t
+            console.log(movex,movey,movet)
+            window.zedtrail.push(movex,movey,movet)
+        }else if (events.type === "touchend"){
+            console.log(window.zedtrail)
+        }
+        neweventfunc(events)
+    }
+    console.log(eventname,eventfunc.toString())
+    return _addEventListener.apply(this,arguments) 
+}
+
+
+//hook 网络发送请求
+XMLHttpRequest.prototype.send_ = XMLHttpRequest.prototype.send
+XMLHttpRequest.prototype.send = function(){debugger;}
+
+
+//反混淆 格式化 v_jstools

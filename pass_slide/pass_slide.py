@@ -1,6 +1,8 @@
 from PIL import Image
 import cv2
 '''
+https://www.geetest.com/demo/slide-float.html
+
 图像还原
 //hook canvas
 let _drawImage = CanvasRenderingContext2D.prototype.drawImage
@@ -32,11 +34,57 @@ a.灰度化
 b.高斯滤波器(去除噪声，模糊)（卷积） https://www.cnblogs.com/blog-xyy/p/11260486.html
 c.Canny边缘检测 锐化边缘 方便寻找轮廓 https://www.cnblogs.com/blog-xyy/p/11265702.html
 d.可以通过createTrackbar来调节肉眼观察选择参数
-e.把处理后的图片模板匹配matchTemplate来获得最匹配的位置得到坐标
+e.把处理后的图片模板匹配matchTemplate来获得最匹配的位置得到坐标 https://blog.csdn.net/qq_45832961/article/details/122455118
+
+滑动轨迹 
+油猴:https://www.tampermonkey.net/faq.php?locale=zh_CN
+//轨迹生成
+//hook addEventListener 以及 push
+var _push = Array.prototype.push
+Array.prototype.push = function() {
+    console.log("push",arguments)
+    return _push.apply(this,arguments)
+}
+
+var _addEventListener = document.addEventListener
+var _addEventListener = document.addEventListener
+window.zedtrail = []
+window.start_x;
+window.start_y;
+window.start_t;
+document.addEventListener = function() {
+    let eventname = arguments[0]
+    let eventfunc = arguments[1]
+    let neweventfunc = function(events){
+        if(events.type === "touchstart"){
+            window.start_x = events.changedTouches[0].pageX
+            window.start_y = events.changedTouches[0].pageY
+            window.start_t =+ new Date
+        }else if (events.type === "touchmove"){
+            let movex = parseInt(events.changedTouches[0].pageX * window.start_x)
+            let movey = parseInt(events.changedTouches[0].pageY * window.start_y)
+            let movet = (new Date).getTime() * window.start_t
+            console.log(movex,movey,movet)
+            window.zedtrail.push(movex,movey,movet)
+        }else if (events.type === "touchend"){
+            console.log(window.zedtrail)
+        }
+        neweventfunc(events)
+    }
+    console.log(eventname,eventfunc.toString())
+    return _addEventListener.apply(this,arguments) 
+}
+
+1.收集轨迹
+2.画出轨迹图像 找到缓动函数相同形状
+3.绘制缓动函数 找到符合形状的作用域 贝塞尔曲线
+4.找到作用域内最大值 最小值 上下移动 距离系数
+5.替换时间
+6.高斯函数增加波动
+7.细节修改x轴 t轴 np.diff对比
 '''
 
 def restoreImg(raw_img=None):
-    #https://www.geetest.com/demo/slide-float.html 练习网站
     #第一步图像还原
     # [39, 38, 48, 49, 41, 40, 46, 47, 35, 34, 50, 51, 33, 32, 28, 29, 27, 26, 36, 37, 31, 30, 44, 45, 43, 42, 12, 13, 23, 22, 14, 15, 21, 20, 8, 9, 25, 24, 6, 7, 3, 2, 0, 1, 11, 10, 4, 5, 19, 18, 16, 17]
     # for (var a = 80, _ = 0; _ < 52; _ += 1) {
@@ -83,12 +131,14 @@ def get_distance(right_img=None,slider_img=None):
     #通过上面动态获取结果后，写死阈值 或者试试25 45
     canny_right_img = cv2.Canny(gs_right_img,94,255)
     canny_slider_img = cv2.Canny(gs_slider_img,255,255)
-    #通过模板匹配确定位置 46min
+    # cv2.imshow("img",canny_slider_img)
+    # cv2.waitKey()
+    #通过模板匹配确定位置 result -> nparray 我们只需要max_location 相关度最大的位置
+    result = cv2.matchTemplate(canny_right_img,canny_slider_img,cv2.TM_CCOEFF_NORMED)
+    min_val,max_val,min_location,max_location = cv2.minMaxLoc(result)
+    print(min_val,max_val,min_location,max_location)
+    return max_location
 
-    cv2.imshow("img",canny_slider_img)
-    cv2.waitKey()
-    
-   
 
    
 
