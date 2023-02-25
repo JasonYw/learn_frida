@@ -2,5 +2,8 @@
   "dependencies": {
     "@types/frida-gum": "^18.1.0",
     "jsdom": "^20.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.0"
   }
 }

@@ -535,10 +535,32 @@ document.addEventListener = function() {
     return _addEventListener.apply(this,arguments) 
 }
 
+//hook storage
+var _setItem =  Storage.prototype.setItem
+Storage.prototype.setItem = function(key,value){
+    console.log("setItem",key,value)
+    return _setItem.call(this,key,value)
+}
 
-//hook 网络发送请求
-XMLHttpRequest.prototype.send_ = XMLHttpRequest.prototype.send
-XMLHttpRequest.prototype.send = function(){debugger;}
+//hook open send
+var keys = Object.getOwnPropertyNames(XMLHttpRequest.prototype)
+for(var i = 0;i<keys.length;i++){
+    if (keys[i] === "send" || keys[i] === "open"){
+        window["_"+keys[i]] = XMLHttpRequest.prototype[keys[i]] //不能用var 会有闭包问题 会被覆盖掉
+        XMLHttpRequest.prototype[keys[i]] = function(){
+            debugger
+            console.log(keys[i],arguments)
+            return window["_"+keys[i]].apply(this,arguments)
+        }
+    }    
+}
 
 
-//反混淆 格式化 v_jstools
+
+//chrome插件
+//反混淆 格式化 v_jstools插件
+//js替换 ReRes插件 https://github.com/annnhan/ReRes
+//油猴 插件
+//AST在线工具 https://astexplorer.net/
+
+

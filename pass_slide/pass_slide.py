@@ -1,7 +1,12 @@
 from PIL import Image
 import cv2
 '''
+案例
 https://www.geetest.com/demo/slide-float.html
+
+教程
+https://blog.csdn.net/qq_42857999/article/details/122364731
+
 
 图像还原
 //hook canvas
