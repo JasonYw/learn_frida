@@ -555,6 +555,30 @@ for(var i = 0;i<keys.length;i++){
     }    
 }
 
+//hook eval
+var _eval = eval
+eval = function(code) {
+    console.log("eval",code)
+    return _eval(code)
+}
+
+//hook监测点 直接toString看原方法源码是否被改 所以也要hook toString,也可以通过
+eval.toString = function() {
+    return "function eval() { [native code] }"
+}
+//Function.prototype.toString.call 这个也是监测点 
+var _toString = Function.prototype.toString
+Function.prototype.toString = function(){
+    var result = _toString.apply(this,arguments)
+    //要加过滤否则很卡
+    if(result.includes("eval")){
+        console.log('Function.prototype.toString',arguments,'result',result)
+        return "function eval() { [native code] }"
+    }
+    return result
+}
+
+//也可以通过 Function.prototype.toString.call() 查看函数源码
 
 
 //chrome插件
