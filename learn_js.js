@@ -581,6 +581,7 @@ Function.prototype.toString = function(){
 //也可以通过 Function.prototype.toString.call() 查看函数源码
 
 
+
 //chrome插件
 //反混淆 格式化 v_jstools插件
 //js替换 ReRes插件 https://github.com/annnhan/ReRes
@@ -588,3 +589,8 @@ Function.prototype.toString = function(){
 //AST在线工具 https://astexplorer.net/
 
 
+//js混淆
+//代码加密 eval Emscripten WebAssembly等
+//代码混淆 变量混淆 常量混淆 控制流平谈化 调试保护
+//Uglifyjs terser obfuscator jsfuck aaencode jjencode
+//obfuscator sojson jshaman
