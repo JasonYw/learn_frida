@@ -7,6 +7,7 @@ https://www.geetest.com/demo/slide-float.html
 教程
 https://blog.csdn.net/qq_42857999/article/details/122364731
 https://blog.csdn.net/zhp980121/article/details/129088754
+https://blog.csdn.net/Yy_Rose/article/details/127933247
 
 
 图像还原
