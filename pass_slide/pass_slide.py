@@ -221,7 +221,6 @@ def showEaseOutQuit(trail_list,distance=171):
     #如果生层的函数图包含我们的轨迹可以截取，通过linspace前两个参数，指定x的取值范围 截取轨迹
     x = numpy.linspace(-0.5,1,len(trail_list)).tolist() 
     trail_x = [distance/7.59375*func(i) for i in x]
-    trail_y = [random.randint(-3,6) for i in x]
     #太平滑会被检测,使用高斯函数进行波动 scale 越大波动越大
     delta_pt = abs(numpy.random.normal(scale=2,size=len(trail_list)))
     for index in range(len(delta_pt)):
@@ -236,14 +235,16 @@ def showEaseOutQuit(trail_list,distance=171):
     trail_x.insert(1,0)
     trail_t.insert(0,0)
     trail_t.insert(0,0)
+    # trail_y = numpy.linspace(-10,15,len(trail_list) - len([random.uniform(-40,-18),0]))
+    trail_y = numpy.arctan(numpy.linspace(-10,15,len(trail_list) - len([random.uniform(-40,-18),0]))).tolist()
     trail_y.insert(0,random.randint(-50,-20))
     trail_y.insert(1,0)
     #导出轨迹
     result =[]
     for idx in range(len(trail_list)):
-        result.append([trail_x[idx],trail_y[idx],int(trail_t[idx])])
+        result.append([trail_x[idx],int(trail_y[idx]),int(trail_t[idx])])
     return result
 
 if __name__ == "__main__":
     drawTrail(trail_list)
-    showEaseOutQuit(trail_list)
+    print(showEaseOutQuit(trail_list))
