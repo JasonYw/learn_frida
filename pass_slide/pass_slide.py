@@ -1,5 +1,8 @@
 from PIL import Image
 import cv2
+import matplotlib.pyplot as plt 
+import numpy
+import random
 '''
 案例
 https://www.geetest.com/demo/slide-float.html
@@ -91,6 +94,56 @@ document.addEventListener = function() {
 7.细节修改x轴 t轴 np.diff对比
 '''
 
+trail_list = [
+    [-41, -44, 0],
+    [0, 0, 0],
+    [0, 1, 4],
+    [1, 1, 28],
+    [2, 2, 36],
+    [3, 2, 43],
+    [5, 2, 51],
+    [6, 2, 58],
+    [9, 2, 68],
+    [14, 2, 73],
+    [21, 2, 82],
+    [28, 2, 90],
+    [37, 2, 98],
+    [48, 2, 105],
+    [58, 0, 114],
+    [69, -2, 121],
+    [80, -3, 129],
+    [91, -3, 137],
+    [99, -3, 145],
+    [108, -3, 153],
+    [115, -3, 163],
+    [121, -3, 170],
+    [128, -3, 177],
+    [134, -3, 186],
+    [136, -3, 193],
+    [139, -3, 202],
+    [140, -3, 210],
+    [141, -3, 219],
+    [142, -3, 226],
+    [144, -3, 243],
+    [146, -3, 269],
+    [147, -2, 274],
+    [149, -2, 282],
+    [151, -2, 289],
+    [153, -2, 297],
+    [155, -1, 306],
+    [156, 0, 315],
+    [157, 0, 389],
+    [158, 0, 406],
+    [161, 2, 423],
+    [163, 4, 427],
+    [165, 4, 455],
+    [167, 4, 509],
+    [168, 5, 542],
+    [169, 6, 564],
+    [171, 6, 586],
+    [171, 6, 1292],
+]
+
 def restoreImg(raw_img=None):
     #第一步图像还原
     # [39, 38, 48, 49, 41, 40, 46, 47, 35, 34, 50, 51, 33, 32, 28, 29, 27, 26, 36, 37, 31, 30, 44, 45, 43, 42, 12, 13, 23, 22, 14, 15, 21, 20, 8, 9, 25, 24, 6, 7, 3, 2, 0, 1, 11, 10, 4, 5, 19, 18, 16, 17]
@@ -113,7 +166,7 @@ def restoreImg(raw_img=None):
     return right_img
 
 
-def get_distance(right_img=None,slider_img=None):
+def getDistance(right_img=None,slider_img=None):
     right_img = cv2.imread('right.jpg')
     slider_img = cv2.imread('slider.jpg')
     #灰度化
@@ -147,10 +200,50 @@ def get_distance(right_img=None,slider_img=None):
     return max_location
 
 
-   
+def drawTrail(trail_list):
+    #获取已知轨迹，通过轨迹去网上查缓动函数 找一个 与轨迹相似的 之后获取公式 在生成轨迹
+    x_trail =[] 
+    y_trail =[] 
+    t_trail =[] 
+    for trail in trail_list:
+        x_trail.append(trail[0])
+        y_trail.append(trail[1])
+        t_trail.append(trail[2])
+    # print(t_trail)
+    # plt.plot(t_trail,x_trail)
+    # plt.show()
 
 
-
+def showEaseOutQuit(trail_list,distance=171):
+    def func(x):
+        return 1- pow(1-x,5) + 6.69375
+    # print(func(-0.5),func(1))
+    #如果生层的函数图包含我们的轨迹可以截取，通过linspace前两个参数，指定x的取值范围 截取轨迹
+    x = numpy.linspace(-0.5,1,len(trail_list)).tolist() 
+    trail_x = [distance/7.59375*func(i) for i in x]
+    trail_y = [random.randint(-3,6) for i in x]
+    #太平滑会被检测,使用高斯函数进行波动 scale 越大波动越大
+    delta_pt = abs(numpy.random.normal(scale=2,size=len(trail_list)))
+    for index in range(len(delta_pt)):
+        change_y = int(trail_x[index] + delta_pt[index])
+        #增加一个规则 y代表时间 所以后一项必须大于前一项
+        # if index + 1 < len(trail_list) and y[index+1] > change_y:
+        trail_x[index] = change_y
+    #做t轴替换，这个时间可以
+    trail_t = numpy.linspace(26,1057,len(trail_list)).tolist() 
+    #定制化处理，极验滑块会第一个点会会随机所以要在 x t 第一个增加随机数，范围
+    trail_x.insert(0,random.randint(-50,-20))
+    trail_x.insert(1,0)
+    trail_t.insert(0,0)
+    trail_t.insert(0,0)
+    trail_y.insert(0,random.randint(-50,-20))
+    trail_y.insert(1,0)
+    #导出轨迹
+    result =[]
+    for idx in range(len(trail_list)):
+        result.append([trail_x[idx],trail_y[idx],int(trail_t[idx])])
+    return result
 
 if __name__ == "__main__":
-    get_distance()
+    drawTrail(trail_list)
+    showEaseOutQuit(trail_list)
