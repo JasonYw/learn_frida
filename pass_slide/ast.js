@@ -238,7 +238,20 @@ traverse(ast,{
         ){
             path.remove()
         }
-    }
+    },
+    // MemberExpression(path){
+    //   if(
+    //       path.node.object &&
+    //       path.node.object.object &&
+    //       path.node.object.object.callee &&
+    //       path.node.object.object.callee.object.name == "QBLnx" && 
+    //       path.node.object.object.callee.property.name == "$_Db" && 
+    //       path.node.property.value &&
+    //       path.node.object.property.value 
+    //   ){
+    //     path.replaceInline(types.valueToNode(QBLnx.$_Db()[path.node.object.property.value ][path.node.property.value]))
+    //   }
+    // },
 })
 // 将ast转成js代码，{jsescOption: {"minimal": true}} unicode -> 中文
 let {code} = generator(ast, opts = {jsescOption: {"minimal": true}});
