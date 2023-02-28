@@ -212,7 +212,7 @@ traverse(ast,{
     },
     //删除字符串和int类型多余的属性，让其正常展示
     "StringLiteral|NumericLiteral"(path){
-        path.node.extra && delete path.node.extra
+      path.node.extra && delete path.node.extra
     },
     //删除QBLnx.$_CM的引用
     VariableDeclaration(path){
