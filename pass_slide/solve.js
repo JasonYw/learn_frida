@@ -847,15 +847,13 @@ m = {
 
     return this["$_FGP"](t);
   }
-},
+}
 
 function getH(t) {
   var e = m["$_FCH"](t);
   return e["res"] + e["end"];
 }
 
-// console.log(encode_track(t=[[37, 42, 0],[2, 0, 98],[6, 0, 17],[10, 0, 15],[11, 0, 17],[8, 0, 17],[6, 0, 16],[4, 0, 17],[0, 0, 18]]))
-// console.log(getU())
 var argH = [
   154,
   27,
@@ -1454,4 +1452,11 @@ var argH = [
 
 
 
+// console.log(encode_track(t=[[37, 42, 0],[2, 0, 98],[6, 0, 17],[10, 0, 15],[11, 0, 17],[8, 0, 17],[6, 0, 16],[4, 0, 17],[0, 0, 18]]))
+// console.log(getU())
 console.log(getH(argH))
+
+// var e = m["$_FCH"](argH);
+// console.log(e["res"] + e["end"])
+
+
