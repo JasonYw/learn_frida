@@ -3,6 +3,10 @@ import cv2
 import matplotlib.pyplot as plt 
 import numpy
 import random
+import requests
+import time
+session = requests.Session()
+
 '''
 案例
 https://www.geetest.com/demo/slide-float.html
@@ -245,6 +249,17 @@ def showEaseOutQuit(trail_list,distance=171):
         result.append([trail_x[idx],int(trail_y[idx]),int(trail_t[idx])])
     return result
 
+def startRequest():
+    session.get("https://www.geetest.com/demo/slide-float.html")
+    t = int(time.time())
+    res = session.get(f"https://www.geetest.com/demo/gt/register-slide?t={t}").json()
+    challenge = res.get("challenge")
+    gt = res.get("gt")
+    session.get(f"https://apiv6.geetest.com/gettype.php?gt={gt}&callback=geetest_{t}")
+    w = ""
+    session.get(f'https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}') 
+
 if __name__ == "__main__":
-    drawTrail(trail_list)
-    print(showEaseOutQuit(trail_list))
+    # drawTrail(trail_list)
+    # print(showEaseOutQuit(trail_list))
+    startRequest()

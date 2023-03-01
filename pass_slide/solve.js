@@ -854,6 +854,343 @@ function getH(t) {
   return e["res"] + e["end"];
 }
 
+
+var V = function () {
+
+  var t,
+    n = Object["create"] || function () {
+
+      function n() {
+        var $_DBDB_ = QBLnx.$_Db()[9][19];
+        for (; $_DBDB_ !== QBLnx.$_Db()[6][19];) {
+          switch ($_DBDB_) { }
+        }
+      }
+      return function (t) {
+
+        var e;
+        return n["prototype"] = t, e = new n(), n["prototype"] = null, e;
+      };
+    }(),
+    e = {},
+    r = e["lib"] = {},
+    i = r["Base"] = {
+      "extend": function (t) {
+
+        var e = n(this);
+        return t && e["mixIn"](t), e["hasOwnProperty"]("init") && this["init"] !== e["init"] || (e["init"] = function () {
+
+          e["$super"]["init"]["apply"](this, arguments);
+        }), (e["init"]["prototype"] = e)["$super"] = this, e;
+      },
+      "create": function () {
+
+        var t = this["extend"]();
+        return t["init"]["apply"](t, arguments), t;
+      },
+      "init": function () {
+
+      },
+      "mixIn": function (t) {
+
+        for (var e in t) t["hasOwnProperty"](e) && (this[e] = t[e]);
+        t["hasOwnProperty"]("toString") && (this["toString"] = t["toString"]);
+      }
+    },
+    u = r["WordArray"] = i["extend"]({
+      "init": function (t, e) {
+
+        t = this["words"] = t || [], e != undefined ? this["sigBytes"] = e : this["sigBytes"] = 4 * t["length"];
+      },
+      "concat": function (t) {
+
+        var e = this["words"],
+          n = t["words"],
+          r = this["sigBytes"],
+          i = t["sigBytes"];
+        if (this["clamp"](), r % 4) for (var o = 0; o < i; o++) {
+          var s = n[o >>> 2] >>> 24 - o % 4 * 8 & 255;
+          e[r + o >>> 2] |= s << 24 - (r + o) % 4 * 8;
+        } else for (o = 0; o < i; o += 4) e[r + o >>> 2] = n[o >>> 2];
+        return this["sigBytes"] += i, this;
+      },
+      "clamp": function () {
+
+        var t = this["words"],
+          e = this["sigBytes"];
+        t[e >>> 2] &= 4294967295 << 32 - e % 4 * 8, t["length"] = Math["ceil"](e / 4);
+      }
+    }),
+    o = e["enc"] = {},
+    l = o["Latin1"] = {
+      "parse": function (t) {
+
+        for (var e = t["length"], n = [], r = 0; r < e; r++) n[r >>> 2] |= (255 & t["charCodeAt"](r)) << 24 - r % 4 * 8;
+        return new u["init"](n, e);
+      }
+    },
+    s = o["Utf8"] = {
+      "parse": function (t) {
+
+        return l["parse"](unescape(encodeURIComponent(t)));
+      }
+    },
+    a = r["BufferedBlockAlgorithm"] = i["extend"]({
+      "reset": function () {
+
+        this["$_HCT"] = new u["init"](), this["$_HDd"] = 0;
+      },
+      "$_HEu": function (t) {
+
+        "string" == typeof t && (t = s["parse"](t)), this["$_HCT"]["concat"](t), this["$_HDd"] += t["sigBytes"];
+      },
+      "$_HFY": function (t) {
+
+        var e = this["$_HCT"],
+          n = e["words"],
+          r = e["sigBytes"],
+          i = this["blockSize"],
+          o = r / (4 * i),
+          s = (o = t ? Math["ceil"](o) : Math["max"]((0 | o) - this["$_HGR"], 0)) * i,
+          a = Math["min"](4 * s, r);
+        if (s) {
+          for (var _ = 0; _ < s; _ += i) this["$_HHV"](n, _);
+          var c = n["splice"](0, s);
+          e["sigBytes"] -= a;
+        }
+        return new u["init"](c, a);
+      },
+      "$_HGR": 0
+    }),
+    _ = e["algo"] = {},
+    c = r["Cipher"] = a["extend"]({
+      "cfg": i["extend"](),
+      "createEncryptor": function (t, e) {
+
+        return this["create"](this["$_HIh"], t, e);
+      },
+      "init": function (t, e, n) {
+
+        this["cfg"] = this["cfg"]["extend"](n), this["$_HJR"] = t, this["$_IAf"] = e, this["reset"]();
+      },
+      "reset": function () {
+
+        a["reset"]["call"](this), this["$_IBF"]();
+      },
+      "process": function (t) {
+
+        return this["$_HEu"](t), this["$_HFY"]();
+      },
+      "finalize": function (t) {
+
+        return t && this["$_HEu"](t), this["$_ICx"]();
+      },
+      "keySize": 4,
+      "ivSize": 4,
+      "$_HIh": 1,
+      "$_IDx": 2,
+      "$_IEY": function (c) {
+
+        return {
+          "encrypt": function (t, e, n) {
+
+            e = l["parse"](e), n && n["iv"] || ((n = n || {})["iv"] = l["parse"]("0000000000000000"));
+            for (var r = m["encrypt"](c, t, e, n), i = r["ciphertext"]["words"], o = r["ciphertext"]["sigBytes"], s = [], a = 0; a < o; a++) {
+              var _ = i[a >>> 2] >>> 24 - a % 4 * 8 & 255;
+              s["push"](_);
+            }
+            return s;
+          }
+        };
+      }
+    }),
+    h = e["mode"] = {},
+    f = r["BlockCipherMode"] = i["extend"]({
+      "createEncryptor": function (t, e) {
+
+        return this["Encryptor"]["create"](t, e);
+      },
+      "init": function (t, e) {
+
+        this["$_IFY"] = t, this["$_IGv"] = e;
+      }
+    }),
+    d = h["CBC"] = ((t = f["extend"]())["Encryptor"] = t["extend"]({
+      "processBlock": function (t, e) {
+
+        var n = this["$_IFY"],
+          r = n["blockSize"];
+        (function s(t, e, n) {
+
+          var r = this["$_IGv"];
+          if (r) {
+            var i = r;
+            this["$_IGv"] = undefined;
+          } else var i = this["$_IHN"];
+          for (var o = 0; o < n; o++) t[e + o] ^= i[o];
+        })["call"](this, t, e, r), n["encryptBlock"](t, e), this["$_IHN"] = t["slice"](e, e + r);
+      }
+    }), t),
+    p = (e["pad"] = {})["Pkcs7"] = {
+      "pad": function (t, e) {
+
+        for (var n = 4 * e, r = n - t["sigBytes"] % n, i = r << 24 | r << 16 | r << 8 | r, o = [], s = 0; s < r; s += 4) o["push"](i);
+        var a = u["create"](o, r);
+        t["concat"](a);
+      }
+    },
+    g = r["BlockCipher"] = c["extend"]({
+      "cfg": c["cfg"]["extend"]({
+        "mode": d,
+        "padding": p
+      }),
+      "reset": function () {
+
+        c["reset"]["call"](this);
+        var t = this["cfg"],
+          e = t["iv"],
+          n = t["mode"];
+        if (this["$_HJR"] == this["$_HIh"]) var r = n["createEncryptor"];
+        this["$_IIC"] && this["$_IIC"]["$_IJM"] == r ? this["$_IIC"]["init"](this, e && e["words"]) : (this["$_IIC"] = r["call"](n, this, e && e["words"]), this["$_IIC"]["$_IJM"] = r);
+      },
+      "$_HHV": function (t, e) {
+
+        this["$_IIC"]["processBlock"](t, e);
+      },
+      "$_ICx": function () {
+
+        var t = this["cfg"]["padding"];
+        if (this["$_HJR"] == this["$_HIh"]) {
+          t["pad"](this["$_HCT"], this["blockSize"]);
+          var e = this["$_HFY"](!0);
+        }
+        return e;
+      },
+      "blockSize": 4
+    }),
+    v = r["CipherParams"] = i["extend"]({
+      "init": function (t) {
+
+        this["mixIn"](t);
+      }
+    }),
+    m = r["SerializableCipher"] = i["extend"]({
+      "cfg": i["extend"](),
+      "encrypt": function (t, e, n, r) {
+
+        r = this["cfg"]["extend"](r);
+        var i = t["createEncryptor"](n, r),
+          o = i["finalize"](e),
+          s = i["cfg"];
+        return v["create"]({
+          "ciphertext": o,
+          "key": n,
+          "iv": s["iv"],
+          "algorithm": t,
+          "mode": s["mode"],
+          "padding": s["padding"],
+          "blockSize": t["blockSize"],
+          "formatter": r["format"]
+        });
+      }
+    }),
+    y = [],
+    w = [],
+    b = [],
+    x = [],
+    E = [],
+    C = [],
+    S = [],
+    T = [],
+    k = [],
+    A = [];
+  !function () {
+
+    for (var t = [], e = 0; e < 256; e++) t[e] = e < 128 ? e << 1 : e << 1 ^ 283;
+    var n = 0,
+      r = 0;
+    for (e = 0; e < 256; e++) {
+      var i = r ^ r << 1 ^ r << 2 ^ r << 3 ^ r << 4;
+      i = i >>> 8 ^ 255 & i ^ 99, y[n] = i;
+      var o = t[w[i] = n],
+        s = t[o],
+        a = t[s],
+        _ = 257 * t[i] ^ 16843008 * i;
+      b[n] = _ << 24 | _ >>> 8, x[n] = _ << 16 | _ >>> 16, E[n] = _ << 8 | _ >>> 24, C[n] = _;
+      _ = 16843009 * a ^ 65537 * s ^ 257 * o ^ 16843008 * n;
+      S[i] = _ << 24 | _ >>> 8, T[i] = _ << 16 | _ >>> 16, k[i] = _ << 8 | _ >>> 24, A[i] = _, n ? (n = o ^ t[t[t[a ^ o]]], r ^= t[t[r]]) : n = r = 1;
+    }
+  }();
+  var D = [0, 1, 2, 4, 8, 16, 32, 64, 128, 27, 54],
+    M = _["AES"] = g["extend"]({
+      "$_IBF": function () {
+
+        if (!this["$_JAy"] || this["$_JBu"] !== this["$_IAf"]) {
+          for (var t = this["$_JBu"] = this["$_IAf"], e = t["words"], n = t["sigBytes"] / 4, r = 4 * (1 + (this["$_JAy"] = 6 + n)), i = this["$_JCD"] = [], o = 0; o < r; o++) if (o < n) i[o] = e[o]; else {
+            var s = i[o - 1];
+            o % n ? 6 < n && o % n == 4 && (s = y[s >>> 24] << 24 | y[s >>> 16 & 255] << 16 | y[s >>> 8 & 255] << 8 | y[255 & s]) : (s = y[(s = s << 8 | s >>> 24) >>> 24] << 24 | y[s >>> 16 & 255] << 16 | y[s >>> 8 & 255] << 8 | y[255 & s], s ^= D[o / n | 0] << 24), i[o] = i[o - n] ^ s;
+          }
+          for (var a = this["$_JDS"] = [], _ = 0; _ < r; _++) {
+            o = r - _;
+            if (_ % 4) s = i[o]; else s = i[o - 4];
+            a[_] = _ < 4 || o <= 4 ? s : S[y[s >>> 24]] ^ T[y[s >>> 16 & 255]] ^ k[y[s >>> 8 & 255]] ^ A[y[255 & s]];
+          }
+        }
+      },
+      "encryptBlock": function (t, e) {
+
+        this["$_JEk"](t, e, this["$_JCD"], b, x, E, C, y);
+      },
+      "$_JEk": function (t, e, n, r, i, o, s, a) {
+
+        for (var _ = this["$_JAy"], c = t[e] ^ n[0], u = t[e + 1] ^ n[1], l = t[e + 2] ^ n[2], h = t[e + 3] ^ n[3], f = 4, d = 1; d < _; d++) {
+          var p = r[c >>> 24] ^ i[u >>> 16 & 255] ^ o[l >>> 8 & 255] ^ s[255 & h] ^ n[f++],
+            g = r[u >>> 24] ^ i[l >>> 16 & 255] ^ o[h >>> 8 & 255] ^ s[255 & c] ^ n[f++],
+            v = r[l >>> 24] ^ i[h >>> 16 & 255] ^ o[c >>> 8 & 255] ^ s[255 & u] ^ n[f++],
+            m = r[h >>> 24] ^ i[c >>> 16 & 255] ^ o[u >>> 8 & 255] ^ s[255 & l] ^ n[f++];
+          c = p, u = g, l = v, h = m;
+        }
+        p = (a[c >>> 24] << 24 | a[u >>> 16 & 255] << 16 | a[l >>> 8 & 255] << 8 | a[255 & h]) ^ n[f++], g = (a[u >>> 24] << 24 | a[l >>> 16 & 255] << 16 | a[h >>> 8 & 255] << 8 | a[255 & c]) ^ n[f++], v = (a[l >>> 24] << 24 | a[h >>> 16 & 255] << 16 | a[c >>> 8 & 255] << 8 | a[255 & u]) ^ n[f++], m = (a[h >>> 24] << 24 | a[c >>> 16 & 255] << 16 | a[u >>> 8 & 255] << 8 | a[255 & l]) ^ n[f++];
+        t[e] = p, t[e + 1] = g, t[e + 2] = v, t[e + 3] = m;
+      },
+      "keySize": 8
+    });
+  return e["AES"] = g["$_IEY"](M), e["AES"];
+}();
+
+
+var rt = function () {
+  function t() {
+    var $_DBEBz = QBLnx.$_Db()[9][19];
+    for (; $_DBEBz !== QBLnx.$_Db()[3][18];) {
+      switch ($_DBEBz) {
+        case QBLnx.$_Db()[6][19]:
+          return (65536 * (1 + Math["random"]()) | 0)["toString"](16)["substring"](1);
+          break;
+      }
+    }
+  }
+  return function () {
+
+    return t() + t() + t() + t();
+  };
+}();
+
+r = {
+  "$_CCEc": (Ot = rt(), function (t) {
+    return !0 === t && (Ot = rt()), Ot;
+  }),
+}
+
+
+function getHarg() {
+  arg1 = '{"lang":"zh-cn","userresponse":"2255555525558776","passtime":158,"imgload":40,"aa":"c./.0-(6n!e!7xtuzyy(((((yyst(!!(C11111S1111120199","ep":{"v":"7.8.9","$_BIB":false,"me":true,"tm":{"a":1677634593452,"b":1677634593646,"c":1677634593646,"d":0,"e":0,"f":1677634593453,"g":1677634593458,"h":1677634593461,"i":1677634593461,"j":1677634593466,"k":1677634593463,"l":1677634593466,"m":1677634593641,"n":1677634593644,"o":1677634593647,"p":1677634593750,"q":1677634593750,"r":1677634593752,"s":1677634593752,"t":1677634593752,"u":1677634593752},"td":-1},"h9s9":"1816378497","rp":"82a8512f4a9d832a195a24173e27ef01"}'
+  // arg1 = gt["stringify"](o)
+  console.log(arg2)
+  return V["encrypt"](arg1, r["$_CCEc"]())
+}
+
+
 var argH = [
   154,
   27,
@@ -1449,14 +1786,52 @@ var argH = [
   242
 ]
 
+function getUserresponse(t, e) {
+  var $_DAJEJ = QBLnx.$_Db()[3][19];
+  for (; $_DAJEJ !== QBLnx.$_Db()[12][16];) {
+    switch ($_DAJEJ) {
+      case QBLnx.$_Db()[9][19]:
+        for (var n = e["slice"](-2), r = [], i = 0; i < n["length"]; i++) {
+          var o = n["charCodeAt"](i);
+          r[i] = 57 < o ? o - 87 : o - 48;
+        }
+        n = 36 * r[0] + r[1];
+        var s,
+          a = Math["round"](t) + n,
+          _ = [[], [], [], [], []],
+          c = {},
+          u = 0;
+        $_DAJEJ = QBLnx.$_Db()[6][18];
+        break;
+      case QBLnx.$_Db()[15][18]:
+        i = 0;
+        for (var l = (e = e["slice"](0, -2))["length"]; i < l; i++) c[s = e["charAt"](i)] || (c[s] = 1, _[u]["push"](s), u = 5 == ++u ? 0 : u);
+        var h,
+          f = a,
+          d = 4,
+          p = "",
+          g = [1, 2, 5, 10, 50];
+        $_DAJEJ = QBLnx.$_Db()[6][17];
+        break;
+      case QBLnx.$_Db()[9][17]:
+        while (0 < f) 0 <= f - g[d] ? (h = parseInt(Math["random"]() * _[d]["length"], 10), p += _[d][h], f -= g[d]) : (_["splice"](d, 1), g["splice"](d, 1), d -= 1);
+        return p;
+        break;
+    }
+  }
+}
+
+
+
+
 
 
 
 // console.log(encode_track(t=[[37, 42, 0],[2, 0, 98],[6, 0, 17],[10, 0, 15],[11, 0, 17],[8, 0, 17],[6, 0, 16],[4, 0, 17],[0, 0, 18]]))
 // console.log(getU())
-console.log(getH(argH))
-
-// var e = m["$_FCH"](argH);
-// console.log(e["res"] + e["end"])
+// console.log(getH(argH))
+// console.log(getHarg())
+// console.log(getUserresponse(41, "d90afb127c6372f1e7a15828152c00bdab"))
+// H(t, i["challenge"])
 
 
