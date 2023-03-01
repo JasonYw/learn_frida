@@ -1,12 +1,13 @@
 const parser = require("@babel/parser");
 const traverse = require("@babel/traverse").default;
 const types = require("@babel/types");
+const { count } = require("console");
 const generator = require("@babel/generator").default;
 const fs = require("fs");
 // 需要解码的文件位置
-let encode_file = "decode_fullpage.js"
+let encode_file = "ori_fullpage.js"
 // 解码后的文件位置
-let decode_file = "ast_fullpage.js"
+let decode_file = "decode_fullpage.js"
 // 读取需要解码的js文件, 注意文件编码为utf-8格式
 let jscode = fs.readFileSync(encode_file, {encoding: "utf-8"});
 // 将js代码修转成AST语法树
@@ -148,7 +149,37 @@ cKFnp.$_Dt = function () {
 };
 
 traverse(ast,{
-
+    CallExpression(path){
+        if(
+            path.node.callee &&
+            path.node.callee.name &&
+            path.node.callee.name.includes("$_") && 
+            path.node.arguments.length === 1 &&
+            path.node.arguments[0].type === "NumericLiteral"
+        ){
+            path.replaceInline(types.valueToNode(cKFnp.$_Cd(path.node.arguments[0].value)))
+        }
+    },
+    "StringLiteral|NumericLiteral"(path){
+        path.node.extra && delete path.node.extra
+    },
+    VariableDeclaration(path){
+        if(
+            path.node.declarations &&
+            path.node.declarations.length == 3 &&
+            path.node.declarations[0].type == "VariableDeclarator" &&
+            path.node.declarations[0].init &&
+            path.node.declarations[0].init.object &&
+            path.node.declarations[0].init.object.name =="cKFnp" &&
+            path.node.declarations[0].init.property.name == "$_Cd"
+        ){
+            var node_1 = path.getNextSibling()
+            var node_2 = path.getNextSibling().getNextSibling()
+            path.remove()
+            node_1.remove()
+            node_2.remove()
+        }
+    }
 })
 
 
