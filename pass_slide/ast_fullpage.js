@@ -179,9 +179,69 @@ traverse(ast,{
             node_1.remove()
             node_2.remove()
         }
+    },
+    ForStatement(path){
+        var init_var_path = path.getPrevSibling()
+        if(
+            init_var_path.node 
+            && init_var_path.node.type == "VariableDeclaration" 
+            && init_var_path.node.declarations.length == 1 
+            && init_var_path.node.declarations[0].init 
+            && init_var_path.node.declarations[0].init.object 
+            && init_var_path.node.declarations[0].init.object.property 
+            && init_var_path.node.declarations[0].init.object.property.type == "NumericLiteral" 
+            && init_var_path.node.declarations[0].init.object.object.callee.object.name == "cKFnp" 
+            && path.node.body.body[0].type == "SwitchStatement"
+        ){
+            var arg_r = init_var_path.node.declarations[0].init.object.property.value
+            var arg_l = init_var_path.node.declarations[0].init.property.value
+            var init_arg = cKFnp.$_Dt()[arg_r][arg_l]
+
+            var arg_r = path.node.test.right.object.property.value
+            var arg_l = path.node.test.right.property.value
+            var break_arg = cKFnp.$_Dt()[arg_r][arg_l]
+
+            var case_list =  path.node.body.body[0].cases
+            var result_body = []
+            for(var i=0;i<case_list.length;i++){
+                for(;init_arg != break_arg;){
+                    //获取case的条件
+                    var arg_r = case_list[i].test.object.property.value;
+                    var arg_l = case_list[i].test.property.value;
+                    var case_init = cKFnp.$_Dt()[arg_r][arg_l];
+
+                    //判断是否等于当前的条件
+                    if(init_arg == case_init) {
+                        var target_body = case_list[i].consequent
+
+                        if(
+                            types.isBreakStatement(target_body[target_body.length-1]) 
+                            && types.isExpressionStatement(target_body[target_body.length-2]) 
+                            && target_body[target_body.length - 2].expression.right.object.object.callee.object.name == "cKFnp"
+                        ){
+
+                            var arg_r = target_body[target_body.length - 2].expression.right.object.property.value
+                            var arg_l = target_body[target_body.length - 2].expression.right.property.value
+                            init_arg = cKFnp.$_Dt()[arg_r][arg_l]
+
+                            target_body.pop()
+                            target_body.pop()
+
+                        }else if(types.isBreakStatement(target_body[target_body.length-1]) ){
+                            target_body.pop()
+                        }
+                        result_body = result_body.concat(target_body)
+                        break
+                    }else{
+                        break
+                    }
+                }
+            }
+            path.replaceWithMultiple(result_body)
+            init_var_path.remove()
+        }
     }
 })
-
 
 // 将ast转成js代码，{jsescOption: {"minimal": true}} unicode -> 中文
 let {code} = generator(ast, opts = {jsescOption: {"minimal": true}});
