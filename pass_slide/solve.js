@@ -1,5 +1,6 @@
 window = function () { }
 ht = function () { }
+pe = {}
 
 QBLnx.$_Ak = function () {
   var $_DBGFd = 2;
@@ -2408,17 +2409,6 @@ m = {
     return this["$_FBL"](e);
   }
 },
-arg1 = '{"gt":"019924a82c70bb123aae90d483087f94","challenge":"e15f808024b1af0a60fcf33b193b3c6a","offline":false,"new_captcha":true,"product":"float","width":"300px","https":true,"api_server":"apiv6.geetest.com","protocol":"https://","type":"fullpage","static_servers":["static.geetest.com/","dn-staticdown.qbox.me/"],"voice":"/static/js/voice.1.2.2.js","click":"/static/js/click.3.0.7.js","beeline":"/static/js/beeline.1.0.1.js","fullpage":"/static/js/fullpage.9.1.3.js","slide":"/static/js/slide.7.8.9.js","geetest":"/static/js/geetest.6.0.9.js","aspect_radio":{"slide":103,"click":128,"voice":128,"beeline":50},"cc":16,"ww":true,"i":"6148!!7436!!CSS1Compat!!1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!2!!3!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!1!!-1!!-1!!-1!!0!!0!!0!!0!!1920!!250!!1920!!1032!!zh-CN!!zh-CN,zh!!-1!!1!!24!!Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36!!1!!1!!1920!!1080!!1920!!1032!!1!!1!!1!!-1!!Win32!!0!!-8!!a8656578c14b46f87f510459bb08f21e!!0!!internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer!!20!!-1!!0!!16!!Arial,ArialBlack,ArialNarrow,BookAntiqua,BookmanOldStyle,Calibri,Cambria,CambriaMath,Century,CenturyGothic,CenturySchoolbook,ComicSansMS,Consolas,Courier,CourierNew,Garamond,Georgia,Helvetica,Impact,LucidaBright,LucidaCalligraphy,LucidaConsole,LucidaFax,LucidaHandwriting,LucidaSans,LucidaSansTypewriter,LucidaSansUnicode,MicrosoftSansSerif,MonotypeCorsiva,MSGothic,MSPGothic,MSReferenceSansSerif,MSSansSerif,MSSerif,PalatinoLinotype,SegoePrint,SegoeScript,SegoeUI,SegoeUILight,SegoeUISemibold,SegoeUISymbol,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3!!1677653466284!!-1!!-1!!-1!!12!!-1!!-1!!-1!!5!!-1!!-1"}'
-arg2 = "d835bd5e145f8716" //Qe["$_CCGQ"]()
-$_BEZ()["encrypt1"](arg1, arg2)
-
-var i = m["$_EJv"]($_BEZ()["encrypt1"](arg1, arg2))
-
-
-pe ={}
-
-
-
 
 X = function () {
   function n() {
@@ -2864,11 +2854,309 @@ X = function () {
 }();
 
 
-function CCFD(e) {
-  var t = new X()["encrypt"](this["$_CCGQ"](e));
-  while (!t || 256 !== t["length"]) t = new X()["encrypt"](this["$_CCGQ"](!0));
-  return t;
+ae = function () {
+  function e() {
+    return (65536 * (1 + Math["random"]()) | 0)["toString"](16)["substring"](1);
+  }
+  return function () {
+    return e() + e() + e() + e();
+  };
 }
+
+
+// function Qe(e, t) {
+//   var n = this,
+//     r = new nt(e);
+//   r["remUnit"] && !isNaN(r["remUnit"]) && (de = "rem", ve = r["remUnit"]), r["autoLanguage"] && !r["hasOwnProperty"]("lang") && (r["lang"] = $_Jd($_BAb())), r["https"] && (r["protocol"] = "https://"), e["debugConfig"] && r["$_BIJL"](e["debugConfig"]), "float" !== r["product"] && "popup" !== r["product"] && "custom" !== r["product"] && "bind" !== r["product"] && (r["product"] = "float"), (A || k) && "float" === r["product"] && (r["product"] = "popup"), k && "custom" === r["product"] && (r["product"] = "popup"), r["cc"] = pe["hardwareConcurrency"] || 0, r["supportWorker"] = "undefined" != typeof Worker, n["$_BJAj"] = new Me(), n["$_CDL"] = r, n["$_CED"] = e, n["$_BJBl"] = new Z(n), n["$_HIA"] = new Q(function (e, t) {
+//     n["$_BJCv"](e, t);
+//   }), n["$_BJDL"] = t, n["$_BJER"] = A ? 3 : 0, n["$_BJFw"] = A ? "web_mobile" : "web", n["$_BJGQ"] = -1, n["$_CDL"]["$_DAq"] = {
+//     "pt": n["$_BJER"]
+//   }, n["$_HIA"]["$_FDs"](Ne), n["$_BJHX"] = new ke(), n["$_BBCW"] = new Re();
+// }
+// Qe["prototype"] = {
+//   "$_BJCv": function (e, t) {
+//     var n = this,
+//       r = n["$_CAHM"],
+//       o = n["$_HIA"],
+//       i = n["$_BJBl"],
+//       s = n["$_CDL"],
+//       a = "bind" === s["product"];
+//     if (!o["$_HJA"](t) && t !== Ye) if (o["$_HJA"](Ne) || (r && r["$_CAIM"](e, t), r && r["$_CAJx"]()), o["$_HJA"](Ne)) n["$_CBAB"] = n["$_BECi"]()["$_CJs"](function () {
+//       o["$_FDs"](Pe), i["$_HFA"](Ne), s["vip_content"] && n["$_CBBD"]();
+//     });else if (o["$_HJA"](Xe)) r["$_GDT"](n["$_CBCP"]);else if (o["$_HJA"](qe)) r["$_CBDW"](), a && s["pure"] && i["$_HFA"](qe);else if (o["$_HJA"](ze)) r["$_CBEO"](), i["$_HFA"](Ke);else if (o["$_HJA"]([Ue])) r["$_CBFc"](n["$_CBGi"]), S(function () {
+//       a ? (n["$_BJHX"] = new ke(), r["$_CBHG"](), s["pure"] && S(function () {
+//         r["$_CBIx"]();
+//       }, 300)) : n["$_BJHX"]["$_HGl"](), i["$_HFA"](We);
+//     }, 400);else if (o["$_HJA"]([Ve, "click_error"])) a && (s["pure"] ? (r && r["$_CBHG"](), S(function () {
+//       r && r["$_CBIx"]();
+//     }, 300)) : (r && r["$_CBIx"](), r && r["$_CBJA"]())), n["$_CCAI"] && "error_21" === n["$_CCAI"]["code"] && r && r["$_CCBJ"](), i["$_HFA"]($e, n["$_CCAI"]);else if (o["$_HJA"](FAIL)) o["$_FDs"](qe), i["$_HFA"](FAIL);else if (o["$_HJA"](Ge)) a && !s["pure"] && r["$_CCCk"](), r["$_CCDp"]();else if (o["$_HJA"](Je)) return;
+//   },
+//   "$_BECi": function () {
+//     var t = this,
+//       n = t["$_CDL"];
+//     if (!n["gt"] || !n["challenge"]) return V(H("config_lack", t));
+//     var e = t["$_BJAj"]["$_BFHk"]();
+//     t["$_CCEH"] = e, t["$_CED"]["cc"] = n["cc"], t["$_CED"]["ww"] = n["supportWorker"], t["$_CED"]["i"] = e;
+//     var r = t["$_CCFD"](),
+//       o = $_BEZ()["encrypt1"](ge["stringify"](t["$_CED"]), t["$_CCGQ"]()),
+//       i = m["$_EJv"](o),
+//       s = {
+//         "gt": t["$_CED"]["gt"],
+//         "challenge": t["$_CED"]["challenge"],
+//         "lang": n["lang"],
+//         "pt": t["$_BJER"],
+//         "client_type": t["$_BJFw"],
+//         "w": i + r
+//       };
+//     return c(n, m["$_FBL"]("fFtZ0VaY4Gg"), s)["$_CJs"](function (e) {
+//       return e["status"] === $e ? V(G(e, t, "/get.php")) : (n["$_BIJL"](e["data"]), n["apiserver"] && (n["api_server"] = n["apiserver"]), n["staticservers"] && (n["static_servers"] = n["staticservers"]), n["debugConfig"] && n["$_BIJL"](n["debugConfig"]), t["$_CAHM"] = new tt(t), t["$_CCHs"](), t["$_CAHM"]["$_CCIj"]);
+//     }, function () {
+//       return V(H("url_get", t));
+//     });
+//   },
+//   "$_CCHs": function () {
+//     var t = this["$_CDL"],
+//       n = this["$_HIA"];
+//     this["$"];
+//     try {
+//       if (L && L["getElementById"] && L["getElementById"]("geetest_data_share_plugin")) {
+//         var e = L["getElementById"]("geetest_data_share_plugin"),
+//           r = new CustomEvent("geetestPlugin", {
+//             "detail": {
+//               "challenge": t["challenge"],
+//               "gt": t["gt"]
+//             }
+//           });
+//         e["addEventListener"]("geetestEvent", function (e) {
+//           "bind" !== t["product"] && n["$_FDs"](Ge);
+//         }), e["dispatchEvent"](r);
+//       }
+//     } catch (o) {}
+//   },
+//   "$_HGl": function () {
+//     var e = this;
+//     e["$_CAHM"] && e["$_CAHM"]["$_HGl"](), e["$_BJBl"]["$_HGl"](), e["$_BJHX"]["$_HGl"](), e["$_BBCW"]["$_HGl"](), e["$_CCJi"] && e["$_CCJi"]["$_HGl"]();
+//   },
+//   "$_CFw": function (e) {
+//     return this["$_CCAI"] = e, this["$_HIA"]["$_FDs"](Ve), this;
+//   },
+//   "$_DCG": function (e) {
+//     var t = this;
+//     return "bind" === t["$_CDL"]["product"] || t["$_CBAB"]["$_CJs"](function () {
+//       t["$_CAHM"]["$_DCG"](e);
+//     }), t;
+//   },
+//   "$_CDAs": function (e) {
+//     this["$_CDBO"] = e;
+//   },
+//   "$_CDCS": function (e) {
+//     this["$_CDDG"] = e;
+//   },
+//   "$_CDEW": function (e) {
+//     var t = this;
+//     t["$_CBAB"]["$_CJs"](function () {
+//       t["$_CAHM"]["$_CDEW"](e);
+//     });
+//   },
+//   "$_CDFj": function (e) {
+//     var t = this;
+//     t["$_CBAB"]["$_CJs"](function () {
+//       t["$_CAHM"]["$_CDFj"](e);
+//     });
+//   },
+//   "$_CDGL": function () {
+//     var e = this;
+//     e["$_CDL"]["vip_content"] ? !0 !== e["$_CDHT"] && (e["$_CDHT"] = !0, e["$_CDIq"]()) : e["$_CDJQ"]();
+//   },
+//   "$_CDIq": function () {
+//     var e = this;
+//     T(e["$_CEAp"]), !e["powworkerdone"] && e["pow_progress"] ? e["$_CEAp"] = S(function () {
+//       e["powworkerdone"] = !0, e["$_CCJi"]["$_BDAF"](), e["$_CDIq"]();
+//     }, 2000) : e["powworkerdone"] || !e["pow_starting"] || e["pow_wait_once"] ? (e["$_CDHT"] = !1, e["pow_wait_once"] = !1, e["$_CDJQ"]()) : (e["pow_wait_once"] = !0, e["$_CEAp"] = S(function () {
+//       e["$_CDIq"]();
+//     }, 500));
+//   },
+//   "$_CDJQ": function () {
+//     var t = this,
+//       e = t["$_CDL"];
+//     t["$_CEBB"]();
+//     var n = {};
+//     n["gt"] = e["gt"], n["challenge"] = e["challenge"], n["lang"] = e["lang"] || "zh-cn", n["pt"] = t["$_BJER"], n["client_type"] = t["$_BJFw"], n["w"] = t["$_CECj"], c(t["$_CDL"], m["$_FBL"]("fEkexGxOwUyY"), n)["$_CJs"](function (e) {
+//       if (e["status"] === $e) return V(G(e, t, "/ajax.php"));
+//       t["$_CEDo"](e["data"]);
+//     }, function () {
+//       return V(H("url_ajax", t));
+//     });
+//   },
+//   "$_CEBB": function () {
+//     var i = this,
+//       e = i["$_BJHX"]["$_BFHk"](),
+//       t = i["$_BJHX"]["$_BFIv"](),
+//       n = i["$_BJAj"]["$_BFIv"](),
+//       r = i["$_BBCW"]["$_BFHk"](),
+//       o = i["$_CDL"],
+//       s = $_GA() - ot;
+//     i["$_CEEj"] = "";
+//     for (var a = [["lang", o["lang"] || "zh-cn"], ["type", "fullpage"], ["tt", function (e, t, n) {
+//         if (!t || !n) return e;
+//         var r,
+//           o = 0,
+//           i = e,
+//           s = t[0],
+//           a = t[2],
+//           c = t[4];
+//         while (r = n["substr"](o, 2)) {
+//           o += 2;
+//           var _ = parseInt(r, 16),
+//             l = String["fromCharCode"](_),
+//             u = (s * _ * _ + a * _ + c) % e["length"];
+//           i = i["substr"](0, u) + l + i["substr"](u);
+//         }
+//         return i;
+//       }(e, o["c"], o["s"]) || -1], ["light", r || -1], ["s", I(m["$_EIA"](t))], ["h", I(m["$_EIA"](n))], ["hh", I(n)], ["hi", I(i["$_CCEH"])], ["vip_order", i["vip_order"] || -1], ["ct", i["ct"] || -1], ["ep", i["$_CEFQ"]() || -1], ["passtime", s || -1], ["rp", I(o["gt"] + o["challenge"] + s)]], c = 0; c < a["length"]; c++) i["$_CEEj"] += "\"" + a[c][0] + "\":" + ge["stringify"](a[c][1]) + ",";
+//     var _ = $_BEZ();
+//     i["$_CEGO"] = function l() {
+//       var t = ["bbOy"];
+//       return function (e) {
+//         t["push"](e["toString"]());
+//         var r = "";
+//         !function o(e, t) {
+//           function n(e) {
+//             var t = 5381,
+//               n = e["length"],
+//               r = 0;
+//             while (n--) t = (t << 5) + t + e["charCodeAt"](r++);
+//             return t &= ~(1 << 31);
+//           }
+//           100 < new Date()["getTime"]() - t["getTime"]() && (e = "qwe"), r = "{" + i["$_CEEj"] + "\"captcha_token\":\"" + n(o["toString"]() + n(n["toString"]()) + n(e["toString"]())) + "\"}";
+//         }(t["shift"](), new Date()), i["$_CECj"] = m["$_EJv"](_["encrypt"](r, i["$_CCGQ"]()));
+//       };
+//     }(), i["$_CEGO"]("");
+//   },
+//   "$_CEDo": function (e) {
+//     var t,
+//       n = this,
+//       r = n["$_CDL"];
+//     if ("success" === e["result"]) {
+//       var o = e["validate"]["split"]("|")[0];
+//       n["$_CBGi"] = {
+//         "geetest_challenge": r["challenge"],
+//         "geetest_validate": o,
+//         "geetest_seccode": o + "|jordan"
+//       }, n["$_CEHv"] = e["score"], t = Ue;
+//     } else {
+//       if ("forbidden" === e["result"]) return V(H("server_forbidden", n));
+//       t = Xe, n["$_CBCP"] = e["result"];
+//     }
+//     n["$_HIA"]["$_FDs"](t);
+//   },
+//   "$_CEIF": function () {
+//     return this["$_CBGi"];
+//   },
+//   "$_CEJk": function () {
+//     this["$_CBGi"] = null;
+//   },
+//   "$_HEh": function (e, t) {
+//     return this["$_BJBl"]["$_HEh"](e, t), this;
+//   },
+//   "$_CFAa": function () {
+//     return this["$_CAHM"] && this["$_CAHM"]["$_CFAa"](), this;
+//   },
+//   "$_JAt": function () {
+//     this["$_HIA"]["$_FDs"](ze);
+//   },
+//   "$_JBH": function () {
+//     this["$_HIA"]["$_FDs"](qe);
+//   },
+//   "$_CFBK": function () {
+//     var e = this["$_CAHM"],
+//       t = this["$_CDL"],
+//       n = this["$_HIA"];
+//     "bind" === t["product"] && ("function" != typeof this["$_CDDG"] || this["$_CDDG"]()) && (this["$_BJGQ"] = 2, n["$_HJA"](Pe) ? n["$_FDs"](Ge) : n["$_HJA"](ze) ? n["$_FDs"](qe) : n["$_HJA"]([Ve, Ue]) && e && e["$_CFAa"]()["$_CJs"](function () {
+//       n["$_FDs"](Ge);
+//     }));
+//   },
+//   "$_CBBD": function () {
+//     var i = this,
+//       e = i["$_CDL"];
+//     i["powworkerdone"] = !1, i["pow_starting"] = !1, i["$_CCJi"] = new be({
+//       "config": e,
+//       "beforeStart": function () {
+//         i["pow_starting"] = !0;
+//       },
+//       "progress": function () {
+//         i["pow_progress"] = !0;
+//       },
+//       "done": function (e, t) {
+//         if (i["powworkerdone"] = !0, e) {
+//           var n = e["join"]();
+//           if (k || M) {
+//             for (var r = n["split"](","), o = r["length"] - 1; 0 <= o; o--) r[o] = Math["round"](r[o]);
+//             n = r["join"]();
+//           }
+//           i["vip_order"] = n, i["ct"] = t;
+//         } else i["vip_order"] = "", i["ct"] = "";
+//         i["$_CDHT"] && i["$_CDIq"]();
+//       }
+//     });
+//   },
+//   "$_CFCb": function () {
+//     var e = this,
+//       t = e["$_CDL"];
+//     e["$_CCJi"] && (e["powworkerdone"] = !1, e["pow_starting"] = !1, e["pow_progress"] = !1, e["vip_order"] = "", e["ct"] = "", e["$_CCJi"]["$_BCJo"]({
+//       "vip_content": t["vip_content"],
+//       "vip_answer": t["vip_answer"],
+//       "vip_key": t["vip_key"]
+//     }));
+//   },
+//   "$_CFDB": function () {
+//     this["$_BJBl"]["$_HFA"](Ke);
+//   },
+//   "$_CEFQ": function () {
+//     var e = {
+//       "v": "9.1.2"
+//     };
+//     this["$_CDL"];
+//     e["de"] = Ae["deviceorientation"], e["te"] = Ae["touchEvent"], e["$_BBS"] = Ae["mouseEvent"];
+//     var t = !A && Se;
+//     return e["ven"] = t["vendor"] || -1, e["ren"] = t["renderer"] || -1, e["fp"] = this["$_BJHX"]["$_BDHq"], e["lp"] = this["$_BJHX"]["$_BDIb"], e["em"] = {}, W([], e["em"]), e["tm"] = new Te()["$_BDCw"](), e["dnf"] = "dnf", e["by"] = this["$_BJGQ"], e;
+//   },
+//   "$_CCGQ": function (e) {
+//     return this["$_CDL"]["aeskey"] && !e || (this["$_CDL"]["aeskey"] = ae()), this["$_CDL"]["aeskey"];
+//   },
+//   "$_CCFD": function (e) {
+//     var t = new X()["encrypt"](this["$_CCGQ"](e));
+//     while (!t || 256 !== t["length"]) t = new X()["encrypt"](this["$_CCGQ"](!0));
+//     return t;
+//   }
+// }
+
+
+// arg1 = '{"gt":"019924a82c70bb123aae90d483087f94","challenge":"e15f808024b1af0a60fcf33b193b3c6a","offline":false,"new_captcha":true,"product":"float","width":"300px","https":true,"api_server":"apiv6.geetest.com","protocol":"https://","type":"fullpage","static_servers":["static.geetest.com/","dn-staticdown.qbox.me/"],"voice":"/static/js/voice.1.2.2.js","click":"/static/js/click.3.0.7.js","beeline":"/static/js/beeline.1.0.1.js","fullpage":"/static/js/fullpage.9.1.3.js","slide":"/static/js/slide.7.8.9.js","geetest":"/static/js/geetest.6.0.9.js","aspect_radio":{"slide":103,"click":128,"voice":128,"beeline":50},"cc":16,"ww":true,"i":"6148!!7436!!CSS1Compat!!1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!2!!3!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!1!!-1!!-1!!-1!!0!!0!!0!!0!!1920!!250!!1920!!1032!!zh-CN!!zh-CN,zh!!-1!!1!!24!!Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36!!1!!1!!1920!!1080!!1920!!1032!!1!!1!!1!!-1!!Win32!!0!!-8!!a8656578c14b46f87f510459bb08f21e!!0!!internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer!!20!!-1!!0!!16!!Arial,ArialBlack,ArialNarrow,BookAntiqua,BookmanOldStyle,Calibri,Cambria,CambriaMath,Century,CenturyGothic,CenturySchoolbook,ComicSansMS,Consolas,Courier,CourierNew,Garamond,Georgia,Helvetica,Impact,LucidaBright,LucidaCalligraphy,LucidaConsole,LucidaFax,LucidaHandwriting,LucidaSans,LucidaSansTypewriter,LucidaSansUnicode,MicrosoftSansSerif,MonotypeCorsiva,MSGothic,MSPGothic,MSReferenceSansSerif,MSSansSerif,MSSerif,PalatinoLinotype,SegoePrint,SegoeScript,SegoeUI,SegoeUILight,SegoeUISemibold,SegoeUISymbol,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3!!1677653466284!!-1!!-1!!-1!!12!!-1!!-1!!-1!!5!!-1!!-1"}'
+
+
+
+// function getW() {
+//   var r = Qe["prototype"]["$_CCFD"]()
+//   var o = $_BEZ()["encrypt1"](arg1, Qe["prototype"]["$_CCGQ"]())
+//   var i = m["$_EJv"](o)
+//   var w = i + r
+//   return w
+// }
+
+
+
+// console.log(getW())
+
+
+
+
+
+
+
+// var arg3 = '6148!!7436!!CSS1Compat!!1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!2!!3!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!1!!-1!!-1!!-1!!0!!0!!0!!0!!1920!!250!!1920!!1032!!zh-CN!!zh-CN,zh!!-1!!1!!24!!Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36!!1!!1!!1920!!1080!!1920!!1032!!1!!1!!1!!-1!!Win32!!0!!-8!!a8656578c14b46f87f510459bb08f21e!!0!!internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer!!20!!-1!!0!!16!!Arial,ArialBlack,ArialNarrow,BookAntiqua,BookmanOldStyle,Calibri,Cambria,CambriaMath,Century,CenturyGothic,CenturySchoolbook,ComicSansMS,Consolas,Courier,CourierNew,Garamond,Georgia,Helvetica,Impact,LucidaBright,LucidaCalligraphy,LucidaConsole,LucidaFax,LucidaHandwriting,LucidaSans,LucidaSansTypewriter,LucidaSansUnicode,MicrosoftSansSerif,MonotypeCorsiva,MSGothic,MSPGothic,MSReferenceSansSerif,MSSansSerif,MSSerif,PalatinoLinotype,SegoePrint,SegoeScript,SegoeUI,SegoeUILight,SegoeUISemibold,SegoeUISymbol,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3!!1677653466284!!-1!!-1!!-1!!12!!-1!!-1!!-1!!5!!-1!!-1'
+
+
 
 
 // console.log(encode_track(t=[[37, 42, 0],[2, 0, 98],[6, 0, 17],[10, 0, 15],[11, 0, 17],[8, 0, 17],[6, 0, 16],[4, 0, 17],[0, 0, 18]]))
@@ -2877,6 +3165,5 @@ function CCFD(e) {
 // console.log(getHarg())
 // console.log(getUserresponse(41, "d90afb127c6372f1e7a15828152c00bdab"))
 // H(t, i["challenge"])
-//'6148!!7436!!CSS1Compat!!1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!2!!3!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!1!!-1!!-1!!-1!!0!!0!!0!!0!!1920!!250!!1920!!1032!!zh-CN!!zh-CN,zh!!-1!!1!!24!!Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36!!1!!1!!1920!!1080!!1920!!1032!!1!!1!!1!!-1!!Win32!!0!!-8!!a8656578c14b46f87f510459bb08f21e!!0!!internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer!!20!!-1!!0!!16!!Arial,ArialBlack,ArialNarrow,BookAntiqua,BookmanOldStyle,Calibri,Cambria,CambriaMath,Century,CenturyGothic,CenturySchoolbook,ComicSansMS,Consolas,Courier,CourierNew,Garamond,Georgia,Helvetica,Impact,LucidaBright,LucidaCalligraphy,LucidaConsole,LucidaFax,LucidaHandwriting,LucidaSans,LucidaSansTypewriter,LucidaSansUnicode,MicrosoftSansSerif,MonotypeCorsiva,MSGothic,MSPGothic,MSReferenceSansSerif,MSSansSerif,MSSerif,PalatinoLinotype,SegoePrint,SegoeScript,SegoeUI,SegoeUILight,SegoeUISemibold,SegoeUISymbol,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3!!1677653466284!!-1!!-1!!-1!!12!!-1!!-1!!-1!!5!!-1!!-1'
-console.log(CCFD('6148!!7436!!CSS1Compat!!1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!2!!3!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!1!!-1!!-1!!-1!!0!!0!!0!!0!!1920!!250!!1920!!1032!!zh-CN!!zh-CN,zh!!-1!!1!!24!!Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36!!1!!1!!1920!!1080!!1920!!1032!!1!!1!!1!!-1!!Win32!!0!!-8!!a8656578c14b46f87f510459bb08f21e!!0!!internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer!!20!!-1!!0!!16!!Arial,ArialBlack,ArialNarrow,BookAntiqua,BookmanOldStyle,Calibri,Cambria,CambriaMath,Century,CenturyGothic,CenturySchoolbook,ComicSansMS,Consolas,Courier,CourierNew,Garamond,Georgia,Helvetica,Impact,LucidaBright,LucidaCalligraphy,LucidaConsole,LucidaFax,LucidaHandwriting,LucidaSans,LucidaSansTypewriter,LucidaSansUnicode,MicrosoftSansSerif,MonotypeCorsiva,MSGothic,MSPGothic,MSReferenceSansSerif,MSSansSerif,MSSerif,PalatinoLinotype,SegoePrint,SegoeScript,SegoeUI,SegoeUILight,SegoeUISemibold,SegoeUISymbol,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3!!1677653466284!!-1!!-1!!-1!!12!!-1!!-1!!-1!!5!!-1!!-1'))
+// console.log()
 

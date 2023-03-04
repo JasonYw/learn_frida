@@ -6,6 +6,7 @@ import random
 import requests
 import time
 session = requests.Session()
+import execjs
 
 '''
 案例
@@ -249,6 +250,14 @@ def showEaseOutQuit(trail_list,distance=171):
         result.append([trail_x[idx],int(trail_y[idx]),int(trail_t[idx])])
     return result
 
+
+
+
+def callSolveJs(func,args):
+    ctx = execjs.compile(open("solve.js").read())
+    return ctx.call(func,*args)
+
+
 def startRequest():
     session.get("https://www.geetest.com/demo/slide-float.html")
     t = int(time.time())
@@ -256,8 +265,9 @@ def startRequest():
     challenge = res.get("challenge")
     gt = res.get("gt")
     session.get(f"https://apiv6.geetest.com/gettype.php?gt={gt}&callback=geetest_{t}")
-    w = ""
-    session.get(f'https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}') 
+    w = ''
+    res = session.get(f'https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}')
+    print(res.text)
 
 if __name__ == "__main__":
     # drawTrail(trail_list)
