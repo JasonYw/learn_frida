@@ -1,8 +1,7 @@
-window = function () { 
+let {window,ht,wt} = require("./make_env.js")
+// function ht(){}
 
-}
-ht = function () { }
-pe = {}
+// pe = {}
 
 QBLnx.$_Ak = function () {
   var $_DBGFd = 2;
@@ -1754,6 +1753,40 @@ function X(t) {
   }
 }
 
+bt = function(){}
+bt["prototype"] = {
+  "$_BGGO": function () {
+
+    return window["performance"] && window["performance"]["timing"] && this["$_BGH_"]() || -1;
+  },
+  "$_BGH_": function () {
+
+    var t = window["performance"]["timing"];
+    return {
+      "a": t["navigationStart"],
+      "b": t["unloadEventStart"],
+      "c": t["unloadEventEnd"],
+      "d": t["redirectStart"],
+      "e": t["redirectEnd"],
+      "f": t["fetchStart"],
+      "g": t["domainLookupStart"],
+      "h": t["domainLookupEnd"],
+      "i": t["connectStart"],
+      "j": t["connectEnd"],
+      "k": t["secureConnectionStart"],
+      "l": t["requestStart"],
+      "m": t["responseStart"],
+      "n": t["responseEnd"],
+      "o": t["domLoading"],
+      "p": t["domInteractive"],
+      "q": t["domContentLoadedEventStart"],
+      "r": t["domContentLoadedEventEnd"],
+      "s": t["domComplete"],
+      "t": t["loadEventStart"],
+      "u": t["loadEventEnd"]
+    };
+  }
+};
 ne = function() {}
 ne["prototype"] = {
   "$_BHGJ": function (t, e) {
@@ -2094,9 +2127,136 @@ function get_u() {
   return ne["prototype"]["$_CCDH"]()
 }
 
+// function generateWindowPerformance(){
+//   start_time=int(str(time.time()).replace(".", "")[:13])
+//   tm = {
+//     "a": 1678012625623,
+//     "b": 1678012626005,
+//     "c": 1678012626005,
+//     "d": 0,
+//     "e": 0,
+//     "f": 1678012625729,
+//     "g": 1678012625729,
+//     "h": 1678012625729,
+//     "i": 1678012625729,
+//     "j": 1678012625729,
+//     "k": 0,
+//     "l": 1678012625762,
+//     "m": 1678012625999,
+//     "n": 1678012626001,
+//     "o": 1678012626007,
+//     "p": 1678012626146,
+//     "q": 1678012626146,
+//     "r": 1678012626147,
+//     "s": 1678012626150,
+//     "t": 1678012626150,
+//     "u": 1678012626150
+//   }
+//   new_tm = {}
+//   for i in tm:
+//       if i == "a":
+//           new_tm[i] = start_time
+//       elif tm[i] == 0:
+//           new_tm[i] = 0
+//       else:
+//           new_tm[i] = start_time + (tm[i] - tm["a"])
+//   return new_tm
+// }
+
+
+gt = function () {
+
+  "use strict";
+  var u,
+    l,
+    n,
+    h,
+    t = {},
+    e = /[\\"\u0000-\u001f\u007f-\u009f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g;
+  function r(t) {
+    var $_DBEHl = QBLnx.$_Db()[12][19];
+    for (; $_DBEHl !== QBLnx.$_Db()[0][18];) {
+      switch ($_DBEHl) {
+        case QBLnx.$_Db()[9][19]:
+          return t < 10 ? "0" + t : t;
+          break;
+      }
+    }
+  }
+  function i() {
+    var $_DBEIO = QBLnx.$_Db()[3][19];
+    for (; $_DBEIO !== QBLnx.$_Db()[3][18];) {
+      switch ($_DBEIO) {
+        case QBLnx.$_Db()[9][19]:
+          return this["valueOf"]();
+          break;
+      }
+    }
+  }
+  function f(t) {
+    var $_DBEJS = QBLnx.$_Db()[12][19];
+    for (; $_DBEJS !== QBLnx.$_Db()[0][18];) {
+      switch ($_DBEJS) {
+        case QBLnx.$_Db()[15][19]:
+          return e["lastIndex"] = 0, e["test"](t) ? "\"" + t["replace"](e, function (t) {
+
+            var e = n[t];
+            return "string" == typeof e ? e : "\\u" + ("0000" + t["charCodeAt"](0)["toString"](16))["slice"](-4);
+          }) + "\"" : "\"" + t + "\"";
+          break;
+      }
+    }
+  }
+  return "function" != typeof Date["prototype"]["toJSON"] && (Date["prototype"]["toJSON"] = function () {
+
+    return isFinite(this["valueOf"]()) ? this["getUTCFullYear"]() + "-" + r(this["getUTCMonth"]() + 1) + "-" + r(this["getUTCDate"]()) + "T" + r(this["getUTCHours"]()) + ":" + r(this["getUTCMinutes"]()) + ":" + r(this["getUTCSeconds"]()) + "Z" : null;
+  }, Boolean["prototype"]["toJSON"] = i, Number["prototype"]["toJSON"] = i, String["prototype"]["toJSON"] = i), n = {
+    "\b": "\\b",
+    "\t": "\\t",
+    "\n": "\\n",
+    "\f": "\\f",
+    "\r": "\\r",
+    "\"": "\\\"",
+    "\\": "\\\\"
+  }, t["stringify"] = function (t, e, n) {
+
+    var r;
+    if (l = u = "", "number" == typeof n) for (r = 0; r < n; r += 1) l += " "; else "string" == typeof n && (l = n);
+    if ((h = e) && "function" != typeof e && ("object" != typeof e || "number" != typeof e["length"])) throw new Error("JSON.stringify");
+    return function c(t, e) {
+
+      var n,
+        r,
+        i,
+        o,
+        s,
+        a = u,
+        _ = e[t];
+      switch (_ && "object" == typeof _ && "function" == typeof _["toJSON"] && (_ = _["toJSON"](t)), "function" == typeof h && (_ = h["call"](e, t, _)), typeof _) {
+        case "string":
+          return f(_);
+        case "number":
+          return isFinite(_) ? String(_) : "null";
+        case "boolean":
+        case "null":
+          return String(_);
+        case "object":
+          if (!_) return "null";
+          if (u += l, s = [], "[object Array]" === Object["prototype"]["toString"]["apply"](_)) {
+            for (o = _["length"], n = 0; n < o; n += 1) s[n] = c(n, _) || "null";
+            return i = 0 === s["length"] ? "[]" : u ? "[\n" + u + s["join"](",\n" + u) + "\n" + a + "]" : "[" + s["join"](",") + "]", u = a, i;
+          }
+          if (h && "object" == typeof h) for (o = h["length"], n = 0; n < o; n += 1) "string" == typeof h[n] && (i = c(r = h[n], _)) && s["push"](f(r) + (u ? ": " : ":") + i); else for (r in _) Object["prototype"]["hasOwnProperty"]["call"](_, r) && (i = c(r, _)) && s["push"](f(r) + (u ? ": " : ":") + i);
+          return i = 0 === s["length"] ? "{}" : u ? "{\n" + u + s["join"](",\n" + u) + "\n" + a + "}" : "{" + s["join"](",") + "}", u = a, i;
+      }
+    }("", {
+      "": t
+    });
+  }, t;
+}()
 
 function get_h(o) {
-  l = V["encrypt"](o, r["$_CCEc"]()) //gt["stringify"](o)
+  var l = V["encrypt"](gt["stringify"](o), r["$_CCEc"]())
   return m["$_FEr"](l) 
 }
 
@@ -2104,19 +2264,24 @@ function get_rp(gt,challenge,passtime){
   return X(gt + challenge["slice"](0, 32) + passtime)
 }
 
+function get_ep(){
+  return ne["prototype"]["$_CCCG"]()
+}
 
 
 
-// console.log(ne["prototype"]["$_CCDH"]())
-// console.log(encode_track(trail_list))
-// console.log(encode_track_with_c_s("T05?EE@70-!)!)!)!)!,!,!,!,!-!,!,!,!*!*!)!)!)(!!Wy(((*))(((ssw()(((((((!)((((((((!!($,A::?9:9:99::$)*9Oc:9:::?9:9:99df$))",[12, 58, 98, 36, 43, 95, 62, 15, 12],"51305742"))
-// console.log(ccec["$_CCEc"])
-// r["$_CCBv"](u, l, n["$_CEDN"])
-// console.log(getH(argH))
-// console.log(getHarg())
+// console.log(ne["prototype"]["$_CCCG"]())
+// console.log(get_ep())
+// console.log(encode_track([[-44, -159, 0], [0, 0, 0], [1, 0, 148], [1, 0, 151], [2, 0, 152], [3, 0, 154], [4, 0, 154], [5, 0, 157], [5, 0, 157], [6, 0, 161], [6, 0, 162], [7, 0, 162], [7, 0, 164], [8, 0, 162], [8, 0, 164], [9, 0, 165], [10, 0, 167], [10, 0, 168], [11, 1, 169], [12, 1, 174], [13, 1, 178], [14, 1, 180], [14, 1, 180], [15, 1, 182], [15, 1, 182], [16, 1, 187], [16, 1, 189], [17, 1, 190], [17, 1, 190], [18, 1, 190], [19, 1, 190], [19, 1, 192], [20, 1, 193], [21, 1, 197], [22, 1, 199], [23, 1, 203], [24, 1, 208], [25, 1, 208], [25, 1, 211], [26, 1, 209], [27, 1, 214], [27, 1, 217], [28, 1, 216], [29, 1, 217], [30, 1, 221], [30, 1, 221], [31, 1, 221], [32, 1, 221], [33, 1, 222], [34, 1, 227], [35, 1, 232], [36, 1, 234], [36, 1, 237], [37, 1, 235], [37, 1, 235], [38, 1, 238], [39, 1, 240], [40, 1, 240], [41, 2, 242], [42, 2, 244], [43, 2, 247], [44, 2, 248], [45, 2, 249], [46, 2, 250], [47, 2, 251], [48, 2, 251], [48, 2, 251], [49, 2, 252], [50, 2, 252], [51, 3, 253], [51, 3, 255], [52, 3, 256], [52, 3, 259], [53, 3, 261], [54, 3, 263], [54, 3, 263], [55, 3, 267], [56, 3, 268], [56, 3, 270], [57, 3, 273], [58, 3, 274], [58, 3, 277], [59, 3, 278], [59, 3, 280], [60, 3, 278], [61, 3, 281], [61, 3, 282], [62, 3, 285], [63, 4, 290], [64, 4, 292], [65, 4, 294], [66, 4, 297], [67, 4, 297], [68, 4, 297], [69, 4, 302], [70, 4, 303], [71, 4, 303], [72, 4, 305], [73, 4, 307], [74, 4, 311], [75, 4, 316], [76, 4, 319], [77, 4, 370], [78, 4, 407], [79, 4, 448], [80, 4, 493], [81, 4, 547], [82, 4, 590], [83, 5, 625], [84, 5, 677], [85, 5, 733], [86, 5, 755], [87, 5, 775], [88, 5, 818], [89, 5, 872], [90, 5, 892], [91, 5, 933], [92, 5, 1000], [93, 5, 1053], [94, 5, 1101], [95, 5, 1163], [96, 5, 1183], [97, 5, 1208], [98, 5, 1243]]))
+// console.log(encode_track([[-43, -49, 0], [0, 0, 0], [2, -1, 26], [21, -1, 106], [39, -1, 186], [55, -1, 266], [69, -1, 347], [82, -1, 427], [94, -1, 507], [104, -1, 588], [114, -1, 668], [122, -1, 748], [129, -1, 829], [136, -1, 909], [142, -1, 989], [147, -1, 1070], [152, -1, 1150], [155, 0, 1230], [159, 0, 1311], [162, 0, 1391], [164, 0, 1471], [166, 0, 1552], [168, 1, 1632], [170, 1, 1712], [171, 1, 1793], [172, 1, 1873], [173, 1, 1953], [174, 1, 2034], [174, 1, 2114], [175, 1, 2194], [175, 1, 2275], [175, 1, 2355], [175, 1, 2435], [175, 1, 2516], [176, 1, 2596], [176, 1, 2676], [176, 1, 2757], [176, 1, 2837], [176, 1, 2917], [176, 1, 2998], [176, 1, 3078], [176, 1, 3158], [176, 1, 3239], [176, 1, 3319]]))
+// console.log(encode_track_with_c_s("X@?976533100/..,-(!!cz(((((((((((((()(ytt~tssssss(!!(G$)8$)8$)8$)9$)8$)8$)9$)8$)8$)9$)8$)8$)9$)8$)8$)9$)8$)8$)9$)8$)8$)9$)8$)8$)9$*K$/5$41",[12, 58, 98, 36, 43, 95, 62, 15, 12],"464b496e"))
+// console.log(get_userresponse(174,"6409f5f395ba82fb3ecb776ea70a3d75"))
+// console.log(get_rp("019924a82c70bb123aae90d483087f94","6409f5f395ba82fb3ecb776ea70a3d75",3319))
+// console.log(get_u())
+// get_h({"lang": "zh-cn", "userresponse": "d8d8fdf8a992"})
+
 // console.log(getUserresponse(41, "d90afb127c6372f1e7a15828152c00bdab"))
-// H(t, i["challenge"])
-// console.log(get_h({'lang': 'zh-cn', 'userresponse': 'd98828', 'passtime': 2630, 'imgload': 186, 'aa': 'E///./.-..-----(!!Hu(((((((((((((y(yyyyyytyttttttttstsstvssssssss5sswssssss(!!(GEFEtFEFFEFEFEFFEFEFEFFEFEFEFFEFEFEFFEFEFEFFEcFEdEFc$)2$v)1$)O$*CW$6T', 'tm': {'a': 1678015485, 'b': 1678015867, 'c': 1678015867, 'd': 0, 'e': 0, 'f': 1678015591, 'g': 1678015591, 'h': 1678015591, 'i': 1678015591, 'j': 1678015591, 'k': 0, 'l': 1678015624, 'm': 1678015861, 'n': 1678015863, 'o': 1678015869, 'p': 1678016008, 'q': 1678016008, 'r': 1678016009, 's': 1678016012, 't': 1678016012, 'u': 1678016012}}))
+// console.log(get_h("{'lang': 'zh-cn', 'userresponse': 'd98828', 'passtime': 2630, 'imgload': 186, 'aa': 'E///./.-..-----(!!Hu(((((((((((((y(yyyyyytyttttttttstsstvssssssss5sswssssss(!!(GEFEtFEFFEFEFEFFEFEFEFFEFEFEFFEFEFEFFEFEFEFFEcFEdEFc$)2$v)1$)O$*CW$6T', 'tm': {'a': 1678015485, 'b': 1678015867, 'c': 1678015867, 'd': 0, 'e': 0, 'f': 1678015591, 'g': 1678015591, 'h': 1678015591, 'i': 1678015591, 'j': 1678015591, 'k': 0, 'l': 1678015624, 'm': 1678015861, 'n': 1678015863, 'o': 1678015869, 'p': 1678016008, 'q': 1678016008, 'r': 1678016009, 's': 1678016012, 't': 1678016012, 'u': 1678016012}}"))
 
 // console.log(X("019924a82c70bb123aae90d483087f94" + "de5dfe1b0afd2f9167fa5d065d2d08e3gr"["slice"](0, 32) + 266))
 // "T05?EE@70-!)!)!)!)!,!,!,!,!-!,!,!,!*!W*!)!)!)(!!Wy(((*))(((ssw()(((((((!)(Q(((((((!!($,A::?9:9:99::$)*9BOc:9:::?9:9:909df$))"

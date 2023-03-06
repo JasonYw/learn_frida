@@ -101,6 +101,7 @@ document.addEventListener = function() {
 '''
 
 session = requests.Session()
+ctx = execjs.compile(open("solve.js").read())
 
 
 def restoreImg():
@@ -209,111 +210,17 @@ def showEaseOutQuit(distance):
 
 
 def callSolveJs(func, args=()):
-    ctx = execjs.compile(open("solve.js").read())
-    return ctx.call(func, *args)
+    if args:
+        result = ctx.call(func, *args)
+    else:
+        result = ctx.call(func)
+    print(f'func -> {func}')
+    if args:
+        print(*args)
+    print(f'result -> {result}')
+    print("=================================")
+    return result
 
-
-# def imshow(img, winname='test', delay=0):
-#     """cv2展示图片"""
-#     cv2.imshow(winname, img)
-#     cv2.waitKey(delay)
-#     cv2.destroyAllWindows()
-
-
-# def pil_to_cv2(img):
-#     """
-#     pil转cv2图片
-#     :param img: pil图像, <type 'PIL.JpegImagePlugin.JpegImageFile'>
-#     :return: cv2图像, <type 'numpy.ndarray'>
-#     """
-#     img = cv2.cvtColor(np.asarray(img), cv2.COLOR_RGB2BGR)
-#     return img
-
-
-# def bytes_to_cv2(img):
-#     """
-#     二进制图片转cv2
-#     :param img: 二进制图片数据, <type 'bytes'>
-#     :return: cv2图像, <type 'numpy.ndarray'>
-#     """
-#     # 将图片字节码bytes, 转换成一维的numpy数组到缓存中
-#     img_buffer_np = np.frombuffer(img, dtype=np.uint8)
-#     # 从指定的内存缓存中读取一维numpy数据, 并把数据转换(解码)成图像矩阵格式
-#     img_np = cv2.imdecode(img_buffer_np, 1)
-#     return img_np
-
-
-# def cv2_open(img, flag=None):
-#     """
-#     统一输出图片格式为cv2图像, <type 'numpy.ndarray'>
-#     :param img: <type 'bytes'/'numpy.ndarray'/'str'/'Path'/'PIL.JpegImagePlugin.JpegImageFile'>
-#     :param flag: 颜色空间转换类型, default: None
-#         eg: cv2.COLOR_BGR2GRAY（灰度图）
-#     :return: cv2图像, <numpy.ndarray>
-#     """
-#     if isinstance(img, bytes):
-#         img = bytes_to_cv2(img)
-#     elif isinstance(img, (str, Path)):
-#         img = cv2.imread(str(img))
-#     elif isinstance(img, np.ndarray):
-#         img = img
-#     elif isinstance(img, PIL.Image):
-#         img = pil_to_cv2(img)
-#     else:
-#         raise ValueError(f'输入的图片类型无法解析: {type(img)}')
-#     if flag is not None:
-#         img = cv2.cvtColor(img, flag)
-#     return img
-
-
-# def get_distance():
-#     """
-#     :param bg: 背景图路径或Path对象或图片二进制
-#         eg: 'assets/bg.jpg'
-#             Path('assets/bg.jpg')
-#     :param tp: 缺口图路径或Path对象或图片二进制
-#         eg: 'assets/tp.jpg'
-#             Path('assets/tp.jpg')
-#     :param im_show: 是否显示结果, <type 'bool'>; default: False
-#     :param save_path: 保存路径, <type 'str'/'Path'>; default: None
-#     :return: 缺口位置
-#     """
-#     # 读取图片
-#     bg_img = cv2_open('right.jpg')
-#     tp_gray = cv2_open('slider.jpg', flag=cv2.COLOR_BGR2GRAY)
-
-#     # 金字塔均值漂移
-#     bg_shift = cv2.pyrMeanShiftFiltering(bg_img, 5, 50)
-
-#     # 边缘检测
-#     tp_gray = cv2.Canny(tp_gray, 255, 255)
-#     bg_gray = cv2.Canny(bg_shift, 255, 255)
-
-#     # 目标匹配
-#     result = cv2.matchTemplate(bg_gray, tp_gray, cv2.TM_CCOEFF_NORMED)
-#     # 解析匹配结果
-#     min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(result)
-#     distance = max_loc[0]
-#     # if save_path or im_show:
-#     #     # 需要绘制的方框高度和宽度
-#     #     tp_height, tp_width = tp_gray.shape[:2]
-#     #     # 矩形左上角点位置
-#     #     x, y = max_loc
-#     #     # 矩形右下角点位置
-#     #     _x, _y = x + tp_width, y + tp_height
-#     #     # 绘制矩形
-#     #     bg_img = cv2_open(bg)
-#     #     cv2.rectangle(bg_img, (x, y), (_x, _y), (0, 0, 255), 2)
-#     #     # 保存缺口识别结果到背景图
-#     #     if save_path:
-#     #         save_path = Path(save_path).resolve()
-#     #         save_path = save_path.parent / f"{save_path.stem}.{distance}{save_path.suffix}"
-#     #         save_path = save_path.__str__()
-#     #         cv2.imwrite(save_path, bg_img)
-#     #     # 显示缺口识别结果
-#     #     if im_show:
-#     #         imshow(bg_img)
-#     return distance
 
 
 def get_slide_track2(x):
@@ -403,7 +310,8 @@ def get_slide_track2(x):
     return slide_track
 
 
-def generateWindowPerformance(start_time=int(str(time.time()).replace(".", "")[:13])):
+def generateWindowPerformance():
+    start_time = int(str(time.time()).replace(".", "")[:13])
     tm = {
         "a": 1678012625623,
         "b": 1678012626005,
@@ -429,118 +337,63 @@ def generateWindowPerformance(start_time=int(str(time.time()).replace(".", "")[:
     }
     new_tm = {}
     for i in tm:
-        if i == "a":
-            new_tm[i] = start_time
-        elif tm[i] == 0:
+        if tm[i] == 0:
             new_tm[i] = 0
         else:
-            new_tm[i] = start_time + (tm[i] - tm["a"])
+            new_tm[i] = tm[i] - tm["a"] + start_time
     return new_tm
 
 
 def startRequest():
+    headers = {
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
+    }
     tm = generateWindowPerformance()
-    session.get("https://www.geetest.com/demo/slide-float.html")
+    session.get("https://www.geetest.com/demo/slide-float.html",
+                headers=headers)
     t = int(str(time.time()).replace(".", "")[:13])
     res = session.get(
-        f"https://www.geetest.com/demo/gt/register-slide?t={t}").json()
+        f"https://www.geetest.com/demo/gt/register-slide?t={t}", headers=headers).json()
     challenge = res.get("challenge")
     gt = res.get("gt")
     session.get(
-        f"https://apiv6.geetest.com/gettype.php?gt={gt}&callback=geetest_{t}")
+        f"https://apiv6.geetest.com/gettype.php?gt={gt}&callback=geetest_{t}", headers=headers)
     session.get(
-        f'https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=')
+        f'https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=', headers=headers)
     # json.loads(res.text.lstrip("(").rstrip(")"))
     t = int(str(time.time()).replace(".", "")[:13])
     session.get(
-        f"https://api.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=")
+        f"https://api.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=", headers=headers)
     res = session.get(
-        f"https://api.geetest.com/get.php?is_next=true&type=slide3&gt={gt}&challenge={challenge}&lang=zh-cn&https=true&protocol=https%3A%2F%2F&offline=false&product=embed&api_server=api.geetest.com&isPC=true&autoReset=true&width=100%25&callback=geetest_{t}")
+        f"https://api.geetest.com/get.php?is_next=true&type=slide3&gt={gt}&challenge={challenge}&lang=zh-cn&https=true&protocol=https%3A%2F%2F&offline=false&product=embed&api_server=api.geetest.com&isPC=true&autoReset=true&width=100%25&callback=geetest_{t}", headers=headers)
     slide_info = json.loads(res.text.lstrip(f"geetest_{t}(").rstrip(")"))
-    a = int(str(time.time()).replace(".", "")[:13])
-    gap_res = session.get(f'https://static.geetest.com/{slide_info["bg"]}')
+    gap_res = session.get(
+        f'https://static.geetest.com/{slide_info["bg"]}', headers=headers)
     slider_res = session.get(
-        f'https://static.geetest.com/{slide_info["slice"]}')
-    b = int(str(time.time()).replace(".", "")[:13])
-    imgload = b - a
-    print(a, b, imgload)
+        f'https://static.geetest.com/{slide_info["slice"]}', headers=headers)
     open("gap.jpg", "wb").write(gap_res.content)
     open("slider.jpg", "wb").write(slider_res.content)
     restoreImg()
     distance = getDistance()
-    trail_list = showEaseOutQuit(distance)
-    print(trail_list)
+    trail_list = get_slide_track2(distance)
     encode_track = callSolveJs("encode_track", (trail_list,))
-    print(encode_track, slide_info.get('c'), slide_info.get('s'))
-    encode_track_with_c_s = callSolveJs(
-        "encode_track_with_c_s", (encode_track, slide_info.get('c'), slide_info.get('s')))
-    print(encode_track_with_c_s)
     o = {
         "lang": "zh-cn",
         "userresponse": callSolveJs("get_userresponse", (distance, challenge)),
         "passtime": trail_list[-1][-1],
-        "imgload": imgload,  # 图片加载时间r["$_CAGw"] ms
-        "aa": encode_track_with_c_s,
-        "ep": {
-            "v": "7.8.9",
-            "$_BIB": False,
-            "me": True,
-            "tm": tm,
-            "td": -1
-        },
+        "imgload": 230,  # 图片加载时间r["$_CAGw"] ms
+        "aa": callSolveJs("encode_track_with_c_s", (encode_track, slide_info.get('c'), slide_info.get('s'))),
+        # "ep": callSolveJs("get_ep"),
+        "ep": {"v": '7.8.9', "$_BIB": False, "me": True, "tm": tm, "td": -1},
+        # "ep":"7.8.9",
         "h9s9": "1816378497",
         "rp": callSolveJs("get_rp", (gt, challenge, trail_list[-1][-1]))
     }
-    # o = {
-    #     "lang": "zh-cn",
-    #     "userresponse": "77777d77d777d7183",
-    #     "passtime": 232,
-    #     "imgload": 212,
-    #     "aa": "I/223//!)!!Ks((?()e(((s!!($*V-7?99W:9)(",
-    #     "ep": {
-    #         "v": "7.8.9",
-    #         "$_BIB": False,
-    #         "me": True,
-    #         "tm": {
-    #             "a": 1678022837314,
-    #             "b": 1678022837620,
-    #             "c": 1678022837620,
-    #             "d": 0,
-    #             "e": 0,
-    #             "f": 1678022837417,
-    #             "g": 1678022837417,
-    #             "h": 1678022837417,
-    #             "i": 1678022837417,
-    #             "j": 1678022837417,
-    #             "k": 0,
-    #             "l": 1678022837424,
-    #             "m": 1678022837615,
-    #             "n": 1678022837617,
-    #             "o": 1678022837621,
-    #             "p": 1678022837759,
-    #             "q": 1678022837759,
-    #             "r": 1678022837760,
-    #             "s": 1678022837762,
-    #             "t": 1678022837762,
-    #             "u": 1678022837762
-    #         },
-    #         "td": -1
-    #     },
-    #     "h9s9": "1816378497",
-    #     "rp": "b69a0e3680b20218ff6417f65882139b"
-    # }
-    print(json.dumps(o))
-    # '8ed4b8a900e7057dbfad78411d1cb9e1c6b996f59060f66d2c229efd1fc891b82e9826edaf0ff1a322224a452fbcf2a9cae4c12e15e5a3badfe47b00127449dc7eef7b7a19ced5eb66a757117b3ed3c56ce843a5472add582a8f286f6826e87910499d588a837ec9c98f2a9a1eaafc2a074ff8d7fd5064b51e9ffd8b7a7848ab'
-    u = callSolveJs("get_u")
-    h = callSolveJs("get_h", (json.dumps(o),))
-    # 6ce1b2f1e8ad792933124472ab5365787ec90b4a44828e5b0599779ff3e5a37bc87727acc3014eb789208107fabf1a0f6b1c91592a057c34f482e065d063ba54f3d59de211abb669a3e45cf72e4b203cef33dba58a8d5e42871d3ee6f93a891372b03de3e857c791bf6687959dc0b24e38fce3ac2c18c908c1e6d1f40c7a5c96
-    # aLKznILozTvPXRlIkAy3(zqvERzz7pMf4QVipl21rjL9dWtW74UbCSsf4ofGZnFi(yPFbvNiloE(0gn2GJI4OtHCb3YTZp3jSKSSuSfZ99PDubbMzpiSfq2QkjB0qkpVY3mVx6Wo(SkWPmkoX16OjuAe8ESJBdvYKnoukSUyJsf3V5gskBQF2wT2u9YtSrkVUokHKWO1aTt5Y6716XL80ams9HeMHW1A3iUfaNlVlUCZDg57Fa1G6ArNby1I((67erhynrvpjnIQMy6Gb0(52CBsmTVBDQguGSnHkjtXg)HZnfQ8CF0C5WsLgptg9MDjIzrc42YqXpi8kdGIEjezdDZJvGSH3EU9V5Ydzpv68bBZbVRn)R1vnj4hbpXHGusZSr11pvPqCkBPUwvLy9TdoOJh0rkvOh1rjzZOyuSA00cigZfupjbnxXG5ETJ8Sjay3tHPG1kPmRObp2bEz8KQfKCZW1po47vyz6cL1v4C(QAevm0oB3AbvAYU65WeRdgGF)Hd(feaTnN8j0soCgEmcAqy)TS8Iq8ZUJ(qjr6krlrhGVQEjbPFf(lw1sGsSz(m4Od0rLKS3P54kowRK1Ms59iaijQSYVWZwPSdPox6vRPuF9LOC1LMT0fCAIhrvAApv6EBnaA8NKWNepzhOxljOaJv57WumGyCU0pCUjROVO4yLQBxI(klsgsYUGrx1xqUWjr)B920muqtA6Avqw1iRlHaGgehOk3INVHXiubQdJ4jNROe7il9XCUpDFrD9zOSUJpLmaxPZvur7UT7ING2zidu7qCqAiLcVFLoWhABaGqfKtAGey6AaKQfCKa383kvBLE1406oo3vCsIY4GBDgZwrlcoZHBiQkw92(jD4Kj41UV0D3gHsNHlCzgWqyQYoSRJSBKb9Tgh(65iH3N5tu48F0HrNbtwtbNzaY2gPuonQ.7af049d762209543bb64cd964a2b86d2e58cbfddf1d690fd3da14283e28810d271608c848076aa12015084a5e599b1419915d032f5ed18b6ce1c8bbf26c924f7616e619a2ac9add3b85296aeaa7421c7e6e809009d64f3bc7b6c2a0aa782970e7a07e5772d874e71bbccf3a55586da274f6fd882d61affcaeb3a0f83022efcc8
-    # 'UCSk73ZoAV6lH2((bXvbFgyLSuXaAxyEOvr3kH1nzCnyzOR2b4rGOtdii2NWPD2wf7zdLK7KCDNwGD2hOfaQOfXiHeUTD3kHUA4oZFPXfpaGc4wCjUBVcfjLhjuo1140WX)MYwPhfyTufhC9xFLzZS0JZ6lGk9xjPpQfKHH1SQMlww61GG9GQQlLvsBpXWIMhKgYPg68n43kLW4Iw6cVUkKVOyVVolTVd4PRPUHaMZEusVvRFGrqjTvu7q722U6VHPqmsoTGFkRxPtWVZpvImy8H0Pnk6xGD)k8T(lO5jnuVOPAtMNrAHD8MPWr)pittEVHcisXs0zgpW6tU6hQ19Ncnz0k2Ki4D9zvXzO4(n)8zAdcxXBA2kfTZ4G9xRKNalYrcuys2mjncNbVnO)RxHFj1)GSAv47zvk0FfATxZW1uCKHjftsh)jyuOfczdVe7XWwukn9TSzpAkIEMNHphvC5))Lamqf5C95lV7xECjB3(UDA(8FP67y9jiX6NiVHbuby0BZ1MuqjH6MNe9LizlsUI(kjwDNWuGvj8bp(ahvkdvdOrw7h3l9ezWKgDOBCy)3i0VkgDh9ll4yPTRj)AxnQ(G00MvSFw7oxOhss2upWdhORdvSZR84WLSWw)7IXJ2FATE7Ugk6pY5y9gW9MSlZo90(f4DeKyU)5DeCPpPNFEqR62nTTLjO2Q8R7(TLS6DTAV1ugO8(8HibI)2NSWSKMO2hakItjtbgoMGtUmcOHWrOlWgEbseX0Ck3e2xxHwNTXMo9npSMJxjbPJMkkavQ..45c24fa7fd2a35a4ac1d675c1d19d4893ddb2abdf0885242e98520ed7fd6cb9935dd3f591d5d80021c608aa3d6d02e74f0df78792db3d8172029d7566b80b57b5082df2bb9b0dc88a4b27c6cab1ba39301f5eaec0e2a18fc37a987bd7617e3b72847a7b93b2ebc747e59bb5433c7cf0539732edc270ffd0f48e4388befa05a0d'
-    w = h + u
-    print(w)
+    w =  callSolveJs("get_h", (o,)) + callSolveJs("get_u")
+    # w = 'QSBYnmpeqba2zChky6uB1UMbySJ8ABn4nIJcIgm76Gw7DM5yxeDTuG6hgD4vesoFfpwlLTsaB49jyC1brzf7Xl3ipE(5NFnOUS29fTYq5wN1OMlfMd7iBCgqcw(noZQETsKwjvDEGkVEt3iD8zsqQtdVeg5QXsRqbkXjyZHbUhsVR0T(t3UTyWJ1tgYOJ5689XdFKstBZCADR(zlFOoXHciAw4Jp()DTZtEz0K)GAuKNA14EZbmZU7CRREgaj3CwHfhafP1jxlVPzXxsTNYVoSw(aLJENWFUX58cquRDgCKpSBPkZQIiU4eyHK26gy2bRw5r)ADXiYH8TTJ5PMlL9jrlzeO)Od)9jq4Pa63TLs19EcRx(bgDX0XTlVb(LfZsCNn0K(Aw2Ya2FuK8bhokE0CEbf8QCrGcOWkBWngv5G1PT8Eg85HwmdzknGzAEJeOyzEx0Ol06hgb4vpnF5OtaSXK3F(mc8SKaLILwZskBnJ2E52)IDwymFKhb6l5)XTsEQ0Nn1NWkQiUpfTdjeblvRbHd7MZUlrzkBHlaGp(awBBP8lO7anIOxNjl7s588mJAJthTyQpduDV)M7BmFVd5G5N93xLvJtkhSxTleG3AbmaaziGzS(Xmz9EAWjmMpIiWB9WYUl)w07JjXYNd1CccfZQU(AWv)0wM7pW8jjAJreZykzDHG4zgS9zx1Tw3D12Av0GKKjKYZpzu4Nvu4PygGqNKswUupGSAJej8EKtthHrgAYvbOAshJJpBAnlqcQPjywW591C7GDFaxBAcbrWjw..0424bd6c49b9f7f76908688aed0699cde87c99bc5a3aad42ea5c6d0fc188c2b7ed95d7b9e3bd713eba6aa57a3f013f8a0160cc2878fde7b2ee25f95c42d54ffb82be1527b43af2aba639f89611bc282cb3a7371d35a73fffee3888243833e1f44bfd09089eba9975044993884d9f73d52911ccce36910722c89cb5b79ec6a257'
     t = int(str(time.time()).replace(".", "")[:13])
     res = session.get(
-        f"https://api.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&%24_BCw=0&client_type=web&w={w}&callback=geetest_{t}")
+        f"https://api.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&%24_BCw=0&client_type=web&w={w}&callback=geetest_{t}", headers=headers)
     print(json.loads(res.text.lstrip(f"geetest_{t}(").rstrip(")")))
 
 
