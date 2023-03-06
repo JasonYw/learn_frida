@@ -384,7 +384,7 @@ def startRequest():
         "imgload": 230,  # 图片加载时间r["$_CAGw"] ms
         "aa": callSolveJs("encode_track_with_c_s", (encode_track, slide_info.get('c'), slide_info.get('s'))),
         # "ep": callSolveJs("get_ep"),
-        "ep": {"v": '7.8.9', "$_BIB": False, "me": True, "tm": tm, "td": -1},
+        "ep": {"v": '7.8.9', "$_BIB": False, "me": True, "tm": generateWindowPerformance(), "td": -1},
         # "ep":"7.8.9",
         "h9s9": "1816378497",
         "rp": callSolveJs("get_rp", (gt, challenge, trail_list[-1][-1]))
