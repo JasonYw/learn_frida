@@ -209,7 +209,7 @@ def showEaseOutQuit(distance):
     return result
 
 
-def callSolveJs(func, args=()):
+def callSolveJs(func, *args):
     if args:
         result = ctx.call(func, *args)
     else:
@@ -221,7 +221,28 @@ def callSolveJs(func, args=()):
     print("=================================")
     return result
 
+def verify_ocr():
+    # 读取背景图片和缺口图片
+    bg_img = cv2.imread('right.jpg')  # 背景图片
+    tp_img = cv2.imread('slider.jpg')  # 缺口图片
+    # 识别图片边缘
+    bg_edge = cv2.Canny(bg_img, 100, 200)
+    tp_edge = cv2.Canny(tp_img, 100, 200)
+    # 转换图片格式
+    bg_pic = cv2.cvtColor(bg_edge, cv2.COLOR_GRAY2RGB)
+    tp_pic = cv2.cvtColor(tp_edge, cv2.COLOR_GRAY2RGB)
+    # 缺口匹配
+    res = cv2.matchTemplate(bg_pic, tp_pic, cv2.TM_CCOEFF_NORMED)
+    min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(res)  # 寻找最优匹配
 
+    # 绘制方框
+    th, tw = tp_pic.shape[:2]
+    tl = max_loc  # 左上角点的坐标
+    br = (tl[0] + tw, tl[1] + th)  # 右下角点的坐标
+    cv2.rectangle(bg_img, tl, br, (0, 0, 255), 2)  # 绘制矩形
+    cv2.imwrite('./img/all.jpg', bg_img)  # 保存在本地
+    # 返回缺口的X坐标
+    return tl[0]
 
 def get_slide_track2(x):
     # 初始化轨迹列表
@@ -345,70 +366,32 @@ def generateWindowPerformance():
 
 
 def startRequest():
-    headers = {
-        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
-    }
-    tm = generateWindowPerformance()
-    session.get("https://www.geetest.com/demo/slide-float.html",
-                headers=headers)
+    session.get("https://www.geetest.com/demo/slide-float.html")
+    session.get("https://www.geetest.com/demo/libs/gt.js")
     t = int(str(time.time()).replace(".", "")[:13])
-    res = session.get(
-        f"https://www.geetest.com/demo/gt/register-slide?t={t}", headers=headers).json()
+    res = session.get(f"https://www.geetest.com/demo/gt/register-slide?t={t}").json()
     challenge = res.get("challenge")
     gt = res.get("gt")
-    session.get(
-        f"https://apiv6.geetest.com/gettype.php?gt={gt}&callback=geetest_{t}", headers=headers)
-    session.get(
-        f'https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=', headers=headers)
-    # json.loads(res.text.lstrip("(").rstrip(")"))
+    session.get(f"https://apiv6.geetest.com/gettype.php?gt={gt}&callback=geetest_{t}")
+    session.get(f'https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=')
     t = int(str(time.time()).replace(".", "")[:13])
-    session.get(
-        f"https://api.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=", headers=headers)
-    res = session.get(
-        f"https://api.geetest.com/get.php?is_next=true&type=slide3&gt={gt}&challenge={challenge}&lang=zh-cn&https=true&protocol=https%3A%2F%2F&offline=false&product=embed&api_server=api.geetest.com&isPC=true&autoReset=true&width=100%25&callback=geetest_{t}", headers=headers)
+    session.get(f"https://api.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=")
+    res = session.get(f"https://api.geetest.com/get.php?is_next=true&type=slide3&gt={gt}&challenge={challenge}&lang=zh-cn&https=true&protocol=https%3A%2F%2F&offline=false&product=embed&api_server=api.geetest.com&isPC=true&autoReset=true&width=100%25&callback=geetest_{t}")
     slide_info = json.loads(res.text.lstrip(f"geetest_{t}(").rstrip(")"))
-    gap_res = session.get(
-        f'https://static.geetest.com/{slide_info["bg"]}', headers=headers)
-    slider_res = session.get(
-        f'https://static.geetest.com/{slide_info["slice"]}', headers=headers)
+    gap_res = session.get(f'https://static.geetest.com/{slide_info["bg"]}')
+    slider_res = session.get(f'https://static.geetest.com/{slide_info["slice"]}')
+    challenge = slide_info.get("challenge")
+    gt = slide_info.get("gt")
     open("gap.jpg", "wb").write(gap_res.content)
     open("slider.jpg", "wb").write(slider_res.content)
     restoreImg()
     distance = getDistance()
-    trail_list = get_slide_track2(distance)
-    encode_track = callSolveJs("encode_track", (trail_list,))
-    o = {
-        "lang": "zh-cn",
-        "userresponse": callSolveJs("get_userresponse", (distance, challenge)),
-        "passtime": trail_list[-1][-1],
-        "imgload": 230,  # 图片加载时间r["$_CAGw"] ms
-        "aa": callSolveJs("encode_track_with_c_s", (encode_track, slide_info.get('c'), slide_info.get('s'))),
-        # "ep": callSolveJs("get_ep"),
-        "ep": {"v": '7.8.9', "$_BIB": False, "me": True, "tm": generateWindowPerformance(), "td": -1},
-        # "ep":"7.8.9",
-        "h9s9": "1816378497",
-        "rp": callSolveJs("get_rp", (gt, challenge, trail_list[-1][-1]))
-    }
-    w =  callSolveJs("get_h", (o,)) + callSolveJs("get_u")
-    # w = 'QSBYnmpeqba2zChky6uB1UMbySJ8ABn4nIJcIgm76Gw7DM5yxeDTuG6hgD4vesoFfpwlLTsaB49jyC1brzf7Xl3ipE(5NFnOUS29fTYq5wN1OMlfMd7iBCgqcw(noZQETsKwjvDEGkVEt3iD8zsqQtdVeg5QXsRqbkXjyZHbUhsVR0T(t3UTyWJ1tgYOJ5689XdFKstBZCADR(zlFOoXHciAw4Jp()DTZtEz0K)GAuKNA14EZbmZU7CRREgaj3CwHfhafP1jxlVPzXxsTNYVoSw(aLJENWFUX58cquRDgCKpSBPkZQIiU4eyHK26gy2bRw5r)ADXiYH8TTJ5PMlL9jrlzeO)Od)9jq4Pa63TLs19EcRx(bgDX0XTlVb(LfZsCNn0K(Aw2Ya2FuK8bhokE0CEbf8QCrGcOWkBWngv5G1PT8Eg85HwmdzknGzAEJeOyzEx0Ol06hgb4vpnF5OtaSXK3F(mc8SKaLILwZskBnJ2E52)IDwymFKhb6l5)XTsEQ0Nn1NWkQiUpfTdjeblvRbHd7MZUlrzkBHlaGp(awBBP8lO7anIOxNjl7s588mJAJthTyQpduDV)M7BmFVd5G5N93xLvJtkhSxTleG3AbmaaziGzS(Xmz9EAWjmMpIiWB9WYUl)w07JjXYNd1CccfZQU(AWv)0wM7pW8jjAJreZykzDHG4zgS9zx1Tw3D12Av0GKKjKYZpzu4Nvu4PygGqNKswUupGSAJej8EKtthHrgAYvbOAshJJpBAnlqcQPjywW591C7GDFaxBAcbrWjw..0424bd6c49b9f7f76908688aed0699cde87c99bc5a3aad42ea5c6d0fc188c2b7ed95d7b9e3bd713eba6aa57a3f013f8a0160cc2878fde7b2ee25f95c42d54ffb82be1527b43af2aba639f89611bc282cb3a7371d35a73fffee3888243833e1f44bfd09089eba9975044993884d9f73d52911ccce36910722c89cb5b79ec6a257'
+    trail_list = showEaseOutQuit(distance)
+    w = callSolveJs("get_w",gt,challenge,trail_list[-1][0],trail_list[-1][-1],trail_list,slide_info.get('c'),slide_info.get('s'),generateWindowPerformance())
     t = int(str(time.time()).replace(".", "")[:13])
-    res = session.get(
-        f"https://api.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&%24_BCw=0&client_type=web&w={w}&callback=geetest_{t}", headers=headers)
+    res = session.get(f"https://api.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&%24_BCw=0&client_type=web&w={w}&callback=geetest_{t}")
     print(json.loads(res.text.lstrip(f"geetest_{t}(").rstrip(")")))
 
 
 if __name__ == "__main__":
-    # 710Cs3w0VPfkkMXEztgbeXweA5sMhCjd1HHLxzFNtm6svrByXzuwvwq(Kiw6m(claI(n(G)QWY58NMYA1PLoUd5Qo7ko6V6nC06bQ0VzLQzUyO9pxs976tnq9b5dwIIv8MJkcwfrYX7aE1sc1ckziaB90Gk3AabhV7tRGJRqb9Y23lJU1ZGFduzYa7GFjbe37hsxFKRmJ3Mi7wrsPM5Urmw9DE28WaI8Wfrc5ndzpNyo8Mzg30r(KJ)IYylSI6hqzJi0vpL0Fx4eSP1aOEG6dTtFWVw)bhASv7H3B3hgpLzN1P1zVoEYCd(8MjmIFbzd3Qyku(Sx4YCXw8u3Zwf(PAB6onrWweXoXlHA5S9fixkXefVWMtcr0abZr3SdkMo8gpx1cKSuevNBoHNRZ)7cXOF5Hwt9FScIuvgZfYv(rn2R37zC8aulBBm3104(cfpvfz1KvxtQkyteYEe1a3z3sIEwRsWnSLWpNQH4k19XA97BOpozBfckYaz4T4otejBy2xYHYuvVK9828P3ZEpXc)1F7QpfU25uw37)rkyOMao3V2F(BxLL7xV)UI6UFJFXzqMORxuOCEoxk9R)2B66a4LCoMceAy8fAAYETXPTw2SW9WdL4OJ)LUWlv)cTPZgjAPOvoVw)(V)20dRcoZl)Qo8Ocl9LNfH5TXsmQlwEwDB4v9AV1qeACcmkZch(6Yz7txXmiZmAg1ldnJzH3OxEwhOxSTSZVccjn3Uahv(((fjNmYuXXr5uZLJVAMhkkgTmKcT3KfQRkcOWSMB1f0Db17A..
-    # 8CflGuw6P4ilGnsG3MpKuMIvHNEWFMpLtbe7UWBmFghhZYFz(bpGBgtrcrbT9MOlnP5LAZRR3MYEmKrx0nC7We9vvfKpmLG88fn9RVPyI(KRbEdfhtq94xugzrkNU4CGsAV7YKhwEewTjZc2zwp9DHo1XRn5iAj1YqQKw(IqHnrP8B2CpYMWBP0dfPOY85397x9kw22((EkZnbZqJEQJiVWRLAPrxNpljMhr8WuUlSIMb)mh)ak2JESpH7j)tWX53AWW3jjXBsa2grObSzb18OEhktjHCGTUlQcm6OPeUQAwAUgYnsKtvsdQGX4GOrjRMDN1R4ms2lMFXUsc(yrnNvXhS06)QrILgtApNKVv3b3HehbZYPzeCtRO)kBP6FdvhabvO)CjhWn4WldC34wvZ9SpJboXco1YWwsxjByLxmszCIyh9NgG3)FjfAAPsDbst)ydBxK8Rl9nz920AoxYMsPYC5x6aKTQTSbdsBmIs3GwZtLWHrW00tfpQTgmcJXJGcRzrhS1Ku1)sXbJ0yoLsZ8mzqze63rWn90AIjtltRRPJTTjjPZmQ1h7eak0yuHGGy8ab27eKCWRwdhmQ30NeE7YT2bIAQTmfEXPyC)8kiK1FVzdDFHgOwYqyiFmtJ7KrsxS9l)lzPyfc281yFWLOel)C3UiXLiOSYutwn3fHurn1hMcdeGSENUw8pG9rMbhLWlCSDW7MGZVHfPxUJgTZ4KacP12F5FV97idughwODkOMLPeRPX8yPzdAXwhYfEl54wihFcoIGd7jgcomheLYd7RaXnvW54v7PLtfBkpeacB0Ju1FKmWiL9cNqeqMl3xF0rAftAtrzmb29QqIsKwj0KneKjghs3YI(5NRWrQD00.
-    # T/4:BB@61.W!)(!!Kst(((()(()(tsssssststvss((!Q!($,@:8::99??B9::9$*gN9$)g$,C:9:809O$/4N
-    # a42210//.--(!!du((((((((((yyy~ttssvssss(!!(GYZZZZZYZZZZZZcYZZZZZ@WZ$)E$)FU$,J$/7
-    # drawTrail(trail_list)
-    # print(showEaseOutQuit(trail_list))
     startRequest()
-    # restoreImg()
-    # print(getDistance())
-    # print(get_distance())
-    # print(showEaseOutQuit(distance))
-    # startRequest()
-    # print(get_slide_track2(distance))
-    # print(generateWindowPerformance())
