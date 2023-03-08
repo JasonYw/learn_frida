@@ -490,8 +490,11 @@ function $_BEZ() {
         });
     return t["AES"] = d["$_BHIt"](R), t["AES"];
 }
-Qe = function() {}
+Qe = {}
 Qe["prototype"] = {
+    "$_CDL" : {
+        "aeskey":""
+    },
     "$_BJCv": function (e, t) {
         var n = this,
             r = n["$_CAHM"],
@@ -740,6 +743,7 @@ Qe["prototype"] = {
         return e["ven"] = t["vendor"] || -1, e["ren"] = t["renderer"] || -1, e["fp"] = this["$_BJHX"]["$_BDHq"], e["lp"] = this["$_BJHX"]["$_BDIb"], e["em"] = {}, W([], e["em"]), e["tm"] = new Te()["$_BDCw"](), e["dnf"] = "dnf", e["by"] = this["$_BJGQ"], e;
     },
     "$_CCGQ": function (e) {
+        console.log(e)
         return this["$_CDL"]["aeskey"] && !e || (this["$_CDL"]["aeskey"] = ae()), this["$_CDL"]["aeskey"];
     },
     "$_CCFD": function (e) {
@@ -1115,9 +1119,11 @@ X = function () {
 
 function get_w() {
     var t = Qe["prototype"]
-    var r = t["$_CCFD"]()
     var _ = $_BEZ()
-    var r = '{"lang":"zh-cn","type":"fullpage","tt":"M,l8Pjp/.*M*j(55((()5((((,):)/Rj11Rj11RlGSeZFKD1UDN(ODRkKSZGGhK**2IF-(Aj(PYb((5,(8(,,5Vd,M)M9(T9-)(9/-()1I1,9d@)(Yh/)(9-51)(E-(/)M(0qj(FY8bb(5e5cHI-)(Y-)b94)(?0,MN1)(EI(/*M)M9(E/(/,M0qb","light":"DIV_0","s":"c7c3e21112fe4f741921cb3e4ff9f7cb","h":"4d0ce878bad6248a3240988e006bce1e","hh":"fd25b7ad4e24f5e578bb69bbf59d895a","hi":"40920b1e1ba0d08848ae5ab376f22ac9","vip_order":-1,"ct":-1,"ep":{"v":"9.1.2","de":false,"te":false,"$_BBS":true,"ven":"Google Inc. (Apple)","ren":"ANGLE (Apple, Apple M1, OpenGL 4.1)","fp":["move",668,365,1678277040582,"pointermove"],"lp":["up",630,327,1678277041180,"pointerup"],"em":{"ph":0,"cp":0,"ek":"11","wd":1,"nt":0,"si":0,"sc":0},"tm":{"a":1678277037959,"b":1678277038306,"c":1678277038306,"d":0,"e":0,"f":1678277038063,"g":1678277038063,"h":1678277038063,"i":1678277038063,"j":1678277038063,"k":0,"l":1678277038080,"m":1678277038300,"n":1678277038301,"o":1678277038307,"p":1678277038513,"q":1678277038513,"r":1678277038514,"s":1678277038516,"t":1678277038516,"u":1678277038516},"dnf":"dnf","by":0},"passtime":2171,"rp":"095e61a3f17fa8e792884905d5b1a2ee","captcha_token":"49191554"}'
+    var r = '{"lang":"zh-cn","type":"fullpage","tt":"M*BE)1p5-U(L6R,D(5(((.9A)GVD9B2JkM9Mc/E-/VVK*O2KDRkKEj)RFEB/(.bY(8(5beTd7E/)5Tj1/)M9(9-1-)*)(9/)M)MM((-d(1?NM/(EZMS4(C,(1XbRP91*(bE(Lj","light":"DIV_0","s":"c7c3e21112fe4f741921cb3e4ff9f7cb","h":"fb228aac9f7b89033cf49b8cf1405441","hh":"4c40fe59b88897106230ed94f215866f","hi":"16349a88b81db9b6b349b686d162dd83","vip_order":-1,"ct":-1,"ep":{"v":"9.1.2","de":false,"te":false,"$_BBS":true,"ven":"Google Inc. (Apple)","ren":"ANGLE (Apple, Apple M1, OpenGL 4.1)","fp":["move",9,364,1678282418143,"pointermove"],"lp":["up",633,319,1678282420582,"pointerup"],"em":{"ph":0,"cp":0,"ek":"11","wd":1,"nt":0,"si":0,"sc":0},"tm":{"a":1678282394053,"b":1678282394408,"c":1678282394408,"d":0,"e":0,"f":1678282394161,"g":1678282394161,"h":1678282394161,"i":1678282394161,"j":1678282394161,"k":0,"l":1678282394166,"m":1678282394402,"n":1678282394403,"o":1678282394409,"p":1678282394624,"q":1678282394624,"r":1678282394625,"s":1678282394627,"t":1678282394627,"u":1678282394627},"dnf":"dnf","by":0},"passtime":25322,"rp":"b159f9ec78539ebcfe0225920e7f0143","captcha_token":"49191554"}'
+    // return m["$_EJv"](_["encrypt"](r, "519bb3fabe1129f9"))
     return m["$_EJv"](_["encrypt"](r, t["$_CCGQ"]()))
 }
 console.log(get_w())
+
+// 019cd7bb211e54f3
