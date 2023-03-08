@@ -107,9 +107,11 @@ let mywt = {
 }
 const window = new Proxy(Object.assign(global,mywindow),getObjhandler("window"))
 const ht = new Proxy(Object.create(mynavigator),getObjhandler("Navigator"))
+const pe = new Proxy(Object.create(mynavigator),getObjhandler("Navigator"))
 const wt = new Proxy(Object.create(mywt),getObjhandler("wt"))
 module.exports = {
     window,
     ht,
-    wt
+    wt,
+    pe
 }
