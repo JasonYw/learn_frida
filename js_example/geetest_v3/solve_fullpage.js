@@ -2402,7 +2402,6 @@ function get_r(c, s, tm, passtime, gt, challenge) {
         t = ke["prototype"]["$_BFIv"](),
         n = '6126magic data7414magic dataCSS1Compatmagic data1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data2magic data3magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data1magic data-1magic data-1magic data-1magic data1920magic data0magic data1920magic data0magic data1440magic data789magic data1440magic data900magic datazh-CNmagic datazh-CN,zhmagic data-1magic data2magic data30magic dataMozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36magic data1magic data1magic data1440magic data900magic data1440magic data900magic data1magic data1magic data1magic data-1magic dataMacIntelmagic data0magic data-8magic datac0af373aa0acf66fbbaf7282500675d3magic data0magic datainternal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewermagic data0magic data-1magic data0magic data8magic dataAndaleMono,Arial,ArialBlack,ArialHebrew,ArialNarrow,ArialRoundedMTBold,ArialUnicodeMS,ComicSansMS,Courier,CourierNew,Geneva,Georgia,Helvetica,HelveticaNeue,Impact,LUCIDAGRANDE,MicrosoftSansSerif,Monaco,Palatino,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3magic data1678368908012magic data-1magic data-1magic data-1magic data12magic data-1magic data-1magic data-1magic data5magic data-1magic data-1', // n = Me["prototype"]["$_BFIv"]()
         r = 'DIV_0' // r = i["$_BBCW"]["$_BFHk"](),
-    i["$_CEEj"] = "";
     var args0 = `function o(e, t) {
         function n(e) {
           var t = 5381,
@@ -2467,4 +2466,4 @@ function get_w(c, s, tm, passtime, gt, challenge) {
     return m["$_EJv"](_["encrypt"](r, t["$_CCGQ"]()))
 }
 
-console.log(get_w([12, 58, 98, 36, 43, 95, 62, 15, 12], "732a4576", {}, 1575630, 'e52c06c937981b90b275d0aff1d40076', 'a5490d410bd84a60007ed5f257f085d1'))
+// console.log(get_w([12, 58, 98, 36, 43, 95, 62, 15, 12], "732a4576", {}, 1575630, 'e52c06c937981b90b275d0aff1d40076', 'a5490d410bd84a60007ed5f257f085d1'))
