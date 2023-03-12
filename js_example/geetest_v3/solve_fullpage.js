@@ -223,6 +223,20 @@ m = {
         return this["$_FBL"](e);
     }
 }
+Ae= {
+    "deviceorientation": false,
+    "mouseEvent": true,
+    "touchEvent": false
+}
+A = false
+Se = {
+    "puppet": false,
+    "phantom": false,
+    "nightmare": false,
+    "selenium": false,
+    "vendor": "Google Inc. (Apple)",
+    "renderer": "ANGLE (Apple, Apple M1, OpenGL 4.1)"
+}
 function $_BEZ() {
     var e,
         n = Object["create"] || function () {
@@ -740,7 +754,21 @@ Qe["prototype"] = {
         this["$_CDL"];
         e["de"] = Ae["deviceorientation"], e["te"] = Ae["touchEvent"], e["$_BBS"] = Ae["mouseEvent"];
         var t = !A && Se;
-        return e["ven"] = t["vendor"] || -1, e["ren"] = t["renderer"] || -1, e["fp"] = this["$_BJHX"]["$_BDHq"], e["lp"] = this["$_BJHX"]["$_BDIb"], e["em"] = {}, W([], e["em"]), e["tm"] = new Te()["$_BDCw"](), e["dnf"] = "dnf", e["by"] = this["$_BJGQ"], e;
+        return e["ven"] = t["vendor"] || -1, e["ren"] = t["renderer"] || -1, e["fp"] = [
+            "move",
+            673,
+            311,
+            Date.now(),
+            "pointermove"
+        ], e["lp"] = [
+            "up",
+            647,
+            324,
+            Date.now(),
+            "pointerup"
+        ], e["em"] = {"ph":0,"cp":0,"ek":"11","wd":1,"nt":0,"si":0,"sc":0},//{}, W([], e["em"]), 
+        e["tm"] = -1,//new Te()["$_BDCw"](), 
+        e["dnf"] = "dnf", e["by"] = this["$_BJGQ"], e;
     },
     "$_CCGQ": function (e) {
         console.log(e)
@@ -1165,798 +1193,8 @@ ee["prototype"] = {
         return t["forEach"](e);
     }
 }
-ke = {
-    "$_BDEK": [
-        [
-            "move",
-            705,
-            160,
-            1678365170924,
-            "pointermove"
-        ],
-        [
-            "move",
-            722,
-            180,
-            1678365170939,
-            "pointermove"
-        ],
-        [
-            "move",
-            730,
-            191,
-            1678365170950,
-            "pointermove"
-        ],
-        [
-            "move",
-            737,
-            203,
-            1678365170952,
-            "pointermove"
-        ],
-        [
-            "move",
-            743,
-            214,
-            1678365170961,
-            "pointermove"
-        ],
-        [
-            "move",
-            749,
-            225,
-            1678365170968,
-            "pointermove"
-        ],
-        [
-            "move",
-            754,
-            237,
-            1678365170976,
-            "pointermove"
-        ],
-        [
-            "move",
-            758,
-            250,
-            1678365170984,
-            "pointermove"
-        ],
-        [
-            "move",
-            763,
-            262,
-            1678365170992,
-            "pointermove"
-        ],
-        [
-            "move",
-            768,
-            275,
-            1678365171001,
-            "pointermove"
-        ],
-        [
-            "move",
-            767,
-            275,
-            1678365171177,
-            "pointermove"
-        ],
-        [
-            "move",
-            763,
-            277,
-            1678365171185,
-            "pointermove"
-        ],
-        [
-            "move",
-            760,
-            278,
-            1678365171193,
-            "pointermove"
-        ],
-        [
-            "move",
-            760,
-            278,
-            1678365171202,
-            "pointermove"
-        ],
-        [
-            "move",
-            756,
-            280,
-            1678365171209,
-            "pointermove"
-        ],
-        [
-            "move",
-            752,
-            282,
-            1678365171218,
-            "pointermove"
-        ],
-        [
-            "move",
-            742,
-            287,
-            1678365171225,
-            "pointermove"
-        ],
-        [
-            "move",
-            731,
-            291,
-            1678365171233,
-            "pointermove"
-        ],
-        [
-            "move",
-            719,
-            295,
-            1678365171241,
-            "pointermove"
-        ],
-        [
-            "move",
-            714,
-            297,
-            1678365171252,
-            "pointermove"
-        ],
-        [
-            "move",
-            703,
-            300,
-            1678365171257,
-            "pointermove"
-        ],
-        [
-            "move",
-            694,
-            302,
-            1678365171265,
-            "pointermove"
-        ],
-        [
-            "move",
-            684,
-            304,
-            1678365171273,
-            "pointermove"
-        ],
-        [
-            "move",
-            676,
-            305,
-            1678365171281,
-            "pointermove"
-        ],
-        [
-            "move",
-            669,
-            305,
-            1678365171289,
-            "pointermove"
-        ],
-        [
-            "move",
-            667,
-            306,
-            1678365171297,
-            "pointermove"
-        ],
-        [
-            "move",
-            662,
-            306,
-            1678365171305,
-            "pointermove"
-        ],
-        [
-            "move",
-            659,
-            306,
-            1678365171314,
-            "pointermove"
-        ],
-        [
-            "move",
-            656,
-            306,
-            1678365171321,
-            "pointermove"
-        ],
-        [
-            "move",
-            654,
-            306,
-            1678365171330,
-            "pointermove"
-        ],
-        [
-            "move",
-            653,
-            306,
-            1678365171337,
-            "pointermove"
-        ],
-        [
-            "move",
-            653,
-            306,
-            1678365171347,
-            "pointermove"
-        ],
-        [
-            "move",
-            652,
-            306,
-            1678365171353,
-            "pointermove"
-        ],
-        [
-            "move",
-            652,
-            306,
-            1678365171364,
-            "pointermove"
-        ],
-        [
-            "move",
-            652,
-            306,
-            1678365171385,
-            "pointermove"
-        ],
-        [
-            "move",
-            652,
-            307,
-            1678365171397,
-            "pointermove"
-        ],
-        [
-            "move",
-            651,
-            307,
-            1678365171401,
-            "pointermove"
-        ],
-        [
-            "move",
-            651,
-            308,
-            1678365171409,
-            "pointermove"
-        ],
-        [
-            "move",
-            650,
-            309,
-            1678365171417,
-            "pointermove"
-        ],
-        [
-            "move",
-            649,
-            310,
-            1678365171425,
-            "pointermove"
-        ],
-        [
-            "move",
-            648,
-            311,
-            1678365171433,
-            "pointermove"
-        ],
-        [
-            "move",
-            647,
-            312,
-            1678365171441,
-            "pointermove"
-        ],
-        [
-            "move",
-            646,
-            313,
-            1678365171449,
-            "pointermove"
-        ],
-        [
-            "move",
-            644,
-            314,
-            1678365171458,
-            "pointermove"
-        ],
-        [
-            "move",
-            643,
-            315,
-            1678365171465,
-            "pointermove"
-        ],
-        [
-            "move",
-            642,
-            315,
-            1678365171473,
-            "pointermove"
-        ],
-        [
-            "move",
-            641,
-            316,
-            1678365171481,
-            "pointermove"
-        ],
-        [
-            "move",
-            640,
-            316,
-            1678365171489,
-            "pointermove"
-        ],
-        [
-            "move",
-            639,
-            316,
-            1678365171497,
-            "pointermove"
-        ],
-        [
-            "move",
-            639,
-            317,
-            1678365171505,
-            "pointermove"
-        ],
-        [
-            "move",
-            639,
-            317,
-            1678365171515,
-            "pointermove"
-        ],
-        [
-            "move",
-            638,
-            317,
-            1678365171521,
-            "pointermove"
-        ],
-        [
-            "move",
-            638,
-            317,
-            1678365171532,
-            "pointermove"
-        ],
-        [
-            "move",
-            638,
-            317,
-            1678365171537,
-            "pointermove"
-        ],
-        [
-            "down",
-            638,
-            317,
-            1678365171566,
-            "pointerdown"
-        ],
-        [
-            "up",
-            638,
-            317,
-            1678365171664,
-            "pointerup"
-        ]
-    ]
-
-}
+ke = {}
 ke["prototype"] = {
-    "$_BDEK": [
-        [
-            "move",
-            705,
-            160,
-            1678365170924,
-            "pointermove"
-        ],
-        [
-            "move",
-            722,
-            180,
-            1678365170939,
-            "pointermove"
-        ],
-        [
-            "move",
-            730,
-            191,
-            1678365170950,
-            "pointermove"
-        ],
-        [
-            "move",
-            737,
-            203,
-            1678365170952,
-            "pointermove"
-        ],
-        [
-            "move",
-            743,
-            214,
-            1678365170961,
-            "pointermove"
-        ],
-        [
-            "move",
-            749,
-            225,
-            1678365170968,
-            "pointermove"
-        ],
-        [
-            "move",
-            754,
-            237,
-            1678365170976,
-            "pointermove"
-        ],
-        [
-            "move",
-            758,
-            250,
-            1678365170984,
-            "pointermove"
-        ],
-        [
-            "move",
-            763,
-            262,
-            1678365170992,
-            "pointermove"
-        ],
-        [
-            "move",
-            768,
-            275,
-            1678365171001,
-            "pointermove"
-        ],
-        [
-            "move",
-            767,
-            275,
-            1678365171177,
-            "pointermove"
-        ],
-        [
-            "move",
-            763,
-            277,
-            1678365171185,
-            "pointermove"
-        ],
-        [
-            "move",
-            760,
-            278,
-            1678365171193,
-            "pointermove"
-        ],
-        [
-            "move",
-            760,
-            278,
-            1678365171202,
-            "pointermove"
-        ],
-        [
-            "move",
-            756,
-            280,
-            1678365171209,
-            "pointermove"
-        ],
-        [
-            "move",
-            752,
-            282,
-            1678365171218,
-            "pointermove"
-        ],
-        [
-            "move",
-            742,
-            287,
-            1678365171225,
-            "pointermove"
-        ],
-        [
-            "move",
-            731,
-            291,
-            1678365171233,
-            "pointermove"
-        ],
-        [
-            "move",
-            719,
-            295,
-            1678365171241,
-            "pointermove"
-        ],
-        [
-            "move",
-            714,
-            297,
-            1678365171252,
-            "pointermove"
-        ],
-        [
-            "move",
-            703,
-            300,
-            1678365171257,
-            "pointermove"
-        ],
-        [
-            "move",
-            694,
-            302,
-            1678365171265,
-            "pointermove"
-        ],
-        [
-            "move",
-            684,
-            304,
-            1678365171273,
-            "pointermove"
-        ],
-        [
-            "move",
-            676,
-            305,
-            1678365171281,
-            "pointermove"
-        ],
-        [
-            "move",
-            669,
-            305,
-            1678365171289,
-            "pointermove"
-        ],
-        [
-            "move",
-            667,
-            306,
-            1678365171297,
-            "pointermove"
-        ],
-        [
-            "move",
-            662,
-            306,
-            1678365171305,
-            "pointermove"
-        ],
-        [
-            "move",
-            659,
-            306,
-            1678365171314,
-            "pointermove"
-        ],
-        [
-            "move",
-            656,
-            306,
-            1678365171321,
-            "pointermove"
-        ],
-        [
-            "move",
-            654,
-            306,
-            1678365171330,
-            "pointermove"
-        ],
-        [
-            "move",
-            653,
-            306,
-            1678365171337,
-            "pointermove"
-        ],
-        [
-            "move",
-            653,
-            306,
-            1678365171347,
-            "pointermove"
-        ],
-        [
-            "move",
-            652,
-            306,
-            1678365171353,
-            "pointermove"
-        ],
-        [
-            "move",
-            652,
-            306,
-            1678365171364,
-            "pointermove"
-        ],
-        [
-            "move",
-            652,
-            306,
-            1678365171385,
-            "pointermove"
-        ],
-        [
-            "move",
-            652,
-            307,
-            1678365171397,
-            "pointermove"
-        ],
-        [
-            "move",
-            651,
-            307,
-            1678365171401,
-            "pointermove"
-        ],
-        [
-            "move",
-            651,
-            308,
-            1678365171409,
-            "pointermove"
-        ],
-        [
-            "move",
-            650,
-            309,
-            1678365171417,
-            "pointermove"
-        ],
-        [
-            "move",
-            649,
-            310,
-            1678365171425,
-            "pointermove"
-        ],
-        [
-            "move",
-            648,
-            311,
-            1678365171433,
-            "pointermove"
-        ],
-        [
-            "move",
-            647,
-            312,
-            1678365171441,
-            "pointermove"
-        ],
-        [
-            "move",
-            646,
-            313,
-            1678365171449,
-            "pointermove"
-        ],
-        [
-            "move",
-            644,
-            314,
-            1678365171458,
-            "pointermove"
-        ],
-        [
-            "move",
-            643,
-            315,
-            1678365171465,
-            "pointermove"
-        ],
-        [
-            "move",
-            642,
-            315,
-            1678365171473,
-            "pointermove"
-        ],
-        [
-            "move",
-            641,
-            316,
-            1678365171481,
-            "pointermove"
-        ],
-        [
-            "move",
-            640,
-            316,
-            1678365171489,
-            "pointermove"
-        ],
-        [
-            "move",
-            639,
-            316,
-            1678365171497,
-            "pointermove"
-        ],
-        [
-            "move",
-            639,
-            317,
-            1678365171505,
-            "pointermove"
-        ],
-        [
-            "move",
-            639,
-            317,
-            1678365171515,
-            "pointermove"
-        ],
-        [
-            "move",
-            638,
-            317,
-            1678365171521,
-            "pointermove"
-        ],
-        [
-            "move",
-            638,
-            317,
-            1678365171532,
-            "pointermove"
-        ],
-        [
-            "move",
-            638,
-            317,
-            1678365171537,
-            "pointermove"
-        ],
-        [
-            "down",
-            638,
-            317,
-            1678365171566,
-            "pointerdown"
-        ],
-        [
-            "up",
-            638,
-            317,
-            1678365171664,
-            "pointerup"
-        ]
-    ],
     // "$_BEGU": k || M || C ? 150 : 300,
     "$_BEGU": 300,
     "$_BECi": function () {
@@ -2321,6 +1559,70 @@ Me["prototype"] = {
         }), o["join"]("!!");
     }
 }
+ge = function () {
+    "use strict";
+    var l,
+        u,
+        n,
+        p,
+        e = {},
+        t = /[\\"\u0000-\u001f\u007f-\u009f\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g;
+    function r(e) {
+        return e < 10 ? "0" + e : e;
+    }
+    function o() {
+        return this["valueOf"]();
+    }
+    function h(e) {
+        return t["lastIndex"] = 0, t["test"](e) ? "\"" + e["replace"](t, function (e) {
+            var t = n[e];
+            return "string" == typeof t ? t : "\\u" + ("0000" + e["charCodeAt"](0)["toString"](16))["slice"](-4);
+        }) + "\"" : "\"" + e + "\"";
+    }
+    return "function" != typeof Date["prototype"]["toJSON"] && (Date["prototype"]["toJSON"] = function () {
+        return isFinite(this["valueOf"]()) ? this["getUTCFullYear"]() + "-" + r(this["getUTCMonth"]() + 1) + "-" + r(this["getUTCDate"]()) + "T" + r(this["getUTCHours"]()) + ":" + r(this["getUTCMinutes"]()) + ":" + r(this["getUTCSeconds"]()) + "Z" : null;
+    }, Boolean["prototype"]["toJSON"] = o, Number["prototype"]["toJSON"] = o, String["prototype"]["toJSON"] = o), n = {
+        "\b": "\\b",
+        "\t": "\\t",
+        "\n": "\\n",
+        "\f": "\\f",
+        "\r": "\\r",
+        "\"": "\\\"",
+        "\\": "\\\\"
+    }, e["stringify"] = function (e, t, n) {
+        var r;
+        if (u = l = "", "number" == typeof n) for (r = 0; r < n; r += 1) u += " "; else "string" == typeof n && (u = n);
+        if ((p = t) && "function" != typeof t && ("object" != typeof t || "number" != typeof t["length"])) throw new Error("JSON.stringify");
+        return function _(e, t) {
+            var n,
+                r,
+                o,
+                i,
+                s,
+                a = l,
+                c = t[e];
+            switch (c && "object" == typeof c && "function" == typeof c["toJSON"] && (c = c["toJSON"](e)), "function" == typeof p && (c = p["call"](t, e, c)), typeof c) {
+                case "string":
+                    return h(c);
+                case "number":
+                    return isFinite(c) ? String(c) : "null";
+                case "boolean":
+                case "null":
+                    return String(c);
+                case "object":
+                    if (!c) return "null";
+                    if (l += u, s = [], "[object Array]" === Object["prototype"]["toString"]["apply"](c)) {
+                        for (i = c["length"], n = 0; n < i; n += 1) s[n] = _(n, c) || "null";
+                        return o = 0 === s["length"] ? "[]" : l ? "[\n" + l + s["join"](",\n" + l) + "\n" + a + "]" : "[" + s["join"](",") + "]", l = a, o;
+                    }
+                    if (p && "object" == typeof p) for (i = p["length"], n = 0; n < i; n += 1) "string" == typeof p[n] && (o = _(r = p[n], c)) && s["push"](h(r) + (l ? ": " : ":") + o); else for (r in c) Object["prototype"]["hasOwnProperty"]["call"](c, r) && (o = _(r, c)) && s["push"](h(r) + (l ? ": " : ":") + o);
+                    return o = 0 === s["length"] ? "{}" : l ? "{\n" + l + s["join"](",\n" + l) + "\n" + a + "}" : "{" + s["join"](",") + "}", l = a, o;
+            }
+        }("", {
+            "": e
+        });
+    }, e;
+}()
 function I(e) {
     function c(e, t) {
         return e << t | e >>> 32 - t;
@@ -2390,80 +1692,80 @@ function get_tt(e, t, n) {
         o += 2;
         var _ = parseInt(r, 16),
             l = String["fromCharCode"](_),
-            u = (s * _ * _ + a * _ + c) % e["length"];
+            u = (s * _ * _ + a * _ + c) % 100;
+        // u = (s * _ * _ + a * _ + c) % e["length"];
         i = i["substr"](0, u) + l + i["substr"](u);
     }
     return i || -1;
 }
-function get_r(c, s, tm, passtime, gt, challenge) {
-    //passtime = 1575630//$_GA() - ot now - reset.php" 13时间戳
-    var i = Qe["prototype"],
-        e = ke["prototype"]["$_BFHk"](),
-        t = ke["prototype"]["$_BFIv"](),
-        n = '6126magic data7414magic dataCSS1Compatmagic data1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data2magic data3magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data1magic data-1magic data-1magic data-1magic data1920magic data0magic data1920magic data0magic data1440magic data789magic data1440magic data900magic datazh-CNmagic datazh-CN,zhmagic data-1magic data2magic data30magic dataMozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36magic data1magic data1magic data1440magic data900magic data1440magic data900magic data1magic data1magic data1magic data-1magic dataMacIntelmagic data0magic data-8magic datac0af373aa0acf66fbbaf7282500675d3magic data0magic datainternal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewermagic data0magic data-1magic data0magic data8magic dataAndaleMono,Arial,ArialBlack,ArialHebrew,ArialNarrow,ArialRoundedMTBold,ArialUnicodeMS,ComicSansMS,Courier,CourierNew,Geneva,Georgia,Helvetica,HelveticaNeue,Impact,LUCIDAGRANDE,MicrosoftSansSerif,Monaco,Palatino,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3magic data1678368908012magic data-1magic data-1magic data-1magic data12magic data-1magic data-1magic data-1magic data5magic data-1magic data-1', // n = Me["prototype"]["$_BFIv"]()
-        r = 'DIV_0' // r = i["$_BBCW"]["$_BFHk"](),
-    var args0 = `function o(e, t) {
-        function n(e) {
-          var t = 5381,
-            n = e["length"],
-            r = 0;
-          while (n--) t = (t << 5) + t + e["charCodeAt"](r++);
-          return t &= ~(1 << 31);
+function get_w(key_, s, gt, challenge, tm, trail) {
+    ke["prototype"]["$_BDEK"] = trail
+    var i = Qe["prototype"]
+    var e = ke["prototype"]["$_BFHk"]()
+    var t = ke["prototype"]["$_BFIv"]()
+    var n = '6126magic data7414magic dataCSS1Compatmagic data1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data2magic data3magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data1magic data-1magic data-1magic data-1magic data1920magic data0magic data1920magic data0magic data1440magic data789magic data1440magic data900magic datazh-CNmagic datazh-CN,zhmagic data-1magic data2magic data30magic dataMozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36magic data1magic data1magic data1440magic data900magic data1440magic data900magic data1magic data1magic data1magic data-1magic dataMacIntelmagic data0magic data-8magic datac0af373aa0acf66fbbaf7282500675d3magic data0magic datainternal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewermagic data0magic data-1magic data0magic data8magic dataAndaleMono,Arial,ArialBlack,ArialHebrew,ArialNarrow,ArialRoundedMTBold,ArialUnicodeMS,ComicSansMS,Courier,CourierNew,Geneva,Georgia,Helvetica,HelveticaNeue,Impact,LUCIDAGRANDE,MicrosoftSansSerif,Monaco,Palatino,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3magic data1678368908012magic data-1magic data-1magic data-1magic data12magic data-1magic data-1magic data-1magic data5magic data-1magic data-1' // n = Me["prototype"]["$_BFIv"]()
+    var r = 'DIV_0' // r = i["$_BBCW"]["$_BFHk"]()
+    // var e = null
+    // var t = null
+    // var n = null
+    i["$_CEEj"] = ""
+    for (var a = [["lang","zh-cn"], ["type", "fullpage"], ["tt", function (e, t, n) {
+        if (!t || !n) return e;
+        var r,
+            o = 0,
+            i = e,
+            s = t[0],
+            a = t[2],
+            c = t[4];
+        while (r = n["substr"](o, 2)) {
+            o += 2;
+            var _ = parseInt(r, 16),
+                l = String["fromCharCode"](_),
+                u = (s * _ * _ + a * _ + c) % e["length"];
+            i = i["substr"](0, u) + l + i["substr"](u);
         }
-        100 < new Date()["getTime"]() - t["getTime"]() && (e = "qwe"), r = "{" + i["$_CEEj"] + "\"captcha_token\":\"" + n(o["toString"]() + n(n["toString"]()) + n(e["toString"]())) + "\"}";
-    }`
-    var args1 = `
-    function n(e) {
-        var t = 5381,
-          n = e["length"],
-          r = 0;
-        while (n--) t = (t << 5) + t + e["charCodeAt"](r++);
-        return t &= ~(1 << 31);
-    }`
-    function _n(e) {
-        var t = 5381,
-          n = e["length"],
-          r = 0;
-        while (n--) t = (t << 5) + t + e["charCodeAt"](r++);
-        return t &= ~(1 << 31);
-    }    
-    return {
-        "lang": "zh-cn",
-        "type": "fullpage",
-        "tt": get_tt(e, c, s),
-        "light": 'DIV_0',
-        "s": I(m["$_EIA"](t)),
-        "h": I(m["$_EIA"](n)),
-        "hh": I(n),
-        "hi": I('6126!!7414!!CSS1Compat!!1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!2!!3!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!1!!-1!!-1!!-1!!1920!!0!!1920!!0!!1440!!789!!1440!!900!!zh-CN!!zh-CN,zh!!-1!!2!!30!!Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36!!1!!1!!1440!!900!!1440!!900!!1!!1!!1!!-1!!MacIntel!!0!!-8!!c0af373aa0acf66fbbaf7282500675d3!!0!!internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer!!0!!-1!!0!!8!!AndaleMono,Arial,ArialBlack,ArialHebrew,ArialNarrow,ArialRoundedMTBold,ArialUnicodeMS,ComicSansMS,Courier,CourierNew,Geneva,Georgia,Helvetica,HelveticaNeue,Impact,LUCIDAGRANDE,MicrosoftSansSerif,Monaco,Palatino,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3!!1678372323177!!-1!!-1!!-1!!12!!-1!!-1!!-1!!5!!-1!!-1'),
-        "vip_order": -1,
-        "ct": -1,
-        "ep": {
-            "v": "9.1.2",
-            "de": false,
-            "te": false,
-            "$_BBS": true,
-            "ven": "Google Inc. (Apple)",
-            "ren": "ANGLE (Apple, Apple M1, OpenGL 4.1)",
-            "fp": '', //ke["prototype"]["$_BDHq"],
-            "lp": '',//ke["prototype"]["$_BDIb"]
-            "em": { "ph": 0, "cp": 0, "ek": "11", "wd": 1, "nt": 0, "si": 0, "sc": 0 },
-            "tm": tm,
-            "dnf": "dnf",
-            "by": 0
-        },
-        "passtime": passtime,
-        "rp": I(gt + challenge + s),
-        "captcha_token": _n(args0 + args1,_n('bbOy'))
-    }
-    
-}
-function get_w(c, s, tm, passtime, gt, challenge) {
-    var r = JSON.stringify(get_r(c, s, tm, passtime, gt, challenge))
-    console.log(r)
-    var t = Qe["prototype"]
-    var _ = $_BEZ()
-    return m["$_EJv"](_["encrypt"](r, t["$_CCGQ"]()))
+        return i;
+    }(e, c, s) || -1], ["light", r || -1], ["s", I(m["$_EIA"](t))], ["h", I(m["$_EIA"](n))], ["hh", I(n)], ["hi", I('6126!!7414!!CSS1Compat!!1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!2!!3!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!1!!-1!!-1!!-1!!1920!!0!!1920!!0!!1440!!789!!1440!!900!!zh-CN!!zh-CN,zh!!-1!!2!!30!!Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36!!1!!1!!1440!!900!!1440!!900!!1!!1!!1!!-1!!MacIntel!!0!!-8!!c0af373aa0acf66fbbaf7282500675d3!!0!!internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer!!0!!-1!!0!!8!!AndaleMono,Arial,ArialBlack,ArialHebrew,ArialNarrow,ArialRoundedMTBold,ArialUnicodeMS,ComicSansMS,Courier,CourierNew,Geneva,Georgia,Helvetica,HelveticaNeue,Impact,LUCIDAGRANDE,MicrosoftSansSerif,Monaco,Palatino,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3!!1678372323177!!-1!!-1!!-1!!12!!-1!!-1!!-1!!5!!-1!!-1')], ["vip_order", -1], ["ct",  -1], ["ep", i["$_CEFQ"]()], ["passtime", -1], ["rp", I(gt + challenge + s)]], c = 0; c < a["length"]; c++) i["$_CEEj"] += "\"" + a[c][0] + "\":" + ge["stringify"](a[c][1]) + ",";
+    var _ = $_BEZ();
+    i["$_CEGO"] = function l() {
+        var t = ["bbOy"];
+        return function (e) {
+          t["push"](e["toString"]());
+          var r = "";
+          !function o(e, t) {
+            function n(e) {
+              var t = 5381,
+                n = e["length"],
+                r = 0;
+              while (n--) t = (t << 5) + t + e["charCodeAt"](r++);
+              return t &= ~(1 << 31);
+            }
+            100 < new Date()["getTime"]() - t["getTime"]() && (e = "qwe"), r = "{" + i["$_CEEj"] + "\"captcha_token\":\"" + n(o["toString"]() + n(n["toString"]()) + n('bbOy'["toString"]())) + "\"}";
+          }(t["shift"](), new Date()), i["$_CECj"] = m["$_EJv"](_["encrypt"](r, key_));
+          console.log(r)
+        };
+    }(), i["$_CEGO"]("");
+    return i["$_CECj"]
 }
 
-// console.log(get_w([12, 58, 98, 36, 43, 95, 62, 15, 12], "732a4576", {}, 1575630, 'e52c06c937981b90b275d0aff1d40076', 'a5490d410bd84a60007ed5f257f085d1'))
+function get_w0(gt, challenge) {
+    var config = { "gt": gt, "challenge": challenge, "offline": false, "new_captcha": true, "product": "float", "width": "300px", "https": true, "api_server": "apiv6.geetest.com", "protocol": "https://", "type": "fullpage", "static_servers": ["static.geetest.com/", "dn-staticdown.qbox.me/"], "voice": "/static/js/voice.1.2.2.js", "click": "/static/js/click.3.0.7.js", "beeline": "/static/js/beeline.1.0.1.js", "fullpage": "/static/js/fullpage.9.1.3.js", "slide": "/static/js/slide.7.8.9.js", "geetest": "/static/js/geetest.6.0.9.js", "aspect_radio": { "slide": 103, "click": 128, "voice": 128, "beeline": 50 }, "cc": 8, "ww": true, "i": "6126!!7414!!CSS1Compat!!1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!2!!3!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!-1!!1!!-1!!-1!!-1!!1920!!0!!1920!!0!!1440!!789!!1440!!900!!zh-CN!!zh-CN,zh!!-1!!2!!30!!Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36!!1!!1!!1440!!900!!1440!!900!!1!!1!!1!!-1!!MacIntel!!0!!-8!!c0af373aa0acf66fbbaf7282500675d3!!0!!internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer!!0!!-1!!0!!8!!AndaleMono,Arial,ArialBlack,ArialHebrew,ArialNarrow,ArialRoundedMTBold,ArialUnicodeMS,ComicSansMS,Courier,CourierNew,Geneva,Georgia,Helvetica,HelveticaNeue,Impact,LUCIDAGRANDE,MicrosoftSansSerif,Monaco,Palatino,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3!!1678453603925!!-1!!-1!!-1!!12!!-1!!-1!!-1!!5!!-1!!-1" }
+    key_ = Qe["prototype"]["$_CCGQ"]()
+    var o = $_BEZ()["encrypt1"](ge["stringify"](config), key_)
+    var r = Qe["prototype"]["$_CCFD"]()
+    var i = m["$_EJv"](o)
+    return [i + r, key_]
+}
+var test_trail = [
+    ['move', 705, 160, 1678614431744, 'pointermove'],
+    ['move', 722, 180, 1678614431759, 'pointermove'],
+    ['move', 730, 191, 1678614431770, 'pointermove'],
+    ['move', 737, 203, 1678614431772, 'pointermove'],
+    ['move', 743, 214, 1678614431781, 'pointermove'],
+    ['move', 749, 225, 1678614431788, 'pointermove'],
+    ['move', 754, 237, 1678614431796, 'pointermove'], 
+    ['move', 758, 250, 1678614431804, 'pointermove'], 
+    ['move', 763, 262, 1678614431812, 'pointermove'], 
+    ['move', 768, 275, 1678614431821, 'pointermove'], ['move', 767, 275, 1678614431997, 'pointermove'], ['move', 763, 277, 1678614432005, 'pointermove'], ['move', 760, 278, 1678614432013, 'pointermove'], ['move', 760, 278, 1678614432022, 'pointermove'], ['move', 756, 280, 1678614432029, 'pointermove'], ['move', 752, 282, 1678614432038, 'pointermove'], ['move', 742, 287, 1678614432045, 'pointermove'], ['move', 731, 291, 1678614432053, 'pointermove'], ['move', 719, 295, 1678614432061, 'pointermove'], ['move', 714, 297, 1678614432072, 'pointermove'], ['move', 703, 300, 1678614432077, 'pointermove'], ['move', 694, 302, 1678614432085, 'pointermove'], ['move', 684, 304, 1678614432093, 'pointermove'], ['move', 676, 305, 1678614432101, 'pointermove'], ['move', 669, 305, 1678614432109, 'pointermove'], ['move', 667, 306, 1678614432117, 'pointermove'], ['move', 662, 306, 1678614432125, 'pointermove'], ['move', 659, 306, 1678614432134, 'pointermove'], ['move', 656, 306, 1678614432141, 'pointermove'], ['move', 654, 306, 1678614432150, 'pointermove'], ['move', 653, 306, 1678614432157, 'pointermove'], ['move', 653, 306, 1678614432167, 'pointermove'], ['move', 652, 306, 1678614432173, 'pointermove'], ['move', 652, 306, 1678614432184, 'pointermove'], ['move', 652, 306, 1678614432205, 'pointermove'], ['move', 652, 307, 1678614432217, 'pointermove'], ['move', 651, 307, 1678614432221, 'pointermove'], ['move', 651, 308, 1678614432229, 'pointermove'], ['move', 650, 309, 1678614432237, 'pointermove'], ['move', 649, 310, 1678614432245, 'pointermove'], ['move', 648, 311, 1678614432253, 'pointermove'], ['move', 647, 312, 1678614432261, 'pointermove'], ['move', 646, 313, 1678614432269, 'pointermove'], ['move', 644, 314, 1678614432278, 'pointermove'], ['move', 643, 315, 1678614432285, 'pointermove'], ['move', 642, 315, 1678614432293, 'pointermove'], ['move', 641, 316, 1678614432301, 'pointermove'], ['move', 640, 316, 1678614432309, 'pointermove'], ['move', 639, 316, 1678614432317, 'pointermove'], ['move', 639, 317, 1678614432325, 'pointermove'], ['move', 639, 317, 1678614432335, 'pointermove'], ['move', 638, 317, 1678614432341, 'pointermove'], ['move', 638, 317, 1678614432352, 'pointermove'], ['move', 638, 317, 1678614432357, 'pointermove'], ['down', 638, 317, 1678614432386, 'pointerdown'], ['up', 638, 317, 1678614432484, 'pointerup']
+]
+console.log(get_w('f350f24d43b1129b', [12, 58, 98, 36, 43, 95, 62, 15, 12], '50754d28', '019924a82c70bb123aae90d483087f94', 'bd1b4feee6a91f277c2a7d12615fb96d', { 'a': 1678613184474, 'b': 1678613184856, 'c': 1678613184856, 'd': 0, 'e': 0, 'f': 1678613184580, 'g': 1678613184580, 'h': 1678613184580, 'i': 1678613184580, 'j': 1678613184580, 'k': 0, 'l': 1678613184613, 'm': 1678613184850, 'n': 1678613184852, 'o': 1678613184858, 'p': 1678613184997, 'q': 1678613184997, 'r': 1678613184998, 's': 1678613185001, 't': 1678613185001, 'u': 1678613185001 },test_trail))
