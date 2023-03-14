@@ -457,7 +457,7 @@ def startRequest():
     session.get("https://www.geetest.com/demo/fullpage.html")
     t = int(str(time.time()).replace(".", "")[:13])
     res = session.get(
-        f"https://www.geetest.com/demo/gt/register-slide?t={t}").json()
+        f"https://www.geetest.com/demo/gt/register-fullpage?t={t}").json()
     challenge = res.get("challenge")
     gt = res.get("gt")
     t = int(str(time.time()).replace(".", "")[:13])
@@ -475,13 +475,6 @@ def startRequest():
     res = session.get(
         f'https://api.geevisit.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}&callback=geetest_{int(str(time.time()).replace(".", "")[:13])}')
     print(res.text)
-    # data = {
-    #     'geetest_challenge': challenge,
-    #     'geetest_validate': '',
-    #     'geetest_seccode': '|jordan',
-    # }
-    # res = session.post(f"https://www.geetest.com/demo/gt/validate-fullpage",data=data)
-    # print(res.text)
     
 
 

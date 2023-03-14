@@ -1679,35 +1679,16 @@ function I(e) {
     }(e)), f = 1732584193, g = 4023233417, d = 2562383102, v = 271733878, a = 0; a < s["length"]; a += 16) g = o(g = o(g = o(g = o(g = r(g = r(g = r(g = r(g = n(g = n(g = n(g = n(g = t(g = t(g = t(g = t(u = g, d = t(p = d, v = t(h = v, f = t(l = f, g, d, v, s[a + 0], 7, 3614090360), g, d, s[a + 1], 12, 3905402710), f, g, s[a + 2], 17, 606105819), v, f, s[a + 3], 22, 3250441966), d = t(d, v = t(v, f = t(f, g, d, v, s[a + 4], 7, 4118548399), g, d, s[a + 5], 12, 1200080426), f, g, s[a + 6], 17, 2821735955), v, f, s[a + 7], 22, 4249261313), d = t(d, v = t(v, f = t(f, g, d, v, s[a + 8], 7, 1770035416), g, d, s[a + 9], 12, 2336552879), f, g, s[a + 10], 17, 4294925233), v, f, s[a + 11], 22, 2304563134), d = t(d, v = t(v, f = t(f, g, d, v, s[a + 12], 7, 1804603682), g, d, s[a + 13], 12, 4254626195), f, g, s[a + 14], 17, 2792965006), v, f, s[a + 15], 22, 1236535329), d = n(d, v = n(v, f = n(f, g, d, v, s[a + 1], 5, 4129170786), g, d, s[a + 6], 9, 3225465664), f, g, s[a + 11], 14, 643717713), v, f, s[a + 0], 20, 3921069994), d = n(d, v = n(v, f = n(f, g, d, v, s[a + 5], 5, 3593408605), g, d, s[a + 10], 9, 38016083), f, g, s[a + 15], 14, 3634488961), v, f, s[a + 4], 20, 3889429448), d = n(d, v = n(v, f = n(f, g, d, v, s[a + 9], 5, 568446438), g, d, s[a + 14], 9, 3275163606), f, g, s[a + 3], 14, 4107603335), v, f, s[a + 8], 20, 1163531501), d = n(d, v = n(v, f = n(f, g, d, v, s[a + 13], 5, 2850285829), g, d, s[a + 2], 9, 4243563512), f, g, s[a + 7], 14, 1735328473), v, f, s[a + 12], 20, 2368359562), d = r(d, v = r(v, f = r(f, g, d, v, s[a + 5], 4, 4294588738), g, d, s[a + 8], 11, 2272392833), f, g, s[a + 11], 16, 1839030562), v, f, s[a + 14], 23, 4259657740), d = r(d, v = r(v, f = r(f, g, d, v, s[a + 1], 4, 2763975236), g, d, s[a + 4], 11, 1272893353), f, g, s[a + 7], 16, 4139469664), v, f, s[a + 10], 23, 3200236656), d = r(d, v = r(v, f = r(f, g, d, v, s[a + 13], 4, 681279174), g, d, s[a + 0], 11, 3936430074), f, g, s[a + 3], 16, 3572445317), v, f, s[a + 6], 23, 76029189), d = r(d, v = r(v, f = r(f, g, d, v, s[a + 9], 4, 3654602809), g, d, s[a + 12], 11, 3873151461), f, g, s[a + 15], 16, 530742520), v, f, s[a + 2], 23, 3299628645), d = o(d, v = o(v, f = o(f, g, d, v, s[a + 0], 6, 4096336452), g, d, s[a + 7], 10, 1126891415), f, g, s[a + 14], 15, 2878612391), v, f, s[a + 5], 21, 4237533241), d = o(d, v = o(v, f = o(f, g, d, v, s[a + 12], 6, 1700485571), g, d, s[a + 3], 10, 2399980690), f, g, s[a + 10], 15, 4293915773), v, f, s[a + 1], 21, 2240044497), d = o(d, v = o(v, f = o(f, g, d, v, s[a + 8], 6, 1873313359), g, d, s[a + 15], 10, 4264355552), f, g, s[a + 6], 15, 2734768916), v, f, s[a + 13], 21, 1309151649), d = o(d, v = o(v, f = o(f, g, d, v, s[a + 4], 6, 4149444226), g, d, s[a + 11], 10, 3174756917), f, g, s[a + 2], 15, 718787259), v, f, s[a + 9], 21, 3951481745), f = _(f, l), g = _(g, u), d = _(d, p), v = _(v, h);
     return (i(f) + i(g) + i(d) + i(v))["toLowerCase"]();
 }
-
-function get_tt(e, t, n) {
-    if (!t || !n) return e;
-    var r,
-        o = 0,
-        i = e,
-        s = t[0],
-        a = t[2],
-        c = t[4];
-    while (r = n["substr"](o, 2)) {
-        o += 2;
-        var _ = parseInt(r, 16),
-            l = String["fromCharCode"](_),
-            u = (s * _ * _ + a * _ + c) % 100;
-        // u = (s * _ * _ + a * _ + c) % e["length"];
-        i = i["substr"](0, u) + l + i["substr"](u);
-    }
-    return i || -1;
-}
-function get_w(key_, s, gt, challenge, tm, trail) {
-    ke["prototype"]["$_BDEK"] = trail
+function get_w(key_, s, gt, challenge) {
+    // ke["prototype"]["$_BDEK"] = trail
     var i = Qe["prototype"]
-    var e = ke["prototype"]["$_BFHk"]()
-    var t = ke["prototype"]["$_BFIv"]()
-    var n = '6126magic data7414magic dataCSS1Compatmagic data1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data2magic data3magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data1magic data-1magic data-1magic data-1magic data1920magic data0magic data1920magic data0magic data1440magic data789magic data1440magic data900magic datazh-CNmagic datazh-CN,zhmagic data-1magic data2magic data30magic dataMozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36magic data1magic data1magic data1440magic data900magic data1440magic data900magic data1magic data1magic data1magic data-1magic dataMacIntelmagic data0magic data-8magic datac0af373aa0acf66fbbaf7282500675d3magic data0magic datainternal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewermagic data0magic data-1magic data0magic data8magic dataAndaleMono,Arial,ArialBlack,ArialHebrew,ArialNarrow,ArialRoundedMTBold,ArialUnicodeMS,ComicSansMS,Courier,CourierNew,Geneva,Georgia,Helvetica,HelveticaNeue,Impact,LUCIDAGRANDE,MicrosoftSansSerif,Monaco,Palatino,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3magic data1678368908012magic data-1magic data-1magic data-1magic data12magic data-1magic data-1magic data-1magic data5magic data-1magic data-1' // n = Me["prototype"]["$_BFIv"]()
+    // var e = ke["prototype"]["$_BFHk"]()
+    // var t = ke["prototype"]["$_BFIv"]()
+    // var n = '6126magic data7414magic dataCSS1Compatmagic data1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data2magic data3magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data-1magic data1magic data-1magic data-1magic data-1magic data1920magic data0magic data1920magic data0magic data1440magic data789magic data1440magic data900magic datazh-CNmagic datazh-CN,zhmagic data-1magic data2magic data30magic dataMozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36magic data1magic data1magic data1440magic data900magic data1440magic data900magic data1magic data1magic data1magic data-1magic dataMacIntelmagic data0magic data-8magic datac0af373aa0acf66fbbaf7282500675d3magic data0magic datainternal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewer,internal-pdf-viewermagic data0magic data-1magic data0magic data8magic dataAndaleMono,Arial,ArialBlack,ArialHebrew,ArialNarrow,ArialRoundedMTBold,ArialUnicodeMS,ComicSansMS,Courier,CourierNew,Geneva,Georgia,Helvetica,HelveticaNeue,Impact,LUCIDAGRANDE,MicrosoftSansSerif,Monaco,Palatino,Tahoma,Times,TimesNewRoman,TrebuchetMS,Verdana,Wingdings,Wingdings2,Wingdings3magic data1678368908012magic data-1magic data-1magic data-1magic data12magic data-1magic data-1magic data-1magic data5magic data-1magic data-1' // n = Me["prototype"]["$_BFIv"]()
     var r = 'DIV_0' // r = i["$_BBCW"]["$_BFHk"]()
-    // var e = null
-    // var t = null
-    // var n = null
+    var e = ''
+    var t = ''
+    var n = ''
     i["$_CEEj"] = ""
     for (var a = [["lang","zh-cn"], ["type", "fullpage"], ["tt", function (e, t, n) {
         if (!t || !n) return e;
@@ -1756,16 +1737,4 @@ function get_w0(gt, challenge) {
     var i = m["$_EJv"](o)
     return [i + r, key_]
 }
-var test_trail = [
-    ['move', 705, 160, 1678614431744, 'pointermove'],
-    ['move', 722, 180, 1678614431759, 'pointermove'],
-    ['move', 730, 191, 1678614431770, 'pointermove'],
-    ['move', 737, 203, 1678614431772, 'pointermove'],
-    ['move', 743, 214, 1678614431781, 'pointermove'],
-    ['move', 749, 225, 1678614431788, 'pointermove'],
-    ['move', 754, 237, 1678614431796, 'pointermove'], 
-    ['move', 758, 250, 1678614431804, 'pointermove'], 
-    ['move', 763, 262, 1678614431812, 'pointermove'], 
-    ['move', 768, 275, 1678614431821, 'pointermove'], ['move', 767, 275, 1678614431997, 'pointermove'], ['move', 763, 277, 1678614432005, 'pointermove'], ['move', 760, 278, 1678614432013, 'pointermove'], ['move', 760, 278, 1678614432022, 'pointermove'], ['move', 756, 280, 1678614432029, 'pointermove'], ['move', 752, 282, 1678614432038, 'pointermove'], ['move', 742, 287, 1678614432045, 'pointermove'], ['move', 731, 291, 1678614432053, 'pointermove'], ['move', 719, 295, 1678614432061, 'pointermove'], ['move', 714, 297, 1678614432072, 'pointermove'], ['move', 703, 300, 1678614432077, 'pointermove'], ['move', 694, 302, 1678614432085, 'pointermove'], ['move', 684, 304, 1678614432093, 'pointermove'], ['move', 676, 305, 1678614432101, 'pointermove'], ['move', 669, 305, 1678614432109, 'pointermove'], ['move', 667, 306, 1678614432117, 'pointermove'], ['move', 662, 306, 1678614432125, 'pointermove'], ['move', 659, 306, 1678614432134, 'pointermove'], ['move', 656, 306, 1678614432141, 'pointermove'], ['move', 654, 306, 1678614432150, 'pointermove'], ['move', 653, 306, 1678614432157, 'pointermove'], ['move', 653, 306, 1678614432167, 'pointermove'], ['move', 652, 306, 1678614432173, 'pointermove'], ['move', 652, 306, 1678614432184, 'pointermove'], ['move', 652, 306, 1678614432205, 'pointermove'], ['move', 652, 307, 1678614432217, 'pointermove'], ['move', 651, 307, 1678614432221, 'pointermove'], ['move', 651, 308, 1678614432229, 'pointermove'], ['move', 650, 309, 1678614432237, 'pointermove'], ['move', 649, 310, 1678614432245, 'pointermove'], ['move', 648, 311, 1678614432253, 'pointermove'], ['move', 647, 312, 1678614432261, 'pointermove'], ['move', 646, 313, 1678614432269, 'pointermove'], ['move', 644, 314, 1678614432278, 'pointermove'], ['move', 643, 315, 1678614432285, 'pointermove'], ['move', 642, 315, 1678614432293, 'pointermove'], ['move', 641, 316, 1678614432301, 'pointermove'], ['move', 640, 316, 1678614432309, 'pointermove'], ['move', 639, 316, 1678614432317, 'pointermove'], ['move', 639, 317, 1678614432325, 'pointermove'], ['move', 639, 317, 1678614432335, 'pointermove'], ['move', 638, 317, 1678614432341, 'pointermove'], ['move', 638, 317, 1678614432352, 'pointermove'], ['move', 638, 317, 1678614432357, 'pointermove'], ['down', 638, 317, 1678614432386, 'pointerdown'], ['up', 638, 317, 1678614432484, 'pointerup']
-]
-console.log(get_w('f350f24d43b1129b', [12, 58, 98, 36, 43, 95, 62, 15, 12], '50754d28', '019924a82c70bb123aae90d483087f94', 'bd1b4feee6a91f277c2a7d12615fb96d', { 'a': 1678613184474, 'b': 1678613184856, 'c': 1678613184856, 'd': 0, 'e': 0, 'f': 1678613184580, 'g': 1678613184580, 'h': 1678613184580, 'i': 1678613184580, 'j': 1678613184580, 'k': 0, 'l': 1678613184613, 'm': 1678613184850, 'n': 1678613184852, 'o': 1678613184858, 'p': 1678613184997, 'q': 1678613184997, 'r': 1678613184998, 's': 1678613185001, 't': 1678613185001, 'u': 1678613185001 },test_trail))
+
