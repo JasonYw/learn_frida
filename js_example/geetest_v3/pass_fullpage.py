@@ -409,41 +409,6 @@ def generateTrail():
     return BDEK
     
 
-
-def generateWindowPerformance():
-    start_time = int(str(time.time()).replace(".", "")[:13])
-    tm = {
-        "a": 1678012625623,
-        "b": 1678012626005,
-        "c": 1678012626005,
-        "d": 0,
-        "e": 0,
-        "f": 1678012625729,
-        "g": 1678012625729,
-        "h": 1678012625729,
-        "i": 1678012625729,
-        "j": 1678012625729,
-        "k": 0,
-        "l": 1678012625762,
-        "m": 1678012625999,
-        "n": 1678012626001,
-        "o": 1678012626007,
-        "p": 1678012626146,
-        "q": 1678012626146,
-        "r": 1678012626147,
-        "s": 1678012626150,
-        "t": 1678012626150,
-        "u": 1678012626150
-    }
-    new_tm = {}
-    for i in tm:
-        if tm[i] == 0:
-            new_tm[i] = 0
-        else:
-            new_tm[i] = tm[i] - tm["a"] + start_time
-    return new_tm
-
-
 def callSolveJs(func, *args):
     print(f'func -> {func}')
     print(f'args -> {args}')
@@ -471,7 +436,7 @@ def startRequest():
     info = json.loads(res.text[1:-1])['data']
     c = info.get("c")
     s = info.get("s")
-    w = callSolveJs("get_w", key_,c, s, gt, challenge,generateWindowPerformance(),generateTrail())
+    w = callSolveJs("get_w", key_,c, s, gt, challenge)
     res = session.get(
         f'https://api.geevisit.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}&callback=geetest_{int(str(time.time()).replace(".", "")[:13])}')
     print(res.text)
