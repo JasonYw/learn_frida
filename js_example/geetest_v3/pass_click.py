@@ -6,8 +6,10 @@ import time
 import json
 import execjs
 import ddddocr
-ctx = execjs.compile(open("solve_click.js").read())
 import cv2
+from ocr_util import Ddddocr
+
+ctx = execjs.compile(open("solve_click.js").read())
 
 def callSolveJs(func, *args):
     print(f'func -> {func}')
@@ -58,14 +60,6 @@ def generateClickLocation():
     print(ans)
         
 
-        
-
-     
-
-
-    
-
-
 def startRequest():
     session = requests.session()
     session.get("https://www.geetest.com/demo/click-float.html")
@@ -89,6 +83,7 @@ def startRequest():
     pic = info["data"]["pic"]
     res = session.get(f"https://static.geetest.com{pic}")
     open("click.jpg","wb").write(res.content)
+    print(Ddddocr().case_demo(open("click.jpg","rb").read()))
     click_location = generateClickLocation()
     # w = callSolveJs("get_w",gt,challenge,click_location,c,s,pic)
     # t = int(str(time.time()).replace(".", "")[:13])
