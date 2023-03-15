@@ -89,29 +89,23 @@ function getObjhandler(watchname){
 
 
 let mywindow = {
-    crypto:{
-        "getRandomValues":function(t){
-            return crypto.randomFillSync(t)
-        },
-    },
+    // crypto:{
+    //     "getRandomValues":function(t){
+    //         return crypto.randomFillSync(t)
+    //     },
+    // },
     "addEventListener":function(){},
-    "attachEvent":function(){}
+    "attachEvent":function(){},
+    "touchEvent":false,
+    "mouseEvent":true
 }
 let mynavigator = {
     appName:"Netscape"
 }
 
-let mywt = {
-    "touchEvent":false,
-    "mouseEvent":true
-}
 const window = new Proxy(Object.assign(global,mywindow),getObjhandler("window"))
-const ht = new Proxy(Object.create(mynavigator),getObjhandler("Navigator"))
-const pe = new Proxy(Object.create(mynavigator),getObjhandler("Navigator"))
-const wt = new Proxy(Object.create(mywt),getObjhandler("wt"))
+const navigator = new Proxy(Object.create(mynavigator),getObjhandler("Navigator"))
 module.exports = {
     window,
-    ht,
-    wt,
-    pe
+    navigator
 }

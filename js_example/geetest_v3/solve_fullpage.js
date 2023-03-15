@@ -1,4 +1,7 @@
-let { window, pe } = require("./make_env")
+let { window, navigator } = require("./make_env")
+let pe = navigator
+
+
 function cKFnp() { }
 cKFnp.$_Al = function () {
     var $_DEHET = 2;

@@ -1,5 +1,5 @@
 # https://www.geetest.com/demo/fullpage.html
-# https://github.com/sml2h3/ddddocr
+
 import requests
 import time
 import json
