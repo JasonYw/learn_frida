@@ -1382,12 +1382,12 @@ function get_tt(e, t, n) {
 
 
 function get_w(gt, challenge, click_location, c, s, pic) {
-    gt = "6216680937717fdab947ed9e71a3aaa1"
-    challenge = "9fc64342d456411d6d3cb44d78ed8424"
+    // gt = "6216680937717fdab947ed9e71a3aaa1"
+    // challenge = "9fc64342d456411d6d3cb44d78ed8424"
     passtime = 9750
-    click_location = "1861_5969,1291_1710"
-    c = [12, 58, 98, 36, 43, 95, 62, 15, 12]
-    s = "586b4a59"
+    // click_location = "1861_5969,1291_1710"
+    // c = [12, 58, 98, 36, 43, 95, 62, 15, 12]
+    // s = "586b4a59"
     // var e = [
     //     [
     //         "up",
@@ -5866,7 +5866,6 @@ function get_w(gt, challenge, click_location, c, s, pic) {
             0
         ]
     ]
-    // s = $_EDN($_BFIc(e))
     var o = {
         "lang": "zh-cn",
         "passtime": passtime,
@@ -5930,10 +5929,13 @@ function get_w(gt, challenge, click_location, c, s, pic) {
         "h9s9": "1816378497",
         "rp": get_rp(gt + challenge + passtime)//"4a9013941f70be6e73df2c60c5a0375a"
     }
-    // var h = X["encrypt"](ae["stringify"](o), Be["prototype"]["$_CABG"]())
-    // var p = w["$_EEG"](h)
-    // var l = Be["prototype"]["$_CAAx"]()
-    // var w = p + l
-    return o
+    console.log(o)
+    var h = X["encrypt"](ae["stringify"](o), Be["prototype"]["$_CABG"]())
+    console.log(h)
+    var p = w["$_EEG"](h)
+    console.log(p)
+    var l = Be["prototype"]["$_CAAx"]()
+    console.log(l)
+    return p + l
 }
-console.log(get_w())
+// console.log(get_w('6216680937717fdab947ed9e71a3aaa1', '7b91d5720bcb2fb05b9f28b60d1c4248', '5959_5312,407_1354,00_8984,4622_12239999999999999', [12, 58, 98, 36, 43, 95, 62, 15, 12], '71754479', '/captcha_v3/batch/v3/29370/2023-03-15T10/word/dbbdb0e6ccda43958e8e81cbc0ff406e.jpg'))
