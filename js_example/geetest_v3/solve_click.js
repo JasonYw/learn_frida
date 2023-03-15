@@ -5873,58 +5873,37 @@ function get_w(gt, challenge, click_location, c, s, pic) {
         "pic": pic,// "/captcha_v3/batch/v3/29362/2023-03-15T08/word/ecd408cc08784c25b65c0ef98b4ac7e6.jpg",
         "tt": get_tt($_EDN(_e), c, s),//"M?dq_Up8Pjp8Pjp8M)38Pjp8PN34ZEp,.*M4jBKB:BDIC,5,(,:e(b5@5e06B9.:@5e6Ib,6I,(e5e59((b5e5bBC5eDm(5)(((:(:-)19M:-OE9-:(?n?1)19-:**-:*)-L-N(:RkMUOE-1RkMEOEK2MMM:N3MMOE/1RkM9ODS**2kiMMOE51S**2MMO:***2MEM:5O-V-0O:N@-LCc.j11S**2MEOE-1S)O))XMUOE-1RjS)O3M9MK::YpRkMEODS)O2MEOE/1S**2MbOE/1Q9RjRkOE11RkMEOE31S**2MUOE11S)-V7NhB2UK)*2MUOE-1SNh)-1/:-fM9OEKE-1T,nQZICgff5,p(L4,5n5(q5q5e55(e5fbb(,85(,5(ee5b,5((b5(.-,5q?7M*0*(fb95I-,b91?bM-)(EC(b9/)()M9(EE(M9/,()ME(Ef(/)()Mj(?M9-)(EA(/)()M9(E?(3(bE-Nb91?-P-Y3)4*ME3(/*M)(9-5/),*(9-)M9(E-(b9k-5-),)(9b9-)(E5(/*(*6CSXM9hgXO,M):nnA.V-a?13(/,(0qp(Lqqj(((1,6AD9(,(((05,(nb5b(5(5(,((nb5e5(6:((8,b((,@q5(,,b855(q5(b(,5b((BB(5b(noM@IG.j-B-iN,1@bM-j_V6)-CG)(*b9-M4,(?-5/)M9(E3J(-PM9Fj-4dhN/M95N(9bE.AKGe*,SV/9n/)M9(E-(-)M9(E/(/*M)MM(?6EM:(?.4-jkEEdM9/)M),)(I-*-c5N19/*(7IU1,M9?)NE-/_)*.OEK1-0BU-.M99P3)ME-(4)(g@))AB*b98)(Y/),,M?-Nbb1?-)(E5(/)(fM9K3OBIZ-c.@-:Vj61_)-GM:.H1?bE/)()ME(-0qan()qqp((0qYb(0qqM(/(n",
         "ep": {
-            "ca": [
-                {
-                    "x": 1010,
-                    "y": 27,
-                    "t": 0,
-                    "dt": 49622
-                },
-                {
-                    "x": 971,
-                    "y": 258,
-                    "t": 1,
-                    "dt": 1
-                },
-                {
-                    "x": 952,
-                    "y": 116,
-                    "t": 1,
-                    "dt": 1250
-                },
-                {
-                    "x": 1184,
-                    "y": 304,
-                    "t": 3,
-                    "dt": 1816
-                }
-            ],
+            // "ca": [
+            //     {
+            //         "x": 1010,
+            //         "y": 27,
+            //         "t": 0,
+            //         "dt": 49622
+            //     },
+            //     {
+            //         "x": 971,
+            //         "y": 258,
+            //         "t": 1,
+            //         "dt": 1
+            //     },
+            //     {
+            //         "x": 952,
+            //         "y": 116,
+            //         "t": 1,
+            //         "dt": 1250
+            //     },
+            //     {
+            //         "x": 1184,
+            //         "y": 304,
+            //         "t": 3,
+            //         "dt": 1816
+            //     }
+            // ],
+            "ca":-1,
             "v": "3.0.7",
             "$_Fo": false,
             "me": true,
-            "tm": {
-                "a": 1678841792294,
-                "b": 0,
-                "c": 0,
-                "d": 0,
-                "e": 0,
-                "f": 1678841792402,
-                "g": 1678841792402,
-                "h": 1678841792402,
-                "i": 1678841792402,
-                "j": 1678841792402,
-                "k": 0,
-                "l": 1678841792407,
-                "m": 1678841792613,
-                "n": 1678841792614,
-                "o": 1678841792616,
-                "p": 1678841792817,
-                "q": 1678841792817,
-                "r": 1678841792818,
-                "s": 1678841792820,
-                "t": 1678841792820,
-                "u": 1678841792820
-            }
+            "tm": -1,
         },
         "h9s9": "1816378497",
         "rp": get_rp(gt + challenge + passtime)//"4a9013941f70be6e73df2c60c5a0375a"
