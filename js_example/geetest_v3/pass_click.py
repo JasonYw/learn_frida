@@ -75,43 +75,55 @@ def generateClickLocation():
 
 
 def startRequest():
-    while True:
-        session = requests.session()
-        session.get("https://www.geetest.com/demo/click-float.html")
-        t = int(str(time.time()).replace(".", "")[:13])
-        res = session.get(
-            f"https://www.geetest.com/demo/gt/register-click?t={t}").json()
-        challenge = res.get("challenge")
-        gt = res.get("gt")
-        t = int(str(time.time()).replace(".", "")[:13])
-        res = session.get(
-            f"https://apiv6.geetest.com/gettype.php?gt={gt}&callback=geetest_{t}")
-        t = int(str(time.time()).replace(".", "")[:13])
-        res = session.get(
-            f"https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=&callback=geetest_{t}")
-        t = int(str(time.time()).replace(".", "")[:13])
-        res = session.get(
-            f"https://apiv6.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=&callback=geetest_{t}")
-        t = int(str(time.time()).replace(".", "")[:13])
-        res = session.get(
-            f"https://apiv6.geetest.com/get.php?is_next=true&type=click&gt={gt}&challenge={challenge}&lang=zh-cn&https=true&protocol=https%3A%2F%2F&offline=false&product=float&api_server=apiv6.geetest.com&isPC=true&autoReset=true&width=100%25&callback=geetest_{t}")
-        info = json.loads(res.text.lstrip(f"geetest_{t}(").rstrip(")"))
-        c = info["data"]["c"]
-        s = info["data"]["s"]
-        pic = info["data"]["pic"]
-        res = session.get(f"https://static.geetest.com{pic}")
-        open("click.jpg", "wb").write(res.content)
-        click_location,passtime = generateClickLocation()
-        if click_location:
+
+    session = requests.session()
+    session.get("https://www.geetest.com/demo/click-float.html")
+    t = int(str(time.time()).replace(".", "")[:13])
+    res = session.get(
+        f"https://www.geetest.com/demo/gt/register-click?t={t}").json()
+    challenge = res.get("challenge")
+    gt = res.get("gt")
+    t = int(str(time.time()).replace(".", "")[:13])
+    res = session.get(
+        f"https://apiv6.geetest.com/gettype.php?gt={gt}&callback=geetest_{t}")
+    t = int(str(time.time()).replace(".", "")[:13])
+    res = session.get(
+        f"https://apiv6.geetest.com/get.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=&callback=geetest_{t}")
+    t = int(str(time.time()).replace(".", "")[:13])
+    res = session.get(
+        f"https://apiv6.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w=&callback=geetest_{t}")
+    t = int(str(time.time()).replace(".", "")[:13])
+    res = session.get(
+        f"https://apiv6.geetest.com/get.php?is_next=true&type=click&gt={gt}&challenge={challenge}&lang=zh-cn&https=true&protocol=https%3A%2F%2F&offline=false&product=float&api_server=apiv6.geetest.com&isPC=true&autoReset=true&width=100%25&callback=geetest_{t}")
+    info = json.loads(res.text.lstrip(f"geetest_{t}(").rstrip(")"))
+    c = info["data"]["c"]
+    s = info["data"]["s"]
+    pic = info["data"]["pic"]
+    res = session.get(f"https://static.geetest.com{pic}")
+    open("click.jpg", "wb").write(res.content)
+    click_location,passtime = generateClickLocation()
+    if passtime < 1000:
+        passtime += 1000
+        time.sleep(1)
+    if not click_location:
+        while True:
+            t = int(str(time.time()).replace(".", "")[:13])
+            res = session.get(f'https://apiv6.geetest.com/refresh.php?gt={gt}&challenge={challenge}&lang=zh-cn&type=click&callback=geetest_{t}')
+            pic_info = json.loads(res.text.lstrip(f"geetest_{t}(").rstrip(")"))
+            pic = pic_info["data"]["pic"]
+            res = session.get(f"https://static.geetest.com{pic}")
+            open("click.jpg", "wb").write(res.content)
+            click_location,passtime = generateClickLocation()
             if passtime < 1000:
                 passtime += 1000
                 time.sleep(1)
-            w = callSolveJs("get_w", gt, challenge, click_location, c, s, pic,passtime)
-            t = int(str(time.time()).replace(".", "")[:13])
-            res = session.get(
-                f"https://apiv6.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}&callback=geetest_{t}")
-            print(res.text)
-            return
+            if click_location:
+                break
+    w = callSolveJs("get_w", gt, challenge, click_location, c, s, pic,passtime)
+    t = int(str(time.time()).replace(".", "")[:13])
+    res = session.get(
+        f"https://apiv6.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}&callback=geetest_{t}")
+    print(res.text)
 
 
 if __name__ == "__main__":

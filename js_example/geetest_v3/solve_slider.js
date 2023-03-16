@@ -1,10 +1,6 @@
-let {  navigator } = require("./make_env.js")
+let {  navigator,window } = require("./make_env.js")
 const ht = navigator
-const jsdom = require("jsdom");
-const {JSDOM} = jsdom;
-const dom = new JSDOM(`<!DOCTYPE html><p>Hello world</p>`);
-window = dom.window
-wt = window
+const wt = window
 
 
 
