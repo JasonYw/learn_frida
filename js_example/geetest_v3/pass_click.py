@@ -58,10 +58,8 @@ def generateClickLocation():
                 x = int((x1+x2)/2)
                 y = int((y1+y2)/2)
                 # "1861_5969,1291_1710"
-                word_ans = str(int(round(x / 333.375 * 100 * 100, 0))) + \
-                    "_" + str(int(round(y / 333.375 * 100 * 100, 0)))
-                # word_ans = str(int(round(x / w * 100 * 100, 0))) + \
-                #     "_" + str(int(round(y / h * 100 * 100, 0)))
+                word_ans = str(int(round(x / 333.3828125 * 100 * 100, 0))) + \
+                    "_" + str(int(round(y / 333.3828125 * 100 * 100, 0)))
                 ans = ans + word_ans + ','
                 img = cv2.rectangle(img, (x1, y1), (x2, y2),
                                     color=(0, 0, 255), thickness=2)
@@ -105,6 +103,9 @@ def startRequest():
         open("click.jpg", "wb").write(res.content)
         click_location,passtime = generateClickLocation()
         if click_location:
+            if passtime < 1000:
+                passtime += 1000
+                time.sleep(1)
             w = callSolveJs("get_w", gt, challenge, click_location, c, s, pic,passtime)
             t = int(str(time.time()).replace(".", "")[:13])
             res = session.get(
