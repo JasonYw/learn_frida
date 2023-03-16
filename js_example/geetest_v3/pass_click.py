@@ -7,7 +7,6 @@ import json
 import execjs
 import ddddocr
 import cv2
-
 ctx = execjs.compile(open("solve_click.js").read())
 
 
@@ -20,59 +19,61 @@ def callSolveJs(func, *args):
 
 
 def generateClickLocation():
-    # "1861_5969,1291_1710"
+    start_time = int(str(time.time()).replace(".", "")[:13])
     det = ddddocr.DdddOcr(det=True, show_ad=False)
     ocr = ddddocr.DdddOcr(ocr=True, show_ad=False)
     ans = ''
+    count = 0
     ocr_det = {}
     img = cv2.imread("click.jpg")
     size = img.shape
     w = size[1]
     h = size[0]
+    print("w:",w,",h:",h)
     b_img = img[w:h, 0:w]
     t_img = img[0:w, 0:w]
-    cv2.imwrite("b_click.jpg", b_img)
-    cv2.imwrite("t_click.jpg", t_img)
-    b_img_bytes = open("b_click.jpg", 'rb').read()
-    t_img_bytes = open("t_click.jpg", 'rb').read()
     # 获取文字顺序
-    b_ocr = ocr.classification(b_img_bytes)
+    b_ocr = ocr.classification(cv2.imencode('.jpg', b_img)[1].tobytes())
     print(b_ocr)
     # #根据det结果圈出文字并识别文字组成字典
-    t_poses = det.detection(t_img_bytes)
-    print(t_poses)
-    count = 0
+    t_poses = det.detection(cv2.imencode('.jpg', t_img)[1].tobytes())
     for i in t_poses:
         x1, y1, x2, y2 = i
-        cv2.imwrite(f"tmp_{count}.jpg", t_img[y1:y2, x1:x2])
-        word = ocr.classification(open(f"tmp_{count}.jpg", 'rb').read())
-        count += 1
+        word = ocr.classification(cv2.imencode(
+            '.jpg', t_img[y1:y2, x1:x2])[1].tobytes())
         if word:
-            x = int((x1+x2)/2)
-            y = int((y1+y2)/2)
-            ocr_det[word] = str(int(round(x / 333.375 * 100 * 100, 0))) + "_" + str(int(round(y / 333.375 * 100 * 100, 0)))
-            print(word, ocr_det[word])
-    count = 0
+            ocr_det[word] = i
     if len(b_ocr) <= len(ocr_det):
         for i in ocr_det:
             if i not in b_ocr:
                 temp = ocr_det[i]
                 count += 1
         if count <= 1:
+            count = 1
             for i in b_ocr:
                 if ocr_det.get(i):
-                    ans += ocr_det[i] + ','
+                    x1, y1, x2, y2 = ocr_det[i]
                 else:
-                    ans += temp + ','
+                    x1, y1, x2, y2 = temp
+                x = int((x1+x2)/2)
+                y = int((y1+y2)/2)
+                # "1861_5969,1291_1710"
+                word_ans = str(int(round(x / 333.375 * 100 * 100, 0))) + \
+                    "_" + str(int(round(y / 333.375 * 100 * 100, 0)))
+                # word_ans = str(int(round(x / w * 100 * 100, 0))) + \
+                #     "_" + str(int(round(y / h * 100 * 100, 0)))
+                ans = ans + word_ans + ','
+                img = cv2.rectangle(img, (x1, y1), (x2, y2),
+                                    color=(0, 0, 255), thickness=2)
+                img = cv2.putText(img, str(count), (x, y),
+                                  cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+                print(i, x1, y1, x2, y2, word_ans)
+                count += 1
+            cv2.imwrite("click.jpg", img)
             print(ans[:-1])
-            print("==============================")
-            return ans[:-1]
-        else:
-            print("==============================")
-            return None
-    else:
-        print("==============================")
-        return None
+    print("==============================")
+    passtime = int(str(time.time()).replace(".", "")[:13]) - start_time
+    return ans[:-1],passtime
 
 
 def startRequest():
@@ -102,15 +103,14 @@ def startRequest():
         pic = info["data"]["pic"]
         res = session.get(f"https://static.geetest.com{pic}")
         open("click.jpg", "wb").write(res.content)
-        click_location = generateClickLocation()
-        if not click_location:
-            continue
-        w = callSolveJs("get_w", gt, challenge, click_location, c, s, pic)
-        t = int(str(time.time()).replace(".", "")[:13])
-        res = session.get(
-            f"https://apiv6.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}&callback=geetest_{t}")
-        print(res.text)
-        break
+        click_location,passtime = generateClickLocation()
+        if click_location:
+            w = callSolveJs("get_w", gt, challenge, click_location, c, s, pic,passtime)
+            t = int(str(time.time()).replace(".", "")[:13])
+            res = session.get(
+                f"https://apiv6.geetest.com/ajax.php?gt={gt}&challenge={challenge}&lang=zh-cn&pt=0&client_type=web&w={w}&callback=geetest_{t}")
+            print(res.text)
+            return
 
 
 if __name__ == "__main__":

@@ -1385,8 +1385,7 @@ function get_tt(e, t, n) {
 }
 
 
-function get_w(gt, challenge, click_location, c, s, pic) {
-    passtime = 3226
+function get_w(gt, challenge, click_location, c, s, pic,passtime) {
     var _e = [
         [
             "up",
