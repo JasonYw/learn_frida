@@ -19,6 +19,7 @@ Java.perform(function(){
         var sn = a.indexOf("&sn=") != -1
         var chksm = a.indexOf("&chksm=") != -1
         if(biz && mid && idx && sn && chksm){
+            //a为公众号url
             console.log(a)
         }
         return this.parsePath(a,b)
