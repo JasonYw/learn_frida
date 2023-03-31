@@ -1,13 +1,11 @@
 import requests
+from Proxy import proxies
 import re
 import json
 import execjs
-
-proxies = {
-    "http": "http://127.0.0.1:7890",
-    "https": "http://127.0.0.1:7890"
-}
-
+import time
+from Email import Email
+from Utils import getGuestToken,getApiQueryId
 jsdom = '''
 const jsdom = require("jsdom")
 const { JSDOM } = jsdom
@@ -15,79 +13,76 @@ const dom = new JSDOM ();
 window = dom.window;
 document = window.document;
 '''
-
-
 class Cookie:
-    def __init__(self, user_name:str = "hehehe54525666" ,login_email: str = "438555093@qq.com", password: str = "gaijie0318") -> None:
+    def __init__(self, user_name: str, login_email: str, password: str, imap_email_password: str, imap_host: str, imap_port: int) -> None:
         self.user_name = user_name
         self.login_email = login_email
         self.password = password
-        self.session = requests.session()
+        self.imap_email_password = imap_email_password
+        self.imap_host = imap_host
+        self.imap_port = imap_port
         self.cookie = {}
         self.flow_token = None
         self.rf = None
         self.email_code = None
-
-    def login(self):
-        self._reqHost()
-        self._getFlowToken()
-        self._getJsInstrumentation()
-        self._subTask()
-        self._subLoginEmail()
-        self._subUserName()
-        self._subPassword()
-        self._getCookies()
-        self._subEmailCode()
-
-    def _reqHost(self) -> None:
-        url = "https://twitter.com/"
-        headers = {
-            'authority': 'twitter.com',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36'
-        }
-        self.session.get(url=url, headers=headers, proxies=proxies)
-        self.cookie.update(self.session.cookies.get_dict())
-
-    def _getFlowToken(self) -> None:
-        url = "https://api.twitter.com/1.1/onboarding/task.json?flow_name=login"
-        headers = {
+        self.x_guest_token = None
+        self.send_email_time = None
+        self.session = requests.session()
+        self.base_headers = {
             'authority': 'api.twitter.com',
-            'path': '/1.1/onboarding/task.json?flow_name=login',
             'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
             'content-type': 'application/json',
-            'cookie': f'guest_id_ads={self.cookie["guest_id_ads"]}; guest_id_marketing={self.cookie["guest_id_marketing"]}; gt={self.cookie["gt"]}; guest_id={self.cookie["guest_id"]}; personalization_id={self.cookie["personalization_id"]};',
             'origin': 'https://twitter.com',
             'referer': 'https://twitter.com/',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-            'x-guest-token': self.cookie["gt"],
             'x-twitter-active-user': 'yes',
             'x-twitter-client-language': 'zh-cn',
         }
+
+    def login(self) -> tuple:
+        self.x_guest_token,self.cookie = getGuestToken(self.session)
+        self._getFlowToken()
+        self._getJsInstrumentation()
+        self._subTask()
+        next_flow = self._subLoginEmail()
+        if next_flow == "7":
+            self._subUserName()
+        self._subPassword()
+        next_flow = self._subVerfyRisk()
+        if next_flow == "12":
+            self.send_email_time = int(time.time())
+            self._subEmailCode()
+        self._subAfterLogin()
+        print(self.cookie)
+        self._close()
+        return self.cookie
+    
+    def _close(self) -> None:
+        self.session.close()
+
+    def _getFlowToken(self) -> None:
+        url = "https://api.twitter.com/1.1/onboarding/task.json?flow_name=login"
+        self.base_headers.update({
+            'path': '/1.1/onboarding/task.json?flow_name=login',
+            'cookie': self.cookie,
+            'x-guest-token': self.x_guest_token,
+        })
         payload = {"input_flow_data": {"flow_context": {"debug_overrides": {}, "start_location": {"location": "unknown"}}}, "subtask_versions": {"action_list": 2, "alert_dialog": 1, "app_download_cta": 1, "check_logged_in_account": 1, "choice_selection": 3, "contacts_live_sync_permission_prompt": 0, "cta": 7, "email_verification": 2, "end_flow": 1, "enter_date": 1, "enter_email": 2, "enter_password": 5, "enter_phone": 2, "enter_recaptcha": 1, "enter_text": 5, "enter_username": 2, "generic_urt": 3, "in_app_notification": 1,
                                                                                                                                                  "interest_picker": 3, "js_instrumentation": 1, "menu_dialog": 1, "notifications_permission_prompt": 2, "open_account": 2, "open_home_timeline": 1, "open_link": 1, "phone_verification": 4, "privacy_options": 1, "security_key": 3, "select_avatar": 4, "select_banner": 2, "settings_list": 7, "show_code": 1, "sign_up": 2, "sign_up_review": 4, "tweet_selection_urt": 1, "update_users": 1, "upload_media": 1, "user_recommendations_list": 4, "user_recommendations_urt": 1, "wait_spinner": 3, "web_modal": 1}}
-        res = self.session.post(url=url, headers=headers,
+        res = self.session.post(url=url, headers=self.base_headers,
                                 proxies=proxies, json=payload)
-        self.cookie.update(self.session.cookies.get_dict())
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         self.flow_token = res.json()["flow_token"][:-1]
         print(self.flow_token)
 
     def _getJsInstrumentation(self) -> None:
         url = "https://twitter.com/i/js_inst?c_name=ui_metrics"
-        headers = {
-            'authority': 'api.twitter.com',
+        self.base_headers.update({
             'path': '/i/js_inst?c_name=ui_metrics',
-            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
-            'content-type': 'application/json',
-            'cookie': f'guest_id_ads={self.cookie["guest_id_ads"]}; guest_id_marketing={self.cookie["guest_id_marketing"]}; att={self.cookie["att"]}; gt={self.cookie["gt"]}; guest_id={self.cookie["guest_id"]}; personalization_id={self.cookie["personalization_id"]};',
-            'origin': 'https://twitter.com',
-            'referer': 'https://twitter.com/',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-            'x-guest-token': self.cookie["gt"],
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'zh-cn',
-        }
-        res = self.session.get(url=url, headers=headers, proxies=proxies)
-        self.cookie.update(self.session.cookies.get_dict())
+            'cookie': self.cookie,
+        })
+        res = self.session.get(url=url, headers=self.base_headers, proxies=proxies)
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         open('js_inst.js', 'w').write(jsdom)
         open('js_inst.js', 'ab').write(res.content)
         js_inst = open('js_inst.js', 'r').readlines()
@@ -104,62 +99,37 @@ class Cookie:
 
     def _subTask(self):
         url = "https://api.twitter.com/1.1/onboarding/task.json"
-        headers = {
-            'authority': 'api.twitter.com',
+        self.base_headers.update({
             'path': '/1.1/onboarding/task.json',
-            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
-            'content-type': 'application/json',
-            'cookie': f'guest_id_ads={self.cookie["guest_id_ads"]}; guest_id_marketing={self.cookie["guest_id_marketing"]}; gt={self.cookie["gt"]}; guest_id={self.cookie["guest_id"]}; att={self.cookie["att"]}; _twitter_sess={self.cookie["_twitter_sess"]}; personalization_id={self.cookie["personalization_id"]};',
-            'origin': 'https://twitter.com',
-            'referer': 'https://twitter.com/',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-            'x-guest-token': self.cookie["gt"],
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'zh-cn',
-        }
+            'cookie': self.cookie,
+        })
         payload = {"flow_token": self.flow_token + '0', "subtask_inputs": [{"subtask_id": "LoginJsInstrumentationSubtask", "js_instrumentation": {
             "response": json.dumps(self.rf), "link": "next_link"}}]}
-        res = self.session.post(url=url, headers=headers,
+        res = self.session.post(url=url, headers=self.base_headers,
                                 proxies=proxies, json=payload)
-        self.cookie.update(self.session.cookies.get_dict())
-   
-    def _subLoginEmail(self) -> None:
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
+        print(res.text, payload["flow_token"])
+
+    def _subLoginEmail(self) -> str:
         url = "https://api.twitter.com/1.1/onboarding/task.json"
-        headers = {
-            'authority': 'api.twitter.com',
+        self.base_headers.update({
             'path': '/1.1/onboarding/task.json',
-            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
-            'content-type': 'application/json',
-            'cookie': f'guest_id_ads={self.cookie["guest_id_ads"]}; guest_id_marketing={self.cookie["guest_id_marketing"]}; gt={self.cookie["gt"]}; guest_id={self.cookie["guest_id"]}; att={self.cookie["att"]}; _twitter_sess={self.cookie["_twitter_sess"]}; personalization_id={self.cookie["personalization_id"]};',
-            'origin': 'https://twitter.com',
-            'referer': 'https://twitter.com/',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-            'x-guest-token': self.cookie["gt"],
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'zh-cn',
-        }
+            'cookie': self.cookie,
+        })
         payload = {"flow_token": self.flow_token + '1', "subtask_inputs": [{"subtask_id": "LoginEnterUserIdentifierSSO", "settings_list": {
             "setting_responses": [{"key": "user_identifier", "response_data": {"text_data": {"result": self.login_email}}}], "link": "next_link"}}]}
-        res = self.session.post(url=url, headers=headers,
+        res = self.session.post(url=url, headers=self.base_headers,
                                 proxies=proxies, json=payload)
-        self.cookie.update(self.session.cookies.get_dict())
-        print(res.text,payload["flow_token"])
- 
-    def _subUserName(self):
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
+        print(res.text, payload["flow_token"])
+        return res.json()["flow_token"][-1]
+
+    def _subUserName(self) -> None:
         url = "https://api.twitter.com/1.1/onboarding/task.json"
-        headers = {
-            'authority': 'api.twitter.com',
+        self.base_headers.update({
             'path': '/1.1/onboarding/task.json',
-            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
-            'content-type': 'application/json',
-            'cookie': f'guest_id_ads={self.cookie["guest_id_ads"]}; guest_id_marketing={self.cookie["guest_id_marketing"]}; gt={self.cookie["gt"]}; guest_id={self.cookie["guest_id"]}; att={self.cookie["att"]}; _twitter_sess={self.cookie["_twitter_sess"]}; personalization_id={self.cookie["personalization_id"]};',
-            'origin': 'https://twitter.com',
-            'referer': 'https://twitter.com/',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-            'x-guest-token': self.cookie["gt"],
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'zh-cn',
-        }
+            'cookie': self.cookie,
+        })
         payload = {
             "flow_token": self.flow_token + '7',
             "subtask_inputs": [
@@ -172,26 +142,18 @@ class Cookie:
                 }
             ]
         }
-        res = self.session.post(url=url, headers=headers,
+        res = self.session.post(url=url, headers=self.base_headers,
                                 proxies=proxies, json=payload)
-        self.cookie.update(self.session.cookies.get_dict())
-        print(res.text,payload["flow_token"])
-        
-    def _subPassword(self):
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
+        print(res.text, payload["flow_token"])
+        return res.json()["flow_token"]
+
+    def _subPassword(self) -> None:
         url = "https://api.twitter.com/1.1/onboarding/task.json"
-        headers = {
-            'authority': 'api.twitter.com',
+        self.base_headers.update({
             'path': '/1.1/onboarding/task.json',
-            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
-            'content-type': 'application/json',
-            'cookie': f'guest_id_ads={self.cookie["guest_id_ads"]}; guest_id_marketing={self.cookie["guest_id_marketing"]}; gt={self.cookie["gt"]}; guest_id={self.cookie["guest_id"]}; att={self.cookie["att"]}; _twitter_sess={self.cookie["_twitter_sess"]}; personalization_id={self.cookie["personalization_id"]};',
-            'origin': 'https://twitter.com',
-            'referer': 'https://twitter.com/',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-            'x-guest-token': self.cookie["gt"],
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'zh-cn',
-        }
+            'cookie': self.cookie,
+        })
         payload = {
             "flow_token": self.flow_token + '8',
             "subtask_inputs": [
@@ -204,57 +166,48 @@ class Cookie:
                 }
             ]
         }
-        res = self.session.post(url=url, headers=headers,
+        res = self.session.post(url=url, headers=self.base_headers,
                                 proxies=proxies, json=payload)
-        self.cookie.update(self.session.cookies.get_dict())
-        print(res.text,payload["flow_token"])
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
+        print(res.text, payload["flow_token"])
+        return res.json()["flow_token"]
 
-    def _getCookies(self):
+    def _subVerfyRisk(self) -> str:
         url = "https://api.twitter.com/1.1/onboarding/task.json"
-        headers = {
-            'authority': 'api.twitter.com',
+        self.base_headers.update({
             'path': '/1.1/onboarding/task.json',
-            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
-            'content-type': 'application/json',
-            'cookie': f'guest_id_ads={self.cookie["guest_id_ads"]}; guest_id_marketing={self.cookie["guest_id_marketing"]}; gt={self.cookie["gt"]}; guest_id={self.cookie["guest_id"]}; att={self.cookie["att"]}; _twitter_sess={self.cookie["_twitter_sess"]}; personalization_id={self.cookie["personalization_id"]};',
-            'origin': 'https://twitter.com',
-            'referer': 'https://twitter.com/',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-            'x-guest-token': self.cookie["gt"],
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'zh-cn',
-        }
+            'cookie': self.cookie,
+        })
         payload = {
             "flow_token": self.flow_token + '11',
             "subtask_inputs": [
                 {
                     "subtask_id": "AccountDuplicationCheck",
                     "check_logged_in_account": {
-                        "link": "AccountDuplicationCheck_false"
+                        "link": "AccountDuplicationCheck_False"
                     }
                 }
             ]
         }
-        res = self.session.post(url=url, headers=headers,proxies=proxies, json=payload)
-        self.cookie.update(self.session.cookies.get_dict())
-        print(res.text,payload["flow_token"])
-    
-    def _subEmailCode(self):
-        self.email_code = input("email code:")
+        res = self.session.post(url=url, headers=self.base_headers,
+                                proxies=proxies, json=payload)
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
+        print(res.text, payload["flow_token"])
+        return res.json()["flow_token"][-2:]
+
+    def _subEmailCode(self) -> None:
+        with Email(email_address=self.login_email, password=self.imap_email_password, imap_host=self.imap_host, imap_port=self.imap_port) as email:
+            msg_id, msg_subject, msg_detail = email.selectUnSeenEmail(
+                sender="Twitter", last_timestamp=self.send_email_time)
+            print(msg_subject)
+            # Your Twitter confirmation code is 4aweqxkn
+            self.email_code = msg_subject[34:]
+            email.addSeenFlag(msg_id=msg_id)
         url = "https://api.twitter.com/1.1/onboarding/task.json"
-        headers = {
-            'authority': 'api.twitter.com',
+        self.base_headers.update({
             'path': '/1.1/onboarding/task.json',
-            'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
-            'content-type': 'application/json',
-            'cookie': f'guest_id_ads={self.cookie["guest_id_ads"]}; guest_id_marketing={self.cookie["guest_id_marketing"]}; gt={self.cookie["gt"]}; guest_id={self.cookie["guest_id"]}; att={self.cookie["att"]}; _twitter_sess={self.cookie["_twitter_sess"]}; personalization_id={self.cookie["personalization_id"]};',
-            'origin': 'https://twitter.com',
-            'referer': 'https://twitter.com/',
-            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
-            'x-guest-token': self.cookie["gt"],
-            'x-twitter-active-user': 'yes',
-            'x-twitter-client-language': 'zh-cn',
-        }
+            'cookie': self.cookie,
+        })
         payload = {
             "flow_token": self.flow_token + '12',
             "subtask_inputs": [
@@ -267,10 +220,25 @@ class Cookie:
                 }
             ]
         }
-        res = self.session.post(url=url, headers=headers,proxies=proxies, json=payload)
-        self.cookie.update(self.session.cookies.get_dict())
-        print(res.text,payload["flow_token"])
-        print(self.cookie)
+        res = self.session.post(url=url, headers=self.base_headers,
+                                proxies=proxies, json=payload)
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
+        print(res.text, payload["flow_token"])
+    
+    def _subAfterLogin(self) -> None:
+        query_id = getApiQueryId("Viewer")
+        variables = {"withCommunitiesMemberships":True,"withCommunitiesCreation":True}
+        features = {"responsive_web_twitter_blue_verified_badge_is_enabled":True,"responsive_web_graphql_exclude_directive_enabled":True,"verified_phone_label_enabled":False,"responsive_web_graphql_skip_user_profile_image_extensions_enabled":False,"responsive_web_graphql_timeline_navigation_enabled":True}
+        url = f'https://twitter.com/i/api/graphql/{query_id}/Viewer?variables={json.dumps(variables).replace("True","true").replace("False","false")}&features={json.dumps(features).replace("True","true").replace("False","false")}'
+        self.base_headers.update({
+            'path': url[19:],
+            'cookie': self.cookie,
+        })
+        self.session.get(url,headers=self.base_headers,proxies=proxies)
+        self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
+        
+
 
 if __name__ == "__main__":
-    Cookie().login()
+    Cookie(user_name="crawler_cookie0", login_email="971341273@qq.com", password="gaijie0318",
+           imap_email_password="iyiawkgucdajbcaa", imap_host="imap.qq.com", imap_port=993).login()
