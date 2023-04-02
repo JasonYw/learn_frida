@@ -2,7 +2,7 @@ from Cookie import Cookie
 from Utils import getApiQueryId
 import json
 import requests
-from Proxy import proxies
+from Proxy import Proxy
 import re
 class Following:
     def __init__(self,user_id: int = 44196397,user_name : str = "elonmusk") -> None:
@@ -22,14 +22,19 @@ class Following:
             'x-twitter-client-language': 'zh-cn',
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36',
         }
+        self.cookie = ''
+        self.proxies = None
+    
+    def refreshCookie(self):
+        self.proxies = Proxy().getProxies()
+        self.cookie = Cookie(user_name="crawler_cookie0", login_email="971341273@qq.com", password="gaijie0318",imap_email_password="iyiawkgucdajbcaa", imap_host="imap.qq.com", imap_port=993).login()
 
     def crawl(self):
-        cookie = Cookie(user_name="crawler_cookie0", login_email="971341273@qq.com", password="gaijie0318",imap_email_password="iyiawkgucdajbcaa", imap_host="imap.qq.com", imap_port=993).login()
         self.base_headers.update({
-            'cookie':cookie,
-            'x-csrf-token': re.findall(r'ct0=(.+?);',cookie)[0]
+            'cookie':self.cookie,
+            'x-csrf-token': re.findall(r'ct0=(.+?);',self.cookie)[0]
         })
-        res = self.session.get(self.url, headers=self.base_headers, proxies=proxies)
+        res = self.session.get(self.url, headers=self.base_headers, proxies=self.proxies)
         open('following_data.json', 'wb').write(res.content)
 
 if __name__ == '__main__':

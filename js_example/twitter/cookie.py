@@ -1,5 +1,5 @@
 import requests
-from Proxy import proxies
+from Proxy import Proxy
 import re
 import json
 import execjs
@@ -27,6 +27,7 @@ class Cookie:
         self.email_code = None
         self.x_guest_token = None
         self.send_email_time = None
+        self.proxies = Proxy().getProxies()
         self.session = requests.session()
         self.base_headers = {
             'authority': 'api.twitter.com',
@@ -40,7 +41,7 @@ class Cookie:
         }
 
     def login(self) -> tuple:
-        self.x_guest_token,self.cookie = getGuestToken(self.session)
+        self.x_guest_token,self.cookie = getGuestToken(self.session,self.proxies)
         self._getFlowToken()
         self._getJsInstrumentation()
         self._subTask()
@@ -70,7 +71,7 @@ class Cookie:
         payload = {"input_flow_data": {"flow_context": {"debug_overrides": {}, "start_location": {"location": "unknown"}}}, "subtask_versions": {"action_list": 2, "alert_dialog": 1, "app_download_cta": 1, "check_logged_in_account": 1, "choice_selection": 3, "contacts_live_sync_permission_prompt": 0, "cta": 7, "email_verification": 2, "end_flow": 1, "enter_date": 1, "enter_email": 2, "enter_password": 5, "enter_phone": 2, "enter_recaptcha": 1, "enter_text": 5, "enter_username": 2, "generic_urt": 3, "in_app_notification": 1,
                                                                                                                                                  "interest_picker": 3, "js_instrumentation": 1, "menu_dialog": 1, "notifications_permission_prompt": 2, "open_account": 2, "open_home_timeline": 1, "open_link": 1, "phone_verification": 4, "privacy_options": 1, "security_key": 3, "select_avatar": 4, "select_banner": 2, "settings_list": 7, "show_code": 1, "sign_up": 2, "sign_up_review": 4, "tweet_selection_urt": 1, "update_users": 1, "upload_media": 1, "user_recommendations_list": 4, "user_recommendations_urt": 1, "wait_spinner": 3, "web_modal": 1}}
         res = self.session.post(url=url, headers=self.base_headers,
-                                proxies=proxies, json=payload)
+                                proxies=self.proxies, json=payload)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         self.flow_token = res.json()["flow_token"][:-1]
         print(self.flow_token)
@@ -81,7 +82,7 @@ class Cookie:
             'path': '/i/js_inst?c_name=ui_metrics',
             'cookie': self.cookie,
         })
-        res = self.session.get(url=url, headers=self.base_headers, proxies=proxies)
+        res = self.session.get(url=url, headers=self.base_headers, proxies=self.proxies)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         open('js_inst.js', 'w').write(jsdom)
         open('js_inst.js', 'ab').write(res.content)
@@ -106,7 +107,7 @@ class Cookie:
         payload = {"flow_token": self.flow_token + '0', "subtask_inputs": [{"subtask_id": "LoginJsInstrumentationSubtask", "js_instrumentation": {
             "response": json.dumps(self.rf), "link": "next_link"}}]}
         res = self.session.post(url=url, headers=self.base_headers,
-                                proxies=proxies, json=payload)
+                                proxies=self.proxies, json=payload)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         print(res.text, payload["flow_token"])
 
@@ -119,7 +120,7 @@ class Cookie:
         payload = {"flow_token": self.flow_token + '1', "subtask_inputs": [{"subtask_id": "LoginEnterUserIdentifierSSO", "settings_list": {
             "setting_responses": [{"key": "user_identifier", "response_data": {"text_data": {"result": self.login_email}}}], "link": "next_link"}}]}
         res = self.session.post(url=url, headers=self.base_headers,
-                                proxies=proxies, json=payload)
+                                proxies=self.proxies, json=payload)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         print(res.text, payload["flow_token"])
         return res.json()["flow_token"][-1]
@@ -143,7 +144,7 @@ class Cookie:
             ]
         }
         res = self.session.post(url=url, headers=self.base_headers,
-                                proxies=proxies, json=payload)
+                                proxies=self.proxies, json=payload)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         print(res.text, payload["flow_token"])
         return res.json()["flow_token"]
@@ -167,7 +168,7 @@ class Cookie:
             ]
         }
         res = self.session.post(url=url, headers=self.base_headers,
-                                proxies=proxies, json=payload)
+                                proxies=self.proxies, json=payload)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         print(res.text, payload["flow_token"])
         return res.json()["flow_token"]
@@ -190,7 +191,7 @@ class Cookie:
             ]
         }
         res = self.session.post(url=url, headers=self.base_headers,
-                                proxies=proxies, json=payload)
+                                proxies=self.proxies, json=payload)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         print(res.text, payload["flow_token"])
         return res.json()["flow_token"][-2:]
@@ -220,7 +221,7 @@ class Cookie:
             ]
         }
         res = self.session.post(url=url, headers=self.base_headers,
-                                proxies=proxies, json=payload)
+                                proxies=self.proxies, json=payload)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         print(res.text, payload["flow_token"])
     
@@ -233,7 +234,7 @@ class Cookie:
             'path': url[19:],
             'cookie': self.cookie,
         })
-        self.session.get(url,headers=self.base_headers,proxies=proxies)
+        self.session.get(url,headers=self.base_headers,proxies=self.proxies)
         self.cookie = '; '.join([f'{key}={value}' for key, value in self.session.cookies.get_dict().items()])
         
 
