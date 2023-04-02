@@ -1,10 +1,7 @@
-import requests
 import re
-from Proxy import proxies
-import urllib
 
-def getApiQueryId(operation_name:str = "UserTweets",proxies:dict = None) -> str or None:
-    res = requests.get(url="https://abs.twimg.com/responsive-web/client-web/api.d46908ca.js",proxies=proxies,timeout=10)
+def getApiQueryId(session,operation_name:str = "UserTweets",proxies:dict = None) -> str or None:
+    res = session.get(url="https://abs.twimg.com/responsive-web/client-web/api.d46908ca.js",proxies=proxies,timeout=10)
     ans = re.findall(rf'queryId:"([0-9A-Za-z\-\_]+?)",operationName:"{operation_name}"',res.text)
     if ans:
         return ans[0]

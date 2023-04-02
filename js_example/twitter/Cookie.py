@@ -226,7 +226,7 @@ class Cookie:
         print(res.text, payload["flow_token"])
     
     def _subAfterLogin(self) -> None:
-        query_id = getApiQueryId("Viewer")
+        query_id = getApiQueryId("Viewer",self.session)
         variables = {"withCommunitiesMemberships":True,"withCommunitiesCreation":True}
         features = {"responsive_web_twitter_blue_verified_badge_is_enabled":True,"responsive_web_graphql_exclude_directive_enabled":True,"verified_phone_label_enabled":False,"responsive_web_graphql_skip_user_profile_image_extensions_enabled":False,"responsive_web_graphql_timeline_navigation_enabled":True}
         url = f'https://twitter.com/i/api/graphql/{query_id}/Viewer?variables={json.dumps(variables).replace("True","true").replace("False","false")}&features={json.dumps(features).replace("True","true").replace("False","false")}'

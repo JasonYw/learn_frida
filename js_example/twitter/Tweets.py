@@ -14,7 +14,6 @@ class Tweets:
                          "view_counts_everywhere_api_enabled": True, "longform_notetweets_consumption_enabled": True, "tweet_awards_web_tipping_enabled": False, "freedom_of_speech_not_reach_fetch_enabled": False, "standardized_nudges_misinfo": True, "tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled": False, "interactive_text_enabled": True, "responsive_web_text_conversations_enabled": False, "longform_notetweets_richtext_consumption_enabled": False, "responsive_web_enhance_cards_enabled": False}
         self.base_headers = {
             'authority': 'twitter.com',
-            'path': self.url[19:],
             'accept-language': 'zh-CN,zh;q=0.9',
             'authorization': 'Bearer AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs%3D1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA',
             'content-type': 'application/json',
@@ -27,22 +26,23 @@ class Tweets:
         self.query_id = getApiQueryId("UserTweets",self.proxies)
         self.next_cursor = None
         self.data = None
-        self.proxies = None
+    
 
     def refreshToken(self):
         self.proxies = Proxy().getProxies()
         self.x_guest_token, self.cookie = getGuestToken(self.session,self.proxies)
 
     def crawl(self) -> None:
-        self.base_headers.update({
-            'cookie': self.cookie,
-            'x-guest-token': self.x_guest_token,
-        })
         if self.next_cursor:
             self.variables.update({
                 "cursor": self.next_cursor
             })
         self.url = f'https://twitter.com/i/api/graphql/{self.query_id}/UserTweets?variables={json.dumps(self.variables).replace("True","true").replace("False","false")}&features={json.dumps(self.features).replace("True","true").replace("False","false")}'
+        self.base_headers.update({
+            'path': self.url[19:],
+            'cookie': self.cookie,
+            'x-guest-token': self.x_guest_token,
+        })
         res = self.session.get(
             self.url, headers=self.base_headers, proxies=self.proxies)
         data = res.json()[
