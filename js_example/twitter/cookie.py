@@ -196,10 +196,9 @@ class Cookie:
         return res.json()["flow_token"][-2:]
 
     def _subEmailCode(self) -> None:
+        time.sleep(30)
         with Email(email_address=self.login_email, password=self.imap_email_password, imap_host=self.imap_host, imap_port=self.imap_port) as email:
-            msg_id, msg_subject, msg_detail = email.selectUnSeenEmail(
-                sender="Twitter", last_timestamp=self.send_email_time)
-            print(msg_subject)
+            msg_id, msg_subject, msg_detail = email.selectUnSeenEmail(sender="Twitter <info@twitter.com>")
             # Your Twitter confirmation code is 4aweqxkn
             self.email_code = msg_subject[34:]
             email.addSeenFlag(msg_id=msg_id)

@@ -23,18 +23,22 @@ class Email:
         self.mail.close()
         self.mail.logout()
 
-    def selectUnSeenEmail(self, sender: str = None, last_timestamp: int = None):
+    def selectUnSeenEmail(self, sender: str = None, last_timestamp: int = 0):
         # 搜索未读邮件
         status, response = self.mail.search(None, 'UNSEEN')
         unread_msgs = response[0].split()
+        ans = ()
         # 遍历邮件并打印主题和发件人
         for msg_id in unread_msgs:
             status, response = self.mail.fetch(msg_id, '(RFC822)')
             email_body = response[0][1]
             mail_message = email.message_from_bytes(email_body)
-            print(msg_id, mail_message['Subject'],mail_message['From'])
-            if sender and last_timestamp and sender == mail_message['From'] and int(time.mktime(time.strptime(mail_message['Date'][:-5], "%a, %d %b %Y %H:%M:%S"))) >= last_timestamp:
-                return msg_id, mail_message['Subject'], mail_message
+            send_time = int(time.mktime(time.strptime(mail_message['Date'], '%a, %d %b %Y %H:%M:%S %z'))) + 28800
+            # print(int(time.mktime(time.strptime(mail_message['Date'], '%a, %d %b %Y %H:%M:%S %z'))),mail_message['Subject'],mail_message['From'],sender == mail_message['From'])
+            if sender == mail_message['From'] and send_time >= last_timestamp:
+                ans = (msg_id, mail_message['Subject'], mail_message)
+        print(ans)
+        return ans
 
     def addSeenFlag(self, msg_id):
         self.mail.store(msg_id, '+FLAGS', '\Seen')
@@ -42,4 +46,4 @@ class Email:
 
 if __name__ == "__main__":
     with Email("971341273@qq.com", "iyiawkgucdajbcaa", "imap.qq.com", 993) as f:
-        f.selectUnSeenEmail()
+        f.selectUnSeenEmail("Twitter <info@twitter.com>",1680411019)
