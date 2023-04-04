@@ -4,6 +4,7 @@ from Utils import getGuestToken, getApiQueryId
 from Proxy import Proxy
 import time
 from jsonpath import jsonpath
+import urllib
 
 
 class Tweets:
@@ -23,7 +24,6 @@ class Tweets:
         }
         self.features = {
             "responsive_web_twitter_blue_verified_badge_is_enabled": True,
-            # "blue_business_profile_image_shape_enabled": False,
             "responsive_web_graphql_exclude_directive_enabled": True,
             "verified_phone_label_enabled": False,
             "responsive_web_graphql_timeline_navigation_enabled": True,
@@ -43,6 +43,9 @@ class Tweets:
             "longform_notetweets_richtext_consumption_enabled": False,
             "responsive_web_enhance_cards_enabled": False,
         }
+        self.features = urllib.parse.quote(
+            f'{json.dumps(self.features).replace("True","true").replace("False","false").replace(" ","")}'
+        )
         self.base_headers = {
             "authority": "twitter.com",
             "accept-language": "zh-CN,zh;q=0.9",
@@ -50,28 +53,29 @@ class Tweets:
             "content-type": "application/json",
             "x-twitter-client-language": "zh-cn",
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-            "referer": f"https://twitter.com/{self.user_name}"
         }
         self.proxies = {}
-        self.session = requests.session()
         self.refreshToken()
-        self.query_id = getApiQueryId(self.session, "UserTweets", self.proxies)
-        self.next_cursor = None
+        # self.query_id = getApiQueryId(self.session, "UserTweets", self.proxies)
+        self.query_id = "PoZUz38XdT-pXNk0FRfKSw"
+        self.next_cursor = 0
         self.data = None
         self.user_profile = None
-        self.res_error_info = None
 
     def refreshToken(self):
+        self.session = requests.session()
         self.proxies = Proxy().getProxies()
         self.x_guest_token, self.cookie = getGuestToken(self.session, self.proxies)
 
     def crawl(self) -> None:
         if self.next_cursor:
             self.variables.update({"cursor": self.next_cursor})
-        self.url = f'https://twitter.com/i/api/graphql/{self.query_id}/UserTweets?variables={json.dumps(self.variables).replace("True","True").replace("False","False")}&features={json.dumps(self.features).replace("True","True").replace("False","False")}'
+        variables = urllib.parse.quote(
+            f'{json.dumps(self.variables).replace("True","true").replace("False","false").replace(" ","")}'
+        )
+        self.url = f"https://twitter.com/i/api/graphql/{self.query_id}/UserTweets?variables={variables}&features={self.features}"
         self.base_headers.update(
             {
-                "path": self.url.replace("https://twitter.com",""),
                 "cookie": self.cookie,
                 "x-guest-token": self.x_guest_token,
             }
@@ -79,38 +83,44 @@ class Tweets:
         res = self.session.get(
             self.url, headers=self.base_headers, proxies=self.proxies
         )
-        self.cookie = "; ".join([f"{key}={value}" for key, value in self.session.cookies.get_dict().items()])
         data = jsonpath(res.json(), "$..entries")
         if data:
-            if self.next_cursor == 0:
+            if self.user_profile is None:
                 self.user_profile = data[0][0]["content"]["itemContent"][
                     "tweet_results"
                 ]["result"]["core"]["user_results"]["result"]
                 self.user_profile.update({"crawl_time": int(time.time())})
-            if len(data[0]) < 40:
-                self.next_cursor = None
-            else:
-                self.next_cursor = data[0][-1]["content"]["value"]
-                print(self.next_cursor)
-            self.data = self._rebuild(data[0][:-2], int(time.time()))
+            self.next_cursor = data[0][-1]["content"]["value"]
+            self.data, rebuild_error = self._rebuild(data[0][:-2], int(time.time()))
+            if rebuild_error:
+                raise KeyError(",".join(rebuild_error))
         else:
-            self.res_error_info = res.text
-            print(self.res_error_info)
-            raise
+            raise ValueError("no tweet found")
 
     def _rebuild(self, data: list, crawl_time: int) -> list:
         new_data = []
+        error_data = []
         for i in data:
             i["user_name"] = self.user_name
             i["crawl_time"] = crawl_time
-            del i["content"]["itemContent"]["tweet_results"]["result"]["core"]
-            new_data.append(i)
-        return new_data
+            try:
+                del i["content"]["itemContent"]["tweet_results"]["result"]["core"]
+            except Exception as e:
+                error_message = f'{i["entryId"]}:{e}'
+                error_data.append(error_message)
+            finally:
+                new_data.append(i)
+        return new_data, error_data
 
 
 if __name__ == "__main__":
-    a = Tweets()
-    a.crawl()
-    a.crawl()
-    a.crawl()
-
+    f = json.loads(open("a.json", encoding="utf-8").read())
+    data = jsonpath(f, "$..entries")
+    # print(len(data[0]))
+    # print(data[0][-1]["content"]["value"])
+    new_data = []
+    for i in data[0][:-2]:
+        try:
+            del i["content"]["itemContent"]["tweet_results"]["result"]["core"]
+        except:
+            print(i["entryId"])
