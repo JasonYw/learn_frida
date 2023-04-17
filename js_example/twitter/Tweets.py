@@ -55,47 +55,60 @@ class Tweets:
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
         }
         self.proxies = {}
-        self.refreshToken()
+        self.session = None
+        # self.refreshToken()
         # self.query_id = getApiQueryId(self.session, "UserTweets", self.proxies)
         self.query_id = "PoZUz38XdT-pXNk0FRfKSw"
-        self.next_cursor = 0
+        self.x_guest_token = None
+        self.cookie = None
+        self.next_cursor = None
         self.data = None
+        self.top_tweet = None
         self.user_profile = None
+        self.rebuild_top_error = None
 
     def refreshToken(self):
         self.session = requests.session()
         self.proxies = Proxy().getProxies()
         self.x_guest_token, self.cookie = getGuestToken(self.session, self.proxies)
+        if self.x_guest_token is None:
+            raise ValueError(f"no x-guest-token get")
 
     def crawl(self) -> None:
         if self.next_cursor:
             self.variables.update({"cursor": self.next_cursor})
+        else:
+            self.refreshToken()
         variables = urllib.parse.quote(
             f'{json.dumps(self.variables).replace("True","true").replace("False","false").replace(" ","")}'
         )
         self.url = f"https://twitter.com/i/api/graphql/{self.query_id}/UserTweets?variables={variables}&features={self.features}"
         self.base_headers.update(
-            {
-                "cookie": self.cookie,
-                "x-guest-token": self.x_guest_token,
-            }
+            {"cookie": self.cookie, "x-guest-token": self.x_guest_token}
         )
         res = self.session.get(
             self.url, headers=self.base_headers, proxies=self.proxies
         )
+        # open("error.json","wb").write(res.content)
         data = jsonpath(res.json(), "$..entries")
+        if self.next_cursor is None:
+            top_data = jsonpath(res.json(), "$..entry")
+            if top_data:
+                self.top_tweet, self.rebuild_top_error = self._rebuild(
+                    top_data, int(time.time())
+                )
+                self.top_tweet = self.top_tweet[0]
         if data:
             if self.user_profile is None:
-                self.user_profile = data[0][0]["content"]["itemContent"][
-                    "tweet_results"
-                ]["result"]["core"]["user_results"]["result"]
-                self.user_profile.update({"crawl_time": int(time.time())})
+                self.user_profile = jsonpath(data, "$..user_results")[0]["result"]
+                if self.user_profile:
+                    self.user_profile.update({"crawl_time": int(time.time())})
             self.next_cursor = data[0][-1]["content"]["value"]
             self.data, rebuild_error = self._rebuild(data[0][:-2], int(time.time()))
             if rebuild_error:
-                raise KeyError(",".join(rebuild_error))
+                raise ValueError("rebuild error ->" + ",".join(rebuild_error))
         else:
-            raise ValueError("no tweet found")
+            raise ValueError(f"no tweet found and res text -> {res.text}")
 
     def _rebuild(self, data: list, crawl_time: int) -> list:
         new_data = []
@@ -111,16 +124,3 @@ class Tweets:
             finally:
                 new_data.append(i)
         return new_data, error_data
-
-
-if __name__ == "__main__":
-    f = json.loads(open("a.json", encoding="utf-8").read())
-    data = jsonpath(f, "$..entries")
-    # print(len(data[0]))
-    # print(data[0][-1]["content"]["value"])
-    new_data = []
-    for i in data[0][:-2]:
-        try:
-            del i["content"]["itemContent"]["tweet_results"]["result"]["core"]
-        except:
-            print(i["entryId"])
