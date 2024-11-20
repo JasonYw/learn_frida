@@ -1,0 +1,7 @@
+{
+  "interaction": {
+    "type": "script",
+    "path": "/data/local/tmp/wechat.js",
+    "on_change": "reload"
+  }
+}
